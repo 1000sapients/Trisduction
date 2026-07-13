@@ -1,13 +1,28 @@
-# CODEX
+# TRISDUCTION CODEX
 
-Living store for PSP coordinates and protocol rule-modules. Every entry carries a stable identifier and is never silently lost. Entries arrive by instruction in chat and are pushed here by the assistant during a session, using the codex-git-sync skill.
+GitHub-hosted register for the Trisduction. Two classes of content.
 
-## Layout
+Ledger entries, census-tracked. Every identifier is watched; no add may drop one.
 
-    psp/          One file per PSP coordinate. Filename is the identifier, e.g. SE-301.md
-    protocols/    One file per protocol rule-module or update. Filename is the identifier.
-    INDEX.md      Auto-generated. Every live entry. Do not hand-edit.
-    CODEX_RULES.md        The hygiene contract.
-    CODEX_DELETIONS.log   Append-only removal manifest. Never rewritten.
+    psp/          one file per PSP coordinate, filename = identifier
+    protocols/    one file per protocol rule-module, filename = identifier
+    INDEX.md      auto-generated index of live entries
+    CODEX_RULES.md, CODEX_DELETIONS.log   the hygiene contract and append-only removal manifest
 
-The tooling lives in the skill, not in this repo. This repo holds data only.
+Documents, append-only. A new version is a new filename; old versions are never deleted or overwritten.
+
+    master/       versioned master codex, the register of record, plus CURRENT.txt pointer
+    preprints/    essays and papers for PhilArchive and similar
+
+## How entries arrive
+
+Two routes. Hands-off: open an Issue from the "Codex entry" template; the codex-add workflow parses it, runs the deletion-proof census, commits, comments, and closes. In session: instruct the assistant, which runs the git cycle directly. Master upgrades and preprints are file uploads and go through the session route.
+
+## Task vocabulary
+
+    Publish PSP        publish/add/push PSP, log PSP, new coordinate     -> psp/<id>.md
+    Publish protocol   push protocol, protocol update, new rule-module   -> protocols/<id>.md
+    Update master      update main/master codex, new master, upgrade     -> master/<file> + CURRENT.txt
+    Publish preprint   publish essay/preprint, add paper, philarchive    -> preprints/<file>
+
+The master is the single source. PSP coordinates accumulate as individual entries between the occasional master upgrades and never rewrite it.
