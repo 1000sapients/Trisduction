@@ -6,6 +6,26 @@ Repo: `1000sapients/Trisduction`, branch `main`, public. Owner `1000sapients`.
 
 ---
 
+## 0. Access configuration (paste locally, never commit)
+
+The token is the one secret this system needs, and it is never stored in the repo, in a skill, or in this document's committed copy. This repo is public, so a token committed here is exposed the instant it is pushed and is auto-revoked by GitHub's scanners. Treat the placeholder below as fill-in-locally-only.
+
+Two safe ways to supply it:
+
+Preferred, no storage: paste the token live into the session that runs a push, used once, gone when the session ends.
+
+If you must store it: copy `codex.env.example` to `codex.env`, paste the token there, and rely on `.gitignore` to keep `codex.env` out of git. Never commit or upload `codex.env`.
+
+Placeholder. Fill this only in a private local copy of this file. Delete the value before any commit or upload. The copy in the repo keeps it blank.
+
+    CODEX_GH_TOKEN = PASTE_YOUR_FINE_GRAINED_TOKEN_HERE_LOCAL_ONLY_NEVER_COMMIT
+    CODEX_REPO     = 1000sapients/Trisduction
+    CODEX_BRANCH   = main
+
+Token scope, exact: fine-grained PAT, resource owner your account, Repository access "Only select repositories" set to Trisduction, Permissions Contents Read-and-write, plus Workflows Read-and-write only if you push workflow files. Nothing else. Set an expiry and rotate after any exposure. The `codex.env.example` and `.gitignore` are embedded verbatim in Section 8.
+
+---
+
 ## 1. What this system is
 
 A GitHub-hosted register for the Trisduction, driven by instruction rather than manual git. Two classes of content:
@@ -108,6 +128,8 @@ Hands-off file (no token): open a "Codex file" issue, set `dest:` and optional `
 Verify anything landed (read-only, any token or none for a public repo):
 
     curl -s https://api.github.com/repos/1000sapients/Trisduction/contents/<path>
+
+Supersede or remove a ledger entry (never silent). To retire `SE-301` in favor of `SE-302`, keep `SE-301` as a ghost: replace its body with a two-line ghost pointing to `SE-302` and append a line to `CODEX_DELETIONS.log`. A true hard delete happens only when you name the exact identifier in the instruction; the assistant confirms it, checks for dependents, logs it, then removes that one file. The census refuses any push that drops an identifier without a logged override.
 
 ---
 
@@ -828,6 +850,216 @@ Added: YYYY-MM-DD
 Supersedes: (none)
 
 Body. A protocol rule-module or update. Filename must equal the identifier, e.g. MA-311.md holds MA-311.
+````
+
+### CODEX_DELETIONS.log — append-only removal manifest (seed)
+
+Repo path: `CODEX_DELETIONS.log`
+
+````text
+# CODEX DELETIONS · append-only manifest. Never rewrite. One line per removal.
+# format: DATE | IDENTIFIER | disposition | survivor-or-recovery-pointer | note
+# ------------------------------------------------------------------------------
+````
+
+### codex.env.example — secret template (safe to commit)
+
+Repo path: `codex.env.example`
+
+````bash
+# Copy this file to codex.env and fill in your token.
+# codex.env is gitignored and must NEVER be committed or uploaded.
+# This repo is PUBLIC: a committed token is exposed instantly and auto-revoked.
+# Safest of all: do not store the token; paste it live per session instead.
+
+# Fine-grained PAT, scoped to 1000sapients/Trisduction only.
+# Contents: Read and write. Add Workflows: Read and write only if pushing workflow files.
+CODEX_GH_TOKEN=PASTE_YOUR_FINE_GRAINED_TOKEN_HERE
+
+CODEX_REPO=1000sapients/Trisduction
+CODEX_BRANCH=main
+````
+
+### .gitignore — keeps codex.env and secrets out of git
+
+Repo path: `.gitignore`
+
+````text
+# Credentials: never commit. This repo is public.
+codex.env
+.env
+.env.*
+*.secret
+secrets/
+# Noise
+__pycache__/
+*.pyc
+.DS_Store
+````
+
+### SKILL.md — codex-git-sync (text entries + master + preprints)
+
+Repo path: `skills/codex-git-sync/SKILL.md`
+
+````markdown
+---
+name: codex-git-sync
+description: "Manage a GitHub-hosted Trisduction codex by instruction in chat, no manual git. Four tasks with trigger words: PUBLISH PSP ('publish PSP', 'add PSP', 'log PSP', 'new coordinate') writes PSP coordinates as census-tracked entries under psp/; PUBLISH PROTOCOL ('push protocol', 'protocol update', 'new rule-module', 'update MA-311') writes rule-modules under protocols/; UPDATE MASTER CODEX ('update main codex', 'update master codex', 'new master', 'upgrade codex') publishes a new versioned master under master/ and never overwrites; PUBLISH PREPRINT ('publish essay', 'publish preprint', 'add paper', 'philarchive pdf', 'publish PDF') stores papers under preprints/. codex_put.py also pushes any binary or file to any folder. The assistant runs the whole git cycle: clone, write, rebuild INDEX.md, deletion-proof census, commit, push. Obeys codex-hygiene. Cross-project. Bundles tools/codex_add.py, tools/codex_put.py, tools/build_index.py and a scaffold."
+---
+
+# CODEX GIT SYNC
+
+Turns a chat instruction into a committed codex entry. The architect speaks, the assistant runs the git. No manual staging, no local scripts on the architect's machine.
+
+## CONFIG · live
+
+    repo   = 1000sapients/Trisduction
+    branch = main
+    owner  = 1000sapients
+    api    = https://api.github.com/repos/1000sapients/Trisduction
+    master = master/TRISDUCTION_Master_Codex_Unabridged_v1_8_1.md  (register of record, verbatim, never edited by an add)
+
+This is the standing target. The assistant uses it without asking. The master codex is the single source; new coordinates are added as individual entries under psp/ and protocols/ and never rewrite the master. The token is the only thing not stored here. See Secret handling.
+
+## Canonical source · read the repo, not just this bundle
+
+The authoritative tools and the full capability statement live in the repo at tools/ and CAPABILITIES.md. The assistant updates them by push, and any session or agent can read them. This bundled skill copy mirrors them. If a bundle and the repo ever differ, the repo wins. When in doubt about what is possible, clone the repo and read CAPABILITIES.md before assuming a limit. In particular: text ledger entries go through codex_add.py; binaries and any-folder files including PDFs go through codex_put.py. Neither tool is limited to what a single script read in isolation suggests.
+
+Self-heal: if any tool named in this skill (codex_add.py, codex_put.py, build_index.py) is absent from this bundle's tools/ directory, do not conclude the capability is missing. Clone the repo and run the tool from the repo's tools/ instead. The repo always carries the complete, current set. A missing bundle file is a stale upload, never a missing capability. To make a bundle complete again, upload the full skill zip, not a standalone SKILL.md, since a lone markdown file ships no tools.
+
+## Secret handling · the token is never stored in this skill
+
+The push needs a fine-grained Personal Access Token scoped to the single codex repo, Contents read and write, nothing else. Never broad, never account-wide, never admin. The token is a live write credential and is never written into this skill, into memory, into the repo, or into any committed file. A skill travels across projects and exports, so a token placed here becomes many untracked plaintext copies. That is barred.
+
+Two legitimate ways to supply it:
+
+1. Per session. The architect pastes the token in the session that needs a push. The assistant sets it as CODEX_GH_TOKEN for that run only and never echoes it. It is gone when the session ends.
+
+2. GitHub Actions secret, hands-off. The token is stored once inside GitHub as an encrypted Actions secret named CODEX_GH_TOKEN, not readable back and present in no file. An Issue-to-commit workflow then commits entries with no token in chat or skill. This is the standing hands-off path. The assistant writes .github/workflows/codex-add.yml on request.
+
+If the architect asks to embed the token in this skill or the repo, decline and restate these two paths. Set an expiry on the token and rotate after any plaintext exposure.
+
+## Repo layout
+
+    psp/          one file per PSP coordinate, filename = identifier, e.g. SE-301.md   (census-tracked)
+    protocols/    one file per protocol rule-module, filename = identifier             (census-tracked)
+    master/       versioned master codex files + CURRENT.txt pointer                   (documents, append-only)
+    preprints/    essays and papers for PhilArchive etc, pdf and md                    (documents, append-only)
+    INDEX.md      auto-generated ledger index, do not hand-edit
+    CODEX_RULES.md, CODEX_DELETIONS.log
+
+Two classes. Ledger entries under psp/ and protocols/ are census-tracked: every identifier is watched and no add may drop one. Documents under master/ and preprints/ are append-only: a new version is a new filename, old versions are never deleted or overwritten. The repo holds data only. The tooling lives in this skill.
+
+## Tasks · trigger words built in
+
+Match the instruction to one of four tasks. PSP and protocol tasks are frequent and small. Master and preprint tasks are occasional and file-based.
+
+    TASK              TRIGGERS                                              ROUTE            DESTINATION            CENSUS
+    Publish PSP       publish/add/push PSP, log PSP, new coordinate         issue or session psp/<id>.md            yes
+    Publish protocol  push protocol, protocol update, new rule-module,      issue or session protocols/<id>.md      yes
+                      update <ID>
+    Update master     update main/master codex, new master, upgrade codex,  session (file)   master/<file>          no
+                      master vX                                             + CURRENT.txt
+    Publish preprint  publish essay/preprint, add paper, philarchive pdf,   session (file)   preprints/<file>       no
+                      publish PDF
+
+PSP and protocol entries can go through the Issue-to-commit workflow hands-off, or through the session tool below. Master and preprint tasks are file uploads, so they run in session: the architect uploads the file, the assistant pushes it. PSPs accumulate fast, so batch is supported in session: loop the add tool over each coordinate; the census reconciles the whole batch against the pre-batch baseline.
+
+## Publish PSP or protocol (session tool)
+
+Gather section (psp or protocols), identifier, short title, body. Then:
+
+    cp -r <this-skill-dir> /home/claude/codex-skill
+    printf '%s' "<body>" > /tmp/body.md
+    export CODEX_GH_TOKEN='<token this session>'
+    export CODEX_REPO='1000sapients/Trisduction'
+    export CODEX_BRANCH='main'
+    python3 /home/claude/codex-skill/tools/codex_add.py \
+        --section psp --id SE-301 --title "Short Title" --body-file /tmp/body.md
+
+codex_add.py clones, writes the entry, rebuilds INDEX.md, runs the census, and pushes only if no existing identifier dropped. For a batch, run it once per coordinate. Report the verb, identifier, and new live-entry count.
+
+## Update master codex or publish preprint (session tool)
+
+The architect uploads the file. Push it with codex_put.py, keeping the version in the filename so nothing is overwritten:
+
+    export CODEX_GH_TOKEN='<token this session>' CODEX_REPO='1000sapients/Trisduction' CODEX_BRANCH='main'
+    # master upgrade, with a current pointer
+    python3 /home/claude/codex-skill/tools/codex_put.py \
+        --src /mnt/user-data/uploads/<master file> \
+        --dest master/<master file> --pointer master/CURRENT.txt \
+        --message "update: master codex <version> (register of record)"
+    # preprint
+    python3 /home/claude/codex-skill/tools/codex_put.py \
+        --src /mnt/user-data/uploads/<paper.pdf> --dest preprints/<paper.pdf> \
+        --message "add: preprint <title>"
+
+codex_put.py is non-destructive. If the dest path already exists it is a same-path update; version-stamped filenames avoid that and preserve history. The master is never edited in place by a PSP or protocol add.
+
+Never echo the token into visible output or into any committed file.
+
+## Removal, consolidation, supersession
+
+There are no silent deletes. This skill obeys codex-hygiene. A consolidation or supersession keeps the old identifier alive as a ghost with a recovery pointer and appends a line to CODEX_DELETIONS.log. A true hard delete happens only when the architect names the exact identifier in the instruction; the assistant confirms it back, scans for dependents and holds if one exists, logs the removal with the instruction quoted, then removes that one identifier and no neighbour. The census reconciliation is the backstop: any unexplained drop halts the push.
+
+## Failure handling
+
+If codex_add.py prints FAULT and exits nonzero, an existing entry would have been lost. Nothing was pushed. Report the dropped identifiers and stop. Do not retry until the cause is understood. If the clone fails on auth, the token is wrong or lacks Contents write on that repo; ask for a correctly scoped token rather than widening scope.
+
+## Zero-token alternative
+
+If the architect prefers no token in chat, an Issue-to-commit GitHub Action removes the assistant from the loop: the architect opens an Issue in a fixed format, a workflow parses it and commits the entry. The assistant will write .github/workflows/codex-add.yml on request. This trades the chat interface for the Issue interface and is genuinely unattended after setup.
+````
+
+### SKILL.md — codex-file-publish (hands-off file route)
+
+Repo path: `skills/codex-file-publish/SKILL.md`
+
+````markdown
+---
+name: codex-file-publish
+description: "Publish files to the Trisduction codex repo 1000sapients/Trisduction: PDF preprints, master codex versions, any binary, into folders like preprints/, master/, or paper/. Triggers: 'publish PDF', 'upload paper', 'add preprint', 'publish preprint', 'philarchive pdf', 'upload master codex', 'push this file'. Two routes. Hands-off, no token: open a 'Codex file' GitHub Issue and drag the file in; a GitHub Action fetches it and commits it with GitHub's built-in token, then comments and closes. In-session: when the architect hands the assistant a file directly, run the repo's tools/codex_put.py with a scoped session-only token. Files are documents, not census-tracked; append-only, so a new version is a new filename and nothing is overwritten. Complements codex-git-sync, which handles PSP and protocol text entries."
+---
+
+# CODEX FILE PUBLISH
+
+Gets a binary or document into the codex without corrupting it and without keeping a credential around. For PSP and protocol text entries use codex-git-sync. This skill is for files: PDFs, master codex versions, papers.
+
+## Repo constants
+
+    repo   = 1000sapients/Trisduction
+    branch = main
+    folders: preprints/ (essays and papers), master/ (register of record), paper/ or any named path
+
+Documents are append-only. A new version is a new filename. Nothing is overwritten or deleted. Files are not census-tracked; the census governs only psp/ and protocols/ entries.
+
+## Route 1 · hands-off, no token in chat
+
+The architect opens an Issue from the "Codex file" template, sets dest (default preprints/), optionally sets name, and drags the file into the body. The codex-file workflow fetches the attachment, writes it into dest, commits with GitHub's built-in GITHUB_TOKEN, comments the result, and closes the Issue. No personal token is stored or pasted. This is the standing path for routine paper and preprint drops.
+
+Limits to know: the file must reach GitHub to trigger the workflow, so the architect uploads it once into the Issue. Some exotic file types may be rejected by GitHub's attachment upload; PDF, zip, docx, and common types are accepted. If the attachment fetch fails, fall back to Route 2 or a direct web upload.
+
+## Route 2 · in-session, scoped token
+
+When the architect hands the assistant a file in chat, publish it with the repo tool:
+
+    export CODEX_GH_TOKEN='<fine-grained PAT, this repo only, Contents read-write, this session>'
+    export CODEX_REPO='1000sapients/Trisduction' CODEX_BRANCH='main'
+    # clone gets tools/codex_put.py; run it
+    python3 tools/codex_put.py \
+        --src /mnt/user-data/uploads/<file> \
+        --dest preprints/<file> \
+        --message "add: preprint <title>"
+
+codex_put.py copies bytes verbatim, so PDFs stay intact, and refuses nothing by extension or folder. It is non-destructive; a version-stamped filename preserves history. The token is used for the single run, never stored, never echoed.
+
+## Secret rule
+
+The token is never written into this skill, the repo, memory, or any file. Route 1 needs no token at all. Route 2 takes a scoped, session-only token. Storing a PAT as an encrypted Actions secret is unnecessary here, since the workflow pushes to its own repo with the built-in token; do not add one.
+
+## Canonical source
+
+The tools and the full capability statement live in the repo at tools/ and CAPABILITIES.md. If a tool named here is missing from a bundle, clone the repo and run it from the repo's tools/. The repo always carries the complete set.
 ````
 
 ---
