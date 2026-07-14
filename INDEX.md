@@ -1,10 +1,10 @@
 # CODEX INDEX
 
-Generated 2026-07-13. 0 live entries. Auto-generated. Do not hand-edit.
+Generated 2026-07-14. 1 live entries. Auto-generated. Do not hand-edit.
 
 ## PSP · Coordinates
 
-_none yet_
+- `APEX-PSP-GROUNDLESS-HALT-01` · APEX-PSP-GROUNDLESS-HALT-01 · The Groundless Halt · [psp/APEX-PSP-GROUNDLESS-HALT-01.md](psp/APEX-PSP-GROUNDLESS-HALT-01.md)
 
 ## Protocols · Rule-Modules and Updates
 
