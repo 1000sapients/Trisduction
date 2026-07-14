@@ -1,0 +1,10 @@
+# Credentials: never commit. This repo is public.
+codex.env
+.env
+.env.*
+*.secret
+secrets/
+# Noise
+__pycache__/
+*.pyc
+.DS_Store
