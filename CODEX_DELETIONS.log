@@ -1,3 +1,4 @@
 # CODEX DELETIONS · append-only manifest. Never rewrite. One line per removal.
 # format: DATE | IDENTIFIER | disposition | survivor-or-recovery-pointer | note
 # ------------------------------------------------------------------------------
+2026-07-14 | master/TRISDUCTION_Master_Codex_Unabridged_v1_8_1.md | HARD-DELETE (named override) | superseded by master/TRISDUCTION_Master_Codex_Unabridged_v1_9_1.md; recoverable from git history (added at commit 5651712) | architect instruction: "hard-delete TRISDUCTION_Master_Codex_Unabridged_v1_8_1.md"
