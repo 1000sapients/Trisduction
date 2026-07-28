@@ -10,6 +10,12 @@ Path shape: Publication Library / <Category> / <Sub-area> / <Topic> / <file>
 - Science: physics, cosmology, and empirical natural-science work.
 - Mathematics: foundations, complexity theory, algebra, and analysis.
 - Philosophy: logic, epistemology, and the philosophy of mathematics and science.
+  - Logic and Epistemology / Machine Self-Report: cross-substrate audits of what
+    language-model substrates report about themselves, and the epistemology of
+    machine self-report.
+- Artificial Intelligence: empirical and methodological work on AI systems
+  themselves, including verification protocols, evaluation procedures, and
+  cross-substrate behavioural records.
 - Metaphysics: ontology, first-principles work, and the Trisduction architecture.
 - Scripture: Qur'anic and cross-scripture exegesis, root-linguistic (REX) and
   geometric readings, the Geometric Quran corpus.
