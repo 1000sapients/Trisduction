@@ -1,8 +1,1 @@
-ADVISORY ONLY · NOT AUTHORITATIVE · MAY BE STALE BY DESIGN
-
-The authoritative Main Codex is resolved by version, not by this file.
-List this folder, match the stem TRISDUCTION_Master_Codex_Unabridged*, and take the
-highest version (numeric-tuple comparison). A new version is a new file; nothing is
-overwritten or deleted.
-
-Current highest at this edit: TRISDUCTION_Master_Codex_Unabridged_v3_2.md
+TRISDUCTION_Master_Codex_Unabridged_v3_3_1.md
