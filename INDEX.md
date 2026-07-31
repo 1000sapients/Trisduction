@@ -1,6 +1,6 @@
 # CODEX INDEX
 
-Generated 2026-07-29. 13 live entries. Auto-generated. Do not hand-edit.
+Generated 2026-07-31. 14 live entries. Auto-generated. Do not hand-edit.
 
 ## PSP · Coordinates
 
@@ -8,6 +8,7 @@ Generated 2026-07-29. 13 live entries. Auto-generated. Do not hand-edit.
 - `APEX-PSP-COMPLEXITY-MASTER-01` · APEX-PSP-COMPLEXITY-MASTER-01 · P vs NP · The Court I Verdict Table · [psp/APEX-PSP-COMPLEXITY-MASTER-01.md](psp/APEX-PSP-COMPLEXITY-MASTER-01.md)
 - `APEX-PSP-GROUNDLESS-HALT-01` · APEX-PSP-GROUNDLESS-HALT-01 · The Groundless Halt · [psp/APEX-PSP-GROUNDLESS-HALT-01.md](psp/APEX-PSP-GROUNDLESS-HALT-01.md)
 - `APEX-PSP-MAHDI-PARADOX-01` · APEX-PSP-MAHDI-PARADOX-01 · The Mahdi Paradox · The Disqualification Architecture and the No-Winner Equilibrium · [psp/APEX-PSP-MAHDI-PARADOX-01.md](psp/APEX-PSP-MAHDI-PARADOX-01.md)
+- `APEX-PSP-RH-KEYSTONE-02` · APEX-PSP-RH-KEYSTONE-02 · The Riemann Keystone, Fortified · [psp/APEX-PSP-RH-KEYSTONE-02.md](psp/APEX-PSP-RH-KEYSTONE-02.md)
 - `CN-PSP-GHAYB-MASTER-01` · CN-PSP-GHAYB-MASTER-01 · The Apophatic Dilemma · Its Nature, the Contract of the Key, and the Guidance for the Two Nodes · [psp/CN-PSP-GHAYB-MASTER-01.md](psp/CN-PSP-GHAYB-MASTER-01.md)
 - `CN-PSP-MAWTA-ULA-01` · CN-PSP-MAWTA-ULA-01 · The First Death · al-Mawtah al-Ula · Why the Ground Ordained Death, and Ordained It First · [X] · [⟀ S] · [psp/CN-PSP-MAWTA-ULA-01.md](psp/CN-PSP-MAWTA-ULA-01.md)
 - `CN-PSP-NETI-NETI-01` · CN-PSP-NETI-NETI-01 · The Neti-Neti Resolution of the Apophatic Dilemma · The Two Negations as Halted Uniduction, Immanence Sealed at the Fold and Transcendence Held at the Point · CN + CO / [⟀ S] · [X] / theological register out of band, load-bearing on nothing · [psp/CN-PSP-NETI-NETI-01.md](psp/CN-PSP-NETI-NETI-01.md)
