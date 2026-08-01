@@ -24,3 +24,4 @@ Categories are a flexible, growing set. Add a new top-level category when a body
 of work does not fit the existing ones; four to five is the working range, more
 as the library grows. Depth is a guideline, not a wall: aim for two subject
 levels before the file, and expand or collapse a level where a shelf needs it.
+- **History** · biographical registers, chronological reconstructions, and the instruments that build them.
