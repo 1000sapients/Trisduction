@@ -1,4 +1,7 @@
+# MANIFEST · sha256 of every file in publication/. Current skill is the highest
+# version present; prior versions are retained and never removed (R.4).
 e5ae52065a214ca04fc4361f0cf8d480f2cac5dd9bcfe787ecf20c2480d18e62  SKILL_trisduction-publication-format_v1_1_0.md
+9a2596520cd17736ed54b3c715bbdda6a7db2beca24fe2b6ed694d8911bd3410  SKILL_trisduction-publication-format_v1_2_0.md
 08aeb6756e547cf7f4063eec2c300299831109010397d3b74573c01198a65399  label_map.py
 7060a61387ea62df43e1a225786aee50d0be82aeb0833cc1fa7171f00a5e7e30  PUBLIC_LABEL_MAP.json
 c41aebb5fb07275fc464f207ece114f9563103c5fd35bbeab24ce5ae9dbe02fa  PUBLIC_LABEL_MAP.md
