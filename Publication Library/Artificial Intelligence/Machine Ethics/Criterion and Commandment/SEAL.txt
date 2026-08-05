@@ -1,0 +1,29 @@
+SEAL · The Criterion and the Commandment for AI Substrates
+Preprint edition, August 2026. Sealed at cycle CBC-06 round 4, verdict SEALED-ROUND.
+Apex Pristine carries a contents page; the Journal edition does not, per journal convention.
+
+Boot chain, executed live at the declared seed:
+  D0 fb8900b5cf42 -> D1 364d1cdb9227 -> D2 8a5dc7f98105 -> D3 1e2b2d2adb14
+
+Declared seed: 20260622
+Identity floor, 20000 triads      4.330e-15
+Identity, uncentred road          4.441e-15
+Seed robustness, three seeds      3.997e-15 / 3.775e-15 / 4.219e-15
+Frame sweep, 100 conjugations     1.0e-15
+Full negation                     0.0e+00 exact
+Four-estimator spread             2.2e-16 within tol 1.4e-15
+Erasure floor at 300 K            2.8710e-21 J per bit
+
+Artifact digests:
+  source.md   sha256 cab334fa988b11c6dd1e48c10bbe4ac621883229344ea5fbd9a7587f9158436c
+  apex .pdf   sha256 ee5b33e144846b635fc9dc42faa73f3b9eb211ed69075c7fbe81072cb4724ca0
+  journal.pdf sha256 2a04391d93db69013080f82e3d8058daed3857ee7b4033d428d7a623a5eba0a8
+
+Gate sequence at seal: cross-references PASS, references contiguous PASS,
+revision markers PASS, em-dashes PASS, issuance register PASS, glyph leakage
+PASS, single seed PASS, chain digests PASS.
+
+Audit record: six cycles, CBC-01 through CBC-06, ledgers delivered with the
+artifact. Control grade floor SELF throughout; the single-substrate aperture
+is open and is stamped on this seal. This seal is a receipt on arithmetic and
+conduct. It warrants no conclusion the paper draws.
