@@ -206,6 +206,14 @@ Table: Table 2 | The three terms and their mathematical residence.
 
 Note: All three are premise-grade theological readings of theorem-grade mathematical structures. They are load-bearing on nothing in the mathematics.
 
+## The two names
+
+**And one of the twelve words carries the confusion already.** The zeros the claim excludes are called trivial, and the ones it speaks of are called nontrivial. The names are honest bookkeeping and the mathematicians did nothing wrong by them: the first family falls out of the functional equation in a line, and the second is what remains after it.
+
+**But look at what the two families are.** The trivial zeros are infinite and scattered across the whole negative axis. The nontrivial ones are claimed to sit on a single line. **By any structural measure the scattered family is the loose one**, and the disciplined family is the one whose name says it is the hard case. The word records **how cheaply a reader obtains them** and records nothing else, and a note about our effort has been read for a century and a half as a rank of being.
+
+**On the reading offered here, every zero is trivial.** Each is determinate, placed, not negotiated, standing where it was put. **What differs is the veil, not the zero.** One family lifts its veil in a line and the other has not lifted in a hundred and sixty-seven years, and the seeing of the second must be earned where the seeing of the first is given. **Trivial and nontrivial name the price of the looking. They name nothing about the looked-at.**
+
 ## The veils
 
 The hypothesis is a determinate truth the primes already hold, and it is veiled from every finite instrument. Three of the veils are non-entailments and they are named first, because they are the structural core of the essay and each is a classical fact rather than a reading. Six further obstructions sit beside them, counted and typed in the table below, and the ninth is of a different order from the other ten.
