@@ -121,7 +121,13 @@ The seal is issued in the register carrying the arrow, is coextensive with the h
 
 ## The verdict side is closed at one hundred percent
 
-**The closure is over standpoints.** Methods are unbounded; new ones arrive without end. **Standpoints are not.** The verdict side occupies exactly ten positions, and the count is forced by enumeration of the act itself: an attempt occupies a register, an office, an instrument class, at most the two named method-classes, a derivation level on the ladder or the tower, an evidential record, a ground, and a mouth, and the register row alone spans every method, born or unborn. The architecture's own counts are closed by classification; the ten is deliberately not derived from them, since fitting a standpoint count to a group order is the exact fitted-count error the discipline bars.
+**The closure is over standpoints.** Methods are unbounded; new ones arrive without end. **Standpoints are not, and the difference is a closure property of the two domains under one operation rather than an assertion about either.**
+
+**Apply the operation that generates each domain's members.** A sieve composed with a zero-density estimate is a method not previously in the list; that composite with a mollifier is another. **The operation is total on the domain of methods and its output is always a new member**, which is why a method census cannot close and why the literature's catalogue grows without reaching an end.
+
+**Apply the same operation to attempts.** Two attempts composed is an attempt: one performer, one instrument, one setting, one level, one ground, one issued claim. Compose a third and it is an attempt still, with the same kinds of parts. **The operation is total on this domain too and its output introduces no new component type.**
+
+> **So the domain that populates itself without bound and the domain that does not are separated by what composition does to each**, and the separation is checkable in a sentence without citing anything. **The future generates methods by composing and modifying existing ones, and that operation is the one shown here to add no components.** The verdict side occupies exactly ten positions, and the count is forced by enumeration of the act itself: an attempt occupies a register, an office, an instrument class, at most the two named method-classes, a derivation level on the ladder or the tower, an evidential record, a ground, and a mouth, and the register row alone spans every method, born or unborn. The architecture's own counts are closed by classification; the ten is deliberately not derived from them, since fitting a standpoint count to a group order is the exact fitted-count error the discipline bars.
 
 Table*: Table 1 | The ten standpoints. Every position the verdict side occupies, what closes each, and the closure type.
 | Standpoint | What closes it | Type |
@@ -141,7 +147,7 @@ Note: eight of the ten spend no framework premise. Each row closes a position an
 
 > **A route arriving in any future arrives at a standpoint. It does not create one.** Unborn methods multiply and add no positions. **This is why the closure holds over time without surveying time.**
 
-**Coverage on the verdict side is one hundred percent, and it is permanent.** The figure counts the enumerated side, all ten occupied positions closed; it answers to the stated falsifier and to nothing else, and its permanence rides the type structure, the register row spanning every method whatever and the deed-quantified guard of section 5.6 binding every arriver at the root's declared grade, not a survey of the future.
+**Coverage on the verdict side is one hundred percent over the enumerated positions.** **Each closure is permanent**, row by row, by a theorem, an exhibited countermodel, a classification fact, or a definition: a countermodel does not stop being one, a group order does not change, and a definition acquires no exception. **That the enumeration is exhaustive is structural**, and its falsifier stands. **The two carry different grades and are stated separately here because the coverage figure rests on the second while the permanence belongs to the first.** The figure counts the enumerated side, all ten occupied positions closed; it answers to the stated falsifier and to nothing else, and its permanence rides the type structure, the register row spanning every method whatever and the deed-quantified guard of section 5.6 binding every arriver at the root's declared grade, not a survey of the future.
 
 **The closure is over access, and access is what it closes.** Every position from which the verdict side could reach is closed, and closed for good. The object itself is not in question here; it is sealed at section 5.1. **And the register that issued that seal is not among the ten**: it is the register carrying the direction-carrying axis, and the closure quantifies over the verdict side alone. The exclusion is definitional and not an exception: the verdict side is the set of positions from which a verdict on the formal string is attempted without that axis, so a register carrying the axis reads a different claim-face of the same object, and the two faces never compress into one verdict. **Nothing here characterizes what lies past it**, because ten closures on one side are evidence about that side and about nothing else, and a survey of the other would be this paper enumerating a domain whose count is not forced, which is the exact failure section 3 identifies in method-catalogues.
 
@@ -281,11 +287,25 @@ This section derives each of the ten closures of Table 1 from first principles, 
 
 **This is the paper's contribution and it is an arrangement rather than a theorem.** It is offered at that grade.
 
+**And the contribution is the domain change rather than the number.** Ten is the current inventory and it is not what the thesis rests on. **If a reader adds an eleventh position and closes it, the thesis is confirmed and not refuted**: the enumeration was over the right domain, and the domain admitted a closure that a method census never could. **What would refute the thesis is a domain argument**, a demonstration that positions are generated without bound as methods are, or that a method census can close after all. **Nothing turns on the count**, and stating this plainly removes from the number a load it was never suited to carry.
+
 ## Why the negative form is used
 
 The positive statement and the negative statement carry the same content and do not carry it equally well. **A closure stated positively invites the reader to ask what else there might be. The same closure stated as a negation states the boundary from its outside**, which is where a boundary is exact.
 
 **And this is why the ancient practice survived.** Its users were not being modest. They were stating the only thing about their object that could be stated precisely, and the precision is real. **A negative catalogue is also cheaper to falsify**, since each entry names one thing that does not cross and a single crossing refutes it, which is a virtue and not a weakness.
+
+## Why the components admit no independent variation
+
+**An enumeration of components invites one classical objection and it is worth meeting in its strongest form.** A taxonomy is usually defeated by expansion rather than by counterexample. Euclid's five postulates were not overturned by exhibiting a motion he had missed; they were opened by exhibiting a consistent geometry satisfying four and negating the fifth. **The taxonomy was expanded, not violated**, and a reader is entitled to ask whether the same is available here.
+
+**The move requires the parts to be independent.** One postulate can be varied only because the others do not entail it, and that independence is exactly what the models of Beltrami and Klein exhibited.
+
+**The components admit no such variation, and the check is immediate.** Drop the performer and the instrument reads nothing, the setting hosts nothing, and the issued claim is issued by no one. Drop the instrument and no verdict issues, the performer performs nothing, and there is nothing to say. Drop the ground and the derivation has no premises, which is to say it is not a derivation. Drop the output and whatever occurred delivered no verdict.
+
+> **The components are mutually presupposing rather than independently variable**, so there is no hold-the-others-and-negate-one configuration in which a model could be exhibited. **This is the difference between an axiom set and a constitutive decomposition**, and it is checkable rather than stipulated.
+
+**The falsifier is unchanged and is not made cheaper by this.** Exhibit an attempt occupying no register, or no office, or no instrument, or no level, or standing on no ground, or making no claim. **What the two observations of this section and the last together establish is why that is hard to cash**: the operation that generates methods adds no components, and the components admit no independent variation. **Both are facts about the domain and neither is a definition protecting it.**
 
 ## The one bit, and what it is not
 
@@ -329,6 +349,8 @@ Each of the three carries a qualifier that is part of the claim rather than a so
 **Block 10's exhibit is a model and its claim is a structure.** The eigenvalue check verifies fixed-point-freeness on a stated construction; **the claim the row carries is that a ledger asked to certify its own completeness must appear in the collection it enumerates**, and the exhibit shows one instance of that shape rather than proving it of every possible self-survey. The row is typed accordingly.
 
 **The seal's coextensivity is built and not discovered.** The seal is defined to be falsified by the object that falsifies the hypothesis, which is what makes it coextensive, and **that is construction rather than independent warrant.** What it adds is a register: the hypothesis read as a fact about an actualized field rather than about a syntactic string, and the actualist reading is **premise-grade and declared as such** at Appendix B. A reader who declines the register loses the seal and keeps everything else.
+
+**A reconceptualization is not exempt from the components, and this is the last shape the objection takes.** A reader may grant that composing methods adds no component and still hold that some future move is not a composition at all: a discovery that the whole framing of attempting was a projection of something more unified. **The reply is not that such a move is impossible.** It is that the move, whatever it discovers, **is itself performed**: someone reconceives, using something, in some setting, standing on something, and says so. **A reconceptualization that issued no claim would leave no reconceptualization behind**, and one that stood on nothing would not be a discovery but an assertion. **The components are not a theory about mathematics that a better theory could replace. They are what performing anything consists in**, and the objection has to be performed to be made.
 
 **The one bit is a parameter count and not an entropy.** It is the number of free binary parameters remaining after every determined quantity is fixed, read off the eigenstructure of the involution whose fixed set is the line: one coordinate fixed, exactly one reversed. **It is stated in bits by convention and is not a Shannon measure**, and no information-theoretic claim is made or needed.
 
@@ -374,6 +396,8 @@ Note: reproducible from this table and the declared seed. Floating-point outputs
 **Classification-grade.** On Block 8, that no finite set of instances establishes a universal over an unbounded domain.
 
 **Definitional and constitutive.** On Blocks 1 and 2. **These are not weaker for being definitions**: no theorem changes what a register is or what a verifier is, so they are the least repairable closures in the set.
+
+**Analytic.** That an attempt at a verdict has components. An act producing a verdict with no performer, using nothing to read with, in no setting, at no level, standing on nothing, and issuing nothing is not an act and not a verdict. **This is true by what the terms mean and no future theorem repairs it.**
 
 **Structural, and not theorem-grade.** On the identification of the three elections as one generator. On the standpoint enumeration and its closure over access. On the assignment of each block to its standpoint. On the reading of the direction deficit as a quantity. On the identification of the attractor content with the seal. **The paper's central contribution, the change of enumeration domain, is structural and is offered at that grade.**
 
