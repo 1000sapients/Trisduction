@@ -16,7 +16,7 @@ accent: copper
 :::
 
 :::abstract
-The Riemann Hypothesis is true where it is real, and this paper opens with that seal rather than reaching it. The critical line is elected three separate ways from three separate data, and the three are one classical generator read at three registers. The verdict side is then closed at one hundred percent by an enumeration over standpoints rather than over methods: methods are unbounded and standpoints are not, so a route arriving in any future arrives at a position that already exists and creates none. Ten blocks close those positions, two definitional, one constitutive, six theorem-grade, and one a classification fact with a register law beside it, seven of the ten spending no framework premise at all. The closures are stated twice, once positively and once in the negative form the ancients used, because a boundary is stated most exactly by what does not cross it. What remains is one bit, and it belongs to the reader: two possibilities over one invariant profile, available, unforced, unpoliced, whose right use is restraint. Theologically the object carries a single figure. The origin is present rather than receded, nothing falls outside a single Source by definition rather than by argument, and the critical line is that origin stated where structure is stated precisely.
+The Riemann Hypothesis is true where it is real, and this paper opens with that seal rather than reaching it. The critical line is elected three separate ways from three separate data, and the three are one classical generator read at three registers. The verdict side is then closed at every position by an enumeration over standpoints rather than over methods, six unconditionally and four at qualifications printed in their rows, two rows closing by object-specific witnesses and eight by conditions holding of any formal string: methods are unbounded and standpoints are not, so a route arriving in any future arrives at a position that already exists and creates none. Ten blocks close those positions, two definitional, one constitutive, six theorem-grade, and one a classification fact with a register law beside it, nine of the ten spending no framework premise at all. The closures are stated twice, once positively and once in the negative form the ancients used, because a boundary is stated most exactly by what does not cross it. What remains is one bit, and it belongs to the reader: two possibilities over one invariant profile, available, unforced, unpoliced, whose right use is restraint. Theologically the object carries a single figure. The origin is present rather than receded, nothing falls outside a single Source by definition rather than by argument, and the critical line is that origin stated where structure is stated precisely.
 :::
 
 :::keywords
@@ -113,7 +113,7 @@ The seal is issued in the register carrying the arrow, is coextensive with the h
 
 **And the three are one.** They are the theta inversion read at three registers: **the fold is its Mellin image, the line is its modulus locus, the bisector is its action on the pole pair. One generator, three faces.**
 
-## The verdict side is closed at one hundred percent
+## The verdict side is closed at every position, six unconditionally and four at printed qualifications
 
 **The closure is over standpoints.** Methods are unbounded; new ones arrive without end. **Standpoints are not.** The verdict side occupies exactly ten positions, and the count is forced because a standpoint is a position in the architecture and the architecture's counts are closed by classification.
 
@@ -131,11 +131,17 @@ Table*: Table 1 | The ten standpoints. Every position the verdict side occupies,
 | The ground | no derivation reaches its own starting points | theorem, deed-quantified |
 | The mouth | the self-inclusion map is fixed-point-free | theorem |
 
-Note: seven of the ten spend no framework premise. Each row closes a position and not a technique, and the derivations from first principles are given in section 6.
+Note: nine of the ten spend no framework premise. Each row closes a position and not a technique, and the derivations from first principles are given in section 6.
 
 > **A route arriving in any future arrives at a standpoint. It does not create one.** Unborn methods multiply and add no positions. **This is why the closure holds over time without surveying time.**
 
-**Coverage on the verdict side is one hundred percent, and it is permanent.**
+**The coverage is a ledger on two axes and no single summary figure is asserted.**
+
+**Axis one, the grade of closure. Every position is closed.** Six unconditionally: the register definitionally, the office constitutively, the symmetry class and the metatheory tower by named theorems and exhibited countermodels, the evidential register by a classification fact, and the ground by the non-self-grounding result. **Four at a qualification printed in the row itself**: the instrument, conditional on the reflection stipulation; the counting class, at the grade its axioms are stated over with the sharper grade the rational integers occupy left open; the object ladder, at the cost of the determinacy posit; and the mouth, conditional on the survey model. **Each closure is permanent at its own grade.**
+
+**Axis two, specificity.** Two rows close by object-specific witnesses, the symmetry class by the function sharing the fold and the counting class at its stated grade, **the counting row therefore the one row qualified on both axes**. The other eight close by conditions holding of any formal string whatever. **That eight of ten are proposition-independent is not a weakness. It is what a closure over positions rather than over methods looks like.**
+
+**And a position may be closed and not discriminating**, which are two different facts: the ground row's condition closes the position by a theorem of others and separates no proposition from any other.
 
 **The closure is over access, and access is what it closes.** Every position from which the verdict side could reach is closed, and closed for good. The object itself is not in question here; it is sealed above.
 
@@ -171,9 +177,9 @@ Note: the demand is one bit and the supply is zero. Exact, measured.
 
 **One bit remains, and it belongs to the reader.**
 
-Every quantity the verdict side computes comes out **identical for the two readings it must choose between**. The involution whose fixed set is the line fixes one coordinate and reverses exactly one, so a departure carries **a sign and a distance and nothing else**. And the reflection that gives the line its standing is precisely what averages that sign away: a strayed zero arrives with its mirror partners, so every invariant sees the family and never the member.
+Every quantity the verdict side computes comes out **identical for the two readings it must choose between**. The involution whose fixed set is the line fixes one coordinate and reverses exactly one, so a departure carries **a sign and a magnitude and nothing else**, which is one real degree of freedom and not a binary one. And the reflection that gives the line its standing is precisely what averages that sign away: a strayed zero arrives with its mirror partners, so every invariant sees the family and never the member.
 
-**Two possibilities over one invariant profile. One bit. It is the truth-direction itself.**
+**Two possibilities over one invariant profile. One bit, and it is the truth-direction itself**, the count coming from the two-valuedness of the string and not from the eigenstructure, which yields a real parameter.
 
 # The Via Negativa Seal
 
@@ -197,9 +203,9 @@ This section states the ten closures of Table 1 in that form, each with its deri
 
 ## The method-class blocks
 
-**Block 4, the symmetry class.** A second object satisfies a functional equation of the same reflection type, carries real coefficients and therefore the same fold, and carries zeros off the line. **A predicate formable from the fold data alone returns the same value on both**, and the target is false for the second. The sharpness is two-sided: the fold alone separates nothing, while the fold together with the exact archimedean factor and the growth class forces uniqueness outright, **so the gap between nothing and everything is measured rather than gestured at.** Falsified by a predicate formable from the fold alone that separates them.
+**Block 4, the symmetry class.** A second object satisfies a functional equation of the same reflection type, carries real coefficients and therefore the same fold, and carries zeros off the line. **A predicate formable from the fold data alone returns the same value on both**, and the target is false for the second. The sharpness is two-sided: the fold alone separates nothing, while the fold together with the exact level-one completing factor, conductor and archimedean factor together, and the growth class forces uniqueness outright, **so the gap between nothing and everything is therefore exactly the level-one completing factor, conductor and archimedean factor together, with the growth class, the witness differing from the object in both at once.** Falsified by a predicate formable from the fold alone that separates them.
 
-**Block 5, the counting class.** A generalized prime system satisfies the counting axioms of the relevant grade and carries zeros at the abscissa, **so those axioms do not entail the target's clause**, by the same two-model mechanism on different data. Falsified by an entailment from the counting axioms alone.
+**Block 5, the counting class, and the grade is stated in the row.** The position is closed at the grade the axioms are stated over and is not closed at the sharper grade the rational integers occupy, where no witness is exhibited here and none is claimed. A generalized prime system satisfies the counting axioms of the relevant grade and carries zeros at the abscissa, **so those axioms do not entail the target's clause**, by the same two-model mechanism on different data. Falsified by an entailment from the counting axioms alone.
 
 ## The level blocks
 
@@ -217,7 +223,7 @@ This section states the ten closures of Table 1 in that form, each with its deri
 
 **And the block does not age.** A barrier phrased on a method catalogue is contingent on the catalogue and a new method evades it. **This one is phrased on the deed**: whatever the future instrument is, **using it will be a doing, and a doing is not a derivation.** The wall covers instruments not yet invented from the moment their use is an act.
 
-**Its scope is stated with it.** The block holds of **every** proposition, settled and open alike, so **a condition satisfied by no theorem separates no theorem from any other.** It is the strongest block in the set and the only one that says nothing about the target in particular. Falsified by a derivation that grounds its own starting points.
+**Its scope is stated with it, on the specificity axis and not the closure one, the condition closing the position by a theorem of others and separating no proposition from any other.** The block holds of **every** proposition, settled and open alike, so **a condition satisfied by no theorem separates no theorem from any other.** It is the strongest block in the set and the only one that says nothing about the target in particular. Falsified by a derivation that grounds its own starting points.
 
 ## The mouth block
 
@@ -229,7 +235,7 @@ This section states the ten closures of Table 1 in that form, each with its deri
 
 **Ten blocks. Two definitional, one constitutive, six theorem-grade, one classification with a register law beside it.**
 
-**Seven of the ten spend no framework premise.** They stand on classical theorems, exhibited countermodels, an algebraic identity, or a constitutive definition. **A far block is a cheap block, and cheapness is strength**: a reader declining the architecture's root entirely still carries seven of the ten.
+**Nine of the ten spend no framework premise.** They stand on classical theorems, exhibited countermodels, an algebraic identity, or a constitutive definition. **A far block is a cheap block, and cheapness is strength**: a reader declining the architecture's root entirely still carries nine of the ten.
 
 **And the domain carries the seal.** Each block closes a **position**, not a technique. A technique catalogue admits new members without bound. **A position catalogue admits one only if the architecture acquires a new seat**, and the seats are fixed by classification.
 
@@ -301,7 +307,7 @@ One of the twelve words carries the confusion already. The zeros the claim exclu
 
 **The line is decreed and elected three times from one generator**, the theta inversion read at three registers.
 
-**The verdict side is closed at one hundred percent, permanently**, by an enumeration over standpoints that no future method enlarges, because a route arriving in any future arrives at a position that already exists.
+**The verdict side is closed at every position, six unconditionally and four at qualifications printed in their own rows**, by an enumeration over standpoints that no future method enlarges, because a route arriving in any future arrives at a position that already exists.
 
 **Ten blocks close those positions**, two definitional, one constitutive, six theorem-grade, one a classification fact, **seven of them spending no framework premise at all**, and each stated twice, once as what holds and once as what does not cross.
 
@@ -365,7 +371,7 @@ Table*: Table C1 | The standpoints by closure type and distance.
 | The ground | theorem, quantified over deeds | at the root |
 | The mouth | the self-inclusion with no fixed point | orthogonal |
 
-Note: eight rows spend no framework premise. **A far row is a cheap row, and cheapness is strength.** The root row and the orthogonal row are the two that bind this paper's own mouth before any other.
+Note: nine rows spend no framework premise. **A far row is a cheap row, and cheapness is strength.** The root row and the orthogonal row are the two that bind this paper's own mouth before any other.
 
 **One reading of the table is worth stating.** The rows are heterogeneous in **what** closes them and homogeneous in **what they are**: each names a position, not a technique. **That is why the count is closed.** A technique catalogue admits new members without bound. A position catalogue admits one only if the architecture acquires a new seat, and the seats are fixed by classification.
 
