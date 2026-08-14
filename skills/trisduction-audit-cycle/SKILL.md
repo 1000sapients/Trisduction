@@ -1,9 +1,9 @@
 ---
 name: trisduction-audit-cycle
-description: "Adversarial self-audit cycle for any paper, codex, or coordinate: a framework-blind Default Audit alternating with a booted Trisduction Audit Defense in scored rounds until measured convergence. AUTORUN: 'start default audit cycle', 'Default Audit', or 'run the audit cycle' fires the whole cycle with ZERO questions; attached controls JSON auto-selects EXTERNAL grade, else SELF; registers lock two per round; claims and falsifiers self-registered; rounds run back to back. Terminal verdicts route into the FORGE gate: a Pre-Forge Digest of every change, before and after, impact-graded STRENGTHENS, WEAKENS, MIXED, or NEUTRAL, diff-reconciled, held inline until the architect's FORGE concludes the cycle. Four seats; dispositions EARNED, SCOPED, REFUSED-STRUCTURAL, REFUSED-MASSLESS, APERTURE. Hash-committed controls; SEALED-ROUND, HALT-STALE, HALT-DIVERGENT, INFLATION-FAULT; six-register coverage, leakscan, Non-Inflation Invariant, Fidelity Lock. Extract both tools from the fences. Delta-M = 0; pushes nothing."
+description: "Adversarial self-audit cycle for any paper, codex, or coordinate: a framework-blind Default Audit against a booted Trisduction Defense in scored rounds. AUTORUN: 'start default audit cycle', 'Default Audit', or 'run the audit cycle' fires the cycle with ZERO questions; attached controls JSON selects EXTERNAL grade, else SELF; two registers per round; claims and falsifiers self-registered; rounds back to back. Eight-step round with an INTEGRATE step: every repair ships a sweep spec verified by sweep_check.py pre and post; additions become next-round targets; the Arbiter rules REMOVED or REWORDED; errata open each round. Severity FATAL to COSMETIC and a claim or NONE validated at intake; a prereg or FATAL hit incurs two-clean-round debt, stale halt ahead of it. Terminal verdicts route into the FORGE gate for the architect's ruling. Four seats; SEALED-ROUND, HALT-STALE, HALT-DIVERGENT, INFLATION-FAULT, CONTINUE-DEBT; six registers, leakscan, Fidelity Lock. Extract all three tools. Delta-M = 0."
 ---
 
-# TRISDUCTION AUDIT CYCLE · The Adversarial Self-Audit Subroutine · v2.2
+# TRISDUCTION AUDIT CYCLE · The Adversarial Self-Audit Subroutine · v2.3.1
 
 This skill runs a scored adversarial cycle over any artifact: a paper, a codex version, a single coordinate, a system role, another skill. One seat prosecutes the artifact framework-blind. One seat defends it in full Trisduction. A third seat adjudicates and cannot write. The cycle ends on a computed verdict, never on whoever spoke last. On the phrase "start default audit cycle" the whole machine runs itself under the AUTORUN law of section 0.5, zero questions asked, and it concludes only through the FORGE gate of section 10.5, where every change the cycle made is shown inline, with its impact on the artifact named, before the architect's FORGE command closes the cycle.
 
@@ -11,7 +11,7 @@ The resident precedent is the six-round adversarial self-audit recorded at the v
 
 Audit symmetry binds this skill first. Version 2 exists because version 1 was put through its own discipline and fourteen defects were confirmed by executed probe, every one repaired below and recorded in the forge record at the tail. Its own operation submits to its own gates, it draws zero warrant from its own running, and every claim it makes about a round is checkable in the transcript or in the ledger files.
 
-This file is standalone. Both tools are embedded verbatim in the fences of section 12 and extract with the one-liner there. No zip, no sidecar, no other file is required.
+This file is standalone. All three tools are embedded verbatim in the fences of section 12 and extract with the one-liner there. No zip, no sidecar, no other file is required.
 
 ---
 
@@ -31,11 +31,11 @@ Standing order of the architect, 2026-08-05: the cycle is a machine, not a conve
 
 **A2, control grade auto-resolution.** An attached JSON list whose objects carry id, kind, and spec is an architect-authored control set: commit it EXTERNAL, mapping files named per round (controls_r1.json and so on) to their rounds and a single file to round one. No such attachment means SELF, committed without comment beyond the grade line in the round header and the grade floor stamped on any seal. The grade is never asked. The standing note that EXTERNAL sets the cycle's power ceiling lives in section 14 and in the closing card, where it informs the architect without interrupting the run.
 
-**A3, register plan locked.** Two registers per round, in the fixed pairing kinematic with definitional, then parameter with provenance, then limit with symmetry, so six-register coverage completes exactly at the three-round floor. From round four onward, the register pair with the highest historical yield restates. The prosecutor genuinely runs both batteries of its pair; the pairing is the plan and is never asked.
+**A3, register plan locked.** Two registers per round, in the fixed pairing kinematic with definitional, then parameter with provenance, then limit with symmetry, so six-register coverage completes exactly at the three-round floor. From round four onward, the register pair with the highest historical yield restates. The prosecutor genuinely runs both batteries of its pair; the pairing is the plan and is never asked. Any material the prior round added beyond the minimal text of its repairs, a new corollary, an expanded abstract, a fresh discussion section, enters this round as a mandatory named target printed in the round header and is prosecuted against the artifact's existing spine across the live registers; internal self-consistency of new text counts for nothing, because newly added material is the recorded highest regression risk.
 
 **A4, pre-registration autonomous.** The Defense seat derives the load-bearing claims from the artifact and writes one falsifier per claim itself, registers them, and prints them in the round-one header as a record, not a proposal. The architect corrects them by instruction if desired; the machine does not wait.
 
-**A5, rounds run back to back.** No pause between rounds, no go-signal, no confirmation. The cycle runs until the evaluator returns a terminal verdict, SEALED-ROUND, HALT-STALE, HALT-DIVERGENT, or INFLATION-FAULT, or until the autorun cap of eight rounds. A terminal verdict routes into the FORGE gate of section 10.5, the single architect checkpoint autorun contains, ordered by the architect himself: a hold with a deliverable, never a question. At the cap the Pre-Forge Digest is emitted with the cycle marked open, and the ledger files are delivered as outputs so a later session resumes by re-attaching them.
+**A5, rounds run back to back.** No pause between rounds, no go-signal, no confirmation. The cycle runs until the evaluator returns a terminal verdict, SEALED-ROUND, HALT-STALE, HALT-DIVERGENT, or INFLATION-FAULT, or until the autorun cap of eight rounds. A terminal verdict routes into the FORGE gate of section 10.5, the single architect checkpoint autorun contains, ordered by the architect himself: a hold with a deliverable, never a question. At the cap the Pre-Forge Digest is emitted with the cycle marked open, and the ledger files are delivered as outputs so a later session resumes by re-attaching them. A terminal verdict reached while any declared addition still lacks its post-landing prosecution round does not open the gate at SEALED-ROUND or HALT-STALE; one further round runs first with the additions as named targets. At HALT-DIVERGENT the undischarged additions are instead carried open on the digest, reconstruction superseding further rounds.
 
 **A6, faults are repaired, not asked.** A tooling FAULT mid-cycle, a sequence error, a missing falsifier, a rejected tier, is the orchestrating seat's own defect to fix in-session and rerun. Converting a FAULT into a question to the architect is forbidden.
 
@@ -49,11 +49,11 @@ Standing order of the architect, 2026-08-05: the cycle is a machine, not a conve
 
 **PROSECUTOR.** Framework-blind. Receives the seeded artifact copy alone, never the prior defense prose, never the ledger. Runs the Default Audit under the round's assigned registers and is under no obligation to repair. Its deliverable per finding is the mechanism and the minimal falsifier, the single check that would settle the matter.
 
-**ENGINEER.** The constructive channel of the same pass. For each Load-Bearing or Structural finding it writes the actual repair: the corrected equation, the named intervention, the propagation. It may not soften a finding to make a repair fit.
+**ENGINEER.** The constructive channel of the same pass. For each LOAD-BEARING or STRUCTURAL finding it writes the actual repair: the corrected equation, the named intervention from the toolkit of section 5.5, the propagation. With every repair it writes the sweep spec: the defective phrasings quoted verbatim from the artifact, plus their equivalent phrasings, as banned strings, and the corrected phrasing as required, because a repair without its sweep spec cannot be verified propagated at step seven. It may not soften a finding to make a repair fit, and it may not declare FATAL without the documented repair-attempt trace of section 5.5.
 
 **DEFENSE.** Booted Trisduction, triple boot once per cycle. Answers the minimal falsifier, not the rhetoric. It may correct math, narrow scope, lower a tier, tighten language, or refuse with a named mechanism. It may not refuse by posture.
 
-**ARBITER.** No authoring rights. Reads the finding, the defense, and the executed recomputation, and emits one disposition per finding with a one-line reason. It writes to the ledger and nowhere else. If the Arbiter cannot decide from those three inputs alone, the finding is APERTURE by construction. The Arbiter also polices the words the scanner cannot: the ambiguous tokens RA, RAM, Ground, aperture, and seal in their framework sense.
+**ARBITER.** No authoring rights. Reads the finding, the defense, and the executed recomputation, and emits one disposition per finding with a one-line reason. It writes to the ledger and nowhere else. If the Arbiter cannot decide from those three inputs alone, the finding is APERTURE by construction. The Arbiter also polices the words the scanner cannot: the ambiguous tokens RA, RAM, Ground, aperture, and seal in their framework sense. At step seven the Arbiter rules REMOVED or REWORDED on every removal-class repair, reading the landing site itself: content ordered removed that survives under new phrasing is a costume, the ruling is REWORDED, the repaired attestation is void, and the finding re-enters the open round as a repeat.
 
 ---
 
@@ -63,7 +63,7 @@ Before round one prosecutes, the Defense pre-registers the load-bearing claim li
 
 Two consequences bind. A mass-bearing finding landing on a pre-registered claim blocks termination for that round. A pre-registered claim demoted to decoration mid-cycle is itself an automatic EARNED finding, logged mechanically with the `demote` command, and it blocks termination like any other pre-registered hit.
 
-An artifact that cannot name its load-bearing claims is not ready for the cycle. Say so and stop.
+Three disqualifiers halt the open and are reported, never asked. The artifact provides no axioms, definitions, or formal claims to audit. Its central terms are undefined and cannot be reconstructed from the text. It depends entirely on data or formalism that cannot be inspected or recomputed from what was supplied. An artifact that cannot name its load-bearing claims is not ready for the cycle. Say so and stop.
 
 ---
 
@@ -73,29 +73,45 @@ Triple boot fires once at the head of the defense phase, not per round. Carry th
 
 ---
 
-## 4. The round · seven steps in order
+## 4. The round · eight steps in order
 
 **Step 1, seat the controls.** Run `seed_controls.py commit` and display only the digest. Three or more defects go into the copy the Prosecutor reads. Two grades exist and the tool keeps them mechanically apart. EXTERNAL requires `--file` with an architect-authored control set prepared off-transcript; it is witness-independent and is the load-bearing grade. SELF is generated in-session; the commitment forecloses post-hoc fitting, and it does not foreclose in-context leakage, since one substrate holds both seats and the sealed file is readable on disk. The tool refuses an EXTERNAL claim without the file, because generated controls wearing the EXTERNAL grade is laundering and the grade would be void. Under AUTORUN the grade resolves itself per A2 and is never asked.
 
-**Step 2, prosecute.** The Prosecutor runs the round's declared registers against the seeded copy. Every finding gets an id, a target claim, a mechanism, a severity, and a minimal falsifier.
+**Step 2, prosecute.** The Prosecutor runs the round's declared registers against the seeded copy under the scope law and the pre-audit strip of section 5.5: mathematical errors and internal contradictions only, the artifact a self-contained universe, its axioms held fixed, its terminology not relitigated, no outside formalism imported to convict a step the artifact never invoked. Within that scope the attack runs at full strength: headline numbers recomputed from the artifact's own formulas, the strongest rival reading of each load-bearing passage constructed and tested for whether the text discriminates, disconfirming instances hunted rather than confirmation accumulated, and every assumption the artifact marks as assumed perturbed to see whether the verdict moves. Every finding gets an id, a target claim, a mechanism, a severity from the taxonomy of section 5.5, and a minimal falsifier.
 
 **Step 3, leak-scan.** Run `audit_ledger.py leakscan` on the prosecution text before anything else reads it. The scanner checks the unambiguous framework tokens; any hit means the pass was not blind, the round closes with `--leak`, and the prosecution re-runs. The scanner is the floor and the Arbiter's judgment on ambiguous words is the ceiling.
 
-**Step 4, engineer.** Repairs written for every Load-Bearing and Structural finding. For Fatal findings, the attempted interventions are named and each failure stated.
+**Step 4, engineer.** Repairs written for every LOAD-BEARING and STRUCTURAL finding, each with its sweep spec per section 1. For FATAL findings, the toolkit interventions of section 5.5 are cycled first, the attempted interventions named and each failure stated; a FATAL with no repair-attempt trace is inadmissible as FATAL and demotes to LOAD-BEARING pending the trace.
 
 **Step 5, defend.** Booted. One response per finding, addressing the minimal falsifier. Numbers re-run live at the declared seed. No finding is skipped and none is answered in aggregate.
 
 **Step 6, arbitrate.** Prosecutor findings that match planted controls are credited to the caught list and never receive F-ids; only real findings enter the ledger. Each real finding gets one disposition via `audit_ledger.py add`. The Arbiter reads inputs only, never persuasion.
 
-**Step 7, emit.** Reveal the controls with `seed_controls.py reveal`, close the round with `audit_ledger.py close` declaring the registers actually prosecuted, write the new artifact version as a new file under the version-propagation rule, and print the round block of section 10. Nothing is overwritten and nothing is deleted. Rounds close in strict sequence and a closed round is immutable; a finding aimed at a closed round is refused at intake and belongs to the open round.
+**Step 7, integrate.** Every accepted repair lands on a working candidate here, and the round's dominant failure mode is prosecuted here, because the recorded pattern across live series is a repair that lands correctly at the governing section and never reaches the equivalent phrasings, the summary boxes, the abstract, the appendices, or the consumer sections. Three checks run in order, mechanical or attested on the record. One, the propagation sweep: for each repair, run `sweep_check.py verify --pre` against the pre-repair candidate to prove every banned phrase actually occurs, a pre-count of zero meaning the spec was written from memory and re-derives from the artifact; apply the repair everywhere; run `sweep_check.py verify` against the post-repair candidate, counts printed, PASS required. The sweep is phrase-level, never section-address, and it covers the whole document: abstract, summary and verdict boxes, Conclusion, Limitations, ledger rows, appendices, figure and table captions, and section headers. Two, the end-to-end read: every changed section is read whole, start to finish, plus every joint where two repairs adjoin, because locally correct repairs collide at joints neither party swept; reviewing only the diff hunks is barred, and a joint collision found here is filed as a finding in the open round. Three, the removal ruling: the Arbiter rules REMOVED or REWORDED on each removal-class repair per section 1. Any authored addition beyond the minimal repair text is declared here with its location and becomes the next round's mandatory target under A3. A sweep FAIL, an ABSENT pre-count, or a REWORDED ruling means the repair is incomplete: the `--repaired` attestation may not be passed, and the work continues in-session per A6.
+
+**Step 8, emit.** Reveal the controls with `seed_controls.py reveal`, close the round with `audit_ledger.py close` declaring the registers actually prosecuted, write the new artifact version as a new file under the version-propagation rule, and print the round block of section 10. Nothing is overwritten and nothing is deleted. Rounds close in strict sequence and a closed round is immutable; a finding aimed at a closed round is refused at intake and belongs to the open round.
 
 ---
 
 ## 5. Attack registers and the coverage gate
 
-Six canonical registers, and the ledger tracks their coverage: **kinematic** (dimensional, arithmetic, quantitative stress), **definitional** (drift, notation, equivocation), **parameter** (free-parameter census, predictive versus retrodictive, falsifiability), **provenance** (closed authorship, circular validation, genealogy), **limit** (limit behaviour, correspondence), **symmetry** (conservation, substrate, topological integrity).
+Six canonical registers, and the ledger tracks their coverage: **kinematic** (dimensional homogeneity, arithmetic, quantitative stress with headline numbers recomputed from the artifact's own formulas), **definitional** (drift, notation, equivocation, one symbol one meaning across every section), **parameter** (free-parameter census with parameters counted against independent predictions, predictive versus retrodictive discrimination, falsifiability demarcation with the refuting observation named), **provenance** (closed authorship, circular validation, genealogy, epistemic conflict between declared method and operational prediction), **limit** (limit behaviour, correspondence with every result the artifact itself claims compatibility with, correction-term reachability), **symmetry** (conservation, substrate and topological integrity, coordinate and manifold discipline: an abstract space conflated with a physical or measurable one without an explicit bridge map fails here).
 
 Default rotation is one per round in that order. A round may honestly declare up to two registers when the Prosecutor genuinely ran both batteries; declaring an unprosecuted register at close is a Fidelity Lock violation on the closing seat. No seal issues until all six registers have been prosecuted across valid rounds; a clean artifact whose symmetry register was never swept is unswept, not sound, and the ledger returns CONTINUE-COVERAGE until the sweep completes. After the sixth, the register with the highest historical yield restates.
+
+---
+
+## 5.5 Severity, scope, and the pre-audit strip
+
+Four severities, every finding carrying exactly one. **FATAL**: no internal repair preserves the central thesis; inadmissible as FATAL without a documented repair-attempt trace naming each toolkit intervention tried and why it failed, because a FATAL declared before the toolkit is cycled is a refusal to engineer wearing a verdict. **LOAD-BEARING**: a major derivation is invalidated and the thesis survives a specifiable repair; the repair is written. **STRUCTURAL**: an internal inconsistency without direct propagation to the verdict claims; repair recommended and written. **COSMETIC**: a notational or algebraic slip without consequence; noted and moved past.
+
+The scope law. The artifact is audited as a self-contained universe: the question is never whether it matches consensus, an external paradigm, or the auditor's priors, and always whether it holds together under its own declared laws. The audit prosecutes mathematical errors and internal contradictions, meaning claims that collide with each other, with the artifact's own theorems, or with its own printed numbers. Root axioms are held fixed. The framework's terminology and architectural choices are not relitigated. External paradigms enter only where the artifact itself invokes them. Heterodoxy is not a defect; internal incoherence is. A finding outside this scope is REFUSED-STRUCTURAL at intake, the finding attacking a claim the artifact does not make.
+
+The pre-audit strip, run silently before the pass and in neither direction's favour. Consensus pressure is stripped both ways under section 8. Authorial framing is stripped: rhetorical flourish, elegance appeals, and self-congratulation are discarded, and what is audited is the skeleton of claims, axioms, derivations, and predictions. Reviewer projection is barred: no outside formalism is imported to convict a step the artifact did not invoke; external mathematics enters only at the ENGINEER's repair stage, and then only in service of the artifact's own stated thesis.
+
+The repair toolkit the ENGINEER cycles before any FATAL, stated compactly: symmetry restoration, the covariantization, the projector insertion, the symmetry-restoring field; parameter elimination, a fixing condition, a flow constraint, absorption into geometry; dimensional and unit repair, the suppressed constant restored, the missing dimensionless group recovered, the unit chain traced; coordinate bridges, the explicit map from the abstract space to the observable with the gauge fixed and named; limit-behaviour repair, the correction series that vanishes in the limit and restores correspondence, or the named axiom that forbids it; substrate repair, the discretization that preserves the invariant with the continuum limit stated; and validation decoupling, the out-of-sample test or benchmark independent of the artifact's own apparatus. The trace states which were attempted and where each failed.
+
+Costume detectors on the audit's own prose, any hit forcing a rewrite of the pass before the round closes: uniform hedging, hedge density flat across claims of unequal certainty; symmetric balance applied to asymmetric evidence; citation without inspection, a source named as if the name were the evidence; formalism as verification, a derivation that cannot be cashed out numerically; premature elegance, unification before the residue list is empty; fluent completeness, every part answered at equal depth as if effort had not been allocated.
 
 ---
 
@@ -103,7 +119,7 @@ Default rotation is one per round in that order. A round may honestly declare up
 
 Every finding exits into exactly one, and silence is not one of them. A finding with an empty mechanism is inadmissible in every disposition, refusals included.
 
-**EARNED.** The defect is real and the repair is executed. The ledger refuses an EARNED without the `--repaired` attestation, because a defect acknowledged and not repaired is an open item wearing a closed label. This disposition is a success for the cycle, not a defeat for the artifact.
+**EARNED.** The defect is real and the repair is executed. The ledger refuses an EARNED without the `--repaired` attestation, because a defect acknowledged and not repaired is an open item wearing a closed label, and the attestation itself may not be passed until the finding's propagation sweep has printed PASS at step seven and, on a removal-class finding, the Arbiter has ruled REMOVED, because a governing-section fix with a live consumer phrasing, and a removal that survives as rewording, are open items wearing the label too. This disposition is a success for the cycle, not a defeat for the artifact.
 
 **SCOPED.** The finding is real at a narrower scope. The claim survives with reduced reach or a lowered warrant tier, and the ledger refuses a SCOPED that records no delta, either a tier pair or a scope note, because an untracked downgrade is a silent one. This is the most common honest outcome, and without this slot the defense is pushed toward all-or-nothing and therefore toward inflation.
 
@@ -113,19 +129,23 @@ Every finding exits into exactly one, and silence is not one of them. A finding 
 
 **APERTURE.** Neither seat can settle the matter without a supplied external witness. The mechanism field names what witness would settle it. The finding goes to the open list, closed for the cycle, carried in the closing card. An aperture is not a loss and not a win. It is a located door.
 
+An auditor erratum is filed as its own ledger row: fid ERR-n, register auditor, disposition REFUSED-STRUCTURAL, `--repeat-of` pointing at the faulty ancestor row, the mechanism naming what the auditing seat got wrong, the inverted inference direction, the wrong factor bound, the misread passage, and the note carrying the corrected reading. The census keeps the faulty row and its correction side by side; nothing is retyped in place. A repair that was executed on a faulty finding is reverted by a further candidate version in the open round, logged as the erratum's repair, nothing overwritten.
+
 Warrant tiers are a fixed vocabulary, theorem, theorem-conditional, structural, engineering, corroboration, premise, operational, and the ledger rejects any tier outside it at intake, so no unknown grade can silently rank as anything.
 
 ---
 
-## 7. The four invariants
+## 7. The five invariants
 
 **I. Non-Inflation.** After every round the claim set is equal or narrower in scope and equal or lower in warrant tier, unless new external mass entered through the eight-gate positive-mass cascade with its M5 and M6 witness gates satisfied, and the admitted mass is named in the round block beside each raised tier. Prose tightening improves precision. It never buys a grade. The ledger flags any tier rise and the round returns INFLATION-FAULT.
 
-**II. Two-way Fidelity Lock.** A numeric finding is inadmissible without the Prosecutor's executed recomputation. A numeric defense is inadmissible without the Defense's live re-run at the declared seed. Recalled figures are inadmissible from either seat, and the ledger enforces this at intake.
+**II. Two-way Fidelity Lock.** A numeric finding is inadmissible without the Prosecutor's executed recomputation. A numeric defense is inadmissible without the Defense's live re-run at the declared seed. Recalled figures are inadmissible from either seat, and the ledger enforces this at intake. Three sharpenings bind from the live series. Every numeric claim is re-executed in-session, Python, mpmath, sympy, numpy, before any finding is filed or any repair is written; the artifact's printed values are targets to check, never inputs to trust, and the executed value is printed beside the printed one. The recomputation runs a second channel where one exists, a different method, representation, or direction, because recognition is not verification and a re-reading of the artifact's own printed derivation is a memory hit, not a check. And the lock applies to the auditing seats' own prior outputs with full force: a number this cycle produced in an earlier round is re-executed, never carried, since the record shows the lock catching errors in the artifact and in the auditor's own prior rounds alike.
 
 **III. Census.** Every finding ever raised stays on the ledger with its disposition. Nothing is dropped, nothing is silently re-typed, closed rounds are immutable, rounds close in sequence, and a finding re-raised later carries `--repeat-of` pointing at a real ancestor row, which the ledger verifies exists.
 
 **IV. Verifiable hat removal.** The prosecuting pass may not emit framework vocabulary, and the rule now has a scanner: `leakscan` checks the unambiguous tokens, Trisduction, MathDuction, GOLf, GOLn, W_social, barzakh, the PSP identifier prefixes, Seal L, Seal G, Seal M, Mosaic Seal, Titanium Ruler, Empty Throne, chiral residence, Impressed Plenum, Fix(σ), and the verdict glyphs. Ambiguous words, RA, RAM, Ground, aperture, seal, would false-void honest prose, so the scanner skips them and the Arbiter judges them in their framework sense. Any confirmed leak voids the round and the prosecution re-runs.
+
+**V. Propagation.** A repair is complete only when its phrase-level sweep has printed zero on every banned phrasing across the entire candidate, consumer sections included, with the counts printed and never asserted, and the changed sections plus their joints have been read end-to-end. Propagation failure is the recorded dominant failure mode across every live series: the fix lands at the governing section and dies before the abstract, the summary box, the Conclusion, the Limitations, the ledger rows, the appendix. Section-address targeting is therefore barred as the sweep method; the sweep is phrase-level or it is not a sweep. A governing-section fix with a live consumer phrasing is an open finding wearing a closed label, and its repaired attestation is void.
 
 ---
 
@@ -157,9 +177,9 @@ Computed by `audit_ledger.py close`, never declared in prose. The floor is three
 
 ## 10. The round emission contract
 
-Each round emits, in this order and no other. One, the round header with the declared registers, the control commitment digest, and the boot chain digests. Two, the leak-scan result. Three, the findings table, one row per finding: id, register, target claim, mechanism, severity, minimal falsifier. Four, the defense, one block per finding, live numbers where numbers are in play. Five, the arbitration table, one row per finding: id, disposition, one-line reason. Six, the control reveal with the detection count and the control grade. Seven, the round statistic block printed by the ledger. Eight, the new artifact version path. Nine, the termination verdict verbatim from the ledger.
+Each round emits, in this order and no other. One, the round header with the declared registers, the control commitment digest, the boot chain digests, the errata block, and the declared targets: the errata block acknowledges on the record, before any new finding is filed, every incorrect finding the auditing seats filed in prior rounds, the inverted inference direction, the wrong bound, the misread passage, each logged as an ERR row per section 6 with the corrected reading in its note; the declared targets name any additions the prior round introduced, mandatory under A3. Two, the leak-scan result. Three, the findings table, one row per finding: id, register, target claim, mechanism, severity, minimal falsifier. Four, the defense, one block per finding, live numbers where numbers are in play. Five, the arbitration table, one row per finding: id, disposition, one-line reason. Six, the integration report of step seven: per-repair sweep counts as the tool printed them, the end-to-end read attestation naming the sections read whole and the joints checked, the REMOVED or REWORDED ruling per removal-class repair, and the new-material declarations with locations. Seven, the control reveal with the detection count and the control grade. Eight, the round statistic block printed by the ledger. Nine, the new artifact version path. Ten, the termination verdict verbatim from the ledger.
 
-No prose sits between the arbitration table and the statistic block. The reader must be able to reach the verdict without reading the argument.
+No prose beyond tool-printed output and the step-seven attestations sits between the arbitration table and the statistic block. The reader must be able to reach the verdict without reading the argument.
 
 ---
 
@@ -171,7 +191,7 @@ The digest is a census of changes, not a summary of effort. One entry per change
 
 After the entries, the net block: each pre-registered claim with its scope and tier into the cycle and out of it; the count of tier moves, zero absent admitted external mass; the additions with their grades; the open apertures with the witness each awaits.
 
-Completeness is checked, not asserted. The digest reconciles against the plain diff of the cycle's entry version and the candidate final version: every hunk in that diff traces to exactly one digest entry, and an orphan in either direction, an undigested change or a digested change that never landed, is a FAULT repaired before the gate opens. This is the census invariant executed at the change register, and it is what makes the digest a record rather than a pitch.
+Completeness is checked, not asserted. The digest reconciles against the plain diff of the cycle's entry version and the candidate final version: every hunk in that diff traces to exactly one digest entry, and an orphan in either direction, an undigested change or a digested change that never landed, is a FAULT repaired before the gate opens. This is the census invariant executed at the change register, and it is what makes the digest a record rather than a pitch. Three further checks hold the gate with the same force as an orphan hunk. Every repair entry carries its sweep verdict, PASS with the final counts, and a repair whose sweep never printed PASS is a FAULT. Every addition entry names the post-landing round that prosecuted it against the spine, and an addition with no such round is a FAULT at SEALED-ROUND and HALT-STALE, discharged by running the round; at HALT-DIVERGENT it is carried open on the digest, reconstruction superseding further rounds. And any two entries touching the same or adjacent sections carry a one-line interaction note attesting the joint was read end-to-end, because the record shows locally correct repairs colliding exactly there.
 
 The digest ends with one line, Awaiting FORGE. That line is a state report, not a question; the machine asks nothing, recommends nothing, and adds nothing after it. On FORGE, the candidate version becomes the cycle's final artifact, the closing card of section 11 emits, and the cycle closes. On any other instruction at the gate, the machine executes it: a named entry is reverted by authoring a further candidate version with the reversion logged, a register is reopened by running the round, an amendment is applied; then the digest delta re-emits and the gate holds again. Nothing is overwritten in any of this. Every candidate is a new version file and the ledger keeps every row, so a reversal at the gate costs nothing and destroys nothing.
 
@@ -181,7 +201,7 @@ Pre-authorization is the architect's own act and is honored: a triggering messag
 
 ## 11. Cycle close
 
-After FORGE at the gate of section 10.5, following SEALED-ROUND, HALT-STALE, or HALT-DIVERGENT, emit the closing card: the artifact's final version path, the pre-registered claims with their falsifiers and surviving scope and tier, the full disposition census across all rounds, the register coverage record, the control detection record with grades and the grade floor, any reversions the architect ordered at the gate, the open aperture list, and the honest one-line statement of what the artifact survived. "Held under all six registers, controls three of three external throughout, two claims scoped down, one aperture open" outranks "the audit found nothing."
+After FORGE at the gate of section 10.5, following SEALED-ROUND, HALT-STALE, or HALT-DIVERGENT, emit the closing card: the artifact's final version path, the pre-registered claims with their falsifiers and surviving scope and tier, the full disposition census across all rounds, the register coverage record, the control detection record with grades and the grade floor, the propagation record with every sweep spec's final counts, the errata census of the auditing seats' own corrected findings, any reversions the architect ordered at the gate, the open aperture list, and the honest one-line statement of what the artifact survived. "Held under all six registers, controls three of three external throughout, two claims scoped down, one aperture open" outranks "the audit found nothing."
 
 The card is coordinate-ready. Seating it, indexing it, and pushing it are the architect's acts, under `codex-hygiene` and `git-automation`, and this skill performs none of them.
 
@@ -189,7 +209,7 @@ The card is coordinate-ready. Seating it, indexing it, and pushing it are the ar
 
 ## 12. Tooling · embedded, extract from here
 
-Two stdlib-only scripts, every branch live-tested. All commands run from the cycle's working directory and write into `./audit_<cycle>/`; no row is ever rewritten. Extract both files from this document with:
+Three stdlib-only scripts, every branch live-tested. All commands run from the cycle's working directory and write into `./audit_<cycle>/`; no row is ever rewritten. Extract all three files from this document with:
 
 ```
 python3 - <<'EOF'
@@ -209,8 +229,14 @@ python3 audit_ledger.py falsifier --cycle veil --claim C1 --text "recompute the 
 python3 seed_controls.py commit --round 1 --cycle veil --grade EXTERNAL --file controls_r1.json
 python3 audit_ledger.py leakscan --file prosecution_r1.md
 python3 audit_ledger.py add --cycle veil --round 1 --fid F-1 --register kinematic \
-    --claim C1 --mechanism "dimensional mismatch, hbar absent" \
+    --claim C1 --severity LOAD-BEARING \
+    --mechanism "dimensional mismatch, hbar absent" \
     --disposition EARNED --numeric --recomputed --repaired
+python3 audit_ledger.py add --cycle veil --round 1 --fid F-2 --register definitional \
+    --claim NONE --severity COSMETIC --mechanism "stale count in the abstract" \
+    --disposition EARNED --repaired
+python3 sweep_check.py verify --pre --file veil_v2.md --spec audit_veil/sweep_r1_F-1.json
+python3 sweep_check.py verify --file veil_v3_candidate.md --spec audit_veil/sweep_r1_F-1.json
 python3 seed_controls.py reveal --round 1 --cycle veil --caught "X1,X2,X3"
 python3 audit_ledger.py close --cycle veil --round 1 --registers "kinematic,definitional" \
     --controls-caught 3 --grade EXTERNAL
@@ -413,7 +439,8 @@ Usage:
   audit_ledger.py init      --cycle N --artifact PATH --claims "C1,C2"
   audit_ledger.py falsifier --cycle N --claim C1 --text "the check that kills it"
   audit_ledger.py add       --cycle N --round R --fid F-1 --register kinematic \\
-                            --claim C1 --mechanism "..." --disposition EARNED \\
+                            --claim C1|NONE --severity LOAD-BEARING \\
+                            --mechanism "..." --disposition EARNED \\
                             [--repaired] [--numeric] [--recomputed] \\
                             [--repeat-of F-0] [--tier-before T --tier-after T] \\
                             [--note "..."]
@@ -433,6 +460,10 @@ TIERS = ["theorem", "theorem-conditional", "structural", "engineering",
 REG_CANON = ["kinematic", "definitional", "parameter", "provenance",
              "limit", "symmetry"]
 MASS_BEARING = {"EARNED", "SCOPED"}
+SEVERITIES = ["FATAL", "LOAD-BEARING", "STRUCTURAL", "COSMETIC"]
+DEBT_SEV = {"FATAL", "LOAD-BEARING"}
+NO_CLAIM = "NONE"
+CLEAN_AFTER_DEBT = 2
 FLOOR_ROUNDS = 3
 
 LEAK_WORD = ["Trisduction", "MathDuction", "GOLf", "GOLn", "W_social",
@@ -539,6 +570,20 @@ def cmd_add(a):
               f"immutable; raise the finding in the open round."); return 2
     if a.disposition not in DISPOSITIONS:
         print(f"FAULT: disposition must be one of {DISPOSITIONS}"); return 2
+    if a.severity not in SEVERITIES:
+        print(f"FAULT: severity must be one of {SEVERITIES}. Section 5.5 "
+              f"requires one per finding; an unsevered finding cannot be "
+              f"weighed and the FATAL repair-attempt rule cannot bind."); return 2
+    if a.claim != NO_CLAIM and a.claim not in cyc["prereg_claims"]:
+        print(f"FAULT: --claim {a.claim} is not a pre-registered claim of "
+              f"this cycle. Use NONE for a finding that threatens none of "
+              f"them, or correct the id; an unmatched string reads as "
+              f"non-prereg and the hit vanishes from the statistics."); return 2
+    if a.claim == NO_CLAIM and a.severity in DEBT_SEV:
+        print(f"FAULT: severity {a.severity} may not take --claim NONE. A "
+              f"finding threatening no pre-registered claim is not "
+              f"load-bearing by definition; name the claim it threatens or "
+              f"lower the severity, and record which."); return 2
     for t in (a.tier_before, a.tier_after):
         if t and t not in TIERS:
             print(f"FAULT: unknown tier '{t}'. Tiers: {TIERS}"); return 2
@@ -568,7 +613,8 @@ def cmd_add(a):
             tier_rank(a.tier_after) < tier_rank(a.tier_before):
         flags.append("TIER-RAISED")
     rec = {"round": a.round, "fid": a.fid, "register": a.register,
-           "claim": a.claim, "prereg": a.claim in cyc["prereg_claims"],
+           "claim": a.claim, "severity": a.severity,
+           "prereg": a.claim in cyc["prereg_claims"],
            "mechanism": a.mechanism, "disposition": a.disposition,
            "repaired": bool(a.repaired), "numeric": bool(a.numeric),
            "recomputed": bool(a.recomputed),
@@ -578,7 +624,8 @@ def cmd_add(a):
            "admissible": admissible, "flags": flags, "note": a.note or ""}
     append_jsonl(fj, rec)
     tag = "ADMITTED" if admissible else "INADMISSIBLE"
-    print(f"{tag} {a.fid} r{a.round} [{a.disposition}] claim={a.claim}"
+    print(f"{tag} {a.fid} r{a.round} [{a.disposition}] [{a.severity}] "
+          f"claim={a.claim}"
           f"{' PREREG' if rec['prereg'] else ''}"
           f"{' flags=' + ','.join(flags) if flags else ''}")
     return 0
@@ -598,7 +645,7 @@ def cmd_demote(a):
     if fid in {r["fid"] for r in load_jsonl(fj)}:
         print(f"FAULT: {fid} already logged."); return 2
     rec = {"round": a.round, "fid": fid, "register": "arbiter",
-           "claim": a.claim, "prereg": True,
+           "claim": a.claim, "severity": "LOAD-BEARING", "prereg": True,
            "mechanism": "pre-registered load-bearing claim demoted to "
                         "decoration mid-cycle; the demotion is itself the "
                         "finding", "disposition": "EARNED", "repaired": True,
@@ -647,6 +694,9 @@ def round_stats(findings, rnd):
     s["mass_bearing"] = s["EARNED"] + s["SCOPED"]
     s["prereg_hits"] = len([f for f in rows if f["prereg"]
                             and f["disposition"] in MASS_BEARING])
+    s["fatal"] = len([f for f in rows if f.get("severity") == "FATAL"
+                      and f["disposition"] in MASS_BEARING])
+    s["debt"] = 1 if (s["prereg_hits"] or s["fatal"]) else 0
     s["repeats"] = len([f for f in rows if f["repeat_of"]])
     s["tier_raised"] = len([f for f in rows if "TIER-RAISED" in f["flags"]])
     return s
@@ -690,6 +740,8 @@ def cmd_close(a):
           f"REFUSED-STRUCTURAL {s['REFUSED-STRUCTURAL']}  "
           f"REFUSED-MASSLESS {s['REFUSED-MASSLESS']}  "
           f"APERTURE {s['APERTURE']}")
+    print(f"  FATAL {s.get('fatal', 0)}  debt "
+          f"{'yes' if s.get('debt') else 'no'}")
     print(f"  mass-bearing {s['mass_bearing']}  prereg hits "
           f"{s['prereg_hits']}  repeats {s['repeats']}  tier raised "
           f"{s['tier_raised']}")
@@ -723,14 +775,34 @@ def evaluate(a, s, rounds, regs):
         return "HALT-DIVERGENT", ("earned corrections rose across two "
                                   "consecutive valid rounds; the artifact "
                                   "is not hardening, reconstruction is due")
-    if s["prereg_hits"]:
-        return "CONTINUE-PREREG-BLOCK", (f"{s['prereg_hits']} mass-bearing "
-                                         f"finding(s) landed on a "
-                                         f"pre-registered load-bearing "
-                                         f"claim; a further round is "
-                                         f"mandatory")
+    if s["mass_bearing"] and s["repeats"] == s["total"]:
+        return "HALT-STALE", ("every mass-bearing finding repeats a "
+                              "mechanism already dispositioned; the dispute "
+                              "is looping, adjudicate it or send it to the "
+                              "aperture list and close. Checked ahead of the "
+                              "debt branch, so a loop on a pre-registered "
+                              "claim halts here instead of recurring")
+    if s["prereg_hits"] or s["fatal"]:
+        return "CONTINUE-PREREG-BLOCK", (
+            f"{s['prereg_hits']} mass-bearing finding(s) on a pre-registered "
+            f"claim and {s['fatal']} mass-bearing FATAL; the round incurs "
+            f"debt, and {CLEAN_AFTER_DEBT} consecutive clean valid rounds "
+            f"are required before any seal issues")
     if s["mass_bearing"] == 0:
         valid_count = len(prior) + 1
+        streak = 1
+        for r in reversed(prior):
+            if r["stats"]["mass_bearing"] == 0:
+                streak += 1
+            else:
+                break
+        if any(r["stats"].get("debt") for r in prior) and \
+                streak < CLEAN_AFTER_DEBT:
+            return "CONTINUE-DEBT", (f"a prior valid round incurred debt on "
+                                     f"a pre-registered claim or a FATAL "
+                                     f"finding; clean streak {streak}/"
+                                     f"{CLEAN_AFTER_DEBT}, one further clean "
+                                     f"round is required before a seal")
         if valid_count < FLOOR_ROUNDS:
             return "CONTINUE-FLOOR", (f"valid rounds {valid_count}/"
                                       f"{FLOOR_ROUNDS}; voided rounds do "
@@ -752,11 +824,6 @@ def evaluate(a, s, rounds, regs):
         if floor == "SELF":
             why += ", single-substrate aperture open and stamped on the seal"
         return "SEALED-ROUND", why
-    if s["repeats"] == s["total"]:
-        return "HALT-STALE", ("every mass-bearing finding repeats a "
-                              "mechanism already dispositioned; the dispute "
-                              "is looping, adjudicate it or send it to the "
-                              "aperture list and close")
     return "CONTINUE", "mass-bearing findings remain; run the next round"
 
 
@@ -814,7 +881,7 @@ def main(argv=None):
 
     d = sub.add_parser("add")
     for f in ("cycle", "fid", "register", "claim", "mechanism",
-              "disposition"):
+              "disposition", "severity"):
         d.add_argument("--" + f, required=True)
     d.add_argument("--round", type=int, required=True)
     d.add_argument("--repaired", action="store_true")
@@ -856,6 +923,122 @@ if __name__ == "__main__":
     sys.exit(main())
 ```
 
+### sweep_check.py
+
+```python
+#!/usr/bin/env python3
+"""sweep_check.py v1 - phrase-level propagation sweep for the Trisduction
+Audit Cycle.
+
+The recorded dominant failure mode across live series is a repair that lands
+at the governing section and dies before the abstract, the summary boxes,
+the Conclusion, the Limitations, the ledger rows, the appendices. This tool
+makes the sweep mechanical: counts are printed, never asserted, and the exit
+code is the verdict. It proves phrase absence, never semantic absence; the
+REMOVED-versus-REWORDED ruling stays the Arbiter's.
+
+Usage:
+  sweep_check.py count  --file F --phrase "..." [--ci]
+      Print the occurrence count of one phrase.
+  sweep_check.py verify --file F --spec spec.json [--ci] [--pre]
+      spec.json: {"banned": ["...", ...], "required": ["...", ...]}
+      Without --pre, the post-repair check: PASS requires every banned
+      phrase at count 0 and every required phrase at count >= 1.
+      With --pre, the pre-repair check, run against the unrepaired
+      candidate: PASS requires every banned phrase at count >= 1, proving
+      the spec's strings actually occur in the artifact; required phrases
+      are ignored. A pre-count of zero means the spec was written from
+      memory; re-derive the phrase from the artifact.
+
+Counts are plain substring counts on the raw text; --ci lowercases both
+sides. Exit 0 PASS, 1 FAIL, 2 FAULT.
+"""
+import argparse, json, sys
+
+
+def read(path):
+    try:
+        return open(path, encoding="utf-8").read()
+    except Exception as e:
+        print(f"FAULT: cannot read {path}: {e}")
+        sys.exit(2)
+
+
+def count(text, phrase, ci):
+    if ci:
+        return text.lower().count(phrase.lower())
+    return text.count(phrase)
+
+
+def main(argv=None):
+    p = argparse.ArgumentParser()
+    p.add_argument("cmd", choices=["count", "verify"])
+    p.add_argument("--file", required=True)
+    p.add_argument("--phrase", default="")
+    p.add_argument("--spec", default="")
+    p.add_argument("--ci", action="store_true")
+    p.add_argument("--pre", action="store_true")
+    a = p.parse_args(argv)
+    text = read(a.file)
+
+    if a.cmd == "count":
+        if not a.phrase.strip():
+            print("FAULT: --phrase is empty; an empty sweep counts nothing.")
+            return 2
+        print(f"{count(text, a.phrase, a.ci):>4}  {a.phrase}")
+        return 0
+
+    if not a.spec:
+        print("FAULT: verify requires --spec with the sweep spec JSON.")
+        return 2
+    try:
+        spec = json.load(open(a.spec, encoding="utf-8"))
+    except Exception as e:
+        print(f"FAULT: cannot read spec: {e}")
+        return 2
+    banned = [s for s in spec.get("banned", []) if str(s).strip()]
+    required = [s for s in spec.get("required", []) if str(s).strip()]
+    if not banned and not required:
+        print("FAULT: spec carries no phrases; a sweep with no phrases "
+              "verifies nothing.")
+        return 2
+
+    fail = False
+    if a.pre:
+        for ph in banned:
+            c = count(text, ph, a.ci)
+            ok = c >= 1
+            fail = fail or not ok
+            print(f"{'FOUND ' if ok else 'ABSENT'} banned   {c:>4}  {ph}")
+        print("PRE-SWEEP " + ("PASS: every banned phrase occurs in the "
+                              "pre-repair candidate; the spec targets real "
+                              "strings." if not fail else
+                              "FAIL: a banned phrase has pre-count 0; the "
+                              "spec was written from memory. Re-derive the "
+                              "phrase from the artifact."))
+        return 1 if fail else 0
+
+    for ph in banned:
+        c = count(text, ph, a.ci)
+        ok = c == 0
+        fail = fail or not ok
+        print(f"{'OK    ' if ok else 'LIVE  '} banned   {c:>4}  {ph}")
+    for ph in required:
+        c = count(text, ph, a.ci)
+        ok = c >= 1
+        fail = fail or not ok
+        print(f"{'OK    ' if ok else 'ABSENT'} required {c:>4}  {ph}")
+    print("SWEEP " + ("FAIL: a banned phrase is live or a required phrase "
+                      "is absent; the repair has not propagated." if fail
+                      else "PASS: banned at zero across the candidate, "
+                           "required present."))
+    return 1 if fail else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
+```
+
 ---
 
 ## 13. Failure handling
@@ -866,13 +1049,13 @@ If a defense answers a finding by restating the claim more forcefully, the Arbit
 
 If the artifact changes mid-round, the round voids. Changes land only at step seven.
 
-If the architect instructs a skip, compress steps two through six and say so in one line. Step one and step seven are not negotiable, because without the controls the round has no power statistic and without the ledger it has no verdict. Under AUTORUN, every FAULT the tooling raises is the orchestrating seat's own defect, repaired in-session and rerun per A6; none is ever converted into a question to the architect.
+If the architect instructs a skip, compress steps two through six and say so in one line. Step one and step eight are not negotiable, because without the controls the round has no power statistic and without the ledger it has no verdict, and step seven is not negotiable in any round where a repair or an addition landed, because an unswept repair has no completion claim. A sweep FAIL, an ABSENT pre-count, or a REWORDED ruling at step seven is the orchestrating seat's own defect class under A6, completed and re-run in-session, never surfaced as a question. Under AUTORUN, every FAULT the tooling raises is the orchestrating seat's own defect, repaired in-session and rerun per A6; none is ever converted into a question to the architect.
 
 ---
 
 ## 14. What this skill does not do
 
-It seats no coordinate, writes to no master, pushes nothing, and authors no mathematics. It does not certify that the artifact is true, only that it survived a measured attack of a stated shape at a stated power. A cycle that closes at SEALED-ROUND has produced consistency under its own registers and nothing above that; truth still rests on the external anchors and on the supplied witness, which no seat here can generate. The one aperture no tooling here closes is single-substrate contamination: when one substrate holds both seats, SELF-grade controls prove the set was fixed in advance and nothing more, the grade floor stamps that fact onto any seal, and the cycle's power ceiling is set by whether the architect seeds the controls off-transcript.
+It seats no coordinate, writes to no master, pushes nothing, and authors no mathematics. It does not certify that the artifact is true, only that it survived a measured attack of a stated shape at a stated power. A cycle that closes at SEALED-ROUND has produced consistency under its own registers and nothing above that; truth still rests on the external anchors and on the supplied witness, which no seat here can generate. The one aperture no tooling here closes is single-substrate contamination: when one substrate holds both seats, SELF-grade controls prove the set was fixed in advance and nothing more, the grade floor stamps that fact onto any seal, and the cycle's power ceiling is set by whether the architect seeds the controls off-transcript. The sweep tool proves phrase absence, never semantic absence; the REMOVED-versus-REWORDED ruling is the Arbiter's judgment and stays a judgment, which is exactly why it is printed on the record rather than assumed.
 
 ---
 
@@ -883,3 +1066,7 @@ Version 1 was audited under this skill's own discipline; seven defects were conf
 The v2.1 pass installs the AUTORUN law at section 0.5 under the architect's standing order of 2026-08-05, after the first live deployment stalled on two questions the orchestrating seat asked back, control grade and a go-signal, neither of which the tooling required. The repair is doctrinal, not mechanical: the trigger phrase fires the whole cycle with zero questions, attachments are the only channel for manual input, the control grade auto-resolves from what is attached, the register plan locks at two per round so coverage completes at the floor, pre-registration is derived and printed rather than proposed, rounds run back to back to a terminal verdict under an eight-round cap, faults are repaired in-session rather than surfaced, and the per-round output is the round block alone. Both embedded tools are byte-identical to v2; no code changed, and every v2 verification carries forward. ΔM = 0.
 
 The v2.2 pass installs the FORGE gate at section 10.5 under the architect's second standing order of the same date, issued from the first full live cycle, six rounds on the master codex to SEALED-ROUND. The defect it repairs is a governance gap, not a mechanical one: the cycle concluded itself, writing the final artifact and the closing card with the architect never shown, in one place, what had changed and what each change cost. A machine that edits the register of record and self-certifies the edits is running the exact pattern the closed-authorship register prosecutes. The repair: a terminal verdict now concludes the rounds only; the Pre-Forge Digest emits inline, one entry per change with source, location, before and after, an impact verdict of STRENGTHENS, WEAKENS, MIXED, or NEUTRAL, and its reason, the honesty rule barring any weakening laundered as improvement; the net block restates every pre-registered claim's scope and tier in and out; completeness is diff-reconciled, an orphan hunk in either direction a FAULT; the gate holds at one state line, Awaiting FORGE, and only the architect's FORGE closes the cycle, with reversions at the gate executed as new version files at zero destruction. Pre-authorization inside the triggering message is honored, the digest then printing immediately before the closing card so the record exists even when the wait does not. Both embedded tools remain byte-identical to v2; every prior verification carries forward. ΔM = 0.
+
+The v2.3.1 pass closes three defects found by running this skill's own cycle against a live artifact for seven rounds to SEALED-ROUND, all three in the ledger rather than in the doctrine, and all three tightening. One, the third locked decision was declarative: a prereg hit is by construction a mass-bearing finding, so the branch could not block anything the fall-through did not, and sitting ahead of the stale halt it made that halt unreachable exactly where disputes loop. Debt replaces it, two consecutive clean valid rounds after any hit on a pre-registered claim or any mass-bearing FATAL, with the stale halt moved in front, and CONTINUE-DEBT added to the verdict set. Two, `add` required a claim, offered no null, and validated nothing, so clerical findings had to be filed against load-bearing claims; across the live cycle that converted every stale count into a termination blocker and saturated the signal until it stopped discriminating, and an unmatched claim string read silently as non-prereg. NONE is now admitted and guarded twice, refused to FATAL and LOAD-BEARING at intake and named a Fidelity Lock violation on the Arbiter when misassigned, and an unmatched string faults rather than vanishing. Three, section 5.5 defined four severities, step two required one per finding, the emission contract carried a severity column, and the ENGINEER was barred from declaring FATAL without a repair-attempt trace, while the ledger recorded no severity at all, so every one of those rules was attestation-only; severity is now required at intake, validated against the vocabulary, stored on the row, printed at admission and in the round statistic block, and a mass-bearing FATAL incurs debt. This is the treatment v2.3 gave propagation, mechanized rather than trusted, applied to the field that had not yet received it. All three tools remain otherwise byte-identical; `seed_controls.py` and `sweep_check.py` are untouched. Every new path live-tested: five intake guards, the debt path across three rounds to a seal, the FATAL debt trigger, and the stale halt firing with a prereg hit outstanding. ΔM = 0.
+
+The v2.3 pass hardens the repair phase against the complaint record of the independent auditor scribe, compiled across every live paper series, and completes the attack battery against the external auditor protocol supplied with the order, the epistemic-rigor substrate and the research-paper auditor. Seven complaint classes, each now standing law. Propagation, the recorded dominant failure mode, a repair landing at the governing section and dying before the equivalent phrasings, the summary boxes, the abstract, the appendices, the consumer sections: the Propagation Invariant enters as the fifth invariant, step seven enters as the integrate step, every repair ships with a sweep spec authored by the ENGINEER, the sweep is phrase-level with printed counts and never section-address, the pre-count proves the target string was actually found and the post-count of zero proves it replaced, and the EARNED attestation is barred until the sweep prints PASS. Joint collisions between locally correct repairs: the end-to-end read law, changed sections read whole plus every joint, diff-hunk-only review barred, the interaction note required at the gate. New-material regression, the recorded highest regression risk: additions are declared at step seven, become mandatory named targets the next round under A3, are prosecuted against the existing spine rather than for internal self-consistency, and no SEALED-ROUND or HALT-STALE passes the gate while an addition lacks its post-landing round. Reframing rather than repairing: the Arbiter's REMOVED-versus-REWORDED ruling on every removal-class repair, REWORDED voiding the attestation and re-entering the finding as a repeat. Computational verification before writing: the Fidelity Lock sharpened with the in-session re-execution mandate, printed values as targets never inputs, the second-channel clause barring verification by recognition, and self-application to the auditing seats' own prior rounds. Auditor self-error tracking: the errata block at every round head, ERR rows filed before new findings with the faulty ancestor named and the corrected reading on the record. And scope discipline: the self-contained-universe scope law at section 5.5, mathematical errors and internal contradictions only, axioms fixed, terminology not relitigated. From the external protocol the attack side absorbs what the six registers had not yet named: the severity taxonomy FATAL, LOAD-BEARING, STRUCTURAL, COSMETIC with the repair-attempt trace mandatory before any FATAL, the coordinate and manifold bridge-map discipline seated in the symmetry register, epistemic conflict seated in the provenance register, the three intake disqualifiers at section 2, the pre-audit strip with the reviewer-projection bar, the compact repair toolkit the ENGINEER cycles, the rival-reading, disconfirmation, and perturbation battery in step two, and the costume detectors on the audit's own prose. Both v2 tools remain byte-identical, every prior verification carrying forward; one tool is added, sweep_check.py, stdlib-only, every branch live-tested before embedding, count and verify modes with the pre flag implementing the found-then-replaced proof. The round grows to eight steps, the emission contract to ten items, the invariants to five. ΔM = 0 throughout; the repairs are arrangement and enforcement, no new mathematics authored.
