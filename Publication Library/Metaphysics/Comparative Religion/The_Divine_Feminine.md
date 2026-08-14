@@ -13,6 +13,12 @@ classification: "Encyclopedic reference volume"
 
 ---
 
+## ABSTRACT
+
+The term *divine feminine* aggregates a vast family of mythological, theological, and wisdom figures across global traditions that never historically unified themselves, raising the question of whether the category represents a coherent structure or a modern comparativist artifact. This study subjects it to two methodological criteria: a removal test evaluating functional autonomy, and an inversion test analysing cross-traditional structural roles. The removal test finds a composite of five mutually removable functions sitting at distinct tiers rather than a singular archetype: an attribute of the source, a cosmic matrix or receptacle, a named human vessel, an immanent indwelling presence, and a withdrawn sovereign whose absence disorders a world. The inversion test, run on four assumptions across seven exhibits, five of them inversions between traditions and two non-uniformities inside a single language, demonstrates that grammatical gender, the assignment of active and receptive roles, the number and site of the liberating bodily aperture, and the conceptual polarity of concealment are properties of describing languages and cultures rather than of the underlying referents. What survives both tests is one structural requirement and two contrary operations. Any account on which a manifold is carried from a source demands a receptive term, neither personified nor gendered, that receives without collapsing what it receives; accounts on which the manifold is manufactured rather than carried are scoped out and owe the requirement only at the recording passage. Global traditions have meanwhile bundled two opposite operations under a single feminine honorific, a preserving operation that maintains distinction and a merging operation that dissolves it, and that dual assignment explains both the structural tensions in the family and the shared sexual and spatial iconography surrounding its figures, since the image was drawn from the one event where a merge and a generation coincide. Reconstructing these functions with scripture as the sole witness, the study defines the divine feminine as a monic bridge, a constraint on the preservation of distinction through manifestation, rather than a psychological or gendered archetype.
+
+---
+
 ## SYNOPSIS
 
 This volume argues four things about a category that is usually treated as one thing.
