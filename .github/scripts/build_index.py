@@ -17,9 +17,16 @@ SECTIONS = [
 ]
 
 def _first_h1(path):
+    # Fenced code is skipped: a '#' comment inside a python block is not a title.
+    fenced = False
     with open(path, encoding="utf-8") as f:
         for line in f:
             s = line.strip()
+            if s.startswith("```") or s.startswith("~~~"):
+                fenced = not fenced
+                continue
+            if fenced:
+                continue
             if s.startswith("# "):
                 return s[2:].strip()
     return os.path.splitext(os.path.basename(path))[0]
