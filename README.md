@@ -70,13 +70,15 @@ Three documents are the standing sources of truth. Each lives in a fixed folder;
 
 This register holds the working copies. The development that produced them and the published face of them live elsewhere, and both are listed here as provenance and navigation, never as warrant. No verdict in the codex rests on any address below, and consensus carries zero evidential weight in both directions, the field's reception and the author's reach equally zeroed.
 
-**The developmental blogs.** The forge record, where coordinates were built and stress-tested before consolidation onto the codex spine.
+**The developmental blogs.** The forge record, where coordinates were built and stress-tested before consolidation onto the codex spine. The chronology is checkable rather than asserted: each blog's sidebar carries a dated post archive.
 
-| Record | Address |
-|---|---|
-| Tractatus Veritatis Trisductivus, the master developmental record | https://tractatus-veritatis-trisductivus.blogspot.com |
-| Esoteric Trisduction, the esoteric-register development | https://esoterictrisduction.blogspot.com |
-| Trisduction, the general development record | https://trisduction.blogspot.com |
+The first formulation was posted to the general development record on 24 March 2026. It was rudimentary, an essay draft written so that an AI substrate could run it, and it carried no twelve-gate cascade, no geometric seal, and no mathematical seal. On 27 March 2026 the work moved to Tractatus Veritatis Trisductivus, which has carried the master developmental record since. The archive is worth reading against this register for the distance travelled, from an essay a substrate could follow to the twelve-gate cascade, the three seals, and the coordinate ledger held here.
+
+| Record | Address | Position |
+|---|---|---|
+| Trisduction, the general development record | https://trisduction.blogspot.com | first formulation, from 24 March 2026 |
+| Tractatus Veritatis Trisductivus, the master developmental record | https://tractatus-veritatis-trisductivus.blogspot.com | from 27 March 2026 onward |
+| Esoteric Trisduction, the esoteric-register development | https://esoterictrisduction.blogspot.com | the esoteric register |
 
 **The personal blog.** The precursor essays, written before the Root Axiom was stated, first post August 2012: https://this-is-what-you-ve-been-looking-for.blogspot.com
 
