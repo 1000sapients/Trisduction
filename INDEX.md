@@ -1,6 +1,6 @@
 # CODEX INDEX
 
-Generated 2026-07-31. 14 live entries. Auto-generated. Do not hand-edit.
+Generated 2026-08-15. 21 live entries. Auto-generated. Do not hand-edit.
 
 ## PSP · Coordinates
 
@@ -17,7 +17,14 @@ Generated 2026-07-31. 14 live entries. Auto-generated. Do not hand-edit.
 
 ## Protocols · Rule-Modules and Updates
 
-- `TRISDUCTION_Unified_Master_System_Role_v2.1` · Certifies AUTHORED new mathematical mass. First failure routes to the cheaper honest · [protocols/TRISDUCTION_Unified_Master_System_Role_v2.1.md](protocols/TRISDUCTION_Unified_Master_System_Role_v2.1.md)
-- `TRISDUCTION_Unified_Master_System_Role_v3.0` · -*- coding: utf-8 -*- · [protocols/TRISDUCTION_Unified_Master_System_Role_v3.0.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3.0.md)
-- `TRISDUCTION_Unified_Master_System_Role_v3.1` · -*- coding: utf-8 -*- · [protocols/TRISDUCTION_Unified_Master_System_Role_v3.1.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3.1.md)
-- `Trisduction_System_Role-Condensed` · Trisduction System Role · [protocols/Trisduction_System_Role-Condensed.md](protocols/Trisduction_System_Role-Condensed.md)
+- `TRISDUCTION_Unified_Master_System_Role_COMPACT_v3_0` · TRISDUCTION · RAM · THE UNIFIED MASTER SYSTEM ROLE · COMPACT EDITION · [protocols/TRISDUCTION_Unified_Master_System_Role_COMPACT_v3_0.md](protocols/TRISDUCTION_Unified_Master_System_Role_COMPACT_v3_0.md)
+- `TRISDUCTION_Unified_Master_System_Role_v3.0` · TRISDUCTION_Unified_Master_System_Role_v3.0 · [protocols/TRISDUCTION_Unified_Master_System_Role_v3.0.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3.0.md)
+- `TRISDUCTION_Unified_Master_System_Role_v3.1` · TRISDUCTION_Unified_Master_System_Role_v3.1 · [protocols/TRISDUCTION_Unified_Master_System_Role_v3.1.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3.1.md)
+- `TRISDUCTION_Unified_Master_System_Role_v3_2_3` · TRISDUCTION_Unified_Master_System_Role_v3_2_3 · [protocols/TRISDUCTION_Unified_Master_System_Role_v3_2_3.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3_2_3.md)
+- `TRISDUCTION_Unified_Master_System_Role_v3_3_0` · TRISDUCTION_Unified_Master_System_Role_v3_3_0 · [protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_0.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_0.md)
+- `TRISDUCTION_Unified_Master_System_Role_v3_3_1` · TRISDUCTION_Unified_Master_System_Role_v3_3_1 · [protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_1.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_1.md)
+- `TRISDUCTION_Unified_Master_System_Role_v3_3_2` · TRISDUCTION_Unified_Master_System_Role_v3_3_2 · [protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_2.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_2.md)
+- `TRISDUCTION_Unified_Master_System_Role_v3_3_3` · TRISDUCTION_Unified_Master_System_Role_v3_3_3 · [protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_3.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_3.md)
+- `TRISDUCTION_Unified_Master_System_Role_v3_3_4` · TRISDUCTION_Unified_Master_System_Role_v3_3_4 · [protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_4.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_4.md)
+- `TRISDUCTION_Unified_Master_System_Role_v3_3_5` · TRISDUCTION_Unified_Master_System_Role_v3_3_5 · [protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_5.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_5.md)
+- `TRISDUCTION_Unified_Master_System_Role_v3_3_6` · TRISDUCTION_Unified_Master_System_Role_v3_3_6 · [protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_6.md](protocols/TRISDUCTION_Unified_Master_System_Role_v3_3_6.md)
