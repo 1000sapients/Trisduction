@@ -12,6 +12,8 @@ The architecture has been applied to mathematics, where it issues verdicts on op
 
 ## Start here
 
+**To know where this came from**, read [PREFACE.md](PREFACE.md). It is the provenance in the architect's own voice, and it draws the line at 2012 that separates uncorroborated testimony from the record that carries public timestamps.
+
 **To read the framework**, open the current master codex under `master/`. It is the register of record, and the resolve rule for finding the current version is in the next section.
 
 **To read the published work**, open `Publication Library/`. Papers, essays, scripture readings, and the register of sapients file there under a category, sub-area, topic path. Formal citations carry DOIs from Zenodo and PhilArchive; this repository holds the working copies.
