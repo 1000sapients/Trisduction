@@ -140,7 +140,7 @@ Last, where the aperture is not at biography, the **attestation token** `att. [d
 | 0121 | c. 1000 BCE cult | Melqart | LEV | Tyre’s city-god, carried by Phoenician colonies to Carthage and Gades; read as Herakles by the Greeks, which is the clearest documented case of interpretatio in the record. ↔ **Herakles** 0108 | Cultic · att. c. 850 BCE, Bar-Hadad stele, T1 |
 | 0122 | c. 998 BCE | Yu 盂 | EAS | Da Yu ding inscription recording the grant of the Mandate; a named vessel patron | Somatic |
 | 0123 | c. 970 BCE | Sulayman AS | LEV | First Temple; the Tyre alliance and the Red Sea trade | Somatic · A3 |
-| 0124 | c. 969 BCE | Hiram I | LEV | Timber and craft supply to Jerusalem; Tyre's commercial expansion | Somatic · A2 |
+| 0124 | trad. c. 865 BCE | Ilyas AS | LEV | The drought aimed at the rain-god's own competence, the Carmel ordeal on a pre-announced single criterion, and the arraignment of a reigning king over a commoner's vineyard. No book, no patron, no grave: the office of unfunded speech, transmitted by mantle rather than by scroll. Antagonist cult at 0082 Baal, arriving by the Tyrian treaty marriage on the corridor 0121 Melqart carries | Carried · SG · att. c. 620 BCE, Deuteronomistic History, T3 |
 | 0125 | trad. c. 950 BCE | Bilqis | ARB | The Sabaean queen of 1 Kings 10 and Q 27:22-44. Marib, the dam, and the incense corridor from Aden to Gaza that made a caravan kingdom rich enough to send the embassy the traditions record | Carried · MK |
 | 0126 | c. 900 BCE | Uddālaka Āruṇi | SAS | Chāndogya Upaniṣad; tat tvam asi, and causal reasoning from observation | Somatic · A3 |
 | 0127 | c. 900 BCE | Shi Qiang 史牆 | EAS | Shi Qiang pan, the longest Western Zhou genealogical inscription | Somatic |
@@ -1113,6 +1113,7 @@ Zone totals move by one seat only, Mediterranean Europe 117 to 116 and Northern 
 
 | Serial | Ghost · displaced entry | Zone | Disposition | Superseded by |
 |---|---|---|---|---|
+| 0124 | Hiram I | LEV | SUPERSEDED · superseded; Tyre timber and craft supply to Jerusalem carried at 0123 Sulayman AS, Tyre's commercial expansion carried at 0121 Melqart | Ilyas AS |
 | 0223 | Minos · MK · M | AEG | SUPERSEDED · superseded, mythic king with no attestation | Euripides |
 | 0221 | Danaus · HA · M | AEG | SUPERSEDED · superseded, eponymous founder-tradition only | Phidias |
 | 0700 | Orpheus · M | AEG | SUPERSEDED · superseded, mythic-foundational | Marco Polo |
@@ -1672,7 +1673,7 @@ Per sPSP-RE-01 and sPSP-PE-08, governance is legitimate only at the actualized r
 | Europe, AEG + NWE | 215 of 1000 = 21.5% |
 | Seats before 1000 CE | 610 of 1000 |
 | Seats in the twentieth century | 65 of 1000 |
-| Existence-grades | Somatic 899 · Carried 55 · Cultic 28 · Composite 11 · Inscribed 7 |
+| Existence-grades | Somatic 898 · Carried 56 · Cultic 28 · Composite 11 · Inscribed 7 |
 | Women | 75 of 1000 = 7.5% |
 
 The last figure is printed rather than improved, because printing it is the honest act and improving it past what the record supports would be the dishonest one.
@@ -1727,7 +1728,7 @@ Final scribal pass executed. Every mechanical check below was run on the file as
 | Named-override hard deletions | 0 |
 | External audits survived | 4 · Durant, the Durant digest, Ibn Khallikan, the Chinese technical canon |
 | Governing laws | 14, carried in the role file |
-| Existence-grades | Somatic 899 · Carried 55 · Cultic 28 · Composite 11 · Inscribed 7 |
+| Existence-grades | Somatic 898 · Carried 56 · Cultic 28 · Composite 11 · Inscribed 7 |
 | Europe | 215 of 1000 = 21.5% |
 | Before 1000 CE | 610 of 1000 |
 | Twentieth century | 65 of 1000 |
@@ -1789,7 +1790,7 @@ Renumbering was previously refused on the ground that it would destroy the seria
 | Cross-references resolving | 27 of 27 |
 | Deletions-manifest serials remapped | 123 of 123 |
 | Em-dashes | 0 |
-| Existence-grades | Somatic 899 · Carried 55 · Cultic 28 · Composite 11 · Inscribed 7 |
+| Existence-grades | Somatic 898 · Carried 56 · Cultic 28 · Composite 11 · Inscribed 7 |
 | Attestation tokens populated | 69 of 101 non-Somatic rows |
 
 The name-set identity check is the one that matters most and it is new here: a census counts serials and would pass even if a remap collision silently duplicated one subject and lost another. Comparing the **multiset of names** before and after catches exactly that, and it passed.
