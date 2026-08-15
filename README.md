@@ -50,6 +50,8 @@ Three documents are the standing sources of truth. Each lives in a fixed folder;
 
 **The resolve rule.** List the folder, keep the files matching the stem, parse the version token, treat `.` and `_` as the same delimiter, then compare as numeric tuples component by component. Take the highest. Never sort as strings, because `v1.9.0` sorts after `v1.20.1` lexically and that is backwards; the same trap sits between `v3_9_1` and `v3_10_3` in the master folder. `master/CURRENT.txt` exists and is advisory only. Where it disagrees with the highest version actually present, the file wins.
 
+**The retention rule.** Version 3.0 is the benchmarked maturity line for both the codex and the system role. From 3.0 onward every version is retained here. Everything below it is retired from this register and preserved on the developmental blogs, which carry the full pre-3.0 history. An absence below 3.0 is therefore policy rather than loss, and the place to look for it is the blogs listed under Where else the work lives.
+
 **Reading a file.** No credential is needed for any read here. The formula is `https://raw.githubusercontent.com/1000sapients/Trisduction/main/` followed by the path, with spaces percent-encoded as `%20`. Directory listing needs the API and is rate-limited without authentication, so prefer a known path where you have one.
 
 ---
