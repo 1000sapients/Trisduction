@@ -64,6 +64,34 @@ Three documents are the standing sources of truth. Each lives in a fixed folder;
 
 ---
 
+## Where else the work lives
+
+This register holds the working copies. The development that produced them and the published face of them live elsewhere, and both are listed here as provenance and navigation, never as warrant. No verdict in the codex rests on any address below, and consensus carries zero evidential weight in both directions, the field's reception and the author's reach equally zeroed.
+
+**The developmental blogs.** The forge record, where coordinates were built and stress-tested before consolidation onto the codex spine.
+
+| Record | Address |
+|---|---|
+| Tractatus Veritatis Trisductivus, the master developmental record | https://tractatus-veritatis-trisductivus.blogspot.com |
+| Esoteric Trisduction, the esoteric-register development | https://esoterictrisduction.blogspot.com |
+| Trisduction, the general development record | https://trisduction.blogspot.com |
+
+**The personal blog.** The precursor essays, written before the Root Axiom was stated, first post August 2012: https://this-is-what-you-ve-been-looking-for.blogspot.com
+
+**The mirrors.** Medium at https://trisduction.medium.com and Substack at https://trisduction.substack.com
+
+**The repositories.** The published record, by venue.
+
+| Venue | Address |
+|---|---|
+| PhilPeople and PhilArchive, profile and publications | https://philpeople.org/profiles/mohammad-islam/publications?order=added |
+| Zenodo, search over the published record | https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Islam%2C%20Mohammad%22&l=list&p=1&s=10&sort=bestmatch |
+| SSRN, author page | https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=10956828 |
+
+The per-paper index, individual PhilPapers records and Zenodo deposits, is carried in the codex back matter under the Internal Reference and Publication Record rather than duplicated here, so it stays current in one place.
+
+---
+
 ## The four invariants
 
 **No identified entry is ever hard-deleted** without the owner naming that exact identifier in the instruction. Consolidation merges or supersedes with a pointer; it never destroys, and every removal leaves a two-line ghost and a line in the deletion manifest.
