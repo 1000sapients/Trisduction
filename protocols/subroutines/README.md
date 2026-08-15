@@ -96,15 +96,25 @@ When the architect says read the git, this is where to look.
 
 ## 7 · Versioning in this folder
 
-Skill files follow the same append-only law as every other document in the repository. A revised skill is filed as a **new file with a bumped version**, never as an overwrite and never as a delete. The naming pattern is `<skill-name>_v<major>_<minor>_<patch>.md`, and the resolve rule of section 5 applies: highest numeric tuple within the stem is authoritative.
+Skill files follow the same append-only law as every other document in the repository. A revised skill is filed as a **new file with a bumped version**, never as an overwrite and never as a delete. The naming pattern is `<skill-name>_v<major>_<minor>_<patch>.md` and the resolve rule of section 5 applies: highest numeric tuple within the stem is authoritative.
+
+**The suffix is a filing counter for this folder, not the instrument's own internal version.** Several instruments carry a revision history inside their own text that this counter does not track, so `_v1_0_0` means first filing here and nothing more. The standing example: `trisduction-publication-format_v1_0_0.md` is byte-identical to `publication/SKILL_trisduction-publication-format_v1_3_0.md`, where the older naming used the instrument's own version. The counter was chosen over the internal version because most instruments do not declare a machine-readable version, and a scheme that works for some and guesses for the rest is worse than one that is uniform and honestly labelled.
 
 Patch for a small correction, minor for a new section or a new instrument inside an existing deck, major for a restructure. The previous version stays in place, which is what makes an interrupted or botched write incapable of destroying the current instrument.
 
 The file installed in a session and the file filed here are the same text. Where they ever diverge, the installed copy is what actually executed and this copy is what is auditable; reconcile them rather than choosing, and record which way the correction ran.
 
----
+## 8 · Superseded filings elsewhere in the repository
 
-## 8 · Change discipline
+Skill files were filed in two other places before this folder existed. Both are superseded by pointer and neither is deleted, per the Prime Rule.
+
+`skills/trisduction-audit-cycle/SKILL.md` is superseded by `protocols/subroutines/trisduction-audit-cycle_v1_0_0.md`.
+
+`publication/SKILL_trisduction-publication-format_v1_1_0.md` through `_v1_3_0.md` are superseded by `protocols/subroutines/trisduction-publication-format_v1_0_0.md`, which carries the same bytes as `_v1_3_0`. The `publication/` folder keeps its label-map tooling, which is not a skill and stays where it is.
+
+Both supersessions are recorded in `CODEX_DELETIONS.log`. A scribe resolving an instrument reads from this folder and treats the other two paths as history.
+
+## 9 · Change discipline
 
 A correction to an instrument is fixed at the instrument, not patched at the instance where it surfaced. A finding that extends an existing behaviour is an in-place revision of that skill at a bumped version, not a new skill, unless the finding is structurally distinct enough to stand alone. New skills are rare by design; the deck grows by instrument inside an existing file more often than by file.
 
