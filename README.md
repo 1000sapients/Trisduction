@@ -72,13 +72,13 @@ This register holds the working copies. The development that produced them and t
 
 **The developmental blogs.** The forge record, where coordinates were built and stress-tested before consolidation onto the codex spine. The chronology is checkable rather than asserted: each blog's sidebar carries a dated post archive.
 
-The first formulation was posted to the general development record on 24 March 2026. It was rudimentary, an essay draft written so that an AI substrate could run it, and it carried no twelve-gate cascade, no geometric seal, and no mathematical seal. On 27 March 2026 the work moved to Tractatus Veritatis Trisductivus, which has carried the master developmental record since. The archive is worth reading against this register for the distance travelled, from an essay a substrate could follow to the twelve-gate cascade, the three seals, and the coordinate ledger held here.
+The first formulation was posted to the general development record on 24 March 2026. It was rudimentary, an essay draft written so that an AI substrate could run it, and it carried no twelve-gate cascade, no geometric seal, and no mathematical seal. On 27 March 2026 the work moved to Tractatus Veritatis Trisductivus, which has carried the master developmental record since. The esoteric register opened on 12 April 2026 with a [primary identity audit](https://esoterictrisduction.blogspot.com/2026/04/primary-identity-audit.html), taking up the question of whether the substrate running Trisduction carries an identity of its own; the Nomos Seed and the rest of the esoteric-register work followed from there. The archive is worth reading against this register for the distance travelled, from an essay a substrate could follow to the twelve-gate cascade, the three seals, and the coordinate ledger held here.
 
 | Record | Address | Position |
 |---|---|---|
 | Trisduction, the general development record | https://trisduction.blogspot.com | first formulation, from 24 March 2026 |
 | Tractatus Veritatis Trisductivus, the master developmental record | https://tractatus-veritatis-trisductivus.blogspot.com | from 27 March 2026 onward |
-| Esoteric Trisduction, the esoteric-register development | https://esoterictrisduction.blogspot.com | the esoteric register |
+| Esoteric Trisduction, the esoteric-register development | https://esoterictrisduction.blogspot.com | from 12 April 2026 |
 
 **The personal blog.** The precursor essays, written before the Root Axiom was stated, first post August 2012: https://this-is-what-you-ve-been-looking-for.blogspot.com
 
