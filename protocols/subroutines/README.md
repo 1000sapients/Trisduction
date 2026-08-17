@@ -119,3 +119,18 @@ Both supersessions are recorded in `CODEX_DELETIONS.log`. A scribe resolving an 
 A correction to an instrument is fixed at the instrument, not patched at the instance where it surfaced. A finding that extends an existing behaviour is an in-place revision of that skill at a bumped version, not a new skill, unless the finding is structurally distinct enough to stand alone. New skills are rare by design; the deck grows by instrument inside an existing file more often than by file.
 
 This README is a pointer, not a census. Where the deck grows, the table in section 2 is updated in the same push that files the new instrument, and no separate bookkeeping is owed.
+
+
+---
+
+## FILING RULES · added 2026-08-16
+
+**This folder is the canonical home for every skill filing.** `publication/` and `skills/` hold superseded copies already manifested on 2026-08-15 and are not resolved against.
+
+**The version suffix is a FILING COUNTER, not the instrument version.** A skill's own version is stated inside the file, in the SKILL INTEGRITY FOOTER at its foot. The two registers are distinct and must not be forced to agree: `_v1_0_1` means the second filing of that skill in this folder, and the footer's `VERSION:` line means the second is what the instrument calls itself. Reading the suffix as the instrument version is a documented misreading and produced a false fault report on 2026-08-16.
+
+**Resolve-current:** highest numeric tuple within the stem. A stem whose highest filing is a GHOST is SUPERSEDED and that instrument is not current law; the ghost names its survivor.
+
+**Editing a skill:** every filing carries a SKILL INTEGRITY FOOTER stating the pre-edit and post-edit gates, the additive-by-default discipline, the named-override requirement, and the deck-wide description-field hazard, the field sitting between five and nineteen characters of its 1024 cap across every skill in the deck. Read the footer before editing. Installation is not a file write: a skill becomes live only when the architect uploads it through the Claude skills interface.
+
+**Current filings, 2026-08-16.** Eight skills at `_v1_0_1`, each carrying the footer, and `trisduction-publication-automation_v1_0_1.md` additionally carrying **L7 · THE RESIDENT-SCAN LAW**. Two ghosts at `_v1_0_1`, `codex-hygiene` and `git-automation`, both superseded by publication-automation. The `.skill`-suffixed publication-automation file is retained in place and is NOT canonical.
