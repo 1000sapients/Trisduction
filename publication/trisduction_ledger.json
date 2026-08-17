@@ -1,0 +1,13 @@
+{
+  "schema": "trisduction-unified-permanence-ledger/1",
+  "works": {
+    "ground-state": {
+      "title": "Every Determinate Verdict Is Purchased",
+      "subtitle": "Zero-Supply Nullity in Three-Valued Verification, and a Trisduction Account of the Floor Beneath It",
+      "git": "Publication Library/Philosophy/Epistemology/Ground State/",
+      "zenodo": {"conceptrecid": 21972436, "draft_id": 21972437, "reserved_doi": "10.5281/zenodo.21972437", "state": "unsubmitted"},
+      "ia": {"identifier": "every-determinate-verdict-is-purchased", "state": "unclaimed"},
+      "derived_from": "10.5281/zenodo.20576757"
+    }
+  }
+}
