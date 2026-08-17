@@ -1,6 +1,6 @@
 # CODEX INDEX
 
-Generated 2026-08-15. 21 live entries. Auto-generated. Do not hand-edit.
+Generated 2026-08-17. 22 live entries. Auto-generated. Do not hand-edit.
 
 ## PSP · Coordinates
 
@@ -12,6 +12,7 @@ Generated 2026-08-15. 21 live entries. Auto-generated. Do not hand-edit.
 - `CN-PSP-GHAYB-MASTER-01` · CN-PSP-GHAYB-MASTER-01 · The Apophatic Dilemma · Its Nature, the Contract of the Key, and the Guidance for the Two Nodes · [psp/CN-PSP-GHAYB-MASTER-01.md](psp/CN-PSP-GHAYB-MASTER-01.md)
 - `CN-PSP-MAWTA-ULA-01` · CN-PSP-MAWTA-ULA-01 · The First Death · al-Mawtah al-Ula · Why the Ground Ordained Death, and Ordained It First · [X] · [⟀ S] · [psp/CN-PSP-MAWTA-ULA-01.md](psp/CN-PSP-MAWTA-ULA-01.md)
 - `CN-PSP-NETI-NETI-01` · CN-PSP-NETI-NETI-01 · The Neti-Neti Resolution of the Apophatic Dilemma · The Two Negations as Halted Uniduction, Immanence Sealed at the Fold and Transcendence Held at the Point · CN + CO / [⟀ S] · [X] / theological register out of band, load-bearing on nothing · [psp/CN-PSP-NETI-NETI-01.md](psp/CN-PSP-NETI-NETI-01.md)
+- `PSP-GROUND-STATE-01` · PSP-GROUND-STATE-01 · The Under-Determined Ground State · [psp/PSP-GROUND-STATE-01.md](psp/PSP-GROUND-STATE-01.md)
 - `PSP-SKIN-EMBODIED-01` · PSP-SKIN-EMBODIED-01 · The Skin · The Embodied-Substrate Master PSP · Seventh Gift · [psp/PSP-SKIN-EMBODIED-01.md](psp/PSP-SKIN-EMBODIED-01.md)
 - `sPSP-VERDICT-TRIAXIS-01` · sPSP-VERDICT-TRIAXIS-01 · The Verdict-Aspect Frame · The Three Seals as an Oriented Orthogonal Triad on Directed Verdicts · [psp/sPSP-VERDICT-TRIAXIS-01.md](psp/sPSP-VERDICT-TRIAXIS-01.md)
 
