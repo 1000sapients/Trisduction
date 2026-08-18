@@ -1,0 +1,20 @@
+{
+  "_note": "Work key to every surface. The only record that a work already owns an address. Created 2026-08-18.",
+  "_home": {
+    "git": "https://github.com/1000sapients/Trisduction",
+    "ia": "https://archive.org/details/@trisduction",
+    "orcid": "0009-0003-1671-0664"
+  },
+  "difficult-passages-quran": {
+    "title": "Difficult Passages of the Quran and the Text's Own Instructions for Reading Them",
+    "git_pdf": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.pdf",
+    "git_md": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.md",
+    "ia_identifier": "difficult-passages-of-the-quran-islam-2026",
+    "ia_url": "https://archive.org/details/difficult-passages-of-the-quran-islam-2026",
+    "zenodo_concept_doi": "10.5281/zenodo.21990565",
+    "zenodo_version_doi": "10.5281/zenodo.21990566",
+    "zenodo_record": "https://zenodo.org/record/21990566",
+    "first_published": "2026-08-18",
+    "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 21990565, never a fresh deposition."
+  }
+}
