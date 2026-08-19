@@ -27,13 +27,21 @@ listed below**.
 | File | Claims | Holds | Disposition |
 |---|---|---|---|
 | `Geometric_Encyclopedia_of_the_Quran_v1_0_1_2.md` | 12 entries | 2 | MIS-NUMBERED, superseded by `v1_0_0_2_1` |
-| `Geometric_Encyclopedia_of_the_Quran_v1_1_0_2.md` | 102 entries | 2 | MIS-NUMBERED, superseded by `v1_0_0_2_1` |
 | `Geometric_Encyclopedia_of_the_Quran_v1_2_0_2.md` | 202 entries | 2 | MIS-NUMBERED, superseded by `v1_0_0_2_1` |
+
+**Correction, 2026-08-19.** An earlier revision of this file listed a third
+ghost, `Geometric_Encyclopedia_of_the_Quran_v1_1_0_2.md`. **That file never
+existed.** A live folder listing was rate-limited during the damage analysis and
+the scribe fell back to a hardcoded list into which that filename had been
+invented, then built a ghost row on it without re-verifying. The verified
+history is four corpus files and two mis-numbered ones. The phantom row is
+corrected here and a correcting row is appended to `CODEX_DELETIONS.log`, where
+the faulty row is retained beside its correction rather than removed.
 
 **Mechanism.** The scribe invented a rule under which a correction adding no
 entry advanced a component other than the census. That is not the scheme. Each
-such bump moved the odometer, so three consecutive files asserted a census of
-12, 102 and 202 for a corpus of two, and resolve-by-highest-tuple returned the
+such bump moved the odometer, so two files asserted a census of
+12 and 202 for a corpus of two, and resolve-by-highest-tuple returned the
 last of them. The content of `v1_2_0_2` was correct and current; only its name
 was false. It is superseded by `v1_0_0_2_1`, which carries identical content
 under a name that reads true.
