@@ -16,5 +16,31 @@
     "zenodo_record": "https://zenodo.org/record/21990566",
     "first_published": "2026-08-18",
     "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 21990565, never a fresh deposition."
+  },
+  "uncanny-efficacy-unforgiving-limits": {
+    "title": "The Uncanny Efficacy and the Unforgiving Limits of Mathematics in Mapping to Reality",
+    "git_pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.pdf",
+    "git_md": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.md",
+    "git_commit": "738f50a7a33df7296a7045b66fa081c8bd4776f8",
+    "ia_identifier": "uncanny-efficacy-unforgiving-limits-islam-2026",
+    "ia_url": "https://archive.org/details/uncanny-efficacy-unforgiving-limits-islam-2026",
+    "zenodo_concept_doi": "10.5281/zenodo.22028274",
+    "zenodo_version_doi": "10.5281/zenodo.22028275",
+    "zenodo_record": "https://zenodo.org/records/22028275",
+    "first_published": "2026-08-20",
+    "editions": {
+      "git": "Apex Pristine, FULL disclosure, pdf+md",
+      "ia": "Journal edition pdf only, per the artifact-format binding",
+      "zenodo": "Journal edition pdf only, per the artifact-format binding"
+    },
+    "files": {
+      "ia": [
+        "Uncanny Efficacy and Unforgiving Limits.pdf"
+      ],
+      "zenodo": [
+        "Uncanny Efficacy and Unforgiving Limits.pdf"
+      ]
+    },
+    "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 22028274, never a fresh deposition. Git takes a new file, never an overwrite."
   }
 }
