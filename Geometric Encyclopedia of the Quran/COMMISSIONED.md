@@ -33,7 +33,12 @@ pass" and does not yet.
 | Bearers of the Throne (ḥamalat al-ʿarsh) | ʿArsh | standard |
 | Heaven and Sky (samāʾ) | ʿArsh | major |
 | Heart (qalb) | ʿArsh | major |
-| Sovereignty (mulk) | ʿArsh | standard |
+| Sovereignty (mulk) | ʿArsh, ʿArsh ʿAẓīm of Sabaʾ | standard |
+| Seat (kursī) rows above also owed to ʿArsh ʿAẓīm of Sabaʾ | — | — |
+| Bilqīs (bilqīs) | ʿArsh ʿAẓīm of Sabaʾ | **major** |
+| Sabaʾ (sabaʾ) | ʿArsh ʿAẓīm of Sabaʾ | standard |
+| Sulaymān AS (sulaymān) | ʿArsh ʿAẓīm of Sabaʾ | major |
+| Guidance (hudā) | ʿArsh ʿAẓīm of Sabaʾ | major |
 
-21 commissioned, one discharged. Delegation targets not named in any See also tail are tracked
+25 commissioned, one discharged. Bilqīs is owed at major tier: the person, her name, her council, her diplomacy, the biblical parallel at 1 Kings 10 and the long reception history are a synthesis, and the throne entry deliberately does not attempt them. Delegation targets not named in any See also tail are tracked
 separately by `audit_corpus.py` as dangling delegations and are not commissioned by this file.
