@@ -16,11 +16,11 @@ pass" and does not yet.
 | Attributes of God (ṣifāt) | Maʿiyya | major |
 | Nearness (qurb) | Maʿiyya | standard |
 | Hearing and Seeing (al-samīʿ al-baṣīr) | Maʿiyya | standard |
-| Anthropomorphism (tashbīh) | Maʿiyya | major |
-| Throne (ʿarsh) | Maʿiyya | standard |
+| Anthropomorphism (tashbīh) | Maʿiyya, ʿArsh | major |
+| Throne (ʿarsh) | Maʿiyya | DISCHARGED by ʿArsh, 2026-08-25 |
 | Manifest and Hidden (al-ẓāhir wa-l-bāṭin) | Maʿiyya | standard |
 | Watchfulness (murāqaba) | Maʿiyya | standard |
-| Establishment on the Throne (istiwāʾ) | Maʿiyya, delegation | major |
+| Establishment on the Throne (istiwāʾ) | Maʿiyya, ʿArsh, delegation | major |
 | Substitution (tabdīl) | Abrogation | standard |
 | Occasions of Revelation (asbāb al-nuzūl) | Abrogation | major |
 | Established and Ambiguous (muḥkam wa-mutashābih) | Abrogation | major |
@@ -29,6 +29,11 @@ pass" and does not yet.
 | Concealment (kitmān) | Taḥrīf | standard |
 | Confirmation (taṣdīq) | Taḥrīf | standard |
 | Guardianship of the Text (haymana) | Taḥrīf | standard |
+| Seat (kursī) | ʿArsh | standard |
+| Bearers of the Throne (ḥamalat al-ʿarsh) | ʿArsh | standard |
+| Heaven and Sky (samāʾ) | ʿArsh | major |
+| Heart (qalb) | ʿArsh | major |
+| Sovereignty (mulk) | ʿArsh | standard |
 
-16 commissioned. Delegation targets not named in any See also tail are tracked separately by
-`audit_corpus.py` as dangling delegations and are not commissioned by this file.
+21 commissioned, one discharged. Delegation targets not named in any See also tail are tracked
+separately by `audit_corpus.py` as dangling delegations and are not commissioned by this file.
