@@ -1,46 +1,58 @@
 {
-  "_note": "Work key to every surface. The only record that a work already owns an address. Created 2026-08-18.",
-  "_home": {
-    "git": "https://github.com/1000sapients/Trisduction",
-    "ia": "https://archive.org/details/@trisduction",
-    "orcid": "0009-0003-1671-0664"
+ "_note": "Work key to every surface. The only record that a work already owns an address. Created 2026-08-18.",
+ "_home": {
+  "git": "https://github.com/1000sapients/Trisduction",
+  "ia": "https://archive.org/details/@trisduction",
+  "orcid": "0009-0003-1671-0664"
+ },
+ "difficult-passages-quran": {
+  "title": "Difficult Passages of the Quran and the Text's Own Instructions for Reading Them",
+  "git_pdf": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.pdf",
+  "git_md": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.md",
+  "ia_identifier": "difficult-passages-of-the-quran-islam-2026",
+  "ia_url": "https://archive.org/details/difficult-passages-of-the-quran-islam-2026",
+  "zenodo_concept_doi": "10.5281/zenodo.21990565",
+  "zenodo_version_doi": "10.5281/zenodo.21990566",
+  "zenodo_record": "https://zenodo.org/record/21990566",
+  "first_published": "2026-08-18",
+  "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 21990565, never a fresh deposition."
+ },
+ "uncanny-efficacy-unforgiving-limits": {
+  "title": "The Uncanny Efficacy and the Unforgiving Limits of Mathematics in Mapping to Reality",
+  "git_pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.pdf",
+  "git_md": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.md",
+  "git_commit": "738f50a7a33df7296a7045b66fa081c8bd4776f8",
+  "ia_identifier": "uncanny-efficacy-unforgiving-limits-islam-2026",
+  "ia_url": "https://archive.org/details/uncanny-efficacy-unforgiving-limits-islam-2026",
+  "zenodo_concept_doi": "10.5281/zenodo.22028274",
+  "zenodo_version_doi": "10.5281/zenodo.22028275",
+  "zenodo_record": "https://zenodo.org/records/22028275",
+  "first_published": "2026-08-20",
+  "editions": {
+   "git": "Apex Pristine, FULL disclosure, pdf+md",
+   "ia": "Journal edition pdf only, per the artifact-format binding",
+   "zenodo": "Journal edition pdf only, per the artifact-format binding"
   },
-  "difficult-passages-quran": {
-    "title": "Difficult Passages of the Quran and the Text's Own Instructions for Reading Them",
-    "git_pdf": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.pdf",
-    "git_md": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.md",
-    "ia_identifier": "difficult-passages-of-the-quran-islam-2026",
-    "ia_url": "https://archive.org/details/difficult-passages-of-the-quran-islam-2026",
-    "zenodo_concept_doi": "10.5281/zenodo.21990565",
-    "zenodo_version_doi": "10.5281/zenodo.21990566",
-    "zenodo_record": "https://zenodo.org/record/21990566",
-    "first_published": "2026-08-18",
-    "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 21990565, never a fresh deposition."
+  "files": {
+   "ia": [
+    "Uncanny Efficacy and Unforgiving Limits.pdf"
+   ],
+   "zenodo": [
+    "Uncanny Efficacy and Unforgiving Limits.pdf"
+   ]
   },
-  "uncanny-efficacy-unforgiving-limits": {
-    "title": "The Uncanny Efficacy and the Unforgiving Limits of Mathematics in Mapping to Reality",
-    "git_pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.pdf",
-    "git_md": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.md",
-    "git_commit": "738f50a7a33df7296a7045b66fa081c8bd4776f8",
-    "ia_identifier": "uncanny-efficacy-unforgiving-limits-islam-2026",
-    "ia_url": "https://archive.org/details/uncanny-efficacy-unforgiving-limits-islam-2026",
-    "zenodo_concept_doi": "10.5281/zenodo.22028274",
-    "zenodo_version_doi": "10.5281/zenodo.22028275",
-    "zenodo_record": "https://zenodo.org/records/22028275",
-    "first_published": "2026-08-20",
-    "editions": {
-      "git": "Apex Pristine, FULL disclosure, pdf+md",
-      "ia": "Journal edition pdf only, per the artifact-format binding",
-      "zenodo": "Journal edition pdf only, per the artifact-format binding"
-    },
-    "files": {
-      "ia": [
-        "Uncanny Efficacy and Unforgiving Limits.pdf"
-      ],
-      "zenodo": [
-        "Uncanny Efficacy and Unforgiving Limits.pdf"
-      ]
-    },
-    "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 22028274, never a fresh deposition. Git takes a new file, never an overwrite."
-  }
+  "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 22028274, never a fresh deposition. Git takes a new file, never an overwrite."
+ },
+ "the-disciple-whom-jesus-loved": {
+  "title": "The Disciple Whom Jesus Loved: Anonymity as Structure, Read Across Four Scriptural Corpora",
+  "git_pdf": "Publication Library/Scripture/Gospel/John/The Disciple Whom Jesus Loved.pdf",
+  "git_md": "Publication Library/Scripture/Gospel/John/The Disciple Whom Jesus Loved.md",
+  "ia_identifier": "trisduction-the-disciple-whom-jesus-loved",
+  "ia_url": "https://archive.org/details/trisduction-the-disciple-whom-jesus-loved",
+  "zenodo_concept_doi": "10.5281/zenodo.22104705",
+  "zenodo_version_doi": "10.5281/zenodo.22104706",
+  "zenodo_record": "22104706",
+  "first_published": "2026-08-26",
+  "note": "Johannine comparative study. Thirteen-round adversarial audit closed on architect FORGE without a seal; closed-authorship aperture accepted open."
+ }
 }
