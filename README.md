@@ -18,7 +18,7 @@ The architecture has been applied to mathematics, where it issues verdicts on op
 
 **To read the published work**, open `Publication Library/`. Papers, essays, scripture readings, and the register of sapients file there under a category, sub-area, topic path. Formal citations carry DOIs from Zenodo and PhilArchive; this repository holds the working copies.
 
-**To run the instruments**, open `protocols/subroutines/` and read its README first. Nine self-contained skill files live there, each a complete instrument, each callable by trigger words. That README explains the difference between an instrument that is loaded in a session and one that is merely filed here, which is the distinction most likely to be missed.
+**The instruments do not live here.** The skill deck is filed in the private register at `Trisduction/Knowledge-Base :: Skills/`, one directory per skill, `SKILL.md` the installable working copy and `versions/` the append-only record. It was held in both repositories until 2026-08-26, and the cost of that was version alignment across two surfaces, paid continuously and paid twice in one day in errors. **One register, one alignment.** This repository holds what is published and what is cited; the machinery that produced it is kitchen material and is kept where it is used.
 
 ---
 
@@ -29,7 +29,6 @@ The architecture has been applied to mathematics, where it issues verdicts on op
 | `master/` | The Main Codex, the register of record, and the Condensed Codex, across every version | Append-only. A new version is a new file. |
 | `Theological PSP Codex/` | The scriptural PSP master, every version | Append-only. |
 | `protocols/` | The Unified Master System Role, the loaded role, every version | Census-tracked at the top level, filename equal to identifier. |
-| `protocols/subroutines/` | The nine skill files and their orientation README | Append-only, version-stamped, outside the census by design. |
 | `psp/` | One file per PSP coordinate | Census-tracked, filename equal to identifier. |
 | `Publication Library/` | Every finished written document, by category | Filed under a category, sub-area, topic path. |
 | `publication/` | The publication label map and its tooling | Working machinery. |
@@ -117,7 +116,7 @@ Stated plainly rather than left for a reader to discover.
 
 `INDEX.md` covers the census-tracked folders only and currently reads 21 live entries, ten coordinates under `psp/` and eleven rule-modules under `protocols/`. Entries whose file carries no markdown title display their identifier in the title position, which is honest rather than decorative.
 
-Skill files were previously filed in three places. `protocols/subroutines/` is now the single home. The earlier filings at `skills/trisduction-audit-cycle/SKILL.md` and `publication/SKILL_trisduction-publication-format_v1_1_0.md` through `_v1_3_0.md` are superseded by pointer, retained rather than deleted, and recorded in the manifest.
+Skill files were filed in three places here, then consolidated to one folder, and on 2026-08-26 removed from this repository entirely on a named override. The deck now has **one home**, the private register at `Trisduction/Knowledge-Base :: Skills/`. Twenty-eight files were removed across two commits; before either, a blob-hash comparison against the private register found nine with no byte-identical twin there, and those nine were migrated first, so no working copy was destroyed and every removal is recoverable from this repository's history. Every file is logged in the manifest with its survivor named.
 
 There is no LICENSE file and no CITATION.cff. Formal citation currently runs through the DOIs on the published deposits.
 
