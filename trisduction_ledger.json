@@ -54,5 +54,17 @@
   "zenodo_record": "22104706",
   "first_published": "2026-08-26",
   "note": "Johannine comparative study. Thirteen-round adversarial audit closed on architect FORGE without a seal; closed-authorship aperture accepted open."
+ },
+ "servant-and-seal": {
+  "title": "Servant and Seal: The Qur'anic Portraiture of the Prophet Muhammad Between Exaltation and Accountability",
+  "git_pdf": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.pdf",
+  "git_md": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.md",
+  "ia_identifier": "servant-and-seal-islam-2026",
+  "ia_url": "https://archive.org/details/servant-and-seal-islam-2026",
+  "zenodo_concept_doi": "",
+  "zenodo_version_doi": "",
+  "zenodo_record": "",
+  "first_published": "2026-08-27",
+  "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI."
  }
 }
