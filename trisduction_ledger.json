@@ -61,9 +61,9 @@
   "git_md": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.md",
   "ia_identifier": "servant-and-seal-islam-2026",
   "ia_url": "https://archive.org/details/servant-and-seal-islam-2026",
-  "zenodo_concept_doi": "",
-  "zenodo_version_doi": "",
-  "zenodo_record": "",
+  "zenodo_concept_doi": "10.5281/zenodo.22125135",
+  "zenodo_version_doi": "10.5281/zenodo.22125136",
+  "zenodo_record": "https://zenodo.org/record/22125136",
   "first_published": "2026-08-27",
   "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI."
  }
