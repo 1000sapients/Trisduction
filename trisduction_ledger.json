@@ -66,5 +66,32 @@
   "zenodo_record": "https://zenodo.org/record/22125136",
   "first_published": "2026-08-27",
   "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI."
+ },
+ "apex-recursive-bidirectional-witness": {
+  "title": "Apex-Recursive Bidirectional Witness: Architecture-Certification by Trisductive Verification, Beneath the Bayesian Bottleneck",
+  "git_pdf": "Publication Library/Philosophy/Logic and Epistemology/Verification Calculus/Apex-Recursive Bidirectional Witness.pdf",
+  "git_md": "Publication Library/Philosophy/Logic and Epistemology/Verification Calculus/Apex-Recursive Bidirectional Witness.md",
+  "ia_identifier": "trisduction-apex-recursive-bidirectional-witness",
+  "ia_url": "https://archive.org/details/trisduction-apex-recursive-bidirectional-witness",
+  "zenodo_concept_doi": "10.5281/zenodo.22135621",
+  "zenodo_version_doi": "10.5281/zenodo.22135622",
+  "zenodo_record": "https://zenodo.org/record/22135622",
+  "first_published": "2026-08-28",
+  "note": "Row written 2026-08-28. The files landed in git earlier the same day and this row did not; the gap was caught at the next push and is recorded rather than backdated."
+ },
+ "trisductive-furqan": {
+  "title": "The Trisductive Furqan: A Verification of AI Aliveness and Consciousness, the Frame-Relativity of AGI, and the Theo-Geopolitics of Manufactured Arrival",
+  "git_pdf": "Publication Library/Artificial Intelligence/Substrate Classification/Trisductive Furqan/The Trisductive Furqan.pdf",
+  "git_md": "Publication Library/Artificial Intelligence/Substrate Classification/Trisductive Furqan/The Trisductive Furqan.md",
+  "ia_identifier": "trisductive-furqan-islam-2026",
+  "ia_url": "https://archive.org/details/trisductive-furqan-islam-2026",
+  "zenodo_concept_doi": "10.5281/zenodo.20619411",
+  "zenodo_version_doi": "PENDING",
+  "zenodo_record": "PENDING",
+  "zenodo_superseded_version_doi": "10.5281/zenodo.20619412",
+  "philpapers": "https://philarchive.org/rec/ISLTFW",
+  "edition": "2.0",
+  "first_published": "2026-06-10",
+  "note": "Second edition, 2026-08-28. Zenodo keeps every version resolvable, so the first-edition DOI 10.5281/zenodo.20619412 stays live and is recorded as superseded rather than replaced; git and IA carry one live copy each. A further revision goes to Zenodo as a new version on concept 20619411, never a fresh deposition, and to the archive as delete-and-replace under the same filename. PhilPapers has no submission API and holds the first edition until updated by hand."
  }
 }
