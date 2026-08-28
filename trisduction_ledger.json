@@ -93,5 +93,17 @@
   "edition": "2.0",
   "first_published": "2026-06-10",
   "note": "Second edition, 2026-08-28. Zenodo keeps every version resolvable, so the first-edition DOI 10.5281/zenodo.20619412 stays live and is recorded as superseded rather than replaced; git and IA carry one live copy each. A further revision goes to Zenodo as a new version on concept 20619411, never a fresh deposition, and to the archive as delete-and-replace under the same filename. PhilPapers has no submission API and holds the first edition until updated by hand."
+ },
+ "custody-cycle-most-high": {
+  "title": "The Custody Cycle of the Most High: Capture, Emptiness, and the Transfer of the Supreme God from Bronze Age Canaan to Rome",
+  "git_pdf": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.pdf",
+  "git_md": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.md",
+  "ia_identifier": "custody-cycle-most-high-islam-2026",
+  "ia_url": "https://archive.org/details/custody-cycle-most-high-islam-2026",
+  "zenodo_concept_doi": "pending",
+  "zenodo_version_doi": "pending",
+  "zenodo_record": "pending",
+  "first_published": "2026-08-28",
+  "note": "First publication. Three sealed audit cycles plus two external-substrate passes. Codex siblings: Theological SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01, master INDEX 0708 sPSP-ELYON-CUSTODY-01."
  }
 }
