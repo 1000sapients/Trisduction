@@ -1,0 +1,83 @@
+# BLAST RADIUS REGISTER - RELOCATION LEDGER - append-only. Never rewritten.
+# generated 2026-08-05 | cascade seed 20260622 | HARD DELETIONS: 0
+# format: TAG | disposition | class | blast | route | recover-from | title
+# ----------------------------------------------------------------------------------------------------
+1b   | STANDING                | A | L1 | E3 | classified-register-appendix-B | Phantom divide never crossed, w(z)>=-1
+A-B  | STANDING                | A | L1 | E1 | classified-register-appendix-B | Baryon number conserved: proton decay null
+A-E  | STANDING                | A | L2 | E2 | classified-register-appendix-B | No electron substructure to 20-100 TeV
+A-M  | STANDING                | A | L2 | E1 | classified-register-appendix-B | No magnetic monopole (closure dF=0)
+A-Q  | STANDING                | A | L2 | E2 | classified-register-appendix-B | Purely quadrupolar GW polarization
+14   | METHOD-EXHIBIT          | A | L0 | E1 | classified-register-appendix-B | Z2 surface-state robustness
+55   | METHOD-EXHIBIT          | A | L0 | E1 | classified-register-appendix-B | Majorana quantized conductance
+6    | METHOD-EXHIBIT          | A | L0 | E1 | classified-register-appendix-B | Tetrahedral defect lock
+19   | INHERITED-NECESSITY     | A | L1 | E3 | classified-register-appendix-B | GW memory effect
+42   | INHERITED-NECESSITY     | A | L1 | E2 | classified-register-appendix-B | Photon-ring substructure
+10   | RELOCATED-LEAN          | B | L0 | E2 | classified-register-appendix-B | Bulk quantum Hall invariant
+13   | RELOCATED-LEAN          | B | L0 | E2 | classified-register-appendix-B | Bar-spiral resonance lock
+18   | RELOCATED-LEAN          | B | L1 | E3 | classified-register-appendix-B | Neutrino ordering + delta_CP window
+24   | RELOCATED-LEAN          | B | L0 | E2 | classified-register-appendix-B | Cuprate quantum criticality
+29   | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Discrete folding intermediates
+33   | RELOCATED-LEAN          | B | L0 | E2 | classified-register-appendix-B | Oort cloud density wall
+34   | RELOCATED-LEAN          | B | L0 | E2 | classified-register-appendix-B | Pulsar glitch brittle fracture
+35   | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Ion-channel proton tunneling
+37   | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Supercooled water liquid-liquid transition
+38   | RELOCATED-LEAN          | B | L1 | E3 | classified-register-appendix-B | Vacuum-energy gradient shift
+4    | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Single-chain phonon waveguide
+49   | RELOCATED-LEAN          | B | L0 | E2 | classified-register-appendix-B | Macroscopic superposition persistence
+5    | RELOCATED-LEAN          | B | L0 | E2 | classified-register-appendix-B | Active void pressure
+51   | RELOCATED-LEAN          | B | L0 | E2 | classified-register-appendix-B | Lunar recession inner-core coupling
+56   | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Cytoskeletal mechanical resonance
+63   | RELOCATED-LEAN          | B | L0 | E2 | classified-register-appendix-B | Proton radius field dependence
+64   | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Sonoluminescence plasma state
+66   | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Knot-topology transcription barrier
+68   | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Nanoconfined osmotic excess
+69   | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Universal thermal scaling
+70   | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Granular directional memory
+71   | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Sonoluminescence energy ceiling
+8    | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Ice growth tunneling
+9    | RELOCATED-LEAN          | B | L0 | E1 | classified-register-appendix-B | Cavitation geometry threshold
+11   | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Enzyme proton tunneling
+12   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | Neutron-star maximum mass
+15   | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Atmospheric-seismic diffusion lag
+16   | RELOCATED-CORROBORATION | C | L1 | E3 | classified-register-appendix-B | Lightest neutrino mass floor 1-10 meV
+17   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Muon g-2: space-like method decisive
+1a   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | Dark-energy dynamism, w evolves
+20   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | BH information, condensate analog
+21   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Lithium depletion by convection
+22   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | Cosmic-string background component
+23   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | QCD critical point
+25   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Correlated-noise limit
+26   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Electron electric dipole moment
+27   | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Gravity-induced collapse
+28   | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Polymerase conformational proofreading
+2e   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Radial-acceleration regularity, empirical
+3    | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Intermittency saturation exponent
+30   | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Photosynthetic vibronic coherence
+31   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | Martian inner-core threshold
+32   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Deep-mantle carbon reservoir
+36   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Phonon-superconductivity ceiling
+39   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | Tensor-to-scalar ratio
+40   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | Cosmic birefringence
+41   | RELOCATED-CORROBORATION | C | L1 | E3 | classified-register-appendix-B | Gravitational slip parameter
+46   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | Reionization percolation
+47   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Cosmic-string lensing
+48   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Primordial black-hole evaporation
+50   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Delbruck scattering precision
+52   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Mantle plume stationarity
+53   | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Casimir thermal dependence
+54   | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Vacuum friction torque
+57   | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Condensate spinodal decomposition
+58   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Deep-focus earthquake implosion
+59   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | Magnetar field ceiling
+60   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | Triaxial dark halo
+61   | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Quantum Darwinism redundancy
+65   | RELOCATED-CORROBORATION | C | L0 | E1 | classified-register-appendix-B | Chiral-induced spin selectivity
+67   | RELOCATED-CORROBORATION | C | L0 | E2 | classified-register-appendix-B | Subduction-CO2 coupling
+72   | RELOCATED-CORROBORATION | C | L0 | E3 | classified-register-appendix-B | Domain-wall texture imprint
+2    | RETIRED-OUT-OF-BAND     | D | L0 | E2 | classified-register-appendix-B | a0 coevolution a0(z)=a0*H(z)/H0
+44   | RETIRED-OUT-OF-BAND     | D | L0 | E3 | classified-register-appendix-B | Weak Gravity Conjecture relic
+45   | RETIRED-OUT-OF-BAND     | D | L0 | E3 | classified-register-appendix-B | Bekenstein bound on quark-gluon plasma
+62   | RETIRED-OUT-OF-BAND     | D | L0 | E3 | classified-register-appendix-B | ER=EPR wormhole signature
+7    | REPAIRED-THEN-RELOCATED | X | L0 | E1 | classified-register-appendix-B | ATP synthase efficiency
+# ----------------------------------------------------------------------------------------------------
+# census_in 77 | census_out 77 | hard_deletions 0 | PASS

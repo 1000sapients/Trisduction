@@ -1,0 +1,64 @@
+name: codex-file
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  publish:
+    if: contains(join(github.event.issue.labels.*.name, ','), 'codex-file')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch attachment and place it
+        id: put
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ github.token }}
+        run: python .github/scripts/codex_file_publish.py
+
+      - name: Commit and push
+        if: success()
+        env:
+          MSG: ${{ steps.put.outputs.commit_message }}
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "codex-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "$MSG"
+            git push
+          fi
+
+      - name: Report to issue
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          RESULT: ${{ steps.put.outputs.result }}
+        with:
+          script: |
+            const result = process.env.RESULT || 'No result. Check the Actions log for this run.';
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: result
+            });
+            if (result.startsWith('Done.')) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                state: 'closed'
+              });
+            }

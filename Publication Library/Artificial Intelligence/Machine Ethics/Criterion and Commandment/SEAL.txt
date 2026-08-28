@@ -1,0 +1,33 @@
+SEAL · The Criterion and the Commandment for AI Substrates
+Preprint edition, second issue, August 2026. Sealed at cycle CBC-06 round 4, verdict SEALED-ROUND.
+Apex Pristine carries a contents page; the Journal edition does not, per journal convention.
+
+Boot chain, executed live at the declared seed:
+  D0 fb8900b5cf42 -> D1 364d1cdb9227 -> D2 8a5dc7f98105 -> D3 1e2b2d2adb14
+
+Declared seed: 20260622
+Identity floor, 20000 triads      4.330e-15
+Identity, uncentred road          4.441e-15
+Seed robustness, three seeds      3.997e-15 / 3.775e-15 / 4.219e-15
+Frame sweep, 100 conjugations     1.0e-15
+Full negation                     0.0e+00 exact
+Four-estimator spread             2.2e-16 within tol 1.4e-15
+Erasure floor at 300 K            2.8710e-21 J per bit
+
+Artifact digests:
+  source.md   sha256 1f9655e63b7cdb5986fee5c8130bde978be2ac41233064fc8288bb9852e2b5e1
+  apex .pdf   sha256 63f05fdc0e5570ba99e30d89d7b028c598d75d11824d72915f8df2d080462e24
+  journal.pdf sha256 6383a99d0cce85e65a6eca7f45b6887defd99df7355a5cab5f34e963466df001
+
+Gate sequence at seal: cross-references PASS, references contiguous PASS,
+revision markers PASS, em-dashes PASS, issuance register PASS, glyph leakage
+PASS, single seed PASS, chain digests PASS.
+
+Second issue adds the scribal and provenance disclosure and the scribe on the
+byline. Body, apparatus, issuance, and all arithmetic are unchanged from the
+first issue deposited at Zenodo 21802096 and PhilArchive ISLAFF.
+
+Audit record: six cycles, CBC-01 through CBC-06, ledgers delivered with the
+artifact. Control grade floor SELF throughout; the single-substrate aperture
+is open and is stamped on this seal. This seal is a receipt on arithmetic and
+conduct. It warrants no conclusion the paper draws.
