@@ -95,15 +95,24 @@
   "note": "Second edition, 2026-08-28. Zenodo keeps every version resolvable, so the first-edition DOI 10.5281/zenodo.20619412 stays live and is recorded as superseded rather than replaced; git and IA carry one live copy each. A further revision goes to Zenodo as a new version on concept 20619411, never a fresh deposition, and to the archive as delete-and-replace under the same filename. PhilPapers has no submission API and holds the first edition until updated by hand."
  },
  "custody-cycle-most-high": {
-  "title": "The Custody Cycle of the Most High: Capture, Emptiness, and the Transfer of the Supreme God from Bronze Age Canaan to Rome",
+  "title": "The Custody Cycle of the Most High: Investiture, Disclosure, and the Transfer of the Supreme God from Bronze Age Canaan to Rome",
   "git_pdf": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.pdf",
   "git_md": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.md",
-  "ia_identifier": "custody-cycle-most-high-islam-2026",
-  "ia_url": "https://archive.org/details/custody-cycle-most-high-islam-2026",
+  "ia_identifier": "custody-cycle-most-high",
+  "ia_url": "https://archive.org/details/custody-cycle-most-high",
   "zenodo_concept_doi": "10.5281/zenodo.22142046",
   "zenodo_version_doi": "10.5281/zenodo.22142047",
   "zenodo_record": "https://zenodo.org/record/22142047",
   "first_published": "2026-08-28",
-  "note": "First publication. Three sealed audit cycles plus two external-substrate passes. Codex siblings: Theological SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01, master INDEX 0708 sPSP-ELYON-CUSTODY-01."
+  "note": "First publication 2026-08-28. Charter correction 2026-08-29, silent upgrade per architect ruling: Station 3 restated from an empty centre to no manufactured form and a presence given rather than seized; Station 4 given its second failure mode, the fabricated absence; the Tacitus room separated into three causes. Six sealed audit cycles total and two external-substrate passes. Codex siblings: Theological SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01 and master INDEX 0708 sPSP-ELYON-CUSTODY-01, both still carrying the pre-correction charter language and owed a supersession. Zenodo related-identifier still names the superseded IA shell and is owed an update.",
+  "git_blog": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · blog edition.md",
+  "git_journal_source": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · journal source.md",
+  "ia_superseded": [
+   "custody-cycle-most-high-islam-2026 (files removed, item uneditable)",
+   "custody-cycle-journal. (retired to a pointer; trailing period in identifier)"
+  ],
+  "philarchive": "https://philarchive.org/rec/ISLTCC",
+  "medium_url": "https://trisduction.medium.com/the-custody-cycle-of-the-most-high-bae2d27769c4",
+  "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high"
  }
 }

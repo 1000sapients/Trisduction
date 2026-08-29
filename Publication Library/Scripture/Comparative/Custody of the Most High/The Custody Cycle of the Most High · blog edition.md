@@ -77,14 +77,12 @@ Table 1 sets out the four witnesses to the verse, oldest first, so the direction
 
 **Table 1. The textual witnesses of Deuteronomy 32:8**
 
-| Witness | Date of copy | Reading at the key phrase | Implication |
-|---|---|---|---|
-| 4QDeut-j, 4Q37 (Qumran) | c. 50 BCE to 50 CE | divine sons: reported as bny ʾlwhym and as bny ʾl | Oldest Hebrew; preserves the council scene on either spelling |
-| Septuagint (LXX) | translation 3rd c. BCE; mss. later | "angels of God" | Greek softening of "sons of God"; presupposes it |
-| Masoretic Text | codices 10th to 11th c. CE (tradition older) | "sons of Israel" | Secondary correction; removes the council |
+- **4QDeut-j, 4Q37 (Qumran)** · Date of copy: c. 50 BCE to 50 CE; Reading at the key phrase: divine sons: reported as bny ʾlwhym and as bny ʾl; Implication: Oldest Hebrew; preserves the council scene on either spelling
+- **Septuagint (LXX)** · Date of copy: translation 3rd c. BCE; mss. later; Reading at the key phrase: "angels of God"; Implication: Greek softening of "sons of God"; presupposes it
+- **Masoretic Text** · Date of copy: codices 10th to 11th c. CE (tradition older); Reading at the key phrase: "sons of Israel"; Implication: Secondary correction; removes the council
 
 Note: the Masoretic reading is not senseless, and its very rationalizability is the tell. Seventy souls go down to Egypt (Genesis 46:27; Deuteronomy 10:22) and seventy nations are listed in Genesis 10, so a scribe reading "sons of Israel" could match the two counts and remove the divine sons in one stroke. A reading that resolves a theological difficulty by an arithmetic that has to be assembled from two other books is the secondary one.
-| Samaritan Pentateuch | medieval copies of an old recension | "sons of Israel" | Shares the corrected reading |
+- **Samaritan Pentateuch** · Date of copy: medieval copies of an old recension; Reading at the key phrase: "sons of Israel"; Implication: Shares the corrected reading
 
 > **Summary.** The oldest recoverable text of Deuteronomy 32:8-9 shows the Most High apportioning the nations among the divine sons, with Israel's god receiving Jacob as one allotment; Psalm 82 then sentences the old council to die and hands "all the nations" to the risen claimant; Genesis 14:22 performs the weld of the names, and the Septuagint still shows the joint. The investiture is preserved, with its seams, inside the incoming custodian's own canon.
 
@@ -104,14 +102,12 @@ With this grammar established, the fate of El after 1185 reads correctly. The en
 
 **Table 2. Idioms of divine absence across the ancient Near East**
 
-| Corpus | Term or scene | Event described | Restoration envisaged |
-|---|---|---|---|
-| Sumerian city laments | The god "abandons his shrine like a bird" | Fall of Ur, c. 2000 BCE | Return of god and rebuilt shrine |
-| Akkadian, Marduk cycle | Statue abductions; Marduk Prophecy's first-person "I set out" | Hittite, Assyrian, Elamite captures | The god announces his own return |
-| Assyrian royal inscriptions | Marduk "became angry and left" | Destruction of Babylon | Esarhaddon returns the god |
-| 1 Samuel 4-6 | Ichabod, "the Glory has departed" | Ark captured by Philistines | Ark's forced return by plagues |
-| Ezekiel 8-11 | The kavod exits by stages to the east | Years before 586 | Return through the east gate (Ezekiel 43) |
-| Hosea 5:6, 15 | "He has withdrawn"; "I will go and return to my place" | Judgment on Israel | Conditional on acknowledgment |
+- **Sumerian city laments** · Term or scene: The god "abandons his shrine like a bird"; Event described: Fall of Ur, c. 2000 BCE; Restoration envisaged: Return of god and rebuilt shrine
+- **Akkadian, Marduk cycle** · Term or scene: Statue abductions; Marduk Prophecy's first-person "I set out"; Event described: Hittite, Assyrian, Elamite captures; Restoration envisaged: The god announces his own return
+- **Assyrian royal inscriptions** · Term or scene: Marduk "became angry and left"; Event described: Destruction of Babylon; Restoration envisaged: Esarhaddon returns the god
+- **1 Samuel 4-6** · Term or scene: Ichabod, "the Glory has departed"; Event described: Ark captured by Philistines; Restoration envisaged: Ark's forced return by plagues
+- **Ezekiel 8-11** · Term or scene: The kavod exits by stages to the east; Event described: Years before 586; Restoration envisaged: Return through the east gate (Ezekiel 43)
+- **Hosea 5:6, 15** · Term or scene: "He has withdrawn"; "I will go and return to my place"; Event described: Judgment on Israel; Restoration envisaged: Conditional on acknowledgment
 
 > **Summary.** In the ancient Near East the "death" of a god from the world's vantage meant the departure of his presence, institutionalized as godnapping and as divine abandonment, both with a theology of return. The Hebrew corpus uses the identical grammar of its own God. Read in period categories, the end of El's Ugaritic cult is the receipt of his departure with the newly invested group, not evidence of his cessation, and the deathlessness of El, against the dying-and-rising Baal beneath him, is a fixed datum the sources maintain.
 
@@ -205,12 +201,10 @@ This paper takes no position on how far that hardening went or when. What it doe
 
 **Table 3. One empty room, three causes**
 
-| Cause | What it is | Layer | Status |
-|---|---|---|---|
-| No manufactured image | The charter held correctly; the ban falls on the carving hand | Oldest; Exodus 20:4 | Term in force |
-| No form at all | Custodial hardening under imperial pressure; a defense adopted as position | Later; Deuteronomy 4:12 read as the charter | Innovation, inherited as law |
-| Nothing there now | The Glory departed; the sentence still running | 586; Ezekiel 8-11 | Judgment in force, return promised |
-| Outside reading (Pompey; Tacitus, Hist. 5.9) | "No image of a god within, an empty seat and empty mysteries" | 1st c. CE report of 63 BCE | All three collapsed into one; category error |
+- **No manufactured image** · What it is: The charter held correctly; the ban falls on the carving hand; Layer: Oldest; Exodus 20:4; Status: Term in force
+- **No form at all** · What it is: Custodial hardening under imperial pressure; a defense adopted as position; Layer: Later; Deuteronomy 4:12 read as the charter; Status: Innovation, inherited as law
+- **Nothing there now** · What it is: The Glory departed; the sentence still running; Layer: 586; Ezekiel 8-11; Status: Judgment in force, return promised
+- **Outside reading (Pompey; Tacitus, Hist. 5.9)** · What it is: "No image of a god within, an empty seat and empty mysteries"; Layer: 1st c. CE report of 63 BCE; Status: All three collapsed into one; category error
 
 > **Summary.** The 586 catastrophe, read by the age's victory theology as the god's death, in fact narrowed the custody into explicit monotheism (Isaiah 45:5-7), with the conquerors' own gods depicted going into captivity (Isaiah 46:1-2). The Second Temple then held the charter at a further austerity, its inner room empty even of the ark (Jeremiah 3:16), and in 63 BCE Pompey supplied the outside witness, Tacitus recording an "empty seat and empty mysteries," the exact, attested misreading of a designed emptiness that the cycle predicts outsiders will make.
 
@@ -238,22 +232,18 @@ Because three separate things are being compared and conflating them is the stan
 
 Note: this table records homology of narrative shape. It makes no claim that the church read the Baal cycle, that the Baal cycle is a source of the kerygma, or that either construction of the Godhead is to be preferred. Structural rhyme is what is shown; genealogy is not claimed and is not needed.
 
-| Motif | Office history (this paper, stations 5-7) | Baal cycle (Ugarit, 13th c. BCE) | Kerygma (1st c. CE) |
-|---|---|---|---|
-| Death from the world's vantage | Departure of the Glory; 586 | Baal descends to Mot; "Baal is dead" | Crucifixion |
-| Hidden interval | Empty devir; "empty seat" (Tacitus) | Baal absent; El mourns; drought | The tomb; "he was buried" |
-| Return | Glory returns by the east gate (Ezekiel 43); new investiture at scale | El dreams the heavens rain oil; "Baal lives" | Third-day resurrection "according to the scriptures" (Hosea 6:2) |
-| The deathless senior | El never dies; "the Living God" | El mourns but does not die | The Father, deathless, in one Godhead with the Son |
+- **Death from the world's vantage** · Office history (this paper, stations 5-7): Departure of the Glory; 586; Baal cycle (Ugarit, 13th c. BCE): Baal descends to Mot; "Baal is dead"; Kerygma (1st c. CE): Crucifixion
+- **Hidden interval** · Office history (this paper, stations 5-7): Empty devir; "empty seat" (Tacitus); Baal cycle (Ugarit, 13th c. BCE): Baal absent; El mourns; drought; Kerygma (1st c. CE): The tomb; "he was buried"
+- **Return** · Office history (this paper, stations 5-7): Glory returns by the east gate (Ezekiel 43); new investiture at scale; Baal cycle (Ugarit, 13th c. BCE): El dreams the heavens rain oil; "Baal lives"; Kerygma (1st c. CE): Third-day resurrection "according to the scriptures" (Hosea 6:2)
+- **The deathless senior** · Office history (this paper, stations 5-7): El never dies; "the Living God"; Baal cycle (Ugarit, 13th c. BCE): El mourns but does not die; Kerygma (1st c. CE): The Father, deathless, in one Godhead with the Son
 
 The comparison extends one layer deeper, into the grammar of mediation itself, and here all three custodies of the lineage can be watched handling one seam. In the Hebrew narratives the messenger of YHWH does not stay a messenger: he speaks to Hagar and then speaks as the one who will multiply her seed (Genesis 16), appears in the flame and then it is YHWH who calls from the bush (Exodus 3), visits Gideon as messenger, then as YHWH, then is feared as one whose face means death (Judges 6), until Manoah says plainly, "we shall surely die, for we have seen God" (Judges 13). The grammar marks no transition; the sent one slides into the Sender, and the text preserves the slide, keeping the encounter as it was at the price of the doctrine it leaves open. That loose seam had a documented afterlife: the "two powers in heaven" debates of early Judaism and the angelomorphic readings of early Christianity are the bridge from the unresolved grammar to the successor custody's resolution, which binds sent and Sender upward into one Godhead. And the lineage's third custody, beyond this paper's arc but inside its comparative frame, resolves the identical seam downward: the annunciation messenger opens with a self-limit, "I am only a messenger of your Lord" (Q 19:19), the summit vision is fenced to certify that seeing occurred while quarantining what was seen (Q 53:8-17), and the messenger nowhere speaks as the Sender, the corpus having staked its entire evidentiary claim on the consistency of its own speech (Q 4:82) and therefore being bound where the memoir was free. One seam, three dispositions, each matching its corpus's declared stake; precision here is a relation between a text and its own audit, not a resident virtue, so the table describes and does not grade. One methodological note belongs with it, since this paper elsewhere counts the Abrahamic lineage as a single voice after common-source projection. The rule is not being relaxed. Those three are not offered here as three independent witnesses to one proposition, which is the use the projection forbids; they are three different dispositions of one inherited problem, and their common descent is the premise of the comparison rather than a contaminant in it. A shared source is fatal to a convergence claim and is the precondition of a divergence claim.
 
 **Table 5. One seam, three dispositions**
 
-| Custody | Exhibit | Disposition | What is secured |
-|---|---|---|---|
-| Hebrew narrative | Gen 16; Exod 3; Judg 6; 13: messenger's speech slides into the Sender's | Left unresolved | The encounter datum, unretouched |
-| Successor (church) | Two-powers debates and angelomorphic readings resolved into one Godhead | Bound upward: sent and Sender united | Mediation secured inside the Godhead |
-| Third custody (Quran) | Q 19:19 self-limiting messenger; Q 53:8-17 fenced vision | Bound downward: identities partitioned | The Sender's sole agency |
+- **Hebrew narrative** · Exhibit: Gen 16; Exod 3; Judg 6; 13: messenger's speech slides into the Sender's; Disposition: Left unresolved; What is secured: The encounter datum, unretouched
+- **Successor (church)** · Exhibit: Two-powers debates and angelomorphic readings resolved into one Godhead; Disposition: Bound upward: sent and Sender united; What is secured: Mediation secured inside the Godhead
+- **Third custody (Quran)** · Exhibit: Q 19:19 self-limiting messenger; Q 53:8-17 fenced vision; Disposition: Bound downward: identities partitioned; What is secured: The Sender's sole agency
 
 > **What this paper is not claiming.** Four denials belong here, at the station where a reader is most likely to hear claims that are not being made. This is not a proof of any presence, and no comparative method could supply one. It is not a ranking of the trinitarian construction against unitary monotheism; the instruments used here identify shared structure and are constitutionally unable to adjudicate between theologies, and an honest method says so rather than implying a verdict by arrangement. It is not a claim that the Hypsistos dedications are synagogue annexes or that their dedicants were Jews or Christians; the aggregate epigraphic fact is that an imageless Most High had an address across the eastern Mediterranean, and the individual dedications are counted as nothing more. And it is not a claim of literary dependence between the Baal cycle and the kerygma. What is claimed is the recurrence of a structure and the documentary record of its stations.
 
@@ -298,16 +288,14 @@ The apparatus, finally, transmits with the office. The successor custody of the 
 
 **Table 6. The seam-keeping apparatus**
 
-| Device | Function | Canonical example | What it preserves |
-|---|---|---|---|
-| Kethiv / qere | Written form kept, read form margined | Throughout the codices | Both states of every disputed word |
-| Tiqqune sopherim | Self-catalogued reverential changes | Gen 18:22; Hab 1:12; Zech 2:12 | The fact and place of alteration, with the older reading |
-| Puncta extraordinaria | Dots over suspect words | Fifteen listed places | Doubt itself, unresolved |
-| Inverted nuns | Displacement flagged in place | Num 10:35-36 | A known dislocation, unrepaired |
-| Masoretic counts | Text held to the character | Letter, word, verse tallies | Quantitative integrity across copying |
-| Updating glosses | "That is" footnotes kept in-line | Gen 14 place names; Gen 11:31 | The scribe's own temporal distance |
-| Colophons and scenes | Transmission credited and depicted | Prov 25:1; Jer 36 | The guild's hand, on the record |
-| Qiraat (successor custody) | Canonical parallel readings | Q 19:19 li-ahaba / li-yahaba | A doctrinal seam preserved, unsettled |
+- **Kethiv / qere** · Function: Written form kept, read form margined; Canonical example: Throughout the codices; What it preserves: Both states of every disputed word
+- **Tiqqune sopherim** · Function: Self-catalogued reverential changes; Canonical example: Gen 18:22; Hab 1:12; Zech 2:12; What it preserves: The fact and place of alteration, with the older reading
+- **Puncta extraordinaria** · Function: Dots over suspect words; Canonical example: Fifteen listed places; What it preserves: Doubt itself, unresolved
+- **Inverted nuns** · Function: Displacement flagged in place; Canonical example: Num 10:35-36; What it preserves: A known dislocation, unrepaired
+- **Masoretic counts** · Function: Text held to the character; Canonical example: Letter, word, verse tallies; What it preserves: Quantitative integrity across copying
+- **Updating glosses** · Function: "That is" footnotes kept in-line; Canonical example: Gen 14 place names; Gen 11:31; What it preserves: The scribe's own temporal distance
+- **Colophons and scenes** · Function: Transmission credited and depicted; Canonical example: Prov 25:1; Jer 36; What it preserves: The guild's hand, on the record
+- **Qiraat (successor custody)** · Function: Canonical parallel readings; Canonical example: Q 19:19 li-ahaba / li-yahaba; What it preserves: A doctrinal seam preserved, unsettled
 
 > **Summary.** The Hebrew scribal tradition executed the custody design on parchment: annotation over correction, the seams marked and transmitted under Persian, Hellenistic, Roman, and Islamic rule alike. The apparatus (kethiv-qere, the self-catalogued tiqqune sopherim, the dots, the inverted nuns, the counts) is documented, not conjectured; the seams carry the custody record itself, the investiture included (Deut 32:8; 32:43 with Hebrews 1:6); the corpus is the only national literature of its world that canonizes its own prosecution; and every founding figure's record is written for him by later hands that left their fingerprints in place, from the burned-and-expanded scroll of Jeremiah 36 to Elijah's letter from beyond his own departure, with Ibn Ezra and Spinoza attested links in the chain of careful posterior readers.
 
@@ -333,25 +321,21 @@ Table 7 runs the program down its three phases across five cases, including the 
 
 **Table 7. The capture program and its cases**
 
-| Case | Phase 1: written hostile | Phase 2: capture | Phase 3: splice and cousin-fence | Outcome for the image |
-|---|---|---|---|---|
-| Amorites / Mesopotamia | Martu polemic; Shu-Sin's wall (c. 2034 BCE) | Amorite dynasties take Babylon and beyond | Hammurabi genealogy splices tribal ancestors; schools keep teaching the polemic | Image inverted for the dynasty, retained for the cousins |
-| Northern Wei / China | Steppe "barbarian" in Chinese record | Xianbei conquest of the north | Xiaowen edicts (494 CE): language, dress, surnames; garrison kin fenced | Same program, no contact with case 1 |
-| Scythia (control) | Persian and Greek hostile record | No capture of a literate apparatus | Never reached | Permanent barbarian of the record |
-| Parthia; Indo-Saka; Kushans | Steppe origin in others' records | Capture of Seleucid Iran; NW India; Bactria | Philhellene coinage; Greek-Kharosthi administration; Rabatak titulature | Textbook phase three by Scythic-world lineages |
-| Hebrew corpus (exception) | Pastoralist self-description | No captured empire | Program inverted: wandering Aramean confessed; Amorite-Hittite origin named; city cursed | Seam-keeping instead of splicing (Section X) |
+- **Amorites / Mesopotamia** · Phase 1: written hostile: Martu polemic; Shu-Sin's wall (c. 2034 BCE); Phase 2: capture: Amorite dynasties take Babylon and beyond; Phase 3: splice and cousin-fence: Hammurabi genealogy splices tribal ancestors; schools keep teaching the polemic; Outcome for the image: Image inverted for the dynasty, retained for the cousins
+- **Northern Wei / China** · Phase 1: written hostile: Steppe "barbarian" in Chinese record; Phase 2: capture: Xianbei conquest of the north; Phase 3: splice and cousin-fence: Xiaowen edicts (494 CE): language, dress, surnames; garrison kin fenced; Outcome for the image: Same program, no contact with case 1
+- **Scythia (control)** · Phase 1: written hostile: Persian and Greek hostile record; Phase 2: capture: No capture of a literate apparatus; Phase 3: splice and cousin-fence: Never reached; Outcome for the image: Permanent barbarian of the record
+- **Parthia; Indo-Saka; Kushans** · Phase 1: written hostile: Steppe origin in others' records; Phase 2: capture: Capture of Seleucid Iran; NW India; Bactria; Phase 3: splice and cousin-fence: Philhellene coinage; Greek-Kharosthi administration; Rabatak titulature; Outcome for the image: Textbook phase three by Scythic-world lineages
+- **Hebrew corpus (exception)** · Phase 1: written hostile: Pastoralist self-description; Phase 2: capture: No captured empire; Phase 3: splice and cousin-fence: Program inverted: wandering Aramean confessed; Amorite-Hittite origin named; city cursed; Outcome for the image: Seam-keeping instead of splicing (Section X)
 
 **Table 8. The founder-teacher legends, audited**
 
-| Claim | Direction(s) attested | Mechanism offered | Verdict |
-|---|---|---|---|
-| Anacharsis, Scythian sage of Greece | Scythia to Greece (in Greek literature) | None; letters are later compositions | Greek self-critique in barbarian costume; core figure possibly historical |
-| Zalmoxis pupil of Pythagoras | Greece to Getae | None; Herodotus doubts the chronology himself | Manufactured genealogy, flagged in antiquity |
-| Druids and Pythagoras | Both directions, in different authors | None in either | Legitimation splice, direction per author's need |
-| Laozi becomes / teaches the Buddha | China to India; Buddhist inversions run India to China | Polemical text of a live rivalry | Capture-polemic on founders; fails as history |
-| Buddha as Saka ("Scythian sage") | Steppe to India | Etymological proposal | Fails on chronology and onomastics |
-| Pontic ecstatic technique into Greece | Steppe to Greece | Sustained colonial contact | Open; scholarly thesis, unresolved |
-| Pyrrho and the gymnosophists | India to Greece | Attested journey with Alexander | Contact documented; doctrinal influence unresolved |
+- **Anacharsis, Scythian sage of Greece** · Direction(s) attested: Scythia to Greece (in Greek literature); Mechanism offered: None; letters are later compositions; Verdict: Greek self-critique in barbarian costume; core figure possibly historical
+- **Zalmoxis pupil of Pythagoras** · Direction(s) attested: Greece to Getae; Mechanism offered: None; Herodotus doubts the chronology himself; Verdict: Manufactured genealogy, flagged in antiquity
+- **Druids and Pythagoras** · Direction(s) attested: Both directions, in different authors; Mechanism offered: None in either; Verdict: Legitimation splice, direction per author's need
+- **Laozi becomes / teaches the Buddha** · Direction(s) attested: China to India; Buddhist inversions run India to China; Mechanism offered: Polemical text of a live rivalry; Verdict: Capture-polemic on founders; fails as history
+- **Buddha as Saka ("Scythian sage")** · Direction(s) attested: Steppe to India; Mechanism offered: Etymological proposal; Verdict: Fails on chronology and onomastics
+- **Pontic ecstatic technique into Greece** · Direction(s) attested: Steppe to Greece; Mechanism offered: Sustained colonial contact; Verdict: Open; scholarly thesis, unresolved
+- **Pyrrho and the gymnosophists** · Direction(s) attested: India to Greece; Mechanism offered: Attested journey with Alexander; Verdict: Contact documented; doctrinal influence unresolved
 
 ### The lexical register of the polemic
 
@@ -363,13 +347,11 @@ Against all five stands the Hebrew exception, now inside the vilification stream
 
 **Table 9. The vilification stream: rivals into dictionaries**
 
-| Term pair | Corpora | Original sense | Outcome | Witness |
-|---|---|---|---|---|
-| deva / daeva | Indic and Iranian | god | demon (Iran) | The Indo-Iranian split |
-| Baal-zebul / Baal-zebub | Canaanite and Hebrew | Baal the prince | lord of flies | 2 Kings 1:2 |
-| daimon / demon | Greek under new custody | divine power, neutral | evil spirit | LXX Ps 96:5 |
-| shedu / shedim | Akkadian and Hebrew | protective spirit | demons | Deut 32:17 |
-| Amalek / ʿimlaq | Hebrew and Arabic | tribal name | "giant," common noun | Num 13; Lisan al-Arab s.v.; al-Tabari |
+- **deva / daeva** · Corpora: Indic and Iranian; Original sense: god; Outcome: demon (Iran); Witness: The Indo-Iranian split
+- **Baal-zebul / Baal-zebub** · Corpora: Canaanite and Hebrew; Original sense: Baal the prince; Outcome: lord of flies; Witness: 2 Kings 1:2
+- **daimon / demon** · Corpora: Greek under new custody; Original sense: divine power, neutral; Outcome: evil spirit; Witness: LXX Ps 96:5
+- **shedu / shedim** · Corpora: Akkadian and Hebrew; Original sense: protective spirit; Outcome: demons; Witness: Deut 32:17
+- **Amalek / ʿimlaq** · Corpora: Hebrew and Arabic; Original sense: tribal name; Outcome: "giant," common noun; Witness: Num 13; Lisan al-Arab s.v.; al-Tabari
 
 > **Summary.** The normal behavior of a literate world toward mobile peoples is a three-phase program, hostile record, capture, consolidation-with-cousin-fence, attested independently in Amorite Mesopotamia and Northern Wei China, with the conserved bias that the capturer inherits the settled side's threat model. Scythia, which captured no apparatus, is the control: no phase three, permanent barbarian, while Scythic-world lineages that did capture (Parthia, Indo-Saka, Kushans) ran the program on schedule. The Hebrew corpus is the predicted exception, inverting the program at every point, and its inversion and its seam-keeping (Section X) are one incentive structure. The wandering-master legends, attested bidirectionally with no mechanism, are the same program run on founders, failing as history and serving as evidence.
 
@@ -395,33 +377,27 @@ Now the design face, which is the mirror census: the longest-endured institution
 
 **Table 10. The independent seeds**
 
-| Seed | Key witness | Status |
-|---|---|---|
-| Mesopotamia | Sumerian King List; bala as "turn" of rule | Documented |
-| Egypt | Admonition literature; P. Chester Beatty IV ("a book outlasts a house") | Documented; self-falsifying permanence |
-| Zhou China | Mandate of Heaven; "the Mandate is not easy to keep" | Documented; revocation in the charter |
-| Mesoamerica | Five Suns; New Fire ceremony (52-year renewal) | Documented; hemispherically independent |
-| Andes | Pachakuti, world-overturn | Thin pre-contact attestation; flagged |
-| Oromo gada | Generational rotation of authority | Documented (ethnographic and historical) |
+- **Mesopotamia** · Key witness: Sumerian King List; bala as "turn" of rule; Status: Documented
+- **Egypt** · Key witness: Admonition literature; P. Chester Beatty IV ("a book outlasts a house"); Status: Documented; self-falsifying permanence
+- **Zhou China** · Key witness: Mandate of Heaven; "the Mandate is not easy to keep"; Status: Documented; revocation in the charter
+- **Mesoamerica** · Key witness: Five Suns; New Fire ceremony (52-year renewal); Status: Documented; hemispherically independent
+- **Andes** · Key witness: Pachakuti, world-overturn; Status: Thin pre-contact attestation; flagged
+- **Oromo gada** · Key witness: Generational rotation of authority; Status: Documented (ethnographic and historical)
 
 **Table 11. Pathology and design**
 
-| Face | Exhibit | Charter or mechanism | Outcome |
-|---|---|---|---|
-| Pathology | Qin (decree of 10,000 generations) | Legislated eternity | Fell under the Second Emperor, c. 15 years |
-| Pathology | Pharaonic permanence-technology | Bodily eternity industrialized | Inverted into exhibit (Q 10:92; the museums) |
-| Design | Ise Grand Shrine | Scheduled demolition every 20 years | c. 13 centuries of continuity |
-| Design | Jubilee (Lev 25) | Legislated reversion and release | Anti-accumulation written into law |
-| Design | Gada | Constitutional relinquishment on cycle | Polity as rotation |
-| Design | Successor historiography | Each dynasty records the last one's fall | Collapse-memory institutionalized |
+- **Pathology** · Exhibit: Qin (decree of 10,000 generations); Charter or mechanism: Legislated eternity; Outcome: Fell under the Second Emperor, c. 15 years
+- **Pathology** · Exhibit: Pharaonic permanence-technology; Charter or mechanism: Bodily eternity industrialized; Outcome: Inverted into exhibit (Q 10:92; the museums)
+- **Design** · Exhibit: Ise Grand Shrine; Charter or mechanism: Scheduled demolition every 20 years; Outcome: c. 13 centuries of continuity
+- **Design** · Exhibit: Jubilee (Lev 25); Charter or mechanism: Legislated reversion and release; Outcome: Anti-accumulation written into law
+- **Design** · Exhibit: Gada; Charter or mechanism: Constitutional relinquishment on cycle; Outcome: Polity as rotation
+- **Design** · Exhibit: Successor historiography; Charter or mechanism: Each dynasty records the last one's fall; Outcome: Collapse-memory institutionalized
 
 **Table 12. The lexical row: rule named by its transferability**
 
-| Language | Word | Literal sense | Institutional use |
-|---|---|---|---|
-| Sumerian | bala | turn, rotation, term | A reign; the circulation of kingship |
-| Arabic | dawla | turn, alternation | The state itself (Q 3:140 the root text) |
-| Chinese | (tian)ming; geming | mandate (not "turn"); ge-ming, cutting away the mandate | Dynastic legitimacy, revocable by its own charter |
+- **Sumerian** · Word: bala; Literal sense: turn, rotation, term; Institutional use: A reign; the circulation of kingship
+- **Arabic** · Word: dawla; Literal sense: turn, alternation; Institutional use: The state itself (Q 3:140 the root text)
+- **Chinese** · Word: (tian)ming; geming; Literal sense: mandate (not "turn"); ge-ming, cutting away the mandate; Institutional use: Dynastic legitimacy, revocable by its own charter
 
 > **Summary.** Six independent seeds, after common-source discounting, attest the same institutional law: rule and structure move in turns. Three unrelated languages name rule with the word "turn." The pathology face counts zero survivors among eternity-charters (Qin's fifteen years; Pharaonic permanence inverted into exhibit), and the design face counts the long endurers among the self-dissolvers (Ise's thirteen centuries by scheduled demolition; Jubilee; gada; successor historiography). The custody of an ungrippable god is the law's limiting case, and the design face is Section V's charter written at the scale of civilizations.
 
@@ -456,14 +432,12 @@ Table 13 sets the six scales in one column so the recurrence can be checked rung
 
 Note: the first row is an analogy and carries no evidential weight in the argument. It is retained because it is the only rung where the design is independently attested by a discipline with no stake in the thesis, and it is labelled so that no reader takes a metaphor for a witness.
 
-| Scale | Frozen-form failure | Dissolution event | Empty reception | Witness |
-|---|---|---|---|---|
-| Cell (analogy, not evidence) | The cell that will not die | Programmed cell death | New cells | Modern biology (apoptosis) |
-| Person | The self hardened in its habits | Death; "naked shall I return" | Born "knowing nothing" | Job 1:21; Eccl 12:7; Q 16:78 |
-| School | Doctrine frozen into system | The founder dies; the system is criticized | New students | Successor critiques across traditions |
-| Temple | Presence frozen into image | Departure; destruction | The empty devir; rebuilding | Sections VI-VIII |
-| Dynasty / state | Eternity chartered | Fall; successor historiography | New mandate | Qin; tianming; dawla (Section XII) |
-| Civilization / history | The final custodian claimed | The turn (Q 3:140) | The next custody | Sections IX, XII; Dan 2:21 |
+- **Cell (analogy, not evidence)** · Frozen-form failure: The cell that will not die; Dissolution event: Programmed cell death; Empty reception: New cells; Witness: Modern biology (apoptosis)
+- **Person** · Frozen-form failure: The self hardened in its habits; Dissolution event: Death; "naked shall I return"; Empty reception: Born "knowing nothing"; Witness: Job 1:21; Eccl 12:7; Q 16:78
+- **School** · Frozen-form failure: Doctrine frozen into system; Dissolution event: The founder dies; the system is criticized; Empty reception: New students; Witness: Successor critiques across traditions
+- **Temple** · Frozen-form failure: Presence frozen into image; Dissolution event: Departure; destruction; Empty reception: The empty devir; rebuilding; Witness: Sections VI-VIII
+- **Dynasty / state** · Frozen-form failure: Eternity chartered; Dissolution event: Fall; successor historiography; Empty reception: New mandate; Witness: Qin; tianming; dawla (Section XII)
+- **Civilization / history** · Frozen-form failure: The final custodian claimed; Dissolution event: The turn (Q 3:140); Empty reception: The next custody; Witness: Sections IX, XII; Dan 2:21
 
 > **Summary.** The cycle exists because two world-conditions make it possible and necessary: every consolidated form is mortal, and every new receiver arrives empty. The traditions under study state both, in their own words, as decreed benefactions: death created and named first (Q 67:2), the cycle in one verse ending on return (Q 2:28; 1 Sam 2:6), the engine in the divine first person inside the chapter that holds investiture, demotion, warning, engine, and seam (Deut 32:39), the newborn's emptiness as design (Q 16:78), mercy self-written (Q 6:12, 54), and the one non-cycling constant named: the custodians are garments, changed; the Wearer is the same (Ps 102:26-27). The history of the office is thereby, on the sources' own testimony, the local instance of a written cosmic cycle; the paper grades the generalization structural-with-interpretive-crown and does not convert structure into metaphysical proof.
 
