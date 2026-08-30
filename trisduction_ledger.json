@@ -126,9 +126,10 @@
   "git_receipts": "Publication Library/Science/Linguistics/Language Origins/receipts/",
   "ia_identifier": "unlettered-regenerative-floor-islam-2026",
   "ia_url": "https://archive.org/details/unlettered-regenerative-floor-islam-2026",
-  "zenodo_concept_doi": "pending",
-  "zenodo_version_doi": "pending",
-  "zenodo_record": "pending",
-  "note": "First publication. Sealed at v19 by its own audit cycle. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept recorded here, never a fresh deposition."
+  "zenodo_concept_doi": "10.5281/zenodo.22167461",
+  "zenodo_version_doi": "10.5281/zenodo.22167462",
+  "zenodo_record": "https://zenodo.org/records/22167462",
+  "note": "First publication. Sealed at v19 by its own audit cycle. Zenodo concept 22167461 minted 2026-08-29. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 22167461, never a fresh deposition.",
+  "ia_status": "pending: identifier free and unclaimed; the archive's S3 upload returned HTTP 400 BadContent, 'pdf file looks like spam', on 2026-08-29; the item was not created and no address was spent; retry only on a fresh plan and yes"
  }
 }
