@@ -1,0 +1,48 @@
+corpus sha256 94c1dce6aefd33f5
+==========================================================================
+REPAIR CHECK  the five probes that failed in run 1
+  العلمين    True   (al-ʿālamīn in 5:115)
+  واخرنا     True   (wa-ākhirinā in 5:114)
+  واية       False   (wa-āyatan in 5:114)
+  عيدا       True   (ʿīdan in 5:114)
+  لاولنا     True   (li-awwalinā in 5:114)
+==========================================================================
+CHK.2r  the ʿīd census, token-level and root-aware
+  candidate ʿīd tokens: [('2:176', 'بعيد'), ('3:30', 'بعيدا'), ('4:60', 'بعيدا'), ('4:116', 'بعيدا'), ('4:136', 'بعيدا'), ('4:167', 'بعيدا'), ('5:114', 'عيدا'), ('14:3', 'بعيد'), ('14:14', 'وعيد'), ('21:109', 'بعيد'), ('22:53', 'بعيد'), ('25:12', 'بعيد'), ('27:22', 'بعيد'), ('34:52', 'بعيد'), ('34:53', 'بعيد'), ('41:44', 'بعيد'), ('41:52', 'بعيد'), ('42:18', 'بعيد'), ('50:3', 'بعيد'), ('50:14', 'وعيد'), ('50:27', 'بعيد'), ('50:31', 'بعيد'), ('50:45', 'وعيد'), ('70:6', 'بعيدا')]
+  count 24
+  sites carrying a different ʿ-y-d or b-ʿ-d word, excluded by the token test: 49
+==========================================================================
+CHK.4r  the punishment superlative, corpus-wide, normalised
+    5:115  قَالَ ٱللَّهُ إِنِّى مُنَزِّلُهَا عَلَيْكُمْ ۖ فَمَن يَكْفُرْ بَعْدُ مِنكُمْ فَإِنِّىٓ أُعَذِّبُهُۥ عَذَابًۭا لَّآ أُعَذِّبُهُۥٓ أَحَدًۭا مِّنَ ٱلْعَـٰلَمِينَ
+    89:25  فَيَوْمَئِذٍۢ لَّا يُعَذِّبُ عَذَابَهُۥٓ أَحَدٌۭ
+    89:26  وَلَا يُوثِقُ وَثَاقَهُۥٓ أَحَدٌۭ
+  first-person 'uʿadhdhibuhu aḥadan': ['5:115'] count 1
+  ... qualified by min al-ʿālamīn: ['5:115'] count 1
+  verses carrying any ʿ-dh-b form: 324 | of which the first-person superlative: 1
+==========================================================================
+CHK.7r  the ʿālamīn superlative outside the punishment context
+  'ʿalā l-ʿālamīn' sites: 0 []
+  min al-ʿālamīn sites: ['5:20', '5:115', '7:80', '26:165', '29:28']
+==========================================================================
+CHK.8  the maidah census
+  māʾidah sites: ['5:112', '5:114'] count 2
+  surah 5 name-bearing verse is the second of them: True
+==========================================================================
+==========================================================================
+CHK.6r  wa-āyatan, with the free hamza folded
+  5:114 normalised: قال عيسي ابن مريم اللهم ربنا انزل علينا مايده من السما تكون لنا عيدا لاولنا واخرنا وايه منك ۖ وارزقنا وانت خير الرزقين
+    واية           False
+    عيدا           True
+    لاولنا         True
+    واخرنا         True
+    وارزقنا        True
+    خير الرزقين    True
+==========================================================================
+CHK.2s  the ʿīd token test, exact and root-disambiguated
+  exact ʿīd tokens: [('5:114', 'عيدا')] | count 1
+  the excluded look-alikes are b-ʿ-d (baʿīd, far) and w-ʿ-d (waʿīd, threat), different roots entirely
+==========================================================================
+CHK.9  the request-and-answer pair, structure
+  request carries: maidah True | eid True | first-and-last True | sign False | rizq True | best-of-providers True
+  answer carries: sending-down True | covers-after True | first-person superlative True | of-the-worlds True
+==========================================================================
