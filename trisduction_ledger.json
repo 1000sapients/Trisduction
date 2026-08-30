@@ -104,7 +104,7 @@
   "zenodo_version_doi": "10.5281/zenodo.22142047",
   "zenodo_record": "https://zenodo.org/record/22142047",
   "first_published": "2026-08-28",
-  "note": "First publication 2026-08-28. Charter correction 2026-08-29, silent upgrade per architect ruling: Station 3 restated from an empty centre to no manufactured form and a presence given rather than seized; Station 4 given its second failure mode, the fabricated absence; the Tacitus room separated into three causes. Six sealed audit cycles total and two external-substrate passes. Codex siblings: Theological SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01 and master INDEX 0708 sPSP-ELYON-CUSTODY-01, both still carrying the pre-correction charter language and owed a supersession. Zenodo related-identifier still names the superseded IA shell and is owed an update.",
+  "note": "First publication 2026-08-28. Charter correction 2026-08-29, silent upgrade per architect ruling: Station 3 restated from an empty centre to no manufactured form and a presence given rather than seized; Station 4 given its second failure mode, the fabricated absence; the Tacitus room separated into three causes. Seven sealed audit cycles total and two external-substrate passes. Codex siblings: Theological SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01 and master INDEX 0708 sPSP-ELYON-CUSTODY-01, both still carrying the pre-correction charter language and owed a supersession. Zenodo related-identifier still names the superseded IA shell and is owed an update.",
   "git_blog": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · blog edition.md",
   "git_journal_source": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · journal source.md",
   "ia_superseded": [
@@ -113,7 +113,10 @@
   ],
   "philarchive": "https://philarchive.org/rec/ISLTCC",
   "medium_url": "https://trisduction.medium.com/the-custody-cycle-of-the-most-high-bae2d27769c4",
-  "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high"
+  "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high",
+  "zenodo_note": "Corrected in place under the same DOI on 2026-08-30 via the file-modification unlock; no version minted, version count on the concept remains 1.",
+  "editions_current": "30-page Journal PDF, md5 c39d543d8647878af0b6c7f604b6a9d7, 310305 bytes, on git, Internet Archive, Zenodo, PhilArchive, Medium and Substack",
+  "positioning_table": "Module XI standing table seated at Section XV, 18 rows in 3 parts; superseding used nowhere."
  },
  "unlettered-regenerative-floor": {
   "title": "Unlettered Regenerative Floor",
