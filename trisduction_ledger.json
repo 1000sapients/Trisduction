@@ -114,8 +114,8 @@
   "philarchive": "https://philarchive.org/rec/ISLTCC",
   "medium_url": "https://trisduction.medium.com/the-custody-cycle-of-the-most-high-bae2d27769c4",
   "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high",
-  "zenodo_note": "Corrected in place under the same DOI on 2026-08-30 via the file-modification unlock; no version minted, version count on the concept remains 1.",
-  "editions_current": "40-page Journal PDF, md5 51be415d3209656a81132f535832f4d0, 405411 bytes; live on git as the updated edition, and in place on Internet Archive and Zenodo under the same identifier and the same DOI",
+  "zenodo_note": "Corrected in place under the same DOI on 2026-08-30 via the file-modification unlock; no version minted, version count on the concept remains 1. 2026-08-30 second attempt: the file-modification unlock is spent. Four routes refused with HTTP 403 'Bucket is locked for modifications', the legacy deposit bucket, the InvenioRDM draft delete, an in-place content overwrite, and an additional-file upload, all after a successful edit unlock returning 201. The draft was discarded and the record restored to state done with the DOI and the original file intact; no version was minted on the architect's ruling. Zenodo therefore lags git and the Internet Archive by one edition and is owed either a re-granted file-modification unlock, requested by hand from Zenodo support, or a metadata-only amendment, or a new version on concept 10.5281/zenodo.22142046. Architect will action manually.",
+  "editions_current": "40-page Journal PDF, md5 51be415d3209656a81132f535832f4d0, 405411 bytes, live on git as the updated edition and on the Internet Archive under the same identifier and filename. Zenodo still carries the superseded 30-page PDF, md5 c39d543d8647878af0b6c7f604b6a9d7, under DOI 10.5281/zenodo.22142047.",
   "positioning_table": "Module XI standing table seated at Section XV, 18 rows in 3 parts; superseding used nowhere.",
   "git_superseded": [
    "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.pdf",
@@ -124,7 +124,14 @@
    "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · blog edition.md"
   ],
   "edition": "updated 2026-08-30",
-  "build_engine": "weasyprint==65.1 (66.0+ silently drops content after the first column-span table; pin required)"
+  "build_engine": "weasyprint==65.1 (66.0+ silently drops content after the first column-span table; pin required)",
+  "surface_state_2026_08_30": {
+   "git": "updated edition live, prior edition retained beside it, byte-verified at commit 8ca86d85",
+   "internet_archive": "updated edition live, replaced in place under custody-cycle-most-high, md5 verified 51be415d3209656a81132f535832f4d0",
+   "zenodo": "SUPERSEDED CONTENT LIVE, still serving the 30-page PDF under DOI 10.5281/zenodo.22142047, blocked by a locked bucket, owed",
+   "philarchive": "holds the earlier edition, no submission API, owed by hand",
+   "medium_substack": "hold the earlier edition, owed by hand"
+  }
  },
  "unlettered-regenerative-floor": {
   "title": "Unlettered Regenerative Floor",
