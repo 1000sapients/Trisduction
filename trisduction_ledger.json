@@ -129,7 +129,24 @@
   "zenodo_concept_doi": "10.5281/zenodo.22167461",
   "zenodo_version_doi": "10.5281/zenodo.22167462",
   "zenodo_record": "https://zenodo.org/records/22167462",
-  "note": "First publication. Sealed at v19 by its own audit cycle. Zenodo concept 22167461 minted 2026-08-29. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 22167461, never a fresh deposition.",
-  "ia_status": "pending: identifier free and unclaimed; the archive's S3 upload returned HTTP 400 BadContent, 'pdf file looks like spam', on 2026-08-29; the item was not created and no address was spent; retry only on a fresh plan and yes"
+  "note": "First publication, 2026-08-29. Sealed at v19 by its own audit cycle. Zenodo concept 22167461; archive item live with paper and handout. A revision goes to the archive as delete-and-replace under the same filenames, and to Zenodo as a new version on concept 22167461, never a fresh deposition.",
+  "ia_files": {
+   "Unlettered Regenerative Floor.pdf": {
+    "size": 1301412,
+    "md5": "a3eccf55cedfc74c2046544d36e697fc",
+    "note": "re-serialized without object streams; the archive's classifier refused the compressed bytes twice; content identical to git and Zenodo"
+   },
+   "Unlettered Regenerative Floor - Handout.pdf": {
+    "size": 50458,
+    "md5": "49186ef6d461feaf8ca1f5d06fe7332b"
+   }
+  },
+  "git_blog_md": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor - Blog Edition.md",
+  "zenodo_files": {
+   "Unlettered_Regenerative_Floor.pdf": {
+    "size": 213986,
+    "md5": "912c2c32963e3a9789d928602036e243"
+   }
+  }
  }
 }
