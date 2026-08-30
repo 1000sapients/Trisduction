@@ -1,0 +1,44 @@
+==============================================================================
+RA-TOE BATTERY · seed 20260622 · numpy 2.4.4 · u_m = 2.220446049250313e-16
+==============================================================================
+A.1  RA parsed: ∃x ⇒ ΔE_k(x) > 0, x ∈ {Real, Measurable, Grounded}.
+A.2  slots = 3 · LIT pairwise-disjoint = True
+B.1  Heisenberg kinetic floor, electron confined to 1 Å: ⟨T⟩ ≥ 1.526066e-19 J = 0.9525 eV
+B.2  zero-point energy at ω = 1e14 rad/s: ½ħω = 5.272859e-21 J = 0.0329 eV
+B.3  Landauer floor, one bit at 300 K: k_B T ln 2 = 2.870979e-21 J
+B.4  qubit in equal superposition: ⟨E⟩ = 0.500000, ΔE = 0.500000; Mandelstam-Tamm floor τ⊥ ≥ 3.141593, Margolus-Levitin floor 3.141593
+B.5  survival |⟨ψ(0)|ψ(t)⟩|² on [0, τ⊥]: 1.0000 → 0.8536 → 0.5000 → 0.1464 → 3.7e-33
+B.6  Frozen Substrate: ΔE → 0 ⟹ τ⊥ → ∞ ; τ⊥(ΔE=1e-3) = 1.571e+03, τ⊥(ΔE=1e-6) = 1.571e+06; an eigenstate registers nothing.
+C.1  RA witnesses RA: i·j·k = [-1, 0, 0, 0] · scalar on Fix(σ) = ℝ
+C.2  conjugation σ eigenvalues [-1, -1, -1, 1] Ground dim 1 · diagonal −I₄ eigenvalues [-1, -1, -1, -1] Ground dim 0 · det(σ|residence) = -1.0
+C.3  the Return, Fourier triad N=24: [LOCK] det(R) = 1.000000000000, |λ| = 1.000000000000, identity |λ²−det(R)| = 1.110e-15
+D.0  construction: N=24 contexts; latent rows log10 floor / log10 ½ħω / log10 k_B T ln2 · bits; oblique mixing A rows [[1.0, 0.35, 0.12], [0.22, 1.0, 0.28], [0.16, 0.2, 1.0]] ; contamination Bc rows [[0.6, 0.3], [0.4, 0.5], [0.55, 0.2]] ; two Mass-Mandate covariates, auditor load and instrument floor.
+D.1  genealogy receipt V_F: η(auditor load) = 0.4019, η(instrument floor) = 0.3003, source-share = 0.4757
+D.1  genealogy receipt V_E: η(auditor load) = 0.1919, η(instrument floor) = 0.3149, source-share = 0.3496
+D.1  genealogy receipt V_ER: η(auditor load) = 0.1605, η(instrument floor) = 0.2187, source-share = 0.2572
+D.2  unprojected read: [LOCK] det(R) = 0.358886826145, λ = -0.599071636906
+D.3  CDT projection out of both covariates, hardened kernel: [LOCK] · sealed: three independent axes
+     det(R) = 0.632215930559, λ = -0.795120073045, det(G) = 0.160137457310, κ(R) = 3.938723
+     four estimators LU/eig/chol/cofactor = 0.632215930559149 / 0.632215930559149 / 0.632215930559149 / 0.632215930559149
+     spread = 5.551e-16 against tol = 3.498e-15 · identity residual |λ²−det(R)| = 9.992e-16
+     collapse margin = 12.07 orders · conditioning margin = 5.40 orders · escalated = False
+     bootstrap agreement = 1.000 · stability tier = STABLE
+D.4  reflection of V_F on the fixed basis: λ -0.795120073045 → +0.795120073045 (ratio -1.000000), |Δdet(R)| = 0.000e+00
+D.5  full negation: max|G(P)−G(¬P)| = 0.0e+00 · the even functionals identical, the sign displaced to λ
+D.6  time-reversal control: det(R) forward 0.632215930559, reversed 0.632215930559, |Δ| = 1.1e-16; the arrow Σ ΔS/k_B parts them at +7052.7726 against -7052.7726
+D.7  deletion test, slot A1/V_F zeroed: rank(G) = 2, det(G) = 0.0, kernel routes [?] (zero-variance row)
+D.7  deletion test, slot A2/V_E zeroed: rank(G) = 2, det(G) = 0.0, kernel routes [?] (zero-variance row)
+D.7  deletion test, slot A3/V_ER zeroed: rank(G) = 2, det(G) = 0.0, kernel routes [?] (zero-variance row)
+D.8  ¬RA formal row (⟨T⟩ = 0 at a defined position): variance 0.0 · kernel routes [?] (zero-variance row)
+E.1  GOL admission: [GOL-OK] geometric/math lock (formal axis included) plus linguistic direction; proceed to witness and asymmetry (B.11.S)
+E.2  bridge leg (transitions and registrations): [⟀] SEALED: only P field-permitted, determinacy witness supplied
+E.4  Mosaic Seal on this paper: [Mosaic ΔM=0] M1 fail: meta-work (placement/typing), not object-level. No new mass by definition.
+---- v2 extensions ----
+F.1  the cascade run on RA at the seal register, three disjoint slots as the orthonormal triad: [LOCK] λ = -1.000000000000, det(R) = 1.000000000000, identity 1.110e-15
+F.2  self-similarity fixed point, det(R) by iteration 0→3: 0.632215930559 → 1.000000000000 → 1.000000000000 → 1.000000000000
+F.3  manufactured third axis (a function of the covariates) under the CDT: [?] · post-projection axis absorbed · the same axis unprojected: [LOCK]
+F.4  Hurwitz units 24, closed under multiplication True, all unit norm True · antipodal class equation [1, 3, 4, 4] · norm-two shell 24 = pure 12 + real-occupied 12, half-integer members 0 · A₄ order 12, one orbit of size 12 on 12 ordered pairs, stabilizers [1]
+F.5  unified speed limit on the qubit: max(πħ/2ΔE, πħ/2⟨E⟩) = 3.141593, first orthogonal state reached at t = π: survival 3.7e-33; the bound is attained, tight
+==============================================================================
+RECEIPT DIGEST v2 sha256[:16] = bdff07b104c2d51a
+==============================================================================

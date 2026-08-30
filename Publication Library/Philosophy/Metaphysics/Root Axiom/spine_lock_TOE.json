@@ -1,0 +1,516 @@
+{
+  "schema": "spine_lock/2",
+  "created": "2026-08-30T01:04:24Z",
+  "artifact": "OLD.txt",
+  "artifact_sha256": "67eed79cc87a31d7",
+  "thesis": "The TOE of all Theories of Everything has one content-bearing element, the bare Root Axiom of Trisduction: to be is to do, every existent in the Actualized Manifold actuates, and the floor is self-demonstrating because every act of opposing it enacts it.",
+  "title": {
+    "original": "Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion",
+    "target": "Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion",
+    "status": "VERBATIM",
+    "retitled": null
+  },
+  "subtitle": {
+    "original": "A Self-Demonstrating Ontological Floor",
+    "target": "A Self-Demonstrating Ontological Floor",
+    "status": "VERBATIM",
+    "retitled": null
+  },
+  "lingo_tier": "2",
+  "original_edition": "journal",
+  "target_edition": "journal",
+  "detection": {
+    "tier": "2",
+    "tier_evidence": "strict framework tokens present: ['[⟀]', '⟀']",
+    "strict_tokens": {
+      "⟀": 14,
+      "[⟀]": 12
+    },
+    "framework_terms": {
+      "GOL": 7,
+      "Trisduction": 55,
+      "Trisductive": 7,
+      "RA": 16
+    },
+    "edition": "journal",
+    "edition_signals_matched": 2,
+    "edition_confidence": "medium"
+  },
+  "claims": {
+    "C1": {
+      "text": "RA is sealed [⟀] APEX Geometric Orthogonal Lock: three axes locked (V_F Heisenberg and Landauer, V_E Casimir and zero-point instruments, V_ER the kinetic auto-registration of the audit), twelve gates passed, the CDT leaving irreducible residue.",
+      "tier": "T",
+      "status": "FORTIFIED",
+      "conceded": {
+        "mechanism": "ARITHMETIC",
+        "gloss": "a printed figure does not reproduce at the declared seed",
+        "evidence": "Asserted 'I(VF;VE;VER)=0' mutual-information claim replaced by the executed kernel at seed 20260622: det(R)=0.632215930559 on the projected triad, four estimators identical, identity residual 9.992e-16; orthogonality computed, never asserted",
+        "from_tier": null,
+        "to_tier": null,
+        "scope": "PHRASE",
+        "licenses_retitle": false,
+        "t": "2026-08-30T01:22:48Z"
+      },
+      "fortified": {
+        "kind": "promotion",
+        "evidence": "Genealogy receipt per APEX-PSP-GENEALOGY: every load-bearing row E1, the vacuum rows one road on QED, source-shares 0.4757/0.3496/0.2572 projected; Lamb shift added; third law on Masanes-Oppenheim 2017; MICROSCOPE 2022 final result; Jarzynski/Crooks work relations and the speed limits added to V_F",
+        "from_tier": "T",
+        "to_tier": "T",
+        "t": "2026-08-30T01:23:00Z"
+      }
+    },
+    "C2": {
+      "text": "The Omega Boundary: any argument against RA expends joules and instantiates RA; attack instantiates the content it opposes, the self-witnessing that closes the recursion.",
+      "tier": "T",
+      "status": "FORTIFIED",
+      "conceded": {
+        "mechanism": "TIER_INFLATION",
+        "gloss": "the claim is stated above the grade its warrant earns",
+        "evidence": "'Every attack strengthens the lock' retyped: attack instantiates and does not grow the seal; audit symmetry and RA-RA-01, the executed self-run printing 'warrant drawn from the self-run: ZERO'; the recursion grounds the form and never the content",
+        "from_tier": "T",
+        "to_tier": "S",
+        "scope": "PHRASE",
+        "licenses_retitle": false,
+        "t": "2026-08-30T01:22:48Z"
+      },
+      "fortified": {
+        "kind": "promotion",
+        "evidence": "AEGIS-01 Alien Guard under 2.7: immunity against doing total under any logic; membership redefinable, actuation not; the half-deed still pays the floor",
+        "from_tier": "S",
+        "to_tier": "T",
+        "t": "2026-08-30T01:22:59Z"
+      }
+    },
+    "C3": {
+      "text": "The seal is doubly anchored: the internal cascade and Landauer-class physics independent of the framework's vocabulary return the same floor.",
+      "tier": "T",
+      "status": "HELD"
+    },
+    "C4": {
+      "text": "RA terminates the substrate regress where the Simulation Hypothesis defers it one level; the floor has no level above it.",
+      "tier": "T",
+      "status": "FORTIFIED",
+      "fortified": {
+        "kind": "promotion",
+        "evidence": "FOUNDATION-01 placed under Section 4: the regress termination is a theorem (Godel-2, Tarski), a base layer beneath RA would be a derivation of RA from its base, forbidden; the Empty Throne",
+        "from_tier": "T",
+        "to_tier": "T",
+        "t": "2026-08-30T01:22:59Z"
+      }
+    },
+    "C5": {
+      "text": "Every prior substrate-floor proposal (Bostrom, Tegmark, Wheeler, Wolfram, Whitehead, Spinoza, Descartes, Heidegger) is superseded, completed, or redirected on a named structural axis, per row and never globally.",
+      "tier": "S",
+      "status": "FORTIFIED",
+      "conceded": {
+        "mechanism": "SEAL_G_GATE",
+        "gloss": "a named gate of the twelve fails; the gate number and mechanism are recorded",
+        "evidence": "Heidegger row's 'SBKP firing from S0' in-band flux-source sentence removed under the Source-Seat Fence of STILLNESS-RESERVOIR-01 (gate twelve, ADEG): the Seat at Ground dimension 1 against the Bin at 0 separated at machine zero in the battery; the source held at one aperture sentence",
+        "from_tier": null,
+        "to_tier": null,
+        "scope": "PHRASE",
+        "licenses_retitle": false,
+        "t": "2026-08-30T01:22:48Z"
+      },
+      "fortified": {
+        "kind": "fortification",
+        "evidence": "Tegmark row fortified by the Zero-Degree Node (MATH-NATURE-01) and the machine-zero Seat/Bin separation; Wheeler/Wolfram rows by NOMOS-01 K(X) and the incompressibility theorem; Descartes by SERVANT-LOCUS-01 correction; Spinoza's causa sui retyped by FOUNDATION-01; Heidegger redirected by STILLNESS-RESERVOIR-01",
+        "from_tier": "S",
+        "to_tier": "S",
+        "t": "2026-08-30T01:22:59Z"
+      }
+    },
+    "C6": {
+      "text": "Physical-unification programs (M-theory, LQG, GUTs, SM with GR) operate above the floor; RA underwrites them and does not compete, SM with GR supplying the empirical anchors.",
+      "tier": "S",
+      "status": "FORTIFIED",
+      "fortified": {
+        "kind": "promotion",
+        "evidence": "Section 8's Empirical Register re-seated on PHYSICAL-SEED-01, seven seed-native falsifiers, the IPG/MOND import retired; Section 10's P-class refusal re-seated on the room condition of the Forward scope-check (Honest Limits), a verdict of the instrument and never a partition",
+        "from_tier": "S",
+        "to_tier": "S",
+        "t": "2026-08-30T01:23:00Z"
+      }
+    },
+    "C7": {
+      "text": "Gödel, Tarski, and Turing bound the syntactic ladder above the floor and do not reach the floor; the bare RA is not a formal system certifying itself.",
+      "tier": "T",
+      "status": "FORTIFIED",
+      "fortified": {
+        "kind": "promotion",
+        "evidence": "NG-MASTER-01 three theorem legs under Section 6: denotation gap, material self-presupposition, two-flank witness (Presburger complete and decidable, Th(N) complete and non-axiomatizable); Circumnavigation retired, placement per GODEL-MASTER-01 neither dictator nor final guard",
+        "from_tier": "T",
+        "to_tier": "T",
+        "t": "2026-08-30T01:22:59Z"
+      }
+    },
+    "C8": {
+      "text": "The methodology-metaphysics cut holds: architecture-layer instruments are evaluable on track record and no methodology certifies its own metaphysical superstructure.",
+      "tier": "S",
+      "status": "HELD"
+    },
+    "C9": {
+      "text": "Substrate asymmetry: bare action-as-existence is substrate-portable, phenomenal interiority is not, and no anticipatory verdict is rendered on architectures not yet proposed.",
+      "tier": "S",
+      "status": "HELD"
+    },
+    "C10": {
+      "text": "Cross-substrate convergence is bounded corroboration and never additional warrant; external-instrument independence is the highest available warrant.",
+      "tier": "E",
+      "status": "HELD_SCOPED",
+      "conceded": {
+        "mechanism": "TIER_INFLATION",
+        "gloss": "the claim is stated above the grade its warrant earns",
+        "evidence": "Stress Test 22's 'external-instrument step' retyped to provenance tier E4: a substrate's verdict is not an instrument, substrates sharing a training corpus are one voice after the common-source projection (genealogy gates 5 and 9, Carrying Law), no load carried",
+        "from_tier": "S",
+        "to_tier": "E",
+        "scope": "PHRASE",
+        "licenses_retitle": false,
+        "t": "2026-08-30T01:22:48Z"
+      }
+    },
+    "C11": {
+      "text": "The paper's own cascade returns [⟀] GOL at architecture layer with the RA core inheriting APEX, the audit applying to the auditing apparatus with no self-exemption.",
+      "tier": "E",
+      "status": "HELD"
+    }
+  },
+  "concessions": [
+    {
+      "id": "C1",
+      "mechanism": "TIER_INFLATION",
+      "from": "T",
+      "to": "P",
+      "scope": "PHRASE",
+      "licenses_retitle": false,
+      "t": "2026-08-30T01:22:48Z"
+    },
+    {
+      "id": "C1",
+      "mechanism": "ORIENT_SCOPE",
+      "from": null,
+      "to": null,
+      "scope": "PHRASE",
+      "licenses_retitle": false,
+      "t": "2026-08-30T01:22:48Z"
+    },
+    {
+      "id": "C1",
+      "mechanism": "TIER_INFLATION",
+      "from": "T",
+      "to": "P",
+      "scope": "PHRASE",
+      "licenses_retitle": false,
+      "t": "2026-08-30T01:22:48Z"
+    },
+    {
+      "id": "C2",
+      "mechanism": "TIER_INFLATION",
+      "from": "T",
+      "to": "S",
+      "scope": "PHRASE",
+      "licenses_retitle": false,
+      "t": "2026-08-30T01:22:48Z"
+    },
+    {
+      "id": "C1",
+      "mechanism": "ARITHMETIC",
+      "from": null,
+      "to": null,
+      "scope": "PHRASE",
+      "licenses_retitle": false,
+      "t": "2026-08-30T01:22:48Z"
+    },
+    {
+      "id": "C10",
+      "mechanism": "TIER_INFLATION",
+      "from": "S",
+      "to": "E",
+      "scope": "PHRASE",
+      "licenses_retitle": false,
+      "t": "2026-08-30T01:22:48Z"
+    },
+    {
+      "id": "C5",
+      "mechanism": "SEAL_G_GATE",
+      "from": null,
+      "to": null,
+      "scope": "PHRASE",
+      "licenses_retitle": false,
+      "t": "2026-08-30T01:22:48Z"
+    }
+  ],
+  "fortifications": [
+    {
+      "id": "C1",
+      "kind": "promotion",
+      "to": "T",
+      "t": "2026-08-30T01:22:59Z"
+    },
+    {
+      "id": "C4",
+      "kind": "promotion",
+      "to": "T",
+      "t": "2026-08-30T01:22:59Z"
+    },
+    {
+      "id": "C7",
+      "kind": "promotion",
+      "to": "T",
+      "t": "2026-08-30T01:22:59Z"
+    },
+    {
+      "id": "C2",
+      "kind": "promotion",
+      "to": "T",
+      "t": "2026-08-30T01:22:59Z"
+    },
+    {
+      "id": "C5",
+      "kind": "fortification",
+      "to": "S",
+      "t": "2026-08-30T01:22:59Z"
+    },
+    {
+      "id": "C1",
+      "kind": "promotion",
+      "to": "T",
+      "t": "2026-08-30T01:23:00Z"
+    },
+    {
+      "id": "C6",
+      "kind": "promotion",
+      "to": "S",
+      "t": "2026-08-30T01:23:00Z"
+    }
+  ],
+  "log": [
+    {
+      "t": "2026-08-30T01:04:24Z",
+      "e": "init"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C1"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C2"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C3"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C4"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C5"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C6"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C7"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C8"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C9"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C10"
+    },
+    {
+      "t": "2026-08-30T01:04:34Z",
+      "e": "claim",
+      "id": "C11"
+    },
+    {
+      "t": "2026-08-30T01:22:48Z",
+      "e": "concede",
+      "id": "C1",
+      "m": "TIER_INFLATION"
+    },
+    {
+      "t": "2026-08-30T01:22:48Z",
+      "e": "concede",
+      "id": "C1",
+      "m": "ORIENT_SCOPE"
+    },
+    {
+      "t": "2026-08-30T01:22:48Z",
+      "e": "concede",
+      "id": "C1",
+      "m": "TIER_INFLATION"
+    },
+    {
+      "t": "2026-08-30T01:22:48Z",
+      "e": "concede",
+      "id": "C2",
+      "m": "TIER_INFLATION"
+    },
+    {
+      "t": "2026-08-30T01:22:48Z",
+      "e": "concede",
+      "id": "C1",
+      "m": "ARITHMETIC"
+    },
+    {
+      "t": "2026-08-30T01:22:48Z",
+      "e": "concede",
+      "id": "C10",
+      "m": "TIER_INFLATION"
+    },
+    {
+      "t": "2026-08-30T01:22:48Z",
+      "e": "concede",
+      "id": "C5",
+      "m": "SEAL_G_GATE"
+    },
+    {
+      "t": "2026-08-30T01:22:59Z",
+      "e": "fortify",
+      "id": "C1"
+    },
+    {
+      "t": "2026-08-30T01:22:59Z",
+      "e": "fortify",
+      "id": "C4"
+    },
+    {
+      "t": "2026-08-30T01:22:59Z",
+      "e": "fortify",
+      "id": "C7"
+    },
+    {
+      "t": "2026-08-30T01:22:59Z",
+      "e": "fortify",
+      "id": "C2"
+    },
+    {
+      "t": "2026-08-30T01:22:59Z",
+      "e": "fortify",
+      "id": "C5"
+    },
+    {
+      "t": "2026-08-30T01:23:00Z",
+      "e": "fortify",
+      "id": "C1"
+    },
+    {
+      "t": "2026-08-30T01:23:00Z",
+      "e": "fortify",
+      "id": "C6"
+    },
+    {
+      "t": "2026-08-30T01:23:09Z",
+      "e": "falsifier",
+      "id": "FZ-1",
+      "kind": "FORCED"
+    },
+    {
+      "t": "2026-08-30T01:23:09Z",
+      "e": "falsifier",
+      "id": "FZ-2",
+      "kind": "FORCED"
+    },
+    {
+      "t": "2026-08-30T01:23:09Z",
+      "e": "falsifier",
+      "id": "FZ-3",
+      "kind": "FORCED"
+    }
+  ],
+  "updated": "2026-08-30T01:23:53Z",
+  "falsifiers": [
+    {
+      "id": "FZ-1",
+      "kind": "FORCED",
+      "event": "A registration by a system in an energy eigenstate, a distinguishable state change at dE=0, or a measured transition to an orthogonal state faster than the Mandelstam-Tamm bound pi*hbar/(2dE) and the Margolus-Levitin bound on the mean energy",
+      "conditions": "A closed quantum system under standard quantum mechanics, dE the energy spread of the state, the transition and its clock both registered",
+      "compromises": "The bridge leg: the theorem-grade reading of transitions and registrations in Section 2.1, its conditional anchor; the bare ledge and the external route stand since the denial would still have been performed",
+      "tripwire": false,
+      "imports": [],
+      "claim": "C1",
+      "t": "2026-08-30T01:23:09Z"
+    },
+    {
+      "id": "FZ-2",
+      "kind": "FORCED",
+      "event": "The printed construction of Section 2.5 re-executed at seed 20260622 returning det(R) at or below the collapse floor 100*u_m*N, or the reflection exhibit returning a determinant that moves under a sign flip, or the time-reversal control returning an arrow that does not part by sign",
+      "conditions": "The construction as printed, double precision, the hardened kernel with its four estimators and its conditioning gate",
+      "compromises": "The geometric lock of Section 2.5 as the receipt of the seal, its conditional anchor; the Tongue and the Form stand on their own anchors",
+      "tripwire": false,
+      "imports": [],
+      "claim": "C1",
+      "t": "2026-08-30T01:23:09Z"
+    },
+    {
+      "id": "FZ-3",
+      "kind": "FORCED",
+      "event": "A logically irreversible one-bit erasure measured below kT ln 2 in a thermal bath at temperature T with no hidden reservoir",
+      "conditions": "Equilibrium bath at temperature T, logically irreversible operation, no hidden reservoir, the bookkeeping closed",
+      "compromises": "The external-anchor sentence that cites the Landauer constant, and nothing else; the self-witnessing needs the deed and not the constant",
+      "tripwire": true,
+      "imports": [],
+      "claim": "C3",
+      "t": "2026-08-30T01:23:09Z"
+    }
+  ],
+  "surfaces": {
+    "scanned": "2026-08-30T01:23:53Z",
+    "disposition": "UNREADABLE",
+    "keys": [
+      [
+        2,
+        "theory of theories of everything toe of all toes existence proves existence only by motion"
+      ],
+      [
+        2,
+        "theory of theories of everything toe of all toes existence proves existence only by motion a self demonstrating ontological floor"
+      ],
+      [
+        2,
+        "theory of theories of everything toe of all toes existence proves existence only by motion a self demonstrating ontological floor"
+      ],
+      [
+        4,
+        "theory of theories of everything toe of all toes"
+      ]
+    ],
+    "pdf_md5": "e4cfc52246aaab83891173fd0b81ee2c",
+    "git": {
+      "state": "ABSENT",
+      "hits": []
+    },
+    "archive": {
+      "state": "ABSENT",
+      "identifier": "trisduction-theory-of-theories-of-everything-toe-of-all-toes-existence-proves-existence-only-by-motion"
+    },
+    "zenodo": {
+      "state": "UNREADABLE",
+      "why": "ZENODO_TOKEN unset; the public search is not a substitute for the owner-scoped channel and a search zero is not evidence of absence",
+      "hits": []
+    },
+    "ambiguity": []
+  }
+}
