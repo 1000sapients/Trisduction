@@ -114,8 +114,8 @@
   "philarchive": "https://philarchive.org/rec/ISLTCC",
   "medium_url": "https://trisduction.medium.com/the-custody-cycle-of-the-most-high-bae2d27769c4",
   "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high",
-  "zenodo_note": "Corrected in place under the same DOI on 2026-08-30 via the file-modification unlock; no version minted, version count on the concept remains 1. 2026-08-30 second attempt: the file-modification unlock is spent. Four routes refused with HTTP 403 'Bucket is locked for modifications', the legacy deposit bucket, the InvenioRDM draft delete, an in-place content overwrite, and an additional-file upload, all after a successful edit unlock returning 201. The draft was discarded and the record restored to state done with the DOI and the original file intact; no version was minted on the architect's ruling. Zenodo therefore lags git and the Internet Archive by one edition and is owed either a re-granted file-modification unlock, requested by hand from Zenodo support, or a metadata-only amendment, or a new version on concept 10.5281/zenodo.22142046. Architect will action manually.",
-  "editions_current": "40-page Journal PDF, md5 bd5b9c3a8256cb94c7c9876acfa85d0a, 405034 bytes, live on git and the Internet Archive. Zenodo still carries the superseded 30-page PDF under DOI 10.5281/zenodo.22142047.",
+  "zenodo_note": "Corrected in place under the same DOI on 2026-08-30 via the file-modification unlock; no version minted, version count on the concept remains 1. 2026-08-30 second attempt: the file-modification unlock is spent. Four routes refused with HTTP 403 'Bucket is locked for modifications', the legacy deposit bucket, the InvenioRDM draft delete, an in-place content overwrite, and an additional-file upload, all after a successful edit unlock returning 201. The draft was discarded and the record restored to state done with the DOI and the original file intact; no version was minted on the architect's ruling. Zenodo therefore lags git and the Internet Archive by one edition and is owed either a re-granted file-modification unlock, requested by hand from Zenodo support, or a metadata-only amendment, or a new version on concept 10.5281/zenodo.22142046. Architect will action manually. RESOLVED 2026-08-30 by the architect. The mechanism is now recorded because the API cannot reach it: file replacement on a published Zenodo record requires a UI-only unlock, the Edit files dialog with its File modification checklist, answering No to 'I want to update the files with a new version' and ticking 'I will not modify files that supplement findings/results of an already published work', then Enable file editing. That sets a per-record flag; until it is set every API route returns 403 Bucket is locked for modifications, which is what all four attempted routes returned across three sessions. The window is thirty days from publishing to unlock and forty-two days from unlocking to publish the change. Any future in-place correction must start at that dialog by hand before any automation runs.",
+  "editions_current": "40-page Journal PDF, md5 bd5b9c3a8256cb94c7c9876acfa85d0a, 405034 bytes, live and byte-identical on all three machine-verifiable surfaces: git, the Internet Archive under custody-cycle-most-high, and Zenodo under DOI 10.5281/zenodo.22142047.",
   "positioning_table": "Module XI standing table seated at Section XV, 18 rows in 3 parts; superseding used nowhere.",
   "git_superseded": [
    "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.pdf",
@@ -130,12 +130,14 @@
   "edition": "updated 2026-08-30b",
   "build_engine": "weasyprint==65.1 required; 66.0 and above silently drop all content after the first column-span table, exiting zero with no error. Journal builder carries an auto-width table rule from 2026-08-30: three or more columns always spans the page, two-column tables stay in the column unless explicitly starred.",
   "surface_state_2026_08_30": {
-   "git": "updated edition live, prior edition retained beside it, byte-verified at commit 8ca86d85",
-   "internet_archive": "updated edition live, replaced in place under custody-cycle-most-high, md5 verified 51be415d3209656a81132f535832f4d0",
-   "zenodo": "SUPERSEDED CONTENT LIVE, still serving the 30-page PDF under DOI 10.5281/zenodo.22142047, blocked by a locked bucket, owed",
-   "philarchive": "holds the earlier edition, no submission API, owed by hand",
+   "git": "updated edition 2026-08-30b live at commit ab838add; two prior generations retained beside it; byte-verified",
+   "internet_archive": "live, replaced in place under custody-cycle-most-high, derive queue cleared, md5 verified bd5b9c3a8256cb94c7c9876acfa85d0a",
+   "zenodo": "live under DOI 10.5281/zenodo.22142047 at revision 12, corrected in place by the architect, no version minted, concept 10.5281/zenodo.22142046 unchanged, md5 verified bd5b9c3a8256cb94c7c9876acfa85d0a",
+   "philpapers": "ISLTCC, uploaded by the architect 2026-08-30; machine verification blocked, all endpoints return HTTP 403 to a scripted fetch including via PhilArchive, so this row is architect-attested and not independently confirmed",
    "medium_substack": "hold the earlier edition, owed by hand"
-  }
+  },
+  "skill_dependency": "trisduction-publication-format v1.8.0; build engine pinned weasyprint==65.1 with the build verification gate of III·J.8a",
+  "codex_siblings": "SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01 at Theological v1.49.0 card v1.6.0, and INDEX 0708 sPSP-ELYON-CUSTODY-01 at main v3.19.0, both superseded in place on the charter correction 2026-08-30; the aniconic wording is retired wherever it named the term, Deuteronomy 4:12 is retyped from charter basis to second manufacture, and the p-s-l root excavation and the Exodus 20:25 and John 1:18 boundary cases are seated. No ghost owed."
  },
  "unlettered-regenerative-floor": {
   "title": "Unlettered Regenerative Floor",
