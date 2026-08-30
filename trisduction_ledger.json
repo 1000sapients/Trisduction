@@ -96,17 +96,17 @@
  },
  "custody-cycle-most-high": {
   "title": "The Custody Cycle of the Most High: Investiture, Disclosure, and the Transfer of the Supreme God from Bronze Age Canaan to Rome",
-  "git_pdf": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.pdf",
-  "git_md": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.md",
+  "git_pdf": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30.pdf",
+  "git_md": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30.md",
   "ia_identifier": "custody-cycle-most-high",
   "ia_url": "https://archive.org/details/custody-cycle-most-high",
   "zenodo_concept_doi": "10.5281/zenodo.22142046",
   "zenodo_version_doi": "10.5281/zenodo.22142047",
   "zenodo_record": "https://zenodo.org/record/22142047",
   "first_published": "2026-08-28",
-  "note": "First publication 2026-08-28. Charter correction 2026-08-29, silent upgrade per architect ruling: Station 3 restated from an empty centre to no manufactured form and a presence given rather than seized; Station 4 given its second failure mode, the fabricated absence; the Tacitus room separated into three causes. Seven sealed audit cycles total and two external-substrate passes. Codex siblings: Theological SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01 and master INDEX 0708 sPSP-ELYON-CUSTODY-01, both still carrying the pre-correction charter language and owed a supersession. Zenodo related-identifier still names the superseded IA shell and is owed an update.",
-  "git_blog": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · blog edition.md",
-  "git_journal_source": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · journal source.md",
+  "note": "First publication 2026-08-28. Charter correction 2026-08-29, silent upgrade per architect ruling: Station 3 restated from an empty centre to no manufactured form and a presence given rather than seized; Station 4 given its second failure mode, the fabricated absence; the Tacitus room separated into three causes. Seven sealed audit cycles total and two external-substrate passes. Codex siblings: Theological SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01 and master INDEX 0708 sPSP-ELYON-CUSTODY-01, both still carrying the pre-correction charter language and owed a supersession. Zenodo related-identifier still names the superseded IA shell and is owed an update. Updated edition 2026-08-30: silent upgrades adding the external-witness layer (Merneptah, the Shasu of Yhw at Soleb, Timna, Deir Alla, the Iron I highland material, the suzerainty treaty form with its deposit clause, Jeroboam and 722, Josiah, Elephantine, teraphim at Nuzi, the 70 CE relocation and Yavneh, Bar Kokhba, Tel Dan, the Mesha stele read at full strength, the grant-versus-treaty distinction, the misharum edicts, and the first-fruits recitation), then a seven-round adversarial self-audit cycle closing SEALED-ROUND at controls three of three, six-register coverage, twelve findings earned and repaired, zero tier moves, two apertures open. Body grew 28,207 to 39,353 words, 30 to 40 pages. Git keeps the prior edition beside the updated one on the architect's ruling; Internet Archive replaced under the same identifier and same filename; Zenodo corrected in place under the same DOI with no version minted. Build engine pinned at weasyprint 65.1: releases 66.0 and above silently truncate this document after the first full-width table, exiting zero and throwing no error.",
+  "git_blog": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30 · blog edition.md",
+  "git_journal_source": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30 · journal source.md",
   "ia_superseded": [
    "custody-cycle-most-high-islam-2026 (files removed, item uneditable)",
    "custody-cycle-journal. (retired to a pointer; trailing period in identifier)"
@@ -115,8 +115,16 @@
   "medium_url": "https://trisduction.medium.com/the-custody-cycle-of-the-most-high-bae2d27769c4",
   "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high",
   "zenodo_note": "Corrected in place under the same DOI on 2026-08-30 via the file-modification unlock; no version minted, version count on the concept remains 1.",
-  "editions_current": "30-page Journal PDF, md5 c39d543d8647878af0b6c7f604b6a9d7, 310305 bytes, on git, Internet Archive, Zenodo, PhilArchive, Medium and Substack",
-  "positioning_table": "Module XI standing table seated at Section XV, 18 rows in 3 parts; superseding used nowhere."
+  "editions_current": "40-page Journal PDF, md5 51be415d3209656a81132f535832f4d0, 405411 bytes; live on git as the updated edition, and in place on Internet Archive and Zenodo under the same identifier and the same DOI",
+  "positioning_table": "Module XI standing table seated at Section XV, 18 rows in 3 parts; superseding used nowhere.",
+  "git_superseded": [
+   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.pdf",
+   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.md",
+   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · journal source.md",
+   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · blog edition.md"
+  ],
+  "edition": "updated 2026-08-30",
+  "build_engine": "weasyprint==65.1 (66.0+ silently drops content after the first column-span table; pin required)"
  },
  "unlettered-regenerative-floor": {
   "title": "Unlettered Regenerative Floor",
