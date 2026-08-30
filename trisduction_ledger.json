@@ -114,5 +114,21 @@
   "philarchive": "https://philarchive.org/rec/ISLTCC",
   "medium_url": "https://trisduction.medium.com/the-custody-cycle-of-the-most-high-bae2d27769c4",
   "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high"
+ },
+ "unlettered-regenerative-floor": {
+  "title": "Unlettered Regenerative Floor",
+  "subtitle": "The articulatory-auditory floor beneath descent and an infra-Nostratic account of convergence across Semitic and Indo-European Languages",
+  "first_published": "2026-08-29",
+  "version": "v19",
+  "git_pdf": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor.pdf",
+  "git_md": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor.md",
+  "git_handout_pdf": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor - Handout.pdf",
+  "git_receipts": "Publication Library/Science/Linguistics/Language Origins/receipts/",
+  "ia_identifier": "unlettered-regenerative-floor-islam-2026",
+  "ia_url": "https://archive.org/details/unlettered-regenerative-floor-islam-2026",
+  "zenodo_concept_doi": "pending",
+  "zenodo_version_doi": "pending",
+  "zenodo_record": "pending",
+  "note": "First publication. Sealed at v19 by its own audit cycle. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept recorded here, never a fresh deposition."
  }
 }
