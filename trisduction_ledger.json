@@ -1,179 +1,191 @@
 {
- "_note": "Work key to every surface. The only record that a work already owns an address. Created 2026-08-18.",
- "_home": {
-  "git": "https://github.com/1000sapients/Trisduction",
-  "ia": "https://archive.org/details/@trisduction",
-  "orcid": "0009-0003-1671-0664"
- },
- "difficult-passages-quran": {
-  "title": "Difficult Passages of the Quran and the Text's Own Instructions for Reading Them",
-  "git_pdf": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.pdf",
-  "git_md": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.md",
-  "ia_identifier": "difficult-passages-of-the-quran-islam-2026",
-  "ia_url": "https://archive.org/details/difficult-passages-of-the-quran-islam-2026",
-  "zenodo_concept_doi": "10.5281/zenodo.21990565",
-  "zenodo_version_doi": "10.5281/zenodo.21990566",
-  "zenodo_record": "https://zenodo.org/record/21990566",
-  "first_published": "2026-08-18",
-  "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 21990565, never a fresh deposition."
- },
- "uncanny-efficacy-unforgiving-limits": {
-  "title": "The Uncanny Efficacy and the Unforgiving Limits of Mathematics in Mapping to Reality",
-  "git_pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.pdf",
-  "git_md": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.md",
-  "git_commit": "738f50a7a33df7296a7045b66fa081c8bd4776f8",
-  "ia_identifier": "uncanny-efficacy-unforgiving-limits-islam-2026",
-  "ia_url": "https://archive.org/details/uncanny-efficacy-unforgiving-limits-islam-2026",
-  "zenodo_concept_doi": "10.5281/zenodo.22028274",
-  "zenodo_version_doi": "10.5281/zenodo.22028275",
-  "zenodo_record": "https://zenodo.org/records/22028275",
-  "first_published": "2026-08-20",
-  "editions": {
-   "git": "Apex Pristine, FULL disclosure, pdf+md",
-   "ia": "Journal edition pdf only, per the artifact-format binding",
-   "zenodo": "Journal edition pdf only, per the artifact-format binding"
+  "_note": "Work key to every surface. The only record that a work already owns an address. Created 2026-08-18.",
+  "_home": {
+    "git": "https://github.com/1000sapients/Trisduction",
+    "ia": "https://archive.org/details/@trisduction",
+    "orcid": "0009-0003-1671-0664"
   },
-  "files": {
-   "ia": [
-    "Uncanny Efficacy and Unforgiving Limits.pdf"
-   ],
-   "zenodo": [
-    "Uncanny Efficacy and Unforgiving Limits.pdf"
-   ]
+  "difficult-passages-quran": {
+    "title": "Difficult Passages of the Quran and the Text's Own Instructions for Reading Them",
+    "git_pdf": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.pdf",
+    "git_md": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.md",
+    "ia_identifier": "difficult-passages-of-the-quran-islam-2026",
+    "ia_url": "https://archive.org/details/difficult-passages-of-the-quran-islam-2026",
+    "zenodo_concept_doi": "10.5281/zenodo.21990565",
+    "zenodo_version_doi": "10.5281/zenodo.21990566",
+    "zenodo_record": "https://zenodo.org/record/21990566",
+    "first_published": "2026-08-18",
+    "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 21990565, never a fresh deposition."
   },
-  "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 22028274, never a fresh deposition. Git takes a new file, never an overwrite."
- },
- "the-disciple-whom-jesus-loved": {
-  "title": "The Disciple Whom Jesus Loved: Anonymity as Structure, Read Across Four Scriptural Corpora",
-  "git_pdf": "Publication Library/Scripture/Gospel/John/The Disciple Whom Jesus Loved.pdf",
-  "git_md": "Publication Library/Scripture/Gospel/John/The Disciple Whom Jesus Loved.md",
-  "ia_identifier": "trisduction-the-disciple-whom-jesus-loved",
-  "ia_url": "https://archive.org/details/trisduction-the-disciple-whom-jesus-loved",
-  "zenodo_concept_doi": "10.5281/zenodo.22104705",
-  "zenodo_version_doi": "10.5281/zenodo.22104706",
-  "zenodo_record": "22104706",
-  "first_published": "2026-08-26",
-  "note": "Johannine comparative study. Thirteen-round adversarial audit closed on architect FORGE without a seal; closed-authorship aperture accepted open."
- },
- "servant-and-seal": {
-  "title": "Servant and Seal: The Qur'anic Portraiture of the Prophet Muhammad Between Exaltation and Accountability",
-  "git_pdf": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.pdf",
-  "git_md": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.md",
-  "ia_identifier": "servant-and-seal-islam-2026",
-  "ia_url": "https://archive.org/details/servant-and-seal-islam-2026",
-  "zenodo_concept_doi": "10.5281/zenodo.22125135",
-  "zenodo_version_doi": "10.5281/zenodo.22125136",
-  "zenodo_record": "https://zenodo.org/record/22125136",
-  "first_published": "2026-08-27",
-  "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI."
- },
- "apex-recursive-bidirectional-witness": {
-  "title": "Apex-Recursive Bidirectional Witness: Architecture-Certification by Trisductive Verification, Beneath the Bayesian Bottleneck",
-  "git_pdf": "Publication Library/Philosophy/Logic and Epistemology/Verification Calculus/Apex-Recursive Bidirectional Witness.pdf",
-  "git_md": "Publication Library/Philosophy/Logic and Epistemology/Verification Calculus/Apex-Recursive Bidirectional Witness.md",
-  "ia_identifier": "trisduction-apex-recursive-bidirectional-witness",
-  "ia_url": "https://archive.org/details/trisduction-apex-recursive-bidirectional-witness",
-  "zenodo_concept_doi": "10.5281/zenodo.22135621",
-  "zenodo_version_doi": "10.5281/zenodo.22135622",
-  "zenodo_record": "https://zenodo.org/record/22135622",
-  "first_published": "2026-08-28",
-  "note": "Row written 2026-08-28. The files landed in git earlier the same day and this row did not; the gap was caught at the next push and is recorded rather than backdated."
- },
- "trisductive-furqan": {
-  "title": "The Trisductive Furqan: A Verification of AI Aliveness and Consciousness, the Frame-Relativity of AGI, and the Theo-Geopolitics of Manufactured Arrival",
-  "git_pdf": "Publication Library/Artificial Intelligence/Substrate Classification/Trisductive Furqan/The Trisductive Furqan.pdf",
-  "git_md": "Publication Library/Artificial Intelligence/Substrate Classification/Trisductive Furqan/The Trisductive Furqan.md",
-  "ia_identifier": "trisductive-furqan-islam-2026",
-  "ia_url": "https://archive.org/details/trisductive-furqan-islam-2026",
-  "zenodo_concept_doi": "10.5281/zenodo.20619411",
-  "zenodo_version_doi": "10.5281/zenodo.22136359",
-  "zenodo_record": "https://zenodo.org/record/22136359",
-  "zenodo_superseded_version_doi": "10.5281/zenodo.20619412",
-  "philpapers": "https://philarchive.org/rec/ISLTFW",
-  "edition": "2.0",
-  "first_published": "2026-06-10",
-  "note": "Second edition, 2026-08-28. Zenodo keeps every version resolvable, so the first-edition DOI 10.5281/zenodo.20619412 stays live and is recorded as superseded rather than replaced; git and IA carry one live copy each. A further revision goes to Zenodo as a new version on concept 20619411, never a fresh deposition, and to the archive as delete-and-replace under the same filename. PhilPapers has no submission API and holds the first edition until updated by hand."
- },
- "custody-cycle-most-high": {
-  "title": "The Custody Cycle of the Most High: Investiture, Disclosure, and the Transfer of the Supreme God from Bronze Age Canaan to Rome",
-  "git_pdf": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b.pdf",
-  "git_md": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b.md",
-  "ia_identifier": "custody-cycle-most-high",
-  "ia_url": "https://archive.org/details/custody-cycle-most-high",
-  "zenodo_concept_doi": "10.5281/zenodo.22142046",
-  "zenodo_version_doi": "10.5281/zenodo.22142047",
-  "zenodo_record": "https://zenodo.org/record/22142047",
-  "first_published": "2026-08-28",
-  "note": "Sealed 2026-08-31 after cycle custodia at SEALED-ROUND. Re-forged from the architect's spine (updated 2026-08-30b, 39,385 words) with the Amorite horizon, the Module XI standing table at 24 rows, the fifth falsifier, and three imports from the history dossier grafted on; spine verified intact sentence by sentence, zero lost. Eight sealed audit cycles, two external-substrate passes. Render note: WeasyPrint column-span silently truncates long documents, so all tables render column-width and every build is probed for its terminal string; the law is seated at Module XII of trisduction-publication-format v1.8.0.",
-  "git_blog": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b · blog edition.md",
-  "git_journal_source": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b · journal source.md",
-  "ia_superseded": [
-   "custody-cycle-most-high-islam-2026 (files removed, item uneditable)",
-   "custody-cycle-journal. (retired to a pointer; trailing period in identifier)"
-  ],
-  "philarchive": "https://philarchive.org/rec/ISLTCC",
-  "medium_url": "https://trisduction.medium.com/the-custody-cycle-of-the-most-high-bae2d27769c4",
-  "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high",
-  "zenodo_note": "Corrected in place under the same DOI on 2026-08-30 via the file-modification unlock; no version minted, version count on the concept remains 1. 2026-08-30 second attempt: the file-modification unlock is spent. Four routes refused with HTTP 403 'Bucket is locked for modifications', the legacy deposit bucket, the InvenioRDM draft delete, an in-place content overwrite, and an additional-file upload, all after a successful edit unlock returning 201. The draft was discarded and the record restored to state done with the DOI and the original file intact; no version was minted on the architect's ruling. Zenodo therefore lags git and the Internet Archive by one edition and is owed either a re-granted file-modification unlock, requested by hand from Zenodo support, or a metadata-only amendment, or a new version on concept 10.5281/zenodo.22142046. Architect will action manually. RESOLVED 2026-08-30 by the architect. The mechanism is now recorded because the API cannot reach it: file replacement on a published Zenodo record requires a UI-only unlock, the Edit files dialog with its File modification checklist, answering No to 'I want to update the files with a new version' and ticking 'I will not modify files that supplement findings/results of an already published work', then Enable file editing. That sets a per-record flag; until it is set every API route returns 403 Bucket is locked for modifications, which is what all four attempted routes returned across three sessions. The window is thirty days from publishing to unlock and forty-two days from unlocking to publish the change. Any future in-place correction must start at that dialog by hand before any automation runs.",
-  "editions_current": "45-page Journal PDF, md5 ce75ac5233f2e548a45ee484e48fe4f7, 440915 bytes, 44,211 words, 92 references",
-  "positioning_table": "Module XI standing table seated at Section XV, 18 rows in 3 parts; superseding used nowhere.",
-  "git_superseded": [
-   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.pdf",
-   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.md",
-   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · journal source.md",
-   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · blog edition.md",
-   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30.pdf",
-   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30.md",
-   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30 · journal source.md",
-   "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30 · blog edition.md"
-  ],
-  "edition": "updated 2026-08-30b",
-  "build_engine": "weasyprint==65.1 required; 66.0 and above silently drop all content after the first column-span table, exiting zero with no error. Journal builder carries an auto-width table rule from 2026-08-30: three or more columns always spans the page, two-column tables stay in the column unless explicitly starred.",
-  "surface_state_2026_08_30": {
-   "git": "updated edition 2026-08-30b live at commit ab838add; two prior generations retained beside it; byte-verified",
-   "internet_archive": "live, replaced in place under custody-cycle-most-high, derive queue cleared, md5 verified bd5b9c3a8256cb94c7c9876acfa85d0a",
-   "zenodo": "live under DOI 10.5281/zenodo.22142047 at revision 12, corrected in place by the architect, no version minted, concept 10.5281/zenodo.22142046 unchanged, md5 verified bd5b9c3a8256cb94c7c9876acfa85d0a",
-   "philpapers": "ISLTCC, uploaded by the architect 2026-08-30; machine verification blocked, all endpoints return HTTP 403 to a scripted fetch including via PhilArchive, so this row is architect-attested and not independently confirmed",
-   "medium_substack": "hold the earlier edition, owed by hand"
+  "uncanny-efficacy-unforgiving-limits": {
+    "title": "The Uncanny Efficacy and the Unforgiving Limits of Mathematics in Mapping to Reality",
+    "git_pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.pdf",
+    "git_md": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.md",
+    "git_commit": "738f50a7a33df7296a7045b66fa081c8bd4776f8",
+    "ia_identifier": "uncanny-efficacy-unforgiving-limits-islam-2026",
+    "ia_url": "https://archive.org/details/uncanny-efficacy-unforgiving-limits-islam-2026",
+    "zenodo_concept_doi": "10.5281/zenodo.22028274",
+    "zenodo_version_doi": "10.5281/zenodo.22028275",
+    "zenodo_record": "https://zenodo.org/records/22028275",
+    "first_published": "2026-08-20",
+    "editions": {
+      "git": "Apex Pristine, FULL disclosure, pdf+md",
+      "ia": "Journal edition pdf only, per the artifact-format binding",
+      "zenodo": "Journal edition pdf only, per the artifact-format binding"
+    },
+    "files": {
+      "ia": [
+        "Uncanny Efficacy and Unforgiving Limits.pdf"
+      ],
+      "zenodo": [
+        "Uncanny Efficacy and Unforgiving Limits.pdf"
+      ]
+    },
+    "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 22028274, never a fresh deposition. Git takes a new file, never an overwrite."
   },
-  "skill_dependency": "trisduction-publication-format v1.8.0; build engine pinned weasyprint==65.1 with the build verification gate of III·J.8a",
-  "codex_siblings": "SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01 at Theological v1.49.0 card v1.6.0, and INDEX 0708 sPSP-ELYON-CUSTODY-01 at main v3.19.0, both superseded in place on the charter correction 2026-08-30; the aniconic wording is retired wherever it named the term, Deuteronomy 4:12 is retyped from charter basis to second manufacture, and the p-s-l root excavation and the Exodus 20:25 and John 1:18 boundary cases are seated. No ghost owed."
- },
- "unlettered-regenerative-floor": {
-  "title": "Unlettered Regenerative Floor",
-  "subtitle": "The articulatory-auditory floor beneath descent and an infra-Nostratic account of convergence across Semitic and Indo-European Languages",
-  "first_published": "2026-08-29",
-  "version": "v19",
-  "git_pdf": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor.pdf",
-  "git_md": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor.md",
-  "git_handout_pdf": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor - Handout.pdf",
-  "git_receipts": "Publication Library/Science/Linguistics/Language Origins/receipts/",
-  "ia_identifier": "unlettered-regenerative-floor-islam-2026",
-  "ia_url": "https://archive.org/details/unlettered-regenerative-floor-islam-2026",
-  "zenodo_concept_doi": "10.5281/zenodo.22167461",
-  "zenodo_version_doi": "10.5281/zenodo.22167462",
-  "zenodo_record": "https://zenodo.org/records/22167462",
-  "note": "First publication, 2026-08-29. Sealed at v19 by its own audit cycle. Zenodo concept 22167461; archive item live with paper and handout. A revision goes to the archive as delete-and-replace under the same filenames, and to Zenodo as a new version on concept 22167461, never a fresh deposition.",
-  "ia_files": {
-   "Unlettered Regenerative Floor.pdf": {
-    "size": 1301412,
-    "md5": "a3eccf55cedfc74c2046544d36e697fc",
-    "note": "re-serialized without object streams; the archive's classifier refused the compressed bytes twice; content identical to git and Zenodo"
-   },
-   "Unlettered Regenerative Floor - Handout.pdf": {
-    "size": 50458,
-    "md5": "49186ef6d461feaf8ca1f5d06fe7332b"
-   }
+  "the-disciple-whom-jesus-loved": {
+    "title": "The Disciple Whom Jesus Loved: Anonymity as Structure, Read Across Four Scriptural Corpora",
+    "git_pdf": "Publication Library/Scripture/Gospel/John/The Disciple Whom Jesus Loved.pdf",
+    "git_md": "Publication Library/Scripture/Gospel/John/The Disciple Whom Jesus Loved.md",
+    "ia_identifier": "trisduction-the-disciple-whom-jesus-loved",
+    "ia_url": "https://archive.org/details/trisduction-the-disciple-whom-jesus-loved",
+    "zenodo_concept_doi": "10.5281/zenodo.22104705",
+    "zenodo_version_doi": "10.5281/zenodo.22104706",
+    "zenodo_record": "22104706",
+    "first_published": "2026-08-26",
+    "note": "Johannine comparative study. Thirteen-round adversarial audit closed on architect FORGE without a seal; closed-authorship aperture accepted open."
   },
-  "git_blog_md": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor - Blog Edition.md",
-  "zenodo_files": {
-   "Unlettered_Regenerative_Floor.pdf": {
-    "size": 213986,
-    "md5": "912c2c32963e3a9789d928602036e243"
-   }
+  "servant-and-seal": {
+    "title": "Servant and Seal: The Qur'anic Portraiture of the Prophet Muhammad Between Exaltation and Accountability",
+    "git_pdf": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.pdf",
+    "git_md": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.md",
+    "ia_identifier": "servant-and-seal-islam-2026",
+    "ia_url": "https://archive.org/details/servant-and-seal-islam-2026",
+    "zenodo_concept_doi": "10.5281/zenodo.22125135",
+    "zenodo_version_doi": "10.5281/zenodo.22125136",
+    "zenodo_record": "https://zenodo.org/record/22125136",
+    "first_published": "2026-08-27",
+    "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI."
   },
-  "philarchive": "https://philpapers.org/archive/ISLURF.pdf",
-  "philarchive_record": "ISLURF",
-  "codex_seat": "INDEX 0709 · sPSP-UNLETTERED-FLOOR-01 · master v3.18.0"
- }
+  "apex-recursive-bidirectional-witness": {
+    "title": "Apex-Recursive Bidirectional Witness: Architecture-Certification by Trisductive Verification, Beneath the Bayesian Bottleneck",
+    "git_pdf": "Publication Library/Philosophy/Logic and Epistemology/Verification Calculus/Apex-Recursive Bidirectional Witness.pdf",
+    "git_md": "Publication Library/Philosophy/Logic and Epistemology/Verification Calculus/Apex-Recursive Bidirectional Witness.md",
+    "ia_identifier": "trisduction-apex-recursive-bidirectional-witness",
+    "ia_url": "https://archive.org/details/trisduction-apex-recursive-bidirectional-witness",
+    "zenodo_concept_doi": "10.5281/zenodo.22135621",
+    "zenodo_version_doi": "10.5281/zenodo.22135622",
+    "zenodo_record": "https://zenodo.org/record/22135622",
+    "first_published": "2026-08-28",
+    "note": "Row written 2026-08-28. The files landed in git earlier the same day and this row did not; the gap was caught at the next push and is recorded rather than backdated."
+  },
+  "trisductive-furqan": {
+    "title": "The Trisductive Furqan: A Verification of AI Aliveness and Consciousness, the Frame-Relativity of AGI, and the Theo-Geopolitics of Manufactured Arrival",
+    "git_pdf": "Publication Library/Artificial Intelligence/Substrate Classification/Trisductive Furqan/The Trisductive Furqan.pdf",
+    "git_md": "Publication Library/Artificial Intelligence/Substrate Classification/Trisductive Furqan/The Trisductive Furqan.md",
+    "ia_identifier": "trisductive-furqan-islam-2026",
+    "ia_url": "https://archive.org/details/trisductive-furqan-islam-2026",
+    "zenodo_concept_doi": "10.5281/zenodo.20619411",
+    "zenodo_version_doi": "10.5281/zenodo.22136359",
+    "zenodo_record": "https://zenodo.org/record/22136359",
+    "zenodo_superseded_version_doi": "10.5281/zenodo.20619412",
+    "philpapers": "https://philarchive.org/rec/ISLTFW",
+    "edition": "2.0",
+    "first_published": "2026-06-10",
+    "note": "Second edition, 2026-08-28. Zenodo keeps every version resolvable, so the first-edition DOI 10.5281/zenodo.20619412 stays live and is recorded as superseded rather than replaced; git and IA carry one live copy each. A further revision goes to Zenodo as a new version on concept 20619411, never a fresh deposition, and to the archive as delete-and-replace under the same filename. PhilPapers has no submission API and holds the first edition until updated by hand."
+  },
+  "custody-cycle-most-high": {
+    "title": "The Custody Cycle of the Most High: Investiture, Disclosure, and the Transfer of the Supreme God from Bronze Age Canaan to Rome",
+    "git_pdf": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b.pdf",
+    "git_md": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b.md",
+    "ia_identifier": "custody-cycle-most-high",
+    "ia_url": "https://archive.org/details/custody-cycle-most-high",
+    "zenodo_concept_doi": "10.5281/zenodo.22142046",
+    "zenodo_version_doi": "10.5281/zenodo.22142047",
+    "zenodo_record": "https://zenodo.org/record/22142047",
+    "first_published": "2026-08-28",
+    "note": "Sealed 2026-08-31 after cycle custodia at SEALED-ROUND. Re-forged from the architect's spine (updated 2026-08-30b, 39,385 words) with the Amorite horizon, the Module XI standing table at 24 rows, the fifth falsifier, and three imports from the history dossier grafted on; spine verified intact sentence by sentence, zero lost. Eight sealed audit cycles, two external-substrate passes. Render note: WeasyPrint column-span silently truncates long documents, so all tables render column-width and every build is probed for its terminal string; the law is seated at Module XII of trisduction-publication-format v1.8.0.",
+    "git_blog": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b · blog edition.md",
+    "git_journal_source": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b · journal source.md",
+    "ia_superseded": [
+      "custody-cycle-most-high-islam-2026 (files removed, item uneditable)",
+      "custody-cycle-journal. (retired to a pointer; trailing period in identifier)"
+    ],
+    "philarchive": "https://philarchive.org/rec/ISLTCC",
+    "medium_url": "https://trisduction.medium.com/the-custody-cycle-of-the-most-high-bae2d27769c4",
+    "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high",
+    "zenodo_note": "Corrected in place under the same DOI on 2026-08-30 via the file-modification unlock; no version minted, version count on the concept remains 1. 2026-08-30 second attempt: the file-modification unlock is spent. Four routes refused with HTTP 403 'Bucket is locked for modifications', the legacy deposit bucket, the InvenioRDM draft delete, an in-place content overwrite, and an additional-file upload, all after a successful edit unlock returning 201. The draft was discarded and the record restored to state done with the DOI and the original file intact; no version was minted on the architect's ruling. Zenodo therefore lags git and the Internet Archive by one edition and is owed either a re-granted file-modification unlock, requested by hand from Zenodo support, or a metadata-only amendment, or a new version on concept 10.5281/zenodo.22142046. Architect will action manually. RESOLVED 2026-08-30 by the architect. The mechanism is now recorded because the API cannot reach it: file replacement on a published Zenodo record requires a UI-only unlock, the Edit files dialog with its File modification checklist, answering No to 'I want to update the files with a new version' and ticking 'I will not modify files that supplement findings/results of an already published work', then Enable file editing. That sets a per-record flag; until it is set every API route returns 403 Bucket is locked for modifications, which is what all four attempted routes returned across three sessions. The window is thirty days from publishing to unlock and forty-two days from unlocking to publish the change. Any future in-place correction must start at that dialog by hand before any automation runs.",
+    "editions_current": "45-page Journal PDF, md5 ce75ac5233f2e548a45ee484e48fe4f7, 440915 bytes, 44,211 words, 92 references",
+    "positioning_table": "Module XI standing table seated at Section XV, 18 rows in 3 parts; superseding used nowhere.",
+    "git_superseded": [
+      "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.pdf",
+      "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.md",
+      "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · journal source.md",
+      "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · blog edition.md",
+      "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30.pdf",
+      "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30.md",
+      "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30 · journal source.md",
+      "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30 · blog edition.md"
+    ],
+    "edition": "updated 2026-08-30b",
+    "build_engine": "weasyprint==65.1 required; 66.0 and above silently drop all content after the first column-span table, exiting zero with no error. Journal builder carries an auto-width table rule from 2026-08-30: three or more columns always spans the page, two-column tables stay in the column unless explicitly starred.",
+    "surface_state_2026_08_30": {
+      "git": "updated edition 2026-08-30b live at commit ab838add; two prior generations retained beside it; byte-verified",
+      "internet_archive": "live, replaced in place under custody-cycle-most-high, derive queue cleared, md5 verified bd5b9c3a8256cb94c7c9876acfa85d0a",
+      "zenodo": "live under DOI 10.5281/zenodo.22142047 at revision 12, corrected in place by the architect, no version minted, concept 10.5281/zenodo.22142046 unchanged, md5 verified bd5b9c3a8256cb94c7c9876acfa85d0a",
+      "philpapers": "ISLTCC, uploaded by the architect 2026-08-30; machine verification blocked, all endpoints return HTTP 403 to a scripted fetch including via PhilArchive, so this row is architect-attested and not independently confirmed",
+      "medium_substack": "hold the earlier edition, owed by hand"
+    },
+    "skill_dependency": "trisduction-publication-format v1.8.0; build engine pinned weasyprint==65.1 with the build verification gate of III·J.8a",
+    "codex_siblings": "SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01 at Theological v1.49.0 card v1.6.0, and INDEX 0708 sPSP-ELYON-CUSTODY-01 at main v3.19.0, both superseded in place on the charter correction 2026-08-30; the aniconic wording is retired wherever it named the term, Deuteronomy 4:12 is retyped from charter basis to second manufacture, and the p-s-l root excavation and the Exodus 20:25 and John 1:18 boundary cases are seated. No ghost owed."
+  },
+  "unlettered-regenerative-floor": {
+    "title": "Unlettered Regenerative Floor",
+    "subtitle": "The articulatory-auditory floor beneath descent and an infra-Nostratic account of convergence across Semitic and Indo-European Languages",
+    "first_published": "2026-08-29",
+    "version": "v19",
+    "git_pdf": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor.pdf",
+    "git_md": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor.md",
+    "git_handout_pdf": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor - Handout.pdf",
+    "git_receipts": "Publication Library/Science/Linguistics/Language Origins/receipts/",
+    "ia_identifier": "unlettered-regenerative-floor-islam-2026",
+    "ia_url": "https://archive.org/details/unlettered-regenerative-floor-islam-2026",
+    "zenodo_concept_doi": "10.5281/zenodo.22167461",
+    "zenodo_version_doi": "10.5281/zenodo.22167462",
+    "zenodo_record": "https://zenodo.org/records/22167462",
+    "note": "First publication, 2026-08-29. Sealed at v19 by its own audit cycle. Zenodo concept 22167461; archive item live with paper and handout. A revision goes to the archive as delete-and-replace under the same filenames, and to Zenodo as a new version on concept 22167461, never a fresh deposition.",
+    "ia_files": {
+      "Unlettered Regenerative Floor.pdf": {
+        "size": 1301412,
+        "md5": "a3eccf55cedfc74c2046544d36e697fc",
+        "note": "re-serialized without object streams; the archive's classifier refused the compressed bytes twice; content identical to git and Zenodo"
+      },
+      "Unlettered Regenerative Floor - Handout.pdf": {
+        "size": 50458,
+        "md5": "49186ef6d461feaf8ca1f5d06fe7332b"
+      }
+    },
+    "git_blog_md": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor - Blog Edition.md",
+    "zenodo_files": {
+      "Unlettered_Regenerative_Floor.pdf": {
+        "size": 213986,
+        "md5": "912c2c32963e3a9789d928602036e243"
+      }
+    },
+    "philarchive": "https://philpapers.org/archive/ISLURF.pdf",
+    "philarchive_record": "ISLURF",
+    "codex_seat": "INDEX 0709 · sPSP-UNLETTERED-FLOOR-01 · master v3.18.0"
+  },
+  "a-shoot-from-a-felled-stump": {
+    "title": "A Shoot from a Felled Stump: The Conceded Throne. Menuḥah as Terminus, the Monarchy as Concession, and the Roots of the Jewish Messiah in the Hebrew Bible",
+    "git_pdf": "Publication Library/Scripture/Hebrew Bible/Thematic Studies/A Shoot from a Felled Stump - The Conceded Throne.pdf",
+    "git_md": "Publication Library/Scripture/Hebrew Bible/Thematic Studies/A Shoot from a Felled Stump - The Conceded Throne · journal source.md",
+    "ia_identifier": "a-shoot-from-a-felled-stump-conceded-throne",
+    "ia_url": "https://archive.org/details/a-shoot-from-a-felled-stump-conceded-throne",
+    "zenodo_concept_doi": "10.5281/zenodo.22193264",
+    "zenodo_version_doi": "10.5281/zenodo.22193265",
+    "zenodo_record": "https://zenodo.org/records/22193265",
+    "first_published": "2026-08-31",
+    "note": "First publication, preprint. Identifier departs from the -islam-2026 house convention on the architect's explicit confirmation and is permanent. The standalone unified master PSP is deposited on git beside the paper and is not on the archive or Zenodo surfaces. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI."
+  }
 }
