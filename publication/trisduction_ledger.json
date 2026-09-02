@@ -1887,8 +1887,8 @@
     "state": "live"
    },
    "philarchive": {
-    "record": null,
-    "url": null
+    "record": "ISLFAT",
+    "url": "https://philarchive.org/rec/ISLFAT"
    },
    "supersedes": null,
    "superseded_by": null,
