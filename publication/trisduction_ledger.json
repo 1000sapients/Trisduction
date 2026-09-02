@@ -1072,7 +1072,9 @@
    "supersedes": null,
    "superseded_by": null,
    "note": null,
-   "extra": {}
+   "extra": {
+    "build_divergence": "The git PDF is a 20-page build; Zenodo 10.5281/zenodo.21389758 serves a 19-page build under the same \"Second Edition\" name. Front text identical. Close by depositing the git build as a new version on concept 21389757."
+   }
   },
   "four-forces-and-dark-sector": {
    "title": "The Four Forces, Matter, and the Dark Sector as Configurations of One Actuating Substrate",
@@ -1646,6 +1648,216 @@
    "superseded_by": null,
    "note": "First publication, preprint. Identifier departs from the -islam-2026 house convention on the architect's explicit confirmation and is permanent. The standalone unified master PSP is deposited on git beside the paper and is not on the archive or Zenodo surfaces. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI.",
    "extra": {}
+  },
+  "on-forgetting": {
+   "title": "On Forgetting: An Underrecognized Mercy, and a Trisductive Grounding of Self-Forgetting as the Act by Which the One Becomes Known",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Scripture/Quran/Thematic Studies/On Forgetting/On Forgetting.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "the-two-waters": {
+   "title": "The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Scripture/Quran/Thematic Studies/The Two Waters/The Two Waters.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "on-the-ninth-gate": {
+   "title": "On the Ninth Gate: A Trisductive Account of the Sole Aperture of Return, the Identity of the One Who Crosses, and the Feminine Figure of Union",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Scripture/Quran/Thematic Studies/The Ninth Gate/On the Ninth Gate.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "nineteen-of-saqar": {
+   "title": "The Nineteen of Saqar: The Overt Scaffolding, the Cavity at the Perimeter, and the Closure-Form of Self-Verification",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Scripture/Quran/Thematic Studies/The Nineteen of Saqar/The Nineteen of Saqar.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "platonic-ghost-divided-line": {
+   "title": "Plato's Divided Line: The Platonic Ghost and the Golden Shadow",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Platonic Ghost/The Platonic Ghost and the Golden Shadow.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "birth-of-heaven-and-hell": {
+   "title": "The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to the Fire, in the Words of Those Who Built It",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Scripture/Comparative/Birth of Heaven and Hell/The Birth of Heaven and Hell.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
   }
  }
 }

@@ -9,22 +9,22 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**47 works · 73 Zenodo deposits.**
+**53 works · 73 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 47 / 47 | 100% |
-| Git PDF | 17 / 47 | 36% |
-| Internet Archive | 10 / 47 | 21% |
-| PhilArchive | 3 / 47 | 6% |
+| Zenodo | 47 / 53 | 88% |
+| Git PDF | 23 / 53 | 43% |
+| Internet Archive | 10 / 53 | 18% |
+| PhilArchive | 3 / 53 | 5% |
 
-Status: 47 live.
+Status: 53 live.
 
 ## Coverage gaps
 
 The only view in the repository that answers "what is published where, and what is missing." Each list is a work queue, not an error.
 
-### On Zenodo, not on the Internet Archive (37)
+### On Zenodo, not on the Internet Archive (43)
 
 Deposited to Zenodo but no IA item located. IA is the second permanence surface; a work here has one address, not two.
 
@@ -65,6 +65,12 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `geometry-convergent-epistemic-warrant` · TRISDUCTION: The Geometry of Convergent Epistemic Warrant
 - `master-codex-condensed` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Or
 - `master-codex-unabridged` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture · Triaxial O
+- `birth-of-heaven-and-hell` · The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to the Fire, in the Words of 
+- `nineteen-of-saqar` · The Nineteen of Saqar: The Overt Scaffolding, the Cavity at the Perimeter, and the Closure-Form of Self-Verifi
+- `on-forgetting` · On Forgetting: An Underrecognized Mercy, and a Trisductive Grounding of Self-Forgetting as the Act by Which th
+- `on-the-ninth-gate` · On the Ninth Gate: A Trisductive Account of the Sole Aperture of Return, the Identity of the One Who Crosses, 
+- `platonic-ghost-divided-line` · Plato's Divided Line: The Platonic Ghost and the Golden Shadow
+- `the-two-waters` · The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells
 
 ### No PDF matched in this repository (30)
 
@@ -101,9 +107,16 @@ A Zenodo deposit with no corresponding PDF found under `Publication Library/`. E
 - `master-codex-condensed` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Or
 - `master-codex-unabridged` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture · Triaxial O
 
-### In git or on IA, never deposited to Zenodo (0)
+### In git or on IA, never deposited to Zenodo (6)
 
-None.
+No Zenodo concept, so no DOI and no citable permanent address.
+
+- `birth-of-heaven-and-hell` · The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to the Fire, in the Words of 
+- `nineteen-of-saqar` · The Nineteen of Saqar: The Overt Scaffolding, the Cavity at the Perimeter, and the Closure-Form of Self-Verifi
+- `on-forgetting` · On Forgetting: An Underrecognized Mercy, and a Trisductive Grounding of Self-Forgetting as the Act by Which th
+- `on-the-ninth-gate` · On the Ninth Gate: A Trisductive Account of the Sole Aperture of Return, the Identity of the One Who Crosses, 
+- `platonic-ghost-divided-line` · Plato's Divided Line: The Platonic Ghost and the Golden Shadow
+- `the-two-waters` · The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells
 
 ### Git path withheld, ambiguous match (0)
 
@@ -115,6 +128,12 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `the-two-waters` | The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwe | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Quran/Thematic%20Studies/The%20Two%20Waters/The%20Two%20Waters.pdf) | — | — | — | — | 2026-09-01 |
+| `platonic-ghost-divided-line` | Plato's Divided Line: The Platonic Ghost and the Golden Shadow | Verification Architecture | live | [pdf](Publication%20Library/Philosophy/Philosophy%20of%20Mathematics/Platonic%20Ghost/The%20Platonic%20Ghost%20and%20the%20Golden%20Shadow.pdf) | — | — | — | — | 2026-09-01 |
+| `on-the-ninth-gate` | On the Ninth Gate: A Trisductive Account of the Sole Aperture of Return, the Identity of the On | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Quran/Thematic%20Studies/The%20Ninth%20Gate/On%20the%20Ninth%20Gate.pdf) | — | — | — | — | 2026-09-01 |
+| `on-forgetting` | On Forgetting: An Underrecognized Mercy, and a Trisductive Grounding of Self-Forgetting as the  | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Quran/Thematic%20Studies/On%20Forgetting/On%20Forgetting.pdf) | — | — | — | — | 2026-09-01 |
+| `nineteen-of-saqar` | The Nineteen of Saqar: The Overt Scaffolding, the Cavity at the Perimeter, and the Closure-Form | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Quran/Thematic%20Studies/The%20Nineteen%20of%20Saqar/The%20Nineteen%20of%20Saqar.pdf) | — | — | — | — | 2026-09-01 |
+| `birth-of-heaven-and-hell` | The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to the Fire, i | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Comparative/Birth%20of%20Heaven%20and%20Hell/The%20Birth%20of%20Heaven%20and%20Hell.pdf) | — | — | — | — | 2026-09-01 |
 | `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architectu | Verification Architecture | live | — | `10.5281/zenodo.20576757` | 7 | — | — | 2026-09-01 |
 | `master-codex-condensed` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architectu | Verification Architecture | live | — | `10.5281/zenodo.20175604` | 2 | — | — | 2026-09-01 |
 | `geometry-convergent-epistemic-warrant` | TRISDUCTION: The Geometry of Convergent Epistemic Warrant | Verification Architecture | live | — | `10.5281/zenodo.19345045` | 3 | — | — | 2026-09-01 |
@@ -165,10 +184,11 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 ## By domain
 
-### Verification Architecture (15)
+### Verification Architecture (16)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `platonic-ghost-divided-line` | Plato's Divided Line: The Platonic Ghost and the Golden Shadow | — | — | — | 2026-09-01 |
 | `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification  | `10.5281/zenodo.20576757` | 7 | — | 2026-09-01 |
 | `master-codex-condensed` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification  | `10.5281/zenodo.20175604` | 2 | — | 2026-09-01 |
 | `geometry-convergent-epistemic-warrant` | TRISDUCTION: The Geometry of Convergent Epistemic Warrant | `10.5281/zenodo.19345045` | 3 | — | 2026-09-01 |
@@ -233,10 +253,15 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `trisductive-furqan` | The Trisductive Furqan: A Verification of AI Aliveness and Consciousness, the Frame-R | `10.5281/zenodo.20619411` | 2 | [ia](https://archive.org/details/trisductive-furqan-islam-2026) | 2026-08-28 |
 | `furqan-for-ai-qwam` | FURQAN FOR AI QWAM: The Criterion and the Commandment for AI Substrates: Six inherite | `10.5281/zenodo.19571701` | 2 | — | 2026-08-05 |
 
-### Scripture and Theology (9)
+### Scripture and Theology (14)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `the-two-waters` | The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Merc | — | — | — | 2026-09-01 |
+| `on-the-ninth-gate` | On the Ninth Gate: A Trisductive Account of the Sole Aperture of Return, the Identity | — | — | — | 2026-09-01 |
+| `on-forgetting` | On Forgetting: An Underrecognized Mercy, and a Trisductive Grounding of Self-Forgetti | — | — | — | 2026-09-01 |
+| `nineteen-of-saqar` | The Nineteen of Saqar: The Overt Scaffolding, the Cavity at the Perimeter, and the Cl | — | — | — | 2026-09-01 |
+| `birth-of-heaven-and-hell` | The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to t | — | — | — | 2026-09-01 |
 | `a-shoot-from-a-felled-stump` | A Shoot from a Felled Stump: The Conceded Throne. Menuḥah as Terminus, the Monarchy a | `10.5281/zenodo.22193264` | 1 | [ia](https://archive.org/details/a-shoot-from-a-felled-stump-conceded-throne) | 2026-08-31 |
 | `unlettered-regenerative-floor` | Unlettered Regenerative Floor: The Articulatory-Auditory Floor Beneath Descent and an | `10.5281/zenodo.22167461` | 1 | [ia](https://archive.org/details/unlettered-regenerative-floor-islam-2026) | 2026-08-29 |
 | `custody-cycle-most-high` | The Custody Cycle of the Most High: Investiture, Disclosure, and the Transfer of the  | `10.5281/zenodo.22142046` | 1 | [ia](https://archive.org/details/custody-cycle-most-high) | 2026-08-28 |
