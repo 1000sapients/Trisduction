@@ -1,0 +1,183 @@
+/* ===================================================================
+   JOURNAL  ·  Professional Journal Paper stylesheet  (WeasyPrint-validated)
+   Serif two-column journal page · accent masthead + running rule · large
+   serif title with superscript-affiliated authors · bold abstract · drop-cap
+   intro · flush-left bold heads · superscript citations + dense reference
+   list · tinted Box N panels · Fig. N / Table N captions · citation footer
+   =================================================================== */
+
+:root{
+  --serif:'EBGaramond','EB Garamond','Noto Sans Math','Liberation Serif','Noto Serif','DejaVu Serif','FreeSerif',serif;
+  --sans:'TBSans','Archivo','Liberation Sans','Noto Sans','DejaVu Sans','FreeSans',sans-serif;
+  --ink:#1a1a1a; --soft:#404040; --faint:#6f6f6f; --rule:#cccccc;
+  --accent:#A0182B; --deep:#74111F; --tint:#FBEDEF; --band:#F4DEE2;
+}
+.acc-crimson{--accent:#A0182B;--deep:#74111F;--tint:#FBEDEF;--band:#F4DEE2;}
+.acc-copper {--accent:#B87333;--deep:#8a5523;--tint:#FAF3EA;--band:#EFE0CF;}
+.acc-slate  {--accent:#2C3E50;--deep:#1b2733;--tint:#ECEFF2;--band:#D8DEE4;}
+.acc-navy   {--accent:#1F3A66;--deep:#142845;--tint:#EAEEF5;--band:#D3DCEA;}
+.acc-forest {--accent:#1F5C3D;--deep:#143f29;--tint:#E9F2EC;--band:#D2E5D9;}
+.acc-plum   {--accent:#5E2A5E;--deep:#411d41;--tint:#F2ECF2;--band:#E2D2E2;}
+
+/* ---------------- page geometry + furniture ---------------- */
+@page{
+  size:612pt 792pt; margin:58pt 54pt 62pt 54pt;
+  @top-left{ content:string(jtype); font-family:var(--sans); font-size:7.6pt; font-weight:800;
+    color:var(--deep); text-transform:uppercase; letter-spacing:.08em; vertical-align:bottom; padding-bottom:4pt; }
+  @top-right{ content:string(jname); font-family:var(--sans); font-size:7.6pt; font-weight:800;
+    color:var(--deep); text-transform:uppercase; letter-spacing:.08em; vertical-align:bottom; padding-bottom:4pt; }
+  @bottom-left{ content:string(jfoot); font-family:var(--serif); font-size:7.4pt; color:var(--faint);
+    vertical-align:top; padding-top:5pt; }
+  @bottom-right{ content:counter(page); font-family:var(--sans); font-size:8.4pt; font-weight:700;
+    color:var(--deep); vertical-align:top; padding-top:5pt; }
+}
+@page:first{ @top-left{content:none} @top-right{content:none} }
+
+html{ font-family:var(--serif); font-size:9.1pt; color:var(--ink); line-height:1.36; }
+body{ margin:0; string-set:jname string(jnameRaw), jtype string(jtypeRaw), jfoot string(jfootRaw); }
+p{ margin:0 0 5.5pt; text-align:justify; hyphens:auto; orphans:2; widows:2; }
+sup{ font-size:.66em; line-height:0; vertical-align:super; }
+strong,b{ font-weight:800; } em,i{ font-style:italic; }
+a{ color:var(--accent); text-decoration:none; } .xref{ color:var(--accent); }
+ul,ol{ margin:3pt 0 6pt 14pt; padding:0; } li{ margin:0 0 3pt; }
+ul{ list-style:none; } ul>li::before{ content:"\2022\00A0"; color:var(--accent); margin-left:-11pt; }
+
+/* hidden string carriers (set running header/footer text) */
+.smeta{ position:absolute; left:-9999pt; top:0; height:0; overflow:hidden; }
+.jnameRaw{ string-set:jnameRaw content(); } .jtypeRaw{ string-set:jtypeRaw content(); }
+.jfootRaw{ string-set:jfootRaw content(); }
+
+/* ---------------- MASTHEAD ---------------- */
+.masthead{ display:flex; align-items:flex-end; justify-content:space-between;
+  border-bottom:2.4pt solid var(--accent); padding-bottom:5pt; margin:0 0 13pt; }
+.masthead .mark{ font-family:var(--serif); font-weight:800; font-size:20pt; line-height:.9; color:var(--ink); letter-spacing:-.01em; }
+.masthead .mark .lite{ font-weight:400; }
+.masthead .right{ text-align:right; flex-shrink:1; min-width:0; max-width:64%; }
+.masthead .atype{ font-family:var(--sans); font-weight:800; font-size:11pt; color:var(--accent);
+  text-transform:uppercase; letter-spacing:.04em; white-space:nowrap; }
+.masthead .agoal{ font-family:var(--sans); font-weight:600; font-size:7.5pt; color:var(--accent);
+  text-transform:uppercase; letter-spacing:.02em; margin-top:1.5pt; white-space:nowrap; }
+.masthead .doi{ font-family:var(--sans); font-size:6.8pt; color:var(--faint); margin-top:2pt; white-space:nowrap; }
+/* masthead brevity net (III·J.2): the engine tags an over-long line .t1 or .t2 and
+   the type steps down rather than crowding the wordmark. The cap is the fix. */
+.masthead .atype.t1{ font-size:9.6pt; }
+.masthead .atype.t2{ font-size:8.4pt; letter-spacing:.02em; }
+.masthead .agoal.t1{ font-size:7pt; }
+.masthead .agoal.t2{ font-size:6.4pt; letter-spacing:.01em; }
+.masthead .doi.t1{ font-size:6.2pt; }
+.masthead .doi.t2{ font-size:5.8pt; }
+
+/* ---------------- TITLE BLOCK (spans full width) ---------------- */
+.titleblock{ margin:0 0 12pt; }
+.titleblock h1.jtitle{ font-family:var(--serif); font-weight:800; font-size:25pt; line-height:1.06;
+  color:var(--ink); margin:0 0 9pt; letter-spacing:-.005em; }
+.titleblock .jsubtitle{ font-family:var(--serif); font-weight:500; font-style:italic; font-size:13pt; line-height:1.25;
+  color:var(--accent); margin:-3pt 0 10pt; }
+.titleblock .authors{ font-family:var(--serif); font-size:11pt; line-height:1.4; color:var(--ink); margin:0 0 6pt; }
+.titleblock .authors sup{ color:var(--accent); font-weight:700; }
+.affil{ font-family:var(--serif); font-size:7.8pt; line-height:1.32; color:var(--soft); text-align:justify; margin:0 0 9pt; }
+.affil sup{ color:var(--accent); }
+.affil .corr{ color:var(--deep); }
+
+.abstract{ font-family:var(--serif); font-weight:700; font-size:10.2pt; line-height:1.4; color:var(--ink);
+  text-align:justify; border-top:0.8pt solid var(--rule); border-bottom:0.8pt solid var(--rule);
+  padding:9pt 0; margin:0 0 13pt; }
+.kwline{ font-family:var(--sans); font-size:8pt; color:var(--soft); margin:-7pt 0 13pt; }
+.kwline .lab{ font-weight:800; color:var(--deep); text-transform:uppercase; letter-spacing:.04em; }
+
+/* ---------------- TWO-COLUMN BODY ---------------- */
+.cols{ column-count:2; column-gap:20pt; column-rule:0.4pt solid #e4e4e4; }
+
+/* drop cap on the lead paragraph */
+p.lead{ text-align:justify; }
+p.lead::first-letter{ font-family:var(--serif); font-weight:800; color:var(--accent);
+  font-size:2.7em; line-height:0.8; }
+
+/* ---------------- heading ladder ---------------- */
+h2{ font-family:var(--sans); font-weight:800; font-size:10.4pt; color:var(--accent);
+  margin:12pt 0 4pt; line-height:1.16; break-after:avoid; }
+h2 .num{ color:var(--accent); margin-right:6pt; }
+h3{ font-family:var(--sans); font-weight:800; font-size:9.3pt; color:var(--ink);
+  margin:9pt 0 3pt; break-after:avoid; }
+h3 .num{ color:var(--deep); margin-right:6pt; }
+h4{ font-family:var(--serif); font-weight:800; font-style:italic; font-size:9.3pt; color:var(--ink);
+  margin:7pt 0 2pt; break-after:avoid; }
+.runin{ font-family:var(--serif); font-weight:800; font-style:italic; color:var(--ink); }
+
+/* ---------------- BOX  (Box N | Title) ---------------- */
+.jbox{ break-inside:avoid; background:var(--tint); border-top:2pt solid var(--accent);
+  padding:7pt 9pt 8pt; margin:9pt 0; box-decoration-break:clone; }
+.jbox.flow{ break-inside:avoid; }
+.jbox.flow table{ break-inside:avoid; } .jbox.flow thead{ display:table-header-group; }
+.jbox .jbh{ font-family:var(--sans); font-weight:800; font-size:9pt; color:var(--deep);
+  margin:0 0 5pt; text-transform:none; break-after:avoid; }
+.jbox .jbh .lab{ color:var(--accent); }
+.jbox p{ font-size:8.4pt; text-align:justify; margin:0 0 4pt; orphans:2; widows:2; }
+.jbox ul{ margin:2pt 0 0 13pt; } .jbox ul>li::before{ color:var(--accent); }
+.jbox table{ width:100%; border-collapse:collapse; font-size:7.9pt; margin:2pt 0; }
+.jbox thead th{ text-align:left; font-weight:800; color:var(--deep); border-bottom:1pt solid var(--accent); padding:3pt 5pt; }
+.jbox tbody td{ padding:3pt 5pt; border-bottom:0.4pt solid var(--rule); vertical-align:top; word-wrap:break-word; overflow-wrap:break-word; hyphens:none; }
+.jbox .tnote{ font-size:7.2pt; color:var(--soft); font-style:italic; padding-top:3pt; }
+.jspan{ column-span:all; break-inside:avoid; }
+
+/* small-print aside */
+.aside{ font-size:8.2pt; color:var(--soft); text-align:justify; margin:5pt 0; }
+.aside::before{ content:"\25AA\2002"; color:var(--accent); font-size:6.6pt; }
+
+/* ---------------- TABLE (Table N | Title) ---------------- */
+.jtable{ margin:9pt 0; break-inside:avoid; }
+.jtable .tcap{ font-family:var(--sans); font-weight:800; font-size:8.6pt; color:#fff; background:var(--accent);
+  padding:3.5pt 7pt; }
+.jtable .tcap .lab{ color:#fff; }
+.jtable table{ width:100%; border-collapse:collapse; font-family:var(--serif); font-size:8.1pt; }
+.jtable thead th{ background:var(--band); color:var(--deep); text-align:left; font-weight:800;
+  padding:3.5pt 6pt; border-bottom:1pt solid var(--accent); font-family:var(--sans); font-size:7.7pt; }
+.jtable tbody td{ padding:3.5pt 6pt; border-bottom:0.4pt solid var(--rule); vertical-align:top; word-wrap:break-word; overflow-wrap:break-word; hyphens:none; }
+.jtable tbody tr:nth-child(even) td{ background:#faf7f8; }
+.jtable .tnote{ font-family:var(--serif); font-size:7.2pt; color:var(--soft); padding:3pt 1pt 0; }
+.jtable.span{ column-span:all; break-inside:avoid; }
+.jtable thead{ display:table-header-group; }
+
+/* ---------------- FIGURE (Fig. N | caption) ---------------- */
+.jfig{ break-inside:avoid; margin:10pt 0; }
+.jfig .frame{ background:#fff; padding:0; text-align:center; }
+.jfig img{ max-width:100%; height:auto; }
+.jfig figcaption{ font-family:var(--serif); font-size:7.9pt; line-height:1.34; color:var(--soft);
+  margin-top:5pt; text-align:justify; }
+.jfig figcaption .flab{ font-family:var(--sans); font-weight:800; color:var(--accent); }
+.jfig.span{ column-span:all; }
+
+/* ---------------- REFERENCES (dense, numbered, in-flow) ---------------- */
+h2.refhead{ font-family:var(--sans); font-weight:800; font-size:9.2pt; color:var(--ink);
+  border-top:0.8pt solid var(--rule); padding-top:5pt; margin:11pt 0 4pt; }
+ol.refs{ margin:0; padding:0; list-style:none; counter-reset:ref; }
+ol.refs li{ font-family:var(--serif); font-size:7.5pt; line-height:1.3; color:var(--soft);
+  padding-left:14pt; text-indent:-14pt; margin:0 0 3pt; text-align:justify; }
+ol.refs li::before{ counter-increment:ref; content:counter(ref) ". "; font-weight:700; color:var(--ink); }
+
+/* ---------------- author block / end matter ---------------- */
+.endmatter{ border-top:0.8pt solid var(--rule); margin-top:11pt; padding-top:7pt; }
+.endmatter h3{ font-family:var(--sans); font-weight:800; font-size:8.4pt; color:var(--ink); margin:6pt 0 2pt; }
+.endmatter p{ font-size:7.8pt; color:var(--soft); }
+
+/* ---------------- table of contents (rarely used) ---------------- */
+.toc{ break-after:page; } .toc h1{ font-family:var(--sans); font-size:15pt; font-weight:800; color:var(--accent); }
+/* --- book-like structure: full-width book heads on new pages, a Contents section on its own page --- */
+h1.book{ break-before:page; break-after:avoid; font-family:var(--serif); font-weight:700; font-size:21pt; line-height:1.15;
+  color:var(--accent); margin:14pt 0 8pt; padding-bottom:6pt; border-bottom:1.2pt solid var(--accent); column-span:all; }
+h1.book.toc{ font-size:17pt; }
+.booksub{ font-family:var(--serif); font-style:italic; font-size:12.5pt; color:var(--ink); margin:-2pt 0 10pt; column-span:all; }
+section.toc{ break-after:page; }
+section.toc .toccols ol{ margin:2pt 0 4pt 22pt; padding:0; font-size:8.4pt; line-height:1.3; }
+section.toc .toccols ol>li{ margin:0 0 1pt; padding-left:2pt; }
+section.toc .toccols p{ margin:6pt 0 2pt; text-align:left; font-size:8.6pt; }
+section.toc .toccols p strong{ font-family:var(--sans); font-weight:800; color:var(--deep); }
+section.toc .toccols p:first-child::first-letter{ font-size:inherit; float:none; }
+ol.numtext{ list-style:none; margin:3pt 0 6pt 0; padding:0; }
+ol.numtext>li{ padding-left:20pt; text-indent:-20pt; margin:0 0 2pt; }
+ol.numtext>li .ln{ display:inline-block; width:17pt; margin-right:3pt; text-align:right; text-indent:0; font-weight:700; color:var(--deep); }
+section.toc .toccols ol.numtext{ margin:2pt 0 4pt 0; }
+.jtable.jspan{ column-span:none; break-inside:auto; margin:10pt 0 12pt; }
+.jtable.jspan table{ break-inside:auto; width:100%; font-size:7.9pt; }
+.jtable.jspan thead{ display:table-header-group; } .jtable.jspan tr{ break-inside:avoid; }
+.jtable.jspan tbody td{ vertical-align:top; padding:3pt 6pt; }

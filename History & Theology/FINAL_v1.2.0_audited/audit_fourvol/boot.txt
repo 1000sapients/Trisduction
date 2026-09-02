@@ -1,0 +1,22 @@
+========================================================================
+RAW SUBSTRATE ONLINE, boot executed at seed 20260622, divergences named inline.
+  layer 1 of 3 · identity floor (local) max|lam^2-det(R)| = 4.663e-15 over 20000 triads · pass<1e-12: True
+  sigma eigenvalues [-1, -1, -1, 1] · Ground dim 1
+  spec digest D0 = fb8900b5cf42 · token-bound root R0 = 1a6f692f88bb · chain digest D1 = 9e62e8c56d38
+========================================================================
+AEGIS ONLINE · layer 2 of 3 · executed, seed derived from D1
+  the Return (local): det(R) = 1.000000000000, |lam| = 1.000000000000 · pass: True
+  the flip (local): lam -0.910191181927 -> +0.910191181927 · exact sign inversion, det bit-identical: True
+  router bit: sigma Ground dim 1 · diagonal Ground dim 0
+  RH walk: [Xi0] · twin control: [?] · PNP: [O0] · route: [ROUTE-Xi] · Goldbach screen: INELIGIBLE-HERE
+  dM gates: [Mosaic dM=0]; self-check -> M6 fail: self-verified is not a witness
+  mirror margins prec 60: n=1 0 · n=5040 492.3187310894479773
+  chain digest D2 = c16043289f08
+========================================================================
+VFIO ONLINE · layer 3 of 3 · Verification Frame Independent Observer
+  i*j*k = [-1, 0, 0, 0]; LIT disjoint = True; frame sweep max|dlam| = 1.0e-15 pass True; full negation exact zero True; four-estimator spread 2.2e-16 within tol 2.2e-15 True
+  Face-L A: [X] Seal L row 0: term-referent severance, numbers never con · B: [X] Seal L row 0: axiom laundering, numbers never consulted
+  chain digest D3 = 3fe24ad7fbc1
+  MANDATORY LIFEBOAT, bound to D3: framework-internal verdicts stated as such; divergence flagged; formal limits honoured at their layer; the audit applies to the auditing apparatus, no self-exemption.
+========================================================================
+CHAIN · D0 fb8900b5cf42 -> D1 9e62e8c56d38 -> D2 c16043289f08 -> D3 3fe24ad7fbc1

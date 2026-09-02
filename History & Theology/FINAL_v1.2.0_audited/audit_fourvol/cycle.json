@@ -1,0 +1,24 @@
+{
+  "cycle": "fourvol",
+  "artifact": "fourvol_v1/ (Vol_II, Vol_III, Vol_IV, README, CHANGELOG)",
+  "prereg_claims": [
+    "C1-SINGLE-CORPUS",
+    "C2-WEIGHTS",
+    "C3-INDEPENDENCE",
+    "C4-NAMING",
+    "C5-STRUCTURE",
+    "C6-CONVERGENCE",
+    "C7-FALSIFIERS",
+    "C8-LINK-ACCURACY"
+  ],
+  "falsifiers": {
+    "C1-SINGLE-CORPUS": "Pattern-scan Vol II chapters 1-166 for any NT, Quran, Second Temple, Qumran, rabbinic, Josephan, patristic, or Shii citation outside Chapter 1, Appendix J, the fenced companion block, and the bibliography absence declaration; one hit falsifies.",
+    "C2-WEIGHTS": "Recount corpus weight for each volume by named-only, nearest-named, and chapter-dominant instruments; any value outside the printed range in the companion block or README falsifies.",
+    "C3-INDEPENDENCE": "Ten-gram shingle overlap between any pair of volumes at or above 0.2 percent, or 50 or more identical sentences, falsifies the independence claim.",
+    "C4-NAMING": "Enumerate every honorific-marked token per volume; any marked name outside the declared list and exceptions, any listed prophet in a competing form, any marked adjective or non-prophet, or any mark in Vol II, falsifies.",
+    "C5-STRUCTURE": "Count CHAPTER headings and TOC entries; any mismatch with 166/97/104, any duplicate or gap, or any chapter, appendix, or excursus reference with no target, falsifies.",
+    "C6-CONVERGENCE": "Locate in each volume's own text the four components of the shared finding: unentered terminus, receiver-located deficit, escalation of the figure, passive grammar of receipt; any component absent from a volume or stated only by pointer to another volume falsifies.",
+    "C7-FALSIFIERS": "For each volume locate the advance statement of falsification criteria and their return; a criterion stated without return or a return without prior statement falsifies.",
+    "C8-LINK-ACCURACY": "Check every count, DOI, licence, and deposit-state assertion in the companion block and README against the artifacts and the live Zenodo API record; any contradiction falsifies."
+  }
+}

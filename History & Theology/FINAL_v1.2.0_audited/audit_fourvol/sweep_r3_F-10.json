@@ -1,0 +1,8 @@
+{
+ "banned": [
+  "Every non-Hebrew corpus name in the file sits inside Chapter 1, Appendix J, the front-matter companion block, or the bibliography's absence declaration."
+ ],
+ "required": [
+  "Every non-Hebrew corpus name in the file sits in a scope declaration and never in a citation: the front-matter note, Chapter 1, Chapter 5, the correction stanza of Appendix I, Appendix J, the fenced companion block, and the bibliography's absence declaration."
+ ]
+}
