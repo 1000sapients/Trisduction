@@ -1874,17 +1874,17 @@
     ]
    },
    "zenodo": {
-    "conceptrecid": null,
-    "concept_doi": null,
-    "latest_version_doi": null,
-    "latest_record": null,
-    "versions": 0,
-    "state": "not-deposited"
+    "conceptrecid": "22241845",
+    "concept_doi": "10.5281/zenodo.22241845",
+    "latest_version_doi": "10.5281/zenodo.22241846",
+    "latest_record": 22241846,
+    "versions": 1,
+    "state": "published"
    },
    "ia": {
-    "identifier": null,
-    "url": null,
-    "state": "not-deposited"
+    "identifier": "freedom-fibre-invariant-map-islam-2026",
+    "url": "https://archive.org/details/freedom-fibre-invariant-map-islam-2026",
+    "state": "live"
    },
    "philarchive": {
     "record": null,
