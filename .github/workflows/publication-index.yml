@@ -1,0 +1,35 @@
+name: publication index
+
+# Reconciles publication/trisduction_ledger.json against the live surfaces.
+# The ledger is hand-maintained, so it can go stale silently. This makes it loud.
+on:
+  push:
+    paths:
+      - 'publication/trisduction_ledger.json'
+      - 'PUBLICATION_INDEX.md'
+      - 'tools/publication_index.py'
+  schedule:
+    - cron: '17 6 * * 1'      # Mondays, 06:17 UTC
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Index is in sync with the ledger
+        run: |
+          python3 tools/publication_index.py --build
+          if ! git diff --quiet -- PUBLICATION_INDEX.md; then
+            echo "::error::PUBLICATION_INDEX.md is out of date. Run: python3 tools/publication_index.py --build"
+            git --no-pager diff -- PUBLICATION_INDEX.md | head -60
+            exit 1
+          fi
+          echo "index matches the ledger"
+
+      - name: Reconcile against live surfaces
+        run: python3 tools/publication_index.py --verify
