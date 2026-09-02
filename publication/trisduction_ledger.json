@@ -1858,6 +1858,42 @@
    "extra": {
     "provenance": "recovered from a private working archive, 2026-09-01"
    }
+  },
+  "freedom-fibre-invariant-map": {
+   "title": "Freedom as the Fibre of an Invariant Map: Freedom as a Conserved Quantity, the Dimension That Fixes Its Terminus, and the Discipline That Licenses Its Use",
+   "domain": "Freedom and Free Will",
+   "status": "live",
+   "first_published": "2026-09-02",
+   "last_updated": "2026-09-02",
+   "git": {
+    "md": "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map.md",
+    "pdf": "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map.pdf",
+    "editions": [
+     "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map - Codex Register Edition.md",
+     "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map - Codex Register Edition.pdf"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Two editions from one sealed master. The public edition and the codex register edition differ in vocabulary only; every structural count, every numerical value and every warrant grade is identical across them. Battery seed 20260622, digest a69fc80bfe2440f4.",
+   "extra": {}
   }
  }
 }
