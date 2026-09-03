@@ -1,7 +1,7 @@
 {
  "schema": "trisduction-unified-permanence-ledger/2",
  "_note": "Work key to every surface. The only record that a work already owns an address. Single source for PUBLICATION_INDEX.md, which is generated from this file by tools/publication_index.py and must never be hand-edited. Edit here, then rebuild.",
- "_consolidated": "2026-09-01",
+ "_consolidated": "2026-09-03",
  "_supersedes": [
   "/trisduction_ledger.json (flat schema, 9 works)",
   "publication/trisduction_ledger.json schema /1 (1 work)"
@@ -1894,6 +1894,165 @@
    "superseded_by": null,
    "note": "Two editions from one sealed master. The public edition and the codex register edition differ in vocabulary only; every structural count, every numerical value and every warrant grade is identical across them. Battery seed 20260622, digest a69fc80bfe2440f4.",
    "extra": {}
+  },
+  "critical-history-israel-judah-successors": {
+   "title": "A Critical History of Israel, Judah, and Their Successors: A Geopolitical and Archaeological Audit from the Amorite Migrations to the Founding of Baghdad",
+   "domain": "History",
+   "status": "live",
+   "first_published": "2026-09-02",
+   "last_updated": "2026-09-02",
+   "git": {
+    "md": "History & Theology/FINAL_v1.2.0_audited/Vol_I_Critical_History_Israel_Judah_Successors_a.md",
+    "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_I_Critical_History_Israel_Judah_Successors_a.pdf",
+    "editions": [
+     "audited"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 22243673,
+    "concept_doi": "10.5281/zenodo.22243673",
+    "latest_version_doi": "10.5281/zenodo.22243674",
+    "latest_record": 22243674,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "critical-history-israel-judah-successors-islam-2026",
+    "url": "https://archive.org/details/critical-history-israel-judah-successors-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Volume I of the four-volume set; the ground floor. Zenodo record edited by hand on 2026-09-02 to carry the audited render (md5 455676d8…, identical to git). The IA item still holds the pre-audit Publication Edition PDF and is owed a replace.",
+   "extra": {
+    "set": "four-volumes",
+    "volume": "I",
+    "md5_zenodo": "455676d85d9b5066"
+   }
+  },
+  "the-conceded-throne": {
+   "title": "The Conceded Throne: The Unentered Rest, the Requested King, and the Escalation That Answered the Wrong Question",
+   "domain": "History",
+   "status": "live",
+   "first_published": "2026-09-03",
+   "last_updated": "2026-09-03",
+   "git": {
+    "md": "History & Theology/FINAL_v1.2.0_audited/Vol_II_The_Conceded_Throne_a.md",
+    "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_II_The_Conceded_Throne_a.pdf",
+    "editions": [
+     "audited"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": "22267610",
+    "concept_doi": "10.5281/zenodo.22267610",
+    "latest_version_doi": "10.5281/zenodo.22267611",
+    "latest_record": 22267611,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "the-conceded-throne-islam-2026",
+    "url": "https://archive.org/details/the-conceded-throne-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Volume II of the four-volume set, audited edition 1.2.1; cycle fourvol SEALED-ROUND. IA copy is the qpdf-uncompressed serialization, md5 1770f5c21bd828ff…, content identical to git and Zenodo. Not a version of a-shoot-from-a-felled-stump (concept 22193264), the article-length precursor; two works, linked by related identifier.",
+   "extra": {
+    "set": "four-volumes",
+    "volume": "II",
+    "md5_git_zenodo": "debdb1398d7724fd",
+    "md5_ia": "1770f5c21bd828ff"
+   }
+  },
+  "history-of-the-messianic-position": {
+   "title": "History of the Messianic Position in the Jewish, Christian, and Qurʾānic Records: The Figure Grows. The Deficit Does Not Move.",
+   "domain": "History",
+   "status": "live",
+   "first_published": "2026-09-03",
+   "last_updated": "2026-09-03",
+   "git": {
+    "md": "History & Theology/FINAL_v1.2.0_audited/Vol_III_History_of_the_Messianic_Position_a.md",
+    "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_III_History_of_the_Messianic_Position_a.pdf",
+    "editions": [
+     "audited"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": "22267614",
+    "concept_doi": "10.5281/zenodo.22267614",
+    "latest_version_doi": "10.5281/zenodo.22267615",
+    "latest_record": 22267615,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "history-of-the-messianic-position-islam-2026",
+    "url": "https://archive.org/details/history-of-the-messianic-position-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Volume III of the four-volume set, audited edition 1.2.1; cycle fourvol SEALED-ROUND. IA copy is the qpdf-uncompressed serialization, md5 2ef7174779a772d5…, content identical to git and Zenodo.",
+   "extra": {
+    "set": "four-volumes",
+    "volume": "III",
+    "md5_git_zenodo": "f5964773fac10a23",
+    "md5_ia": "2ef7174779a772d5"
+   }
+  },
+  "the-office-of-the-messiah": {
+   "title": "The Office of the Messiah: A History of the Position Across the Hebrew, Gospel, and Qurʾānic Records",
+   "domain": "History",
+   "status": "live",
+   "first_published": "2026-09-03",
+   "last_updated": "2026-09-03",
+   "git": {
+    "md": "History & Theology/FINAL_v1.2.0_audited/Vol_IV_The_Office_of_the_Messiah_a.md",
+    "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_IV_The_Office_of_the_Messiah_a.pdf",
+    "editions": [
+     "audited"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": "22267616",
+    "concept_doi": "10.5281/zenodo.22267616",
+    "latest_version_doi": "10.5281/zenodo.22267617",
+    "latest_record": 22267617,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "the-office-of-the-messiah-islam-2026",
+    "url": "https://archive.org/details/the-office-of-the-messiah-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Volume IV of the four-volume set, audited edition 1.2.1; cycle fourvol SEALED-ROUND. IA copy is the qpdf-uncompressed serialization, md5 9918172d8fd65e10…, content identical to git and Zenodo.",
+   "extra": {
+    "set": "four-volumes",
+    "volume": "IV",
+    "md5_git_zenodo": "c7c485414df3849c",
+    "md5_ia": "9918172d8fd65e10"
+   }
   }
  }
 }

@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**53 works · 73 Zenodo deposits.**
+**58 works · 78 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 47 / 53 | 88% |
-| Git PDF | 23 / 53 | 43% |
-| Internet Archive | 10 / 53 | 18% |
-| PhilArchive | 3 / 53 | 5% |
+| Zenodo | 52 / 58 | 89% |
+| Git PDF | 28 / 58 | 48% |
+| Internet Archive | 15 / 58 | 25% |
+| PhilArchive | 4 / 58 | 6% |
 
-Status: 53 live.
+Status: 58 live.
 
 ## Coverage gaps
 
@@ -128,6 +128,11 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `the-office-of-the-messiah` | The Office of the Messiah: A History of the Position Across the Hebrew, Gospel, and Qurʾānic Re | History | live | [pdf](History%20&%20Theology/FINAL_v1.2.0_audited/Vol_IV_The_Office_of_the_Messiah_a.pdf) | `10.5281/zenodo.22267616` | 1 | [ia](https://archive.org/details/the-office-of-the-messiah-islam-2026) | — | 2026-09-03 |
+| `the-conceded-throne` | The Conceded Throne: The Unentered Rest, the Requested King, and the Escalation That Answered t | History | live | [pdf](History%20&%20Theology/FINAL_v1.2.0_audited/Vol_II_The_Conceded_Throne_a.pdf) | `10.5281/zenodo.22267610` | 1 | [ia](https://archive.org/details/the-conceded-throne-islam-2026) | — | 2026-09-03 |
+| `history-of-the-messianic-position` | History of the Messianic Position in the Jewish, Christian, and Qurʾānic Records: The Figure Gr | History | live | [pdf](History%20&%20Theology/FINAL_v1.2.0_audited/Vol_III_History_of_the_Messianic_Position_a.pdf) | `10.5281/zenodo.22267614` | 1 | [ia](https://archive.org/details/history-of-the-messianic-position-islam-2026) | — | 2026-09-03 |
+| `freedom-fibre-invariant-map` | Freedom as the Fibre of an Invariant Map: Freedom as a Conserved Quantity, the Dimension That F | Freedom and Free Will | live | [pdf](Publication%20Library/Philosophy/Metaphysics/Free%20Will%20and%20Freedom/Freedom%20as%20the%20Fibre%20of%20an%20Invariant%20Map.pdf) | `10.5281/zenodo.22241845` | 1 | [ia](https://archive.org/details/freedom-fibre-invariant-map-islam-2026) | ISLFAT | 2026-09-02 |
+| `critical-history-israel-judah-successors` | A Critical History of Israel, Judah, and Their Successors: A Geopolitical and Archaeological Au | History | live | [pdf](History%20&%20Theology/FINAL_v1.2.0_audited/Vol_I_Critical_History_Israel_Judah_Successors_a.pdf) | `10.5281/zenodo.22243673` | 1 | [ia](https://archive.org/details/critical-history-israel-judah-successors-islam-2026) | — | 2026-09-02 |
 | `the-two-waters` | The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwe | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Quran/Thematic%20Studies/The%20Two%20Waters/The%20Two%20Waters.pdf) | — | — | — | — | 2026-09-01 |
 | `platonic-ghost-divided-line` | Plato's Divided Line: The Platonic Ghost and the Golden Shadow | Verification Architecture | live | [pdf](Publication%20Library/Philosophy/Philosophy%20of%20Mathematics/Platonic%20Ghost/The%20Platonic%20Ghost%20and%20the%20Golden%20Shadow.pdf) | — | — | — | — | 2026-09-01 |
 | `on-the-ninth-gate` | On the Ninth Gate: A Trisductive Account of the Sole Aperture of Return, the Identity of the On | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Quran/Thematic%20Studies/The%20Ninth%20Gate/On%20the%20Ninth%20Gate.pdf) | — | — | — | — | 2026-09-01 |
