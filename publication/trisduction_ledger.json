@@ -1900,7 +1900,7 @@
    "domain": "History",
    "status": "live",
    "first_published": "2026-09-02",
-   "last_updated": "2026-09-02",
+   "last_updated": "2026-09-03",
    "git": {
     "md": "History & Theology/FINAL_v1.2.0_audited/Vol_I_Critical_History_Israel_Judah_Successors_a.md",
     "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_I_Critical_History_Israel_Judah_Successors_a.pdf",
@@ -1919,7 +1919,7 @@
    "ia": {
     "identifier": "critical-history-israel-judah-successors-islam-2026",
     "url": "https://archive.org/details/critical-history-israel-judah-successors-islam-2026",
-    "state": "live"
+    "state": "replace-pending"
    },
    "philarchive": {
     "record": null,
@@ -1927,11 +1927,13 @@
    },
    "supersedes": null,
    "superseded_by": null,
-   "note": "Volume I of the four-volume set; the ground floor. Zenodo record edited by hand on 2026-09-02 to carry the audited render (md5 455676d8…, identical to git). The IA item still holds the pre-audit Publication Edition PDF and is owed a replace.",
+   "note": "Volume I of the four-volume set; the ground floor. Zenodo record edited by hand on 2026-09-02 to carry the audited render (md5 455676d8…, identical to git). IA replace begun 2026-09-03 05:06 UTC: the audited render Vol_I_Critical_History_Israel_Judah_Successors_a.pdf, qpdf-uncompressed serialization 41,392,684 bytes md5 ca3940d85c84f2af…, was PUT to the item and accepted (HTTP 200, archive.php s3-put task queued behind a derive task from 2026-09-02); it had not appeared in the item's file list after two verification windows, so the pre-audit Publication Edition PDF (md5 e0f746f6…) was NOT deleted. Owed: verify the new file to LANDED, then delete the old with cascade, then patch date, subject tokens, and the ELSEWHERE block.",
    "extra": {
     "set": "four-volumes",
     "volume": "I",
-    "md5_zenodo": "455676d85d9b5066"
+    "md5_zenodo": "455676d85d9b5066",
+    "md5_ia_pending": "ca3940d85c84f2af",
+    "md5_ia_old": "e0f746f6"
    }
   },
   "the-conceded-throne": {
