@@ -135,6 +135,18 @@ def what_of(full, kind):
             head = open(full, encoding="utf-8", errors="replace").read(6000)
             m = re.search(r"<title>(.*?)</title>", head, re.S|re.I)
             return re.sub(r"\s+"," ",m.group(1)).strip() if m else _first_line(re.sub(r"<[^>]+>"," ",head))
+        if kind == "docx":
+            import zipfile, html
+            with zipfile.ZipFile(full) as z:
+                names = set(z.namelist())
+                if "docProps/core.xml" in names:
+                    m = re.search(r"<dc:title>(.*?)</dc:title>", z.read("docProps/core.xml").decode("utf-8", "replace"), re.S)
+                    if m and m.group(1).strip(): return html.unescape(m.group(1).strip())
+                xml = z.read("word/document.xml").decode("utf-8", "replace")
+            for para in re.findall(r"<w:p[ >].*?</w:p>", xml, re.S):
+                t = html.unescape("".join(re.findall(r"<w:t[^>]*>(.*?)</w:t>", para, re.S))).strip()
+                if t: return re.sub(r"\s+", " ", t)
+            return "-"
         if kind == "zip":
             import zipfile
             with zipfile.ZipFile(full) as z: return f"zip: {len(z.namelist())} entries"
@@ -163,6 +175,7 @@ def main():
     d = a.clone_dir or f"/tmp/ix_{a.repo.replace('/', '_')}"
     head = clone(a.repo, d, a.no_fetch)
     t = tree(d); mv = moved(d)
+    t.pop("INDEX.md", None)   # the index never indexes its own blob; its id changes on every regeneration
     bad = [p for p in t if " | " in p]
     if bad: sys.exit("HALT paths contain the field separator ' | ': " + "; ".join(bad))
     snap = read_snapshot(a.out)
