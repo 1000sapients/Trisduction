@@ -3,7 +3,9 @@ name: trisduction-publication-automation
 description: "Single governance layer for every write to git (1000sapients/Trisduction public, Trisduction/Knowledge-Base private), the Internet Archive, Zenodo, ORCID, PhilPapers. Fires on push, commit, publish, upload to IA, mint a DOI, new version, update master codex, file this paper, index, [PUB]. Seven laws: L1 Confirmation Gate, no write without an explicit yes to a printed plan; L2 Credential Containment, keys by environment reference only; L3 Identifier Permanence; L4 Version Discipline, git wants history, the archive does not; L5 Source Direction, git canonical; L6 Corpus Integrity, no hard delete without a named override; L7 the Index Law, the root INDEX.md of each target is checked first in every git turn and every push is two components, the artifact commit and the telegraphic snapshot line, the MAP regenerated from a full read of the tree. One work key, one ledger, one index per target. Fourteen live-tested tools."
 ---
 
-# TRISDUCTION PUBLICATION AUTOMATION · The Unified Governance Layer · v2.7.1
+# TRISDUCTION PUBLICATION AUTOMATION · The Unified Governance Layer · v2.7.2
+
+**v2.7.2, the docx branch and the self-line, bought by the private target's own eight.** Two corrections to the builder and no law touched. First, the v2.7.1 note below calls the eight private paths without a `what` binary corpora whose first lines are not sentences. They are eight `.docx` files with titles, and the builder had no branch for the kind, so it never opened them and the seed's claim of a full read was false on exactly that kind. `index_build.py` now reads a `.docx` from the title in `docProps/core.xml`, else from the first non-empty paragraph of `word/document.xml`, standard library only, and the private MAP carries a `what` on 178 of 178. Second, the builder emitted an M line for `INDEX.md` itself, stale by construction since that id changes on every regeneration; the checker already discarded it and the L7 prose already said the index never indexes its own blob, so the builder now drops its own path before the MAP is written and the tool agrees with the text. Both were found by running the tool against a full clone of each target and auditing the rows it left empty, which is the read the law asks for. Two further facts enter the record from the same audit. The public seed push of 2026-09-08 broke the two-component rule it seated: its artifact commits, the three tools and this file, landed after the index commit inside one push with no S lines, so the index read DRIFT 5 at the head it was pushed to, and the repair is the `INDEX` regeneration this edition ships beside, carrying the six owed lines. And the private target's copy of this skill stood at v2.6.0, one minor behind, with no L7, its `versions/` folder using the `SKILL_<name>` stem while the public folder uses `<name>_v`; the two-surface resolve of L4 is three surfaces once the private copy is counted, and the higher tuple still wins. The extraction rule is stated once so no reader has to measure it: a tool file under `tools/` is its fence plus one trailing newline.
 
 **v2.7.1, the seed read whole, and a ghost the tool now refuses.** Three corrections to v2.7.0 before it was ever installed, all bought by building the two seed indexes. First, the frontmatter description exceeded the 1024-character limit and is cut to fit. Second, v2.7.0's builder read git history for dates and blob ids and read no file: its MAP could say where a document was and never what it was. The seed is now built from a full checkout of both targets, every one of 506 public and 178 private files opened, and each M line carries a `what` column read from the file itself: the YAML title or first heading of a Markdown file, the docstring of a script, the header comment of a Fortran file, the schema or title key of a JSON, the `<title>` of an HTML page, the PDF's metadata title with its page count or, where that is empty or a bare filename, the first line of its first page. Five hundred and six of five hundred and six public paths and one hundred seventy of one hundred seventy-eight private paths carry a `what`; the eight that do not are binary corpora whose first lines are not sentences. The full read costs twelve seconds on the public target and is the once-only bootstrap; incremental pushes read only the files they touch. Third, a bootstrap REMOVE line was written with a ghost commit that predated the file it claimed to preserve; git caught it, `cat-file -e` returning absent, and the tool now runs that check itself and halts on it, so a ghost pointer can no longer name a commit where the file is not readable. Two further clauses enter L7 at the architect's instruction: the index check is the **first act** of every git turn, before any read the turn was asked to make, and every git turn that writes ends with its snapshot component, no exceptions and no deferral to a later turn. The prior generator `tools/build_index.py`, found by the full read, is superseded by pointer and not deleted.
 
@@ -3260,6 +3262,18 @@ def what_of(full, kind):
             head = open(full, encoding="utf-8", errors="replace").read(6000)
             m = re.search(r"<title>(.*?)</title>", head, re.S|re.I)
             return re.sub(r"\s+"," ",m.group(1)).strip() if m else _first_line(re.sub(r"<[^>]+>"," ",head))
+        if kind == "docx":
+            import zipfile, html
+            with zipfile.ZipFile(full) as z:
+                names = set(z.namelist())
+                if "docProps/core.xml" in names:
+                    m = re.search(r"<dc:title>(.*?)</dc:title>", z.read("docProps/core.xml").decode("utf-8", "replace"), re.S)
+                    if m and m.group(1).strip(): return html.unescape(m.group(1).strip())
+                xml = z.read("word/document.xml").decode("utf-8", "replace")
+            for para in re.findall(r"<w:p[ >].*?</w:p>", xml, re.S):
+                t = html.unescape("".join(re.findall(r"<w:t[^>]*>(.*?)</w:t>", para, re.S))).strip()
+                if t: return re.sub(r"\s+", " ", t)
+            return "-"
         if kind == "zip":
             import zipfile
             with zipfile.ZipFile(full) as z: return f"zip: {len(z.namelist())} entries"
@@ -3288,6 +3302,7 @@ def main():
     d = a.clone_dir or f"/tmp/ix_{a.repo.replace('/', '_')}"
     head = clone(a.repo, d, a.no_fetch)
     t = tree(d); mv = moved(d)
+    t.pop("INDEX.md", None)   # the index never indexes its own blob; its id changes on every regeneration
     bad = [p for p in t if " | " in p]
     if bad: sys.exit("HALT paths contain the field separator ' | ': " + "; ".join(bad))
     snap = read_snapshot(a.out)
@@ -4128,10 +4143,10 @@ inference is *I have not tested this*, and it is never a rule.
 
 ================================================================
 SKILL: trisduction-publication-automation
-VERSION: 1.3.0
+VERSION: 1.5.2
 BASELINE, measured at this edition and never carried forward:
-  lines 3450 · bytes 255683 · headings 140 · description 1015/1024
-  (measured fresh at 1.3.0; the 1.2.0 figures were stale by 68 lines)
+  lines 4231 · bytes 332106 · headings 153 · description 927/1024
+  (measured fresh at 1.5.2; the 1.3.0 figures were stale by 781 lines)
   heading count method, recorded because the figure is otherwise
   unreproducible: grep -cE '^#{1,6} ', which counts fenced runbook
   comment lines alongside markdown headings. Consistent before and
@@ -4204,6 +4219,7 @@ One line per edit: VERSION · DATE · A additive or NO named
 override · what changed · line delta · architect instruction
 where named-override.
 ----------------------------------------------------------------
+1.5.2 · 2026-09-08 · NO · index_build.py fence replaced: a .docx branch (core.xml title, else the first paragraph) and the builder's own INDEX.md dropped from the MAP; H1 v2.7.1 to v2.7.2; v2.7.2 head stanza added; no law and no other tool touched; description field NOT touched at 927 of 1024. RECORDED NOT FABRICATED: the v2.6.2, v2.6.3, v2.7.0 and v2.7.1 editions carry head stanzas and no footer line, and the VERSION line read 1.3.0 beneath a log whose top entry read 1.4.1; both are restored to one fact at this line and the gap stands on the record. Pre-edit 4215 lines, 328385 bytes, 153 headings; post-edit figures in the BASELINE line · architect instruction 2026-09-08, verbatim: Y to "Stage the full all-clear batch now (skill v2.7.2 with the docx branch, private skill sync, pointer lines, both indexes) so it is push-ready the moment both repositories are added to this session's sources?"
 1.4.1 · 2026-08-30 · A · PATCH from a live run: §13.2 gains step 0, re-serialize the PDF without object streams before the archive plan; §15 gains the `400 BadContent` member with the claimed-on-refusal and PENDING consequences; §2.4 gains the archive byte-form sentence; §18 gains the 2026-08-29/30 field note; H1 bumped v2.5.0 to v2.5.1; no law and no tool touched; description field NOT touched · +14 lines · architect order 2026-08-30, record the mechanism in the skill file
 1.5.1 · 2026-08-31 · A · L4·Z runbook hardened after a second full live run on record 22142047; no law changed, no step added. Step 1 names files[].id and links.bucket as the fields the later steps consume; step 2 records the unlock response "status": "accepted"; step 7 records 202, 200 and 504 all observed on publish with all three capable of meaning success. The trap recorded: state inprogress is NOT the unlock, since the edit session governs metadata and the file-modification request governs the bucket, and a deposition reading inprogress still returned 403 Bucket is locked on delete; step 2 now runs unconditionally. Second run verified same DOI, version count on concept unchanged at 1, checksum matched before publish · architect order 2026-08-31, write the unlock into the skill · +23 lines
 1.5.0 · 2026-08-30 · A · L4·Z THE ZENODO IN-PLACE UPGRADE appended and the L4 Zenodo binding corrected in place; L1 through L9 untouched; H1 bumped v2.5.1 to v2.6.0 and head stanza added. The corrected statement: files are replaceable in place under the same DOI inside the platform's file-modification window, and the prior text claiming a hard freeze at publish was false and had produced two editions of wrong advice. The hard rule inverts the default: in-place first where eligible, newversion only on eligibility failure. Eight-step runbook, live-tested end to end on record 22142047 at seven steps and re-run on record 22028275 at eight after the edit-session prerequisite was found, unlock at POST /api/records/{id}/file-modification with an empty body, delete 204, bucket PUT with checksum compared before proceeding, metadata in the same session, publish, then subtractive verification whose load-bearing figure is the unchanged version count on the concept. Field notes: publish returned 504 having succeeded and the public view lagged, and each unlock probe leaves a permanent closed request object. Description field NOT touched and no trigger added, for the same named-override reason recorded at 1.1.0, 1.3.0 and 1.4.0; the description's stale six-laws count is likewise left standing rather than repaired in a pass that was not called for it · architect order 2026-08-30, make the silent in-place upgrade the first choice by hard rule · +108 lines
