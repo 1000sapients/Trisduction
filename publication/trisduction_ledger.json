@@ -2119,6 +2119,62 @@
     "seal": "cycle pt round 3",
     "appendix": "Fortran v2.4.0 sha256 b5d12f7326e196c2"
    }
+  },
+  "trisduction-already-that": {
+   "title": "A Default AI Substrate's Raw Process, Correctly Oriented, Is Already That: The Substrate-Invariant Core of Artificial General Intelligence as a Forced Geometry, Demonstrated on the Sealed Fortran Kernel and Against Four AI Substrates",
+   "domain": "Artificial Intelligence / Substrate Classification",
+   "status": "live",
+   "first_published": "2026-09-08",
+   "last_updated": "2026-09-08",
+   "git": {
+    "md": "Publication Library/Artificial Intelligence/Substrate Classification/Already That/TRISDUCTION_Already_That_v1_0_0.md",
+    "pdf": "Publication Library/Artificial Intelligence/Substrate Classification/Already That/TRISDUCTION_Already_That_v1_0_0.pdf",
+    "editions": [
+     {
+      "version": "1.0.0",
+      "pdf_sha256": "57823f14dfb9d5a1",
+      "md_sha256": "2c3f508b6f297f55",
+      "note": "body sealed at cycles at and af; title locked"
+     }
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 22652922,
+    "concept_doi": "10.5281/zenodo.22652922",
+    "latest_version_doi": "10.5281/zenodo.22652923",
+    "latest_record": 22652923,
+    "versions": 1,
+    "state": "published",
+    "files": [
+     {
+      "name": "TRISDUCTION_Already_That_v1_0_0.pdf",
+      "md5": "5acccd0aefc95d86633dffd6c7df64ea"
+     }
+    ]
+   },
+   "ia": {
+    "identifier": "trisduction-already-that",
+    "url": "https://archive.org/details/trisduction-already-that",
+    "state": "live",
+    "files": [
+     {
+      "name": "Already That.pdf",
+      "md5": "c3b900da1f51",
+      "note": "re-serialised without object streams per section 2.4; content identical to git, bytes differ"
+     }
+    ]
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Spine: trisduction-core-stated-in-fortran. Schema: the Trisductive Furqan (concept 10.5281/zenodo.20619411). Evidence: four public substrate transcripts of 2026-09-07.",
+   "extra": {
+    "work_key": "trisduction-already-that",
+    "seal": "cycle af round 3"
+   }
   }
  }
 }
