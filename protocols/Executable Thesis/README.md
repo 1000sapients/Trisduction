@@ -1,10 +1,15 @@
 # Executable Thesis
 
 **Current:** `TRISDUCTION_Core_Thesis_Fortran_v2_4_0.f90`
-**Paper:** `TRISDUCTION_The_Lock_Is_A_Determination_v1_0_0.pdf`, a three-page Math Journal
-short communication stating the thesis at theorem grade: three independent axes meet in
-exactly one point; the kernel's one blindness is to direction and never to completeness;
-the compartment names what the rows were. Every figure in it was printed by the program above.
+**Paper, current:** `TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf`, with its Markdown source
+`TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.md` beside it. *Trisduction Core Stated in Fortran
+and in Nothing Else: A Verdict Kernel That Determines Totally, Reads Its Rows, and Its Exact
+Scope.* Math Journal edition, 19 pages: a three-page body sealed at cycles pp and pt, and
+Appendix A listing the sealed Fortran v2.4.0 verbatim. Three independent axes meet in exactly
+one point; the kernel's one blindness is to direction and never to completeness; the
+compartment names what the rows were. Every figure in it was printed by the program above.
+**Paper, prior:** `TRISDUCTION_The_Lock_Is_A_Determination_v1_0_0.pdf`, the three-page body
+under its working title, retained; git wants history.
 
 One file, one program. The Trisduction core thesis stated in Fortran and executed:
 the module, the exhibits, and an eight-class battery of 248 computed checks over every
