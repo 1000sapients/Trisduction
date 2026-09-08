@@ -2055,6 +2055,68 @@
     "md5_git_zenodo": "c7c485414df3849c",
     "md5_ia": "9918172d8fd65e10"
    }
+  },
+  "trisduction-core-stated-in-fortran": {
+   "title": "Trisduction Core Stated in Fortran and in Nothing Else: A Verdict Kernel That Determines Totally, Reads Its Rows, and Its Exact Scope",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-09-07",
+   "last_updated": "2026-09-07",
+   "git": {
+    "md": "protocols/Executable Thesis/TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.md",
+    "pdf": "protocols/Executable Thesis/TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf",
+    "editions": [
+     {
+      "version": "1.1.0",
+      "pdf_sha256": "1ae349b9ea141508",
+      "md_sha256": "97d93d1789561dd8",
+      "note": "body sealed at cycles pp and pt; Appendix A lists the sealed Fortran v2.4.0"
+     },
+     {
+      "version": "1.0.0",
+      "pdf": "protocols/Executable Thesis/TRISDUCTION_The_Lock_Is_A_Determination_v1_0_0.pdf",
+      "note": "three-page body under the working title, retained"
+     }
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 22651403,
+    "concept_doi": "10.5281/zenodo.22651403",
+    "latest_version_doi": "10.5281/zenodo.22651404",
+    "latest_record": 22651404,
+    "versions": 1,
+    "state": "published",
+    "files": [
+     {
+      "name": "TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf",
+      "md5": "d77b7309bc7ca0dce3bcadfbad5fd621"
+     }
+    ]
+   },
+   "ia": {
+    "identifier": "trisduction-core-stated-in-fortran",
+    "url": "https://archive.org/details/trisduction-core-stated-in-fortran",
+    "state": "live",
+    "files": [
+     {
+      "name": "Trisduction Core Stated in Fortran and in Nothing Else.pdf",
+      "md5": "33ba35de9454c7ff3085f044ff60e291",
+      "note": "re-serialised without object streams per section 2.4; content identical to git, bytes differ"
+     }
+    ]
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Executable thesis companion: the sealed single-file Fortran v2.4.0 at protocols/Executable Thesis/ is the source of every figure.",
+   "extra": {
+    "work_key": "trisduction-core-stated-in-fortran",
+    "seal": "cycle pt round 3",
+    "appendix": "Fortran v2.4.0 sha256 b5d12f7326e196c2"
+   }
   }
  }
 }
