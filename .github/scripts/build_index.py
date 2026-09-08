@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SUPERSEDED under L7, the Index Law, 2026-09-08. Retired 22-entry generator, kept and not deleted (L6).
+# Successor: Skills/trisduction-publication-automation/tools/index_build.py, which regenerates the MAP of the root INDEX.md from the tree.
 """Regenerate INDEX.md and run the codex census for a given repo root.
 
 The census is the sorted set of identifiers, one per entry file, across psp/ and
