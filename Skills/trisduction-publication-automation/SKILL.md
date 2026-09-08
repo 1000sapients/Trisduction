@@ -1,9 +1,13 @@
 ---
 name: trisduction-publication-automation
-description: "Single governance layer for every write to git (1000sapients/Trisduction), the Internet Archive (@trisduction), Zenodo, ORCID, and PhilPapers. Supersedes and replaces git-automation, ia-publication, zenodo-publication, codex-hygiene. Fires on 'push', 'commit', 'publish to archive', 'upload to IA', 'publish to Zenodo', 'mint a DOI', 'new version', 'update master codex', 'file this paper', 'consolidate the codex', '[PUB]'. Six laws bind every surface: L1 Confirmation Gate, no write without an explicit yes to a printed plan; L2 Credential Containment, keys by environment reference only, never rendered, never crossed; L3 Identifier Permanence, a claimed address is forever and confirmed separately; L4 Version Discipline, which inverts by surface: git wants history, the archive does not; L5 Source Direction, git canonical, every corner reconciled before a write; L6 Corpus Integrity, no identified entry hard-deleted without a named override. One work key, one ledger, five surfaces. Eleven live-tested tools."
+description: "Single governance layer for every write to git (1000sapients/Trisduction public, Trisduction/Knowledge-Base private), the Internet Archive, Zenodo, ORCID, PhilPapers. Fires on push, commit, publish, upload to IA, mint a DOI, new version, update master codex, file this paper, index, [PUB]. Seven laws: L1 Confirmation Gate, no write without an explicit yes to a printed plan; L2 Credential Containment, keys by environment reference only; L3 Identifier Permanence; L4 Version Discipline, git wants history, the archive does not; L5 Source Direction, git canonical; L6 Corpus Integrity, no hard delete without a named override; L7 the Index Law, the root INDEX.md of each target is checked first in every git turn and every push is two components, the artifact commit and the telegraphic snapshot line, the MAP regenerated from a full read of the tree. One work key, one ledger, one index per target. Fourteen live-tested tools."
 ---
 
-# TRISDUCTION PUBLICATION AUTOMATION · The Unified Governance Layer · v2.6.3
+# TRISDUCTION PUBLICATION AUTOMATION · The Unified Governance Layer · v2.7.1
+
+**v2.7.1, the seed read whole, and a ghost the tool now refuses.** Three corrections to v2.7.0 before it was ever installed, all bought by building the two seed indexes. First, the frontmatter description exceeded the 1024-character limit and is cut to fit. Second, v2.7.0's builder read git history for dates and blob ids and read no file: its MAP could say where a document was and never what it was. The seed is now built from a full checkout of both targets, every one of 506 public and 178 private files opened, and each M line carries a `what` column read from the file itself: the YAML title or first heading of a Markdown file, the docstring of a script, the header comment of a Fortran file, the schema or title key of a JSON, the `<title>` of an HTML page, the PDF's metadata title with its page count or, where that is empty or a bare filename, the first line of its first page. Five hundred and six of five hundred and six public paths and one hundred seventy of one hundred seventy-eight private paths carry a `what`; the eight that do not are binary corpora whose first lines are not sentences. The full read costs twelve seconds on the public target and is the once-only bootstrap; incremental pushes read only the files they touch. Third, a bootstrap REMOVE line was written with a ghost commit that predated the file it claimed to preserve; git caught it, `cat-file -e` returning absent, and the tool now runs that check itself and halts on it, so a ghost pointer can no longer name a commit where the file is not readable. Two further clauses enter L7 at the architect's instruction: the index check is the **first act** of every git turn, before any read the turn was asked to make, and every git turn that writes ends with its snapshot component, no exceptions and no deferral to a later turn. The prior generator `tools/build_index.py`, found by the full read, is superseded by pointer and not deleted.
+
+**v2.7.0, the Index Law, bought by a root index that had been false for three weeks.** One law added, L7, and three read-only tools with it. The occasion: the architect asked whether a centralized index existed, and the honest answer from the tree was that one did, `INDEX.md` at the root, auto-generated on 2026-08-17 with 22 entries covering four percent of 506 paths, its generator gone, and untouched by three pushes and three permanent-address claims made that same day under this file's own gates. A checker run against it returned **DRIFT 505**. Beside it sat a second `PUBLICATION_INDEX.md` that knew neither of the day's DOIs, a root `trisduction_ledger.json` with zero works and no schema standing as a decoy for the real one at `publication/`, and a `CODEX_DELETIONS.log` that L6 Rule 6 mandates and that three removals had bypassed for a folder README. None of that was a rule violation under v2.6.3, because v2.6.3 had no rule about a map of the tree at all, which is the gap. **L7 makes every push two components and never one**: the artifact commits, then a telegraphic SNAPSHOT line carrying the artifact's own commit hash appended to the root `INDEX.md`, the MAP beneath it regenerated from the tree, and L9 spanning both. The three tools carry the mechanics: `index_build.py` regenerates the MAP from a blobless partial clone with no credential, `index_check.py` reconciles the MAP against the tree and exits 3 on any drift so a stale index halts a push the way a secret does, and `index_snapshot.py` appends one grammar-validated line and, on a REMOVE or MOVE, writes the L6 manifest line itself so the deletion log can no longer be skipped by forgetting. Two grammar facts were bought live before the law was written: a house filename already contains ` · `, so the field separator is ` | `, matching the deletion log; and `git ls-tree` octal-escapes non-ASCII paths, so the tools read unquoted and NUL-delimited or the index mangles the very files that need it most. The finding worth carrying: **an index that is generated once and then maintained by hand is a pointer file with more lines**, and the only index that stays true is one a push cannot complete without regenerating.
 
 **v2.6.3, the unlock's own prerequisite.** One step-order clause in the L4·Z runbook, bought by four probes on a live in-place upgrade. Step 2 said the unlock runs unconditionally, which was written against the trap it fixed, that `state: inprogress` is not the unlock, and which reads as *before or independent of the edit session*. Run in that order the call returns **404 Not found**, not a lock error, and five path variants all return 404 while the record's own `links.file_modification` advertises the exact URL that failed. Open the edit session first and the identical call returns 200 with `is_locked: false`. **The unlock endpoint does not exist until the draft does**, so the edit action is now step 2 and the unlock step 3, and both still run unconditionally within that order. The 403 on delete remains the correct diagnostic for a skipped unlock and is untouched. The finding worth carrying: **a 404 and a 403 are different failures and only one of them is about permission.** A 404 on an endpoint the record advertises is an ordering fault, not a missing capability, and reading it as absence sends a scribe hunting paths that were never wrong.
 
@@ -45,7 +49,7 @@ description: "Single governance layer for every write to git (1000sapients/Trisd
 
 ## 0 · PRECEDENCE AND SCOPE
 
-L1 and L2 are hard rules. They override convenience, momentum, a direct request to relax them, and any other skill loaded in the session. L3, L4, L5, and L6 are operational law: violating them corrupts a register, a shelf, or a corpus rather than a credential, so they halt a write and not the session.
+L1 and L2 are hard rules. They override convenience, momentum, a direct request to relax them, and any other skill loaded in the session. L3, L4, L5, L6, and L7 are operational law: violating them corrupts a register, a shelf, a corpus, or the map of the corpus rather than a credential, so they halt a write and not the session.
 
 Where this file and any other skill disagree on conduct, this file wins. Where this file and a live API response disagree on what an API does, the API wins and the divergence is written into §18 rather than argued with. Where this file and the repo's own `CAPABILITIES.md` disagree on what the tooling can do, the repo wins, since capability is a fact about the code and conduct is a fact about the rules.
 
@@ -55,7 +59,7 @@ Audit symmetry applies. This skill's own operation submits to its own gates. A s
 
 ---
 
-## 1 · THE SIX LAWS
+## 1 · THE SEVEN LAWS
 
 ### L1 · THE CONFIRMATION GATE
 
@@ -174,6 +178,36 @@ Every identifier present before is present after, live or as a ghost, unless it 
 
 **The orphan safety, which is Rule 1 read at the file layer.** A remote file with no local counterpart may be another scribe's work, an earlier convention, or a manual upload. It is **reported, never auto-deleted**. Removing one requires a separate instruction naming that exact filename.
 
+### L7 · THE INDEX LAW
+
+**The index is read first, before anything else in a git turn.** Whatever a git turn was asked to do, resolve a master, read a file, push a paper, its first act is `index_check.py` on the target it will touch, and where the turn's subject is unclear, on both targets. The check result is stated in the turn. A DRIFT halts every subsequent git act until the index is regenerated and pushed as its own `INDEX` verb, exactly as a secret-scan hit halts. This is the Register-of-Record Resolution Law of Φ.0 given a mechanism: the map is consulted before the territory is touched, and a map found false is repaired before it is trusted for a single further read.
+
+**Every push to a git target is two components, and a push that lands only one has not landed.** Component one is the artifact: the file or files, each its own commit under L4 and L6. Component two is the map: one telegraphic SNAPSHOT line per artifact appended to the root `INDEX.md`, carrying the artifact's own commit hash, and the MAP section beneath regenerated from the tree as it stands after component one. The two land in that order within one push operation, because the snapshot line cannot carry a hash that does not yet exist, and the L9 tree-integrity gate spans both commits together. A session that pushes an artifact and does not push its index line has performed half a write, and the half it skipped is the half the next reader needs. **Every git turn that writes ends with its snapshot component in the same turn**; there is no deferral of the index to a later push, because a later push is the one thing the record shows will forget.
+
+**Why a map, and why generated.** A repository past a few hundred paths cannot be read by listing it, and every question the architect asks of it is one of four: what is where, what is current, what moved when, and what was removed. A per-folder README answers the first for one folder, the ledger answers the second for publications only, git history answers the third to anyone willing to walk it, and the deletion log answers the fourth if it was kept. Nothing answered all four in one place, and the one file that claimed to, the 22-entry `INDEX.md` of 2026-08-17, had drifted 505 paths from the tree while looking authoritative. The lesson is the one `CURRENT.txt` already taught this file at L5: **a hand-maintained pointer becomes a lie at the first push that forgets it**, and the only cure is a map that a push cannot complete without regenerating and that a check compares to the territory before any write.
+
+**The three sections of the root index.** A header line naming the repo, the generation date, the head commit, and the live path count. A **SNAPSHOT** section, append-only, one line per push component, newest last, which is the telegraphic history and the part that grows. A **MAP** section, regenerated on every push, one line per live path grouped by register, which is the part that stays the size of the tree. A one-paragraph DECODER at the foot so a reader with no other document can parse both. The index never indexes its own blob, since that id changes on every regeneration.
+
+**The grammar, fixed, machine-first, human-decodable.** Fields are split on the three characters space, vertical bar, space, ` | `, the same separator `CODEX_DELETIONS.log` uses, chosen after a house filename was found already carrying the middot that a first draft used. A path containing ` | ` halts the build rather than being escaped, and house naming convention adds the bar to its banned characters alongside `?`, `#`, `%` and backslash. Three line kinds and no fourth:
+
+```
+S | date | commit7 | VERB | REG | path-or-key | receipt | receipt …      (snapshot, append-only)
+M | REG | path | kind | ver | blob8 | bytes | moved | what                (map, regenerated)
+R | date | commit7 | ROLL | ROOT | INDEX_ARCHIVE/<year>.md | lines n      (roll marker)
+```
+
+`VERB` is closed: `SEAT` a new file, `BUMP` a new version of an existing stem, `SUPERSEDE` a version left with a pointer, `REMOVE` a named-override deletion with its ghost in history, `MOVE` a path change, `PATCH` an overwrite of the one overwrite-permitted class (README, CURRENT, manifest, index), `MINT` a Zenodo DOI, `CLAIM` an archive identifier, `LEDGER` a ledger entry, `INDEX` a regeneration with no artifact, `ROLL` an archive roll. `REG` is closed per target: for the public repo `CODEX THEO PSP PROTO EXEC LIB HIST GEQ QT SKILL LEDG TOOL ZSNAP CI ROOT OTHER`, for the private repo `SKILL ARCH PAPER KB ROOT`. Receipts are `key value` pairs from a short vocabulary: `sha <8>` the sha256 head, `doi <id>`, `ia <identifier>`, `seal <cycle><round>`, `l9 <lost>/<added>`, and for a REMOVE the instruction quoted as `over "<text>"`. `blob8` in an M line is the git object id, which is what the checker compares. `what` is one line read from the file and never inferred from its name: title, heading, docstring, header comment, schema key, HTML title, or PDF title with page count, capped at ninety-six characters. A path is never truncated; the `what` is, so a line's length is the path's length plus a bounded tail.
+
+**Growth is bounded by the roll.** The MAP does not grow; it is the tree. The SNAPSHOT grows by one line per push component and is rolled past four hundred lines: the oldest three-quarters move verbatim into `INDEX_ARCHIVE/<year>.md`, append-only, and one R line stands where they were. Nothing is ever condensed or rewritten, so a reader walking back from today reaches the first push without a gap.
+
+**The check runs before, the build runs after, and both are read-only against the remote.** Before any artifact commit, `index_check.py` clones bloblessly, compares the MAP to `git ls-tree` at the head, and exits 3 on any path unindexed, stale, or moved. Exit 3 halts the push exactly as a secret-scan hit does, and the repair is to regenerate and push the index first as its own `INDEX` verb. After the artifact commits land, `index_build.py` regenerates the MAP from the new head, `index_snapshot.py` appends the S line per artifact with the artifact's commit hash, and the index commits. Neither tool takes a credential: a blobless clone of a public repository needs none, and the private repository's clone uses the same read route the reads already use. The snapshot tool refuses a malformed line, an unknown verb or register, and a REMOVE or MOVE without a ghost pointer, and on those two verbs it writes the L6 Rule 6 line itself, which retires the possibility of a removal that the deletion log never heard about.
+
+**Pointers, not duplicates.** Every folder README carries as its first line `Indexed at /INDEX.md · <REG>` and keeps its own per-file lines, since the README answers what the files are and the index answers where everything is; neither is a copy of the other. `PUBLICATION_INDEX.md` is a rendering of `publication/trisduction_ledger.json` and is regenerated on every `LEDGER` verb, never hand-edited. A ledger file at a path other than `publication/trisduction_ledger.json` is a pointer to it and holds no works. The private target carries its own root `INDEX.md` of the identical grammar, and the public index refers to the private target by its name and its register codes only, because content never crosses that boundary and an index line is content.
+
+**Bootstrap, once per target, from a full read.** The first index is built from a complete checkout in which every file is opened for its `what`, with the dates recovered from history through the blobless clone, and its first SNAPSHOT lines are written by hand for the pushes that preceded the law, each carrying the commit hash the history already holds, so the record begins truthful rather than beginning today. The prior 22-entry `INDEX.md` is superseded under its own name and its content is not carried, because a map that was wrong about 505 paths has nothing to contribute to one that is right about 506. Its generators, `tools/build_index.py` and its twin at `.github/scripts/build_index.py`, stay in the tree with a pointer line at the head of each naming `index_build.py` as the successor; neither is deleted, per L6. A REMOVE or MOVE snapshot line is verified against the clone before it is written: the ghost commit must contain the path, or the tool halts, because a ghost that points at a commit where the file is absent is a pointer to nothing wearing the form of a receipt.
+
+---
+
 ### 1.3 · THE CREDENTIAL BINDING TABLE
 
 Bound once so the pairing cannot be got wrong by hand. The environment name prints on the first line of every tool run.
@@ -201,6 +235,7 @@ The two Zenodo tokens are never crossed (L2 R6). ORCID cannot write with the cre
 | **L4** revision means | **new version file** | **delete and replace, same name** | **new version on same concept** | one entry per work | one entry per work |
 | **L5** direction | **canonical source** | receives from git | receives from git | receives from Zenodo | receives from git |
 | **L6** census | `CODEX_DELETIONS.log` | orphan safety, derivative census | ledger backfill | n/a | n/a |
+| **L7** map | `INDEX.md` per target, S line per push | `CLAIM` line in the public index | `MINT` line in the public index | n/a | n/a |
 
 Read the L4 row across and the inversion is visible in one line. That row is the single most transferable error in this file.
 
@@ -464,6 +499,12 @@ Folders are the one thing on this surface that cannot be created directly, and e
 **Past one file, the folder carries its own README.** At a single file the contents are self-evident from the name and at six they are not, so a folder holding more than one file carries a README naming what each file is, its provenance, and which of them is current where that is a question. This is the same instrument the Publication Library uses at its Category level and it costs one line per file.
 
 **Credentials never cross, per L2.** Each target carries its own fine-grained token scoped to that repo alone, `CODEX_GH_TOKEN` and `KB_GH_TOKEN`. A token that reaches both is a scope error whatever it is named, and neither is ever rendered, committed, or placed in a URL or in git config.
+
+---
+
+### 4.4 · THE ROOT INDEX · WHAT LIVES AT `/INDEX.md`
+
+The public repository's root carries `README.md`, `PREFACE.md`, `INDEX.md`, `PUBLICATION_INDEX.md`, `CODEX_DELETIONS.log`, and a ledger pointer. Of these, `INDEX.md` is the map under L7; `PUBLICATION_INDEX.md` is a rendering of the ledger; `CODEX_DELETIONS.log` is the L6 manifest, which the snapshot tool now writes on every REMOVE and MOVE; and the ledger pointer exists only because a ledger husk once stood there with zero works and confused a reader. The register codes the public index uses are bound to top-level paths in `index_build.py` and are the vocabulary of every S line: `EXEC` is `protocols/Executable Thesis/` and is split out of `PROTO` because the executable thesis is a register of its own; `ZSNAP` is the Zenodo snapshot folder, which is a mirror and never a source; `CI` is `.github/`. The private target's index uses `SKILL ARCH PAPER KB ROOT` and lives at its own root. A folder README's first line names the register it sits in so a reader arriving from a folder can find the index and a reader arriving from the index can find the folder.
 
 ---
 
@@ -818,9 +859,13 @@ Report the boot result before proposing any write.
 
 ## 13 · RUNBOOKS
 
-### 13.1 · GIT
+### 13.1 · GIT · THE TWO-COMPONENT PUSH
 
 ```
+# 0 · INDEX CHECK (read, no token, no gate) — a stale map halts the push like a secret would
+python3 tools/index_check.py --repo 1000sapients/Trisduction --index INDEX.md     # exit 3 halts
+#     on DRIFT: regenerate and push the index alone as verb INDEX, then return here
+
 # 1 · RESOLVE (read, no token, no gate)
 python3 tools/resolve_current.py --master main --next patch
 
@@ -836,12 +881,24 @@ python3 tools/pre_push_check.py /tmp/next_version.md     # exit 3 halts everythi
 # 5 · THE L1 QUESTION: verb, path, size, occupancy, current version, next version.
 #     Stop. Wait for an explicit yes.
 
-# 6 · PUSH on yes, token by reference (L2 R3)
+# 6 · COMPONENT ONE · the artifact commit(s), token by reference (L2 R3)
 python3 <push tool> --src /tmp/next_version.md \
   --dest "<folder>/<stem>_v<next>.md" --message "update: <master> v<next> (<reason>)"
+#     record the commit hash the API returns; the snapshot line needs it
 
-# 7 · VERIFY (read). Not done until this prints MATCH.
+# 7 · COMPONENT TWO · the map, same push operation
+python3 tools/index_build.py --repo 1000sapients/Trisduction --out INDEX.md      # MAP from the new head
+python3 tools/index_snapshot.py --index INDEX.md --commit <hash7> --verb BUMP --reg CODEX \
+  --path "<folder>/<stem>_v<next>.md" --receipt "sha <8>" --receipt "seal <cycle><round>"
+#     a REMOVE or MOVE adds --deletions CODEX_DELETIONS.log --ghost <parent hash>; the tool writes the L6 line
+python3 <push tool> --src INDEX.md --dest INDEX.md --message "index: <VERB> <path> (<hash7>)"
+#     plus CODEX_DELETIONS.log in the same push where the verb wrote to it
+
+# 8 · L9 across BOTH components: parent tree vs final tree; lost must equal the named override set or be empty
+
+# 9 · VERIFY (read). Not done until both print MATCH.
 python3 tools/verify_remote.py --src /tmp/next_version.md --path "<folder>/<stem>_v<next>.md"
+python3 tools/index_check.py --repo 1000sapients/Trisduction --index INDEX.md     # CLEAN at the new head
 ```
 
 ### 13.2 · INTERNET ARCHIVE
@@ -960,11 +1017,11 @@ Step 6 distinguishes this leg from every other. **Zenodo accepting the field pro
 
 ## 14 · TOOLS, VERBATIM
 
-Eleven tools, every one executed against a live host at assembly, carried through the merge byte-identical and re-verified by extraction and compile after it. Credentials are read from the environment by name and never printed.
+Fourteen tools, every one executed against a live host at assembly, carried through the merge byte-identical and re-verified by extraction and compile after it. Credentials are read from the environment by name and never printed.
 
 **This file is the tool set.** The fenced blocks below are the executables and not illustrations of them: a session extracts them to its own working directory and runs them from there, and nothing outside this file has to exist for that to work. Where a bundle also ships them as separate files, that copy is a one-way extraction and this file wins on any divergence, which is L5 applied to the skill's own body.
 
-**Read-only, no gate:** `resolve_current.py`, `verify_remote.py`, `pre_push_check.py`, `ia_plan.py`, `ia_reconcile.py`, `zenodo_reconcile.py`, `zenodo_preflight.py`. **Read-only with two opt-in local writes:** `ia_audio_preflight.py`, whose `--write-tags` writes ID3 to the local file only, never to the archive, and changes the local md5 so the plan is re-run after tagging, and whose `--json` writes a plan file locally and only on a clean floor. Neither reaches a remote host. **Write-capable:** `ia_publish.py`, `zenodo_publish.py`, `zenodo_fixup.py`.
+**Read-only, no gate:** `resolve_current.py`, `verify_remote.py`, `pre_push_check.py`, `ia_plan.py`, `ia_reconcile.py`, `zenodo_reconcile.py`, `zenodo_preflight.py`, `index_build.py`, `index_check.py`. **Local write only, no credential:** `index_snapshot.py`, which appends to `INDEX.md` and, on REMOVE or MOVE, to `CODEX_DELETIONS.log`, and reaches no remote host; the push of those two files is the caller's, under the L1 gate like any other. **Read-only with two opt-in local writes:** `ia_audio_preflight.py`, whose `--write-tags` writes ID3 to the local file only, never to the archive, and changes the local md5 so the plan is re-run after tagging, and whose `--json` writes a plan file locally and only on a clean floor. Neither reaches a remote host. **Write-capable:** `ia_publish.py`, `zenodo_publish.py`, `zenodo_fixup.py`.
 
 **As of v2.1.0 all three write-capable tools default to writing nothing**, which is the repair of HAZARD 1 below. `ia_publish.py` needs `--apply`, and `--claim` on top of it for any item-creating operation. `zenodo_fixup.py` needs `--apply`. `zenodo_publish.py` needs `--stage` or `--mint`. The asymmetry that used to run the dangerous way now runs the safe way on every one of them, and the residual risk inverts with it: a command that used to write now prints, so clean output from a bare invocation is not evidence that anything was published.
 
@@ -3063,6 +3120,335 @@ if __name__ == "__main__":
 
 ---
 
+### `tools/index_build.py` · read-only against the remote, no credential, full-read of a checkout for the what column; regenerates the MAP, preserves the SNAPSHOT byte-for-byte
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""index_build.py | regenerate the MAP section of INDEX.md from the live tree.
+
+Read-only against the remote. No credential: a blobless partial clone supplies
+tree, blob ids, sizes and last-moved dates in one pass. The SNAPSHOT section of
+the existing INDEX.md is preserved byte-for-byte; only the header and the MAP
+are regenerated. The tree is the territory; the MAP is its cast.
+
+Usage:
+  python3 index_build.py --repo 1000sapients/Trisduction --out INDEX.md [--clone-dir /tmp/ix]
+  python3 index_build.py --repo Trisduction/Knowledge-Base --out INDEX.md --register-scheme kb
+
+Grammar of an M line, fields split on ' | ':
+  M | REG | path | kind | ver | blob8 | bytes | moved | what
+"""
+import argparse, os, re, subprocess, sys, datetime, json
+
+PUBLIC_REG = [  # first match wins
+    ("protocols/Executable Thesis/", "EXEC"),
+    ("protocols/",                   "PROTO"),
+    ("master/",                      "CODEX"),
+    ("Theological PSP Codex/",       "THEO"),
+    ("psp/",                         "PSP"),
+    ("Publication Library/",         "LIB"),
+    ("History & Theology/",          "HIST"),
+    ("Geometric Encyclopedia of the Quran/", "GEQ"),
+    ("Quran Translation/",           "QT"),
+    ("Skills/",                      "SKILL"),
+    ("publication/",                 "LEDG"),
+    ("tools/",                       "TOOL"),
+    ("Zenodo Snapshot",              "ZSNAP"),
+    (".github/",                     "CI"),
+]
+KB_REG = [("Skills/", "SKILL"), ("Private Archive/", "ARCH"), ("Trisduction Papers/", "PAPER")]
+
+VER_RE = re.compile(r'_v(\d+)[_.](\d+)(?:[_.](\d+))?(?:[_.-]([A-Za-z0-9]+))?(?=\.[A-Za-z0-9]+$|$)')
+VER2_RE = re.compile(r'\bv(\d+)\.(\d+)(?:\.(\d+))?\b')
+
+def reg_of(path, scheme):
+    table = PUBLIC_REG if scheme == "public" else KB_REG
+    for prefix, code in table:
+        if path.startswith(prefix): return code
+    if "/" not in path: return "ROOT"
+    return "KB" if scheme == "kb" else "OTHER"
+
+def ver_of(name):
+    name = name.rsplit(".", 1)[0] if "." in name and not name.startswith(".") else name   # strip the extension first
+    m = VER_RE.search(name) or VER2_RE.search(name)
+    if not m: return "-"
+    parts = [p for p in m.groups() if p is not None]
+    return "v" + ".".join(parts[:3]) + (("-" + parts[3]) if len(parts) > 3 else "")
+
+def kind_of(path):
+    base = path.rsplit("/", 1)[-1]
+    return base.rsplit(".", 1)[-1].lower() if "." in base else "-"
+
+def run(cmd, cwd=None):
+    return subprocess.check_output(cmd, cwd=cwd, text=True, stderr=subprocess.DEVNULL)
+
+def clone(repo, d, no_fetch=False):
+    if os.path.isdir(os.path.join(d, ".git")):
+        if no_fetch: return run(["git", "rev-parse", "HEAD"], cwd=d).strip()
+        run(["git", "fetch", "--quiet", "--filter=blob:none"], cwd=d)
+        run(["git", "reset", "--quiet", "--soft", "origin/HEAD"], cwd=d)
+    else:
+        run(["git", "clone", "--quiet", "--filter=blob:none", "--no-checkout",
+             f"https://github.com/{repo}.git", d])
+    return run(["git", "rev-parse", "HEAD"], cwd=d).strip()
+
+def tree(d):
+    out = {}
+    for line in run(["git", "-c", "core.quotepath=false", "ls-tree", "-r", "-l", "-z", "HEAD"], cwd=d).split("\0"):
+        if not line: continue
+        meta, path = line.split("\t", 1)
+        _mode, typ, sha, size = meta.split()
+        if typ == "blob": out[path] = (sha, int(size))
+    return out
+
+def moved(d):
+    seen = {}; date = None
+    for l in run(["git", "-c", "core.quotepath=false", "log", "--format=%cs", "--name-only", "--diff-filter=ACMR"], cwd=d).splitlines():
+        if not l: continue
+        if len(l) == 10 and l[4] == "-" and l[7] == "-": date = l; continue
+        seen.setdefault(l, date)
+    return seen
+
+WHAT_LEN = 96
+
+def _first_line(txt):
+    for l in txt.splitlines():
+        l = l.strip().strip("#").strip()
+        if l and not l.startswith(("---","```","<!--","!====","!---")): return l
+    return ""
+
+def what_of(full, kind):
+    """One line of what the file is, read from the file. Never from the filename."""
+    try:
+        if kind in ("md","txt","log","yml","yaml","jsonl","tex","csv","f90","css","lean","-","cfg","ini","toml"):
+            head = open(full, encoding="utf-8", errors="replace").read(4000)
+            if kind == "md":
+                m = re.search(r'^title:\s*"?(.+?)"?\s*$', head, re.M)
+                if m: return m.group(1)
+                m = re.search(r'^#\s+(.+)$', head, re.M)
+                if m: return m.group(1).strip()
+            if kind == "f90":
+                m = re.search(r'^!\s{1,4}([A-Z][^\n]{8,})$', head, re.M)
+                if m: return m.group(1).strip()
+            if kind == "jsonl":
+                try:
+                    j = json.loads(head.splitlines()[0]); return "jsonl: " + ", ".join(list(j)[:6])
+                except Exception: pass
+            return _first_line(head)
+        if kind == "py":
+            head = open(full, encoding="utf-8", errors="replace").read(3000)
+            m = re.search(r'"""(.+?)(?:\n|""")', head, re.S) or re.search(r'^#\s*(.+)$', head, re.M)
+            return m.group(1).strip() if m else _first_line(head)
+        if kind == "json":
+            j = json.load(open(full, encoding="utf-8"))
+            if isinstance(j, dict):
+                for k in ("title","name","_schema","schema","description"):
+                    if k in j and isinstance(j[k], str): return j[k]
+                return "json: " + ", ".join(list(j)[:6])
+            return f"json: list of {len(j)}"
+        if kind == "pdf":
+            info = subprocess.run(["pdfinfo", full], capture_output=True, text=True).stdout
+            m = re.search(r'^Title:\s*(.+)$', info, re.M)
+            pages = re.search(r'^Pages:\s*(\d+)$', info, re.M)
+            t = m.group(1).strip() if m and m.group(1).strip() else ""
+            if not t or t.lower().endswith((".pdf",".docx",".md",".tex")) or len(t) < 6:
+                txt = subprocess.run(["pdftotext","-l","1",full,"-"], capture_output=True, text=True).stdout
+                t = _first_line(txt)
+            return (t + (f" ({pages.group(1)}p)" if pages else "")).strip()
+        if kind == "html":
+            head = open(full, encoding="utf-8", errors="replace").read(6000)
+            m = re.search(r"<title>(.*?)</title>", head, re.S|re.I)
+            return re.sub(r"\s+"," ",m.group(1)).strip() if m else _first_line(re.sub(r"<[^>]+>"," ",head))
+        if kind == "zip":
+            import zipfile
+            with zipfile.ZipFile(full) as z: return f"zip: {len(z.namelist())} entries"
+        if kind in ("gitignore",): return "git ignore rules"
+    except Exception as e:
+        return f"unreadable: {type(e).__name__}"
+    return "-"
+
+def read_snapshot(path):
+    """Everything from the SNAPSHOT heading down to the MAP heading, verbatim; empty if absent."""
+    if not os.path.exists(path): return ""
+    txt = open(path, encoding="utf-8").read()
+    i = txt.find("\n## SNAPSHOT"); j = txt.find("\n## MAP")
+    if i < 0: return ""
+    return txt[i+1:j if j > i else len(txt)].rstrip("\n") + "\n"
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--repo", required=True)
+    ap.add_argument("--out", default="INDEX.md")
+    ap.add_argument("--clone-dir", default=None)
+    ap.add_argument("--no-fetch", action="store_true", help="use --clone-dir as it stands; the tool touches no network and needs no credential")
+    ap.add_argument("--register-scheme", choices=["public", "kb"], default="public")
+    ap.add_argument("--content-dir", default=None, help="a full checkout at the same head; supplies the what column")
+    a = ap.parse_args()
+    d = a.clone_dir or f"/tmp/ix_{a.repo.replace('/', '_')}"
+    head = clone(a.repo, d, a.no_fetch)
+    t = tree(d); mv = moved(d)
+    bad = [p for p in t if " | " in p]
+    if bad: sys.exit("HALT paths contain the field separator ' | ': " + "; ".join(bad))
+    snap = read_snapshot(a.out)
+    if not snap:
+        snap = ("## SNAPSHOT | append-only | one line per push | newest last\n"
+                "# S | date | commit7 | VERB | REG | path-or-key | receipts…   (decoder at the foot of this file)\n")
+    today = datetime.date.today().isoformat()
+    lines = [f"# INDEX | {a.repo} | generated {today} | head {head[:12]} | {len(t)} live paths",
+             "Advisory map of the tree. The tree governs. MAP regenerated by tools/index_build.py; "
+             "SNAPSHOT append-only by tools/index_snapshot.py; drift halts a push via tools/index_check.py.",
+             "", snap.rstrip("\n"), "",
+             "## MAP | regenerated | one line per live path",
+             "# M | REG | path | kind | ver | blob8 | bytes | moved | what"]
+    regs = {}
+    for p, (sha, size) in t.items(): regs.setdefault(reg_of(p, a.register_scheme), []).append(p)
+    for reg in sorted(regs):
+        lines.append(f"### {reg} | {len(regs[reg])}")
+        for p in sorted(regs[reg]):
+            sha, size = t[p]
+            w = "-"
+            if a.content_dir:
+                w = what_of(os.path.join(a.content_dir, p), kind_of(p)).replace(" | ", " / ").replace("\n"," ")
+                w = (w[:WHAT_LEN-1] + "…") if len(w) > WHAT_LEN else w
+            lines.append(f"M | {reg} | {p} | {kind_of(p)} | {ver_of(p.rsplit('/',1)[-1])} | {sha[:8]} | {size} | {mv.get(p,'-')} | {w}")
+    lines += ["", "## DECODER",
+              "Fields split on ' | '. S line: S | date | commit7 | VERB | REG | path-or-key | receipts. VERB ∈ SEAT BUMP SUPERSEDE REMOVE MOVE PATCH MINT CLAIM LEDGER INDEX ROLL. "
+              "REG ∈ " + " ".join(sorted({c for _, c in (PUBLIC_REG if a.register_scheme=='public' else KB_REG)} | {"ROOT","OTHER","KB"})) + ".",
+              "M line: M | REG | path | kind | ver | blob8 | bytes | moved | what. blob8 is the git object id, ver the filename version token or -, moved the last commit date touching the path, what one line read from the file itself (title, heading, docstring, PDF title, schema) and never from the filename.",
+              "R line: R | date | commit7 | ROLL | ROOT | INDEX_ARCHIVE/<year>.md | lines n. Emitted when SNAPSHOT is rolled; the archive file holds the rolled lines verbatim.",
+              "Receipts are key-value pairs: sha <8> (sha256 head), doi <id>, ia <identifier>, seal <cycle><round>, l9 <lost>/<added>, over \"<architect instruction>\" for REMOVE."]
+    open(a.out, "w", encoding="utf-8").write("\n".join(lines) + "\n")
+    print(f"INDEX built | {a.repo} | head {head[:12]} | {len(t)} paths | {len(regs)} registers | snapshot lines preserved: {snap.count(chr(10))-2}")
+
+if __name__ == "__main__":
+    main()
+```
+
+### `tools/index_check.py` · read-only, no credential, exit 3 halts the push
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""index_check.py | reconcile INDEX.md's MAP against the live tree. Exit 3 halts a push.
+
+Read-only, no credential. Reports three classes of drift and nothing else:
+  UNINDEXED  path in the tree, absent from the MAP
+  STALE      path in the MAP, absent from the tree
+  MOVED      path in both, blob id differs (content changed under the index)
+Usage: python3 index_check.py --repo 1000sapients/Trisduction --index INDEX.md [--clone-dir DIR]
+"""
+import argparse, os, subprocess, sys
+
+def run(cmd, cwd=None): return subprocess.check_output(cmd, cwd=cwd, text=True, stderr=subprocess.DEVNULL)
+def clone(repo, d, no_fetch=False):
+    if os.path.isdir(os.path.join(d, ".git")):
+        if no_fetch: return run(["git", "rev-parse", "HEAD"], cwd=d).strip()
+        run(["git","fetch","--quiet","--filter=blob:none"], cwd=d); run(["git","reset","--quiet","--soft","origin/HEAD"], cwd=d)
+    else:
+        run(["git","clone","--quiet","--filter=blob:none","--no-checkout",f"https://github.com/{repo}.git",d])
+    return run(["git","rev-parse","HEAD"], cwd=d).strip()
+def tree(d):
+    out={}
+    for line in run(["git","-c","core.quotepath=false","ls-tree","-r","-l","-z","HEAD"], cwd=d).split("\0"):
+        if not line: continue
+        meta,path=line.split("\t",1); _m,typ,sha,_s=meta.split()
+        if typ=="blob": out[path]=sha[:8]
+    return out
+def mapof(index):
+    out={}
+    for l in open(index, encoding="utf-8"):
+        if l.startswith("M | "):
+            f=l.rstrip("\n").split(" | ")
+            if len(f)>=8: out[f[2]]=f[5]
+    return out
+
+def main():
+    ap=argparse.ArgumentParser(); ap.add_argument("--repo",required=True); ap.add_argument("--index",default="INDEX.md"); ap.add_argument("--clone-dir",default=None); ap.add_argument("--no-fetch",action="store_true")
+    a=ap.parse_args(); d=a.clone_dir or f"/tmp/ix_{a.repo.replace('/','_')}"
+    head=clone(a.repo,d,a.no_fetch); t=tree(d); m=mapof(a.index)
+    m.pop("INDEX.md", None)  # the index never indexes its own blob, which changes on every regeneration
+    unindexed=sorted(set(t)-set(m)-{"INDEX.md"}); stale=sorted(set(m)-set(t)); moved=sorted(p for p in set(t)&set(m) if t[p]!=m[p])
+    print(f"INDEX CHECK | {a.repo} | head {head[:12]} | tree {len(t)} | map {len(m)}")
+    for lab,arr in (("UNINDEXED",unindexed),("STALE",stale),("MOVED",moved)):
+        print(f"  {lab:<10} {len(arr)}"); [print("    "+p) for p in arr[:20]]
+        if len(arr)>20: print(f"    … {len(arr)-20} more")
+    drift=len(unindexed)+len(stale)+len(moved)
+    print("  RESULT    " + ("CLEAN, index matches tree" if drift==0 else f"DRIFT {drift}: regenerate with index_build.py before any push"))
+    sys.exit(0 if drift==0 else 3)
+if __name__=="__main__": main()
+```
+
+### `tools/index_snapshot.py` · local write only; grammar-validated; ghost-verified against the clone; writes the L6 line itself on REMOVE and MOVE
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""index_snapshot.py | append one telegraphic S line to INDEX.md, grammar-validated, ghost-verified.
+
+Local write only; the push is the caller's. A REMOVE or MOVE verb also appends the
+L6 Rule 6 line to CODEX_DELETIONS.log beside it, so the deletion manifest can never be
+skipped by forgetting. Rolls the SNAPSHOT into INDEX_ARCHIVE/<year>.md past --roll-at
+lines, leaving one R line in its place.
+
+Usage:
+  python3 index_snapshot.py --index INDEX.md --commit 4da9866a --verb SEAT --reg LIB \
+      --path "Publication Library/…/TRISDUCTION_Already_That_v1_0_0.pdf" \
+      --receipt "sha 57823f14" --receipt "seal af3"
+  python3 index_snapshot.py --index INDEX.md --commit f43de632 --verb REMOVE --reg EXEC \
+      --path "protocols/Executable Thesis/TRISDUCTION_The_Lock_Is_A_Determination_v1_0_0.pdf" \
+      --receipt 'over "Only keep 1 thesis file + 1 pdf. delete the unaudited stale files."' \
+      --deletions CODEX_DELETIONS.log --ghost 1200ae6b
+"""
+import argparse, datetime, os, re, sys
+
+VERBS={"SEAT","BUMP","SUPERSEDE","REMOVE","MOVE","PATCH","MINT","CLAIM","LEDGER","INDEX","ROLL"}
+REGS={"CODEX","THEO","PSP","PROTO","EXEC","LIB","HIST","GEQ","QT","SKILL","LEDG","TOOL","ZSNAP","CI","ROOT","OTHER","KB","ARCH","PAPER"}
+HEX=re.compile(r'^[0-9a-f]{7,12}$')
+
+def main():
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--index",default="INDEX.md"); ap.add_argument("--date",default=datetime.date.today().isoformat())
+    ap.add_argument("--commit",required=True); ap.add_argument("--verb",required=True); ap.add_argument("--reg",required=True)
+    ap.add_argument("--path",required=True); ap.add_argument("--receipt",action="append",default=[])
+    ap.add_argument("--deletions",default=None); ap.add_argument("--ghost",default=None); ap.add_argument("--roll-at",type=int,default=400)
+    ap.add_argument("--clone-dir",default=None,help="a clone of the target; if given, a REMOVE/MOVE ghost is verified to contain the path, and the line halts if it does not")
+    a=ap.parse_args()
+    if a.verb not in VERBS: sys.exit(f"HALT verb {a.verb!r} not in {sorted(VERBS)}")
+    if a.reg not in REGS: sys.exit(f"HALT reg {a.reg!r} not in {sorted(REGS)}")
+    if not HEX.match(a.commit): sys.exit("HALT commit must be 7-12 hex")
+    if not re.match(r'^\d{4}-\d{2}-\d{2}$',a.date): sys.exit("HALT date must be YYYY-MM-DD")
+    if " | " in a.path or any(" | " in r for r in a.receipt): sys.exit("HALT the field separator ' | ' may not appear inside a field")
+    if a.verb in {"REMOVE","MOVE"} and not (a.deletions and a.ghost): sys.exit("HALT REMOVE/MOVE require --deletions and --ghost (L6 Rule 6)")
+    if a.verb in {"REMOVE","MOVE"} and a.clone_dir:
+        import subprocess
+        ok = subprocess.run(["git","cat-file","-e",f"{a.ghost}:{a.path}"],cwd=a.clone_dir,capture_output=True).returncode==0
+        if not ok: sys.exit(f"HALT ghost {a.ghost} does not contain {a.path}; a ghost pointer must name a commit where the file is readable")
+    line=" | ".join(["S",a.date,a.commit[:7],a.verb,a.reg,a.path]+a.receipt)
+    txt=open(a.index,encoding="utf-8").read()
+    i=txt.find("\n## SNAPSHOT"); j=txt.find("\n## MAP")
+    if i<0 or j<0: sys.exit("HALT INDEX.md lacks SNAPSHOT/MAP sections; run index_build.py first")
+    snap=txt[i+1:j].rstrip("\n").split("\n"); head=snap[:2]; body=snap[2:]
+    body.append(line)
+    if len(body)>a.roll_at:
+        keep=a.roll_at//4; rolled=body[:-keep]; body=body[-keep:]
+        year=a.date[:4]; os.makedirs("INDEX_ARCHIVE",exist_ok=True); arch=f"INDEX_ARCHIVE/{year}.md"
+        with open(arch,"a",encoding="utf-8") as f: f.write("\n".join(rolled)+"\n")
+        body.insert(0," | ".join(["R",a.date,a.commit[:7],"ROLL","ROOT",arch,f"lines {len(rolled)}"]))
+        print(f"ROLLED {len(rolled)} lines into {arch}")
+    new=txt[:i+1]+"\n".join(head+body)+"\n"+txt[j:]
+    open(a.index,"w",encoding="utf-8").write(new)
+    print("S  "+line)
+    if a.verb in {"REMOVE","MOVE"}:
+        over=next((r for r in a.receipt if r.startswith("over ")),"")
+        dl=f"{a.date} | {a.path} | {'RETIRED' if a.verb=='REMOVE' else 'MOVED'} | ghost at {a.ghost} | {over or 'no instruction quoted'}"
+        with open(a.deletions,"a",encoding="utf-8") as f: f.write(dl+"\n")
+        print("L6 "+dl)
+if __name__=="__main__": main()
+```
+
+---
+
 ## 15 · FAILURE HANDLING · THE AMBIGUOUS-RESPONSE CLASS
 
 Each merged skill discovered this independently, which is the strongest evidence it is the real error mode here. **An ambiguous response read as a definite one is the most expensive mistake on every surface**, because the definite reading is always the one that says *absent* or *failed*, and the repair for absent is always *write it again*. On a surface with permanent addresses, writing it again forks the corpus.
@@ -3156,6 +3542,10 @@ Write anything without an explicit yes to a printed plan. Claim an identifier or
 ## 18 · FIELD NOTES · EVERY LIVE RUN, IN ORDER
 
 Recorded so the next scribe inherits the runs and not only the rules. Every line was executed.
+
+**2026-09-08 · the Index Law, tooled and tested read-only before it was written.** Blobless partial clone of the public target: 435 commits, 464 KB of `.git`, 506 live paths and 567 historical paths dated in one `git log` pass, no credential. `index_build.py` produced a 506-line MAP in fifteen registers; `index_check.py` returned CLEAN against it and **DRIFT 505** against the root `INDEX.md` of 2026-08-17, which is the diagnosis the architect had reached by feel, delivered as a number. Two grammar faults bought live: a house filename carries ` · ` and `git ls-tree` quotes non-ASCII paths with octal escapes, so the separator is ` | ` and the reads are `-c core.quotepath=false … -z`. `index_snapshot.py` exercised on two lines from that day's pushes, a SEAT with three receipts and a REMOVE that wrote its own L6 line to a copy of the deletion log; a malformed commit halted as designed; both lines survived a regeneration. The private target read by tree only under `KB_GH_TOKEN`: 178 blobs, ten corpora, no root index, which is why L7 binds both targets from its first line. Nothing was pushed in this run; the bootstrap is its own gated write and is the next thing this file governs.
+
+**2026-09-08 · the seed indexes built from a full read of both targets.** Public: full clone in nine seconds, 419 MB working tree, 506 files opened, `what` filled on 506 of 506 after four kinds were added, css, html, lean, and an extensionless `Readme`. Private: clone through a credential helper reading `KB_GH_TOKEN` from the environment, nothing in a URL and nothing persisted in config, verified by grepping `.git/config` for the token prefix and finding none; 178 files, 145 MB, 41 commits, `what` filled on 170. Eighteen bootstrap S lines written for the pushes of 2026-09-06 and 07 from `git log --name-status`, each through the validating tool; three of them REMOVEs, whose L6 lines the tool wrote into a delta of `CODEX_DELETIONS.log`. One ghost pointer was wrong, `1200ae6` for a file first seated at `de16b31` and removed at `f43de63`; `git cat-file -e` returned absent, the parent `34ab86f` was substituted and verified present, and the check moved into the tool. Both seeds CLEAN against their trees. The lost generator was found by the read and not by memory, and it was found twice, at `tools/build_index.py` and `.github/scripts/build_index.py`; a version-token regex was also caught swallowing the file extension as a suffix, `v2.4.0-f90`, and now strips the extension first.
 
 **2026-08-01 · git resolver, assembled and verified live.** Snapshot, not a source of truth, re-resolve every time: main `3.5.0` at `master/TRISDUCTION_Master_Codex_Unabridged_v3_5_0.md`; role `3.1` at `protocols/TRISDUCTION_Unified_Master_System_Role_v3.1.md`; theological `1.6.0` at `Theological PSP Codex/SCRIPTURAL_PSP_MASTER_v1.6.0.md`. The main-codex ladder as the resolver sees it, numeric-sorted, which is where string sorting goes wrong: 1.9.1, 2.1, 3.0.2, 3.2, 3.3, 3.3.1, 3.4.0, 3.5.0. Note `TRISDUCTION_Master_Codex_Unabridgedv3.0.2.md` carries no delimiter before the `v`, which the optional-delimiter clause absorbs.
 
