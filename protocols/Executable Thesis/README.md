@@ -8,8 +8,6 @@ Scope.* Math Journal edition, 19 pages: a three-page body sealed at cycles pp an
 Appendix A listing the sealed Fortran v2.4.0 verbatim. Three independent axes meet in exactly
 one point; the kernel's one blindness is to direction and never to completeness; the
 compartment names what the rows were. Every figure in it was printed by the program above.
-**Paper, prior:** `TRISDUCTION_The_Lock_Is_A_Determination_v1_0_0.pdf`, the three-page body
-under its working title, retained; git wants history.
 
 One file, one program. The Trisduction core thesis stated in Fortran and executed:
 the module, the exhibits, and an eight-class battery of 248 computed checks over every
@@ -23,17 +21,21 @@ reviewer across ten consecutive passes. Builds clean at
 
 ## Deletions manifest
 
-Two prior files were removed from `main` on 7 September 2026 by the architect's named
-override, quoted verbatim:
+Three prior files were removed from `main` on 7 September 2026 by the architect's named
+overrides, quoted verbatim:
 
 > Replace those two unaudited versions in git with this final audited version and push to git
+
+> Only keep 1 thesis file + 1 pdf. delete the unaudited stale files.
 
 | Removed path | Blob | Bytes | Status at removal |
 |---|---|---|---|
 | `TRISDUCTION_Core_Thesis_Fortran_v1_0_0.f90` | `c8680ddc2a77` | 25,445 | seated before any external review; superseded |
 | `TRISDUCTION_Core_Thesis_Fortran_v1_0_1.f90` | `279122a76412` | 26,525 | one external repair applied; superseded |
 
-Both remain in git history at commit `1200ae6be514d92395afc74636b3072e8ba4afef` and its
-parents. Nothing was force-pushed and no history was rewritten. The history is the ghost.
+| `TRISDUCTION_The_Lock_Is_A_Determination_v1_0_0.pdf` | `eb543c23c88e` | 157,988 | seated before the body audit, under the working title; superseded by v1.1.0 |
+
+The first two remain in git history at commit `1200ae6be514d92395afc74636b3072e8ba4afef` and its
+parents; the third at commit `34ab86fd1bec2e09a2c3d6c56b0169d256183a7a`. Nothing was force-pushed and no history was rewritten. The history is the ghost.
 
 Δ**M** = 0.
