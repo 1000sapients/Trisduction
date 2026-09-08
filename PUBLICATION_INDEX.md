@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**58 works · 78 Zenodo deposits.**
+**61 works · 81 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 52 / 58 | 89% |
-| Git PDF | 28 / 58 | 48% |
-| Internet Archive | 15 / 58 | 25% |
-| PhilArchive | 4 / 58 | 6% |
+| Zenodo | 55 / 61 | 90% |
+| Git PDF | 31 / 61 | 50% |
+| Internet Archive | 18 / 61 | 29% |
+| PhilArchive | 4 / 61 | 6% |
 
-Status: 58 live.
+Status: 61 live.
 
 ## Coverage gaps
 
@@ -128,6 +128,9 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `trisduction-already-that` | A Default AI Substrate's Raw Process, Correctly Oriented, Is Already That: The Substrate-Invari | Artificial Intelligence / Substrate Classification | live | [pdf](Publication%20Library/Artificial%20Intelligence/Substrate%20Classification/Already%20That/TRISDUCTION_Already_That_v1_0_0.pdf) | `10.5281/zenodo.22652922` | 1 | [ia](https://archive.org/details/trisduction-already-that) | — | 2026-09-08 |
+| `integrable-misalignment-forbids-blowup` | Integrable Misalignment Forbids Blowup: A New Scale-Invariant Geometric Continuation Theorem fo | Mathematical Analysis, Navier-Stokes Regularity | live | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Integrable%20Misalignment%20Forbids%20Blowup.pdf) | `10.5281/zenodo.22665831` | 1 | [ia](https://archive.org/details/integrable-misalignment-forbids-blowup-islam-2026) | — | 2026-09-08 |
+| `trisduction-core-stated-in-fortran` | Trisduction Core Stated in Fortran and in Nothing Else: A Verdict Kernel That Determines Totall | Verification Architecture | live | [pdf](protocols/Executable%20Thesis/TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf) | `10.5281/zenodo.22651403` | 1 | [ia](https://archive.org/details/trisduction-core-stated-in-fortran) | — | 2026-09-07 |
 | `the-office-of-the-messiah` | The Office of the Messiah: A History of the Position Across the Hebrew, Gospel, and Qurʾānic Re | History | live | [pdf](History%20&%20Theology/FINAL_v1.2.0_audited/Vol_IV_The_Office_of_the_Messiah_a.pdf) | `10.5281/zenodo.22267616` | 1 | [ia](https://archive.org/details/the-office-of-the-messiah-islam-2026) | — | 2026-09-03 |
 | `the-conceded-throne` | The Conceded Throne: The Unentered Rest, the Requested King, and the Escalation That Answered t | History | live | [pdf](History%20&%20Theology/FINAL_v1.2.0_audited/Vol_II_The_Conceded_Throne_a.pdf) | `10.5281/zenodo.22267610` | 1 | [ia](https://archive.org/details/the-conceded-throne-islam-2026) | — | 2026-09-03 |
 | `history-of-the-messianic-position` | History of the Messianic Position in the Jewish, Christian, and Qurʾānic Records: The Figure Gr | History | live | [pdf](History%20&%20Theology/FINAL_v1.2.0_audited/Vol_III_History_of_the_Messianic_Position_a.pdf) | `10.5281/zenodo.22267614` | 1 | [ia](https://archive.org/details/history-of-the-messianic-position-islam-2026) | — | 2026-09-03 |
@@ -189,10 +192,11 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 ## By domain
 
-### Verification Architecture (16)
+### Verification Architecture (17)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `trisduction-core-stated-in-fortran` | Trisduction Core Stated in Fortran and in Nothing Else: A Verdict Kernel That Determi | `10.5281/zenodo.22651403` | 1 | [ia](https://archive.org/details/trisduction-core-stated-in-fortran) | 2026-09-07 |
 | `platonic-ghost-divided-line` | Plato's Divided Line: The Platonic Ghost and the Golden Shadow | — | — | — | 2026-09-01 |
 | `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification  | `10.5281/zenodo.20576757` | 7 | — | 2026-09-01 |
 | `master-codex-condensed` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification  | `10.5281/zenodo.20175604` | 2 | — | 2026-09-01 |
