@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**61 works · 81 Zenodo deposits.**
+**62 works · 81 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 55 / 61 | 90% |
-| Git PDF | 31 / 61 | 50% |
-| Internet Archive | 18 / 61 | 29% |
-| PhilArchive | 4 / 61 | 6% |
+| Zenodo | 55 / 62 | 88% |
+| Git PDF | 32 / 62 | 51% |
+| Internet Archive | 19 / 62 | 30% |
+| PhilArchive | 4 / 62 | 6% |
 
-Status: 61 live.
+Status: 61 live, 1 unknown.
 
 ## Coverage gaps
 
@@ -107,10 +107,11 @@ A Zenodo deposit with no corresponding PDF found under `Publication Library/`. E
 - `master-codex-condensed` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Or
 - `master-codex-unabridged` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture · Triaxial O
 
-### In git or on IA, never deposited to Zenodo (6)
+### In git or on IA, never deposited to Zenodo (7)
 
 No Zenodo concept, so no DOI and no citable permanent address.
 
+- `two-navier-stokes-papers-one-instrument` · Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the General Reader
 - `birth-of-heaven-and-hell` · The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to the Fire, in the Words of 
 - `nineteen-of-saqar` · The Nineteen of Saqar: The Overt Scaffolding, the Cavity at the Perimeter, and the Closure-Form of Self-Verifi
 - `on-forgetting` · On Forgetting: An Underrecognized Mercy, and a Trisductive Grounding of Self-Forgetting as the Act by Which th
@@ -189,6 +190,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `geometric-nature-of-light` | THE GEOMETRIC NATURE OF LIGHT, From Ancient Substrate to Quantum Field. A Continuous-Field Read | Physics | live | — | `10.5281/zenodo.20091979` | 1 | — | — | 2026-05-09 |
 | `p-vs-np-omega-seal` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL | P versus NP and Foundations | live | — | `10.5281/zenodo.19588803` | 1 | — | — | 2026-04-15 |
 | `p-vs-np-geometric-determination` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP | P versus NP and Foundations | live | — | `10.5281/zenodo.19440615` | 1 | — | — | 2026-04-06 |
+| `two-navier-stokes-papers-one-instrument` | Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the General Reader | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Two%20Navier-Stokes%20Papers%20One%20Instrument%20-%20Audit%20Supplement.pdf) | — | — | [ia](https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026) | — | — |
 
 ## By domain
 
@@ -280,6 +282,12 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `apocalypse-as-retrieval` | The Apocalypse Was Not an Invention but a Retrieval: Second Temple Apocalyptic Litera | `10.5281/zenodo.21966237` | 1 | — | 2026-08-16 |
 | `clean-gospel-of-mark` | Quranic Christology: THE CLEAN GOSPEL OF MARK: A Passage by Passage Commentary on the | `10.5281/zenodo.21756247` | 1 | — | 2026-08-02 |
 | `afterlife-and-the-return` | On the Afterlife and the Return: A Trisductive Grounding of the Soul, the Two Fates,  | `10.5281/zenodo.20554213` | 1 | — | 2026-06-05 |
+
+### Unfiled (1)
+
+| Work key | Title | Zenodo concept | v | IA | Updated |
+|---|---|---|---|---|---|
+| `two-navier-stokes-papers-one-instrument` | Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the Gene | — | — | [ia](https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026) | — |
 
 ## Zenodo version chains (15)
 
