@@ -2075,7 +2075,9 @@
      {
       "version": "1.0.0",
       "pdf": "protocols/Executable Thesis/TRISDUCTION_The_Lock_Is_A_Determination_v1_0_0.pdf",
-      "note": "three-page body under the working title, retained"
+      "note": "seated before the body audit under the working title; removed by named override 2026-09-07; readable at ghost_commit",
+      "state": "removed",
+      "ghost_commit": "34ab86fd1bec2e09a2c3d6c56b0169d256183a7a"
      }
     ]
    },
