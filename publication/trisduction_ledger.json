@@ -2175,6 +2175,58 @@
     "work_key": "trisduction-already-that",
     "seal": "cycle af round 3"
    }
+  },
+  "integrable-misalignment-forbids-blowup": {
+   "title": "Integrable Misalignment Forbids Blowup: A New Scale-Invariant Geometric Continuation Theorem for Three-Dimensional Navier-Stokes, Proved from the Classical Base",
+   "domain": "Mathematical Analysis, Navier-Stokes Regularity",
+   "status": "live",
+   "first_published": "2026-09-08",
+   "last_updated": "2026-09-08",
+   "git": {
+    "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Integrable Misalignment Forbids Blowup - Journal Source.md",
+    "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Integrable Misalignment Forbids Blowup.pdf",
+    "editions": [
+     "math_journal"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 22665831,
+    "concept_doi": "10.5281/zenodo.22665831",
+    "latest_version_doi": "10.5281/zenodo.22665832",
+    "latest_record": 22665832,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "integrable-misalignment-forbids-blowup-islam-2026",
+    "url": "https://archive.org/details/integrable-misalignment-forbids-blowup-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Sealed audit cycle nsad3-20260908 round 3 (SELF grade). Git commits 8d0e29d (pdf), 309a580 (md).",
+   "extra": {
+    "files": {
+     "git_pdf_md5": "6dbe79c8e9a84c6bc547254a4b0df49e",
+     "zenodo_pdf_md5": "6dbe79c8e9a84c6bc547254a4b0df49e",
+     "ia_pdf_md5": "78dcd1f89073555499f1b8c445dd983b",
+     "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
+    },
+    "tool_record": {
+     "concept": "22665831",
+     "concept_doi": "10.5281/zenodo.22665831",
+     "latest_recid": "22665832",
+     "latest_doi": "10.5281/zenodo.22665832",
+     "latest_md5": "6dbe79c8e9a84c6bc547254a4b0df49e",
+     "filename": "Integrable Misalignment Forbids Blowup.pdf",
+     "published": "2026-09-08",
+     "env": "prod"
+    }
+   }
   }
  }
 }
