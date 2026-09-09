@@ -1,0 +1,284 @@
+=====================================================================
+ THE ROOT AXIOM STATED IN FORTRAN AND IN NOTHING ELSE
+ RA as the TOE of all TOEs, executed. RA_TOE_Thesis_Fortran v2.0.0
+=====================================================================
+ mode: sealed (the first failing check halts; the Fidelity Lock)
+ build: GCC version 13.3.0
+ flags: -mtune=generic -march=x86-64 -O2 -Wall -Wextra -Wconversion-extra -std=f2018 -fno-fast-math -ffp-contract=off -fpre-include=/usr/include/finclude/x86_64-linux-gnu/math-vector-fortran.h
+
+PART 0 - THE ENVIRONMENT CONTRACT - enforced at run, never trusted to flags
+  a build that breaks any line above refuses to run: the contract is executed,
+  so the bit-exact identities below rest on verified IEEE conduct. the
+  probes certify CONDUCT and never consult flags: fused or extended
+  arithmetic is refused where it executes, the march-native contract-fast
+  build dying on the a*b-c probe, while a target carrying no fused
+  instruction passes because none executed, the contract satisfied and
+  not evaded; the fused residuals -2^-60, +2^-60, -2^-54 are exactly
+  representable and never confusable with zero
+  scope: the probes certify these witnesses on this build; global order
+  is carried by the BUILD CONTRACT below plus per-site conduct receipts,
+  and every equality-critical reduction runs a fixed-order routine.
+ BUILD CONTRACT, stated and checked where checkable: IEEE binary64
+  (verified above); -std=f2018 -O2 -fno-fast-math -ffp-contract=off;
+  source free-form measured at 130 columns maximum, inside the 132
+  standard, no length flag needed; external BLAS substitution for the
+  equality-critical sites is forbidden, those sites use gram3_fixed;
+  the compiler and flags of this run are printed at the head; floating
+  trap modes are incompatible by design, quiet NaNs being manufactured
+  here as verdict flags, so -ffpe-trap builds are outside the contract.
+
+PART A - SEAL L ON THE ROOT AXIOM - the Tongue loads first
+  slot census of the encoded sentence: E = 2, K = 2, R = 2
+  parse(RA), census and order executed on the encoding: [LOCK-L] - Seal L: three slots, LIT disjoint, ordered E->K->R (positional check executed)
+  collision control (computed overlap): [X] - Seal L: LIT collision, slot vocabularies intersect
+  deletion executed (kinetic tokens removed): [X] - Seal L: deletion test returns 2 slots, not 3
+  order carried by the Tongue: existence -> kinetic -> relation;
+  the word-to-slot map is declared semantics, the census and the
+  deletion are executed on the encoding, per the anchor declaration;
+  the map is an axiom of the encoding, consumed as a premise, and nothing
+  downstream presents it as discovered
+
+PART B - THE FLOOR IN NUMBERS - cited theorem-grade formulas, numerically executed
+  GUARD-HARNESS RECIPE, third-party reproducible: inject before the
+  battery and expect nonzero termination with the named refusal:
+    iqconj([-huge(0_ik)-1_ik,0,0,0])            -> exit 1, iqconj bound
+    iomul(x with x(1)=-huge(0_ik)-1_ik, 0-vec)  -> exit 1, iomul bound
+    hn = inrm(ones(32)); print hn               -> exit 1, length bound
+  consume every pure result: a pure call whose value is unused is
+  legally elided at optimization, guard and all; the print keeps it live.
+  the source carries the recipe; the executed terminations ship as the
+  sha-bound file RA_TOE_v2_0_0_guard_harness_receipt.log beside the
+  sealed run log, the record carrying what a source file cannot.
+  Heisenberg floor, electron at 1 Angstrom:  1.526066079E-19 J
+  zero-point energy at omega = 1e14 rad/s:   5.272859085E-21 J
+  Landauer floor, one bit at 300 K:          2.870978885E-21 J
+  qubit survival cos^2(t/2) at t = 0..pi:     1.0000000000  0.8535533906  0.5000000000  0.1464466094
+     terminal survival at t = pi:              3.7494E-33
+  orthogonalization time tau_perp:            3.141592653590
+  Mandelstam-Tamm bound pi/(2 dE):            3.141592653590
+  Margolus-Levitin bound pi/(2 <E>):          3.141592653590
+  Frozen Substrate: tau_perp at dE = 5e-1, 5e-4, 5e-7:   3.14159E+00  3.14159E+03  3.14159E+06
+  dE = 0: no transition, no registration; a zero-energy existent registers nothing
+
+PART C - THE FORM IN INTEGERS - nothing here rounds
+  closure of the 24 Hurwitz units: 576 of 576 products inside
+  conjugacy classes mod sign: 4 with sizes   1  3  4  4
+  norm-two shell: 24 = 12 pure + 12 real-occupied; half-integer members 0
+  A4 orbit of the pair (1,2): size 12, stabilizer order 1
+  Euler counted from the built complex: V = 4, E = 6, F = 4
+  relabel parity: three even relabels land Re = -1, three odd land Re = +1
+  one discrete modulus, the orientation bit; zero continuous moduli (Part E sweep)
+  quaternion associator over all 13824 unit triples, max |.|: 0
+  octonion associator [e1,e2,e4] components:   0  0  0  0  0  0  0  2
+  norm composition |ab|^2 = |a|^2 |b|^2 exact on 27 integer pairs in H and in O
+  sedenion wall: (e1 + e10)(e4 - e15) = 0 exactly
+     with |a|^2 = 2, |b|^2 = 2, |ab|^2 = 0
+  the walls in order: commutativity at H, associativity at O, division at S
+  joint anticommutant of {i, j} on the exact grid: 4 of 124 nonzero points, 0 off the k-line
+  constraint matrix on the basis: 2x2 minor = 4, z-column identically zero
+  below the walls the third axis is begotten and confined: i j = k executed,
+  and the joint anticommutant of {i, j} in Im H is the k-line, counted; the
+  fourth is barred above by the executed associator wall; the identification
+  of the three algebra axes with V_F, V_E, V_ER is the seated premise-typed
+  mapping, consumed here and never a discovery of this run
+
+PART D - THE NUMBER - the Return, then the physics-law reading
+  the Return on the parse triad: i j k =  -1  0  0  0   (Re = -1, the Ground)
+  Fourier triad: [LOCK]  det(R) =   1.000000000000  |lambda| =   1.000000000000
+  physics-law reading: [LOCK] - determination: three independent axes, one point
+     det(R) =   0.393246801977   lambda =  -0.627093933934
+     kappa(R) =     6.5523   four-estimator spread =  1.665E-16
+     |lambda^2 - det(R)| =  5.551E-16   margins (orders): collapse   11.87, conditioning    5.18
+     source-share eta per mixed row (pre-projection):   0.0475  0.3334  0.1399
+     grid disclosure: the context grid is a constructed exhibit (deterministic
+     harmonics); the rows are physical-law magnitudes (Heisenberg, zero-point,
+     Landauer); the witness rides the cited theorems, never the grid
+  manufactured third axis: [?] - post-projection axis absorbed by a covariate
+  duplicated slot: [X] - coplanar collapse: rank(rows) < 3, line not point
+  full negation: max|G(P)-G(-P)| =  0.00E+00   lambda  -0.627093933934 ->   0.627093933934
+  single reflection: lambda  -0.627093933934 ->   0.627093933934
+     |det(R) - det(R) reflected| =  0.00E+00
+  time reversal: |det forward - det reversed| =  3.331E-16
+  the arrow (registration entropy, kB units): forward      3733.9097,  reversed     -3733.9097  (the sign parts them)
+
+PART E - THE BLINDNESS AND ITS EXACT WIDTH - one bit, counted
+  all eight sign patterns return det(D R D) = det(R) bit-exactly
+  lock(P) = lock(not P) at the scalar: the Number is orientation-blind by theorem
+  Form source: det(sigma | residence) =   -1.0 for P and for not-P alike: 0 bits
+  gate manifest: executed facts arm 2 REG (span rank three), 3 SGEG (the
+  linguistic LIT), 5 MIG (the absorbed-axis dissolution), 7 DUAL (the
+  analytic reflection), 8 CSCG (the integer Hurwitz closure), and 10 MTA
+  (the harmonic Return identity); gates 1, 4, 6, 9, 11, 12 are declared
+  screens at this register. independent here means six pairwise-distinct
+  executed objects, dimensional, linguistic, projective, analytic,
+  integer, harmonic; gate-passage is a screen verdict, cited for nothing
+  external, the theorem-tier gate contents living at their seats
+  gate source: role-direction is fixed before any proposition arrives: 0 bits
+  relay: content-flip image   0.627093933934, convention-flip image   0.627093933934
+  Number source: the relay reports the orientation it was handed and originates none: 0 bits
+  conjugation sweep, 100 frames: max|dlambda| =  5.551E-16,  sign flips: 0
+  paired census, counted from the sweep: positive 100, negative 100
+  uniform-measure entropy of the counted two-point fibre:   1.0000000000
+  (the census is the constructed pair family realizing both signs at
+  bit-identical invariants; freedom here is the seated Freedom law's
+  object, the fibre of the invariant map, a count of what the instrument
+  class cannot tell apart; the deficit is one binary parameter of supply,
+  the aperture width at its seat; one bit is the uniform-coding capacity
+  of that two-point fibre; no physical frequency, no prior, and nothing
+  about any knower's credence is asserted)
+  both orientations are consistent with every determined quantity;
+  the deficit of the whole instrument class is exactly one bit
+  S0 has 2 components; S1 has 1 (the two-point sphere is the unique disconnected sphere)
+  refinement (grid x4 on the line, x2 on the circle, tolerance halved): 2 and 1 components
+  the census is the executed instance at two spheres, parameter-robust under
+  refinement; the uniqueness of the disconnected sphere is the classical
+  fact it corroborates, cited not proven
+  idempotent census on the line: e*e = e has 2 root components on [-2,2]
+  no-cut lemma: the only rank-deficient idempotent on a line is the zero map;
+  the residual freedom is the component count of S0, one bit, and it cannot be cut
+  split identity ||LD-I||^2 = a^2 + b^2 + 1, max deviation over the grid:  0.00E+00
+  left-inverse deficiency: the split is measured at every candidate and
+  rows one and two attain zero exactly, so the sweep's minimum is the
+  global minimum over all 3x3 L (analytic step: min of a^2+b^2+1 is 1):   1.0000000000
+  the deletion monoid, closed from the three cuts and the identity: 8 elements
+  the transformation set of the Tongue is that constructed monoid, closed,
+  associative, unital, inverse-free off the identity, its eight elements the
+  2^3 cut lattice the conservation census walks; never a group, measured;
+  the LIT bars synonymy, the one candidate that would restore a group;
+  the Erlangen criterion has no acting group to read: Seal L is unclosed,
+  a floor and not a ceiling, and the one free bit is the Tongue's to carry
+  conservation C x F = v^3 for the executed coordinate-cut tower, the
+  implemented family; the seated general law is instanced, never proven,
+  here; the orientation
+  sheet factor is COUNTED from the paired census of the sweep, never stipulated:
+     v = 2:  c f = 8 counted at a = 0,1,2,3; with the counted sheet factor: 16 total
+     v = 3:  c f = 27 counted at a = 0,1,2,3; with the counted sheet factor: 54 total
+     v = 4:  c f = 64 counted at a = 0,1,2,3; with the counted sheet factor: 128 total
+     v = 5:  c f = 125 counted at a = 0,1,2,3; with the counted sheet factor: 250 total
+  the cut moves structure from content into freedom; the counted total is
+  invariant; the counted sheet factor multiplies it and sits outside the cut
+
+PART F - THE EARNED BIT AND THE SEAL - the denial pays the floor
+  the negation is read in the axiom's own declared vocabulary: not-(to
+  exist is to actuate) is an existent whose kinetic slot is empty, <T> = 0;
+  the mapping actuation = kinetic content is the Root Axiom's stated
+  operationalization, premise-grade at the universal leg and theorem-grade
+  at the confined floor, declared here and never an implementation choice.
+  what the run proves: the declared negation has no admissible realization
+  at the confined register; what no run can prove: the axiom from below,
+  per the Empty Throne; other registers route and are never smuggled, the
+  classical row riding its own cited floors, the formal-only reading out of band
+  not-RA formal row: admissible contexts (floor <= 0): 0 of 24 (the demand <T> = 0 sits below the bound everywhere)
+  kernel on not-RA: [?] - zero-variance row: axis carries no content
+  the empty formal row refuses at intake; the two populated axes span a plane
+  (rank 2, computed), and two planes meet in a line: no volume, no lock
+  the floor prices logically irreversible commitment, Landauer's own object;
+  the bridge, a registered denial is an irreversible commitment of at least
+  one bit, is the applied register's declared premise, consumed not derived;
+  a reversibly held denial charges nothing and commits nothing, executed:
+  Omega at zero bits: no denial registered; nothing to adjudicate
+  Omega at one bit, 300 K:  2.870978885E-21 J - the denial paid the floor; the registered act is an act, the recursion closes per the seated theorem
+  Omega, reversible branch:  0.000E+00 J - reversibly registered: floor-zero never cost-zero; Landauer bounds only the irreversible (Bennett), and nothing here commits against the axi
+  the fibre over the invariants has two points; the negation's component
+  is unpopulated; the reading act itself is an instance of the other;
+  the one free bit is earned at the deed, not chosen at the desk.
+  direction is read from the Tongue's order, the arrow, and the empty row;
+  never from the blind scalar. Veto, never substitution; per run, never tenure.
+  gol_admit: [GOL-OK] - magnitude plus direction; proceed to witness and asymmetry
+  imprint on the floor face: [SEAL] - only P clean-locks; determinacy witness supplied
+  witness of record: the Heisenberg bound and the third law (cited, E1),
+  the executed Frozen-Substrate divergence and the saturated speed limit (E0)
+  parse-triad Return:   [A|RA] - compartment I, closure-rowed: [seal A . RA], conditional at the act
+  confined kinetic floor: [III] - R-3: V_E live or Forward; world-rowed, revisability in the rows
+  not-RA:                [II] - S-1: third axis unpopulated; two planes meet in a line, no lock
+  the universal-extension leg is premise-grade by theorem: the Empty Throne;
+  no emitter is pointed at the root, and the root stands on nothing
+  AEGIS over four logics: one refusal, p(G) /= G; the alien may write the
+  capture and cannot perform it; the deed counter reads 4 of 4 calls.
+  demonstrated: the refusal is a constant function of the deed by
+  construction, the guard reading the parameter and consulting only the
+  act; logic-priority is the design, executed, never four derivations;
+  no per-logic derivation is claimed or licensed by this artifact
+  positive-mass cascade on this thesis: [Mosaic dM=0] - M1: meta-work, no mass by definition
+  audit symmetry: the warrant this run draws from its own execution is zero
+
+PART G - THE BATTERY - hostile inputs, forced failures, re-execution
+  class 1 - primitives under hostile input: NaN propagates, scale survives: pass
+  class 2 - kernel refusals: row and covariate intake, shortfall, covariate rank: pass
+  class 3 - gate dispatcher: twelve forced failures each named; the gate contents are screens: pass
+  class 4 - row-genus cascade: every compartment and refusal reachable: pass
+  class 5 - admission spine: no under-specified call ever seals: pass
+  class 6 - the two unsettable gates M5 and M6 refuse from inside: pass
+  class 7 - floor intake: zero, negative, and non-finite parameters refuse: pass
+  class 8 - qmul power-of-two scaling: intermediate overflow cancelled exactly,
+  true overflow reported honestly: pass
+  class 9 - jacobi3 convergence exit and flag, symmetrization, NaN refusal, cond3 guard: pass
+  class 10 - covariate machinery: k>2 refused, near-dependence and rounding-noise
+  caught scale-free, non-finite refused, 1e300 covariates reproduce baseline: pass
+  class 11 - guard reason codes: gate index, omega, delta-M, imprint on integers: pass
+  class 12 - Tongue hostiles: the arrow refuses the scramble; count-register
+  admission licenses only the count, per the seated non-closure theorem: pass
+
+=====================================================================
+ VERDICT [SEAL A . RA] on the parse-triad Return, closure-rowed,
+   conditional at the act; [SEAL] on the confined kinetic floor at
+   compartment III, world-lawed rows over a constructed grid, witness
+   cited; [II] on the negation, unpopulated;
+   premise-by-theorem on the universal extension, the Empty Throne.
+ The blindness is a theorem, its width is one bit, the bit is COUNTED
+   from the executed paired census, earned at the deed, and the Tongue
+   carries what the Number cannot.
+
+ THE ONE-BIT CONCESSION, constitutive and executed: everything this run
+   determines is forced, except exactly one binary parameter, the
+   orientation of assent, and spending that bit against the axiom is priced.
+   the forced part lands on the Ground, Fix(sigma) = R, the scalar line the
+   Return touches; the free bit is the sigma-odd orientation, the seated
+   aperture width. any substrate reading this run, human or machine, holds
+   exactly that one bit here, per the seated Freedom law; its assent branch
+   costs nothing and its denial branch is charged by the executed Omega
+   floor and instantiates the axiom it denies: freedom one bit, the rest forced.
+ TOKENS BOUND TO EMITTERS, re-executed above: [SEAL A . RA] is imprint
+   code 2 over closure-rowed inputs, cascade code 4, conditional at the
+   act; [SEAL] on the floor face is imprint code 2 over compartment III
+   inputs, cascade code 3, its witness the cited Heisenberg bound and
+   third law at E1 beside the executed Frozen-Substrate and speed-limit
+   receipts at E0; [II] on the negation is cascade code 2.
+ SELF-DESCRIPTION, the artifact's own: this program verifies internal
+   mathematical identities, guard behavior, and declared premise-
+   consequence structure at machine warrant; it does not and cannot
+   verify external ontological truth, per its own admission gates M5 and
+   M6 and the Empty Throne; per the seated nature-of-the-register law, a
+   determined construction is exactly as determined whether or not
+   anything answers to it, and contact is carried only by the cited
+   witnesses and the declared premises, which this run names.
+ SCOPE OF PROOF, printed by the run: machine-warrant items are the
+   enumerated identities executed on constructed objects; theorem-tier
+   items ride the cited external results at their own tiers (Heisenberg,
+   Landauer, the speed limits, Frobenius, Hurwitz); the universal leg
+   stays premise-grade by theorem, the Empty Throne; dispatcher
+   admissions route supplied facts and upgrade none of them.
+ GENRE, stated at the mouth: this is an executable thesis, not a proof of
+   ontology and not a mere test harness; its claims stand at the printed
+   warrants, theorem-grade only where cited, premise-grade at the root,
+   conditional at the act where sealed, and no external ontological truth
+   is certified, per the self-description above. The tokens are the
+   register's verdict vocabulary, each bound to its emitter and tier;
+   renaming them would delete warrant information, not add honesty.
+ The title carries the thesis's claim at its stated warrant; every number
+   printed above was computed in this run.
+
+ PART H - THE WRITTEN AND THE READ, the terminal part (card 0712)
+   the pair in time: the Written is its author's past actuation configured,
+   the RAM-face, the decree; the Reader is the active face, RA, the present
+   tense; the arrow separates them, so even the author returns as a reader.
+   the record is forced, the orientation of assent is free, the denial is
+   priced: freedom one bit, the rest forced.
+   governing register: github.com/1000sapients/Trisduction, public; the
+   card citations are frame, never evidence, and carry zero check weight.
+ LIVE: [?] interior - self-check is not a witness (M6): the verifier is never the claimant; token withheld
+ (supply the argument witnessed to open the live face through the aperture)
+ kinetic-register conduit operational
+=====================================================================
+ BATTERY: 1123 checks executed, 0 failures.
+ BATTERY-JSON: {"checks":1123,"failures":0,"mode":"sealed"}

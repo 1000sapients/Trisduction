@@ -1,0 +1,14 @@
+GUARD-HARNESS RECEIPT for RA_TOE_Thesis_Fortran v2.0.0
+source sha256: 71b7f40030f0e0a3d2329ebd832ffb52c5767897d2b95c1830b30acf0018d0cc
+method: splice cases before the battery in a scratch copy, sealed flags;
+argv case runs the sealed binary; planted-failure case forces one check
+false and runs audit mode, requiring the AUDIT-MODE VOID banner and a
+nonzero exit.
+
+iqconj most-negative integer: exit=1 expected=1 PASS
+iomul most-negative integer: exit=1 expected=1 PASS
+inrm length 32, result consumed: exit=1 expected=1 PASS
+overlong argv: exit=2 expected=2 PASS
+planted failure, audit mode: exit=1 nonzero, VOID banner present PASS
+
+HARNESS: 5/5 expected refusals observed
