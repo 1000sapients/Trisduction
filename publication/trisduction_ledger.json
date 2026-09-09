@@ -2244,8 +2244,12 @@
     "state": "live"
    },
    "zenodo": {
-    "state": "pending",
-    "note": "stage attempted 2026-09-08, zenodo.org returned 504 on every call; mint outstanding; metadata staged at zstage/supp.meta.json"
+    "conceptrecid": "22670355",
+    "concept_doi": "10.5281/zenodo.22670355",
+    "latest_version_doi": "10.5281/zenodo.22670356",
+    "latest_record": "22670356",
+    "versions": 1,
+    "state": "published"
    },
    "extra": {
     "git_pdf_sha256": "f4d8d3090f0b2f0f9ddd26d3445d2ae5395cc4616f421b45ac18b24fdab91dc1",
@@ -2292,6 +2296,68 @@
     "audit_cycle": "reb-20260909 v3",
     "companion_to": "10.5281/zenodo.22665831",
     "battery": "CHECK.py 14/14"
+   }
+  },
+  "anchoring-axioms-navier-stokes": {
+   "title": "Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for Supplier-Side Axiom Formulation",
+   "kind": "method-and-conditional-results",
+   "date": "2026-09-08",
+   "git": {
+    "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity.pdf",
+    "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity - Math Journal Source.md",
+    "pdf_commit": "63fc381",
+    "md_commit": "d2c6f74"
+   },
+   "zenodo": {
+    "conceptrecid": "22670331",
+    "concept_doi": "10.5281/zenodo.22670331",
+    "latest_version_doi": "10.5281/zenodo.22670332",
+    "latest_record": "22670332",
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "anchoring-axioms-navier-stokes-islam-2026",
+    "url": "https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026",
+    "state": "live"
+   },
+   "extra": {
+    "git_pdf_sha256": "d1804813ab4ce33ce1eb3d4593483edd156dabaea26fbf21a9625e12a78ddd5d",
+    "git_pdf_md5": "dd68f41ab3c414e67fa6a7db03a7da44",
+    "ia_pdf_md5": "1a1ae5c7247892282f17024d2b070e2d",
+    "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
+    "companion_of": "the other of the 2026-09-08 pair"
+   }
+  },
+  "navier-stokes-effective-axiom-proof": {
+   "title": "Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effective Axiom: The Complete Deductive Chain",
+   "kind": "conditional-theorem",
+   "date": "2026-09-08",
+   "git": {
+    "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Global Smoothness of Three-Dimensional Navier-Stokes from a Single Effective Axiom.pdf",
+    "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Global Smoothness of Three-Dimensional Navier-Stokes from a Single Effective Axiom - Math Journal Source.md",
+    "pdf_commit": "dbad77f",
+    "md_commit": "311bcce"
+   },
+   "zenodo": {
+    "conceptrecid": "22670343",
+    "concept_doi": "10.5281/zenodo.22670343",
+    "latest_version_doi": "10.5281/zenodo.22670344",
+    "latest_record": "22670344",
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "global-smoothness-single-effective-axiom-islam-2026",
+    "url": "https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026",
+    "state": "live"
+   },
+   "extra": {
+    "git_pdf_sha256": "5d8a28bc45813a53ffec82ac066f0b9f09aeb2aeceb102cc00f24f3ce3ef1dd1",
+    "git_pdf_md5": "6accaa4a24a72d0f43f9d334522c8192",
+    "ia_pdf_md5": "59fd3374a67e89827c43063319555277",
+    "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
+    "companion_of": "the other of the 2026-09-08 pair"
    }
   }
  }
