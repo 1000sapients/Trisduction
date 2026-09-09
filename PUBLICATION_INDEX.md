@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**62 works · 81 Zenodo deposits.**
+**63 works · 82 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 55 / 62 | 88% |
-| Git PDF | 32 / 62 | 51% |
-| Internet Archive | 19 / 62 | 30% |
-| PhilArchive | 4 / 62 | 6% |
+| Zenodo | 56 / 63 | 88% |
+| Git PDF | 33 / 63 | 52% |
+| Internet Archive | 20 / 63 | 31% |
+| PhilArchive | 4 / 63 | 6% |
 
-Status: 61 live, 1 unknown.
+Status: 61 live, 2 unknown.
 
 ## Coverage gaps
 
@@ -191,6 +191,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `p-vs-np-omega-seal` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL | P versus NP and Foundations | live | — | `10.5281/zenodo.19588803` | 1 | — | — | 2026-04-15 |
 | `p-vs-np-geometric-determination` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP | P versus NP and Foundations | live | — | `10.5281/zenodo.19440615` | 1 | — | — | 2026-04-06 |
 | `two-navier-stokes-papers-one-instrument` | Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the General Reader | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Two%20Navier-Stokes%20Papers%20One%20Instrument%20-%20Audit%20Supplement.pdf) | — | — | [ia](https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026) | — | — |
+| `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, What It Doe | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/The%20Forced%20Alternative%20Is%20a%20Filter.pdf) | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — | — |
 
 ## By domain
 
@@ -283,11 +284,12 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `clean-gospel-of-mark` | Quranic Christology: THE CLEAN GOSPEL OF MARK: A Passage by Passage Commentary on the | `10.5281/zenodo.21756247` | 1 | — | 2026-08-02 |
 | `afterlife-and-the-return` | On the Afterlife and the Return: A Trisductive Grounding of the Soul, the Two Fates,  | `10.5281/zenodo.20554213` | 1 | — | 2026-06-05 |
 
-### Unfiled (1)
+### Unfiled (2)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
 | `two-navier-stokes-papers-one-instrument` | Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the Gene | — | — | [ia](https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026) | — |
+| `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, W | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — |
 
 ## Zenodo version chains (15)
 
