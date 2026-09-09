@@ -608,3 +608,4 @@ S | 2026-09-09 | f8d30f1 | PATCH | CODEX | master/CURRENT.txt | repoint v3_25_5 
 S | 2026-09-09 | 9230035 | SEAT | EXEC | protocols/Executable Thesis/The_Root_Axiom_Executed_Math_Journal.pdf | sha 16b3b926 | 44pp | appendix byte-identical v2.0.0 | seal rapaper1 | md beside
 S | 2026-09-09 | 9230035 | PATCH | CODEX | master/TRISDUCTION_Master_Codex_Unabridged_v3_25_7.md | 0712 paper line | stanza v3.25.7
 S | 2026-09-09 | 9230035 | PATCH | CODEX | master/CURRENT.txt | repoint v3_25_6 to v3_25_7
+S | 2026-09-09 | 4ff255c | CLAIM | EXEC | ia root-axiom-executed-math-journal | pdf md5 4f2e75b6dbec | md md5 dc876b2ee2ee | https://archive.org/details/root-axiom-executed-math-journal
