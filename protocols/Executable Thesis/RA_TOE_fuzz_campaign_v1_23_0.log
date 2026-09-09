@@ -1,0 +1,7 @@
+FUZZ seed: 20260622
+C1 shape-contract sweep done (N 1..40 x Nc 1..40 x k 0..4, three procs)
+C2 scale invariance done (2000 iters, exact power-of-two row/cov scaling)
+C3 pathological float classes done (5000 iters, NaN/Inf/subnormal/near-huge/signed-zero)
+C4 integer metamorphic done (20000 iters: conj involutions, composition norms, quaternion+octonion)
+C5 real-quaternion metamorphic done (20000 iters: associativity, conj bit-involution, norm product)
+FUZZ-JSON: {"seed":20260622,"iterations":178000,"failures":0}
