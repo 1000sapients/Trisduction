@@ -1,0 +1,12 @@
+GUARD-HARNESS RECEIPT for RA_TOE_Thesis_Fortran v1.20.0
+source sha256: 908c057a718055c9e790d6a69f9bb6677ef3eb1ff738663d3933a1219744be43
+method: splice cases injected before the battery in a scratch copy and
+compiled with the sealed flags; the argv case runs the sealed binary
+directly with a single overlong argument. Exit and refusal captured.
+
+iqconj most-negative integer: exit=1 expected=1 PASS :: ERROR STOP iqconj: integer intake beyond the 2^29 overflow-safe bound
+iomul most-negative integer: exit=1 expected=1 PASS :: ERROR STOP iomul: integer intake beyond the 2^29 overflow-safe bound
+inrm length 32, result consumed: exit=1 expected=1 PASS :: ERROR STOP inrm: vector length exceeds the proven overflow bound (31)
+overlong argv (34 chars, padded keyword): exit=2 expected=2 PASS :: command-line argument rejected: retrieval error or longer than the buffer
+
+HARNESS: 4/4 expected refusals observed
