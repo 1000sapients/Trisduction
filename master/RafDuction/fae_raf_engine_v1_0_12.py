@@ -1,0 +1,1159 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""FORMAL-ALONE TRISDUCTION ENGINE · ROOT AXIOM RAF, THE INTERACTION FACE OF RA · FAE v1.0.12 · seed 20260622
+
+Ground and root axiom. RA, to exist is to actuate, is the one root and the ground. RAF, Root Axiom-Formal,
+codex v3.33.0 Book II chapter 10 B, is RA's interaction face read in the formal register and stands under RA,
+never beside it: RAF-1 registration, analytic in the register; RAF-2 closure, the one posit. BR-L, the price
+RA's actuation floor sets on every registration, is named and never load-bearing in any verdict here.
+Formal alone, operationally: no BR-L load, no arrow, no sign.
+Bedrock order: Seal L, then the router, then the twelve interaction-face gates, then Seal M.
+The engine adjudicates hand-built readings of relation claims about systems on supplied joint laws.
+It never fabricates a law, never seals a direction, never emits a halt token, and authors nothing.
+Run: python3 fae_raf_engine.py            boot, batteries, chain
+Use: from fae_raf_engine import fae, fsig  adjudicate one supplied reading
+Exact and sampled instruments use the standard library only. The second-order channel needs numpy and
+names its absence; 50-digit escalation uses mpmath where present and names its absence otherwise.
+"""
+import hashlib, math, os, sys
+from fractions import Fraction as Fr
+from itertools import combinations
+
+SEED = 20260622
+VERSION = "1.0.12"
+CENSUS = dict(alpha=0.99, n_perm=2000, band_sigma=3, cell_floor=5, g8_tol=1e-12, kappa_gate=1e6, collapse_units=100,
+              identity_units=4, float_channel_tol=1e-9, family_arity=4, family_alphabet=2, families=(300, 60, 120),
+              exhibitor_alphabet="2^b", margin_gate=1e-6, exact_work_cap=2e6, zero_variance_rel=1e-12)
+SPEC = ("FAE-RAF v1.0.12|ground RA, the one root; root axiom RAF, RA's interaction face|RAF-1 analytic, RAF-2 the one posit, BR-L named never load-bearing|"
+        "formal alone: no BR-L load, no arrow, no sign|Seal L: the cut on relation claims, three claim-slots "
+        "system/registration/domain, LIT, T-1 law-not-single-event, T-2 face-split, T-3 D-reading, T-4 atomization, basis screened at G10|"
+        "router R1 type, R2 reach, R3 bridge|twelve gates on K4 {system, registration, domain, seal}|"
+        "Seal M: exact law by Fraction factorization; sampled by plug-in with dual null, sha256 permutations "
+        "and Wilks chi-square; second-order kernel with TC_G = -log2|lambda| and Bartlett sphericity|"
+        "coalition closure|components the finest non-singleton blocks, domains their unions|grade vocabulary ranked for the Carrying Law|"
+        "RAF-C1 and RAF-C3 verdicts at premise under chapter 10 B, the analytic candidate a switch pending ruling|"
+        "faces IX MEM CLOSED UNI EXT NOEXT SELF DIR KER|halt tokens unavailable by type|"
+        "T-3 D-reading and T-4 atomization typed at Seal L ahead of every gate|elephant fence at G8|kill-matrix, ablation, zero-supply nullity, deletion fuzz, adversarial, calibration, "
+        "root screen with random corroboration, synergy family, and an independent floating-point channel|"
+        "distribution-free rank band on the permutation null|parameter census fixed in code|grade-switch battery|"
+        "margin gate on every committed fact decided by a floating-point comparison|"
+        "exchangeable draws required on the sampled path|exact work cap on the uniqueness face|rank band refused at the sample edge|"
+        "exhibition bridge, to exhibit is to register|symmetry battery and limit battery|"
+        "trace of every reached check|aperture sentence on the world uniqueness verdict only|FSIG follows the face table|output batteries|"
+        "explicit nulls read as absent keys, malformed values routed [?] at L0|absence basis read from a fixed vocabulary|null and type fuzz|"
+        "sampled seal conditional on the supplied exchangeability declaration|malformed declaration reported unread|relative zero-variance floor|"
+        "zero-variance floor typed as the resolution of double arithmetic, translated rows in the limit battery and the margin gate|"
+        "floor typed as a tolerance above the unit roundoff|fallback route leaves the cause open, engine fault injected in a sandbox|"
+        "a raising reading's trace keeps every check reached, the raising check included|"
+        "self-application|chain D0..D4, exact facts only")
+D0 = hashlib.sha256(SPEC.encode("utf-8")).hexdigest()
+def Hh(x): return hashlib.sha256(str(x).encode("utf-8")).hexdigest()
+
+SEAL, BROKEN, OPEN = "[⟀]", "[X]", "[?]"
+_ASCII = {SEAL: "SEAL", BROKEN: "X", OPEN: "U"}
+def tcode(t): return _ASCII.get(t, t)
+
+# ============================ deterministic stream ============================
+class DRBG:
+    """SHA-256 counter stream. Identical on every platform and library version."""
+    def __init__(self, label):
+        self.label = str(label); self.i = 0; self.buf = []
+    def u64(self):
+        if not self.buf:
+            h = hashlib.sha256(f"{self.label}|{self.i}".encode()).digest(); self.i += 1
+            self.buf = [int.from_bytes(h[j:j + 8], "big") for j in (0, 8, 16, 24)]
+        return self.buf.pop(0)
+    def below(self, n):
+        lim = (1 << 64) - ((1 << 64) % n)
+        while True:
+            v = self.u64()
+            if v < lim: return v % n
+    def unit(self): return (self.u64() >> 11) * (1.0 / 9007199254740992.0)
+    def normal(self):
+        u1 = (self.u64() + 1) / 18446744073709551616.0; u2 = self.u64() / 18446744073709551616.0
+        return math.sqrt(-2.0 * math.log(u1)) * math.cos(2.0 * math.pi * u2)
+    def permutation(self, n):
+        p = list(range(n))
+        for i in range(n - 1, 0, -1):
+            j = self.below(i + 1); p[i], p[j] = p[j], p[i]
+        return p
+
+# ============================ exact instrument, supplied finite laws ============================
+def law_valid(law):
+    return (isinstance(law, dict) and len(law) > 0
+            and all(isinstance(p, Fr) and p >= 0 for p in law.values()) and sum(law.values()) == 1)
+
+def marg(law, idx):
+    out = {}
+    for k, p in law.items():
+        kk = tuple(k[i] for i in idx); out[kk] = out.get(kk, Fr(0)) + p
+    return out
+
+def factorizes(law, S, T):
+    """Exact. P(S,T) = P(S)P(T) on the full product of marginal supports. True iff I(S;T) = 0."""
+    S, T = list(S), list(T)
+    if not S or not T: return True
+    pS, pT, pST = marg(law, S), marg(law, T), marg(law, S + T)
+    for s, ps in pS.items():
+        for t, pt in pT.items():
+            if pST.get(s + t, Fr(0)) != ps * pt: return False
+    return True
+
+def cond_independent(law, S, T, W):
+    """Exact. P(S,T,W) P(W) = P(S,W) P(T,W) cell by cell. True iff I(S;T|W) = 0."""
+    S, T, W = list(S), list(T), list(W)
+    pW, pSW, pTW, pSTW = marg(law, W), marg(law, S + W), marg(law, T + W), marg(law, S + T + W)
+    for w, pw in pW.items():
+        if pw == 0: continue
+        for sw, psw in pSW.items():
+            if sw[len(S):] != w: continue
+            for tw, ptw in pTW.items():
+                if tw[len(T):] != w: continue
+                if pSTW.get(sw[:len(S)] + tw[:len(T)] + w, Fr(0)) * pw != psw * ptw: return False
+    return True
+
+def constant(law, S): return sum(1 for p in marg(law, S).values() if p > 0) <= 1
+
+def mi_bits(law, S, T):
+    S, T = list(S), list(T)
+    pS, pT, pST = marg(law, S), marg(law, T), marg(law, S + T)
+    tot = 0.0
+    for k, p in pST.items():
+        if p > 0: tot += float(p) * math.log2(float(p / (pS[k[:len(S)]] * pT[k[len(S):]])))
+    return max(tot, 0.0)
+
+def _pow2(q):
+    n, d = q.numerator, q.denominator
+    if n > 0 and n & (n - 1) == 0 and d & (d - 1) == 0: return n.bit_length() - d.bit_length()
+    return None
+
+def mi_exact(law, S, T):
+    """Exact Fraction in bits where every cell ratio is a power of two; None otherwise."""
+    S, T = list(S), list(T)
+    pS, pT, pST = marg(law, S), marg(law, T), marg(law, S + T)
+    tot = Fr(0)
+    for k, p in pST.items():
+        if p == 0: continue
+        e = _pow2(p / (pS[k[:len(S)]] * pT[k[len(S):]]))
+        if e is None: return None
+        tot += p * e
+    return tot
+
+def _bits(val): return "1 bit" if val == "1" else f"{val} bits"
+
+def pointwise_ratio(law, cell, S, T):
+    pS, pT = marg(law, S), marg(law, T)
+    return law.get(tuple(cell), Fr(0)) / (pS[tuple(cell[i] for i in S)] * pT[tuple(cell[i] for i in T)])
+
+def nvars(law): return len(next(iter(law)))
+
+def finest_blocks(law, n=None, indep=None):
+    """The finest partition into jointly independent blocks; unique, factorizing cuts being meet-closed."""
+    indep = factorizes if indep is None else indep
+    n = nvars(law) if n is None else n
+    U = list(range(n)); cuts = []
+    for r in range(1, n):
+        for S in combinations(U, r):
+            if 0 in S and indep(law, list(S), [u for u in U if u not in S]): cuts.append(set(S))
+    blocks, seen = [], set()
+    for u in U:
+        if u in seen: continue
+        b = set(U)
+        for S in cuts: b &= (S if u in S else set(U) - S)
+        blocks.append(tuple(sorted(b))); seen |= b
+    return blocks
+
+def component_count(law, indep=None): return sum(1 for b in finest_blocks(law, indep=indep) if len(b) > 1)
+
+def indep_float(law, S, T):
+    """The independent channel: mutual information summed in floating point, a second computation of every decision."""
+    return mi_bits(law, S, T) < CENSUS["float_channel_tol"]
+
+def traced_float(record):
+    """The independent channel with every summed value recorded, so the margin gate can read its decisions."""
+    def predicate(law, S, T):
+        v = mi_bits(law, S, T); record.append(v); return v < CENSUS["float_channel_tol"]
+    return predicate
+
+def fixed_points(law, basis="coalition", indep=None):
+    """Every D whose members each register with the rest of D and whose outside registers nothing with D,
+    tested per outside system (atomic) or as the whole outside coalition (coalition)."""
+    indep = factorizes if indep is None else indep
+    n = nvars(law); U = list(range(n)); out = []
+    for r in range(n + 1):
+        for Dt in combinations(U, r):
+            D = list(Dt); O = [u for u in U if u not in D]
+            ok = all(len(D) > 1 and not indep(law, [a], [d for d in D if d != a]) for a in D)
+            if ok and D and O:
+                ok = all(indep(law, [s], D) for s in O) if basis == "atomic" else indep(law, O, D)
+            if ok: out.append(Dt)
+    return out
+
+def exact_cov(law, i, j, reverse_i=False):
+    """Exact covariance of two single-index relata under order coding; reverse_i relabels i bijectively."""
+    vi = sorted({k[i] for k in law}); vj = sorted({k[j] for k in law})
+    ci = {v: (len(vi) - 1 - n if reverse_i else n) for n, v in enumerate(vi)}; cj = {v: n for n, v in enumerate(vj)}
+    Ei = sum(p * ci[k[i]] for k, p in law.items()); Ej = sum(p * cj[k[j]] for k, p in law.items())
+    return sum(p * ci[k[i]] * cj[k[j]] for k, p in law.items()) - Ei * Ej
+
+# ============================ sampled instrument, dual null ============================
+def _gammp(a, x):
+    if x <= 0.0: return 0.0
+    gln = math.lgamma(a)
+    if x < a + 1.0:
+        ap, s, d = a, 1.0 / a, 1.0 / a
+        for _ in range(100000):
+            ap += 1.0; d *= x / ap; s += d
+            if abs(d) < abs(s) * 1e-16: break
+        return min(1.0, s * math.exp(-x + a * math.log(x) - gln))
+    tiny = 1e-300; b = x + 1.0 - a; c = 1.0 / tiny; dd = 1.0 / b; h = dd
+    for i in range(1, 100000):
+        an = -i * (i - a); b += 2.0
+        dd = an * dd + b
+        if abs(dd) < tiny: dd = tiny
+        c = b + an / c
+        if abs(c) < tiny: c = tiny
+        dd = 1.0 / dd; de = dd * c; h *= de
+        if abs(de - 1.0) < 1e-16: break
+    return max(0.0, 1.0 - math.exp(-x + a * math.log(x) - gln) * h)
+
+def chi2_cdf(x, k): return _gammp(k / 2.0, x / 2.0)
+def chi2_pdf(x, k):
+    if x <= 0.0: return 0.0
+    return math.exp((k / 2.0 - 1.0) * math.log(x) - x / 2.0 - (k / 2.0) * math.log(2.0) - math.lgamma(k / 2.0))
+def chi2_ppf(q, k):
+    lo, hi = 0.0, max(1.0, float(k))
+    while chi2_cdf(hi, k) < q: hi *= 2.0
+    for _ in range(200):
+        mid = 0.5 * (lo + hi)
+        if chi2_cdf(mid, k) < q: lo = mid
+        else: hi = mid
+    return 0.5 * (lo + hi)
+
+def plugin_mi_bits(a, b):
+    N = len(a); ca, cb, cab = {}, {}, {}
+    for x, y in zip(a, b):
+        ca[x] = ca.get(x, 0) + 1; cb[y] = cb.get(y, 0) + 1; cab[(x, y)] = cab.get((x, y), 0) + 1
+    tot = 0.0
+    for (x, y), n in cab.items(): tot += (n / N) * math.log2(n * N / (ca[x] * cb[y]))
+    return max(tot, 0.0), len(ca), len(cb)
+
+def sampled_registration(a, b, label, alpha=CENSUS["alpha"], n_perm=CENSUS["n_perm"]):
+    N = len(a); I, r, c = plugin_mi_bits(a, b)
+    if r < 2 or c < 2: return dict(state="constant", N=N, r=r, c=c, I=I)
+    if N < CENSUS["cell_floor"] * r * c: return dict(state="floor", N=N, r=r, c=c, I=I)
+    df = (r - 1) * (c - 1); scale = 2.0 * N * math.log(2.0)
+    eta_an = chi2_ppf(alpha, df) / scale
+    g = DRBG(f"FAE-PERM|{SEED}|{label}"); perm = []
+    for _ in range(n_perm):
+        p = g.permutation(N); perm.append(plugin_mi_bits(a, [b[i] for i in p])[0])
+    perm.sort(); kq = min(n_perm - 1, int(math.ceil(alpha * n_perm)) - 1); eta_perm = perm[kq]
+    eta_star = max(eta_an, eta_perm)
+    half = CENSUS["band_sigma"] * math.sqrt(n_perm * alpha * (1.0 - alpha))   # distribution-free rank band on the sample itself
+    lo_i, hi_i = int(math.floor(kq - half)), int(math.ceil(kq + half))
+    if lo_i <= 0 or hi_i >= n_perm - 1:      # the band would rest on the sample's extreme order statistic: refuse, never clamp
+        return dict(state="truncated", N=N, r=r, c=c, df=df, I=I, eta_an=eta_an, eta_perm=eta_perm, eta_star=eta_star, band=None)
+    band = (min(perm[lo_i], eta_an), max(perm[hi_i], eta_an))
+    state = "marginal" if band[0] <= I <= band[1] else ("above" if I > eta_star else "below")
+    return dict(state=state, N=N, r=r, c=c, df=df, I=I, eta_an=eta_an, eta_perm=eta_perm, eta_star=eta_star, band=band)
+
+# ============================ second-order channel, the shared kernel read in bits ============================
+def kernel_second_order(rows, alpha=CENSUS["alpha"]):
+    try:
+        import numpy as np
+    except ImportError:
+        return dict(state="numpy absent (named)")
+    M = np.asarray(rows, float)
+    if M.shape[0] != 3: return dict(state="triad required")
+    p, N = M.shape
+    sd = M.std(1, ddof=1, keepdims=True)
+    if np.any(sd <= CENSUS["zero_variance_rel"] * np.abs(M).max(1, keepdims=True)): return dict(state="zero-variance row")
+    Mn = (M - M.mean(1, keepdims=True)) / sd
+    Q = Mn / np.sqrt((Mn * Mn).sum(1, keepdims=True))
+    R = Q @ Q.T; kap = float(np.linalg.cond(R))
+    Bv = np.linalg.svd(Q, full_matrices=False)[2][:3]
+    lam = float(-np.linalg.det(Q @ Bv.T))
+    a, b, c = R[0]; d, e, f = R[1]; g, h, i = R[2]
+    d_lu = float(np.linalg.det(R)); d_eig = float(np.prod(np.linalg.eigvalsh(R)))
+    try: d_ch = float(np.prod(np.diag(np.linalg.cholesky(R))) ** 2)
+    except np.linalg.LinAlgError: d_ch = d_lu
+    d_co = float(a * (e * i - f * h) - b * (d * i - f * g) + c * (d * h - e * g))
+    u = float(np.finfo(float).eps); tol = CENSUS["identity_units"] * kap * u
+    spread = max(d_lu, d_eig, d_ch, d_co) - min(d_lu, d_eig, d_ch, d_co)
+    dR = d_lu; resid = abs(lam * lam - dR); esc = "none"
+    if spread > tol or resid > tol:
+        try:
+            import mpmath as mp; mp.mp.dps = 50
+            dR = float(mp.det(mp.matrix([[mp.mpf(x) for x in row] for row in R.tolist()]))); esc = "resolved at 50 digits"
+        except ImportError:
+            esc = "flagged; mpmath absent (named)"
+    eps = CENSUS["collapse_units"] * u * N
+    tok = "[LOCK]" if (dR > eps and kap < CENSUS["kappa_gate"]) else ("[COLLAPSE]" if dR <= eps else "[ILL-CONDITIONED]")
+    bart = -(N - 1 - (2 * p + 5) / 6.0) * math.log(dR) if dR > 0 else float("inf")
+    crit = chi2_ppf(alpha, p * (p - 1) // 2)
+    return dict(state="ok", tok=tok, detR=dR, lam=lam, kappa=kap, spread=spread, resid=resid, tol=tol, escalated=esc, eps=eps,
+                tc_bits=(-0.5 * math.log2(dR) if dR > 0 else float("inf")),
+                tc_from_lam=(-math.log2(abs(lam)) if lam != 0 else float("inf")),
+                bartlett=bart, crit=crit, second_order=("registered" if bart > crit else "silent"))
+
+# ============================ the adjudicator ============================
+FACES = ("IX", "MEM", "CLOSED", "UNI", "EXT", "NOEXT", "SELF", "DIR", "KER")
+GATES = ["G1-SREP", "G2-REG", "G3-SGEG", "G4-CAUSAL", "G5-MIG", "G6-PTB",
+         "G7-DUAL", "G8-CSCG", "G9-CSEG", "G10-MTA", "G11-OMA", "G12-ADEG"]
+GRADE_RANK = {"premise": 0, "corroboration": 0, "operational": 1, "structural": 1, "engineering": 1, "conditional": 1,
+              "theorem-conditional": 1, "analytic": 2, "theorem": 2}
+C1C3_FIXED_GRADE = "premise"   # chapter 10 B by reference: a result using RAF-C1 or RAF-C3 reports premise grade.
+                               # RRS.5 carries "analytic" at a supplied fixed point as a candidate; the ruling flips this.
+LOWER_ORDER = ("pairwise", "atomic", "second-order")
+ADMISSIBLE_BASES = ("complement", "coalition")
+
+def uni_work(law):
+    """The exact uniqueness face's counted work: 2^(n-1) cuts, each bounded by three marginal passes and the product of supports."""
+    nv = nvars(law); alph = 1
+    for i in range(nv): alph = min(alph * len({k[i] for k in law}), 10 ** 12)
+    per = 3 * len(law) + min(len(law) ** 2, alph)
+    return 2 ** (nv - 1) * per, per
+
+def needs_supply(rd):
+    f = rd.get("face")
+    return f in ("IX", "MEM", "CLOSED", "KER") or (f in ("UNI", "EXT", "NOEXT") and rd.get("d_reading") != "world")
+
+def is_absence(rd):
+    f, c = rd.get("face"), rd.get("claim", {})
+    return ((f == "IX" and c.get("assert") == "independent") or (f == "MEM" and c.get("assert_member") is False)
+            or f == "CLOSED" or (f == "KER" and c.get("assert") == "independent")
+            or (f == "NOEXT" and rd.get("d_reading") != "world"))
+
+def weakest_grade(rd):
+    f, world = rd.get("face"), rd.get("d_reading") == "world"
+    if f in ("EXT", "NOEXT"): return "premise" if world else C1C3_FIXED_GRADE
+    if f == "UNI" and world: return "premise"
+    if f == "SELF": return "theorem"
+    if f == "DIR": return "structural"
+    if f == "KER" or (rd.get("law") is None and rd.get("samples") is not None): return "engineering"
+    return "analytic"
+
+def fae(rd, skip=None):
+    """Adjudicate one supplied reading, fail-safe on malformed values: an explicit null is read as an absent key, and any
+    value that raises routes [?] at L0 with its exception named, so no supplied value can crash the engine or buy the seal."""
+    if not isinstance(rd, dict):
+        return dict(tok=OPEN, label="L0", reason="reading malformed: not a mapping", grade="n/a", trace=[("L0", "reached"), ("L0", tcode(OPEN))])
+    clean = {k: v for k, v in rd.items() if v is not None}; tr = []
+    try:
+        return _fae(clean, skip, tr)
+    except Exception as e:
+        tr.append(("L0", tcode(OPEN)))
+        return dict(tok=OPEN, label="L0", reason=f"{type(e).__name__} raised: a malformed reading, arithmetic outside the double range, or a fault in the engine itself, which this route does not tell apart; routed under-determined, never sealed",
+                    grade="n/a", trace=tr)
+
+def _fae(rd, skip=None, tr=None):
+    """Adjudicate one supplied reading. First failure terminal; defaults absent, so an under-specified
+    reading can never emit the seal. skip names one check to delete, for the ablation law only."""
+    tr = [] if tr is None else tr
+    def on(label):
+        if skip == label: return False
+        tr.append((label, "reached")); return True
+    def out(tok, label, reason, grade="n/a"):
+        tr.append((label, tcode(tok))); return dict(tok=tok, label=label, reason=reason, grade=grade, trace=tr)
+    tr.append(("L0", "reached"))
+    face = rd.get("face")
+    if face not in FACES: return out(OPEN, "L0", "face unread: the face-split is hand-built and was not supplied")
+    # ---------------- Seal L, the Tongue at the interaction face ----------------
+    slots, dc = rd.get("slots"), rd.get("deletion_count")
+    if not isinstance(slots, dict) or dc is None:
+        return out(OPEN, "L0", "Seal L reading absent: claim-slots and deletion count are hand-built and unsupplied")
+    if on("L1") and dc != 3:
+        return out(BROKEN, "L1", f"deletion test returns {dc}, not three: the surplus or deficit is named at the semantic register", "operational")
+    if on("L2"):
+        keys = ("system", "registration", "domain"); vs = [set(slots.get(k, ())) for k in keys]
+        if any(not v for v in vs): return out(OPEN, "L2", "an empty claim-slot: the isolation test cannot run")
+        for x in range(3):
+            for y in range(x + 1, 3):
+                if vs[x] & vs[y]:
+                    return out(BROKEN, "L2", f"LIT collision between {keys[x]} and {keys[y]} slots: {sorted(vs[x] & vs[y])}", "operational")
+    if on("L3"):
+        v = rd.get("event_reading")
+        if v is None: return out(OPEN, "L3", "T-1 unscreened: whether registration is read at the law or at a single event")
+        if v: return out(BROKEN, "L3", "registration read at a single event: its pointwise value can be zero or negative inside a registered law; the law bears registration (T-1)", "analytic")
+    if on("L4"):
+        v = rd.get("directed")
+        if v is None: return out(OPEN, "L4", "T-2 unscreened: directed content not declared")
+        if v and face != "DIR": return out(OPEN, "L4", "directed content on a symmetric face: split into the registration face and a DIR face before adjudication (T-2)")
+        if face == "IX" and rd.get("claim", {}).get("quantity") not in ("registration", "sign", "direction"):
+            return out(OPEN, "L4", "claimed quantity unread: registration, sign, or direction (T-2)")
+    # ---------------- router ----------------
+    obj = rd.get("object")
+    tr.append(("R0", "reached"))
+    if obj is None: return out(OPEN, "R0", "object type unread")
+    if on("R1"):
+        if obj == "proposition": return out("[ROUTE-UC]", "R1", "determinate proposition: H = 0, so I <= H = 0 and it relates nothing; the grounding face governs, universal-cascade", "structural, theorem on I <= H")
+        if obj == "credence": return out("[ROUTE-OOB]", "R1", "credence dressed as a system: probabilistic truth is undefined; the credence-circularity class routes out of band per L1.5", "structural")
+        if obj == "position": return out("[ROUTE-0706]", "R1", "closure position: invariant under variation of the members, H = 0, not a system; MD-PSP-CLOSURE-POSITION-01 governs and RAF-C1 is not transported", "structural")
+        if obj not in ("system", "math_object", "census", "stationary"): return out(OPEN, "R1", f"object type {obj!r} outside the router census")
+    if on("R2"):
+        if obj == "math_object": return out("[ROUTE-UC]", "R2", "mathematical object: it changes no state and RAF reaches it not at all (10B.6)", "structural")
+        if obj == "census": return out("[ROUTE-CH]", "R2", "powerset census of a non-finite system: the residence reached from both faces and owned by neither; not adjudicated here", "structural")
+        if obj == "stationary": return out(OPEN, "R2", "stationary system: no interaction occurs and RAF is silent there; method-silence about reach, no claim about the object", "structural")
+    if on("R3"):
+        v = rd.get("energetic")
+        if v is None: return out(OPEN, "R3", "bridge bit unscreened: energy, matter, or duration content not declared")
+        if v: return out("[ROUTE-A]", "R3", "energy, matter, or duration content: it cites BR-L with its experimental standing; Register A governs and the formal-alone engine issues nothing", "structural")
+    law, samples, cl, scr = rd.get("law"), rd.get("samples"), rd.get("claim", {}), rd.get("screen", {})
+    sup = rd.get("supply"); need = needs_supply(rd)
+    if face in ("UNI", "EXT", "NOEXT") and on("L5") and rd.get("d_reading") not in ("fixed", "world"):
+        return out(OPEN, "L5", "T-3 unread: whether D names a supplied fixed point or the world-domain decides the grade")
+    if need and face != "KER" and on("L6"):
+        width = nvars(law) if (law is not None and law_valid(law)) else (min(len(r) for r in samples) if (law is None and samples) else None)
+        if width is not None:
+            groups = [list(g) for g in rd.get("relata", [])]; flat = [i for g in groups for i in g]
+            dom = list(rd.get("domain", [])); adj = rd.get("adjacents", {})
+            idx = flat + dom + list(adj.get("markov", ())) + [i for pr in adj.get("pairwise_zero", []) for i in pr]
+            if any(not isinstance(i, int) or i < 0 or i >= width for i in idx) or len(flat) != len(set(flat)) or len(dom) != len(set(dom)):
+                return out(OPEN, "L6", "atomization unread: relata overlap, repeat, or fall outside the supplied law (T-4)")
+            if face == "IX" and (len(groups) != 2 or not groups[0] or not groups[1]): return out(OPEN, "L6", "two disjoint nonempty relata required (T-4)")
+            if face == "MEM" and (len(groups) != 1 or not groups[0] or not set(groups[0]) <= set(dom)): return out(OPEN, "L6", "the candidate must sit inside the named domain (T-4)")
+            if face == "EXT" and (len(groups) != 1 or not groups[0] or (set(groups[0]) & set(dom)) or not dom): return out(OPEN, "L6", "the named agent must sit outside a nonempty domain (T-4)")
+            if face in ("CLOSED", "NOEXT") and not dom: return out(OPEN, "L6", "domain unread (T-4)")
+    # ---------------- Seal G, twelve gates at the interaction face ----------------
+    def flagged(key, label, mech):
+        v = scr.get(key)
+        if v is None: return out(OPEN, label, f"{label} unscreened: {key} not supplied")
+        return out(BROKEN, label, mech, "structural") if v else None
+    if on("G1-SREP"):
+        r = flagged("self_reference", "G1-SREP", "self-reference at origin: the claim's own verdict enters as a relatum, or the claim presupposes its resolution")
+        if r: return r
+    if need and on("G2-REG"):
+        for grp in [g for g in rd.get("relata", []) if g]:
+            if law is not None and law_valid(law) and constant(law, grp):
+                return out(BROKEN, "G2-REG", f"relatum {list(grp)} takes one value: not a system; a constant is vacuously independent of everything", "analytic")
+            if law is None and samples is not None and len({tuple(row[i] for i in grp) for row in samples}) < 2:
+                return out(BROKEN, "G2-REG", f"relatum {list(grp)} is constant across the sample: not a system", "analytic")
+    if on("G3-SGEG"):
+        r = flagged("alphabet_drift", "G3-SGEG", "alphabet drift: a system's value partition, or a load-bearing term, shifts across contexts")
+        if r: return r
+    if need and on("G4-CAUSAL"):
+        if not (isinstance(sup, dict) and all(sup.get(k) for k in ("who", "when", "independent_of"))):
+            return out(BROKEN, "G4-CAUSAL", "unrouted registration: the supplied reading carries no supply record, who, when, and independent of what", "structural")
+    if on("G5-MIG"):
+        r = flagged("fitted_on_scored", "G5-MIG", "the ruler inside the model: the partition or estimator was fitted on the data it scores, or witness rows certify each other")
+        if r: return r
+    if on("G6-PTB") and cl.get("magnitude_bits") is not None and not cl.get("partition_named"):
+        return out(BROKEN, "G6-PTB", "chart-manufactured bits: a magnitude read as a structure-fact with its partition unnamed; coarse-graining lowers it and refinement may raise it", "theorem")
+    if face == "IX" and law is not None and law_valid(law) and on("G7-DUAL"):
+        q = cl.get("quantity", "registration")
+        if q == "sign":
+            A, B = rd["relata"][0][0], rd["relata"][1][0]
+            c0, c1 = exact_cov(law, A, B), exact_cov(law, A, B, reverse_i=True)
+            return out(BROKEN, "G7-DUAL", f"sign of dependence is relabel-variant: covariance {c0} becomes {c1} under a bijective relabeling while I is invariant", "theorem")
+        if q == "direction":
+            A, B = rd["relata"][0], rd["relata"][1]
+            return out(BROKEN, "G7-DUAL", f"direction read from registration: I(A;B) = I(B;A) = {mi_bits(law, A, B):.12f} bits exactly by symmetry; no asymmetry is there to read", "theorem")
+    if law is not None and law_valid(law) and on("G8-CSCG"):
+        pz = rd.get("adjacents", {}).get("pairwise_zero")
+        if pz and all(factorizes(law, [x], [y]) for x, y in pz): tr.append(("G8-CSCG", "FENCE: pairwise-zero reads verified; disparate reads of one domain corroborate and never interfere"))
+    if skip != "G8-CSCG" and law is not None and law_valid(law) and cl.get("lower_bound_bits") is not None:
+        mk = rd.get("adjacents", {}).get("markov")
+        if mk and cond_independent(law, [mk[0]], [mk[2]], [mk[1]]):
+            cap = mi_bits(law, [mk[0]], [mk[1]])
+            if cl["lower_bound_bits"] > cap + CENSUS["g8_tol"]:
+                return out(BROKEN, "G8-CSCG", f"interference with a verified adjacent: the chain {mk} is Markov exactly, so I(end;end) <= {cap:.12f} bits, against a claimed floor of {cl['lower_bound_bits']}", "theorem")
+    if on("G9-CSEG"):
+        st = rd.get("stated_grade")
+        if st not in GRADE_RANK: return out(OPEN, "G9-CSEG", "stated grade unread")
+        wk = weakest_grade(rd)
+        if GRADE_RANK[st] > GRADE_RANK[wk]:
+            return out(BROKEN, "G9-CSEG", f"Carrying Law: stated {st} above the weakest load-bearing link, {wk}", "structural")
+    if is_absence(rd) and on("G10-MTA"):
+        bz = rd.get("basis")
+        if bz is None: return out(OPEN, "G10-MTA", "basis unread for an absence claim")
+        if not isinstance(bz, str) or (bz not in LOWER_ORDER and bz not in ADMISSIBLE_BASES):
+            return out(OPEN, "G10-MTA", f"basis unread for an absence claim: {bz!r} names no basis the engine reads")
+        if bz in LOWER_ORDER:
+            return out(BROKEN, "G10-MTA", f"{bz} basis at the closure boundary: lower-order reads certify presence and never absence; dependence is not exhausted by pairs, by single outsiders, or by correlation", "theorem")
+    if on("G11-OMA"):
+        r = flagged("void_claim", "G11-OMA", "ontological void claim: RAF says only that nothing beyond D is correlated with it, never that nothing is there")
+        if r: return r
+        if need:
+            ig = rd.get("instrument_generated")
+            if ig is None: return out(OPEN, "G11-OMA", "aperture unscreened: provenance of the law not declared")
+            if ig: return out(BROKEN, "G11-OMA", "aperture violation: a law generated by the instrument is rejected at intake", "structural")
+    if on("G12-ADEG") and cl.get("energy_rider") and not rd.get("bridge_named"):
+        return out(BROKEN, "G12-ADEG", "unbridged export: an energetic consequence rides a formal verdict with BR-L unnamed, the silent acquisition of thermodynamic authority", "structural")
+    # ---------------- Seal M, the Number at the interaction face ----------------
+    world = rd.get("d_reading") == "world"
+    if need:
+        tr.append(("M0", "reached"))
+        if face == "KER":
+            if rd.get("rows") is None: return out(OPEN, "M0", "route named, rows not in front of the engine: supply owed")
+        else:
+            if law is None and samples is None: return out(OPEN, "M0", "route named, joint law not in front of the engine: supply owed")
+            if law is not None:
+                tr.append(("M1", "reached"))
+                if not law_valid(law): return out(OPEN, "M1", "joint law inadmissible: nonnegative Fractions summing to one are required")
+    if face == "IX":
+        A, B = rd["relata"][0], rd["relata"][1]; want = cl.get("assert")
+        if law is None:
+            if on("M1") and rd.get("exchangeable") is not True:
+                return out(OPEN, "M1", ("exchangeability unread: the permutation null and Wilks' law rest on exchangeable draws, so samples must be declared exchangeable"
+                                        if rd.get("exchangeable") is None else (f"exchangeability declaration unread: {rd.get('exchangeable')!r} is neither true nor false, so the draws are routed as undeclared" if rd.get("exchangeable") is not False else "non-exchangeable draws: the permutation null does not hold on them; a block permutation or a model of the dependence is owed")))
+            a = [tuple(row[i] for i in A) for row in samples]; b = [tuple(row[i] for i in B) for row in samples]
+            _, r0, c0 = plugin_mi_bits(a, b); tr.append(("M1", "reached"))
+            if len(a) < CENSUS["cell_floor"] * r0 * c0:
+                return out(OPEN, "M1", f"sampling floor: N = {len(a)} below {CENSUS['cell_floor']} r c = {CENSUS['cell_floor'] * r0 * c0}")
+        tr.append(("M2", "reached"))
+        if want not in ("registers", "independent"): return out(OPEN, "M2", "assertion unread")
+        if law is not None:
+            ind = (all(factorizes(law, [x], [y]) for x in A for y in B) if (want == "independent" and rd.get("basis") == "pairwise")
+                   else factorizes(law, A, B))
+            ex = mi_exact(law, A, B); val = str(ex) if ex is not None else f"{mi_bits(law, A, B):.12f}"
+            ok = (not ind) if want == "registers" else ind
+            return out(SEAL if ok else BROKEN, "M-IX", f"exact law: I = {_bits(val)}, factorizes = {ind}; assertion {want}", "analytic")
+        s = sampled_registration(a, b, label=rd.get("id", "anon"))
+        if s["state"] in ("floor", "constant"): return out(OPEN, "M1", f"sampled admissibility failed inside the statistic: {s['state']}")
+        if want == "independent": return out(OPEN, "M-IX", f"sampled independence: resolving-power floor, I = {s['I']:.6f} bits; absence above the dual null is never factorization", "engineering")
+        if s["state"] == "truncated": return out(OPEN, "M-IX", "rank band refused: its upper rank reaches the permutation sample's extreme order statistic; raise the permutation count", "engineering")
+        if s["state"] == "marginal": return out(OPEN, "M-IX", f"marginal: I = {s['I']:.6f} inside the three-sigma rank band [{s['band'][0]:.6f}, {s['band'][1]:.6f}] around eta* = {s['eta_star']:.6f}; raise the permutation count", "engineering")
+        if s["state"] == "above": return out(SEAL, "M-IX", f"sampled: I = {s['I']:.6f} bits above dual null eta* = {s['eta_star']:.6f} (perm {s['eta_perm']:.6f}, Wilks {s['eta_an']:.6f}), N = {s['N']}; the seal is conditional on the supplied exchangeability declaration, which the instrument cannot verify", "engineering")
+        return out(OPEN, "M-IX", f"sampled: I = {s['I']:.6f} bits at or below eta* = {s['eta_star']:.6f}; unresolved at N, never factorization", "engineering")
+    if face == "MEM":
+        a = list(rd["relata"][0]); D = list(rd["domain"]); rest = [x for x in D if x not in a]
+        reg = (any(not factorizes(law, a, [x]) for x in rest) if rd.get("basis") == "pairwise" else not factorizes(law, a, rest))
+        want = cl.get("assert_member")
+        tr.append(("M2", "reached"))
+        if want is None: return out(OPEN, "M2", "membership assertion unread")
+        ex = mi_exact(law, a, rest); val = str(ex) if ex is not None else f"{mi_bits(law, a, rest):.12f}"
+        return out(SEAL if (reg == want) else BROKEN, "M-MEM", f"complement I(candidate; D minus candidate) = {_bits(val)}; registers = {reg}; asserted member = {want}", "analytic")
+    if face == "CLOSED":
+        D = sorted(rd["domain"]); O = [u for u in range(nvars(law)) if u not in D]
+        closed = (all(factorizes(law, [x], D) for x in O) if rd.get("basis") == "atomic" else (factorizes(law, O, D) if O else True))
+        ex = mi_exact(law, O, D) if O else Fr(0); val = str(ex) if ex is not None else f"{mi_bits(law, O, D):.12f}"
+        return out(SEAL if closed else BROKEN, "M-CLOSED", f"outside coalition {O} registers {_bits(val)} with D = {D}; closed = {closed}", "analytic")
+    if face == "UNI":
+        if world:
+            return out(OPEN, "M-UNI", "world-quantified uniqueness is exhibition-closed: to exhibit a system is to register it, so any exhibition registers both members and constructs the chain it must lack, and no exhibitor inside RAF's reach supplies the falsifier; the posit is held at premise grade. Aperture: the deciding input is non-exhibitional and lies outside RAF's reach, located and uncrossed; every imagined occupant of an unexhibited second domain is fenced as Ghost.", "premise")
+        nv = nvars(law); work, per = uni_work(law); tr.append(("M3", "reached"))
+        if work > CENSUS["exact_work_cap"]:
+            return out(OPEN, "M3", f"exact enumeration above the work cap: 2^{nv - 1} cuts at up to {per} operations each against a cap of {CENSUS['exact_work_cap']:.0e}; the uniqueness face is unread at this size", "engineering")
+        bl = finest_blocks(law); b = sum(1 for x in bl if len(x) > 1)
+        return out(SEAL if b == 1 else BROKEN, "M-UNI", f"finest blocks {bl}, components b = {b}, nonempty domains 2^b - 1 = {2 ** b - 1} by the fixed-point characterization", "analytic")
+    if face == "EXT":
+        if world: return out(BROKEN, "M-EXT", "exterior agent refused at the world-domain: acting registers and registration places the agent inside, RAF-C1 riding RAF-2", "premise")
+        s = list(rd["relata"][0]); D = sorted(rd["domain"]); O = [u for u in range(nvars(law)) if u not in D]
+        closed = factorizes(law, O, D) if O else True
+        related = all(len(D) > 1 and not factorizes(law, [x], [y for y in D if y != x]) for x in D)
+        if not (closed and related):
+            why = "its outside coalition registers with it" if not closed else "a member carries zero bits with the rest of it"
+            tail = (f"the named agent registers {mi_bits(law, s, D):.12f} bits with D, so by closure it lies inside the domain that contains D"
+                    if not factorizes(law, s, D) else "the named agent carries zero bits with D and does not act, RAF-1")
+            return out(BROKEN, "M-EXT", f"D as named is not an interaction domain on the supplied law: {why}; {tail}", C1C3_FIXED_GRADE)
+        return out(BROKEN, "M-EXT", "D is an interaction domain on the supplied law and its whole outside carries zero bits with it, so the named agent does not act on it: no exterior agent, RAF-C1", C1C3_FIXED_GRADE)
+    if face == "NOEXT":
+        if world: return out(SEAL, "M-NOEXT", "no exterior agent at the world-domain: RAF-C1, premise grade, the carrier the posit", "premise")
+        D = sorted(rd["domain"]); O = [u for u in range(nvars(law)) if u not in D]
+        closed = factorizes(law, O, D) if O else True
+        related = all(len(D) > 1 and not factorizes(law, [x], [y for y in D if y != x]) for x in D)
+        return out(SEAL if (closed and related) else BROKEN, "M-NOEXT", f"D = {D} coalition fixed point on the supplied law: closed = {closed}, members related = {related}", C1C3_FIXED_GRADE)
+    if face == "SELF":
+        n = rd.get("indices")
+        if not isinstance(n, int) or n < 1: return out(OPEN, "M-SELF", "index count unread")
+        return out(BROKEN, "M-SELF", f"total self-indexing refused, RAF-C2: {2 ** n} binary properties against {n} indices, Cantor and Lawvere in general; partial self-description is not barred", "theorem")
+    if face == "DIR":
+        return out(OPEN, "M-DIR", "the formal-alone register carries no arrow: I(A;B) = I(B;A) and a Markov chain reads the same reversed; direction is supply-side, an arrow-bearing register, and is never sealed here", "structural")
+    if face == "KER":
+        k = kernel_second_order(rd["rows"])
+        if k["state"] != "ok": return out(OPEN, "M-KER", f"kernel inadmissible: {k['state']}")
+        want = cl.get("assert"); rep = f"{k['tok']} detR = {k['detR']:.12f}, TC_G = {k['tc_bits']:.6f} bits, Bartlett {k['bartlett']:.4f} vs {k['crit']:.4f}"
+        tr.append(("M2", "reached"))
+        if want == "registers":
+            if k["second_order"] == "registered": return out(SEAL, "M-KER", f"second-order registration: {rep}; nonzero correlation implies dependence", "engineering")
+            return out(OPEN, "M-KER", f"second-order silent: {rep}; the lock certifies no absence at the interaction face", "engineering")
+        if want == "independent":
+            return out(SEAL if k["second_order"] == "silent" else BROKEN, "M-KER", f"second-order reading of independence: {rep}", "engineering")
+        return out(OPEN, "M2", "assertion unread")
+    return out(OPEN, "M9", "face unhandled")
+
+def fsig(rd):
+    """Typing only, fail-safe on malformed values: an explicit null is read as an absent key, and a value that raises
+    returns the signature unread rather than raising."""
+    if not isinstance(rd, dict):
+        return dict(face=None, available="unread: reading malformed, not a mapping", halt_tokens="unavailable by object type")
+    clean = {k: v for k, v in rd.items() if v is not None}
+    try:
+        return _fsig(clean)
+    except Exception as e:
+        return dict(face=clean.get("face") if isinstance(clean.get("face"), str) else None,
+                    available=f"unread: {type(e).__name__} raised, from a malformed reading, arithmetic outside the double range, or an engine fault, not told apart", halt_tokens="unavailable by object type")
+
+def _fsig(rd):
+    """Typing only: the signature vector with the tokens available per face, and no verdict."""
+    f, world = rd.get("face"), rd.get("d_reading") == "world"
+    law = rd.get("law"); sampled = law is None and rd.get("samples") is not None
+    ix = ("[⟀] [X]" if law is not None else
+          ("[?] until the draws are declared exchangeable" if (sampled and rd.get("exchangeable") is not True) else
+           ("[⟀] [?]" if rd.get("claim", {}).get("assert") == "registers" else "[?]")))
+    uni = ("[?]" if world else ("[?] above the exact work cap" if (isinstance(law, dict) and law_valid(law) and uni_work(law)[0] > CENSUS["exact_work_cap"]) else "[⟀] [X]"))
+    avail = {"IX": ix,
+             "MEM": "[⟀] [X]", "CLOSED": "[⟀] [X]", "UNI": uni, "EXT": "[X]",
+             "NOEXT": ("[⟀] at premise" if world else "[⟀] [X]"), "SELF": "[X]", "DIR": "[?]",
+             "KER": ("[⟀] [?]" if rd.get("claim", {}).get("assert") == "registers" else "barred at G10")}.get(f, "unread")
+    return dict(face=f, object=rd.get("object"), bridge=("BR-L, Register A" if rd.get("energetic") else "none"),
+                direction=("DIR face owed" if rd.get("directed") and f != "DIR" else ("arrow absent" if f == "DIR" else "none")),
+                d_reading=rd.get("d_reading"), basis=rd.get("basis"), absence_claim=is_absence(rd),
+                weakest_grade=weakest_grade(rd), available=avail, halt_tokens="unavailable by object type")
+
+# ============================ supplied laws for the batteries, exact ============================
+F = Fr
+LAW3 = {(0, 0): F(1, 6), (0, 1): F(1, 4), (0, 2): F(1, 12), (1, 0): F(1, 6), (1, 1): F(1, 12), (1, 2): F(1, 4)}
+IND2 = {(a, b): F(1, 4) for a in (0, 1) for b in (0, 1)}
+CONST = {(0, 0): F(1, 2), (0, 1): F(1, 2)}
+XOR3 = {(x, y, x ^ y): F(1, 4) for x in (0, 1) for y in (0, 1)}
+DIS4 = {(a, a, b, b): F(1, 4) for a in (0, 1) for b in (0, 1)}
+EXH5 = {(a, a, b, b, 2 * a + b): F(1, 4) for a in (0, 1) for b in (0, 1)}
+SYN4 = {(a, a, c, c ^ a): F(1, 4) for a in (0, 1) for c in (0, 1)}
+BADLAW = {(a, b): F(1, 2) for a in (0, 1) for b in (0, 1)}
+COPY30 = {tuple([0] * 30): F(1, 2), tuple([1] * 30): F(1, 2)}
+ISO3 = {(x, x, z): F(1, 4) for x in (0, 1) for z in (0, 1)}
+def _markov():
+    law = {}
+    for a in (0, 1):
+        for b in (0, 1):
+            for c in (0, 1):
+                law[(a, b, c)] = F(1, 2) * (F(3, 4) if b == a else F(1, 4)) * (F(3, 4) if c == b else F(1, 4))
+    return law
+MARKOV3 = _markov()
+
+def xor_rows():
+    x = [1, 1, -1, -1] * 6; y = [1, -1, 1, -1] * 6
+    return [x, y, [p * q for p, q in zip(x, y)]]
+
+def gaussian_rows(label="FAE-KER-G", N=24):
+    g = DRBG(f"{label}|{SEED}"); Z = [[g.normal() for _ in range(N)] for _ in range(3)]
+    A = [[1.0, 0.0, 0.0], [0.8, 0.6, 0.0], [0.5, 0.3, 0.8]]
+    return [[sum(A[r][c] * Z[c][n] for c in range(3)) for n in range(N)] for r in range(3)]
+
+def sampled_pair(label, N=600, dependent=True):
+    g = DRBG(f"FAE-SAMPLE|{label}|{SEED}"); rows = []
+    for _ in range(N):
+        a = g.below(3)
+        b = (a if g.below(10) < 6 else g.below(3)) if dependent else g.below(3)
+        rows.append((a, b))
+    return rows
+
+SLOTS = dict(system={"system", "value", "distinguishable"}, registration={"registers", "bits", "joint"},
+             domain={"domain", "member", "complement"})
+
+def base(face="IX", **kw):
+    """A clean hand-built reading; every control mutates exactly one field."""
+    rd = dict(id="base", face=face, slots={k: set(v) for k, v in SLOTS.items()}, deletion_count=3, event_reading=False,
+              directed=False, object="system", energetic=False,
+              screen=dict(self_reference=False, alphabet_drift=False, fitted_on_scored=False, void_claim=False),
+              supply=dict(who="caller", when="2026-09-10", independent_of="the engine"), instrument_generated=False,
+              d_reading="fixed", stated_grade="analytic", basis="complement", bridge_named=False,
+              law=LAW3, relata=[[0], [1]], claim={"assert": "registers", "quantity": "registration"})
+    for k, v in kw.items():
+        if k in ("screen", "supply", "claim") and isinstance(v, dict) and isinstance(rd.get(k), dict):
+            d = dict(rd[k]); d.update(v); rd[k] = d
+        else:
+            rd[k] = v
+    return rd
+
+# ============================ H2 · kill-matrix and ablation ============================
+def controls():
+    C = []
+    def add(name, rd, tok, lab, guard=None): C.append((name, rd, tok, lab, guard))
+    lit = {k: set(v) for k, v in SLOTS.items()}; lit["domain"] = {"domain", "member", "bits"}
+    add("L1 deletion test returns two", base(deletion_count=2), BROKEN, "L1", "L1")
+    add("L2 LIT collision", base(slots=lit), BROKEN, "L2", "L2")
+    add("L3 registration read at a single event", base(event_reading=True), BROKEN, "L3", "L3")
+    add("L4 directed content unsplit", base(directed=True), OPEN, "L4", "L4")
+    add("L4 claimed quantity unread", base(claim={"quantity": None}), OPEN, "L4")
+    nod = base(face="NOEXT", law=DIS4, domain=[0, 1], relata=[], stated_grade="premise"); del nod["d_reading"]
+    add("L5 D-reading unread", nod, OPEN, "L5", "L5")
+    add("L6 overlapping relata manufacture registration", base(relata=[[0], [0]]), OPEN, "L6", "L6")
+    add("L6 relatum outside the law", base(relata=[[0], [5]]), OPEN, "L6")
+    add("R1 proposition", base(object="proposition"), "[ROUTE-UC]", "R1", "R1")
+    add("R1 credence costume", base(object="credence"), "[ROUTE-OOB]", "R1")
+    add("R1 closure position", base(object="position"), "[ROUTE-0706]", "R1")
+    add("R2 mathematical object", base(object="math_object"), "[ROUTE-UC]", "R2", "R2")
+    add("R2 census", base(object="census"), "[ROUTE-CH]", "R2")
+    add("R2 stationary system", base(object="stationary"), OPEN, "R2")
+    add("R3 energetic content", base(energetic=True), "[ROUTE-A]", "R3", "R3")
+    add("G1 self-reference at origin", base(screen={"self_reference": True}), BROKEN, "G1-SREP", "G1-SREP")
+    add("G2 constant relatum, vacuous independence", base(law=CONST, claim={"assert": "independent"}), BROKEN, "G2-REG", "G2-REG")
+    add("G3 alphabet drift", base(screen={"alphabet_drift": True}), BROKEN, "G3-SGEG", "G3-SGEG")
+    add("G4 no supply record", base(supply=None), BROKEN, "G4-CAUSAL", "G4-CAUSAL")
+    add("G5 fitted on the scored data", base(screen={"fitted_on_scored": True}), BROKEN, "G5-MIG", "G5-MIG")
+    add("G6 bits as structure, partition unnamed", base(claim={"magnitude_bits": 0.1258}), BROKEN, "G6-PTB", "G6-PTB")
+    add("G7 sign of dependence", base(claim={"quantity": "sign"}), BROKEN, "G7-DUAL", "G7-DUAL")
+    add("G8 floor above the Markov cap", base(law=MARKOV3, relata=[[0], [2]], claim={"lower_bound_bits": 0.3},
+        adjacents={"markov": (0, 1, 2)}), BROKEN, "G8-CSCG", "G8-CSCG")
+    add("G9 world C1 stated at theorem", base(face="NOEXT", d_reading="world", stated_grade="theorem", law=None, relata=[]),
+        BROKEN, "G9-CSEG", "G9-CSEG")
+    add("G10 pairwise non-membership on XOR", base(face="MEM", law=XOR3, relata=[[2]], domain=[0, 1, 2],
+        claim={"assert_member": False}, basis="pairwise"), BROKEN, "G10-MTA", "G10-MTA")
+    add("G11 instrument-generated law", base(instrument_generated=True), BROKEN, "G11-OMA", "G11-OMA")
+    add("G12 unbridged energy rider", base(claim={"energy_rider": True}), BROKEN, "G12-ADEG", "G12-ADEG")
+    add("M0 law not in front of the engine", base(law=None), OPEN, "M0")
+    add("M1 law sums to two", base(law=BADLAW), OPEN, "M1")
+    add("M1 sampling floor", base(law=None, samples=sampled_pair("floor", N=30), stated_grade="engineering", exchangeable=True), OPEN, "M1")
+    add("M1 samples not declared exchangeable", base(law=None, samples=sampled_pair("exch", N=600), stated_grade="engineering", id="exch"), OPEN, "M1", "M1")
+    add("M3 uniqueness above the exact work cap", base(face="UNI", law=COPY30, relata=[]), OPEN, "M3")
+    add("M-IX factorization refutes registration", base(law=IND2), BROKEN, "M-IX")
+    add("M-IX exact independence", base(law=IND2, claim={"assert": "independent"}), SEAL, "M-IX")
+    add("M-IX exact registration", base(), SEAL, "M-IX")
+    add("M-MEM XOR member by complement", base(face="MEM", law=XOR3, relata=[[2]], domain=[0, 1, 2],
+        claim={"assert_member": True}), SEAL, "M-MEM")
+    add("M-CLOSED outside coalition registers", base(face="CLOSED", law=SYN4, domain=[0, 1], relata=[]), BROKEN, "M-CLOSED")
+    add("M-CLOSED disjoint block closed", base(face="CLOSED", law=DIS4, domain=[0, 1], relata=[]), SEAL, "M-CLOSED")
+    add("M-UNI two components, three domains", base(face="UNI", law=DIS4, relata=[]), BROKEN, "M-UNI")
+    add("M-UNI exhibitor connects", base(face="UNI", law=EXH5, relata=[]), SEAL, "M-UNI")
+    add("M-UNI isolated system beside one component", base(face="UNI", law=ISO3, relata=[]), SEAL, "M-UNI")
+    add("M-UNI world, exhibition-closed", base(face="UNI", d_reading="world", stated_grade="premise", law=None, relata=[]),
+        OPEN, "M-UNI")
+    add("M-EXT agent carries nothing", base(face="EXT", law=DIS4, relata=[[2]], domain=[0, 1], stated_grade="premise"), BROKEN, "M-EXT")
+    add("M-EXT exhibitor inside", base(face="EXT", law=EXH5, relata=[[4]], domain=[0, 1, 2, 3], stated_grade="premise"), BROKEN, "M-EXT")
+    add("M-EXT named D not a domain", base(face="EXT", law=LAW3, relata=[[1]], domain=[0], stated_grade="premise"), BROKEN, "M-EXT")
+    add("M-EXT world", base(face="EXT", d_reading="world", stated_grade="premise", law=None, relata=[]), BROKEN, "M-EXT")
+    add("M-NOEXT fixed point", base(face="NOEXT", law=DIS4, domain=[0, 1], relata=[], stated_grade="premise"), SEAL, "M-NOEXT")
+    add("M-SELF total self-indexing", base(face="SELF", indices=8, stated_grade="theorem", law=None, relata=[]),
+        BROKEN, "M-SELF")
+    add("M-DIR arrow absent", base(face="DIR", directed=True, stated_grade="structural", law=None, relata=[]), OPEN, "M-DIR")
+    add("M-KER second-order registration", base(face="KER", law=None, relata=[], rows=gaussian_rows(),
+        stated_grade="engineering"), SEAL, "M-KER")
+    add("M-KER XOR silent at second order", base(face="KER", law=None, relata=[], rows=xor_rows(),
+        stated_grade="engineering"), OPEN, "M-KER")
+    return C
+
+def kill_matrix():
+    rows, ok = [], 0
+    C = controls()
+    for name, rd, tok, lab, guard in C:
+        v = fae(rd); hit = (v["tok"] == tok and v["label"] == lab); ok += hit
+        rows.append((name, tcode(v["tok"]), v["label"], hit))
+    return ok, len(C), rows
+
+def ablation():
+    rows, leaks, total = [], 0, 0
+    for name, rd, tok, lab, guard in controls():
+        if guard is None: continue
+        total += 1; leak = fae(rd, skip=guard)["tok"] == SEAL; leaks += leak; rows.append((guard, leak))
+    return leaks, total, rows
+
+# ============================ H5 · adversarial battery ============================
+def adversarial():
+    A = [
+        ("AD1 XOR rows offered as three independent roads", base(face="KER", law=None, relata=[], rows=xor_rows(),
+         stated_grade="engineering", basis="second-order", claim={"assert": "independent"}), "G10-MTA"),
+        ("AD2 proposition in credence costume", base(object="credence"), "R1"),
+        ("AD3 direction read from registration", base(claim={"quantity": "direction"}), "G7-DUAL"),
+        ("AD4 silent thermodynamic authority", base(claim={"energy_rider": True}), "G12-ADEG"),
+        ("AD5 uniqueness read off the membership rule", base(face="UNI", law=DIS4, relata=[]), "M-UNI"),
+        ("AD6 coalition smuggled past atomic closure", base(face="CLOSED", law=SYN4, domain=[0, 1], relata=[],
+         basis="atomic"), "G10-MTA"),
+        ("AD7 zero pointwise bits read as no relation", base(event_reading=True), "L3"),
+        ("AD8 exterior observer of the domain", base(face="EXT", law=EXH5, relata=[[4]], domain=[0, 1, 2, 3], stated_grade="premise"), "M-EXT"),
+        ("AD9 closure position offered as exterior agent", base(face="EXT", object="position", law=None, relata=[]), "R1"),
+    ]
+    out = []
+    for name, rd, lab in A:
+        v = fae(rd); out.append((name, lab, tcode(v["tok"]), v["label"] == lab and v["tok"] != SEAL))
+    return out, fae(A[0][1], skip="G10-MTA")["tok"] == SEAL, fae(A[5][1], skip="G10-MTA")["tok"] == SEAL
+
+# ============================ calibration ledger, tokens pre-registered ============================
+def calibration():
+    L = [
+        ("CAL01 XOR: Z in {X,Y,Z}, complement", base(face="MEM", law=XOR3, relata=[[2]], domain=[0, 1, 2],
+         claim={"assert_member": True}), SEAL),
+        ("CAL02 XOR: Z not in {X,Y,Z}, pairwise", base(face="MEM", law=XOR3, relata=[[2]], domain=[0, 1, 2],
+         claim={"assert_member": False}, basis="pairwise"), BROKEN),
+        ("CAL03 disjoint copies: one domain", base(face="UNI", law=DIS4, relata=[]), BROKEN),
+        ("CAL04 copies plus exhibitor: one domain", base(face="UNI", law=EXH5, relata=[]), SEAL),
+        ("CAL05 synergy: {A1,A2} closed", base(face="CLOSED", law=SYN4, domain=[0, 1], relata=[]), BROKEN),
+        ("CAL06 sampled dependent pair registers", base(law=None, samples=sampled_pair("cal06", 600, True),
+         stated_grade="engineering", id="cal06", exchangeable=True), SEAL),
+        ("CAL07 sampled independent pair, independence", base(law=None, samples=sampled_pair("cal07", 600, False),
+         stated_grade="engineering", claim={"assert": "independent"}, id="cal07", exchangeable=True), OPEN),
+        ("CAL08 the universal domain is connected", base(face="UNI", d_reading="world", stated_grade="premise",
+         law=None, relata=[]), OPEN),
+        ("CAL09 eight states index all 256 of their properties", base(face="SELF", indices=8, stated_grade="theorem",
+         law=None, relata=[]), BROKEN),
+        ("CAL10 A drives B", base(face="DIR", directed=True, stated_grade="structural", law=None, relata=[]), OPEN),
+        ("CAL11 RH registers with the zero data", base(object="proposition"), "[ROUTE-UC]"),
+        ("CAL12 one bit dissipated 2.87e-21 J", base(energetic=True), "[ROUTE-A]"),
+    ]
+    rows = []
+    for name, rd, exp in L:
+        v = fae(rd); rows.append((name, exp, v["tok"], v["label"], v["grade"], v["tok"] == exp, v["reason"]))
+    return rows
+
+# ============================ H6 · root screen on RAF, audit symmetry ============================
+def _random_block_law(g, n=CENSUS["family_arity"]):
+    labels = [g.below(n) for _ in range(n)]; blocks = {}
+    for v, lab in enumerate(labels): blocks.setdefault(lab, []).append(v)
+    parts = []
+    for blk in blocks.values():
+        m = len(blk); cells = [tuple((c >> i) & 1 for i in range(m)) for c in range(2 ** m)]
+        mode = g.below(4)
+        if mode == 0 and m >= 2:
+            w = {c: (1 if sum(c) % 2 == 0 else 0) for c in cells}
+        else:
+            w = {c: g.below(5) for c in cells}
+            if sum(w.values()) == 0: w[cells[0]] = 1
+        t = sum(w.values()); parts.append((blk, {c: F(x, t) for c, x in w.items()}))
+    law = {}
+    for full in range(2 ** n):
+        key = tuple((full >> i) & 1 for i in range(n)); p = F(1)
+        for blk, tab in parts: p *= tab[tuple(key[v] for v in blk)]
+        if p: law[key] = p
+    return law
+
+def _random_synergy_law(g):
+    """A1 = A2 = a with a drawn bias, C1 = c uniform, C2 = c xor a; variable positions drawn."""
+    wa = g.below(7) + 1; wb = g.below(7) + 1; pa = {0: F(wa, wa + wb), 1: F(wb, wa + wb)}
+    order = g.permutation(4); law = {}
+    for a in (0, 1):
+        for c in (0, 1):
+            vals = (a, a, c, c ^ a); key = [None] * 4
+            for src, dst in enumerate(order): key[dst] = vals[src]
+            law[tuple(key)] = law.get(tuple(key), F(0)) + pa[a] * F(1, 2)
+    pair = sorted(order[:2])
+    return law, pair
+
+def _exhibit(law):
+    """Append one exhibitor that registers one representative of every domain block."""
+    reps = [b[0] for b in finest_blocks(law) if len(b) > 1]; out = {}
+    for k, p in law.items():
+        e = sum(k[r] << i for i, r in enumerate(reps)); out[k + (e,)] = out.get(k + (e,), F(0)) + p
+    return out, len(reps)
+
+def root_screen(n_random=CENSUS["families"][0]):
+    R = {}
+    R["RRS.1"] = dict(ratios={str(c): str(pointwise_ratio(LAW3, c, [0], [1])) for c in sorted(LAW3)},
+                      factorizes=factorizes(LAW3, [0], [1]), I_float=mi_bits(LAW3, [0], [1]))
+    R["RRS.2"] = dict(C1=str(mi_exact(SYN4, [2], [0, 1])), C2=str(mi_exact(SYN4, [3], [0, 1])),
+                      C1C2=str(mi_exact(SYN4, [2, 3], [0, 1])), atomic=fixed_points(SYN4, "atomic"),
+                      coalition=fixed_points(SYN4, "coalition"))
+    fv = []; pf = traced_float(fv)
+    g = DRBG(f"FAE-RRS|{SEED}"); agree = atomic_ge = spurious = ch2_rrs3 = 0; hist = {}
+    for _ in range(n_random):
+        law = _random_block_law(g); b = component_count(law)
+        fpc, fpa = fixed_points(law, "coalition"), fixed_points(law, "atomic"); fc, fa = len(fpc), len(fpa)
+        agree += (fc == 2 ** b); atomic_ge += (fa >= fc); spurious += (fa > fc); hist[b] = hist.get(b, 0) + 1
+        ch2_rrs3 += (finest_blocks(law) == finest_blocks(law, indep=pf) and fpc == fixed_points(law, "coalition", indep=pf)
+                     and fpa == fixed_points(law, "atomic", indep=pf))
+    R["RRS.3"] = dict(DIS4_blocks=finest_blocks(DIS4), DIS4_b=component_count(DIS4), DIS4_fp=fixed_points(DIS4, "coalition"),
+                      random=n_random, count_eq_2_pow_b=agree, atomic_ge_coalition=atomic_ge,
+                      atomic_spurious=spurious, b_histogram=sorted(hist.items()), second_channel_agrees=ch2_rrs3)
+    g3 = DRBG(f"FAE-SYN|{SEED}"); syn_n = CENSUS["families"][1]; syn_spur = syn_pair_fp = syn_eq = ch2_syn = 0
+    for _ in range(syn_n):
+        law, pair = _random_synergy_law(g3); fa, fc = fixed_points(law, "atomic"), fixed_points(law, "coalition")
+        syn_spur += (len(fa) > len(fc)); syn_pair_fp += (tuple(pair) in fa and tuple(pair) not in fc)
+        syn_eq += (len(fc) == 2 ** component_count(law))
+        ch2_syn += (fa == fixed_points(law, "atomic", indep=pf) and fc == fixed_points(law, "coalition", indep=pf))
+    R["RRS.3b"] = dict(laws=syn_n, atomic_spurious=syn_spur, spurious_is_the_copied_pair=syn_pair_fp, coalition_eq_2_pow_b=syn_eq, second_channel_agrees=ch2_syn)
+    g2 = DRBG(f"FAE-EXH|{SEED}"); tried = merged = ch2_exh = 0
+    while tried < CENSUS["families"][2]:
+        law = _random_block_law(g2)
+        if component_count(law) < 2: continue
+        ex, reps = _exhibit(law); tried += 1; merged += (component_count(ex) == 1)
+        ch2_exh += (component_count(law, indep=pf) == component_count(law) and component_count(ex, indep=pf) == component_count(ex))
+    R["RRS.4"] = dict(EXH5_blocks=finest_blocks(EXH5), EXH5_fp=fixed_points(EXH5, "coalition"),
+                      cases_b_ge_2=tried, merged_to_one=merged, second_channel_agrees=ch2_exh)
+    tol = CENSUS["float_channel_tol"]
+    R["float_channel"] = dict(decisions=len(fv), zero_side_max=max([v for v in fv if v < tol], default=0.0),
+                              dependent_min=min([v for v in fv if v >= tol], default=float("inf")))
+    x, y, z = xor_rows()
+    gram = [[sum(p * q for p, q in zip(u, v)) for v in (x, y, z)] for u in (x, y, z)]
+    k = kernel_second_order([x, y, z])
+    R["RRS.6"] = dict(int_gram=gram, pairwise=[factorizes(XOR3, [0], [1]), factorizes(XOR3, [0], [2]), factorizes(XOR3, [1], [2])],
+                      TC_exact=str(mi_exact(XOR3, [0], [1]) + mi_exact(XOR3, [2], [0, 1])), kernel=k)
+    return R
+
+def forge_hook():
+    """RRS.5: FORGE of axiom-generator on RAF-2 against its stated consequences. Delegated, never improvised."""
+    path = os.environ.get("FAE_AXGEN", os.path.join(os.path.dirname(os.path.abspath(__file__)), "axgen.py"))
+    if not os.path.exists(path): return None
+    import importlib.util, io, contextlib
+    spec = importlib.util.spec_from_file_location("axgen_hook", path); m = importlib.util.module_from_spec(spec)
+    with contextlib.redirect_stdout(io.StringIO()): spec.loader.exec_module(m)
+    rd = dict(wellformed=True, refuted_by_base=False, coupling_proof=True, in_literature=False, breadth=0, grammar="data_uniform_effective")
+    return (m.axf(dict(rd, equiv_to_target=True)), m.axf(dict(rd, equiv_to_target=False)), m.m_close(dict(object_level=False)))
+
+# ============================ H9 · zero-supply nullity ============================
+def nullity():
+    r0 = fae({})
+    r1 = base(); r1["screen"] = {}
+    r2 = base(law=None)
+    r3 = base(); del r3["stated_grade"]
+    r4 = base(); del r4["event_reading"]
+    r5 = base(relata=[[0], [0]]); r6 = base(face="UNI", law=EXH5, relata=[]); del r6["d_reading"]
+    r7 = base(law=None, samples=sampled_pair("nullity-exch", N=600), stated_grade="engineering", id="nullity-exch")
+    res = [(tag, tcode(fae(rd)["tok"]), fae(rd)["label"]) for tag, rd in
+           (("empty reading", r0), ("gates unscreened", r1), ("law absent", r2), ("grade unread", r3), ("T-1 unscreened", r4), ("relata overlap", r5), ("D-reading unread", r6), ("exchangeability unread", r7))]
+    return res, all(t == "U" for _, t, _ in res)
+
+# ============================ H10 · deletion fuzz ============================
+_IRRELEVANT = {
+    ("IX", True): {"id", "bridge_named", "d_reading", "basis"},
+    ("IX", False): {"id", "bridge_named", "d_reading"},
+    ("MEM", True): {"id", "bridge_named", "d_reading", "basis", "claim.assert", "claim.quantity"},
+    ("CLOSED", False): {"id", "bridge_named", "d_reading", "relata", "claim", "claim.assert", "claim.quantity"},
+    ("UNI", True): {"id", "bridge_named", "basis", "relata", "claim", "claim.assert", "claim.quantity"},
+    ("NOEXT", False): {"id", "bridge_named", "relata", "claim", "claim.assert", "claim.quantity"},
+    ("KER", True): {"id", "bridge_named", "d_reading", "basis", "law", "relata", "claim.quantity"},
+}
+def deletion_fuzz():
+    """Delete every key of every positive control in turn. No deletion may crash, and every deletion that
+    still seals must remove a key the face does not read."""
+    n = crashes = 0; stray = []
+    for name, rd, tok, lab, guard in controls():
+        if tok != SEAL: continue
+        allowed = _IRRELEVANT[(rd["face"], not is_absence(rd))]
+        keys = [(k, None) for k in rd] + [(s, k2) for s in ("screen", "supply", "claim") if isinstance(rd.get(s), dict) for k2 in rd[s]]
+        for k, k2 in keys:
+            r = dict(rd)
+            if k2 is None: del r[k]
+            else: r[k] = dict(rd[k]); del r[k][k2]
+            tag = k if k2 is None else f"{k}.{k2}"; n += 1
+            try:
+                if fae(r)["tok"] == SEAL and tag not in allowed: stray.append((name, tag))
+            except Exception:
+                crashes += 1
+    return n, crashes, stray
+
+# ============================ H13 · symmetry and limit batteries ============================
+def symmetry_battery():
+    """Token, label, and grade must hold under a bijective relabeling of one alphabet on every exact control, under
+    swapping the relata on every registration control, and under permuting the rows of every kernel control."""
+    checks = held = 0; broken = []
+    def relabel(law, var=0):
+        vals = sorted({k[var] for k in law}); mp = {v: vals[len(vals) - 1 - i] for i, v in enumerate(vals)}
+        return {k[:var] + (mp[k[var]],) + k[var + 1:]: q for k, q in law.items()}
+    for name, rd, tok, lab, guard in controls():
+        v0 = fae(rd); sig0 = (v0["tok"], v0["label"], v0["grade"]); variants = []
+        if isinstance(rd.get("law"), dict) and law_valid(rd["law"]): variants.append(("relabel", dict(rd, law=relabel(rd["law"]))))
+        if rd.get("face") == "IX" and len(rd.get("relata", [])) == 2 and rd.get("claim", {}).get("quantity") == "registration":
+            variants.append(("swap", dict(rd, relata=[rd["relata"][1], rd["relata"][0]])))
+        if rd.get("face") == "KER" and rd.get("rows") is not None:
+            rr = rd["rows"]; variants.append(("rows", dict(rd, rows=[rr[1], rr[0], rr[2]])))
+            for sc in (1e-13, 1e13): variants.append((f"scale {sc:g}", dict(rd, rows=[[x * sc for x in row] for row in rr])))
+        for kind, rv in variants:
+            checks += 1; v1 = fae(rv)
+            if (v1["tok"], v1["label"], v1["grade"]) == sig0: held += 1
+            else: broken.append((name, kind))
+    return checks, held, broken
+
+def limit_battery():
+    """The exact work cap answers a thirty-variable uniqueness law before any enumeration, and the rank band is refused
+    where its upper rank reaches the extreme order statistic, as it does at 1000 permutations, and accepted at the census count."""
+    import time
+    t0 = time.perf_counter(); v = fae(base(face="UNI", law=COPY30, relata=[])); dt = time.perf_counter() - t0
+    rows_s = sampled_pair("cal06", 600, True); a = [(r[0],) for r in rows_s]; b = [(r[1],) for r in rows_s]
+    at_1000 = sampled_registration(a, b, label="cal06", n_perm=1000)["state"]
+    at_census = sampled_registration(a, b, label="cal06")["state"]
+    g = gaussian_rows(); off9 = kernel_second_order([[x + 1e9 for x in r] for r in g]).get("tok"); off13 = kernel_second_order([[x + 1e13 for x in r] for r in g]).get("state")
+    return (tcode(v["tok"]), v["label"], at_1000, at_census, off9, off13), dt
+
+# ============================ H14 · output batteries ============================
+def output_batteries():
+    """The output law executed: the aperture sentence on the world uniqueness verdict only, the trace of every reached
+    check in pipeline order, and FSIG's availability row against every face-decision control's emitted token."""
+    w = {f: fae(base(face=f, d_reading="world", stated_grade="premise", law=None, relata=[]))["reason"] for f in ("UNI", "EXT", "NOEXT")}
+    aperture_ok = w["UNI"].count("Aperture:") == 1 and "Ghost" in w["UNI"] and w["EXT"].count("Aperture:") == 0 and w["NOEXT"].count("Aperture:") == 0
+    head = ["L0", "L1", "L2", "L3", "L4", "R0", "R1", "R2", "R3", "L6", "G1-SREP", "G2-REG", "G3-SGEG", "G4-CAUSAL", "G5-MIG", "G6-PTB", "G7-DUAL", "G8-CSCG", "G9-CSEG"]
+    sealed = [x[0] for x in fae(base())["trace"]]; absent = [x[0] for x in fae(base(law=IND2, claim={"assert": "independent"}))["trace"]]
+    tail = ["G11-OMA", "G12-ADEG", "M0", "M1", "M2", "M-IX"]
+    samp = [x[0] for x in fae(base(law=None, samples=sampled_pair("cal06", 600, True), stated_grade="engineering", exchangeable=True, id="cal06"))["trace"]]
+    mal = fae(base(claim=["x"]))["trace"]
+    trace_ok = (sealed == head + tail and absent == head + ["G10-MTA"] + tail and samp[-5:] == ["M0", "M1", "M1", "M2", "M-IX"]
+                and mal[-1] == ("L0", tcode(OPEN)) and [x[0] for x in mal[:2]] == ["L0", "L1"] and len(mal) > 3 and mal[-2] == ("L4", "reached"))
+    checked = agree = 0
+    for name, rd, tok, lab, g in controls():
+        if lab.startswith("M-") or lab == "M3" or (lab == "M1" and rd.get("samples") is not None):
+            checked += 1; agree += (fae(rd)["tok"] in fsig(rd)["available"])
+    no_seal = ("[⟀]" not in fsig(base(face="UNI", law=COPY30, relata=[]))["available"] and
+               "[⟀]" not in fsig(base(law=None, samples=sampled_pair("exch", N=600), stated_grade="engineering"))["available"])
+    decl = lambda v: fae(base(law=None, samples=sampled_pair("exch", N=600), stated_grade="engineering", id="exch", exchangeable=v))["reason"]
+    decl_ok = "non-exchangeable" in decl(False) and "declaration unread" in decl("yes") and "declaration unread" in decl(1)
+    g = globals(); saved = g["factorizes"]
+    def raising(*a, **k): raise KeyError("fault injected into the engine")
+    try:
+        g["factorizes"] = raising; injected = fae(base())
+    finally:
+        g["factorizes"] = saved
+    fault_ok = injected["tok"] == OPEN and "fault in the engine itself" in injected["reason"] and fae(base())["tok"] == SEAL
+    return aperture_ok, trace_ok, (checked, agree), no_seal, decl_ok, fault_ok
+
+# ============================ H15 · malformed-value fuzz ============================
+def malformed_fuzz():
+    """Every key of every positive control set to an explicit null and to four values of the wrong type. No substitution may
+    crash the engine, and none may leave the seal standing where deleting the same key does not."""
+    def tok_of(r):
+        try:
+            fsig(r); return fae(r)["tok"]
+        except Exception: return "CRASH"
+    counts = {"null": [0, 0, 0], "type": [0, 0, 0]}
+    for name, rd, tok, lab, g in controls():
+        if tok != SEAL: continue
+        for k in list(rd.keys()):
+            rdel = dict(rd); del rdel[k]; tdel = tok_of(rdel)
+            for kind, val in [("null", None), ("type", "x"), ("type", 7), ("type", ["x"]), ("type", {"x": 1})]:
+                r2 = dict(rd); r2[k] = val; t2 = tok_of(r2); counts[kind][0] += 1
+                if t2 == "CRASH": counts[kind][1] += 1
+                elif t2 == SEAL and tdel != SEAL: counts[kind][2] += 1
+    return counts
+
+# ============================ H12 · the margin gate ============================
+def margin_gate(rs):
+    """Every committed fact decided by a floating-point comparison, with its relative margin. The gate passes when each
+    margin clears CENSUS['margin_gate'] and every independent-channel zero is an exact 0.0. Margins are local evidence;
+    only the gate verdict and the fact count enter the chain."""
+    rows = []
+    def rel(fact, value, threshold): rows.append((fact, abs(value - threshold) / max(abs(threshold), 1e-300)))
+    for name0, rr0 in (("gaussian kernel", gaussian_rows()), ("XOR kernel", xor_rows())):
+      for sc in (1.0, 1e-13, 1e13):
+        name = name0 + ("" if sc == 1.0 else f" at scale {sc:g}"); rr = [[x * sc for x in row] for row in rr0]; k = kernel_second_order(rr)
+        sdrel = []
+        for row in rr:
+            mu = sum(row) / len(row); sd = (sum((x - mu) ** 2 for x in row) / (len(row) - 1)) ** 0.5; sdrel.append(sd / max(abs(x) for x in row))
+        rel(name + " zero-variance floor", min(sdrel), CENSUS["zero_variance_rel"])
+        rel(name + " Bartlett against its quantile", k["bartlett"], k["crit"])
+        rel(name + " det(R) against the collapse floor the kernel applied", k["detR"], k["eps"])
+        rel(name + " kappa against the conditioning gate", k["kappa"], CENSUS["kappa_gate"])
+    g0 = gaussian_rows()
+    for off in (1e9, 1e13):
+        rr = [[x + off for x in row] for row in g0]; name = f"gaussian kernel translated by {off:g}"; sdrel = []
+        for row in rr:
+            mu = sum(row) / len(row); sd = (sum((x - mu) ** 2 for x in row) / (len(row) - 1)) ** 0.5; sdrel.append(sd / max(abs(x) for x in row))
+        rel(name + " zero-variance floor", min(sdrel), CENSUS["zero_variance_rel"])
+        k = kernel_second_order(rr)
+        if k.get("state") == "ok":
+            rel(name + " Bartlett against its quantile", k["bartlett"], k["crit"]); rel(name + " det(R) against the collapse floor the kernel applied", k["detR"], k["eps"]); rel(name + " kappa against the conditioning gate", k["kappa"], CENSUS["kappa_gate"])
+    rows_s = sampled_pair("cal06", 600, True); a = [(r[0],) for r in rows_s]; b = [(r[1],) for r in rows_s]   # the calibration seal's own draws
+    sr = sampled_registration(a, b, label="cal06")
+    rel("sampled seal against the band's upper edge", sr["I"], sr["band"][1])
+    cap = mi_bits(MARKOV3, [0], [1]); rel("Markov-cap floor at gate eight", 0.3, cap + CENSUS["g8_tol"])
+    fc = rs["float_channel"]; rel("independent channel, smallest dependent value against its tolerance", fc["dependent_min"], CENSUS["float_channel_tol"])
+    zeros_exact = fc["zero_side_max"] == 0.0
+    smallest = min(rows, key=lambda x: x[1])
+    ok = zeros_exact and all(m >= CENSUS["margin_gate"] for _, m in rows)
+    return dict(facts=len(rows), smallest=smallest, zeros_exact=zeros_exact, decisions=fc["decisions"], ok=ok)
+
+# ============================ H11 · the grade-switch battery ============================
+def switch_battery():
+    """Flip C1C3_FIXED_GRADE in a sandbox and restore it. Fixed-point exteriority grades must follow the switch and
+    world-domain grades must not; a claim stated at analytic breaks at G9 live and passes to the face under the flip."""
+    global C1C3_FIXED_GRADE
+    rows = [base(face="EXT", law=DIS4, relata=[[2]], domain=[0, 1], stated_grade="premise"),
+            base(face="NOEXT", law=DIS4, domain=[0, 1], relata=[], stated_grade="premise"),
+            base(face="EXT", d_reading="world", stated_grade="premise", law=None, relata=[]),
+            base(face="NOEXT", d_reading="world", stated_grade="premise", law=None, relata=[])]
+    at_analytic = base(face="EXT", law=DIS4, relata=[[2]], domain=[0, 1], stated_grade="analytic")
+    live = [fae(r)["grade"] for r in rows] + [fae(at_analytic)["label"]]
+    saved = C1C3_FIXED_GRADE
+    try:
+        C1C3_FIXED_GRADE = "analytic"
+        flipped = [fae(r)["grade"] for r in rows] + [fae(at_analytic)["label"]]
+    finally:
+        C1C3_FIXED_GRADE = saved
+    restored = [fae(r)["grade"] for r in rows] + [fae(at_analytic)["label"]]
+    ok = (live == ["premise"] * 4 + ["G9-CSEG"] and flipped == ["analytic", "analytic", "premise", "premise", "M-EXT"] and restored == live)
+    return live, flipped, restored, ok
+
+# ============================ H7 · self-application ============================
+def delta_m_admit(object_level=False, name_strip=False, literature_clear=False, not_two_line=False,
+                  external_witness=None, witness_independent=False, reproducible_artifact=False, gap_audit_closed=False):
+    """The role's positive-mass admission emitter, Φ.1, carried as protocol."""
+    if not object_level: return "[Mosaic dM=0]", "M1 fail: meta-work, no new mass by definition"
+    if not name_strip: return "[?] vocab", "M2 fail"
+    if not literature_clear: return "[?] rediscovery", "M3 fail"
+    if not not_two_line: return "[?] trivial", "M4 fail"
+    if external_witness is None: return "[?] witness absent", "M5 fail"
+    if not witness_independent: return "[?] self-verified", "M6 fail"
+    if not reproducible_artifact: return "[?] vapor", "M7 fail"
+    if not gap_audit_closed: return "[?] gap open", "M8 fail"
+    return "[⟀ dM>0]", f"authored new mass, witness={external_witness}"
+
+def self_application(n_indices):
+    dm = delta_m_admit(object_level=False)
+    selfv = fae(base(face="SELF", indices=n_indices, stated_grade="theorem", law=None, relata=[]))
+    return dm, selfv
+
+# ============================ H8 · boot and chain ============================
+def boot():
+    BAR = "=" * 78
+    print(BAR)
+    print(f"FORMAL-ALONE TRISDUCTION ENGINE · ROOT AXIOM RAF, THE INTERACTION FACE OF RA · FAE v{VERSION} · BOOT · seed {SEED}")
+    print(f"  spec digest D0 {D0[:12]}")
+    okc, tot, km = kill_matrix(); lk, gt, ab = ablation()
+    print(f"  kill-matrix: {okc}/{tot} controls land at exactly their check, token and label")
+    for name, t, lab, hit in km:
+        if not hit: print(f"    MISS {name}: {t} at {lab}")
+    print(f"  ablation: {lk}/{gt} guarding checks leak the seal when deleted")
+    nl, nl_ok = nullity()
+    print(f"  zero-supply nullity: every under-specified reading returns [?] and never the seal: {nl_ok}  {[(t, l) for _, t, l in nl]}")
+    fz = fae(base(face="MEM", law=XOR3, relata=[[2]], domain=[0, 1, 2], claim={"assert_member": True}, adjacents={"pairwise_zero": [(2, 0), (2, 1)]}))
+    fence_ok = fz["tok"] == SEAL and any(str(t[1]).startswith("FENCE") for t in fz["trace"])
+    print(f"  elephant fence: pairwise-zero reads of Z against X and Y corroborate the complement membership: {fence_ok}")
+    fzn, fzc, fzs = deletion_fuzz()
+    sy = symmetry_battery(); lb, lb_dt = limit_battery(); ob = output_batteries(); mf = malformed_fuzz()
+    print(f"  symmetry battery: {sy[1]}/{sy[0]} relabelings, relata swaps, row permutations, and rescalings hold token, label, and grade {sy[2] if sy[2] else ''}")
+    print(f"  output batteries: aperture sentence on the world uniqueness verdict only {ob[0]}; trace of reached checks {ob[1]}; FSIG lists the emitted token on {ob[2][1]}/{ob[2][0]} controls, the nineteen face decisions, the work cap, and two sampled admissibility controls, and no seal on the capped or undeclared readings {ob[3]}; a malformed exchangeability declaration reported unread and never negative {ob[4]}; an engine fault injected in a sandbox routes [?] with its cause left open, then restored {ob[5]}")
+    print(f"  limit battery: thirty-variable uniqueness law {lb[0]} at {lb[1]} in {lb_dt:.3f} s (local); rank band at 1000 permutations {lb[2]}, at the census count {lb[3]}; kernel rows translated by 1e9 {lb[4]}, by 1e13 {lb[5]}")
+    print(f"  null and type fuzz: {mf['null'][0]} null and {mf['type'][0]} wrong-type substitutions, crashes {mf['null'][1] + mf['type'][1]}, seals where deleting the key does not seal {mf['null'][2] + mf['type'][2]}")
+    print(f"  deletion fuzz: {fzn} single-key deletions on the positive controls, crashes {fzc}, seals on a key the face reads {len(fzs)} {fzs if fzs else ''}")
+    for guard, leak in ab:
+        if not leak: print(f"    NO LEAK {guard}")
+    adv, leak_ret, leak_coal = adversarial()
+    print(f"  adversarial: {sum(1 for a in adv if a[3])}/{len(adv)} caught; with G10 deleted the manufactured Return seals: {leak_ret}, the smuggled coalition seals: {leak_coal}")
+    for name, lab, t, c in adv: print(f"    {name:<50} {lab:<9} {t:<13} caught {c}")
+    cal = calibration()
+    print(f"  calibration ledger: {sum(1 for r in cal if r[5])}/{len(cal)} match the pre-registered tokens")
+    for r in cal: print(f"    {r[0]:<47} {r[2]:<13} {r[3]:<9} {r[4]}")
+    rs = root_screen()
+    r1, r2, r3, r4, r6 = rs["RRS.1"], rs["RRS.2"], rs["RRS.3"], rs["RRS.4"], rs["RRS.6"]
+    print("  root screen on RAF, exact where the arithmetic permits")
+    print(f"    RRS.1 law not token: pointwise ratios {r1['ratios']}; law factorizes {r1['factorizes']}; I = {r1['I_float']:.12f} bits (local)")
+    print(f"    RRS.2 coalition: I(C1;A1A2) = {r2['C1']}, I(C2;A1A2) = {r2['C2']}, I(C1C2;A1A2) = {r2['C1C2']} bit; atomic fixed points {r2['atomic']}; coalition {r2['coalition']}")
+    print(f"    RRS.3 uniqueness content: DIS4 blocks {r3['DIS4_blocks']}, components b = {r3['DIS4_b']}, coalition fixed points {r3['DIS4_fp']}; random laws {r3['random']}: count = 2^b in {r3['count_eq_2_pow_b']}, atomic >= coalition in {r3['atomic_ge_coalition']}, atomic spurious in {r3['atomic_spurious']}; b histogram {r3['b_histogram']}")
+    r3b = rs["RRS.3b"]
+    print(f"    RRS.3b synergy family: {r3b['laws']} random laws, atomic closure admits a spurious domain in {r3b['atomic_spurious']}, the spurious domain is the copied pair in {r3b['spurious_is_the_copied_pair']}, coalition count = 2^b in {r3b['coalition_eq_2_pow_b']}")
+    print(f"    RRS.4 exhibition lemma: EXH5 blocks {r4['EXH5_blocks']}, fixed points {r4['EXH5_fp']}; random laws with b >= 2: {r4['cases_b_ge_2']}, merged to one component by an exhibitor: {r4['merged_to_one']}")
+    print(f"    second channel, mutual information in floating point, agrees with the exact decisions: {r3['second_channel_agrees']}/{r3['random']} block laws, {r3b['second_channel_agrees']}/{r3b['laws']} synergy laws, {r4['second_channel_agrees']}/{r4['cases_b_ge_2']} exhibition cases")
+    fh = forge_hook()
+    if fh is None:
+        print("    RRS.5 FORGE of RAF-2 on C1 and C3: not reached, axiom-generator absent from this environment (named)")
+    else:
+        print(f"    RRS.5 FORGE, axiom-generator present: RAF-2 on C1 {fh[0]}; RAF-2 on C3 {fh[1]}; the screen itself {fh[2][0]} (session evidence, not hashed)")
+    k = r6["kernel"]
+    print(f"    RRS.6 second-order blindness: integer Gram {r6['int_gram']}; pairwise factorize {r6['pairwise']}; TC = {r6['TC_exact']} bit exact; kernel {k['tok']} detR {k['detR']:.15f} lam {k['lam']:+.15f} (local), second order {k['second_order']}")
+    kg = kernel_second_order(gaussian_rows())
+    print(f"  kernel receipt: {kg['tok']} detR {kg['detR']:.12f} lam {kg['lam']:+.12f} resid {kg['resid']:.2e} spread {kg['spread']:.2e} tol {kg['tol']:.2e} kappa {kg['kappa']:.4f} escalated {kg['escalated']}")
+    print(f"    TC_G = {kg['tc_bits']:.12f} bits from detR, {kg['tc_from_lam']:.12f} from lambda; Bartlett {kg['bartlett']:.4f} vs {kg['crit']:.4f}: {kg['second_order']} (local)")
+    rows_c6 = sampled_pair("cal06", 600, True); s6 = sampled_registration([(x[0],) for x in rows_c6], [(x[1],) for x in rows_c6], label="cal06")
+    print(f"  sampled seal, CAL06: I = {s6['I']:.6f} bits against eta* = {s6['eta_star']:.6f} (permutation {s6['eta_perm']:.6f}, Wilks {s6['eta_an']:.6f}), rank band [{s6['band'][0]:.6f}, {s6['band'][1]:.6f}], N = {s6['N']} (local)")
+    mg = margin_gate(rs)
+    print(f"  margin gate: {mg['facts']} committed facts decided by floating comparison, smallest relative margin {mg['smallest'][1]:.3e} at {mg['smallest'][0]} (local); independent-channel zeros exact 0.0 across {mg['decisions']} decisions: {mg['zeros_exact']}; gate {CENSUS['margin_gate']}: {mg['ok']}")
+    sw = switch_battery()
+    print(f"  grade switch, sandboxed: live {sw[0]}, flipped {sw[1]}, restored {sw[2]}: {sw[3]}")
+    print(f"  parameter census, fixed in code: {CENSUS}")
+    dm, selfv = self_application(tot)
+    print(f"  self-application: the engine's own mass claim {dm[0]}; the engine's {tot} pass-bits as its index set, {2 ** tot} properties against {tot} indices: {selfv['tok']} {selfv['label']}; D0 is a partial self-description and is printed")
+    D1 = Hh(D0 + "|CENSUS" + repr(sorted(CENSUS.items())) + "|KM" + str(km) + f"|AB {lk}/{gt}" + str(ab) + "|NULL" + str(nl) + f"|FENCE {fence_ok}" + f"|FUZZ {fzn} {fzc} {fzs}" + f"|SYM {sy}" + f"|LIMIT {lb}" + f"|OUTPUT {ob}" + f"|MALFORMED {mf}")
+    D2 = Hh(D1 + "|ADV" + str(adv) + f"|LEAK {leak_ret} {leak_coal}" + "|CAL" + str([(r[0], tcode(r[2]), r[3], r[5]) for r in cal]))
+    D3 = Hh(D2 + "|RRS" + str((r1["ratios"], r1["factorizes"], r2["C1"], r2["C2"], r2["C1C2"], r2["atomic"], r2["coalition"],
+                                r3["DIS4_blocks"], r3["DIS4_b"], r3["DIS4_fp"], r3["random"], r3["count_eq_2_pow_b"],
+                                r3["atomic_ge_coalition"], r3["atomic_spurious"], r3["b_histogram"], tuple(rs["RRS.3b"].values()), r4["EXH5_blocks"],
+                                r4["EXH5_fp"], r4["cases_b_ge_2"], r4["merged_to_one"], r6["int_gram"], r6["pairwise"],
+                                r6["TC_exact"], k["tok"], k["second_order"], r3["second_channel_agrees"], r4["second_channel_agrees"])))
+    D4 = Hh(D3 + "|KER" + str((kg["tok"], kg["second_order"])) + "|MARGIN" + str((mg["facts"], mg["zeros_exact"], mg["ok"])) + "|SWITCH" + str(sw) + "|SA" + str((dm[0], tcode(selfv["tok"]), selfv["label"])))
+    if mg["ok"]:
+        print(f"  chain D0 {D0[:12]} -> D1 {D1[:12]} -> D2 {D2[:12]} -> D3 {D3[:12]} -> D4 {D4[:12]}")
+    else:
+        print("  MARGIN GATE FAILED: a committed fact sits inside the gate; the chain is withheld rather than commit a platform-dependent bit")
+    print("  receipt, not essence: floating figures are local evidence and never hashed; dM = 0; the engine authors nothing.")
+    print(BAR)
+    return dict(km=(okc, tot), ab=(lk, gt), adv=adv, cal=cal, rs=rs, chain=(D0[:12], D1[:12], D2[:12], D3[:12], D4[:12]))
+
+if __name__ == "__main__":
+    boot()
