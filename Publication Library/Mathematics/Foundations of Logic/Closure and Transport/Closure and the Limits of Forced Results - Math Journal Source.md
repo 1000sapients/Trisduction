@@ -101,13 +101,37 @@ This is the paper's substantive negative result and we state it without qualific
 
 The identification is not in the construction. It is supplied by the reading, and it is the single step at which a theorem about a forced system on a fixed background becomes a statement about the thing that system models. Proposition 10 says that this step is available only where the modelled thing is open, and that it is barred wherever the modelled thing is closed.
 
+# The undecided word
+
+There is a second failure in the reading, independent of transport, and it sits inside the construction's own register rather than at its boundary. It concerns a single word.
+
+**Proposition 11.** For a forced-breakdown result in which the forcing term vanishes to infinite order at the singular point, the proposition *the force causes the breakdown* is field-permitted in both directions and settled in neither, and the two permissions are exhibited by the result itself.
+
+*Proof.* One direction is exhibited by the construction: the forcing term is present, the system holds with it, and the solution is singular, so nothing in the system forbids the causal reading. The other is exhibited by the limit lemma: the force and all of its derivatives vanish at the singular point, so the force performs nothing where the velocity diverges and the concentration proceeds by inertia against dissipation, and nothing in the system forbids the non-causal reading. The two are consistent because *causes* is not a predicate of the object language. The system contains the identity $R(u,p) = f$ and contains no relation ranking one term as cause of another; the identity is symmetric in exactly the way causation is not. $\square$
+
+**Corollary 12.** No proof of a forced-breakdown result of this shape settles whether its force causes the breakdown, and settling it would require a resource the formal register does not have.
+
+*Proof.* Immediate from Proposition 11. What would decide the question is not a further derivation but a determination of which term acts, and acting is a relation between systems rather than a relation between terms. By Theorem 3 the acting relation is carried by mutual information, and a formal identity carries none: $R(u,p)$ and $f$ are the same object under two names. $\square$
+
+This matters because it is the word the reception rests on. A result of this class is carried in transit as *a force drives the system to breakdown*, and Proposition 11 says that the driving is exactly the part the result leaves undecided, while the parts it does decide, the existence of the field and the regularity of the residual, are not what the sentence is about.
+
+**An everyday case.** Consider a bicycle at the top of a long hill. You give it a push and let go, and it rolls down and eventually crashes at the bottom. Now ask what caused the crash.
+
+Your push is real, and without it the bicycle would have stayed where it was, so there is a straightforward sense in which your push caused the crash. But the push ended at the top of the hill. At the moment of the crash your hand is a hundred metres away and doing nothing at all, and what is happening at the crash is gravity, momentum and the road. So there is an equally straightforward sense in which the push did not cause the crash and only set up the conditions under which the hill did.
+
+Both readings are honest. Neither is refuted by anything you can measure about the bicycle. And crucially, no amount of further study of the bicycle's trajectory will settle it, because the disagreement is not about the trajectory. It is about the word *cause*, and the trajectory does not contain that word.
+
+The forced constructions are in exactly this position, with one detail sharper. The force is not merely absent at the moment of breakdown in the loose sense that your hand was far away; the construction's own lemma states that the force and every one of its derivatives is exactly zero at the singular point. The push is provably not touching the bicycle when it crashes. And unlike the bicycle, where you could at least film the push and the crash and argue about the film, the construction contains no film: it contains an equation that says the force equals the residual, which is true in both directions and picks no direction, the way *height equals length times width* picks neither the height nor the area as the cause of the other.
+
+So the honest report of a result of this class is the one its mathematics supports: an arrangement exists in which a system with a smooth external force becomes singular in finite time, and the force is silent at the point where it does. Whether that counts as the force *driving* the system is not a question the result answers, and it is the only question the headline asks.
+
 # Discussion
 
 The shape of this result is worth stating plainly, because it is unusual and we regard it as correct rather than as a limitation.
 
 The transport theorem is **total against the identification and empty against the mathematics**. It retires a reading completely and touches no proof at all. A criterion that also refuted the underlying theorems would be doing two jobs, and the second job would be done badly, since whether a construction's estimates hold is a question for its own proof or its own machine verification and not for an information-theoretic criterion. Keeping the two jobs apart is what allows the first to be done without qualification.
 
-Two consequences for practice follow. A forced-breakdown result, in the sense of Definition 6, should state the openness of its system explicitly, since that is the property on which its own hypothesis rests and on which its transportability depends; none of the results we surveyed does so. And a reading that carries such a result to a closed or total system should identify the supplier, since Theorem 7 says the supplier is what the reading has silently assumed to exist.
+Three consequences for practice follow. A forced-breakdown result, in the sense of Definition 6, should state the openness of its system explicitly, since that is the property on which its own hypothesis rests and on which its transportability depends; none of the results we surveyed does so. A reading that carries such a result to a closed or total system should identify the supplier, since Theorem 7 says the supplier is what the reading has silently assumed to exist. And a result whose force vanishes at the singular point should say so in its abstract, since by Proposition 11 that fact decides how the result may be described and it is the description, not the theorem, that travels.
 
 Finally, we note what the framework here does not decide. It removes one route to a finite-time terminus at a closed system and supplies no route to its denial. Whether such a system persists is not settled by Theorem 7, and we make no claim about it.
 
