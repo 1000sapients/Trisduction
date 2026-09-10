@@ -72,6 +72,8 @@ S | 2026-09-10 | 86d6baf | PATCH | CODEX | master/TRISDUCTION_Master_Codex_Unabr
 S | 2026-09-10 | 98bc6fb | PATCH | CODEX | master/CURRENT.txt | v3.32.0
 S | 2026-09-10 | 0f093e8 | PATCH | LIB | Publication Library/Mathematics/Foundations of Logic/Closure and Transport/Closure and the Limits of Forced Results.pdf | undecided-word section | sha 739f2763
 S | 2026-09-10 | 06c804e | PATCH | LIB | Publication Library/Mathematics/Foundations of Logic/Closure and Transport/Closure and the Limits of Forced Results - Math Journal Source.md | source master
+S | 2026-09-10 | aa07f67 | SEAT | CODEX | master/TRISDUCTION_Master_Codex_Unabridged_v3_33_0.md | v3.33.0 | index 0716 | APEX-PSP-BLESSED-CIRCLE-01
+S | 2026-09-10 | 1d5aed5 | SEAT | THEO | Theological PSP Codex/SCRIPTURAL_PSP_MASTER_v1.60.0.md | v1.60.0 | SC-109 | CN-PSP-BLESSED-CIRCLE-01
 
 ## MAP | regenerated | one line per live path
 # M | REG | path | kind | ver | blob8 | bytes | moved | what
