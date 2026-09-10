@@ -2359,6 +2359,38 @@
     "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
     "companion_of": "the other of the 2026-09-08 pair"
    }
+  },
+  "closure-and-the-limits-of-forced-results": {
+   "title": "Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When a Forced-Breakdown Theorem Transports to the System It Is Read as Being About",
+   "kind": "foundations",
+   "date": "2026-09-10",
+   "git": {
+    "pdf": "Publication Library/Mathematics/Foundations of Logic/Closure and Transport/Closure and the Limits of Forced Results.pdf",
+    "md": "Publication Library/Mathematics/Foundations of Logic/Closure and Transport/Closure and the Limits of Forced Results - Math Journal Source.md",
+    "pdf_commit": "1fec41b",
+    "md_commit": "0cbf92a"
+   },
+   "zenodo": {
+    "conceptrecid": "22683805",
+    "concept_doi": "10.5281/zenodo.22683805",
+    "latest_version_doi": "10.5281/zenodo.22683806",
+    "latest_record": "22683806",
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "closure-and-the-limits-of-forced-results-islam-2026",
+    "url": "https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026",
+    "state": "live"
+   },
+   "extra": {
+    "git_pdf_sha256": "62be6fdcace418ecae36f60813a114e5cab16815cc6dd7691a9c2872788d135e",
+    "git_pdf_md5": "7ac01d0260850e95e45a9559d9acf58a",
+    "ia_pdf_md5": "d0a2315d5ab7",
+    "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
+    "audit_cycle": "clo-20260910",
+    "engine": "RAF"
+   }
   }
  }
 }
