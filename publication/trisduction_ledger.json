@@ -2367,8 +2367,8 @@
    "git": {
     "pdf": "Publication Library/Mathematics/Foundations of Logic/Closure and Transport/Closure and the Limits of Forced Results.pdf",
     "md": "Publication Library/Mathematics/Foundations of Logic/Closure and Transport/Closure and the Limits of Forced Results - Math Journal Source.md",
-    "pdf_commit": "1fec41b",
-    "md_commit": "0cbf92a"
+    "pdf_commit": "0f093e8",
+    "md_commit": "06c804e"
    },
    "zenodo": {
     "conceptrecid": "22683805",
@@ -2376,7 +2376,8 @@
     "latest_version_doi": "10.5281/zenodo.22683806",
     "latest_record": "22683806",
     "versions": 1,
-    "state": "published"
+    "state": "published",
+    "file_state": "pending revision; regime unread, zenodo.org returning 504; git and archive carry the current bytes"
    },
    "ia": {
     "identifier": "closure-and-the-limits-of-forced-results-islam-2026",
@@ -2384,12 +2385,13 @@
     "state": "live"
    },
    "extra": {
-    "git_pdf_sha256": "62be6fdcace418ecae36f60813a114e5cab16815cc6dd7691a9c2872788d135e",
-    "git_pdf_md5": "7ac01d0260850e95e45a9559d9acf58a",
-    "ia_pdf_md5": "d0a2315d5ab7",
+    "git_pdf_sha256": "739f27633b53160a02f1b78fb9dace59323325c565129087ee6ac48df873a979",
+    "git_pdf_md5": "754b3b6fcccb21c134f34672eef78fe9",
+    "ia_pdf_md5": "1e8f60d071c3a4888c6f62e275850417",
     "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
     "audit_cycle": "clo-20260910",
-    "engine": "RAF"
+    "engine": "RAF",
+    "revision": "undecided-word section, Propositions 11 and 12, 5 pages"
    }
   }
  }
