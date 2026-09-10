@@ -76,6 +76,8 @@ S | 2026-09-10 | aa07f67 | SEAT | CODEX | master/TRISDUCTION_Master_Codex_Unabri
 S | 2026-09-10 | 1d5aed5 | SEAT | THEO | Theological PSP Codex/SCRIPTURAL_PSP_MASTER_v1.60.0.md | v1.60.0 | SC-109 | CN-PSP-BLESSED-CIRCLE-01
 S | 2026-09-10 | ca1cf28 | BUMP | SKILL | Skills/trisduction-publication-automation/SKILL.md | v2.8.0 | L10 | was v2.7.2
 S | 2026-09-10 | 9ac2b07 | SEAT | SKILL | Skills/trisduction-publication-automation/versions/trisduction-publication-automation_v2_8_0.md | L4 record
+S | 2026-09-10 | f645666 | BUMP | SKILL | Skills/trisduction-publication-automation/SKILL.md | v2.9.0 | L11 | was v2.8.0
+S | 2026-09-10 | d8a0703 | SEAT | SKILL | Skills/trisduction-publication-automation/versions/trisduction-publication-automation_v2_9_0.md | L4 record
 
 ## MAP | regenerated | one line per live path
 # M | REG | path | kind | ver | blob8 | bytes | moved | what
