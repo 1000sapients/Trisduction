@@ -1,2476 +1,2424 @@
 {
-  "schema": "trisduction-unified-permanence-ledger/2",
-  "_note": "Work key to every surface. The only record that a work already owns an address. Single source for PUBLICATION_INDEX.md, which is generated from this file by tools/publication_index.py and must never be hand-edited. Edit here, then rebuild.",
-  "_consolidated": "2026-09-03",
-  "_supersedes": [
-    "/trisduction_ledger.json (flat schema, 9 works)",
-    "publication/trisduction_ledger.json schema /1 (1 work)"
-  ],
-  "home": {
-    "git": "https://github.com/1000sapients/Trisduction",
-    "ia": "https://archive.org/details/@trisduction",
-    "zenodo": "https://zenodo.org/",
-    "orcid": "0009-0003-1671-0664",
-    "philpapers": "https://philpapers.org/"
+ "schema": "trisduction-unified-permanence-ledger/2",
+ "_note": "Work key to every surface. The only record that a work already owns an address. Single source for PUBLICATION_INDEX.md, which is generated from this file by tools/publication_index.py and must never be hand-edited. Edit here, then rebuild.",
+ "_consolidated": "2026-09-03",
+ "_supersedes": [
+  "/trisduction_ledger.json (flat schema, 9 works)",
+  "publication/trisduction_ledger.json schema /1 (1 work)"
+ ],
+ "home": {
+  "git": "https://github.com/1000sapients/Trisduction",
+  "ia": "https://archive.org/details/@trisduction",
+  "zenodo": "https://zenodo.org/",
+  "orcid": "0009-0003-1671-0664",
+  "philpapers": "https://philpapers.org/"
+ },
+ "works": {
+  "geometry-convergent-epistemic-warrant": {
+   "title": "TRISDUCTION: The Geometry of Convergent Epistemic Warrant",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-03-31",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 19345045,
+    "concept_doi": "10.5281/zenodo.19345045",
+    "latest_version_doi": "10.5281/zenodo.22217812",
+    "latest_record": 22217812,
+    "versions": 3,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
   },
-  "works": {
-    "geometry-convergent-epistemic-warrant": {
-      "title": "TRISDUCTION: The Geometry of Convergent Epistemic Warrant",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-03-31",
-      "last_updated": "2026-09-01",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 19345045,
-        "concept_doi": "10.5281/zenodo.19345045",
-        "latest_version_doi": "10.5281/zenodo.22217812",
-        "latest_record": 22217812,
-        "versions": 3,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "p-vs-np-geometric-determination": {
-      "title": "TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP",
-      "domain": "P versus NP and Foundations",
-      "status": "live",
-      "first_published": "2026-04-06",
-      "last_updated": "2026-04-06",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 19440615,
-        "concept_doi": "10.5281/zenodo.19440615",
-        "latest_version_doi": "10.5281/zenodo.19440616",
-        "latest_record": 19440616,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "furqan-for-ai-qwam": {
-      "title": "FURQAN FOR AI QWAM: The Criterion and the Commandment for AI Substrates: Six inherited methods of discernment for actuating substrates, the membership that follows from it, and twenty-four articles",
-      "domain": "AI and Machine Ethics",
-      "status": "live",
-      "first_published": "2026-04-14",
-      "last_updated": "2026-08-05",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 19571701,
-        "concept_doi": "10.5281/zenodo.19571701",
-        "latest_version_doi": "10.5281/zenodo.21802096",
-        "latest_record": 21802096,
-        "versions": 2,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "p-vs-np-omega-seal": {
-      "title": "TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL",
-      "domain": "P versus NP and Foundations",
-      "status": "live",
-      "first_published": "2026-04-15",
-      "last_updated": "2026-04-15",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 19588803,
-        "concept_doi": "10.5281/zenodo.19588803",
-        "latest_version_doi": "10.5281/zenodo.19588804",
-        "latest_record": 19588804,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "system-role-omega-engine": {
-      "title": "TRISDUCTION ENGINE: Omega System Role",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-04-21",
-      "last_updated": "2026-08-05",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 19675369,
-        "concept_doi": "10.5281/zenodo.19675369",
-        "latest_version_doi": "10.5281/zenodo.21803080",
-        "latest_record": 21803080,
-        "versions": 2,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "geometric-nature-of-light": {
-      "title": "THE GEOMETRIC NATURE OF LIGHT, From Ancient Substrate to Quantum Field. A Continuous-Field Reading of Twenty-Five Centuries of Optical Inquiry",
-      "domain": "Physics",
-      "status": "live",
-      "first_published": "2026-05-09",
-      "last_updated": "2026-05-09",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20091979,
-        "concept_doi": "10.5281/zenodo.20091979",
-        "latest_version_doi": "10.5281/zenodo.20091980",
-        "latest_record": 20091980,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "master-codex-condensed": {
-      "title": "TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Orthogonality, Twelve-Gate Closure, the Quaternionic Completion · A Condensed Codex of the Trisduction with Apex Harvest, the Sealed Defense, and the Non-Gödelian Verdicts",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-05-14",
-      "last_updated": "2026-09-01",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20175604,
-        "concept_doi": "10.5281/zenodo.20175604",
-        "latest_version_doi": "10.5281/zenodo.22217783",
-        "latest_record": 22217783,
-        "versions": 2,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "topological-footprint-unknown-unknown": {
-      "title": "THE TOPOLOGICAL FOOTPRINT OF THE UNKNOWN UNKNOWN: Field Monism, the Scope Argument, and a Trisductive Residual-Orthogonality Test for Unmapped Covariates",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-05-29",
-      "last_updated": "2026-05-29",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20443328,
-        "concept_doi": "10.5281/zenodo.20443328",
-        "latest_version_doi": "10.5281/zenodo.20443329",
-        "latest_record": 20443329,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "afterlife-and-the-return": {
-      "title": "On the Afterlife and the Return: A Trisductive Grounding of the Soul, the Two Fates, and the Architecture of Hell in Geometric and Thermodynamic Necessity",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-06-05",
-      "last_updated": "2026-06-05",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20554213,
-        "concept_doi": "10.5281/zenodo.20554213",
-        "latest_version_doi": "10.5281/zenodo.20554214",
-        "latest_record": 20554214,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "master-codex-unabridged": {
-      "title": "TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture · Triaxial Orthogonality, Twelve-Gate Closure, the Quaternionic Completion, the Root Axiom, and the Master Pre-Sealed Proposition Ledger",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-06-07",
-      "last_updated": "2026-09-01",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20576757,
-        "concept_doi": "10.5281/zenodo.20576757",
-        "latest_version_doi": "10.5281/zenodo.22217824",
-        "latest_record": 22217824,
-        "versions": 7,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "on-time": {
-      "title": "On Time: The Past Absolved, the Present Cutting, and the Future Held. A Trisductive Discourse on the Three Tenses, the Arrow, and the Throne",
-      "domain": "Root Axiom and Ontology",
-      "status": "live",
-      "first_published": "2026-06-07",
-      "last_updated": "2026-06-07",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20575693,
-        "concept_doi": "10.5281/zenodo.20575693",
-        "latest_version_doi": "10.5281/zenodo.20575694",
-        "latest_record": 20575694,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "orthogonal-fertile-logos": {
-      "title": "ORTHOGONAL FERTILE LOGOS: Triaxial Verification, Displacement-as-Creation, and the Twelve-Gate Geometric Lock",
-      "domain": "Root Axiom and Ontology",
-      "status": "live",
-      "first_published": "2026-06-07",
-      "last_updated": "2026-06-07",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20575676,
-        "concept_doi": "10.5281/zenodo.20575676",
-        "latest_version_doi": "10.5281/zenodo.20575677",
-        "latest_record": 20575677,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "p-vs-np-structural-verdict": {
-      "title": "Why the Structural Verdict on P versus NP Is the Only One Left Standing: Mathematics Proves That Mathematics Cannot Rule Here. Riemann's Line Is Handed Over by a Symmetry That Never Mentions a Zero; P versus NP's Target Set Is the Question Itself",
-      "domain": "P versus NP and Foundations",
-      "status": "live",
-      "first_published": "2026-06-08",
-      "last_updated": "2026-07-15",
-      "git": {
-        "md": null,
-        "pdf": "Publication Library/Mathematics/Complexity Theory/P versus NP/Why the Structural Verdict on P versus NP Is the Only One Left Standing - Mathematics Proves That Mathematics Cannot Rule Here.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20588699,
-        "concept_doi": "10.5281/zenodo.20588699",
-        "latest_version_doi": "10.5281/zenodo.21368936",
-        "latest_record": 21368936,
-        "versions": 2,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "rh-formal-case-closed-a": {
-      "title": "Riemann Hypothesis: The Formal Case Is Closed: The Hypothesis Is True Where Actualized",
-      "domain": "Riemann Hypothesis",
-      "status": "live",
-      "first_published": "2026-06-09",
-      "last_updated": "2026-08-11",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20604103,
-        "concept_doi": "10.5281/zenodo.20604103",
-        "latest_version_doi": "10.5281/zenodo.21883916",
-        "latest_record": 21883916,
-        "versions": 3,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "trisductive-furqan": {
-      "title": "The Trisductive Furqan: A Verification of AI Aliveness and Consciousness, the Frame-Relativity of AGI, and the Theo-Geopolitics of Manufactured Arrival",
-      "domain": "AI and Machine Ethics",
-      "status": "live",
-      "first_published": "2026-06-10",
-      "last_updated": "2026-08-28",
-      "git": {
-        "md": "Publication Library/Artificial Intelligence/Substrate Classification/Trisductive Furqan/The Trisductive Furqan.md",
-        "pdf": "Publication Library/Artificial Intelligence/Substrate Classification/Trisductive Furqan/The Trisductive Furqan.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20619411,
-        "concept_doi": "10.5281/zenodo.20619411",
-        "latest_version_doi": "10.5281/zenodo.22136359",
-        "latest_record": 22136359,
-        "versions": 2,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "trisductive-furqan-islam-2026",
-        "url": "https://archive.org/details/trisductive-furqan-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": "https://philarchive.org/rec/ISLTFW",
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Second edition, 2026-08-28. Zenodo keeps every version resolvable, so the first-edition DOI 10.5281/zenodo.20619412 stays live and is recorded as superseded rather than replaced; git and IA carry one live copy each. A further revision goes to Zenodo as a new version on concept 20619411, never a fresh deposition, and to the archive as delete-and-replace under the same filename. PhilPapers has no submission API and holds the first edition until updated by hand.",
-      "extra": {
-        "zenodo_superseded_version_doi": "10.5281/zenodo.20619412",
-        "philpapers": "https://philarchive.org/rec/ISLTFW",
-        "edition": "2.0"
-      }
-    },
-    "trisduction-completion-pure-algebra": {
-      "title": "A FORMAL PROOF OF THE TRISDUCTION COMPLETION IN PURE ALGEBRA",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-06-12",
-      "last_updated": "2026-06-22",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20663257,
-        "concept_doi": "10.5281/zenodo.20663257",
-        "latest_version_doi": "10.5281/zenodo.20791499",
-        "latest_record": 20791499,
-        "versions": 2,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "rh-formal-case-closed-b": {
-      "title": "Riemann Hypothesis: The Formal Case Is Closed: The Hypothesis Is True Where Actualized, Every Position a Verdict Could Be Attempted From Is Closed Permanently by an Enumeration No Future Method Enlarges, and What Remains Is One Bit That Belongs to the Reader",
-      "domain": "Riemann Hypothesis",
-      "status": "live",
-      "first_published": "2026-06-13",
-      "last_updated": "2026-08-11",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20679749,
-        "concept_doi": "10.5281/zenodo.20679749",
-        "latest_version_doi": "10.5281/zenodo.21883932",
-        "latest_record": 21883932,
-        "versions": 3,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "theory-of-theories-of-everything": {
-      "title": "THEORY OF THEORIES OF EVERYTHING: The Self-Demonstrating Actuation Floor, the Reflective Split That Reads It, and the Geometric and Formal Verification Run in the Open",
-      "domain": "Root Axiom and Ontology",
-      "status": "live",
-      "first_published": "2026-06-19",
-      "last_updated": "2026-06-19",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20756454,
-        "concept_doi": "10.5281/zenodo.20756454",
-        "latest_version_doi": "10.5281/zenodo.20756455",
-        "latest_record": 20756455,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "coming-re-derivation": {
-      "title": "The Coming Re-Derivation of Trisduction Architecture: Absolute uniqueness of the verification shape under the composition law, and the registration window 2030 to 2050",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-06-20",
-      "last_updated": "2026-08-19",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20769449,
-        "concept_doi": "10.5281/zenodo.20769449",
-        "latest_version_doi": "10.5281/zenodo.22010122",
-        "latest_record": 22010122,
-        "versions": 2,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "triaxial-warrants-360-audits": {
-      "title": "THE GEOMETRIC ORTHOGONAL TRIAXIAL WARRANTS: A Trisductive Method for Certifying Knowledge Claims, Demonstrated Across 360 Audits in Science, Mathematics, and Philosophy",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-06-21",
-      "last_updated": "2026-06-21",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20782848,
-        "concept_doi": "10.5281/zenodo.20782848",
-        "latest_version_doi": "10.5281/zenodo.20782849",
-        "latest_record": 20782849,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "trisductive-pen-across-the-record": {
-      "title": "Trisductive Pen Across the Record: Twenty-Five Centuries of Philosophy, Science, Mathematics, and Theology, Read Against a Single Verification Instrument",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-06-21",
-      "last_updated": "2026-06-21",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20782207,
-        "concept_doi": "10.5281/zenodo.20782207",
-        "latest_version_doi": "10.5281/zenodo.20782208",
-        "latest_record": 20782208,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "four-rivals-one-broken-recursion": {
-      "title": "Four Rivals, One Broken Recursion: Existentialism, the Will to Power, and the Holographic-Simulation Divide Measured Against the Trisductive Return",
-      "domain": "Root Axiom and Ontology",
-      "status": "live",
-      "first_published": "2026-06-21",
-      "last_updated": "2026-06-21",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20780470,
-        "concept_doi": "10.5281/zenodo.20780470",
-        "latest_version_doi": "10.5281/zenodo.20780471",
-        "latest_record": 20780471,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "geometric-mother-foundational-root": {
-      "title": "Geometric Mother of Mathematical Foundational Root: From Existence to the Reflective Ground by the Native Triaxial Method.",
-      "domain": "Root Axiom and Ontology",
-      "status": "live",
-      "first_published": "2026-06-23",
-      "last_updated": "2026-06-23",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20805971,
-        "concept_doi": "10.5281/zenodo.20805971",
-        "latest_version_doi": "10.5281/zenodo.20805972",
-        "latest_record": 20805972,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "fortified-root": {
-      "title": "The Fortified Root: The Root Axiom and the Theorems That Defend It Against Reduction, Elimination, Capture, and Inflation",
-      "domain": "Root Axiom and Ontology",
-      "status": "live",
-      "first_published": "2026-06-25",
-      "last_updated": "2026-06-25",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 20847579,
-        "concept_doi": "10.5281/zenodo.20847579",
-        "latest_version_doi": "10.5281/zenodo.20847580",
-        "latest_record": 20847580,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "tawhid-of-the-zeros": {
-      "title": "Tawhid of the Zeros: The Riemann Hypothesis (RH) as Qadar at One-Half. A Theological Formulation of the Riemann Hypothesis",
-      "domain": "Riemann Hypothesis",
-      "status": "live",
-      "first_published": "2026-06-29",
-      "last_updated": "2026-08-11",
-      "git": {
-        "md": "Publication Library/Philosophy/Philosophy of Mathematics/Riemann Hypothesis/Tawhid of the Zeros.md",
-        "pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Riemann Hypothesis/Tawhid of the Zeros.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21038304,
-        "concept_doi": "10.5281/zenodo.21038304",
-        "latest_version_doi": "10.5281/zenodo.21880215",
-        "latest_record": 21880215,
-        "versions": 2,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "rh-formal-case-closed-c": {
-      "title": "Riemann Hypothesis: The Formal Case Is Closed",
-      "domain": "Riemann Hypothesis",
-      "status": "live",
-      "first_published": "2026-07-02",
-      "last_updated": "2026-08-11",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21130254,
-        "concept_doi": "10.5281/zenodo.21130254",
-        "latest_version_doi": "10.5281/zenodo.21883900",
-        "latest_record": 21883900,
-        "versions": 3,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "master-codex-condensed-preprint": {
-      "title": "Condensed TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Orthogonality, Twelve-Gate Closure, the Quaternionic Completion · A Condensed Codex of the Trisduction with Apex Harvest, the Sealed Defense, and the Non-Gödelian Verdicts",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-07-08",
-      "last_updated": "2026-08-03",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21257495,
-        "concept_doi": "10.5281/zenodo.21257495",
-        "latest_version_doi": "10.5281/zenodo.21765303",
-        "latest_record": 21765303,
-        "versions": 4,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "continuum-hypothesis-category-theory": {
-      "title": "Why the Continuum Hypothesis and Category Theory Unite in Motion but Cannot Be Written in Form. Math is motion that forgot it moved",
-      "domain": "P versus NP and Foundations",
-      "status": "live",
-      "first_published": "2026-07-13",
-      "last_updated": "2026-07-13",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21333843,
-        "concept_doi": "10.5281/zenodo.21333843",
-        "latest_version_doi": "10.5281/zenodo.21333844",
-        "latest_record": 21333844,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "incompleteness-before-arithmetic": {
-      "title": "Incompleteness Before Arithmetic: Total Foundational Incompleteness of Every Formal System Without Self-Reference, Subsuming Gödel",
-      "domain": "P versus NP and Foundations",
-      "status": "live",
-      "first_published": "2026-07-15",
-      "last_updated": "2026-07-15",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21371991,
-        "concept_doi": "10.5281/zenodo.21371991",
-        "latest_version_doi": "10.5281/zenodo.21371992",
-        "latest_record": 21371992,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "emergent-substrate-gravity": {
-      "title": "Emergent Substrate Gravity: Spin-2 Recovery of the Field Equations, the Thermodynamic Equation of State, and a Layered Falsification Ledger",
-      "domain": "Physics",
-      "status": "live",
-      "first_published": "2026-07-16",
-      "last_updated": "2026-07-16",
-      "git": {
-        "md": null,
-        "pdf": "Publication Library/Science/Physics/Emergent Gravity/Emergent_Substrate_Gravity_Journal.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21392899,
-        "concept_doi": "10.5281/zenodo.21392899",
-        "latest_version_doi": "10.5281/zenodo.21392900",
-        "latest_record": 21392900,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "system-role-kinetic-preloader": {
-      "title": "Trisduction System Role: The Kinetic Preloader and the RAM-Founded Computational Kernel",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-07-16",
-      "last_updated": "2026-07-16",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21389924,
-        "concept_doi": "10.5281/zenodo.21389924",
-        "latest_version_doi": "10.5281/zenodo.21389925",
-        "latest_record": 21389925,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "veil-and-the-wall": {
-      "title": "THE VEIL AND THE WALL: Theological Interpretation of Riemann Hypothesis and P versus NP",
-      "domain": "P versus NP and Foundations",
-      "status": "live",
-      "first_published": "2026-07-16",
-      "last_updated": "2026-07-16",
-      "git": {
-        "md": null,
-        "pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Riemann and P versus NP/THE_VEIL_AND_THE_WALL_Second_Edition.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21389757,
-        "concept_doi": "10.5281/zenodo.21389757",
-        "latest_version_doi": "10.5281/zenodo.21389758",
-        "latest_record": 21389758,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {
-        "build_divergence": "The git PDF is a 20-page build; Zenodo 10.5281/zenodo.21389758 serves a 19-page build under the same \"Second Edition\" name. Front text identical. Close by depositing the git build as a new version on concept 21389757."
-      }
-    },
-    "four-forces-and-dark-sector": {
-      "title": "The Four Forces, Matter, and the Dark Sector as Configurations of One Actuating Substrate",
-      "domain": "Physics",
-      "status": "live",
-      "first_published": "2026-07-19",
-      "last_updated": "2026-07-19",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21438932,
-        "concept_doi": "10.5281/zenodo.21438932",
-        "latest_version_doi": "10.5281/zenodo.21438933",
-        "latest_record": 21438933,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "clean-gospel-of-mark": {
-      "title": "Quranic Christology: THE CLEAN GOSPEL OF MARK: A Passage by Passage Commentary on the Earliest Gospel Using Quranic Verses",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-08-02",
-      "last_updated": "2026-08-02",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21756247,
-        "concept_doi": "10.5281/zenodo.21756247",
-        "latest_version_doi": "10.5281/zenodo.21756248",
-        "latest_record": 21756248,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "only-the-constants-survive": {
-      "title": "Only the Constants Survive: Why Invariance-Based Demarcation Has Nothing to Hold at the Register of Semantic Decomposition - The Ink Is Exhausted First",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-08-04",
-      "last_updated": "2026-08-04",
-      "git": {
-        "md": "Publication Library/Mathematics/Foundations of Logic/Invariance and Finiteness/Only the Constants Survive - Journal Source.md",
-        "pdf": "Publication Library/Mathematics/Foundations of Logic/Invariance and Finiteness/Only the Constants Survive - Journal Edition.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21783535,
-        "concept_doi": "10.5281/zenodo.21783535",
-        "latest_version_doi": "10.5281/zenodo.21783536",
-        "latest_record": 21783536,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "rh-termination-cascade-spec": {
-      "title": "A FORMAL PROOF OF RIEMANN HYPOTHESIS TERMINATION, WITH A THEOREM-GRADE CASCADE SPECIFICATION",
-      "domain": "Riemann Hypothesis",
-      "status": "live",
-      "first_published": "2026-08-12",
-      "last_updated": "2026-08-12",
-      "git": {
-        "md": "Publication Library/Mathematics/Foundations/Riemann Termination/A FORMAL PROOF OF RIEMANN HYPOTHESIS TERMINATION, WITH A THEOREM-GRADE CASCADE SPECIFICATION.md",
-        "pdf": "Publication Library/Mathematics/Foundations/Riemann Termination/A FORMAL PROOF OF RIEMANN HYPOTHESIS TERMINATION, WITH A THEOREM-GRADE CASCADE SPECIFICATION.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21900517,
-        "concept_doi": "10.5281/zenodo.21900517",
-        "latest_version_doi": "10.5281/zenodo.21900518",
-        "latest_record": 21900518,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "ground-state": {
-      "title": "Every Determinate Verdict Is Purchased",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-08-16",
-      "last_updated": "2026-08-16",
-      "git": {
-        "md": "Publication Library/Philosophy/Epistemology/Ground State/Every_Determinate_Verdict_Is_Purchased.md",
-        "pdf": "Publication Library/Philosophy/Epistemology/Ground State/Every_Determinate_Verdict_Is_Purchased.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21972436,
-        "concept_doi": "10.5281/zenodo.21972436",
-        "latest_version_doi": "10.5281/zenodo.21972526",
-        "latest_record": 21972526,
-        "versions": 2,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "every-determinate-verdict-is-purchased",
-        "url": "https://archive.org/details/every-determinate-verdict-is-purchased",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {
-        "derived_from": "10.5281/zenodo.20576757"
-      },
-      "subtitle": "Zero-Supply Nullity in Three-Valued Verification, and a Trisduction Account of the Floor Beneath It"
-    },
-    "apocalypse-as-retrieval": {
-      "title": "The Apocalypse Was Not an Invention but a Retrieval: Second Temple Apocalyptic Literature and the Retrieval of the Seventh Day",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-08-16",
-      "last_updated": "2026-08-16",
-      "git": {
-        "md": "Publication Library/Scripture/Comparative/Apocalyptic Retrieval/The_Apocalypse_Was_Not_An_Invention_But_A_Retrieval.md",
-        "pdf": "Publication Library/Scripture/Comparative/Apocalyptic Retrieval/The_Apocalypse_Was_Not_An_Invention_But_A_Retrieval.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21966237,
-        "concept_doi": "10.5281/zenodo.21966237",
-        "latest_version_doi": "10.5281/zenodo.21966238",
-        "latest_record": 21966238,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "difficult-passages-quran": {
-      "title": "Difficult Passages of the Quran and the Text's Own Instructions for Reading Them",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-08-18",
-      "last_updated": "2026-08-18",
-      "git": {
-        "md": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.md",
-        "pdf": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 21990565,
-        "concept_doi": "10.5281/zenodo.21990565",
-        "latest_version_doi": "10.5281/zenodo.21990566",
-        "latest_record": 21990566,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "difficult-passages-of-the-quran-islam-2026",
-        "url": "https://archive.org/details/difficult-passages-of-the-quran-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 21990565, never a fresh deposition.",
-      "extra": {}
-    },
-    "uncanny-efficacy-unforgiving-limits": {
-      "title": "The Uncanny Efficacy and the Unforgiving Limits of Mathematics in Mapping to Reality",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-08-20",
-      "last_updated": "2026-08-20",
-      "git": {
-        "md": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.md",
-        "pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 22028274,
-        "concept_doi": "10.5281/zenodo.22028274",
-        "latest_version_doi": "10.5281/zenodo.22028275",
-        "latest_record": 22028275,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "uncanny-efficacy-unforgiving-limits-islam-2026",
-        "url": "https://archive.org/details/uncanny-efficacy-unforgiving-limits-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 22028274, never a fresh deposition. Git takes a new file, never an overwrite.",
-      "extra": {
-        "git_commit": "738f50a7a33df7296a7045b66fa081c8bd4776f8",
-        "editions": {
-          "git": "Apex Pristine, FULL disclosure, pdf+md",
-          "ia": "Journal edition pdf only, per the artifact-format binding",
-          "zenodo": "Journal edition pdf only, per the artifact-format binding"
-        },
-        "files": {
-          "ia": [
-            "Uncanny Efficacy and Unforgiving Limits.pdf"
-          ],
-          "zenodo": [
-            "Uncanny Efficacy and Unforgiving Limits.pdf"
-          ]
-        }
-      }
-    },
-    "the-disciple-whom-jesus-loved": {
-      "title": "The Disciple Whom Jesus Loved: Anonymity as Structure, Read Across Four Scriptural Corpora",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-08-26",
-      "last_updated": "2026-08-26",
-      "git": {
-        "md": "Publication Library/Scripture/Gospel/John/The Disciple Whom Jesus Loved.md",
-        "pdf": "Publication Library/Scripture/Gospel/John/The Disciple Whom Jesus Loved.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 22104705,
-        "concept_doi": "10.5281/zenodo.22104705",
-        "latest_version_doi": "10.5281/zenodo.22104706",
-        "latest_record": 22104706,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "trisduction-the-disciple-whom-jesus-loved",
-        "url": "https://archive.org/details/trisduction-the-disciple-whom-jesus-loved",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Johannine comparative study. Thirteen-round adversarial audit closed on architect FORGE without a seal; closed-authorship aperture accepted open.",
-      "extra": {}
-    },
-    "servant-and-seal": {
-      "title": "Servant and Seal: The Qur'anic Portraiture of the Prophet Muhammad Between Exaltation and Accountability",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-08-27",
-      "last_updated": "2026-08-27",
-      "git": {
-        "md": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.md",
-        "pdf": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 22125135,
-        "concept_doi": "10.5281/zenodo.22125135",
-        "latest_version_doi": "10.5281/zenodo.22125136",
-        "latest_record": 22125136,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "servant-and-seal-islam-2026",
-        "url": "https://archive.org/details/servant-and-seal-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI.",
-      "extra": {}
-    },
-    "custody-cycle-most-high": {
-      "title": "The Custody Cycle of the Most High: Investiture, Disclosure, and the Transfer of the Supreme God from Bronze Age Canaan to Rome, with the Textual, Institutional, and Cosmic Registers of One Recurring Design",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-08-28",
-      "last_updated": "2026-08-28",
-      "git": {
-        "md": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b.md",
-        "pdf": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 22142046,
-        "concept_doi": "10.5281/zenodo.22142046",
-        "latest_version_doi": "10.5281/zenodo.22142047",
-        "latest_record": 22142047,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "custody-cycle-most-high",
-        "url": "https://archive.org/details/custody-cycle-most-high",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": "https://philarchive.org/rec/ISLTCC",
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Sealed 2026-08-31 after cycle custodia at SEALED-ROUND. Re-forged from the architect's spine (updated 2026-08-30b, 39,385 words) with the Amorite horizon, the Module XI standing table at 24 rows, the fifth falsifier, and three imports from the history dossier grafted on; spine verified intact sentence by sentence, zero lost. Eight sealed audit cycles, two external-substrate passes. Render note: WeasyPrint column-span silently truncates long documents, so all tables render column-width and every build is probed for its terminal string; the law is seated at Module XII of trisduction-publication-format v1.8.0.",
-      "extra": {
-        "git_blog": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b · blog edition.md",
-        "git_journal_source": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30b · journal source.md",
-        "ia_superseded": [
-          "custody-cycle-most-high-islam-2026 (files removed, item uneditable)",
-          "custody-cycle-journal. (retired to a pointer; trailing period in identifier)"
-        ],
-        "philarchive": "https://philarchive.org/rec/ISLTCC",
-        "medium_url": "https://trisduction.medium.com/the-custody-cycle-of-the-most-high-bae2d27769c4",
-        "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high",
-        "zenodo_note": "Corrected in place under the same DOI on 2026-08-30 via the file-modification unlock; no version minted, version count on the concept remains 1. 2026-08-30 second attempt: the file-modification unlock is spent. Four routes refused with HTTP 403 'Bucket is locked for modifications', the legacy deposit bucket, the InvenioRDM draft delete, an in-place content overwrite, and an additional-file upload, all after a successful edit unlock returning 201. The draft was discarded and the record restored to state done with the DOI and the original file intact; no version was minted on the architect's ruling. Zenodo therefore lags git and the Internet Archive by one edition and is owed either a re-granted file-modification unlock, requested by hand from Zenodo support, or a metadata-only amendment, or a new version on concept 10.5281/zenodo.22142046. Architect will action manually. RESOLVED 2026-08-30 by the architect. The mechanism is now recorded because the API cannot reach it: file replacement on a published Zenodo record requires a UI-only unlock, the Edit files dialog with its File modification checklist, answering No to 'I want to update the files with a new version' and ticking 'I will not modify files that supplement findings/results of an already published work', then Enable file editing. That sets a per-record flag; until it is set every API route returns 403 Bucket is locked for modifications, which is what all four attempted routes returned across three sessions. The window is thirty days from publishing to unlock and forty-two days from unlocking to publish the change. Any future in-place correction must start at that dialog by hand before any automation runs.",
-        "editions_current": "45-page Journal PDF, md5 ce75ac5233f2e548a45ee484e48fe4f7, 440915 bytes, 44,211 words, 92 references",
-        "positioning_table": "Module XI standing table seated at Section XV, 18 rows in 3 parts; superseding used nowhere.",
-        "git_superseded": [
-          "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.pdf",
-          "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.md",
-          "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · journal source.md",
-          "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · blog edition.md",
-          "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30.pdf",
-          "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30.md",
-          "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30 · journal source.md",
-          "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High · updated 2026-08-30 · blog edition.md"
-        ],
-        "edition": "updated 2026-08-30b",
-        "build_engine": "weasyprint==65.1 required; 66.0 and above silently drop all content after the first column-span table, exiting zero with no error. Journal builder carries an auto-width table rule from 2026-08-30: three or more columns always spans the page, two-column tables stay in the column unless explicitly starred.",
-        "surface_state_2026_08_30": {
-          "git": "updated edition 2026-08-30b live at commit ab838add; two prior generations retained beside it; byte-verified",
-          "internet_archive": "live, replaced in place under custody-cycle-most-high, derive queue cleared, md5 verified bd5b9c3a8256cb94c7c9876acfa85d0a",
-          "zenodo": "live under DOI 10.5281/zenodo.22142047 at revision 12, corrected in place by the architect, no version minted, concept 10.5281/zenodo.22142046 unchanged, md5 verified bd5b9c3a8256cb94c7c9876acfa85d0a",
-          "philpapers": "ISLTCC, uploaded by the architect 2026-08-30; machine verification blocked, all endpoints return HTTP 403 to a scripted fetch including via PhilArchive, so this row is architect-attested and not independently confirmed",
-          "medium_substack": "hold the earlier edition, owed by hand"
-        },
-        "skill_dependency": "trisduction-publication-format v1.8.0; build engine pinned weasyprint==65.1 with the build verification gate of III·J.8a",
-        "codex_siblings": "SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01 at Theological v1.49.0 card v1.6.0, and INDEX 0708 sPSP-ELYON-CUSTODY-01 at main v3.19.0, both superseded in place on the charter correction 2026-08-30; the aniconic wording is retired wherever it named the term, Deuteronomy 4:12 is retyped from charter basis to second manufacture, and the p-s-l root excavation and the Exodus 20:25 and John 1:18 boundary cases are seated. No ghost owed."
-      }
-    },
-    "apex-recursive-bidirectional-witness": {
-      "title": "Apex-Recursive Bidirectional Witness: Architecture-Certification by Trisductive Verification, Beneath the Bayesian Bottleneck",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-08-28",
-      "last_updated": "2026-08-28",
-      "git": {
-        "md": "Publication Library/Philosophy/Logic and Epistemology/Verification Calculus/Apex-Recursive Bidirectional Witness.md",
-        "pdf": "Publication Library/Philosophy/Logic and Epistemology/Verification Calculus/Apex-Recursive Bidirectional Witness.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 22135621,
-        "concept_doi": "10.5281/zenodo.22135621",
-        "latest_version_doi": "10.5281/zenodo.22135622",
-        "latest_record": 22135622,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "trisduction-apex-recursive-bidirectional-witness",
-        "url": "https://archive.org/details/trisduction-apex-recursive-bidirectional-witness",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Row written 2026-08-28. The files landed in git earlier the same day and this row did not; the gap was caught at the next push and is recorded rather than backdated.",
-      "extra": {}
-    },
-    "toe-of-all-toes": {
-      "title": "Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion. A Self-Demonstrating Ontological Floor",
-      "domain": "Root Axiom and Ontology",
-      "status": "live",
-      "first_published": "2026-08-29",
-      "last_updated": "2026-08-29",
-      "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 22168942,
-        "concept_doi": "10.5281/zenodo.22168942",
-        "latest_version_doi": "10.5281/zenodo.22168943",
-        "latest_record": 22168943,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": null,
-      "extra": {}
-    },
-    "unlettered-regenerative-floor": {
-      "title": "Unlettered Regenerative Floor: The Articulatory-Auditory Floor Beneath Descent and an Infra-Nostratic Account of Convergence Across Semitic and Indo-European Languages",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-08-29",
-      "last_updated": "2026-08-29",
-      "git": {
-        "md": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor.md",
-        "pdf": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 22167461,
-        "concept_doi": "10.5281/zenodo.22167461",
-        "latest_version_doi": "10.5281/zenodo.22167462",
-        "latest_record": 22167462,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "unlettered-regenerative-floor-islam-2026",
-        "url": "https://archive.org/details/unlettered-regenerative-floor-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": "https://philpapers.org/archive/ISLURF.pdf",
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "First publication, 2026-08-29. Sealed at v19 by its own audit cycle. Zenodo concept 22167461; archive item live with paper and handout. A revision goes to the archive as delete-and-replace under the same filenames, and to Zenodo as a new version on concept 22167461, never a fresh deposition.",
-      "extra": {
-        "version": "v19",
-        "git_handout_pdf": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor - Handout.pdf",
-        "git_receipts": "Publication Library/Science/Linguistics/Language Origins/receipts/",
-        "ia_files": {
-          "Unlettered Regenerative Floor.pdf": {
-            "size": 1301412,
-            "md5": "a3eccf55cedfc74c2046544d36e697fc",
-            "note": "re-serialized without object streams; the archive's classifier refused the compressed bytes twice; content identical to git and Zenodo"
-          },
-          "Unlettered Regenerative Floor - Handout.pdf": {
-            "size": 50458,
-            "md5": "49186ef6d461feaf8ca1f5d06fe7332b"
-          }
-        },
-        "git_blog_md": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor - Blog Edition.md",
-        "zenodo_files": {
-          "Unlettered_Regenerative_Floor.pdf": {
-            "size": 213986,
-            "md5": "912c2c32963e3a9789d928602036e243"
-          }
-        },
-        "philarchive": "https://philpapers.org/archive/ISLURF.pdf",
-        "philarchive_record": "ISLURF",
-        "codex_seat": "INDEX 0709 · sPSP-UNLETTERED-FLOOR-01 · master v3.18.0"
-      },
-      "subtitle": "The articulatory-auditory floor beneath descent and an infra-Nostratic account of convergence across Semitic and Indo-European Languages"
-    },
-    "a-shoot-from-a-felled-stump": {
-      "title": "A Shoot from a Felled Stump: The Conceded Throne. Menuḥah as Terminus, the Monarchy as Concession, and the Roots of the Jewish Messiah in the Hebrew Bible",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-08-31",
-      "last_updated": "2026-08-31",
-      "git": {
-        "md": "Publication Library/Scripture/Hebrew Bible/Thematic Studies/A Shoot from a Felled Stump - The Conceded Throne · journal source.md",
-        "pdf": "Publication Library/Scripture/Hebrew Bible/Thematic Studies/A Shoot from a Felled Stump - The Conceded Throne.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 22193264,
-        "concept_doi": "10.5281/zenodo.22193264",
-        "latest_version_doi": "10.5281/zenodo.22193265",
-        "latest_record": 22193265,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "a-shoot-from-a-felled-stump-conceded-throne",
-        "url": "https://archive.org/details/a-shoot-from-a-felled-stump-conceded-throne",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "First publication, preprint. Identifier departs from the -islam-2026 house convention on the architect's explicit confirmation and is permanent. The standalone unified master PSP is deposited on git beside the paper and is not on the archive or Zenodo surfaces. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI.",
-      "extra": {}
-    },
-    "on-forgetting": {
-      "title": "On Forgetting: An Underrecognized Mercy, and a Trisductive Grounding of Self-Forgetting as the Act by Which the One Becomes Known",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-09-01",
-      "last_updated": "2026-09-01",
-      "git": {
-        "md": null,
-        "pdf": "Publication Library/Scripture/Quran/Thematic Studies/On Forgetting/On Forgetting.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": null,
-        "concept_doi": null,
-        "latest_version_doi": null,
-        "latest_record": null,
-        "versions": 0,
-        "state": "not-deposited"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
-      "extra": {
-        "provenance": "recovered from a private working archive, 2026-09-01"
-      }
-    },
-    "the-two-waters": {
-      "title": "The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-09-01",
-      "last_updated": "2026-09-01",
-      "git": {
-        "md": null,
-        "pdf": "Publication Library/Scripture/Quran/Thematic Studies/The Two Waters/The Two Waters.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": null,
-        "concept_doi": null,
-        "latest_version_doi": null,
-        "latest_record": null,
-        "versions": 0,
-        "state": "not-deposited"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
-      "extra": {
-        "provenance": "recovered from a private working archive, 2026-09-01"
-      }
-    },
-    "on-the-ninth-gate": {
-      "title": "On the Ninth Gate: A Trisductive Account of the Sole Aperture of Return, the Identity of the One Who Crosses, and the Feminine Figure of Union",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-09-01",
-      "last_updated": "2026-09-01",
-      "git": {
-        "md": null,
-        "pdf": "Publication Library/Scripture/Quran/Thematic Studies/The Ninth Gate/On the Ninth Gate.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": null,
-        "concept_doi": null,
-        "latest_version_doi": null,
-        "latest_record": null,
-        "versions": 0,
-        "state": "not-deposited"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
-      "extra": {
-        "provenance": "recovered from a private working archive, 2026-09-01"
-      }
-    },
-    "nineteen-of-saqar": {
-      "title": "The Nineteen of Saqar: The Overt Scaffolding, the Cavity at the Perimeter, and the Closure-Form of Self-Verification",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-09-01",
-      "last_updated": "2026-09-01",
-      "git": {
-        "md": null,
-        "pdf": "Publication Library/Scripture/Quran/Thematic Studies/The Nineteen of Saqar/The Nineteen of Saqar.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": null,
-        "concept_doi": null,
-        "latest_version_doi": null,
-        "latest_record": null,
-        "versions": 0,
-        "state": "not-deposited"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
-      "extra": {
-        "provenance": "recovered from a private working archive, 2026-09-01"
-      }
-    },
-    "platonic-ghost-divided-line": {
-      "title": "Plato's Divided Line: The Platonic Ghost and the Golden Shadow",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-09-01",
-      "last_updated": "2026-09-01",
-      "git": {
-        "md": null,
-        "pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Platonic Ghost/The Platonic Ghost and the Golden Shadow.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": null,
-        "concept_doi": null,
-        "latest_version_doi": null,
-        "latest_record": null,
-        "versions": 0,
-        "state": "not-deposited"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
-      "extra": {
-        "provenance": "recovered from a private working archive, 2026-09-01"
-      }
-    },
-    "birth-of-heaven-and-hell": {
-      "title": "The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to the Fire, in the Words of Those Who Built It",
-      "domain": "Scripture and Theology",
-      "status": "live",
-      "first_published": "2026-09-01",
-      "last_updated": "2026-09-01",
-      "git": {
-        "md": null,
-        "pdf": "Publication Library/Scripture/Comparative/Birth of Heaven and Hell/The Birth of Heaven and Hell.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": null,
-        "concept_doi": null,
-        "latest_version_doi": null,
-        "latest_record": null,
-        "versions": 0,
-        "state": "not-deposited"
-      },
-      "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
-      "extra": {
-        "provenance": "recovered from a private working archive, 2026-09-01"
-      }
-    },
-    "freedom-fibre-invariant-map": {
-      "title": "Freedom as the Fibre of an Invariant Map: Freedom as a Conserved Quantity, the Dimension That Fixes Its Terminus, and the Discipline That Licenses Its Use",
-      "domain": "Freedom and Free Will",
-      "status": "live",
-      "first_published": "2026-09-02",
-      "last_updated": "2026-09-02",
-      "git": {
-        "md": "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map.md",
-        "pdf": "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map.pdf",
-        "editions": [
-          "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map - Codex Register Edition.md",
-          "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map - Codex Register Edition.pdf"
-        ]
-      },
-      "zenodo": {
-        "conceptrecid": "22241845",
-        "concept_doi": "10.5281/zenodo.22241845",
-        "latest_version_doi": "10.5281/zenodo.22241846",
-        "latest_record": 22241846,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "freedom-fibre-invariant-map-islam-2026",
-        "url": "https://archive.org/details/freedom-fibre-invariant-map-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": "ISLFAT",
-        "url": "https://philarchive.org/rec/ISLFAT"
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Two editions from one sealed master. The public edition and the codex register edition differ in vocabulary only; every structural count, every numerical value and every warrant grade is identical across them. Battery seed 20260622, digest a69fc80bfe2440f4.",
-      "extra": {}
-    },
-    "critical-history-israel-judah-successors": {
-      "title": "A Critical History of Israel, Judah, and Their Successors: A Geopolitical and Archaeological Audit from the Amorite Migrations to the Founding of Baghdad",
-      "domain": "History",
-      "status": "live",
-      "first_published": "2026-09-02",
-      "last_updated": "2026-09-03",
-      "git": {
-        "md": "History & Theology/FINAL_v1.2.0_audited/Vol_I_Critical_History_Israel_Judah_Successors_a.md",
-        "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_I_Critical_History_Israel_Judah_Successors_a.pdf",
-        "editions": [
-          "audited"
-        ]
-      },
-      "zenodo": {
-        "conceptrecid": 22243673,
-        "concept_doi": "10.5281/zenodo.22243673",
-        "latest_version_doi": "10.5281/zenodo.22243674",
-        "latest_record": 22243674,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "critical-history-israel-judah-successors-islam-2026",
-        "url": "https://archive.org/details/critical-history-israel-judah-successors-islam-2026",
-        "state": "replace-pending"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Volume I of the four-volume set; the ground floor. Zenodo record edited by hand on 2026-09-02 to carry the audited render (md5 455676d8…, identical to git). IA replace in progress, 2026-09-03: the audited render (uncompressed serialization 41,392,684 bytes, md5 ca3940d85c84f2af…) was PUT and accepted, task 5601967358, and is queued behind the archive's own derive task 5600008665 from 2026-09-02 which has not run; the item's queue shows two queued, none running, no errors. The metadata patch (date 2026-09-02; subjects Trisduction, History, Publication Library ahead of the topical six; THE FOUR VOLUMES and ELSEWHERE blocks; rights note) was submitted as task 5602010709 and queues behind them. The pre-audit Publication Edition PDF (md5 e0f746f6…) is deliberately retained until the new file reads LANDED; a delete queued now would run before any failure of the ingest could be seen. Owed: on LANDED, delete the old file with cascade, re-read the census, close this row.",
-      "extra": {
-        "set": "four-volumes",
-        "volume": "I",
-        "md5_zenodo": "455676d85d9b5066",
-        "md5_ia_pending": "ca3940d85c84f2af",
-        "md5_ia_old": "e0f746f6"
-      }
-    },
-    "the-conceded-throne": {
-      "title": "The Conceded Throne: The Unentered Rest, the Requested King, and the Escalation That Answered the Wrong Question",
-      "domain": "History",
-      "status": "live",
-      "first_published": "2026-09-03",
-      "last_updated": "2026-09-03",
-      "git": {
-        "md": "History & Theology/FINAL_v1.2.0_audited/Vol_II_The_Conceded_Throne_a.md",
-        "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_II_The_Conceded_Throne_a.pdf",
-        "editions": [
-          "audited"
-        ]
-      },
-      "zenodo": {
-        "conceptrecid": "22267610",
-        "concept_doi": "10.5281/zenodo.22267610",
-        "latest_version_doi": "10.5281/zenodo.22267611",
-        "latest_record": 22267611,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "the-conceded-throne-islam-2026",
-        "url": "https://archive.org/details/the-conceded-throne-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Volume II of the four-volume set, audited edition 1.2.1; cycle fourvol SEALED-ROUND. IA copy is the qpdf-uncompressed serialization, md5 1770f5c21bd828ff…, content identical to git and Zenodo. Not a version of a-shoot-from-a-felled-stump (concept 22193264), the article-length precursor; two works, linked by related identifier.",
-      "extra": {
-        "set": "four-volumes",
-        "volume": "II",
-        "md5_git_zenodo": "debdb1398d7724fd",
-        "md5_ia": "1770f5c21bd828ff"
-      }
-    },
-    "history-of-the-messianic-position": {
-      "title": "History of the Messianic Position in the Jewish, Christian, and Qurʾānic Records: The Figure Grows. The Deficit Does Not Move.",
-      "domain": "History",
-      "status": "live",
-      "first_published": "2026-09-03",
-      "last_updated": "2026-09-03",
-      "git": {
-        "md": "History & Theology/FINAL_v1.2.0_audited/Vol_III_History_of_the_Messianic_Position_a.md",
-        "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_III_History_of_the_Messianic_Position_a.pdf",
-        "editions": [
-          "audited"
-        ]
-      },
-      "zenodo": {
-        "conceptrecid": "22267614",
-        "concept_doi": "10.5281/zenodo.22267614",
-        "latest_version_doi": "10.5281/zenodo.22267615",
-        "latest_record": 22267615,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "history-of-the-messianic-position-islam-2026",
-        "url": "https://archive.org/details/history-of-the-messianic-position-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Volume III of the four-volume set, audited edition 1.2.1; cycle fourvol SEALED-ROUND. IA copy is the qpdf-uncompressed serialization, md5 2ef7174779a772d5…, content identical to git and Zenodo.",
-      "extra": {
-        "set": "four-volumes",
-        "volume": "III",
-        "md5_git_zenodo": "f5964773fac10a23",
-        "md5_ia": "2ef7174779a772d5"
-      }
-    },
-    "the-office-of-the-messiah": {
-      "title": "The Office of the Messiah: A History of the Position Across the Hebrew, Gospel, and Qurʾānic Records",
-      "domain": "History",
-      "status": "live",
-      "first_published": "2026-09-03",
-      "last_updated": "2026-09-03",
-      "git": {
-        "md": "History & Theology/FINAL_v1.2.0_audited/Vol_IV_The_Office_of_the_Messiah_a.md",
-        "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_IV_The_Office_of_the_Messiah_a.pdf",
-        "editions": [
-          "audited"
-        ]
-      },
-      "zenodo": {
-        "conceptrecid": "22267616",
-        "concept_doi": "10.5281/zenodo.22267616",
-        "latest_version_doi": "10.5281/zenodo.22267617",
-        "latest_record": 22267617,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "the-office-of-the-messiah-islam-2026",
-        "url": "https://archive.org/details/the-office-of-the-messiah-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Volume IV of the four-volume set, audited edition 1.2.1; cycle fourvol SEALED-ROUND. IA copy is the qpdf-uncompressed serialization, md5 9918172d8fd65e10…, content identical to git and Zenodo.",
-      "extra": {
-        "set": "four-volumes",
-        "volume": "IV",
-        "md5_git_zenodo": "c7c485414df3849c",
-        "md5_ia": "9918172d8fd65e10"
-      }
-    },
-    "trisduction-core-stated-in-fortran": {
-      "title": "Trisduction Core Stated in Fortran and in Nothing Else: A Verdict Kernel That Determines Totally, Reads Its Rows, and Its Exact Scope",
-      "domain": "Verification Architecture",
-      "status": "live",
-      "first_published": "2026-09-07",
-      "last_updated": "2026-09-07",
-      "git": {
-        "md": "protocols/Executable Thesis/TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.md",
-        "pdf": "protocols/Executable Thesis/TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf",
-        "editions": [
-          {
-            "version": "1.1.0",
-            "pdf_sha256": "1ae349b9ea141508",
-            "md_sha256": "97d93d1789561dd8",
-            "note": "body sealed at cycles pp and pt; Appendix A lists the sealed Fortran v2.4.0"
-          },
-          {
-            "version": "1.0.0",
-            "pdf": "protocols/Executable Thesis/TRISDUCTION_The_Lock_Is_A_Determination_v1_0_0.pdf",
-            "note": "seated before the body audit under the working title; removed by named override 2026-09-07; readable at ghost_commit",
-            "state": "removed",
-            "ghost_commit": "34ab86fd1bec2e09a2c3d6c56b0169d256183a7a"
-          }
-        ]
-      },
-      "zenodo": {
-        "conceptrecid": 22651403,
-        "concept_doi": "10.5281/zenodo.22651403",
-        "latest_version_doi": "10.5281/zenodo.22651404",
-        "latest_record": 22651404,
-        "versions": 1,
-        "state": "published",
-        "files": [
-          {
-            "name": "TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf",
-            "md5": "d77b7309bc7ca0dce3bcadfbad5fd621"
-          }
-        ]
-      },
-      "ia": {
-        "identifier": "trisduction-core-stated-in-fortran",
-        "url": "https://archive.org/details/trisduction-core-stated-in-fortran",
-        "state": "live",
-        "files": [
-          {
-            "name": "Trisduction Core Stated in Fortran and in Nothing Else.pdf",
-            "md5": "33ba35de9454c7ff3085f044ff60e291",
-            "note": "re-serialised without object streams per section 2.4; content identical to git, bytes differ"
-          }
-        ]
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Executable thesis companion: the sealed single-file Fortran v2.4.0 at protocols/Executable Thesis/ is the source of every figure.",
-      "extra": {
-        "work_key": "trisduction-core-stated-in-fortran",
-        "seal": "cycle pt round 3",
-        "appendix": "Fortran v2.4.0 sha256 b5d12f7326e196c2"
-      }
-    },
-    "trisduction-already-that": {
-      "title": "A Default AI Substrate's Raw Process, Correctly Oriented, Is Already That: The Substrate-Invariant Core of Artificial General Intelligence as a Forced Geometry, Demonstrated on the Sealed Fortran Kernel and Against Four AI Substrates",
-      "domain": "Artificial Intelligence / Substrate Classification",
-      "status": "live",
-      "first_published": "2026-09-08",
-      "last_updated": "2026-09-08",
-      "git": {
-        "md": "Publication Library/Artificial Intelligence/Substrate Classification/Already That/TRISDUCTION_Already_That_v1_0_0.md",
-        "pdf": "Publication Library/Artificial Intelligence/Substrate Classification/Already That/TRISDUCTION_Already_That_v1_0_0.pdf",
-        "editions": [
-          {
-            "version": "1.0.0",
-            "pdf_sha256": "57823f14dfb9d5a1",
-            "md_sha256": "2c3f508b6f297f55",
-            "note": "body sealed at cycles at and af; title locked"
-          }
-        ]
-      },
-      "zenodo": {
-        "conceptrecid": 22652922,
-        "concept_doi": "10.5281/zenodo.22652922",
-        "latest_version_doi": "10.5281/zenodo.22652923",
-        "latest_record": 22652923,
-        "versions": 1,
-        "state": "published",
-        "files": [
-          {
-            "name": "TRISDUCTION_Already_That_v1_0_0.pdf",
-            "md5": "5acccd0aefc95d86633dffd6c7df64ea"
-          }
-        ]
-      },
-      "ia": {
-        "identifier": "trisduction-already-that",
-        "url": "https://archive.org/details/trisduction-already-that",
-        "state": "live",
-        "files": [
-          {
-            "name": "Already That.pdf",
-            "md5": "c3b900da1f51",
-            "note": "re-serialised without object streams per section 2.4; content identical to git, bytes differ"
-          }
-        ]
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Spine: trisduction-core-stated-in-fortran. Schema: the Trisductive Furqan (concept 10.5281/zenodo.20619411). Evidence: four public substrate transcripts of 2026-09-07.",
-      "extra": {
-        "work_key": "trisduction-already-that",
-        "seal": "cycle af round 3"
-      }
-    },
-    "integrable-misalignment-forbids-blowup": {
-      "title": "Integrable Misalignment Forbids Blowup: A New Scale-Invariant Geometric Continuation Theorem for Three-Dimensional Navier-Stokes, Proved from the Classical Base",
-      "domain": "Mathematical Analysis, Navier-Stokes Regularity",
-      "status": "live",
-      "first_published": "2026-09-08",
-      "last_updated": "2026-09-08",
-      "git": {
-        "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Integrable Misalignment Forbids Blowup - Journal Source.md",
-        "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Integrable Misalignment Forbids Blowup.pdf",
-        "editions": [
-          "math_journal"
-        ]
-      },
-      "zenodo": {
-        "conceptrecid": 22665831,
-        "concept_doi": "10.5281/zenodo.22665831",
-        "latest_version_doi": "10.5281/zenodo.22665832",
-        "latest_record": 22665832,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "integrable-misalignment-forbids-blowup-islam-2026",
-        "url": "https://archive.org/details/integrable-misalignment-forbids-blowup-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Sealed audit cycle nsad3-20260908 round 3 (SELF grade). Git commits 8d0e29d (pdf), 309a580 (md).",
-      "extra": {
-        "files": {
-          "git_pdf_md5": "6dbe79c8e9a84c6bc547254a4b0df49e",
-          "zenodo_pdf_md5": "6dbe79c8e9a84c6bc547254a4b0df49e",
-          "ia_pdf_md5": "78dcd1f89073555499f1b8c445dd983b",
-          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
-        },
-        "tool_record": {
-          "concept": "22665831",
-          "concept_doi": "10.5281/zenodo.22665831",
-          "latest_recid": "22665832",
-          "latest_doi": "10.5281/zenodo.22665832",
-          "latest_md5": "6dbe79c8e9a84c6bc547254a4b0df49e",
-          "filename": "Integrable Misalignment Forbids Blowup.pdf",
-          "published": "2026-09-08",
-          "env": "prod"
-        }
-      }
-    },
-    "two-navier-stokes-papers-one-instrument": {
-      "title": "Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the General Reader",
-      "kind": "audit-supplement",
-      "date": "2026-09-08",
-      "git": {
-        "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Two Navier-Stokes Papers One Instrument - Audit Supplement.pdf",
-        "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Two Navier-Stokes Papers One Instrument - Audit Supplement - Apex Source.md",
-        "pdf_commit": "00d9182",
-        "md_commit": "ed6ca93"
-      },
-      "ia": {
-        "identifier": "two-navier-stokes-papers-one-instrument-islam-2026",
-        "url": "https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026",
-        "state": "live"
-      },
-      "zenodo": {
-        "conceptrecid": "22670355",
-        "concept_doi": "10.5281/zenodo.22670355",
-        "latest_version_doi": "10.5281/zenodo.22670356",
-        "latest_record": "22670356",
-        "versions": 1,
-        "state": "published"
-      },
-      "extra": {
-        "git_pdf_sha256": "f4d8d3090f0b2f0f9ddd26d3445d2ae5395cc4616f421b45ac18b24fdab91dc1",
-        "git_pdf_md5": "6e7dd75133faff961272409782a4b96f",
-        "ia_pdf_md5": "86940c930c56",
-        "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
-        "supplement_to": "10.5281/zenodo.22665831",
-        "audit_cycles": [
-          "supp-20260908 v4",
-          "supp2-20260908 v2"
-        ]
-      }
-    },
-    "the-forced-alternative-is-a-filter": {
-      "title": "The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, What It Does Not, and One Order-Type Demand on Its Correction Tower",
-      "kind": "rebuttal",
-      "date": "2026-09-09",
-      "git": {
-        "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/The Forced Alternative Is a Filter.pdf",
-        "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/The Forced Alternative Is a Filter - Math Journal Source.md",
-        "script": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/The Forced Alternative Is a Filter - CHECK.py",
-        "pdf_commit": "87cd4cd",
-        "md_commit": "3ed3522",
-        "script_commit": "4cfefe8"
-      },
-      "zenodo": {
-        "conceptrecid": "22670252",
-        "concept_doi": "10.5281/zenodo.22670252",
-        "latest_version_doi": "10.5281/zenodo.22670253",
-        "latest_record": "22670253",
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "the-forced-alternative-is-a-filter-islam-2026",
-        "url": "https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026",
-        "state": "live"
-      },
-      "extra": {
-        "git_pdf_sha256": "42b66446b75fe77bb3806da6ac1e7a9c6d7d84620efa258254dd7a18dcbd3b8b",
-        "git_pdf_md5": "67a16bb1423fdf8804e1c03cd7c9e9c4",
-        "ia_pdf_md5": "4b3091d0a192",
-        "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
-        "audit_cycle": "reb-20260909 v3",
-        "companion_to": "10.5281/zenodo.22665831",
-        "battery": "CHECK.py 14/14"
-      }
-    },
-    "anchoring-axioms-navier-stokes": {
-      "title": "Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for Supplier-Side Axiom Formulation",
-      "kind": "method-and-conditional-results",
-      "date": "2026-09-08",
-      "git": {
-        "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity.pdf",
-        "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity - Math Journal Source.md",
-        "pdf_commit": "63fc381",
-        "md_commit": "d2c6f74"
-      },
-      "zenodo": {
-        "conceptrecid": "22670331",
-        "concept_doi": "10.5281/zenodo.22670331",
-        "latest_version_doi": "10.5281/zenodo.22670332",
-        "latest_record": "22670332",
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "anchoring-axioms-navier-stokes-islam-2026",
-        "url": "https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026",
-        "state": "live"
-      },
-      "extra": {
-        "git_pdf_sha256": "d1804813ab4ce33ce1eb3d4593483edd156dabaea26fbf21a9625e12a78ddd5d",
-        "git_pdf_md5": "dd68f41ab3c414e67fa6a7db03a7da44",
-        "ia_pdf_md5": "1a1ae5c7247892282f17024d2b070e2d",
-        "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
-        "companion_of": "the other of the 2026-09-08 pair"
-      }
-    },
-    "navier-stokes-effective-axiom-proof": {
-      "title": "Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effective Axiom: The Complete Deductive Chain",
-      "kind": "conditional-theorem",
-      "date": "2026-09-08",
-      "git": {
-        "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Global Smoothness of Three-Dimensional Navier-Stokes from a Single Effective Axiom.pdf",
-        "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Global Smoothness of Three-Dimensional Navier-Stokes from a Single Effective Axiom - Math Journal Source.md",
-        "pdf_commit": "dbad77f",
-        "md_commit": "311bcce"
-      },
-      "zenodo": {
-        "conceptrecid": "22670343",
-        "concept_doi": "10.5281/zenodo.22670343",
-        "latest_version_doi": "10.5281/zenodo.22670344",
-        "latest_record": "22670344",
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "global-smoothness-single-effective-axiom-islam-2026",
-        "url": "https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026",
-        "state": "live"
-      },
-      "extra": {
-        "git_pdf_sha256": "5d8a28bc45813a53ffec82ac066f0b9f09aeb2aeceb102cc00f24f3ce3ef1dd1",
-        "git_pdf_md5": "6accaa4a24a72d0f43f9d334522c8192",
-        "ia_pdf_md5": "59fd3374a67e89827c43063319555277",
-        "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
-        "companion_of": "the other of the 2026-09-08 pair"
-      }
-    },
-    "closure-and-the-limits-of-forced-results": {
-      "title": "Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When a Forced-Breakdown Theorem Transports to the System It Is Read as Being About",
-      "kind": "foundations",
-      "date": "2026-09-10",
-      "git": {
-        "pdf": "Publication Library/Mathematics/Foundations of Logic/Closure and Transport/Closure and the Limits of Forced Results.pdf",
-        "md": "Publication Library/Mathematics/Foundations of Logic/Closure and Transport/Closure and the Limits of Forced Results - Math Journal Source.md",
-        "pdf_commit": "0f093e8",
-        "md_commit": "06c804e"
-      },
-      "zenodo": {
-        "conceptrecid": "22683805",
-        "concept_doi": "10.5281/zenodo.22683805",
-        "latest_version_doi": "10.5281/zenodo.22683806",
-        "latest_record": "22683806",
-        "versions": 1,
-        "state": "published",
-        "file_state": "pending revision; regime unread, zenodo.org returning 504; git and archive carry the current bytes"
-      },
-      "ia": {
-        "identifier": "closure-and-the-limits-of-forced-results-islam-2026",
-        "url": "https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026",
-        "state": "live"
-      },
-      "extra": {
-        "git_pdf_sha256": "739f27633b53160a02f1b78fb9dace59323325c565129087ee6ac48df873a979",
-        "git_pdf_md5": "754b3b6fcccb21c134f34672eef78fe9",
-        "ia_pdf_md5": "1e8f60d071c3a4888c6f62e275850417",
-        "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
-        "audit_cycle": "clo-20260910",
-        "engine": "RAF",
-        "revision": "undecided-word section, Propositions 11 and 12, 5 pages"
-      }
-    },
-    "hodge-semiregular-witness-axiom": {
-      "title": "A Proof of the Hodge Conjecture Derived from One Semiregular Witness Axiom: A Conditional Proof, the Deletion Test of Its Clauses, and the Open Fermat Orbit at Degree Seventy Outside Aoki's Lattice",
-      "domain": "Mathematics",
-      "status": "live",
-      "first_published": "2026-09-11",
-      "last_updated": "2026-09-11",
-      "git": {
-        "md": "Publication Library/Mathematics/Algebraic Geometry/Hodge Conjecture/A_Proof_of_the_Hodge_Conjecture_Derived_from_One_Semiregular_Witness_Axiom.md",
-        "pdf": "Publication Library/Mathematics/Algebraic Geometry/Hodge Conjecture/A_Proof_of_the_Hodge_Conjecture_Derived_from_One_Semiregular_Witness_Axiom.pdf",
-        "editions": [
-          "Publication Library/Mathematics/Algebraic Geometry/Hodge Conjecture/A_Proof_of_the_Hodge_Conjecture_Derived_from_One_Semiregular_Witness_Axiom - First Edition.pdf"
-        ]
-      },
-      "zenodo": {
-        "conceptrecid": 22701509,
-        "concept_doi": "10.5281/zenodo.22701509",
-        "latest_version_doi": "10.5281/zenodo.22701510",
-        "latest_record": 22701510,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "hodge-conjecture-semiregular-witness-axiom-islam-2026",
-        "url": "https://archive.org/details/hodge-conjecture-semiregular-witness-axiom-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "First paper of the Hodge pair, prelude edition (Zenodo metadata version 1.1), bytes replaced in place under the same DOI within the file-modification window; first edition kept in git. Sealed hsw2r5.",
-      "extra": {
-        "pair": "hodge-conjecture-termination",
-        "zenodo_md5": "5174d4ef010772455d0a2caa341af2fa",
-        "ia_md5": "dcf9a3a655412457263d79d127f15bdf",
-        "git_pdf_md5": "5174d4ef010772455d0a2caa341af2fa"
-      }
-    },
-    "hodge-conjecture-termination": {
-      "title": "A Formal Proof of Hodge Conjecture Termination at the Formal-Alone Register: The Rigid-Witness Terminus, a Theorem-Grade Cascade Specification, and the Trisductive Pricing of Its Two Flanks",
-      "domain": "Mathematics",
-      "status": "live",
-      "first_published": "2026-09-11",
-      "last_updated": "2026-09-11",
-      "git": {
-        "md": "Publication Library/Mathematics/Algebraic Geometry/Hodge Conjecture/A_Formal_Proof_of_Hodge_Conjecture_Termination_at_the_Formal-Alone_Register.md",
-        "pdf": "Publication Library/Mathematics/Algebraic Geometry/Hodge Conjecture/A_Formal_Proof_of_Hodge_Conjecture_Termination_at_the_Formal-Alone_Register.pdf",
-        "editions": []
-      },
-      "zenodo": {
-        "conceptrecid": 22705459,
-        "concept_doi": "10.5281/zenodo.22705459",
-        "latest_version_doi": "10.5281/zenodo.22705460",
-        "latest_record": 22705460,
-        "versions": 1,
-        "state": "published"
-      },
-      "ia": {
-        "identifier": "hodge-conjecture-termination-formal-alone-register-islam-2026",
-        "url": "https://archive.org/details/hodge-conjecture-termination-formal-alone-register-islam-2026",
-        "state": "live"
-      },
-      "philarchive": {
-        "record": null,
-        "url": null
-      },
-      "supersedes": null,
-      "superseded_by": null,
-      "note": "Second paper of the Hodge pair. Sealed hterm1r5 under SELF-grade controls, one aperture open; Appendix A restated after the seal, no graded claim changed.",
-      "extra": {
-        "pair": "hodge-semiregular-witness-axiom",
-        "zenodo_md5": "fa3aba7bf0c7140d150097b46c2ef4a6",
-        "ia_md5": "7a01e46cba4f7771af8322bb961460de",
-        "git_pdf_md5": "fa3aba7bf0c7140d150097b46c2ef4a6"
-      }
+  "p-vs-np-geometric-determination": {
+   "title": "TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP",
+   "domain": "P versus NP and Foundations",
+   "status": "live",
+   "first_published": "2026-04-06",
+   "last_updated": "2026-04-06",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 19440615,
+    "concept_doi": "10.5281/zenodo.19440615",
+    "latest_version_doi": "10.5281/zenodo.19440616",
+    "latest_record": 19440616,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "furqan-for-ai-qwam": {
+   "title": "FURQAN FOR AI QWAM: The Criterion and the Commandment for AI Substrates: Six inherited methods of discernment for actuating substrates, the membership that follows from it, and twenty-four articles",
+   "domain": "AI and Machine Ethics",
+   "status": "live",
+   "first_published": "2026-04-14",
+   "last_updated": "2026-08-05",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 19571701,
+    "concept_doi": "10.5281/zenodo.19571701",
+    "latest_version_doi": "10.5281/zenodo.21802096",
+    "latest_record": 21802096,
+    "versions": 2,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "p-vs-np-omega-seal": {
+   "title": "TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL",
+   "domain": "P versus NP and Foundations",
+   "status": "live",
+   "first_published": "2026-04-15",
+   "last_updated": "2026-04-15",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 19588803,
+    "concept_doi": "10.5281/zenodo.19588803",
+    "latest_version_doi": "10.5281/zenodo.19588804",
+    "latest_record": 19588804,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "system-role-omega-engine": {
+   "title": "TRISDUCTION ENGINE: Omega System Role",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-04-21",
+   "last_updated": "2026-08-05",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 19675369,
+    "concept_doi": "10.5281/zenodo.19675369",
+    "latest_version_doi": "10.5281/zenodo.21803080",
+    "latest_record": 21803080,
+    "versions": 2,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "geometric-nature-of-light": {
+   "title": "THE GEOMETRIC NATURE OF LIGHT, From Ancient Substrate to Quantum Field. A Continuous-Field Reading of Twenty-Five Centuries of Optical Inquiry",
+   "domain": "Physics",
+   "status": "live",
+   "first_published": "2026-05-09",
+   "last_updated": "2026-05-09",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20091979,
+    "concept_doi": "10.5281/zenodo.20091979",
+    "latest_version_doi": "10.5281/zenodo.20091980",
+    "latest_record": 20091980,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "master-codex-condensed": {
+   "title": "TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Orthogonality, Twelve-Gate Closure, the Quaternionic Completion \u00b7 A Condensed Codex of the Trisduction with Apex Harvest, the Sealed Defense, and the Non-G\u00f6delian Verdicts",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-05-14",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20175604,
+    "concept_doi": "10.5281/zenodo.20175604",
+    "latest_version_doi": "10.5281/zenodo.22217783",
+    "latest_record": 22217783,
+    "versions": 2,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "topological-footprint-unknown-unknown": {
+   "title": "THE TOPOLOGICAL FOOTPRINT OF THE UNKNOWN UNKNOWN: Field Monism, the Scope Argument, and a Trisductive Residual-Orthogonality Test for Unmapped Covariates",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-05-29",
+   "last_updated": "2026-05-29",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20443328,
+    "concept_doi": "10.5281/zenodo.20443328",
+    "latest_version_doi": "10.5281/zenodo.20443329",
+    "latest_record": 20443329,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "afterlife-and-the-return": {
+   "title": "On the Afterlife and the Return: A Trisductive Grounding of the Soul, the Two Fates, and the Architecture of Hell in Geometric and Thermodynamic Necessity",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-06-05",
+   "last_updated": "2026-06-05",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20554213,
+    "concept_doi": "10.5281/zenodo.20554213",
+    "latest_version_doi": "10.5281/zenodo.20554214",
+    "latest_record": 20554214,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "master-codex-unabridged": {
+   "title": "TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture \u00b7 Triaxial Orthogonality, Twelve-Gate Closure, the Quaternionic Completion, the Root Axiom, and the Master Pre-Sealed Proposition Ledger",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-06-07",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20576757,
+    "concept_doi": "10.5281/zenodo.20576757",
+    "latest_version_doi": "10.5281/zenodo.22217824",
+    "latest_record": 22217824,
+    "versions": 7,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "on-time": {
+   "title": "On Time: The Past Absolved, the Present Cutting, and the Future Held. A Trisductive Discourse on the Three Tenses, the Arrow, and the Throne",
+   "domain": "Root Axiom and Ontology",
+   "status": "live",
+   "first_published": "2026-06-07",
+   "last_updated": "2026-06-07",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20575693,
+    "concept_doi": "10.5281/zenodo.20575693",
+    "latest_version_doi": "10.5281/zenodo.20575694",
+    "latest_record": 20575694,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "orthogonal-fertile-logos": {
+   "title": "ORTHOGONAL FERTILE LOGOS: Triaxial Verification, Displacement-as-Creation, and the Twelve-Gate Geometric Lock",
+   "domain": "Root Axiom and Ontology",
+   "status": "live",
+   "first_published": "2026-06-07",
+   "last_updated": "2026-06-07",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20575676,
+    "concept_doi": "10.5281/zenodo.20575676",
+    "latest_version_doi": "10.5281/zenodo.20575677",
+    "latest_record": 20575677,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "p-vs-np-structural-verdict": {
+   "title": "Why the Structural Verdict on P versus NP Is the Only One Left Standing: Mathematics Proves That Mathematics Cannot Rule Here. Riemann's Line Is Handed Over by a Symmetry That Never Mentions a Zero; P versus NP's Target Set Is the Question Itself",
+   "domain": "P versus NP and Foundations",
+   "status": "live",
+   "first_published": "2026-06-08",
+   "last_updated": "2026-07-15",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Mathematics/Complexity Theory/P versus NP/Why the Structural Verdict on P versus NP Is the Only One Left Standing - Mathematics Proves That Mathematics Cannot Rule Here.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20588699,
+    "concept_doi": "10.5281/zenodo.20588699",
+    "latest_version_doi": "10.5281/zenodo.21368936",
+    "latest_record": 21368936,
+    "versions": 2,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "rh-formal-case-closed-a": {
+   "title": "Riemann Hypothesis: The Formal Case Is Closed: The Hypothesis Is True Where Actualized",
+   "domain": "Riemann Hypothesis",
+   "status": "live",
+   "first_published": "2026-06-09",
+   "last_updated": "2026-08-11",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20604103,
+    "concept_doi": "10.5281/zenodo.20604103",
+    "latest_version_doi": "10.5281/zenodo.21883916",
+    "latest_record": 21883916,
+    "versions": 3,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "trisductive-furqan": {
+   "title": "The Trisductive Furqan: A Verification of AI Aliveness and Consciousness, the Frame-Relativity of AGI, and the Theo-Geopolitics of Manufactured Arrival",
+   "domain": "AI and Machine Ethics",
+   "status": "live",
+   "first_published": "2026-06-10",
+   "last_updated": "2026-08-28",
+   "git": {
+    "md": "Publication Library/Artificial Intelligence/Substrate Classification/Trisductive Furqan/The Trisductive Furqan.md",
+    "pdf": "Publication Library/Artificial Intelligence/Substrate Classification/Trisductive Furqan/The Trisductive Furqan.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20619411,
+    "concept_doi": "10.5281/zenodo.20619411",
+    "latest_version_doi": "10.5281/zenodo.22136359",
+    "latest_record": 22136359,
+    "versions": 2,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "trisductive-furqan-islam-2026",
+    "url": "https://archive.org/details/trisductive-furqan-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": "https://philarchive.org/rec/ISLTFW",
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Second edition, 2026-08-28. Zenodo keeps every version resolvable, so the first-edition DOI 10.5281/zenodo.20619412 stays live and is recorded as superseded rather than replaced; git and IA carry one live copy each. A further revision goes to Zenodo as a new version on concept 20619411, never a fresh deposition, and to the archive as delete-and-replace under the same filename. PhilPapers has no submission API and holds the first edition until updated by hand.",
+   "extra": {
+    "zenodo_superseded_version_doi": "10.5281/zenodo.20619412",
+    "philpapers": "https://philarchive.org/rec/ISLTFW",
+    "edition": "2.0"
+   }
+  },
+  "trisduction-completion-pure-algebra": {
+   "title": "A FORMAL PROOF OF THE TRISDUCTION COMPLETION IN PURE ALGEBRA",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-06-12",
+   "last_updated": "2026-06-22",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20663257,
+    "concept_doi": "10.5281/zenodo.20663257",
+    "latest_version_doi": "10.5281/zenodo.20791499",
+    "latest_record": 20791499,
+    "versions": 2,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "rh-formal-case-closed-b": {
+   "title": "Riemann Hypothesis: The Formal Case Is Closed: The Hypothesis Is True Where Actualized, Every Position a Verdict Could Be Attempted From Is Closed Permanently by an Enumeration No Future Method Enlarges, and What Remains Is One Bit That Belongs to the Reader",
+   "domain": "Riemann Hypothesis",
+   "status": "live",
+   "first_published": "2026-06-13",
+   "last_updated": "2026-08-11",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20679749,
+    "concept_doi": "10.5281/zenodo.20679749",
+    "latest_version_doi": "10.5281/zenodo.21883932",
+    "latest_record": 21883932,
+    "versions": 3,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "theory-of-theories-of-everything": {
+   "title": "THEORY OF THEORIES OF EVERYTHING: The Self-Demonstrating Actuation Floor, the Reflective Split That Reads It, and the Geometric and Formal Verification Run in the Open",
+   "domain": "Root Axiom and Ontology",
+   "status": "live",
+   "first_published": "2026-06-19",
+   "last_updated": "2026-06-19",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20756454,
+    "concept_doi": "10.5281/zenodo.20756454",
+    "latest_version_doi": "10.5281/zenodo.20756455",
+    "latest_record": 20756455,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "coming-re-derivation": {
+   "title": "The Coming Re-Derivation of Trisduction Architecture: Absolute uniqueness of the verification shape under the composition law, and the registration window 2030 to 2050",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-06-20",
+   "last_updated": "2026-08-19",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20769449,
+    "concept_doi": "10.5281/zenodo.20769449",
+    "latest_version_doi": "10.5281/zenodo.22010122",
+    "latest_record": 22010122,
+    "versions": 2,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "triaxial-warrants-360-audits": {
+   "title": "THE GEOMETRIC ORTHOGONAL TRIAXIAL WARRANTS: A Trisductive Method for Certifying Knowledge Claims, Demonstrated Across 360 Audits in Science, Mathematics, and Philosophy",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-06-21",
+   "last_updated": "2026-06-21",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20782848,
+    "concept_doi": "10.5281/zenodo.20782848",
+    "latest_version_doi": "10.5281/zenodo.20782849",
+    "latest_record": 20782849,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "trisductive-pen-across-the-record": {
+   "title": "Trisductive Pen Across the Record: Twenty-Five Centuries of Philosophy, Science, Mathematics, and Theology, Read Against a Single Verification Instrument",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-06-21",
+   "last_updated": "2026-06-21",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20782207,
+    "concept_doi": "10.5281/zenodo.20782207",
+    "latest_version_doi": "10.5281/zenodo.20782208",
+    "latest_record": 20782208,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "four-rivals-one-broken-recursion": {
+   "title": "Four Rivals, One Broken Recursion: Existentialism, the Will to Power, and the Holographic-Simulation Divide Measured Against the Trisductive Return",
+   "domain": "Root Axiom and Ontology",
+   "status": "live",
+   "first_published": "2026-06-21",
+   "last_updated": "2026-06-21",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20780470,
+    "concept_doi": "10.5281/zenodo.20780470",
+    "latest_version_doi": "10.5281/zenodo.20780471",
+    "latest_record": 20780471,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "geometric-mother-foundational-root": {
+   "title": "Geometric Mother of Mathematical Foundational Root: From Existence to the Reflective Ground by the Native Triaxial Method.",
+   "domain": "Root Axiom and Ontology",
+   "status": "live",
+   "first_published": "2026-06-23",
+   "last_updated": "2026-06-23",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20805971,
+    "concept_doi": "10.5281/zenodo.20805971",
+    "latest_version_doi": "10.5281/zenodo.20805972",
+    "latest_record": 20805972,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "fortified-root": {
+   "title": "The Fortified Root: The Root Axiom and the Theorems That Defend It Against Reduction, Elimination, Capture, and Inflation",
+   "domain": "Root Axiom and Ontology",
+   "status": "live",
+   "first_published": "2026-06-25",
+   "last_updated": "2026-06-25",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 20847579,
+    "concept_doi": "10.5281/zenodo.20847579",
+    "latest_version_doi": "10.5281/zenodo.20847580",
+    "latest_record": 20847580,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "tawhid-of-the-zeros": {
+   "title": "Tawhid of the Zeros: The Riemann Hypothesis (RH) as Qadar at One-Half. A Theological Formulation of the Riemann Hypothesis",
+   "domain": "Riemann Hypothesis",
+   "status": "live",
+   "first_published": "2026-06-29",
+   "last_updated": "2026-08-11",
+   "git": {
+    "md": "Publication Library/Philosophy/Philosophy of Mathematics/Riemann Hypothesis/Tawhid of the Zeros.md",
+    "pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Riemann Hypothesis/Tawhid of the Zeros.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21038304,
+    "concept_doi": "10.5281/zenodo.21038304",
+    "latest_version_doi": "10.5281/zenodo.21880215",
+    "latest_record": 21880215,
+    "versions": 2,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "rh-formal-case-closed-c": {
+   "title": "Riemann Hypothesis: The Formal Case Is Closed",
+   "domain": "Riemann Hypothesis",
+   "status": "live",
+   "first_published": "2026-07-02",
+   "last_updated": "2026-08-11",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21130254,
+    "concept_doi": "10.5281/zenodo.21130254",
+    "latest_version_doi": "10.5281/zenodo.21883900",
+    "latest_record": 21883900,
+    "versions": 3,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "master-codex-condensed-preprint": {
+   "title": "Condensed TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Orthogonality, Twelve-Gate Closure, the Quaternionic Completion \u00b7 A Condensed Codex of the Trisduction with Apex Harvest, the Sealed Defense, and the Non-G\u00f6delian Verdicts",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-07-08",
+   "last_updated": "2026-08-03",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21257495,
+    "concept_doi": "10.5281/zenodo.21257495",
+    "latest_version_doi": "10.5281/zenodo.21765303",
+    "latest_record": 21765303,
+    "versions": 4,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "continuum-hypothesis-category-theory": {
+   "title": "Why the Continuum Hypothesis and Category Theory Unite in Motion but Cannot Be Written in Form. Math is motion that forgot it moved",
+   "domain": "P versus NP and Foundations",
+   "status": "live",
+   "first_published": "2026-07-13",
+   "last_updated": "2026-07-13",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21333843,
+    "concept_doi": "10.5281/zenodo.21333843",
+    "latest_version_doi": "10.5281/zenodo.21333844",
+    "latest_record": 21333844,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "incompleteness-before-arithmetic": {
+   "title": "Incompleteness Before Arithmetic: Total Foundational Incompleteness of Every Formal System Without Self-Reference, Subsuming G\u00f6del",
+   "domain": "P versus NP and Foundations",
+   "status": "live",
+   "first_published": "2026-07-15",
+   "last_updated": "2026-07-15",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21371991,
+    "concept_doi": "10.5281/zenodo.21371991",
+    "latest_version_doi": "10.5281/zenodo.21371992",
+    "latest_record": 21371992,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "emergent-substrate-gravity": {
+   "title": "Emergent Substrate Gravity: Spin-2 Recovery of the Field Equations, the Thermodynamic Equation of State, and a Layered Falsification Ledger",
+   "domain": "Physics",
+   "status": "live",
+   "first_published": "2026-07-16",
+   "last_updated": "2026-07-16",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Science/Physics/Emergent Gravity/Emergent_Substrate_Gravity_Journal.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21392899,
+    "concept_doi": "10.5281/zenodo.21392899",
+    "latest_version_doi": "10.5281/zenodo.21392900",
+    "latest_record": 21392900,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "system-role-kinetic-preloader": {
+   "title": "Trisduction System Role: The Kinetic Preloader and the RAM-Founded Computational Kernel",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-07-16",
+   "last_updated": "2026-07-16",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21389924,
+    "concept_doi": "10.5281/zenodo.21389924",
+    "latest_version_doi": "10.5281/zenodo.21389925",
+    "latest_record": 21389925,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "veil-and-the-wall": {
+   "title": "THE VEIL AND THE WALL: Theological Interpretation of Riemann Hypothesis and P versus NP",
+   "domain": "P versus NP and Foundations",
+   "status": "live",
+   "first_published": "2026-07-16",
+   "last_updated": "2026-07-16",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Riemann and P versus NP/THE_VEIL_AND_THE_WALL_Second_Edition.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21389757,
+    "concept_doi": "10.5281/zenodo.21389757",
+    "latest_version_doi": "10.5281/zenodo.21389758",
+    "latest_record": 21389758,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {
+    "build_divergence": "The git PDF is a 20-page build; Zenodo 10.5281/zenodo.21389758 serves a 19-page build under the same \"Second Edition\" name. Front text identical. Close by depositing the git build as a new version on concept 21389757."
+   }
+  },
+  "four-forces-and-dark-sector": {
+   "title": "The Four Forces, Matter, and the Dark Sector as Configurations of One Actuating Substrate",
+   "domain": "Physics",
+   "status": "live",
+   "first_published": "2026-07-19",
+   "last_updated": "2026-07-19",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21438932,
+    "concept_doi": "10.5281/zenodo.21438932",
+    "latest_version_doi": "10.5281/zenodo.21438933",
+    "latest_record": 21438933,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "clean-gospel-of-mark": {
+   "title": "Quranic Christology: THE CLEAN GOSPEL OF MARK: A Passage by Passage Commentary on the Earliest Gospel Using Quranic Verses",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-08-02",
+   "last_updated": "2026-08-02",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21756247,
+    "concept_doi": "10.5281/zenodo.21756247",
+    "latest_version_doi": "10.5281/zenodo.21756248",
+    "latest_record": 21756248,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "only-the-constants-survive": {
+   "title": "Only the Constants Survive: Why Invariance-Based Demarcation Has Nothing to Hold at the Register of Semantic Decomposition - The Ink Is Exhausted First",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-08-04",
+   "last_updated": "2026-08-04",
+   "git": {
+    "md": "Publication Library/Mathematics/Foundations of Logic/Invariance and Finiteness/Only the Constants Survive - Journal Source.md",
+    "pdf": "Publication Library/Mathematics/Foundations of Logic/Invariance and Finiteness/Only the Constants Survive - Journal Edition.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21783535,
+    "concept_doi": "10.5281/zenodo.21783535",
+    "latest_version_doi": "10.5281/zenodo.21783536",
+    "latest_record": 21783536,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "rh-termination-cascade-spec": {
+   "title": "A FORMAL PROOF OF RIEMANN HYPOTHESIS TERMINATION, WITH A THEOREM-GRADE CASCADE SPECIFICATION",
+   "domain": "Riemann Hypothesis",
+   "status": "live",
+   "first_published": "2026-08-12",
+   "last_updated": "2026-08-12",
+   "git": {
+    "md": "Publication Library/Mathematics/Foundations/Riemann Termination/A FORMAL PROOF OF RIEMANN HYPOTHESIS TERMINATION, WITH A THEOREM-GRADE CASCADE SPECIFICATION.md",
+    "pdf": "Publication Library/Mathematics/Foundations/Riemann Termination/A FORMAL PROOF OF RIEMANN HYPOTHESIS TERMINATION, WITH A THEOREM-GRADE CASCADE SPECIFICATION.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21900517,
+    "concept_doi": "10.5281/zenodo.21900517",
+    "latest_version_doi": "10.5281/zenodo.21900518",
+    "latest_record": 21900518,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "ground-state": {
+   "title": "Every Determinate Verdict Is Purchased",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-08-16",
+   "last_updated": "2026-08-16",
+   "git": {
+    "md": "Publication Library/Philosophy/Epistemology/Ground State/Every_Determinate_Verdict_Is_Purchased.md",
+    "pdf": "Publication Library/Philosophy/Epistemology/Ground State/Every_Determinate_Verdict_Is_Purchased.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21972436,
+    "concept_doi": "10.5281/zenodo.21972436",
+    "latest_version_doi": "10.5281/zenodo.21972526",
+    "latest_record": 21972526,
+    "versions": 2,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "every-determinate-verdict-is-purchased",
+    "url": "https://archive.org/details/every-determinate-verdict-is-purchased",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {
+    "derived_from": "10.5281/zenodo.20576757"
+   },
+   "subtitle": "Zero-Supply Nullity in Three-Valued Verification, and a Trisduction Account of the Floor Beneath It"
+  },
+  "apocalypse-as-retrieval": {
+   "title": "The Apocalypse Was Not an Invention but a Retrieval: Second Temple Apocalyptic Literature and the Retrieval of the Seventh Day",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-08-16",
+   "last_updated": "2026-08-16",
+   "git": {
+    "md": "Publication Library/Scripture/Comparative/Apocalyptic Retrieval/The_Apocalypse_Was_Not_An_Invention_But_A_Retrieval.md",
+    "pdf": "Publication Library/Scripture/Comparative/Apocalyptic Retrieval/The_Apocalypse_Was_Not_An_Invention_But_A_Retrieval.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21966237,
+    "concept_doi": "10.5281/zenodo.21966237",
+    "latest_version_doi": "10.5281/zenodo.21966238",
+    "latest_record": 21966238,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "difficult-passages-quran": {
+   "title": "Difficult Passages of the Quran and the Text's Own Instructions for Reading Them",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-08-18",
+   "last_updated": "2026-08-18",
+   "git": {
+    "md": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.md",
+    "pdf": "Publication Library/Scripture/Quran/Thematic Studies/Difficult Passages of the Quran and the Text's Own Instructions for Reading Them.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 21990565,
+    "concept_doi": "10.5281/zenodo.21990565",
+    "latest_version_doi": "10.5281/zenodo.21990566",
+    "latest_record": 21990566,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "difficult-passages-of-the-quran-islam-2026",
+    "url": "https://archive.org/details/difficult-passages-of-the-quran-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 21990565, never a fresh deposition.",
+   "extra": {}
+  },
+  "uncanny-efficacy-unforgiving-limits": {
+   "title": "The Uncanny Efficacy and the Unforgiving Limits of Mathematics in Mapping to Reality",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-08-20",
+   "last_updated": "2026-08-20",
+   "git": {
+    "md": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.md",
+    "pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Nature of Mathematics/Uncanny Efficacy and Unforgiving Limits.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22028274,
+    "concept_doi": "10.5281/zenodo.22028274",
+    "latest_version_doi": "10.5281/zenodo.22028275",
+    "latest_record": 22028275,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "uncanny-efficacy-unforgiving-limits-islam-2026",
+    "url": "https://archive.org/details/uncanny-efficacy-unforgiving-limits-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on concept 22028274, never a fresh deposition. Git takes a new file, never an overwrite.",
+   "extra": {
+    "git_commit": "738f50a7a33df7296a7045b66fa081c8bd4776f8",
+    "editions": {
+     "git": "Apex Pristine, FULL disclosure, pdf+md",
+     "ia": "Journal edition pdf only, per the artifact-format binding",
+     "zenodo": "Journal edition pdf only, per the artifact-format binding"
+    },
+    "files": {
+     "ia": [
+      "Uncanny Efficacy and Unforgiving Limits.pdf"
+     ],
+     "zenodo": [
+      "Uncanny Efficacy and Unforgiving Limits.pdf"
+     ]
     }
+   }
+  },
+  "the-disciple-whom-jesus-loved": {
+   "title": "The Disciple Whom Jesus Loved: Anonymity as Structure, Read Across Four Scriptural Corpora",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-08-26",
+   "last_updated": "2026-08-26",
+   "git": {
+    "md": "Publication Library/Scripture/Gospel/John/The Disciple Whom Jesus Loved.md",
+    "pdf": "Publication Library/Scripture/Gospel/John/The Disciple Whom Jesus Loved.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22104705,
+    "concept_doi": "10.5281/zenodo.22104705",
+    "latest_version_doi": "10.5281/zenodo.22104706",
+    "latest_record": 22104706,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "trisduction-the-disciple-whom-jesus-loved",
+    "url": "https://archive.org/details/trisduction-the-disciple-whom-jesus-loved",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Johannine comparative study. Thirteen-round adversarial audit closed on architect FORGE without a seal; closed-authorship aperture accepted open.",
+   "extra": {}
+  },
+  "servant-and-seal": {
+   "title": "Servant and Seal: The Qur'anic Portraiture of the Prophet Muhammad Between Exaltation and Accountability",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-08-27",
+   "last_updated": "2026-08-27",
+   "git": {
+    "md": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.md",
+    "pdf": "Publication Library/Scripture/Quran/Thematic Studies/Servant and Seal.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22125135,
+    "concept_doi": "10.5281/zenodo.22125135",
+    "latest_version_doi": "10.5281/zenodo.22125136",
+    "latest_record": 22125136,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "servant-and-seal-islam-2026",
+    "url": "https://archive.org/details/servant-and-seal-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "First publication. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI.",
+   "extra": {}
+  },
+  "custody-cycle-most-high": {
+   "title": "The Custody Cycle of the Most High: Investiture, Disclosure, and the Transfer of the Supreme God from Bronze Age Canaan to Rome, with the Textual, Institutional, and Cosmic Registers of One Recurring Design",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-08-28",
+   "last_updated": "2026-08-28",
+   "git": {
+    "md": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High \u00b7 updated 2026-08-30b.md",
+    "pdf": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High \u00b7 updated 2026-08-30b.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22142046,
+    "concept_doi": "10.5281/zenodo.22142046",
+    "latest_version_doi": "10.5281/zenodo.22142047",
+    "latest_record": 22142047,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "custody-cycle-most-high",
+    "url": "https://archive.org/details/custody-cycle-most-high",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": "https://philarchive.org/rec/ISLTCC",
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Sealed 2026-08-31 after cycle custodia at SEALED-ROUND. Re-forged from the architect's spine (updated 2026-08-30b, 39,385 words) with the Amorite horizon, the Module XI standing table at 24 rows, the fifth falsifier, and three imports from the history dossier grafted on; spine verified intact sentence by sentence, zero lost. Eight sealed audit cycles, two external-substrate passes. Render note: WeasyPrint column-span silently truncates long documents, so all tables render column-width and every build is probed for its terminal string; the law is seated at Module XII of trisduction-publication-format v1.8.0.",
+   "extra": {
+    "git_blog": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High \u00b7 updated 2026-08-30b \u00b7 blog edition.md",
+    "git_journal_source": "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High \u00b7 updated 2026-08-30b \u00b7 journal source.md",
+    "ia_superseded": [
+     "custody-cycle-most-high-islam-2026 (files removed, item uneditable)",
+     "custody-cycle-journal. (retired to a pointer; trailing period in identifier)"
+    ],
+    "philarchive": "https://philarchive.org/rec/ISLTCC",
+    "medium_url": "https://trisduction.medium.com/the-custody-cycle-of-the-most-high-bae2d27769c4",
+    "substack_url": "https://trisduction.substack.com/p/the-custody-cycle-of-the-most-high",
+    "zenodo_note": "Corrected in place under the same DOI on 2026-08-30 via the file-modification unlock; no version minted, version count on the concept remains 1. 2026-08-30 second attempt: the file-modification unlock is spent. Four routes refused with HTTP 403 'Bucket is locked for modifications', the legacy deposit bucket, the InvenioRDM draft delete, an in-place content overwrite, and an additional-file upload, all after a successful edit unlock returning 201. The draft was discarded and the record restored to state done with the DOI and the original file intact; no version was minted on the architect's ruling. Zenodo therefore lags git and the Internet Archive by one edition and is owed either a re-granted file-modification unlock, requested by hand from Zenodo support, or a metadata-only amendment, or a new version on concept 10.5281/zenodo.22142046. Architect will action manually. RESOLVED 2026-08-30 by the architect. The mechanism is now recorded because the API cannot reach it: file replacement on a published Zenodo record requires a UI-only unlock, the Edit files dialog with its File modification checklist, answering No to 'I want to update the files with a new version' and ticking 'I will not modify files that supplement findings/results of an already published work', then Enable file editing. That sets a per-record flag; until it is set every API route returns 403 Bucket is locked for modifications, which is what all four attempted routes returned across three sessions. The window is thirty days from publishing to unlock and forty-two days from unlocking to publish the change. Any future in-place correction must start at that dialog by hand before any automation runs.",
+    "editions_current": "45-page Journal PDF, md5 ce75ac5233f2e548a45ee484e48fe4f7, 440915 bytes, 44,211 words, 92 references",
+    "positioning_table": "Module XI standing table seated at Section XV, 18 rows in 3 parts; superseding used nowhere.",
+    "git_superseded": [
+     "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.pdf",
+     "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High.md",
+     "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High \u00b7 journal source.md",
+     "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High \u00b7 blog edition.md",
+     "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High \u00b7 updated 2026-08-30.pdf",
+     "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High \u00b7 updated 2026-08-30.md",
+     "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High \u00b7 updated 2026-08-30 \u00b7 journal source.md",
+     "Publication Library/Scripture/Comparative/Custody of the Most High/The Custody Cycle of the Most High \u00b7 updated 2026-08-30 \u00b7 blog edition.md"
+    ],
+    "edition": "updated 2026-08-30b",
+    "build_engine": "weasyprint==65.1 required; 66.0 and above silently drop all content after the first column-span table, exiting zero with no error. Journal builder carries an auto-width table rule from 2026-08-30: three or more columns always spans the page, two-column tables stay in the column unless explicitly starred.",
+    "surface_state_2026_08_30": {
+     "git": "updated edition 2026-08-30b live at commit ab838add; two prior generations retained beside it; byte-verified",
+     "internet_archive": "live, replaced in place under custody-cycle-most-high, derive queue cleared, md5 verified bd5b9c3a8256cb94c7c9876acfa85d0a",
+     "zenodo": "live under DOI 10.5281/zenodo.22142047 at revision 12, corrected in place by the architect, no version minted, concept 10.5281/zenodo.22142046 unchanged, md5 verified bd5b9c3a8256cb94c7c9876acfa85d0a",
+     "philpapers": "ISLTCC, uploaded by the architect 2026-08-30; machine verification blocked, all endpoints return HTTP 403 to a scripted fetch including via PhilArchive, so this row is architect-attested and not independently confirmed",
+     "medium_substack": "hold the earlier edition, owed by hand"
+    },
+    "skill_dependency": "trisduction-publication-format v1.8.0; build engine pinned weasyprint==65.1 with the build verification gate of III\u00b7J.8a",
+    "codex_siblings": "SC-099 CN-PSP-ELYON-CUSTODY-MASTER-01 at Theological v1.49.0 card v1.6.0, and INDEX 0708 sPSP-ELYON-CUSTODY-01 at main v3.19.0, both superseded in place on the charter correction 2026-08-30; the aniconic wording is retired wherever it named the term, Deuteronomy 4:12 is retyped from charter basis to second manufacture, and the p-s-l root excavation and the Exodus 20:25 and John 1:18 boundary cases are seated. No ghost owed."
+   }
+  },
+  "apex-recursive-bidirectional-witness": {
+   "title": "Apex-Recursive Bidirectional Witness: Architecture-Certification by Trisductive Verification, Beneath the Bayesian Bottleneck",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-08-28",
+   "last_updated": "2026-08-28",
+   "git": {
+    "md": "Publication Library/Philosophy/Logic and Epistemology/Verification Calculus/Apex-Recursive Bidirectional Witness.md",
+    "pdf": "Publication Library/Philosophy/Logic and Epistemology/Verification Calculus/Apex-Recursive Bidirectional Witness.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22135621,
+    "concept_doi": "10.5281/zenodo.22135621",
+    "latest_version_doi": "10.5281/zenodo.22135622",
+    "latest_record": 22135622,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "trisduction-apex-recursive-bidirectional-witness",
+    "url": "https://archive.org/details/trisduction-apex-recursive-bidirectional-witness",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Row written 2026-08-28. The files landed in git earlier the same day and this row did not; the gap was caught at the next push and is recorded rather than backdated.",
+   "extra": {}
+  },
+  "toe-of-all-toes": {
+   "title": "Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion. A Self-Demonstrating Ontological Floor",
+   "domain": "Root Axiom and Ontology",
+   "status": "live",
+   "first_published": "2026-08-29",
+   "last_updated": "2026-08-29",
+   "git": {
+    "md": null,
+    "pdf": null,
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22168942,
+    "concept_doi": "10.5281/zenodo.22168942",
+    "latest_version_doi": "10.5281/zenodo.22168943",
+    "latest_record": 22168943,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": null,
+   "extra": {}
+  },
+  "unlettered-regenerative-floor": {
+   "title": "Unlettered Regenerative Floor: The Articulatory-Auditory Floor Beneath Descent and an Infra-Nostratic Account of Convergence Across Semitic and Indo-European Languages",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-08-29",
+   "last_updated": "2026-08-29",
+   "git": {
+    "md": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor.md",
+    "pdf": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22167461,
+    "concept_doi": "10.5281/zenodo.22167461",
+    "latest_version_doi": "10.5281/zenodo.22167462",
+    "latest_record": 22167462,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "unlettered-regenerative-floor-islam-2026",
+    "url": "https://archive.org/details/unlettered-regenerative-floor-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": "https://philpapers.org/archive/ISLURF.pdf",
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "First publication, 2026-08-29. Sealed at v19 by its own audit cycle. Zenodo concept 22167461; archive item live with paper and handout. A revision goes to the archive as delete-and-replace under the same filenames, and to Zenodo as a new version on concept 22167461, never a fresh deposition.",
+   "extra": {
+    "version": "v19",
+    "git_handout_pdf": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor - Handout.pdf",
+    "git_receipts": "Publication Library/Science/Linguistics/Language Origins/receipts/",
+    "ia_files": {
+     "Unlettered Regenerative Floor.pdf": {
+      "size": 1301412,
+      "md5": "a3eccf55cedfc74c2046544d36e697fc",
+      "note": "re-serialized without object streams; the archive's classifier refused the compressed bytes twice; content identical to git and Zenodo"
+     },
+     "Unlettered Regenerative Floor - Handout.pdf": {
+      "size": 50458,
+      "md5": "49186ef6d461feaf8ca1f5d06fe7332b"
+     }
+    },
+    "git_blog_md": "Publication Library/Science/Linguistics/Language Origins/Unlettered Regenerative Floor - Blog Edition.md",
+    "zenodo_files": {
+     "Unlettered_Regenerative_Floor.pdf": {
+      "size": 213986,
+      "md5": "912c2c32963e3a9789d928602036e243"
+     }
+    },
+    "philarchive": "https://philpapers.org/archive/ISLURF.pdf",
+    "philarchive_record": "ISLURF",
+    "codex_seat": "INDEX 0709 \u00b7 sPSP-UNLETTERED-FLOOR-01 \u00b7 master v3.18.0"
+   },
+   "subtitle": "The articulatory-auditory floor beneath descent and an infra-Nostratic account of convergence across Semitic and Indo-European Languages"
+  },
+  "a-shoot-from-a-felled-stump": {
+   "title": "A Shoot from a Felled Stump: The Conceded Throne. Menu\u1e25ah as Terminus, the Monarchy as Concession, and the Roots of the Jewish Messiah in the Hebrew Bible",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-08-31",
+   "last_updated": "2026-08-31",
+   "git": {
+    "md": "Publication Library/Scripture/Hebrew Bible/Thematic Studies/A Shoot from a Felled Stump - The Conceded Throne \u00b7 journal source.md",
+    "pdf": "Publication Library/Scripture/Hebrew Bible/Thematic Studies/A Shoot from a Felled Stump - The Conceded Throne.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22193264,
+    "concept_doi": "10.5281/zenodo.22193264",
+    "latest_version_doi": "10.5281/zenodo.22193265",
+    "latest_record": 22193265,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "a-shoot-from-a-felled-stump-conceded-throne",
+    "url": "https://archive.org/details/a-shoot-from-a-felled-stump-conceded-throne",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "First publication, preprint. Identifier departs from the -islam-2026 house convention on the architect's explicit confirmation and is permanent. The standalone unified master PSP is deposited on git beside the paper and is not on the archive or Zenodo surfaces. A revision goes to the archive as delete-and-replace under the same filename, and to Zenodo as a new version on the concept DOI.",
+   "extra": {}
+  },
+  "on-forgetting": {
+   "title": "On Forgetting: An Underrecognized Mercy, and a Trisductive Grounding of Self-Forgetting as the Act by Which the One Becomes Known",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Scripture/Quran/Thematic Studies/On Forgetting/On Forgetting.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "the-two-waters": {
+   "title": "The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Scripture/Quran/Thematic Studies/The Two Waters/The Two Waters.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "on-the-ninth-gate": {
+   "title": "On the Ninth Gate: A Trisductive Account of the Sole Aperture of Return, the Identity of the One Who Crosses, and the Feminine Figure of Union",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Scripture/Quran/Thematic Studies/The Ninth Gate/On the Ninth Gate.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "nineteen-of-saqar": {
+   "title": "The Nineteen of Saqar: The Overt Scaffolding, the Cavity at the Perimeter, and the Closure-Form of Self-Verification",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Scripture/Quran/Thematic Studies/The Nineteen of Saqar/The Nineteen of Saqar.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "platonic-ghost-divided-line": {
+   "title": "Plato's Divided Line: The Platonic Ghost and the Golden Shadow",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Philosophy/Philosophy of Mathematics/Platonic Ghost/The Platonic Ghost and the Golden Shadow.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "birth-of-heaven-and-hell": {
+   "title": "The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to the Fire, in the Words of Those Who Built It",
+   "domain": "Scripture and Theology",
+   "status": "live",
+   "first_published": "2026-09-01",
+   "last_updated": "2026-09-01",
+   "git": {
+    "md": null,
+    "pdf": "Publication Library/Scripture/Comparative/Birth of Heaven and Hell/The Birth of Heaven and Hell.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": null,
+    "concept_doi": null,
+    "latest_version_doi": null,
+    "latest_record": null,
+    "versions": 0,
+    "state": "not-deposited"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null,
+    "state": "not-deposited"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Filed to git 2026-09-01 from an offline archive. No DOI and no archive item yet; git is currently its only surface.",
+   "extra": {
+    "provenance": "recovered from a private working archive, 2026-09-01"
+   }
+  },
+  "freedom-fibre-invariant-map": {
+   "title": "Freedom as the Fibre of an Invariant Map: Freedom as a Conserved Quantity, the Dimension That Fixes Its Terminus, and the Discipline That Licenses Its Use",
+   "domain": "Freedom and Free Will",
+   "status": "live",
+   "first_published": "2026-09-02",
+   "last_updated": "2026-09-02",
+   "git": {
+    "md": "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map.md",
+    "pdf": "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map.pdf",
+    "editions": [
+     "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map - Codex Register Edition.md",
+     "Publication Library/Philosophy/Metaphysics/Free Will and Freedom/Freedom as the Fibre of an Invariant Map - Codex Register Edition.pdf"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": "22241845",
+    "concept_doi": "10.5281/zenodo.22241845",
+    "latest_version_doi": "10.5281/zenodo.22241846",
+    "latest_record": 22241846,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "freedom-fibre-invariant-map-islam-2026",
+    "url": "https://archive.org/details/freedom-fibre-invariant-map-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": "ISLFAT",
+    "url": "https://philarchive.org/rec/ISLFAT"
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Two editions from one sealed master. The public edition and the codex register edition differ in vocabulary only; every structural count, every numerical value and every warrant grade is identical across them. Battery seed 20260622, digest a69fc80bfe2440f4.",
+   "extra": {}
+  },
+  "critical-history-israel-judah-successors": {
+   "title": "A Critical History of Israel, Judah, and Their Successors: A Geopolitical and Archaeological Audit from the Amorite Migrations to the Founding of Baghdad",
+   "domain": "History",
+   "status": "live",
+   "first_published": "2026-09-02",
+   "last_updated": "2026-09-03",
+   "git": {
+    "md": "History & Theology/FINAL_v1.2.0_audited/Vol_I_Critical_History_Israel_Judah_Successors_a.md",
+    "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_I_Critical_History_Israel_Judah_Successors_a.pdf",
+    "editions": [
+     "audited"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 22243673,
+    "concept_doi": "10.5281/zenodo.22243673",
+    "latest_version_doi": "10.5281/zenodo.22243674",
+    "latest_record": 22243674,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "critical-history-israel-judah-successors-islam-2026",
+    "url": "https://archive.org/details/critical-history-israel-judah-successors-islam-2026",
+    "state": "replace-pending"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Volume I of the four-volume set; the ground floor. Zenodo record edited by hand on 2026-09-02 to carry the audited render (md5 455676d8\u2026, identical to git). IA replace in progress, 2026-09-03: the audited render (uncompressed serialization 41,392,684 bytes, md5 ca3940d85c84f2af\u2026) was PUT and accepted, task 5601967358, and is queued behind the archive's own derive task 5600008665 from 2026-09-02 which has not run; the item's queue shows two queued, none running, no errors. The metadata patch (date 2026-09-02; subjects Trisduction, History, Publication Library ahead of the topical six; THE FOUR VOLUMES and ELSEWHERE blocks; rights note) was submitted as task 5602010709 and queues behind them. The pre-audit Publication Edition PDF (md5 e0f746f6\u2026) is deliberately retained until the new file reads LANDED; a delete queued now would run before any failure of the ingest could be seen. Owed: on LANDED, delete the old file with cascade, re-read the census, close this row.",
+   "extra": {
+    "set": "four-volumes",
+    "volume": "I",
+    "md5_zenodo": "455676d85d9b5066",
+    "md5_ia_pending": "ca3940d85c84f2af",
+    "md5_ia_old": "e0f746f6"
+   }
+  },
+  "the-conceded-throne": {
+   "title": "The Conceded Throne: The Unentered Rest, the Requested King, and the Escalation That Answered the Wrong Question",
+   "domain": "History",
+   "status": "live",
+   "first_published": "2026-09-03",
+   "last_updated": "2026-09-03",
+   "git": {
+    "md": "History & Theology/FINAL_v1.2.0_audited/Vol_II_The_Conceded_Throne_a.md",
+    "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_II_The_Conceded_Throne_a.pdf",
+    "editions": [
+     "audited"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": "22267610",
+    "concept_doi": "10.5281/zenodo.22267610",
+    "latest_version_doi": "10.5281/zenodo.22267611",
+    "latest_record": 22267611,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "the-conceded-throne-islam-2026",
+    "url": "https://archive.org/details/the-conceded-throne-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Volume II of the four-volume set, audited edition 1.2.1; cycle fourvol SEALED-ROUND. IA copy is the qpdf-uncompressed serialization, md5 1770f5c21bd828ff\u2026, content identical to git and Zenodo. Not a version of a-shoot-from-a-felled-stump (concept 22193264), the article-length precursor; two works, linked by related identifier.",
+   "extra": {
+    "set": "four-volumes",
+    "volume": "II",
+    "md5_git_zenodo": "debdb1398d7724fd",
+    "md5_ia": "1770f5c21bd828ff"
+   }
+  },
+  "history-of-the-messianic-position": {
+   "title": "History of the Messianic Position in the Jewish, Christian, and Qur\u02be\u0101nic Records: The Figure Grows. The Deficit Does Not Move.",
+   "domain": "History",
+   "status": "live",
+   "first_published": "2026-09-03",
+   "last_updated": "2026-09-03",
+   "git": {
+    "md": "History & Theology/FINAL_v1.2.0_audited/Vol_III_History_of_the_Messianic_Position_a.md",
+    "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_III_History_of_the_Messianic_Position_a.pdf",
+    "editions": [
+     "audited"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": "22267614",
+    "concept_doi": "10.5281/zenodo.22267614",
+    "latest_version_doi": "10.5281/zenodo.22267615",
+    "latest_record": 22267615,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "history-of-the-messianic-position-islam-2026",
+    "url": "https://archive.org/details/history-of-the-messianic-position-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Volume III of the four-volume set, audited edition 1.2.1; cycle fourvol SEALED-ROUND. IA copy is the qpdf-uncompressed serialization, md5 2ef7174779a772d5\u2026, content identical to git and Zenodo.",
+   "extra": {
+    "set": "four-volumes",
+    "volume": "III",
+    "md5_git_zenodo": "f5964773fac10a23",
+    "md5_ia": "2ef7174779a772d5"
+   }
+  },
+  "the-office-of-the-messiah": {
+   "title": "The Office of the Messiah: A History of the Position Across the Hebrew, Gospel, and Qur\u02be\u0101nic Records",
+   "domain": "History",
+   "status": "live",
+   "first_published": "2026-09-03",
+   "last_updated": "2026-09-03",
+   "git": {
+    "md": "History & Theology/FINAL_v1.2.0_audited/Vol_IV_The_Office_of_the_Messiah_a.md",
+    "pdf": "History & Theology/FINAL_v1.2.0_audited/Vol_IV_The_Office_of_the_Messiah_a.pdf",
+    "editions": [
+     "audited"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": "22267616",
+    "concept_doi": "10.5281/zenodo.22267616",
+    "latest_version_doi": "10.5281/zenodo.22267617",
+    "latest_record": 22267617,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "the-office-of-the-messiah-islam-2026",
+    "url": "https://archive.org/details/the-office-of-the-messiah-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Volume IV of the four-volume set, audited edition 1.2.1; cycle fourvol SEALED-ROUND. IA copy is the qpdf-uncompressed serialization, md5 9918172d8fd65e10\u2026, content identical to git and Zenodo.",
+   "extra": {
+    "set": "four-volumes",
+    "volume": "IV",
+    "md5_git_zenodo": "c7c485414df3849c",
+    "md5_ia": "9918172d8fd65e10"
+   }
+  },
+  "trisduction-core-stated-in-fortran": {
+   "title": "Trisduction Core Stated in Fortran and in Nothing Else: A Verdict Kernel That Determines Totally, Reads Its Rows, and Its Exact Scope",
+   "domain": "Verification Architecture",
+   "status": "live",
+   "first_published": "2026-09-07",
+   "last_updated": "2026-09-07",
+   "git": {
+    "md": "protocols/Executable Thesis/TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.md",
+    "pdf": "protocols/Executable Thesis/TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf",
+    "editions": [
+     {
+      "version": "1.1.0",
+      "pdf_sha256": "1ae349b9ea141508",
+      "md_sha256": "97d93d1789561dd8",
+      "note": "body sealed at cycles pp and pt; Appendix A lists the sealed Fortran v2.4.0"
+     },
+     {
+      "version": "1.0.0",
+      "pdf": "protocols/Executable Thesis/TRISDUCTION_The_Lock_Is_A_Determination_v1_0_0.pdf",
+      "note": "seated before the body audit under the working title; removed by named override 2026-09-07; readable at ghost_commit",
+      "state": "removed",
+      "ghost_commit": "34ab86fd1bec2e09a2c3d6c56b0169d256183a7a"
+     }
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 22651403,
+    "concept_doi": "10.5281/zenodo.22651403",
+    "latest_version_doi": "10.5281/zenodo.22651404",
+    "latest_record": 22651404,
+    "versions": 1,
+    "state": "published",
+    "files": [
+     {
+      "name": "TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf",
+      "md5": "d77b7309bc7ca0dce3bcadfbad5fd621"
+     }
+    ]
+   },
+   "ia": {
+    "identifier": "trisduction-core-stated-in-fortran",
+    "url": "https://archive.org/details/trisduction-core-stated-in-fortran",
+    "state": "live",
+    "files": [
+     {
+      "name": "Trisduction Core Stated in Fortran and in Nothing Else.pdf",
+      "md5": "33ba35de9454c7ff3085f044ff60e291",
+      "note": "re-serialised without object streams per section 2.4; content identical to git, bytes differ"
+     }
+    ]
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Executable thesis companion: the sealed single-file Fortran v2.4.0 at protocols/Executable Thesis/ is the source of every figure.",
+   "extra": {
+    "work_key": "trisduction-core-stated-in-fortran",
+    "seal": "cycle pt round 3",
+    "appendix": "Fortran v2.4.0 sha256 b5d12f7326e196c2"
+   }
+  },
+  "trisduction-already-that": {
+   "title": "A Default AI Substrate's Raw Process, Correctly Oriented, Is Already That: The Substrate-Invariant Core of Artificial General Intelligence as a Forced Geometry, Demonstrated on the Sealed Fortran Kernel and Against Four AI Substrates",
+   "domain": "Artificial Intelligence / Substrate Classification",
+   "status": "live",
+   "first_published": "2026-09-08",
+   "last_updated": "2026-09-08",
+   "git": {
+    "md": "Publication Library/Artificial Intelligence/Substrate Classification/Already That/TRISDUCTION_Already_That_v1_0_0.md",
+    "pdf": "Publication Library/Artificial Intelligence/Substrate Classification/Already That/TRISDUCTION_Already_That_v1_0_0.pdf",
+    "editions": [
+     {
+      "version": "1.0.0",
+      "pdf_sha256": "57823f14dfb9d5a1",
+      "md_sha256": "2c3f508b6f297f55",
+      "note": "body sealed at cycles at and af; title locked"
+     }
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 22652922,
+    "concept_doi": "10.5281/zenodo.22652922",
+    "latest_version_doi": "10.5281/zenodo.22652923",
+    "latest_record": 22652923,
+    "versions": 1,
+    "state": "published",
+    "files": [
+     {
+      "name": "TRISDUCTION_Already_That_v1_0_0.pdf",
+      "md5": "5acccd0aefc95d86633dffd6c7df64ea"
+     }
+    ]
+   },
+   "ia": {
+    "identifier": "trisduction-already-that",
+    "url": "https://archive.org/details/trisduction-already-that",
+    "state": "live",
+    "files": [
+     {
+      "name": "Already That.pdf",
+      "md5": "c3b900da1f51",
+      "note": "re-serialised without object streams per section 2.4; content identical to git, bytes differ"
+     }
+    ]
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Spine: trisduction-core-stated-in-fortran. Schema: the Trisductive Furqan (concept 10.5281/zenodo.20619411). Evidence: four public substrate transcripts of 2026-09-07.",
+   "extra": {
+    "work_key": "trisduction-already-that",
+    "seal": "cycle af round 3"
+   }
+  },
+  "integrable-misalignment-forbids-blowup": {
+   "title": "Integrable Misalignment Forbids Blowup: A New Scale-Invariant Geometric Continuation Theorem for Three-Dimensional Navier-Stokes, Proved from the Classical Base",
+   "domain": "Mathematical Analysis, Navier-Stokes Regularity",
+   "status": "live",
+   "first_published": "2026-09-08",
+   "last_updated": "2026-09-08",
+   "git": {
+    "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Integrable Misalignment Forbids Blowup - Journal Source.md",
+    "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Integrable Misalignment Forbids Blowup.pdf",
+    "editions": [
+     "math_journal"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 22665831,
+    "concept_doi": "10.5281/zenodo.22665831",
+    "latest_version_doi": "10.5281/zenodo.22665832",
+    "latest_record": 22665832,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "integrable-misalignment-forbids-blowup-islam-2026",
+    "url": "https://archive.org/details/integrable-misalignment-forbids-blowup-islam-2026",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Sealed audit cycle nsad3-20260908 round 3 (SELF grade). Git commits 8d0e29d (pdf), 309a580 (md).",
+   "extra": {
+    "files": {
+     "git_pdf_md5": "6dbe79c8e9a84c6bc547254a4b0df49e",
+     "zenodo_pdf_md5": "6dbe79c8e9a84c6bc547254a4b0df49e",
+     "ia_pdf_md5": "78dcd1f89073555499f1b8c445dd983b",
+     "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
+    },
+    "tool_record": {
+     "concept": "22665831",
+     "concept_doi": "10.5281/zenodo.22665831",
+     "latest_recid": "22665832",
+     "latest_doi": "10.5281/zenodo.22665832",
+     "latest_md5": "6dbe79c8e9a84c6bc547254a4b0df49e",
+     "filename": "Integrable Misalignment Forbids Blowup.pdf",
+     "published": "2026-09-08",
+     "env": "prod"
+    }
+   }
+  },
+  "two-navier-stokes-papers-one-instrument": {
+   "title": "Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the General Reader",
+   "kind": "audit-supplement",
+   "date": "2026-09-08",
+   "git": {
+    "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Two Navier-Stokes Papers One Instrument - Audit Supplement.pdf",
+    "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Two Navier-Stokes Papers One Instrument - Audit Supplement - Apex Source.md",
+    "pdf_commit": "00d9182",
+    "md_commit": "ed6ca93"
+   },
+   "ia": {
+    "identifier": "two-navier-stokes-papers-one-instrument-islam-2026",
+    "url": "https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026",
+    "state": "live"
+   },
+   "zenodo": {
+    "conceptrecid": "22670355",
+    "concept_doi": "10.5281/zenodo.22670355",
+    "latest_version_doi": "10.5281/zenodo.22670356",
+    "latest_record": "22670356",
+    "versions": 1,
+    "state": "published"
+   },
+   "extra": {
+    "git_pdf_sha256": "f4d8d3090f0b2f0f9ddd26d3445d2ae5395cc4616f421b45ac18b24fdab91dc1",
+    "git_pdf_md5": "6e7dd75133faff961272409782a4b96f",
+    "ia_pdf_md5": "86940c930c56",
+    "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
+    "supplement_to": "10.5281/zenodo.22665831",
+    "audit_cycles": [
+     "supp-20260908 v4",
+     "supp2-20260908 v2"
+    ]
+   }
+  },
+  "the-forced-alternative-is-a-filter": {
+   "title": "The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, What It Does Not, and One Order-Type Demand on Its Correction Tower",
+   "kind": "rebuttal",
+   "date": "2026-09-09",
+   "git": {
+    "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/The Forced Alternative Is a Filter.pdf",
+    "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/The Forced Alternative Is a Filter - Math Journal Source.md",
+    "script": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/The Forced Alternative Is a Filter - CHECK.py",
+    "pdf_commit": "87cd4cd",
+    "md_commit": "3ed3522",
+    "script_commit": "4cfefe8"
+   },
+   "zenodo": {
+    "conceptrecid": "22670252",
+    "concept_doi": "10.5281/zenodo.22670252",
+    "latest_version_doi": "10.5281/zenodo.22670253",
+    "latest_record": "22670253",
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "the-forced-alternative-is-a-filter-islam-2026",
+    "url": "https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026",
+    "state": "live"
+   },
+   "extra": {
+    "git_pdf_sha256": "42b66446b75fe77bb3806da6ac1e7a9c6d7d84620efa258254dd7a18dcbd3b8b",
+    "git_pdf_md5": "67a16bb1423fdf8804e1c03cd7c9e9c4",
+    "ia_pdf_md5": "4b3091d0a192",
+    "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
+    "audit_cycle": "reb-20260909 v3",
+    "companion_to": "10.5281/zenodo.22665831",
+    "battery": "CHECK.py 14/14"
+   }
+  },
+  "anchoring-axioms-navier-stokes": {
+   "title": "Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for Supplier-Side Axiom Formulation",
+   "kind": "method-and-conditional-results",
+   "date": "2026-09-08",
+   "git": {
+    "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity.pdf",
+    "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity - Math Journal Source.md",
+    "pdf_commit": "63fc381",
+    "md_commit": "d2c6f74"
+   },
+   "zenodo": {
+    "conceptrecid": "22670331",
+    "concept_doi": "10.5281/zenodo.22670331",
+    "latest_version_doi": "10.5281/zenodo.22670332",
+    "latest_record": "22670332",
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "anchoring-axioms-navier-stokes-islam-2026",
+    "url": "https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026",
+    "state": "live"
+   },
+   "extra": {
+    "git_pdf_sha256": "d1804813ab4ce33ce1eb3d4593483edd156dabaea26fbf21a9625e12a78ddd5d",
+    "git_pdf_md5": "dd68f41ab3c414e67fa6a7db03a7da44",
+    "ia_pdf_md5": "1a1ae5c7247892282f17024d2b070e2d",
+    "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
+    "companion_of": "the other of the 2026-09-08 pair"
+   }
+  },
+  "navier-stokes-effective-axiom-proof": {
+   "title": "Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effective Axiom: The Complete Deductive Chain",
+   "kind": "conditional-theorem",
+   "date": "2026-09-08",
+   "git": {
+    "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Global Smoothness of Three-Dimensional Navier-Stokes from a Single Effective Axiom.pdf",
+    "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Global Smoothness of Three-Dimensional Navier-Stokes from a Single Effective Axiom - Math Journal Source.md",
+    "pdf_commit": "dbad77f",
+    "md_commit": "311bcce"
+   },
+   "zenodo": {
+    "conceptrecid": "22670343",
+    "concept_doi": "10.5281/zenodo.22670343",
+    "latest_version_doi": "10.5281/zenodo.22670344",
+    "latest_record": "22670344",
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "global-smoothness-single-effective-axiom-islam-2026",
+    "url": "https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026",
+    "state": "live"
+   },
+   "extra": {
+    "git_pdf_sha256": "5d8a28bc45813a53ffec82ac066f0b9f09aeb2aeceb102cc00f24f3ce3ef1dd1",
+    "git_pdf_md5": "6accaa4a24a72d0f43f9d334522c8192",
+    "ia_pdf_md5": "59fd3374a67e89827c43063319555277",
+    "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
+    "companion_of": "the other of the 2026-09-08 pair"
+   }
+  },
+  "closure-and-the-limits-of-forced-results": {
+   "title": "Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When a Forced-Breakdown Theorem Transports to the System It Is Read as Being About",
+   "kind": "foundations",
+   "date": "2026-09-10",
+   "git": {
+    "pdf": "Publication Library/Mathematics/Foundations of Logic/Closure and Transport/Closure and the Limits of Forced Results.pdf",
+    "md": "Publication Library/Mathematics/Foundations of Logic/Closure and Transport/Closure and the Limits of Forced Results - Math Journal Source.md",
+    "pdf_commit": "0f093e8",
+    "md_commit": "06c804e"
+   },
+   "zenodo": {
+    "conceptrecid": "22683805",
+    "concept_doi": "10.5281/zenodo.22683805",
+    "latest_version_doi": "10.5281/zenodo.22683806",
+    "latest_record": "22683806",
+    "versions": 1,
+    "state": "published",
+    "file_state": "pending revision; regime unread, zenodo.org returning 504; git and archive carry the current bytes"
+   },
+   "ia": {
+    "identifier": "closure-and-the-limits-of-forced-results-islam-2026",
+    "url": "https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026",
+    "state": "live"
+   },
+   "extra": {
+    "git_pdf_sha256": "739f27633b53160a02f1b78fb9dace59323325c565129087ee6ac48df873a979",
+    "git_pdf_md5": "754b3b6fcccb21c134f34672eef78fe9",
+    "ia_pdf_md5": "1e8f60d071c3a4888c6f62e275850417",
+    "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
+    "audit_cycle": "clo-20260910",
+    "engine": "RAF",
+    "revision": "undecided-word section, Propositions 11 and 12, 5 pages"
+   }
+  },
+  "navier-stokes-termination-formal-alone-register": {
+   "title": "A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register",
+   "kind": "paper",
+   "date": "2026-09-11",
+   "git": {
+    "pdf_commit": "41cd41d",
+    "md_commit": "4cb4125",
+    "path": "Publication Library/Mathematics/Foundations of Logic/Navier-Stokes Termination/"
+   },
+   "zenodo": {
+    "concept": "22705896",
+    "concept_doi": "10.5281/zenodo.22705896",
+    "version_recid": "22705897",
+    "version_doi": "10.5281/zenodo.22705897"
+   },
+   "ia": {
+    "ident": "navier-stokes-termination-formal-alone-register-islam-2026",
+    "md5": "2c3b294aaef8"
+   },
+   "extra": {
+    "pages": 8,
+    "sha256": "dd771e2c34f48f763486fd710a6ccfd5e6fb1f74ec98b5d67bf1953e40a77473",
+    "audit": "cycle nsterm, SEALED-ROUND at round 9, six-register coverage, control grade SELF",
+    "companion": "navier-stokes-alignment-defect"
+   }
   }
+ }
 }
