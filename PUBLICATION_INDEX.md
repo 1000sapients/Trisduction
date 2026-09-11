@@ -9,25 +9,26 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**68 works · 88 Zenodo deposits.**
+**67 works · 86 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 62 / 68 | 91% |
-| Git PDF | 38 / 68 | 55% |
-| Internet Archive | 25 / 68 | 36% |
-| PhilArchive | 4 / 68 | 5% |
+| Zenodo | 61 / 67 | 91% |
+| Git PDF | 36 / 67 | 53% |
+| Internet Archive | 23 / 67 | 34% |
+| PhilArchive | 4 / 67 | 5% |
 
-Status: 63 live, 5 unknown.
+Status: 61 live, 6 unknown.
 
 ## Coverage gaps
 
 The only view in the repository that answers "what is published where, and what is missing." Each list is a work queue, not an error.
 
-### On Zenodo, not on the Internet Archive (43)
+### On Zenodo, not on the Internet Archive (44)
 
 Deposited to Zenodo but no IA item located. IA is the second permanence surface; a work here has one address, not two.
 
+- `navier-stokes-termination-formal-alone-register` · A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register
 - `p-vs-np-geometric-determination` · TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP
 - `p-vs-np-omega-seal` · TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL
 - `geometric-nature-of-light` · THE GEOMETRIC NATURE OF LIGHT, From Ancient Substrate to Quantum Field. A Continuous-Field Reading of Twenty-F
@@ -72,10 +73,11 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `platonic-ghost-divided-line` · Plato's Divided Line: The Platonic Ghost and the Golden Shadow
 - `the-two-waters` · The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells
 
-### No PDF matched in this repository (30)
+### No PDF matched in this repository (31)
 
 A Zenodo deposit with no corresponding PDF found under `Publication Library/`. Either the file was never filed in git, or it is filed under a name the matcher could not tie to the title. Assign the path by hand in the ledger to close the row.
 
+- `navier-stokes-termination-formal-alone-register` · A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register
 - `p-vs-np-geometric-determination` · TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP
 - `p-vs-np-omega-seal` · TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL
 - `geometric-nature-of-light` · THE GEOMETRIC NATURE OF LIGHT, From Ancient Substrate to Quantum Field. A Continuous-Field Reading of Twenty-F
@@ -128,8 +130,6 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
-| `hodge-semiregular-witness-axiom` | A Proof of the Hodge Conjecture Derived from One Semiregular Witness Axiom: A Conditional Proof | Mathematics | live | [pdf](Publication%20Library/Mathematics/Algebraic%20Geometry/Hodge%20Conjecture/A_Proof_of_the_Hodge_Conjecture_Derived_from_One_Semiregular_Witness_Axiom.pdf) | `10.5281/zenodo.22701509` | 1 | [ia](https://archive.org/details/hodge-conjecture-semiregular-witness-axiom-islam-2026) | — | 2026-09-11 |
-| `hodge-conjecture-termination` | A Formal Proof of Hodge Conjecture Termination at the Formal-Alone Register: The Rigid-Witness  | Mathematics | live | [pdf](Publication%20Library/Mathematics/Algebraic%20Geometry/Hodge%20Conjecture/A_Formal_Proof_of_Hodge_Conjecture_Termination_at_the_Formal-Alone_Register.pdf) | `10.5281/zenodo.22705459` | 1 | [ia](https://archive.org/details/hodge-conjecture-termination-formal-alone-register-islam-2026) | — | 2026-09-11 |
 | `trisduction-already-that` | A Default AI Substrate's Raw Process, Correctly Oriented, Is Already That: The Substrate-Invari | Artificial Intelligence / Substrate Classification | live | [pdf](Publication%20Library/Artificial%20Intelligence/Substrate%20Classification/Already%20That/TRISDUCTION_Already_That_v1_0_0.pdf) | `10.5281/zenodo.22652922` | 1 | [ia](https://archive.org/details/trisduction-already-that) | — | 2026-09-08 |
 | `integrable-misalignment-forbids-blowup` | Integrable Misalignment Forbids Blowup: A New Scale-Invariant Geometric Continuation Theorem fo | Mathematical Analysis, Navier-Stokes Regularity | live | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Integrable%20Misalignment%20Forbids%20Blowup.pdf) | `10.5281/zenodo.22665831` | 1 | [ia](https://archive.org/details/integrable-misalignment-forbids-blowup-islam-2026) | — | 2026-09-08 |
 | `trisduction-core-stated-in-fortran` | Trisduction Core Stated in Fortran and in Nothing Else: A Verdict Kernel That Determines Totall | Verification Architecture | live | [pdf](protocols/Executable%20Thesis/TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf) | `10.5281/zenodo.22651403` | 1 | [ia](https://archive.org/details/trisduction-core-stated-in-fortran) | — | 2026-09-07 |
@@ -193,6 +193,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `p-vs-np-geometric-determination` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP | P versus NP and Foundations | live | — | `10.5281/zenodo.19440615` | 1 | — | — | 2026-04-06 |
 | `two-navier-stokes-papers-one-instrument` | Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the General Reader | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Two%20Navier-Stokes%20Papers%20One%20Instrument%20-%20Audit%20Supplement.pdf) | `10.5281/zenodo.22670355` | 1 | [ia](https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026) | — | — |
 | `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, What It Doe | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/The%20Forced%20Alternative%20Is%20a%20Filter.pdf) | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — | — |
+| `navier-stokes-termination-formal-alone-register` | A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register | Unfiled | ? | — | `10.5281/zenodo.22705896` | — | — | — | — |
 | `navier-stokes-effective-axiom-proof` | Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effective Axio | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Global%20Smoothness%20of%20Three-Dimensional%20Navier-Stokes%20from%20a%20Single%20Effective%20Axiom.pdf) | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — | — |
 | `closure-and-the-limits-of-forced-results` | Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When a Forced- | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Foundations%20of%20Logic/Closure%20and%20Transport/Closure%20and%20the%20Limits%20of%20Forced%20Results.pdf) | `10.5281/zenodo.22683805` | 1 | [ia](https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026) | — | — |
 | `anchoring-axioms-navier-stokes` | Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for Supplier-S | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Anchoring%20Axioms%20for%20Three-Dimensional%20Navier-Stokes%20Regularity.pdf) | `10.5281/zenodo.22670331` | 1 | [ia](https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026) | — | — |
@@ -288,12 +289,13 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `clean-gospel-of-mark` | Quranic Christology: THE CLEAN GOSPEL OF MARK: A Passage by Passage Commentary on the | `10.5281/zenodo.21756247` | 1 | — | 2026-08-02 |
 | `afterlife-and-the-return` | On the Afterlife and the Return: A Trisductive Grounding of the Soul, the Two Fates,  | `10.5281/zenodo.20554213` | 1 | — | 2026-06-05 |
 
-### Unfiled (5)
+### Unfiled (6)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
 | `two-navier-stokes-papers-one-instrument` | Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the Gene | `10.5281/zenodo.22670355` | 1 | [ia](https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026) | — |
 | `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, W | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — |
+| `navier-stokes-termination-formal-alone-register` | A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register | `10.5281/zenodo.22705896` | — | — | — |
 | `navier-stokes-effective-axiom-proof` | Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effe | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — |
 | `closure-and-the-limits-of-forced-results` | Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When | `10.5281/zenodo.22683805` | 1 | [ia](https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026) | — |
 | `anchoring-axioms-navier-stokes` | Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for  | `10.5281/zenodo.22670331` | 1 | [ia](https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026) | — |
