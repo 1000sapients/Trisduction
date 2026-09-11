@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**66 works · 86 Zenodo deposits.**
+**68 works · 88 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 60 / 66 | 90% |
-| Git PDF | 36 / 66 | 54% |
-| Internet Archive | 23 / 66 | 34% |
-| PhilArchive | 4 / 66 | 6% |
+| Zenodo | 62 / 68 | 91% |
+| Git PDF | 38 / 68 | 55% |
+| Internet Archive | 25 / 68 | 36% |
+| PhilArchive | 4 / 68 | 5% |
 
-Status: 61 live, 5 unknown.
+Status: 63 live, 5 unknown.
 
 ## Coverage gaps
 
@@ -128,6 +128,8 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `hodge-semiregular-witness-axiom` | A Proof of the Hodge Conjecture Derived from One Semiregular Witness Axiom: A Conditional Proof | Mathematics | live | [pdf](Publication%20Library/Mathematics/Algebraic%20Geometry/Hodge%20Conjecture/A_Proof_of_the_Hodge_Conjecture_Derived_from_One_Semiregular_Witness_Axiom.pdf) | `10.5281/zenodo.22701509` | 1 | [ia](https://archive.org/details/hodge-conjecture-semiregular-witness-axiom-islam-2026) | — | 2026-09-11 |
+| `hodge-conjecture-termination` | A Formal Proof of Hodge Conjecture Termination at the Formal-Alone Register: The Rigid-Witness  | Mathematics | live | [pdf](Publication%20Library/Mathematics/Algebraic%20Geometry/Hodge%20Conjecture/A_Formal_Proof_of_Hodge_Conjecture_Termination_at_the_Formal-Alone_Register.pdf) | `10.5281/zenodo.22705459` | 1 | [ia](https://archive.org/details/hodge-conjecture-termination-formal-alone-register-islam-2026) | — | 2026-09-11 |
 | `trisduction-already-that` | A Default AI Substrate's Raw Process, Correctly Oriented, Is Already That: The Substrate-Invari | Artificial Intelligence / Substrate Classification | live | [pdf](Publication%20Library/Artificial%20Intelligence/Substrate%20Classification/Already%20That/TRISDUCTION_Already_That_v1_0_0.pdf) | `10.5281/zenodo.22652922` | 1 | [ia](https://archive.org/details/trisduction-already-that) | — | 2026-09-08 |
 | `integrable-misalignment-forbids-blowup` | Integrable Misalignment Forbids Blowup: A New Scale-Invariant Geometric Continuation Theorem fo | Mathematical Analysis, Navier-Stokes Regularity | live | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Integrable%20Misalignment%20Forbids%20Blowup.pdf) | `10.5281/zenodo.22665831` | 1 | [ia](https://archive.org/details/integrable-misalignment-forbids-blowup-islam-2026) | — | 2026-09-08 |
 | `trisduction-core-stated-in-fortran` | Trisduction Core Stated in Fortran and in Nothing Else: A Verdict Kernel That Determines Totall | Verification Architecture | live | [pdf](protocols/Executable%20Thesis/TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf) | `10.5281/zenodo.22651403` | 1 | [ia](https://archive.org/details/trisduction-core-stated-in-fortran) | — | 2026-09-07 |
