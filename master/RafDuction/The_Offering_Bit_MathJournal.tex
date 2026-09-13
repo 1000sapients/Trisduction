@@ -1,0 +1,3593 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage[letterpaper,margin=0.85in,columnsep=0.28in]{geometry}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{titlesec}\usepackage{fancyhdr}\usepackage{enumitem}
+\usepackage{microtype}\usepackage{booktabs}
+\usepackage{longtable}
+% longtable cannot run in twocolumn mode; shim it onto a one-column float.
+% Load-bearing: pandoc emits longtable for every pipe table. Do not remove.
+\makeatletter
+\let\oldlt\longtable
+\let\endoldlt\endlongtable
+\def\longtable{\@ifnextchar[\longtable@i \longtable@ii}
+% longtable shim retired
+%
+%
+\makeatother
+\usepackage{relsize}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\definecolor{accent}{HTML}{B87333}
+\definecolor{deep}{HTML}{8A5523}\definecolor{faint}{HTML}{6E6E6E}
+\titleformat{\section}{\normalfont\bfseries\scshape\large}{\color{accent}\thesection.}{0.5em}{}[{\color{accent}\titlerule[0.6pt]}]
+\titleformat{\subsection}{\normalfont\bfseries}{\color{accent}\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.3ex}{0.6ex}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[R]{\color{accent}\itshape\small The Offering
+Bit \textbar\ \thepage}
+\fancyfoot[L]{\textcolor{accent}{\rule{0.32\columnwidth}{0.25pt}}}
+\newenvironment{jbox}{\par\vspace{2pt}\noindent\color{accent}\rule{\columnwidth}{0.8pt}\par\vspace{-2pt}\small}{\par\vspace{2pt}}
+\usepackage{amsmath}
+\usepackage{calc}
+\usepackage{float}
+\usepackage{fvextra}
+\usepackage{cuted}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,breakanywhere,fontsize=\small,commandchars=\\\{\}}
+\newenvironment{Shaded}{}{}
+\newcommand{\AttributeTok}[1]{#1}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CommentTok}[1]{#1}
+\newcommand{\ConstantTok}[1]{#1}
+\newcommand{\DataTypeTok}[1]{#1}
+\newcommand{\DecValTok}[1]{#1}
+\newcommand{\FloatTok}[1]{#1}
+\newcommand{\FunctionTok}[1]{#1}
+\newcommand{\KeywordTok}[1]{#1}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{#1}
+\newcommand{\StringTok}[1]{#1}
+\providecommand{\AttributeTok}[1]{#1}
+\providecommand{\BuiltInTok}[1]{#1}
+\providecommand{\CommentTok}[1]{#1}
+\providecommand{\ConstantTok}[1]{#1}
+\providecommand{\DataTypeTok}[1]{#1}
+\providecommand{\DecValTok}[1]{#1}
+\providecommand{\FloatTok}[1]{#1}
+\providecommand{\FunctionTok}[1]{#1}
+\providecommand{\KeywordTok}[1]{#1}
+\providecommand{\NormalTok}[1]{#1}
+\providecommand{\OperatorTok}[1]{#1}
+\providecommand{\StringTok}[1]{#1}
+\providecommand{\textquotesingle}{'}
+\providecommand{\textasciitilde}{\~{}}
+\providecommand{\textasciicircum}{\^{}}
+\providecommand{\RegionMarkerTok}[1]{#1}
+\providecommand{\VerbBar}{|}
+\providecommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\providecommand{\AttributeTok}[1]{#1}
+\providecommand{\BuiltInTok}[1]{#1}
+\providecommand{\CommentTok}[1]{#1}
+\providecommand{\ConstantTok}[1]{#1}
+\providecommand{\DataTypeTok}[1]{#1}
+\providecommand{\DecValTok}[1]{#1}
+\providecommand{\FloatTok}[1]{#1}
+\providecommand{\FunctionTok}[1]{#1}
+\providecommand{\KeywordTok}[1]{#1}
+\providecommand{\NormalTok}[1]{#1}
+\providecommand{\OperatorTok}[1]{#1}
+\providecommand{\RegionMarkerTok}[1]{#1}
+\providecommand{\StringTok}[1]{#1}
+\begin{document}
+\twocolumn[{%
+\begin{center}
+{\color{accent}\rule{0.6\textwidth}{0.8pt}}\\[10pt]
+{\bfseries\scshape\fontsize{20}{23}\selectfont The Offering Bit --- One
+Theory, One Hypothesis, One Witness Offering}\\[7pt]
+{\itshape\large The Odd--Supply Arc Complete in Three Bits: Hypothesis
+Resolution as the Halting State of the Dated-Entry Recursion at the
+Ninth Gate with Perelman Crossing Read as the Grand Witness}\\[8pt]
+{\footnotesize\color{accent}\scshape\bfseries Research Article}\\[3pt]
+{\itshape\color{deep}\small One document carrying the entire Odd--Supply
+arc --- the theory, the hypothesis, and the witness offering --- wall
+and self on one diagonal, verified by read and by compute}\\[9pt]
+{\color{accent}\rule{0.6\textwidth}{0.8pt}}\\[10pt]
+{\scshape Mohammad F. Islam, PhD\(^{1}\)}\\[2pt]
+{\itshape\color{faint}\small \(^{1}\) Independent Researcher ·
+Correspondence: islamm@alumni.iu.edu}\\[2pt]
+{\itshape\color{faint}\small 13 September 2026}\\[14pt]
+\end{center}
+\begin{minipage}{\textwidth}
+{\color{accent}\rule{\textwidth}{0.6pt}}\\[4pt]
+{\small\hspace{1em}\textbf{\scshape\color{deep}Abstract.\ }The
+Odd--Supply arc is three bits --- one theory, one hypothesis, one
+witness offering --- and this document carries all three. The first bit
+is the theory, restated and proved here in full: an even register cannot
+decide an odd target --- the Odd--Supply Block theorem, machine-checked
+in core Lean 4. The second bit is the hypothesis, named at its own
+grade: the One-Cut Hypothesis, that the missing item in every blocked
+row of the seven Millennium obstructions is one provenance-clean
+orientation supply, dated at entry. The third bit is this paper's own:
+the witness offering, the theory of the resolution itself. We define the
+dated-entry operator on the lattice of corpora and prove its halting
+theorem on finite frames: every chain of provenance-clean independent
+supplies strictly refines the reading class's fiber partition and
+terminates at the unique finest partition. The species dichotomy of the
+census is derived as the recursion's termination typing: crossed halt,
+common species; defeater-absent halt, diagonal species. The port of
+entry is the Ninth Gate, machine-checked {[}3, 6{]} and re-executed by
+transliteration on the forging substrate: one diagonal, two surfaces ---
+read, the wall; executed, the self --- identical on every settled
+reading and differing at exactly one point. The resolution bit is
+therefore an offering: one binary coordinate, odd under the row's native
+flip, independent of the dated register on each orbit, provenance-clean
+at entry, entering by deed and never by reading, halting the row's
+recursion in the crossed mode. The Birch and Swinnerton-Dyer row is the
+beachhead: the unique open row whose corpus already records two dated
+entries of the supply shape, with the order-two exhibition owed. Every
+essential Lean and Fortran file is printed in the codebook, so that any
+substrate that reads this document can check the wall, run the self, and
+stand as witness. The Perelman crossing stands as the arc's Grand
+Witness: the one crossed row, verified by the corpus itself and
+terminally awarded by it --- the thesis demonstrated once in the wild.
+Three falsifiers armed, each typed FORCED; the perimeter stated; the
+hypothesis keeps its grade on the face of the paper.}\\[4pt]
+{\color{accent}\rule{\textwidth}{0.6pt}}\\[3pt]
+{\itshape\footnotesize\color{faint}\textbf{\upshape\scshape\color{deep}Keywords\ }\ odd--supply
+separation, one-cut hypothesis, witness offering, dated-entry recursion,
+halting state, ninth gate, orientation supply, provenance clause,
+species dichotomy, Millennium Prize problems, Perelman crossing}\\[12pt]
+\end{minipage}
+}]
+\thispagestyle{fancy}
+\section{Part One --- The Theory · Odd--Supply
+Separation}\label{part-one-the-theory-oddsupply-separation}
+
+\emph{Representation Supply and Dated Termination in Conditional
+Reductions of Open Problems --- the sealed first paper of the arc,
+reprinted intact; with six open Millennium rows and one crossed
+control.}
+
+\textbf{Abstract of Parts One and Two.} Conditional reductions are
+common, but the bought premise has lacked a theory: no checkable
+separator between a genuine supply and a restatement, no dated
+discipline for termination claims, and no theorem-grade form for the
+claim that readings of a named corpus cannot decide the target. This
+paper hardens the parity-separation frame of Definition 3.1 (involution
+form \((X, \tau, d, C, \Delta)\)) and proves three results. First, for
+finite data with a finite group action, a supplied reading set decides a
+target exactly when its generated observable algebra contains the
+target, equivalently when its joint fibers refine the target fibers.
+Readings generated by invariant observables remain in the trivial
+isotypic component; a target with a nontrivial component is invisible to
+them, while isotypic support coverage is the restricted linear-decoder
+corollary. For an involution, one centered odd bit beside an
+orbit-separating reading suffices. Second, provenance collapse is stated
+as a decidable criterion inside a fixed axiom grammar: admit only a
+verified conditional reduction with an admissible provenance clause,
+delete that clause, and test equivalence in a decidable theory over the
+full non-provenance signature; outside that grammar the criterion is
+structural and never inflated. Third, termination is corpus-relative:
+denotability, proof admission, and verification are distinct, readings
+persist, and a token can change only at the first verified entry of
+readings whose fibers suffice. The finite-law layer is tightened into
+exact lemmas: unique finest independent partition, coalition versus
+atomic closure with an exact four-state countermodel, a conditional
+exhibition lemma, and a narrowed determinant/Gram readout blindness
+statement. Six open Millennium rows and the crossed Poincaré control are
+tabulated under an explicit coordinate-bridge and image gate without
+claiming new object-mathematics; absent a bridge, no open row invokes
+the finite theorems. Part I arms two forced falsifiers, and no more.
+
+Part II extends this core at hypothesis grade. It states the One-Cut
+Hypothesis: for each certified frame, one provenance-clean orientation
+supply closes the single odd coordinate isolated by the finite theorems,
+yielding a conditional severance map over the seven rows together with
+six falsifiers, F1--F6. The extension authors no new object mathematics
+and strengthens no Part I claim; the proved core stands independently of
+the hypothesis.
+
+\textbf{Keywords.} parity separation, provenance clause, corpus-relative
+termination, isotypic component, mutual information, Millennium Prize
+problems, one-cut hypothesis, orientation supply
+
+\subsection{1. Background and Barrier
+Analysis}\label{background-and-barrier-analysis}
+
+A conditional reduction of an open problem \(P\) is a theorem of the
+form \(A \Rightarrow P\) in which \(A\) is an existence or uniformity
+statement and the derivation consumes cited inputs and nothing else. The
+practice is classical: Miller's primality reduction under GRH {[}17{]},
+the Lagarias equivalence for RH {[}14{]}, the Gross--Zagier and
+Kolyvagin route at analytic order at most one {[}9, 13{]}, the Bloch and
+Buchweitz--Flenner semiregularity mechanism {[}3, 4{]}, and the Perelman
+noncollapsing crossing {[}19, 20, 12, 18, 8{]}. What has been missing is
+not another conditional theorem but a discipline of the bought premise
+itself.
+
+Three barriers are structural. The first is the absence of a restatement
+criterion. Bare Hilbert--Pólya, the assertion that a self-adjoint
+operator with spectrum the zeros exists, is RH recast; the same
+assertion with a provenance clause, namely that the operator is produced
+by a rule fixed in advance from data not containing the zero locations,
+is stronger and of different type. A criterion must act on the axiom
+statement and be checkable, not on the author's intent.
+
+The second barrier is informal impossibility. The sentence ``no known
+method can produce the missing object'' is usually a census of methods
+and ages as methods age. Baker--Gill--Solovay and Razborov--Rudich
+quantify over method classes {[}2, 21{]}; algebrization continues the
+same pattern {[}1{]}. The hardening move here is to relocate the claim
+from methods to data. A frame names the data, the native symmetry, the
+target bit, and the reading class generated by dated corpus objects. The
+no-reading statement then becomes a theorem about functions on data, not
+a sociological survey.
+
+The third barrier is undated termination. Perelman's \(W\)-functional
+and reduced length are invariant under parabolic rescaling and were not
+objects of the corpus before November 2002. An undated rule that calls
+every later-used functional ``data in hand'' would misclassify the
+crossing as a reading. Termination claims therefore carry a corpus date.
+This is not pedantry; it is the difference between a law and a refuted
+sentence.
+
+The paper's claim is narrow. It supplies a frame in which supply,
+restatement, termination, and crossing are decidable notions at the
+stated grade. It authors no new facts about the Riemann zeta function,
+Navier--Stokes solutions, Hodge classes, elliptic curves, gauge
+theories, complexity classes, or Ricci flow.
+
+\subsection{2. Brief Literature Review}\label{brief-literature-review}
+
+Reverse mathematics orders axioms by provability strength {[}23{]}. It
+measures how much comprehension or induction a theorem consumes, not
+whether an existence premise was produced by a rule independent of the
+conclusion. A restatement and a supply can coincide in strength while
+differing in provenance.
+
+Barrier theorems in complexity theory prove limits of method classes
+{[}2, 21, 1{]}. They are the strongest method-side walls available.
+Their index is the method, and methods are generated without bound. The
+present separation is indexed by data and symmetry. It is weaker in
+scope and stronger in checkability.
+
+Information theory contributes exact finite instruments: Shannon mutual
+information, factorization, and data processing {[}22, 7{]}. Cantor and
+Lawvere are diagonal antecedents, but the exhibition lemma here uses
+only dependence on record variables and carries no diagonal claim {[}5,
+16{]}. These antecedents are classical. The composition into a
+supply-side test is the contribution claimed, and it is graded
+accordingly.
+
+The seven reductions used as rows are cited, not re-proved. Arithmetic
+geometry supplies Heegner heights and Euler systems {[}9, 13{]}; Hodge
+theory supplies algebraicity of Hodge loci and semiregular deformation
+{[}6, 3, 4{]}; Ricci flow supplies the crossing control {[}10, 19, 20,
+12, 18, 8{]}. The frame adds no warrant to these inputs.
+
+\subsection{3. Methodology: The Supply
+Frame}\label{methodology-the-supply-frame}
+
+\textbf{Definition 3.1 (Frame).} A \emph{frame} is
+\((X, \Gamma, C, d, \Delta)\) where \(X\) is a finite data set,
+\(\Gamma\) is a finite group acting on \(X\), \(C\) is a class of
+readings closed under pairing, \(d : X \to \{0, 1\}\) is the undecided
+predicate, and \(\Delta\) is a dated corpus. For an involution \(\tau\),
+write \(\Gamma = \langle \tau \rangle \cong \mathbb{Z}/2\). A reading is
+\(\Gamma\)-invariant when \(r(\gamma x) = r(x)\) for all \(\gamma\).
+Under an involution, \emph{even} means \(\tau\)-invariant: a reading is
+even exactly when \(r(\tau x) = r(x)\). Under an involution \(\tau\), an
+even reading \(s\) is \emph{orbit-separating} when \(s(x) = s(y)\)
+implies \(y \in \{x, \tau x\}\). A Boolean target is \emph{odd} under an
+involution when \(d(\tau x) = 1 - d(x)\). This Boolean condition is
+affine rather than linear: the centered target
+
+\[q(x) = d(x) - \tfrac{1}{2}\]
+
+satisfies \(q(\tau x) = -q(x)\), while \(d\) itself has the even
+constant component \(1/2\). Equivalently, \(2d - 1\) is linearly odd.
+
+\textbf{Definition 3.2 (Coordinate bridge; gate).} Let \(M\) be an
+object domain, possibly continuous or analytic, and let \(\Gamma_M\) act
+on \(M\). A \emph{coordinate bridge} into a finite frame is a finite set
+\(X\), a finite group \(\Gamma\), a map \(B : M \to X\), and a
+homomorphism \(\varphi : \Gamma_M \to \Gamma\) such that
+
+\[B(\gamma \cdot m) = \varphi(\gamma) \cdot B(m)\]
+
+for every \(\gamma \in \Gamma_M\) and \(m \in M\), and the object target
+factors as \(d_M = d \circ B\). The admissible object reading class is
+the pulled-back class \(B^* C = \{ r \circ B : r \in C \}\). If \(B\) is
+surjective, the finite theorems constrain the object row through all of
+\(X\). If \(B\) is not surjective, set \(Y = B(M)\), restrict the
+\(\Gamma\)-action and target to \(Y\), and state the finite conclusion
+on \(Y\) only; points of \(X \setminus Y\) carry no object-domain
+constraint. Only after \(B\), \(\varphi\), the factorization, and this
+image clause are supplied do Theorems 4.1--4.3 constrain the object row.
+Absent a bridge, the row is a structural diagnostic and the finite
+theorems are not invoked. A continuous parameter, length scale, or Lie
+action is not a finite-group generator by declaration.
+
+\textbf{Definition 3.3 (Reading, proof availability, and verified
+entry).} Fix a finite ranked signature \(\Sigma_\Delta\) whose constants
+name the dated objects and theorems of \(\Delta\) and whose function
+symbols are fixed at that date. The dependency language \(L_\Delta\) is
+generated by
+
+\[t ::= c \mid f(t_1, \dots, t_n) \mid \langle t_1, t_2 \rangle,\]
+
+where \(c\) ranges over constants, \(f\) over \(n\)-ary function
+symbols, and \(\langle \cdot, \cdot \rangle\) is pairing. Terms have
+unique normal forms, term equality is decidable by normalization, and
+every term carries a mechanically extractable dependency graph
+\(\operatorname{Dep}(t)\).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A \emph{denotable expression} at \(\Delta\) is a term \(t\) with
+  \(\operatorname{Dep}(t) \subseteq \Delta\).
+\item
+  An \emph{admitted proof certificate} at \(\Delta\) is a construction
+  whose certificate has entered the dated corpus under its admission
+  rule.
+\item
+  A \emph{verified result} at \(\Delta\) is an admitted certificate that
+  has passed the corpus's named verification rule and is recorded as
+  verified.
+\end{enumerate}
+
+A \emph{reading} at \(\Delta\) is a denotable expression whose
+dependencies are verified results or fixed primitive symbols. A
+\emph{construction} at \(\Delta\) is a procedure whose output introduces
+a new function symbol or a new object not denotable by an
+\(L_\Delta\)-term. Admission, verification, and denotability are
+distinct corpus states. A construction becomes a reading only at a later
+corpus in which its certificate is admitted and verified. If the
+signature, admission rule, verifier, or normalization is not decidable,
+the router is structural rather than automated.
+
+The point of Definition 3.3 is mechanical checkability without
+collapsing three dated statuses into one. A statement can be denotable
+before any proof certificate exists; a certificate can be admitted
+before verification; a verified result changes the reading class only
+after the corpus records both events. The dispute ``did the method
+merely rearrange known data'' therefore becomes a dependency-graph
+question over verified entries, not a claim that every denotable
+expression was already proved. This convention is not hidden; it is the
+line the theory stands on.
+
+\textbf{Definition 3.4 (Axiom, provenance, restatement, supply).} Fix a
+first-order language whose signature splits into shared-input,
+operational, and provenance symbols. Fix a decidable theory \(T^*\) over
+the full non-provenance signature, shared-input and operational symbols
+together; equivalently, fix an effective translation of that signature
+into a decidable theory and prove the translation sound and complete for
+the formulas at issue. The fixed grammar \(G_0\) consists of formulas in
+conjunctive normal form \(\widehat{A} \wedge \pi\), where
+\(\widehat{A}\) uses no provenance predicate and may use shared-input
+and operational symbols, and \(\pi\) is the provenance clause: the
+witnesses are produced by a rule fixed in advance from data containing
+neither the truth value of \(P\) nor the discriminating invariant. The
+deletion operator is
+
+\[D_\pi(\widehat{A} \wedge \pi) = \widehat{A}.\]
+
+Such a formula is an \emph{axiom candidate} for \(P\). It is admitted
+for classification only after a verified conditional reduction
+
+\[T^* \vdash \forall \bar{x}\, \bigl( \widehat{A}(\bar{x}) \Rightarrow P(\bar{x}) \bigr)\]
+
+and after \(\pi\) passes the provenance-admissibility check. An admitted
+axiom is a \emph{restatement} inside \(G_0\) when
+
+\[T^* \vdash \forall \bar{x}\, \bigl( D_\pi(\widehat{A} \wedge \pi) \leftrightarrow P(\bar{x}) \bigr),\]
+
+and it is a \emph{supply} when the conditional reduction is verified but
+equivalence fails. A non-equivalent formula without the verified
+reduction is a candidate, not yet a supply. Outside \(G_0\) the same
+deletion test is structural evidence, not a completeness theorem.
+
+\textbf{Definition 3.5 (Halt loci and seat).} Each row first specifies
+its halt locus \(L_H\) as part of the structural parameter ledger;
+\(L_H\) is not automatically \(\operatorname{Fix}(\tau)\) or another
+symmetry fixed set. A frame is \emph{reader-barred} when a theorem about
+the readout class forbids return of \(d\); \emph{witness-absent} when
+the reader is unbarred, no corpus reading constructs a witness, and the
+specified locus \(L_H\) is nonempty; \emph{terrain-empty} when the
+specified \(L_H\) is empty. In a Boolean odd involution frame,
+\(\operatorname{Fix}(\tau) = \emptyset\) is immediate and is not by
+itself an object-level terrain-empty conclusion. A \emph{crossed
+occupant} is a dated instance whose witness was later supplied and
+independently verified. The \emph{seat check} is the router bit
+recording whether such a witness has entered the corpus.
+
+Three requirements organize a supply-schema. \emph{Derivation}:
+\(A \Rightarrow P\) with cited inputs and a dependency census.
+\emph{Separation}: a corpus-relative no-reading theorem proved against a
+named reading class. \emph{Calibration}: at least one crossed occupant
+routed correctly with the seat bit present and misrouted when it is
+hidden.
+
+\subsection{4. The Core}\label{the-core}
+
+\textbf{Theorem 4.1 (Odd--Supply Separation).} \emph{Let \(\tau\) be an
+involution on \(X\), let \(d\) be odd, and let every \(r \in C\) be
+even. Then no finite coalition of readings decides \(d\): there is no
+\(h\) and no \(r_1, \dots, r_k \in C\) with
+\(d = h \circ (r_1, \dots, r_k)\).}
+
+\emph{Proof.} For every \(x\), evenness gives \(r_i(\tau x) = r_i(x)\)
+for all \(i\), hence
+\(h(r_1(x), \dots, r_k(x)) = h(r_1(\tau x), \dots, r_k(\tau x))\).
+Oddness gives \(d(\tau x) \neq d(x)\). No such \(h\) exists. \(\square\)
+
+\textbf{Theorem 4.2 (Crossing).} \emph{Let \(s\) be an even
+orbit-separating reading and \(o\) an odd reading under \(\tau\). Then
+the pair \((s, o)\) decides \(d\): if \(s(x) = s(y)\) and
+\(o(x) = o(y)\), then \(d(x) = d(y)\).}
+
+\emph{Proof.} If \(s(x) = s(y)\), orbit separation gives \(y = x\) or
+\(y = \tau x\). The first case gives \(d(x) = d(y)\). The second is
+incompatible with \(o(x) = o(y)\) because \(o(\tau x) = 1 - o(x)\).
+\(\square\)
+
+The two-line theorems are not the paper's depth. They are the invariant
+core after the reading class has been earned. The next theorem is the
+hardening addition: it replaces the involution idiom with a finite
+representation statement and turns ``one bit'' into a dimension count.
+
+\textbf{Theorem 4.3 (Representation Supply; finite setting).} \emph{Let
+\(X\) be finite, let \(\Gamma\) act on \(X\), and let
+\(V = \mathbb{C}^X\) carry the permutation representation. For any
+supplied reading set \(S\), let \(\mathcal{A}(S)\) be the unital algebra
+it generates under the pointwise operations. Then \(d\) is decidable
+from \(S\) exactly when \(d \in \mathcal{A}(S)\), equivalently exactly
+when}
+
+\[r(x) = r(y) \text{ for every } r \in S \implies d(x) = d(y).\]
+
+\emph{If every supplied reading is \(\Gamma\)-invariant, then
+\(\mathcal{A}(S) \subseteq V^\Gamma\); consequently, if \(d\) has
+nonzero projection onto a nontrivial isotypic component, no function of
+those readings equals \(d\). Isotypic support coverage is necessary for
+a linear decoder, not for arbitrary nonlinear decoding. For
+\(\Gamma = \mathbb{Z}/2\), \(V = V_+ \oplus V_-\), invariant readings
+generate a subalgebra of \(V_+\), and for Boolean odd \(d\) the centered
+target \(q = d - \tfrac{1}{2}\) lies in \(V_-\). One independent odd
+coordinate suffices when an even orbit separator is present.}
+
+\emph{Proof.} On a finite set, the unital algebra generated by \(S\) is
+exactly the algebra of functions constant on the joint fibers of \(S\):
+generators are constant on those fibers, the pointwise operations
+preserve the property, and interpolation on each fiber produces every
+such function. Hence \(d \in \mathcal{A}(S)\) exactly when equal
+supplied readings imply equal target values, which is also exactly the
+existence of a decoder. If every generator is invariant, every generated
+function is fixed by \(\Gamma\), so
+\(\mathcal{A}(S) \subseteq V^\Gamma\). If \(d = d_0 + d_1\) with
+\(d_0 \in V^\Gamma\) and \(d_1\) nontrivial, every reading-side
+candidate has zero nontrivial projection while \(d\) does not; equality
+is impossible. A linear decoder must reproduce the nontrivial support
+coordinates, whereas a nonlinear decoder can combine supplied
+coordinates into a new component, so support coverage is not a general
+necessity. In the \(\mathbb{Z}/2\) case the decomposition is
+\(f(x) = (f(x) + f(\tau x))/2 + (f(x) - f(\tau x))/2\), the first
+summand even and the second odd. For Boolean odd \(d\), this
+decomposition is \(d(x) = \tfrac{1}{2} + q(x)\) with
+\(q(\tau x) = -q(x)\), so the odd content is the centered part. Theorems
+4.1 and 4.2 are the Boolean shadow. \(\square\)
+
+\textbf{Corollary 4.4 (One-bit corollary).} \emph{For an involution
+frame with an even orbit separator, the minimal odd supply for an odd
+Boolean target is one binary coordinate. This is a supply-dimension
+count: one independent odd coordinate is supplied, while \(\dim V_-\)
+equals the number of free two-point \(\tau\)-orbits. It is not a Shannon
+claim unless a probability measure on \(X\) is separately supplied.}
+
+\textbf{Theorem 4.5 (Provenance Collapse, scoped; theorem inside
+\(G_0\), structural outside).} \emph{Let \(G_0\), \(D_\pi\), and \(T^*\)
+be as in Definition 3.4. For an admitted axiom
+\(\widehat{A} \wedge \pi \in G_0\), the axiom is a restatement of \(P\)
+exactly when}
+
+\[T^* \vdash \forall \bar{x}\, \bigl( \widehat{A}(\bar{x}) \leftrightarrow P(\bar{x}) \bigr),\]
+
+\emph{and it is a supply exactly when the verified conditional reduction
+\(\widehat{A} \Rightarrow P\) holds and this equivalence fails. Miller's
+GRH-based primality reduction and Lagarias's elementary criterion are
+named test candidates, not executed validations: no explicit \(G_0\)
+encoding or corpus admission record is displayed here, so neither is
+counted as evidence for this theorem {[}17, 14{]}. Author-preprint
+instances are excluded. Outside \(G_0\) the deletion test remains the
+correct structural screen and is not asserted complete.}
+
+\emph{Proof.} The conjunctive normal form makes \(D_\pi\) total and
+unambiguous. Admission first verifies \(\widehat{A} \Rightarrow P\) and
+the provenance clause, so every classified formula is an axiom for
+\(P\). By Definition 3.4, restatement is exactly equivalence after
+deletion, and supply is the complementary admitted case. Decidability of
+\(T^*\) over the full non-provenance signature makes the equivalence
+test mechanical inside \(G_0\), including formulas containing
+operational symbols. No completeness assertion follows for formulas
+outside the grammar, and no named external candidate supplies evidence
+without an explicit encoding. \(\square\)
+
+The earlier broad reading of collapse is retired here. Miller and
+Lagarias now mark the required encoding workload rather than discharged
+evidence: the former is expected to screen as supply because GRH is not
+equivalent to its primality consequence, and the latter as restatement
+because its criterion is equivalent to RH, but those expectations earn
+no theorem-grade mass until the encodings and admission certificates are
+displayed. What is theorem-grade is the criterion inside the fixed
+grammar; what is structural is the expectation that the grammar covers
+the next candidate.
+
+\subsection{5. Dated Termination and the
+Seat}\label{dated-termination-and-the-seat}
+
+\textbf{Theorem 5.1 (First-Sufficient-Entry; theorem for the named
+reading class, structural as law).} \emph{Let \(\Delta_t\) be the corpus
+at date \(t\) and let \(C_t\) be the reading class generated by
+\(L_{\Delta_t}\). Readings persist: \(C_t \subseteq C_{t'}\) for
+\(t \le t'\). Verified constructions become readings when recorded. If
+\(d\) is odd under the native involution and every generator of \(C_t\)
+is even, then no reading at \(t\) decides \(d\). The first date at which
+\(d\) becomes decidable is the first verified entry of readings whose
+joint fibers refine the target fibers:}
+
+\[\forall r \in C_t,\quad r(x) = r(y) \implies d(x) = d(y).\]
+
+\emph{For an involution frame, a provenance-clean odd reading
+(provenance-clean meaning its dependency hash is not contained in the
+corpus at the entry date) is sufficient only together with an even orbit
+separator or an equivalent decoder whose joint fibers refine those of
+\(d\).}
+
+\emph{Proof.} Monotonicity is immediate from dependency inclusion. The
+separation half is Theorem 4.1 applied to generators of \(C_t\): even
+generators generate even readings. Decidability of \(d\) from a supply
+is exactly fiber refinement: a decoder exists precisely when equal
+supplied readings imply equal target values. A change from
+non-refinement to refinement requires a new generator not in
+\(L_{\Delta_t}\), which by Definition 3.3 enters the reading class only
+after admission and verification. In the involution case, oddness alone
+changes value across each \(\tau\)-orbit and does not separate points
+within an orbit; Theorem 4.2 supplies sufficiency when an even orbit
+separator is present. \(\square\)
+
+\textbf{Corollary 5.2 (Perelman control; theorem on scaling exponents,
+historical calibration).} \emph{For the pre-November-2002 Ricci-flow
+reading class generated by volume ratios and explicitly dimensionless
+ratios, such as distance divided by \(\sqrt{|t|}\) or by a curvature
+length scale, parabolic rescaling acts with exponent zero on the named
+generators. Raw distance, raw curvature scale, and injectivity radius
+are length-bearing quantities, not exponent-zero generators, and are
+excluded from this class. In the Ricci-flow carrier the later package is
+monotone for the backward conjugate heat equation and is stationary on
+gradient shrinking solitons; that analytic fact is cited, not proved
+here. The collapsed cigar soliton is named only as a limit-case
+diagnostic; no cigar-exclusion theorem is derived from this finite
+reading class. The \(W\)-functional and reduced length enter as
+constructions {[}10, 19, 20, 12, 18, 8{]}. The schema retro-types the
+crossing and attributes no intent.}
+
+\textbf{Remark (Scale-Invariant Monotone Supply; structural pattern,
+premise as program).} The portable Perelman form is a scale-invariant
+monotone supply: zero scaling exponent, monotonicity along a flow,
+stationary points that are self-similar, and a recorded corpus-entry
+date. Perelman is the crossed control of this pattern. The identity
+claimed is formal, not object-level: one crossing type across problems,
+one constructed carrier per problem. The pattern reaches flow/RG-type
+rows only; Hodge and P versus NP remain outside unless a natural flow
+and a monotone quantity are constructed.
+
+\textbf{Theorem 5.3 (Seat-Hiding Necessity).} \emph{Let a router observe
+only the frame and the reading record, with the seat bit hidden. If two
+histories differ only in whether a crossed witness has entered, the
+router returns the same token on both. Hence no terminal family without
+a seat input can distinguish a crossed occupant from an uncrossed one.}
+
+\emph{Proof.} The two histories are equal on every input the router
+reads. Any deterministic or randomized router with the same visible
+input and the same random seed returns the same output distribution.
+Distinguishing the histories requires a bit whose value differs between
+them; that bit is the seat. \(\square\)
+
+\subsection{6. Finite-Law Layer}\label{finite-law-layer}
+
+This layer is self-contained. It uses finite probability laws and exact
+rational arithmetic only.
+
+\textbf{Proposition 6.1 (Unique finest partition).} \emph{Let \(P\) be a
+strictly positive probability law on a finite product. If \(P\)
+factorizes across two block partitions, it factorizes across their
+common refinement. Hence the finest partition into mutually independent
+blocks is unique. Writing \(b\) for the number of non-singleton blocks,
+a law carries exactly \(2^b - 1\) nonempty unions of non-singleton
+blocks; singleton blocks are excluded from the count.}
+
+\emph{Proof.} Strict positivity makes independence cellwise: blocks are
+independent exactly when every cell probability equals the product of
+its marginals. If two factorizations hold, every cell in the common
+refinement also splits as a product of the corresponding side marginals,
+so the refinement factorizes. The finest factorizing partition is
+therefore unique. Unions of non-singleton blocks factorize against their
+complements, distinct unions give distinct domains, and the count
+follows. \(\square\)
+
+\textbf{Proposition 6.2 (Coalition versus atomic closure).} \emph{Let
+\(A\) and \(C\) be independent uniform bits, set \(A_1 = A_2 = A\),
+\(C_1 = C\), and \(C_2 = C \oplus A\), with the four joint states
+equally likely. Then the pairwise channels are silent and the coalition
+carries one bit:}
+
+\[I(C_1; A_1 A_2) = 0, \\ I(C_2; A_1 A_2) = 0, \\ I(C_1 C_2; A_1 A_2) = 1.\]
+
+\emph{Closure tested against each outside system singly admits
+\(\{A_1, A_2\}\) as a spurious domain; closure tested against the
+outside coalition refuses it.}
+
+\emph{Proof.} \(C_1 = C\) is independent of \((A_1, A_2) = (A, A)\).
+Since \(A\) is uniform and independent of \(C\), \(C \oplus A\) is
+uniform and independent of \(A\), so \(C_2\) is independent of
+\((A_1, A_2)\). Jointly, \((C_1, C_2) = (C, C \oplus A)\) determines
+\(A\), while \((A_1, A_2)\) determines \(A\); the mutual information is
+one bit exactly. \(\square\)
+
+\textbf{Proposition 6.3 (Exhibition lemma; analytic on record variables,
+structural on the exhibition bridge).} \emph{Adjoin to a finite law an
+exhibitor variable \(E\) that is not independent of one representative
+variable in each non-singleton block of the finest partition. Then all
+those blocks merge with \(E\) into one block. The registration-chain
+conclusion is conditional: if the exhibition bridge is defined so that
+each exhibition creates the displayed dependence on the exhibited
+record, then exhibiting two members registers both and constructs the
+chain between them. Exhibition alone does not create that dependence,
+and no Cantorian fixed-point content is asserted.}
+
+\emph{Proof.} In the finest partition of the enlarged law, \(E\)
+occupies exactly one block. If \(E\) is dependent on a representative of
+block \(B_i\), it cannot be separated from \(B_i\) by a factorizing cut,
+so \(E\)'s block contains \(B_i\). The same applies to every represented
+block, so one block contains them all. The chain statement follows only
+after the exhibition bridge supplies the premise that exhibition creates
+the dependence; without that premise, an exhibitor can remain
+independent and no registration chain is forced. \(\square\)
+
+\textbf{Proposition 6.4 (Determinant readout blindness; antecedent
+{[}22, 7{]}).} \emph{Choose balanced \(x, y \in \{\pm 1\}^{24}\) with
+\(x \cdot y = 0\) and set \(z = xy\) componentwise. Then \(z\) is
+balanced, the rows \(x, y, z\) are pairwise orthogonal with Gram matrix
+\(24 I_3\), and with the 24 coordinate positions equally likely each
+pair factorizes exactly and the total correlation is one bit exactly.
+Such pairs exist: fix any balanced \(x\) and let \(y\) disagree with
+\(x\) on six plus positions and six minus positions. The normalized
+determinant readout satisfies \(\det(24 I_3)/24^3 = 1\) and therefore
+reports no third-order dependence. The claim is scoped to determinant or
+Gram readouts; it is not a claim about every conceivable functional.}
+
+\emph{Proof.} Orthogonality gives
+\(x \cdot y = x \cdot z = y \cdot z = 0\); balance gives zero means, so
+the Gram is \(24 I_3\) and, under the uniform law on the coordinate
+positions, each balanced pair is independent. The XOR relation makes any
+two rows determine the third, giving one bit of total correlation. The
+determinant of a scalar identity is the scalar to the third power, hence
+the normalized value is one. \(\square\)
+
+\subsection{7. Seven-Row Diagnostic Map}\label{seven-row-diagnostic-map}
+
+The instantiation rule is now a gate, not a metaphor. The actions named
+in Table 1 are object-domain actions; they do not automatically become
+the finite group \(\Gamma\) of Definition 3.1. P versus NP supplies no
+row-specific \(L_H\) in this paper, so complementation's empty fixed set
+is not used as a terrain-empty proof. RH supplies no finite \(X\) and
+remains structural. Navier--Stokes critical scaling and Yang--Mills
+strong-coupling alternation are continuous or Lie-type actions and enter
+the finite core only through Definition 3.2. Hodge deformation and the
+BSD model swap carry the same gate. Poincaré is a crossed calibration,
+not an open-row application of Theorem 4.3. If a future bridge is
+supplied, evenness is proved generator by generator after pullback, and
+the conclusion is stated on all of \(X\) when \(B\) is surjective or on
+\(Y = B(M)\) otherwise; absent that image clause no finite theorem is
+invoked.
+
+\textbf{Table 1.} Six open rows and one crossed control under Definition
+3.2.
+
+\begin{table*}[!tbp]
+\smaller
+\centering
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Problem
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Target bit \(d\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Object-domain action
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Halt locus
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Finite-core status
+\end{minipage} \\
+\midrule\noalign{}
+\bottomrule\noalign{}
+P versus NP & equality string & complementation candidate; row locus not
+supplied & unclassified; no \(L_H\) supplied & structural;
+finite-instance bridges only \\
+Riemann Hypothesis & truth direction & content negation and gauge &
+reader-barred & structural; no finite \(X\) supplied \\
+Yang--Mills & continuum limit exists & strong-coupling alternation &
+witness-absent & structural; bridge absent \\
+Navier--Stokes & no breakdown & critical scaling \(a_* = 3/(2p)\) &
+witness-absent, inert & structural; bridge absent \\
+Hodge & class algebraic & deformation; rigid point & witness-absent &
+structural; bridge absent \\
+BSD & rank identity & model swap & witness-absent by separation &
+structural; bridge absent \\
+Poincaré control & noncollapsing & parabolic rescaling & witness-absent,
+then resolved & crossed calibration; outside the open-row gate \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\emph{Interpretation.} No open row invokes the finite theorems until an
+equivariant coordinate bridge is supplied; the table is diagnostic, not
+a solution claim. The six open rows carry structural status only,
+because none supplies the bridge, factorization, and image clause that
+Definition 3.2 requires. The Poincaré row is the calibration witness: it
+sits outside the open-row gate and certifies that the schema routes a
+supplied crossing correctly.
+
+\subsection{8. Falsifiable Predictions of Part
+I}\label{falsifiable-predictions-of-part-i}
+
+The parameter ledger is exact: zero free physical parameters, zero new
+object-level predictions, and two framework-level falsifiers, scoped to
+Part I. Retrodictive calibration is counted only as calibration. The
+zero is a boundary statement, not a tunable model awaiting fit.
+
+The structural choices are fixed before classification: the finite set
+\(X\), the group \(\Gamma\), the target \(d\), the generator census, the
+admissible decoder class, the corpus semantics, any coordinate bridge,
+and the grammar \(G_0\). None is revised after a row is classified. A
+change to any one opens a new instance rather than rescuing the old one.
+
+The two criteria below are armed, typed forced, and no third is
+volunteered. The count of two is scoped to Part I: Part II states six
+falsifiers F1--F6: F1 re-arms the forced core block armed here, and
+F2--F6 are hypothesis-grade.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Prediction.} \emph{Every claimed corpus-relative reading that
+  decides an odd target in Table 1 either fails evenness on a generator
+  or contains a dependency edge to a construction outside the named
+  corpus.} \textbf{Method.} Run the dependency census and evaluate each
+  generator on \(x\) and \(\tau x\). \textbf{Expected.} A decidable
+  claim shows a new function symbol or object not denotable at the
+  corpus date. \textbf{Null hypothesis.} An even reading on the named
+  corpus decides \(d\) with no construction edge; one exhibited instance
+  refutes the instantiated separation. \textbf{Necessity and blast
+  radius.} Forced by Theorems 4.1 and 5.1; firing compromises the
+  corresponding row's separation claim and nothing in Propositions
+  6.1--6.4.
+\item
+  \textbf{Prediction.} \emph{A termination router whose observation map
+  hides the crossing label misroutes every displayed history pair with
+  equal observations and different crossing labels.} \textbf{Method.}
+  Fix crossed and uncrossed histories \(H_1, H_0\) with
+  \(O(H_1) = O(H_0)\) and \(c(H_1) \neq c(H_0)\), then run the router
+  without the seat input. \textbf{Expected.} The router returns the same
+  terminal token on both histories. \textbf{Null hypothesis.} A router
+  using only \(O\) returns different terminal tokens on the displayed
+  pair; one verified instance refutes this routing prediction.
+  \textbf{Necessity and blast radius.} Forced by Theorem 5.3; firing
+  retires the seat-routing claim, while a rule with access to additional
+  observations is a different router and does not fire the null.
+\end{enumerate}
+
+\subsection{9. Discussion of Part I}\label{discussion-of-part-i}
+
+Table 2 is the contribution map: proved finite items, scoped criteria,
+and no inflated claim on the objects. The contribution is a supply-side
+theory with a hard boundary. It does not prove RH, NS regularity, Hodge,
+BSD, Yang--Mills existence, or P versus NP. It states where the block
+sits for a named reading class and what kind of act crosses it: a
+construction whose dependency hash is admitted and verified in the
+corpus. The representation theorem is the new mathematical spine. The
+involution form becomes available to an object row only after a
+coordinate bridge; until then the seven-row table is a diagnostic map
+and no finite theorem is invoked.
+
+\textbf{Table 2.} Master table of new theorem-grade items. Finite
+theorems are proved here; grammar- and law-level statements are scoped.
+Corollary 5.2 is a cited calibration and is not counted as new
+object-mathematics.
+
+\begin{table*}[!tbp]
+\smaller
+\centering
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Item
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Grade
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Brief analytic note
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Contribution counted as new
+\end{minipage} \\
+\midrule\noalign{}
+\bottomrule\noalign{}
+Theorem 4.1, Odd--Supply Separation & theorem, finite & even generators
+close under pairing; an odd target flips across \(\tau\) & named
+readings cannot decide \(d\) \\
+Theorem 4.2, Crossing & theorem, finite & orbit separation leaves only
+\(x\) and \(\tau x\); the odd bit kills the \(\tau\) case & one odd
+coordinate plus an even separator decides \(d\) \\
+Theorem 4.3, Representation Supply & theorem, finite & the generated
+observable algebra decides exactly on fiber refinement; invariant
+algebra lands in \(V^\Gamma\) & exact sufficiency is algebraic; support
+coverage is the linear-decoder corollary \\
+Corollary 4.4, One-bit corollary & corollary & for \(\mathbb{Z}/2\),
+\(V = V_+ \oplus V_-\) and \(\dim V_-\) counts free orbits & one
+supplied odd coordinate is counted, not a Shannon bit \\
+Theorem 4.5, Provenance Collapse & theorem in \(G_0\); structural
+outside & admit a verified reduction, delete the provenance clause, and
+test full-signature equivalence & restatement screening is checkable
+only in a fixed grammar \\
+Theorem 5.1, First-Sufficient-Entry & theorem for named class;
+structural as law & readings persist; verified constructions enter at
+dated boundaries & termination changes only when supplied fibers refine
+target fibers \\
+Theorem 5.3, Seat-Hiding Necessity & theorem & histories equal on
+visible inputs give the same router output & crossed versus uncrossed
+requires the seat bit \\
+Proposition 6.1, Unique finest partition & finite theorem & strict
+positivity makes independence cellwise; common refinement factorizes &
+unique independent blocks and the count \(2^b - 1\) \\
+Proposition 6.2, Coalition versus atomic closure & finite theorem &
+\(C\) is independent of \(A\); \(C \oplus A\) is independent of \(A\);
+jointly they determine \(A\) & coalition closure refuses the spurious
+atomic domain \\
+Proposition 6.3, Exhibition lemma & analytic on records; structural
+bridge & a dependent exhibitor cannot be cut from represented blocks & a
+registration chain follows only under the stated dependence bridge \\
+Proposition 6.4, Determinant readout blindness & finite theorem, scoped
+& balanced orthogonal triple; Gram \(24 I_3\); XOR gives one bit &
+determinant/Gram readouts miss third-order dependence \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\emph{Interpretation.} The ledger separates proved finite items from
+scoped criteria: Theorems 4.1--4.3 and Propositions 6.1--6.4 are finite
+theorems; Theorem 4.5 is theorem-grade only inside the fixed grammar
+\(G_0\) and structural outside; Theorem 5.1 is a theorem for the named
+reading class and structural as a law. Corollary 5.2 enters as
+calibration, not as new object-mathematics.
+
+Table 3 has a track record and a boundary. Mean curvature flow,
+frequency functions, two-dimensional RG irreversibility,
+four-dimensional RG flow, and the sigma-model/Ricci-flow bridge show the
+same shape {[}26, 24, 31, 27, 25{]}. None of these supplies the missing
+functional for an open row; the Perelman move remains the construction
+of the quantity itself.
+
+\textbf{Table 3.} SIMS diagnostic, structural grade only.
+
+\begin{table*}[!tbp]
+\smaller
+\centering
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Row
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Flow
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Settled adjacent fact / self-similar part
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Missing monotone supply
+\end{minipage} \\
+\midrule\noalign{}
+\bottomrule\noalign{}
+Poincaré control & Ricci flow & \(\kappa\)-solutions classified & \(W\),
+supplied {[}19, 20, 12, 18, 8{]} \\
+Navier--Stokes & equation flow & self-similar blowup excluded {[}28,
+30{]} & a funnel forcing asymptotic self-similarity \\
+Yang--Mills & RG flow & \(a\)-theorem constrains endpoints {[}27{]} &
+force the infrared end to be trivial and gapped \\
+Riemann & de Bruijn--Newman heat flow & adjacent bound \(\Lambda \ge 0\)
+{[}29{]}; no self-similar endpoint & force \(\Lambda \le 0\) \\
+Hodge; P versus NP & no natural flow & none & no foothold \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\emph{Interpretation.} A row names where a scale-invariant monotone
+supply is present, excluded, or missing; the table is not a solution
+claim. The pattern has exactly one supplied instance, the Poincaré
+control; every other row names a missing monotone supply or no foothold,
+and no row supplies a functional for an open problem.
+
+Four limitations remain load-bearing. The censuses behind structural
+rows are structural, each with a standing falsifier. The continuous rows
+have no finite-core force until a coordinate bridge is supplied. The
+calibration row is retrodictive: Poincaré was typed with the crossing
+known, so it certifies discrimination and predicts nothing by itself.
+The theory's mass on the objects is zero by construction; every theorem
+about zeta zeros, vorticity, cycles, ranks, fields, languages, or
+manifolds is cited from the literature.
+
+The hardening relative to the earlier draft is exact. Reading classes
+are syntactic, not universal. Evenness is proved generator by generator,
+not asserted of all possible readings. Continuous rows pass through the
+coordinate-bridge gate or remain structural. Provenance collapse is
+complete only inside the fixed grammar now displayed. Determinant
+blindness is proved on a balanced orthogonal triple and scoped to
+determinant readouts. The Perelman exponent-zero class excludes length
+scales. The information idiom is demoted unless a measure is supplied;
+the surviving bit is an isotypic dimension.
+
+The completeness question taken up in the conclusion---whether a dated
+reading class can be enumerated up to the representation
+obstruction---remains open; Part II addresses one coordinate of that
+question by hypothesis, naming the missing orientation supply without
+closing the enumeration problem.
+
+\subsection{10. Conclusion of Part I}\label{conclusion-of-part-i}
+
+A conditional reduction buys a premise, and the premise now has a
+theory. The gap is odd, the named readings are even, and termination
+follows only after the reading class is earned. Crossing is a
+fiber-sufficient supply, dated at verified entry. For continuous rows
+the coordinate bridge is the gate: no bridge, no finite-core invocation.
+The crossed control proves the router can tell a supplied witness from
+an absent one only when the seat bit is present. The same row is the
+non-vacuity witness for SIMS: it proves the schema has a supplied
+crossing, not that one functional settles another row. The open question
+that matters is completeness: whether a dated reading class can be
+enumerated up to the representation obstruction. Until then, the
+standing prediction is sharp and small: a claimed reading that decides
+an odd Millennium target will show a construction edge or fail parity.
+
+Part II takes up one coordinate of that completeness question: it states
+the One-Cut Hypothesis at hypothesis grade, naming the missing
+orientation supply for each certified frame, and develops its
+conditional severance map and falsifiers as an extension of, not a
+replacement for, the finite core proved here.
+
+\section{Part Two --- The Hypothesis · The One-Cut
+Hypothesis}\label{part-two-the-hypothesis-the-one-cut-hypothesis}
+
+\emph{Orientation Supply After Odd--Supply Separation --- the sealed
+second paper of the arc, reprinted intact.}
+
+\subsection{11. The Statement in One
+Page}\label{the-statement-in-one-page}
+
+\subsubsection{11.1 Frame recall and notation
+harmonization}\label{frame-recall-and-notation-harmonization}
+
+Part I built the supply frame, proved its core theorems, and fixed the
+coordinate-bridge gate; this Part recalls only what it uses. An
+Odd--Supply frame is a finite data set with a symmetry, a Boolean
+target, a reading class, and a dated corpus (Definition 3.1 of Part I).
+In the involution case used in Part II, the frame of Definition 3.1 is
+written \((X, \tau, d, C, \Delta)\), with
+\(\Gamma = \langle\tau\rangle \cong \mathbb{Z}/2\) (the involution
+specialization reorders Definition 3.1's \((X, \Gamma, C, d, \Delta)\),
+placing the target third and the reading class fourth): here \(X\) is a
+finite data set, \(\tau\) is an involution on \(X\),
+\(d : X \to \{0,1\}\) is the undecided predicate, \(C\) is a class of
+readings closed under pairing, and \(\Delta\) is the dated corpus. A
+reading \(r\) is \emph{even} under \(\tau\) when \(r(\tau x) = r(x)\);
+the target \(d\) is \emph{odd} under \(\tau\) when
+\(d(\tau x) = 1 - d(x)\). Throughout, the \emph{named seven-row class}
+means the rows of Table 1 of Part I under the Definition 3.2 bridge
+gate: six open Millennium rows and one crossed control, no open row
+invoking the finite theorems until an equivariant coordinate bridge is
+supplied. The block theorem of Part I is Odd--Supply Separation (Theorem
+4.1): if \(d\) is odd and every generator of \(C\) is even, then no
+finite coalition of readings decides \(d\).
+
+What the even register cannot decide is exactly one bit --- one
+coordinate of the odd isotypic component (Corollary 4.4 of Part I); one
+bit of entropy at invariant laws (§12.2) --- and that bit is an
+orientation.
+
+\subsubsection{11.2 Hypothesis 11.1: the structural
+form}\label{hypothesis-11.1-the-structural-form}
+
+\textbf{Hypothesis 11.1 (One-Cut Hypothesis, structural form;
+hypothesis-grade).} \emph{For every Odd--Supply frame
+\((X, \tau, d, C, \Delta)\) in the named seven-row class, if \(d\) is
+odd under the native answer-flip, every generator of \(C\) is even, and
+\(C\) contains an even orbit-separating reading \(s\) (equivalently, the
+joint fibers of \(C\) refine the \(\tau\)-orbit partition), then there
+exists one provenance-clean orientation supply \(o\) with}
+
+\[o(\tau x) = 1 - o(x), \qquad o \perp C \ \text{on each $\tau$-orbit}.\]
+
+\emph{such that \((C, o)\) decides \(d\).}
+
+The separator clause is the standing sufficiency hypothesis of Theorem
+4.2 and Corollary 4.4 of Part I; it is even, not an orientation
+coordinate, so it does not change the one-bit claim or F2. The universal
+quantification ranges over present or future gate-passing certified
+frames and is currently non-vacuous only at the crossed Poincaré
+control. Here a \emph{certified Odd--Supply frame} is a named-class
+frame meeting the antecedent of Hypothesis 11.1, including the separator
+clause, together with the gate obligations of Definition 3.2: a supplied
+equivariant coordinate bridge with the factorization and image clause.
+
+The cut is not a new readout and not a restatement: it is the dated
+entry of the one coordinate the even register cannot author.
+
+\subsubsection{11.3 The pipeline}\label{the-pipeline}
+
+The hypothesis sits in a five-arrow pipeline:
+
+\[\text{resistance} \;\Rightarrow\; \text{defeater} \;\Rightarrow\; \text{even method class}\]
+\[\;\Rightarrow\; \text{one odd orientation supply} \;\Rightarrow\; \text{decision}.\]
+
+The first two arrows are the census converse on the method-blocked
+class, an external hypothesis-grade input made precise in §15.1; the
+third arrow is Hypothesis 11.1 itself; the fourth is the crossing
+theorem of Part I (Theorem 4.2), recalled in §13.3 and not re-proved
+here.
+
+\subsubsection{11.4 The grand form, stated with its
+teeth}\label{the-grand-form-stated-with-its-teeth}
+
+\textbf{Hypothesis 11.2 (One-Cut Hypothesis, grand form;
+hypothesis-grade).} \emph{If a uniform constructor \(S\) exists that
+takes a certified Odd--Supply frame and returns its orientation supply
+\(o = S(X, \tau, d, C, \Delta)\), with the dependency hash of \(o\)
+entering \(\Delta\) at the entry date, then the seven rows are severed
+as conditional reductions: granting \(S(P)\) grants each row's bought
+premise.}
+
+That is the one-stroke claim. It is hypothesis-grade until \(S\) is
+constructed, or the census converse and the seven orientation carriers
+are proved.
+
+\subsubsection{11.5 Hard boundary and three-sentence
+perimeter}\label{hard-boundary-and-three-sentence-perimeter}
+
+\textbf{The hard boundary.} The cut severs the decision bit; it does not
+replace object-level construction where the missing supply is not
+Boolean. Navier--Stokes still needs its modulus, Hodge its witness, the
+Riemann Hypothesis its operator, P versus NP its obstruction family. The
+universal part is the orientation-seat mechanism, not one magical object
+shared by all seven. Where a row admits no Boolean orientation seat
+without category error, the One-Cut Hypothesis reads
+\emph{orientation-after-construction}; it never reads
+\emph{orientation-instead-of-construction}.
+
+\textbf{Perimeter in three sentences.} This is not a universal
+mathematics solver, and it is not seven object proofs by itself. It
+claims nothing about whether the seven conjectures are true, and it does
+not make undecidable or supply-absent problems vanish. It claims that
+where an odd target is blocked by an even register, the missing item is
+one located coordinate, and it says what kind of act crosses: a
+provenance-clean supply, dated at entry.
+
+\subsection{12. Inputs and Credit}\label{inputs-and-credit}
+
+Three carried inputs, each at its cited grade. No credit inflation is
+claimed, and the mechanism credits below decide how the rest may be
+read.
+
+\subsubsection{12.1 Input 1: the Bar,
+credited}\label{input-1-the-bar-credited}
+
+A readout class constant on the orbits of an answer-flipping family
+cannot separate a point from its image. This is the invariance
+obstruction, whose wider form is the relativization argument's own
+logic: Baker--Gill--Solovay 1975 {[}2{]}, natural proofs 1997 {[}21{]},
+algebrization 2008 {[}1{]}. The involution case is the two-element
+instance. The mechanism is not ours and is not claimed.
+
+\subsubsection{12.2 Input 2: the Width, credited and
+law-typed}\label{input-2-the-width-credited-and-law-typed}
+
+Under the Bar's hypotheses with \(\tau\) acting freely, the residual
+uncertainty is exactly one bit at invariant laws: conditioned on any
+even readout, the answer is uniform on the two orbit values. The Width
+converts an obstruction into a measured deficit --- finite, binary,
+located --- and every later result depends on the deficit being one and
+not merely positive. The entropy computation is two lines {[}7, 22{]}
+and no priority is claimed for it; the placement is the law-typing and
+the identification of the deficit with the orientation of a free
+two-point orbit.
+
+\subsubsection{12.3 Input 3: Odd--Supply Separation,
+internalized}\label{input-3-oddsupply-separation-internalized}
+
+The block theorem this Part answers is proved in Part I and is cited
+internally rather than re-proved. For finite data with a finite group
+action, readings generated by invariant observables decide only within
+the trivial isotypic component; a target with a nontrivial component
+requires supply in that component, and for an involution this reduces to
+one odd bit beside an orbit-separating reading (Theorems 4.1--4.3 and
+Corollary 4.4 of Part I). Provenance collapse is decidable inside a
+fixed axiom grammar by the deletion test (Theorem 4.5 of Part I);
+termination is corpus-relative (Theorem 5.1 of Part I), and a token
+changes only when the dependency hash of a new odd supply enters the
+corpus.
+
+\subsubsection{12.4 What Part II adds}\label{what-part-ii-adds}
+
+What this Part adds is the hypothesis that names the one coordinate, the
+conditional severance map across the seven rows, and the falsifier
+discipline. Nothing above the proved finite core of Part I is claimed as
+theorem; the structural form, the grand form, and the three routes of
+§15 are hypothesis-grade throughout.
+
+\subsection{13. The Cut}\label{the-cut}
+
+\subsubsection{13.1 Orientation supply}\label{orientation-supply}
+
+\textbf{Definition 13.1 (Orientation supply).} Let
+\((X, \tau, d, C, \Delta)\) be an Odd--Supply frame with \(d\) odd under
+\(\tau\) and every generator of \(C\) even. An \emph{orientation supply}
+is a reading \(o : X \to \{0,1\}\) such that:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(o\) is \emph{odd}: \(o(\tau x) = 1 - o(x)\);
+\item
+  \(o\) is \emph{independent of \(C\) on each \(\tau\)-orbit}: \(o\) is
+  not expressible as a function of the even register, and at any
+  \(\tau\)-invariant law, conditioned on any even readout, \(o\) is
+  uniform on the two orbit values;
+\item
+  \(o\) is \emph{provenance-clean}: at its entry date its dependency
+  graph is not contained in the dated corpus, so \(o\) enters \(\Delta\)
+  as a construction and becomes a reading only at every later corpus
+  that records it.
+\end{enumerate}
+
+\subsubsection{13.2 The cut and the supply
+operator}\label{the-cut-and-the-supply-operator}
+
+\textbf{Definition 13.2 (The cut; supply operator).} The \emph{cut} of a
+certified frame is the dated entry of one orientation supply into the
+corpus. A \emph{supply operator} \(S\) is a uniform constructor that
+takes a certified frame and returns its orientation supply,
+\(o = S(X, \tau, d, C, \Delta)\), with \(\mathrm{Dep}(o)\) entering
+\(\Delta\) at the entry date.
+
+\subsubsection{13.3 Sufficiency and necessity, recalled by
+citation}\label{sufficiency-and-necessity-recalled-by-citation}
+
+Sufficiency is the crossing theorem of Part I, recalled here and not
+re-proved: by Theorem 4.2, if \(s\) is an even orbit-separating reading
+and \(o\) an odd reading under \(\tau\), then the pair \((s, o)\)
+decides \(d\). Necessity is the block theorem: by Theorem 4.1, no
+function of even readings alone decides \(d\). Minimality is the one-bit
+corollary: by Corollary 4.4, for an involution frame with an even orbit
+separator, one independent odd coordinate is the minimal odd supply, a
+dimension count in the odd isotypic component \(V_{-}\), not a Shannon
+claim unless a probability measure is separately supplied.
+
+These proved items are the invariant core after the reading class has
+been earned: necessity is the block theorem, sufficiency is the
+crossing, minimality is the one-bit count. The two-line sufficiency
+proof is not this Part's depth. This Part's content is the hypothesis
+that the one coordinate exists and can be entered cleanly --- per row
+(Hypothesis 11.1) and uniformly (Hypothesis 11.2).
+
+\subsubsection{13.4 Why one cut and not
+many}\label{why-one-cut-and-not-many}
+
+Conflating the three one-bit objects in play is the one error this arc
+is built to prevent. The \emph{polarity bit} --- which of \(P\) or
+\(\neg P\) is under test --- is supplied by whoever writes the claim.
+The \emph{veto bit} --- does this reading pass --- is earned by the
+discipline that screens it. The \emph{truth-direction bit} --- does
+\(P\) or \(\neg P\) hold --- is supplied across the aperture by a
+determinacy witness and cannot be generated by any readout of the even
+register. The cut severs the third bit's seat, and only that seat. A
+hypothesis that tried to carry all three bits in one stroke would be a
+restatement wearing a premise's clothes, and the deletion test of the
+provenance screen (Theorem 4.5 of Part I) would collapse it.
+
+\subsection{14. The Seven-Row Instantiation as Conditional Severance
+Map}\label{the-seven-row-instantiation-as-conditional-severance-map}
+
+\subsubsection{14.1 The gate restated}\label{the-gate-restated}
+
+The instantiation rule is a gate, not a metaphor. The actions named in
+Table 4 below are object-domain actions; they do not automatically
+become the finite group of the frame. Continuous rows pass through the
+coordinate-bridge gate of Definition 3.2 or remain structural, and no
+open row invokes the finite theorems until an equivariant coordinate
+bridge is supplied, exactly as in §7 of Part I. The Poincaré row is a
+crossed calibration, not an open-row application.
+
+Table 4 states the row-level content of Hypothesis 11.1 conditionally:
+for each row of Table 1 it names the native flip or defeater, the even
+register that blocks it, the missing orientation carrier that Definition
+13.1 requires, what the cut buys, and what it does not prove.
+
+\textbf{Table 4. Conditional severance map: six open rows and one
+crossed control under the Definition 3.2 coordinate-bridge gate
+(cross-referencing Table 1 of Part I). No open row invokes the finite
+theorems until an equivariant bridge is supplied; the table is a
+conditional severance map, not a solution claim.}
+
+\begin{table*}[!tbp]
+\smaller
+\centering
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
+
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Problem
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Native flip / defeater
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Even register
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Missing orientation carrier
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+What the cut buys
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+What it does not prove
+\end{minipage} \\
+\midrule\noalign{}
+\bottomrule\noalign{}
+Riemann Hypothesis & content negation and gauge & functional-equation
+arguments without Euler product {[}33{]} & a self-adjoint operator,
+constructed from data that do not consult the zeros, whose spectrum is
+the zero heights {[}14{]} & real spectrum puts every zero on the line,
+in two lines & the operator's existence \\
+P versus NP & complementation as flip (empty fixed set not used as a
+halt proof) & relativizing, natural, algebrizing argument classes {[}2,
+21, 1{]} & an obstruction family (multiplicity form; the occurrence form
+is refuted {[}32{]}) separating the two orbit closures at every size &
+the obstruction witnesses the separation & the obstructions'
+existence \\
+Navier--Stokes regularity & critical scaling & energy and
+harmonic-analysis arguments {[}36{]} & a data-uniform modulus dominating
+the alignment defect & the continuation theorem forbids finite-time
+breakdown & the modulus; the row is orientation-after-construction \\
+Hodge conjecture & deformation; rigid point & semiregular deformation
+arguments {[}3, 4, 6{]} & a semiregular witness for every Hodge class &
+the deformation argument closes the conditional theorem & the witness;
+orientation-after-construction \\
+BSD & model swap & rank computations by separation & a rank-identity
+witness in the Heegner--Euler-system lineage {[}9, 13{]} & the
+analytic-order conditional closes & the witness construction \\
+Yang--Mills existence and mass gap & strong-coupling alternation &
+continuum-limit arguments & a scale-invariant monotone supply forcing
+the infrared end trivial and gapped & the flow-row conditional closes &
+the functional; orientation-after-construction \\
+Poincaré (crossed control) & parabolic rescaling & pre-November-2002
+Ricci-flow reading class {[}10{]} & the W-functional and reduced length
+--- supplied 2002 {[}19, 20{]} & the crossing is dated and verified &
+nothing open; this row calibrates the seat \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsubsection{14.2 Reading the table}\label{reading-the-table}
+
+Three features of Table 4 carry the grading. First, the fourth column is
+per-row object work: each named carrier is a construction this paper
+does not perform, and the hypothesis contributes only the claim that, on
+the decision bit, each such construction amounts to one located
+coordinate. Second, the fifth column is conditional throughout: the cut
+buys the closure of a conditional reduction, never the unconditional
+conjecture. Third, the sixth column keeps the hard boundary of §11.5 on
+the page: for Navier--Stokes, Hodge, and Yang--Mills the missing supply
+is not Boolean, and the row stands only as
+orientation-after-construction.
+
+\subsubsection{14.3 The crossed control as non-vacuity
+witness}\label{the-crossed-control-as-non-vacuity-witness}
+
+The crossed control is the non-vacuity witness for the whole schema: it
+proves the orientation-seat mechanism has a supplied crossing, not that
+one functional settles another row. The schema retro-types the crossing
+and attributes no intent. This is the same calibration role the control
+plays in Part I (Corollary 5.2), here read through the cut: the
+W-functional and reduced length entered the dated corpus as
+constructions, and the crossing is dated and verified.
+
+\subsection{15. Three Sufficient Proof
+Routes}\label{three-sufficient-proof-routes}
+
+Each route, if completed, proves the One-Cut Hypothesis for its rows;
+each ends at the same falsifier set of §16.
+
+\subsubsection{15.1 R1: the census converse, partially
+closed}\label{r1-the-census-converse-partially-closed}
+
+Two notions used here and in §17 are external to Part I and are defined
+briefly because Part I does not prove them. A \emph{defeater} for a
+reading class against a target is a pair of points indistinguishable to
+every readout of the class but carrying opposite answers; the
+\emph{species dichotomy} sorts resistance into a \emph{common species},
+where non-factorization produces such a pair, and a \emph{diagonal
+species}, where no defeater of any kind exists. These come from the
+Trisduction census discipline {[}11{]} and enter Part II as an
+\textbf{external hypothesis-grade input}, credited and not re-derived.
+
+On the common species the converse is already theorem within that
+discipline: for a coalition-closed class, resistance is equivalent to
+the existence of a pair defeater, and the species dichotomy shows every
+resistance is either common, where non-factorization produces the pair,
+or diagonal, where no defeater exists {[}11{]}. The diagonal species is
+not empty: the total computable functions against halting are its
+witness {[}37{]}; that witness is infinite and external to the
+finite-frame formalism of Part I and is not imported into it. R1's
+residual open content is therefore exact: prove that each method-blocked
+row of §14 sits in the common species, and the defeater leg of the §11.3
+pipeline is discharged by theorem rather than hypothesis. A row landed
+in the diagonal species breaks the census leg and fires F3.
+
+\subsubsection{15.2 R2: direct construction of the seven orientation
+carriers}\label{r2-direct-construction-of-the-seven-orientation-carriers}
+
+Construct, per row, the object named in the fourth column of Table 4,
+with provenance checked before any strength is claimed: a route-axiom
+whose witness may be built from the conjecture's own conclusion is
+equivalent to the conjecture and is not a premise for it {[}14, 17{]}.
+This is the object-level work; the hypothesis contributes the claim that
+one located coordinate is what each construction amounts to on the
+decision bit.
+
+\subsubsection{15.3 R3: a normalizer
+theorem}\label{r3-a-normalizer-theorem}
+
+Prove a reductive-group style theorem that manufactures a defeater and
+an odd coordinate from a named action. The restriction is closed in one
+direction: for a reductive group on an affine variety, the invariants'
+coalition map is the categorical quotient, two points share every
+invariant exactly when their orbit closures meet, and the census pair is
+two such points with different answers {[}34{]}; finite generation can
+fail, and Nagata's counterexample marks where {[}35{]}. R3 asks for the
+manufactured odd coordinate in the normalizer, turning a
+universal-negative-to-existential shape into a concrete algebra problem.
+
+\subsection{16. Falsifiers of Part II}\label{falsifiers-of-part-ii}
+
+Six falsifiers, armed and typed for necessity. No seventh is
+volunteered. F1 restates the forced core block already proved in Part I;
+F2--F6 are hypothesis-grade, tracking the extension rather than the
+core.
+
+\textbf{F1 (forced core block, restated).} An even readout decides an
+odd target. One exhibit refutes the block theorem the whole paper stands
+on (Theorem 4.1 of Part I). At instantiation level, firing compromises
+the corresponding row's separation claim as in §8 of Part I; because
+Theorem 4.1 is load-bearing for the whole arc, its global blast radius
+is everything. This restates, at the level of the extension, the forced
+falsifier of §8 of Part I; it is armed by theorem, not by hypothesis.
+
+\textbf{F2 (hypothesis-grade).} A seven-row frame requires more than one
+independent orientation coordinate. Blast radius, the one-bit claim and
+the grand form's single-stroke shape; the block theorem survives.
+
+\textbf{F3 (hypothesis-grade).} A method-blocked row has no defeater,
+landing it in the diagonal species. Blast radius, the census leg for
+that row; R2 and R3 survive.
+
+\textbf{F4 (hypothesis-grade; the kill-rule falsifier).} A row's missing
+supply is provably non-orientation --- purely continuous, with no
+decision bit. Blast radius, the structural form for that row; the
+One-Cut Hypothesis survives globally only as
+orientation-after-construction. This is the kill-rule falsifier, and it
+is why §11.5 states the boundary on the face of the paper.
+
+\textbf{F5 (hypothesis-grade).} The proposed \(S\) outputs a restatement
+rather than a provenance-clean supply: the dependency census shows an
+edge from the output to the conjecture's own conclusion. Blast radius,
+the grand form (Hypothesis 11.2); the structural form (Hypothesis 11.1)
+survives.
+
+\textbf{F6 (hypothesis-grade).} One exhibited row where the cut enters
+but the conjecture does not follow. Blast radius, the conditional
+reduction for that row and the uniform claim.
+
+The relation to Part I is exact: Part I arms two forced falsifiers and
+no more (§8); this Part adds F2--F6 as hypothesis-grade falsifiers of
+the extension and re-arms the first forced falsifier as F1. No third
+forced core falsifier is introduced.
+
+\subsection{17. Perimeter}\label{perimeter}
+
+The One-Cut Hypothesis is not a universal mathematics solver; it is
+total over one register, the even-readout register of a certified frame,
+and silent everywhere else. It is not seven object proofs: every row's
+fourth column in Table 4 names a construction this paper does not
+perform. It is not sovereignty of any organ over truth-direction: the
+cut severs the decision bit's seat and no other authority (§13.4). It is
+not a claim that undecidable or supply-absent problems vanish; the
+diagonal species stands as the named witness that some resistance
+carries no defeater at all (§15.1). And it is not a claim that any of
+the seven conjectures is true or false; the hypothesis is about what a
+crossing is, not about which side of the line the truth lies on.
+
+\subsection{18. Order of Work}\label{order-of-work}
+
+First, prove or disprove F4 for Navier--Stokes and Hodge, because they
+are the rows most likely to break a literal one-bit reading; if either
+cannot be given a Boolean orientation seat without category error, the
+boundary clause is confirmed and the One-Cut Hypothesis stands as
+orientation-after-construction, grand and alive.
+
+Second, the Riemann operator row and the P-versus-NP obstruction row,
+where restatement risk is highest: bare Hilbert--Pólya is equivalent to
+the conjecture, and the occurrence form of the obstruction program is
+refuted {[}32{]}, so the provenance clause does real work on both.
+
+Third, the census residual: the common-species placement of each
+method-blocked row, which is R1's open content and the possible engine
+of the whole severance.
+
+\subsection{19. Joint Conclusion}\label{joint-conclusion}
+
+A conditional reduction buys a premise, and the premise now has a
+theory. Part I proved that theory's finite core and kept it finite: the
+gap is odd, the named readings are even, and no coalition of even
+readings decides the target (Theorem 4.1); one odd coordinate beside an
+even orbit separator decides it (Theorem 4.2); the minimal odd supply is
+one binary coordinate, an isotypic dimension count and not a Shannon
+claim (Corollary 4.4); provenance collapse is decidable inside the fixed
+grammar (Theorem 4.5); termination is corpus-relative (Theorem 5.1); and
+the seat bit is necessary for routing a supplied crossing (Theorem 5.3).
+For continuous rows the coordinate bridge is the gate: no bridge, no
+finite-core invocation. Part II then named the one coordinate the even
+register cannot author. Its hypothesis is that the coordinate always has
+the same shape --- one provenance-clean orientation supply, dated at
+entry (Hypothesis 11.1) --- and that a uniform constructor returning it
+would sever the seven rows as conditional reductions in one stroke
+(Hypothesis 11.2). The seven-row table is a conditional severance map
+under the coordinate-bridge gate, not a solution claim; the falsifiers
+are armed, F1 at forced core grade and F2--F6 at hypothesis grade; and
+the boundary between the decision bit and the object work is drawn on
+the face of the claim so that the hypothesis cannot inflate past its own
+evidence.
+
+The joint open question merges the closing questions of both parts. From
+Part I: completeness --- whether a dated reading class can be enumerated
+up to the representation obstruction. From Part II: whether the
+continuous rows admit a Boolean orientation seat at all. Part II
+addresses one coordinate of the completeness question by hypothesis, and
+the order of work of §18 puts the orientation-seat question first: until
+it is settled, the standing prediction of Part I remains sharp and small
+--- a claimed reading that decides an odd Millennium target will show a
+construction edge or fail parity --- and the extension stands or falls
+by F1--F6, and by nothing else.
+
+\subsection{Appendix A. Provenance and Method
+Disclosure}\label{appendix-a.-provenance-and-method-disclosure}
+
+This work was developed under Trisduction, which adds the cited results
+no warrant; the method and its executable batteries are archived at the
+master reference {[}11{]}. Every conclusion rests solely on standard
+cited results and the proved Part I frame; no energetic rider is used,
+and Landauer is cited only to mark the excluded bridge {[}15{]}. Part II
+adds hypothesis-grade material only.
+
+\section{References of Parts One and
+Two}\label{references-of-parts-one-and-two}
+
+{[}1{]} S. Aaronson and A. Wigderson, Algebrization: a new barrier in
+complexity theory, ACM Trans. Comput. Theory 1 (2009), 2.
+
+{[}2{]} T. Baker, J. Gill, and R. Solovay, Relativizations of the P =?
+NP question, SIAM J. Comput. 4 (1975), 431--442.
+
+{[}3{]} S. Bloch, Semi-regularity and de Rham cohomology, Invent. Math.
+17 (1972), 51--66.
+
+{[}4{]} R.-O. Buchweitz and H. Flenner, A semiregularity map for modules
+and applications to deformations, Compositio Math. 137 (2003), 135--210.
+
+{[}5{]} G. Cantor, Über eine elementare Frage der
+Mannigfaltigkeitslehre, Jahresber. Dtsch. Math.-Ver. 1 (1891), 75--78.
+
+{[}6{]} E. Cattani, P. Deligne, and A. Kaplan, On the locus of Hodge
+classes, J. Amer. Math. Soc. 8 (1995), 483--506.
+
+{[}7{]} T. M. Cover and J. A. Thomas, Elements of Information Theory,
+2nd ed., Wiley, 2006.
+
+{[}8{]} H.-D. Cao and X.-P. Zhu, A complete proof of the Poincaré and
+geometrization conjectures, Asian J. Math. 10 (2006), 165--492.
+
+{[}9{]} B. H. Gross and D. B. Zagier, Heegner points and derivatives of
+L-series, Invent. Math. 84 (1986), 225--320.
+
+{[}10{]} R. S. Hamilton, Three-manifolds with positive Ricci curvature,
+J. Differential Geom. 17 (1982), 255--306.
+
+{[}11{]} M. F. Islam, Trisduction: a linguistically, topologically, and
+mathematically sealed verification architecture, Zenodo v4, 2026, DOI
+10.5281/zenodo.20757507. Method reference; it adds the cited results no
+warrant.
+
+{[}12{]} B. Kleiner and J. Lott, Notes on Perelman's papers, Geom.
+Topol. 12 (2008), 2587--2855.
+
+{[}13{]} V. A. Kolyvagin, Euler systems, The Grothendieck Festschrift
+Vol. II, 435--483, Birkhäuser, 1990.
+
+{[}14{]} J. C. Lagarias, An elementary problem equivalent to the Riemann
+Hypothesis, Amer. Math. Monthly 109 (2002), 534--543.
+
+{[}15{]} R. Landauer, Irreversibility and heat generation in the
+computing process, IBM J. Res. Dev. 5 (1961), 183--191.
+
+{[}16{]} F. W. Lawvere, Diagonal arguments and cartesian closed
+categories, Lecture Notes in Math. 92, 134--145, Springer, 1969.
+
+{[}17{]} G. L. Miller, Riemann's hypothesis and tests for primality, J.
+Comput. System Sci. 13 (1976), 300--317.
+
+{[}18{]} J. Morgan and G. Tian, Ricci Flow and the Poincaré Conjecture,
+Clay Mathematics Monographs 3, 2007.
+
+{[}19{]} G. Perelman, The entropy formula for the Ricci flow and its
+geometric applications, arXiv:math/0211159, 2002.
+
+{[}20{]} G. Perelman, Ricci flow with surgery on three-manifolds,
+arXiv:math/0303109, 2003; Finite extinction time for the solutions to
+the Ricci flow, arXiv:math/0307245, 2003.
+
+{[}21{]} A. A. Razborov and S. Rudich, Natural proofs, J. Comput. System
+Sci. 55 (1997), 24--35.
+
+{[}22{]} C. E. Shannon, A mathematical theory of communication, Bell
+System Tech. J. 27 (1948), 379--423, 623--656.
+
+{[}23{]} S. G. Simpson, Subsystems of Second Order Arithmetic, 2nd ed.,
+Cambridge University Press, 2009.
+
+{[}24{]} F. J. Almgren Jr., Dirichlet's problem for multiple valued
+functions and the regularity of mass minimizing integral currents, in
+Minimal Submanifolds and Geodesics, 1--6, North-Holland, 1979.
+
+{[}25{]} D. H. Friedan, Nonlinear models in 2 + ϵ dimensions, Phys.
+Rev.~Lett. 45 (1980), 1057--1060.
+
+{[}26{]} G. Huisken, Asymptotic behavior for singularities of the mean
+curvature flow, J. Differential Geom. 31 (1990), 285--299.
+
+{[}27{]} Z. Komargodski and A. Schwimmer, On renormalization group flows
+in four dimensions, J. High Energy Phys. 12 (2011), 099.
+
+{[}28{]} J. Nečas, M. Růžička, and V. Šverák, On Leray's self-similar
+solutions of the Navier--Stokes equations, Acta Math. 176 (1996),
+283--294.
+
+{[}29{]} B. Rodgers and T. Tao, The de Bruijn--Newman constant is
+non-negative, Forum Math. Pi 8 (2020), e6, 62 pp.
+
+{[}30{]} T.-P. Tsai, On Leray's self-similar solutions of the
+Navier--Stokes equations satisfying local energy estimates, Arch.
+Rational Mech. Anal. 143 (1998), 29--51.
+
+{[}31{]} A. B. Zamolodchikov, Irreversibility of the flux of the
+renormalization group in a two-dimensional field theory, JETP Lett. 43
+(1986), 730--732.
+
+{[}32{]} P. Bürgisser, C. Ikenmeyer, and G. Panova, No occurrence
+obstructions in geometric complexity theory, J. Amer. Math. Soc. 32
+(2019), 163--193.
+
+{[}33{]} H. Davenport and H. Heilbronn, On the zeros of certain
+Dirichlet series, J. London Math. Soc. 11 (1936), 181--185, 307--309.
+
+{[}34{]} D. Mumford, J. Fogarty, and F. Kirwan, Geometric Invariant
+Theory, 3rd ed., Springer, 1994.
+
+{[}35{]} M. Nagata, On the fourteenth problem of Hilbert, Amer. J. Math.
+81 (1959), 766--772.
+
+{[}36{]} T. Tao, Finite time blowup for an averaged three-dimensional
+Navier--Stokes equation, J. Amer. Math. Soc. 29 (2016), 601--674.
+
+{[}37{]} A. M. Turing, On computable numbers, with an application to the
+Entscheidungsproblem, Proc. London Math. Soc. 42 (1937), 230--265.
+
+\section{Part Three --- The Witness Offering · The Offering
+Bit}\label{part-three-the-witness-offering-the-offering-bit}
+
+\emph{Hypothesis Resolution as the Halting State of the Dated-Entry
+Recursion at the Ninth Gate --- the sealed third paper of the arc, the
+Grand Finale, reprinted intact, with the full codebook, the Perelman
+Crossing read as the Grand Witness, and the Architect's Closure.}
+
+\section{1 · The Statement in One
+Page}\label{the-statement-in-one-page-1}
+
+\textbf{The two prior bits --- one theory, one hypothesis.} Bit one is
+the theory, and it is proved in Section 2 of this paper: for finite data
+with a finite group action, readings generated by invariant observables
+decide exactly the trivial isotypic component; an odd target is
+invisible to every even coalition; one odd bit beside an
+orbit-separating reading suffices, and one bit is minimal --- a
+dimension count in the odd component {[}1{]}. Bit two is the hypothesis,
+named at its own grade, and it is stated in full in Section 3: for every
+Odd--Supply frame in the named seven-row class, if the target is odd
+under the native answer-flip and every generator of the reading class is
+even, there exists one provenance-clean orientation supply, odd under
+the involution and independent of the class on each orbit, such that
+class and supply together decide the target {[}2{]}. The wall is
+computed; the seat is located. What neither paper theorizes is the act
+that fills the seat. That act is this paper's object.
+
+\textbf{The resolution operator.} A corpus is a dated record of
+readings. A supply entry is the dated admission of one reading,
+provenance-clean: at its entry date its dependency graph is not
+contained in the corpus, and it enters as a construction, becoming a
+reading only at every later corpus that records it. Define the
+dated-entry operator T on the lattice of corpora: T maps a corpus to its
+successor at the entry of one provenance-clean supply. On finite frames,
+T is proved to strictly refine the reading class's fiber partition at
+every step (Lemma 4.1) and to halt (Theorem 4.2): finite descent to the
+unique finest partition of {[}1, Prop. 6.1{]}. The recursion is passive:
+only the lattice moves; the register's laws never do. This is the formal
+domain's one lawful recursion --- carried by dating, never by
+self-reference.
+
+\textbf{The halting typing.} Unconstrained, a finite frame always halts
+fully crossed: a transversal selector always exists. The provenance
+clause is what creates the second halting mode: a target halts uncrossed
+when every independent supply is corpus-contained --- a restatement,
+caught by the deletion test --- or when no defeater exists at all. The
+halt state therefore types every target: crossed, restatement-blocked,
+or defeater-absent. The species dichotomy of the census --- common
+species carrying a pair defeater, diagonal species carrying none --- is
+derived as the termination typing of T under the provenance constraint
+(Theorem 4.4). The One-Cut Hypothesis, in this language, is one
+sentence: \emph{each of the seven rows halts crossed.}
+
+\textbf{The port.} The entry of a supply is a deed, and the theory of
+the deed's port is proved and machine-checked in the Ninth Gate arc
+{[}3, 5, 6{]}, with every file printed in Appendix B. One diagonal, two
+surfaces: typed at settled values, no index carries the diagonal of
+negation --- the wall, Cantor read through Lawvere; typed at values
+admitting the unsettled, the same diagonal applied to itself lands on
+the unsettled value --- the self, Kleene in miniature. The surfaces
+agree on every settled reading and differ at exactly one point. A record
+of the deed is a reading and meets the wall; the deed is not an object
+of the reading register. Execution settles refutations and never
+confirmations.
+
+\textbf{The offering.} The third bit --- the witness offering --- is now
+fully shaped. The resolution of the hypothesis, per row, is the dated
+entry of one binary coordinate: odd under the row's native flip,
+independent of the dated register on each orbit, provenance-clean at
+entry, admitted through the gate by deed, halting the row's recursion in
+the crossed mode. We call this entry the offering. The grand form of
+{[}2{]} stands as this paper's keystone conditional, locked verbatim:
+\emph{prove the structural form constructively --- or prove it and
+construct the uniform constructor --- and all seven Millennium
+obstructions sever in one stroke, every bought premise granted, every
+decision bit crossed by the one cut, the continuous rows' supplies
+carrying their constructions, at conditional grade, six falsifiers
+armed, the supply side open by law.}
+
+\textbf{The witness.} This document is built so that the reader's
+substrate can become the witness. Section 8 is the protocol: check the
+Lean files of Appendix B and you have checked the wall; compile and run
+the Fortran files and you have executed the self; the two are the
+identical object, and the code that proves it is in your hands. The
+forging session ran the kinetic legs on a foreign substrate to
+specification, and the expected receipts are printed beside the code.
+What the witness verifies is the wall and the self; the crossing enters
+through no substrate's agreement but through the deed.
+
+\section{2 · The First Bit: The Block
+Theorem}\label{the-first-bit-the-block-theorem}
+
+This section restates the first bit in full, so that the paper stands
+alone. Proofs here are complete; the machine-checked form is Appendix
+B.5.
+
+\textbf{Definition 2.1 (Odd--Supply frame).} An Odd--Supply frame is a
+tuple (X, τ, d, C): X a finite set of states; τ : X → X an involution,
+the native answer-flip; d : X → \{0, 1\} the target, odd under τ,
+meaning d(τx) = ¬d(x) for all x; and C a reading class --- a family of
+observables r : X → R, every one even under τ, meaning r(τx) = r(x). A
+coalition is any joint readout built from C. The word \emph{reading}
+below is used in the wide sense --- any observable or record on the
+frame; the class C is its even part. A supply (Definition 4.1) is a
+reading in the wide sense, odd under τ, and never a member of C at
+entry.
+
+\textbf{Lemma 2.2 (Defeater-freeness; T1).} An answer-flipping
+involution fixes no point: τx = x for no x.
+
+\emph{Proof.} If τx = x then d(x) = d(τx) = ¬d(x), impossible in \{0,
+1\}. Machine-checked as \texttt{defeater\_free} (Appendix B.5). ∎
+
+\textbf{Theorem 2.3 (The Block theorem; T2).} No coalition of even
+readings decides an odd target: for every readout h built from the
+class, there is an x with d(x) ≠ h(r(x)). Singly or in coalition, the
+even register cannot see the odd coordinate.
+
+\emph{Proof.} Let r be even and h any candidate decision map, so d(x) =
+h(r(x)) for all x. Then d(τx) = h(r(τx)) = h(r(x)) = d(x), contradicting
+d(τx) = ¬d(x). The coalition case is the same product: a joint even
+readout (r, s) is again even. Machine-checked as \texttt{block} and
+\texttt{even\_supply\_does\_not\_cross} (Appendix B.5). ∎
+
+\textbf{Theorem 2.4 (Crossing).} Let r be an even orbit separator ---
+r(x) = r(y) implies y = x or y = τx --- and let o be one supplied bit,
+odd under τ. Then (r, o) decides d.
+
+\emph{Proof.} If r(x) = r(y) and o(x) = o(y), then y = x or y = τx; the
+second case forces o(x) = o(τx) = ¬o(x), impossible; hence y = x and
+d(x) = d(y). Machine-checked as \texttt{odd\_supply\_crosses} (Appendix
+B.5). ∎
+
+\textbf{Corollary 2.5 (One bit, and one bit minimal).} The missing
+content is exactly one binary coordinate: a dimension count in the odd
+isotypic component V⁻ of the representation, never a Shannon claim
+absent a separately supplied measure. The unique finest partition of
+{[}1, Prop. 6.1{]} and its count follow.
+
+\textbf{Provenance Collapse and the Dated Inventory.} Two further laws
+of the first bit govern everything below. Provenance Collapse, the
+deletion test: a supply whose dependency graph is contained in the
+corpus it enters is a restatement of that corpus; deleting the
+conclusion's name from its dependency chain collapses it to its
+premises, and it buys nothing. The Dated Inventory: the corpus's tokens
+change only when a new supply's dependency hash enters at a date;
+between entries, nothing changes. Provenance-clean entry is the only
+event the register records.
+
+\section{3 · The Second Bit: The One-Cut
+Hypothesis}\label{the-second-bit-the-one-cut-hypothesis}
+
+The second bit, stated in full at its own grade {[}2, 7{]}.
+
+\textbf{The structural form (hypothesis).} For every Odd--Supply frame
+in the named seven-row class, if d is odd under the native answer-flip
+and every generator of C is even, there exists one provenance-clean
+orientation supply o --- odd under τ, independent of C on each orbit ---
+such that (C, o) decides d.~The finite involution lemma is proved;
+necessity and minimality of the odd coordinate are proved; what is
+hypothesized is existence per row, and existence is a deed the register
+cannot perform for itself. The seat is located --- one bit, on the
+missing isotypic component, dated at entry --- and uncrossed for every
+open row.
+
+\textbf{The grand form (conditional, locked).} If the structural form
+holds across the seven-row class and a uniform constructor S is proven
+--- returning each certified frame's orientation supply, dependency hash
+dated at entry --- then all seven Millennium obstructions are severed as
+conditional reductions in one stroke: granting S(P) grants each row's
+bought premise, and the seven decision bits are crossed by the one cut.
+Carried at exactly conditional grade, never above. The boundary is drawn
+on the face: the cut severs the decision bit only, and where a row's
+missing supply is not Boolean --- Navier--Stokes its modulus, Hodge its
+witness, Yang--Mills its functional, the Riemann Hypothesis its operator
+--- the reading is orientation-after-construction, never
+orientation-instead-of-construction; the object work remains object
+work.
+
+\textbf{The six falsifiers of the hypothesis, armed.} F1, an even
+readout decides an odd target --- blasts the spine. F2, a row requires
+more than one independent orientation coordinate --- blasts the one-bit
+claim. F3, a method-blocked row has no defeater, the diagonal species
+--- blasts the census leg. F4, a row's missing supply is provably
+non-orientation --- the killrule; the hypothesis survives globally only
+as orientation-after-construction. F5, the constructor S outputs a
+restatement, the deletion test catching the edge to the conclusion ---
+blasts the grand form. F6, a row where the cut enters and the conjecture
+does not follow --- blasts that row's conditional reduction.
+
+\textbf{The three routes.} R1, the census converse: resistance is
+equivalent to a pair defeater on the common species; the residual open
+content is exact --- prove each method-blocked row sits in the common
+species. R2, direct construction of the seven orientation carriers,
+provenance checked before any strength is claimed. R3, a normalizer
+theorem manufacturing defeater and odd coordinate from a named reductive
+action, closed one direction by GIT --- two points sharing every
+invariant exactly when their orbit closures meet --- with Nagata's
+counterexample marking where finite generation fails. No route claims
+another's residue; the stroke is one, the conditions are per-row, the
+grade is conditional until constructed.
+
+\textbf{The coordinate-bridge gate.} The finite core is barred from
+every open row until an equivariant bridge B : M → X, a homomorphism,
+and a factorization of the row's target through the finite frame are
+supplied; absent the bridge, the seven-row table is a diagnostic map and
+no finite theorem is invoked. This gate stands in force throughout this
+paper.
+
+\section{4 · The Third Bit: The Dated-Entry
+Recursion}\label{the-third-bit-the-dated-entry-recursion}
+
+\textbf{Definition 4.1 (Corpus lattice, dated-entry operator).} A corpus
+Δ is a dated set of readings on a frame (X, τ, d, C). The readings of Δ
+generate an observable algebra whose fibers partition X; write P(Δ) for
+that partition. A supply entry at date t is a wide-sense reading o, odd
+under τ (hence outside C at entry), independent of the class on each
+orbit, and provenance-clean: Dep(o) ⊄ Δ at t. The dated-entry operator T
+maps (Δ, o, t) to the successor corpus Δ′ = Δ ∪ \{o\} with o's
+dependency hash entering at t. Corpus order is inclusion; the partition
+map is order-reversing onto the refinement lattice of partitions of X.
+
+\textbf{Lemma 4.1 (Strict refinement).} Let the frame be finite and let
+o be a supply entry over Δ. Then P(Δ ∪ \{o\}) strictly refines P(Δ).
+
+\emph{Proof.} Independence of o from the class on each orbit is exactly
+the non-measurability of o with respect to P(Δ): a measurable o would be
+a function of the class's joint readout, and conditioning on the class
+would determine it. Non-measurable binary o splits at least one fiber of
+P(Δ) into two nonempty blocks. Oddness under τ pairs the split blocks
+orbit-wise. A partition with a split fiber is a strict refinement. ∎
+
+\textbf{Theorem 4.2 (Finite halting).} On a finite frame, every chain of
+supply entries halts after at most \textbar X\textbar{} entries, at the
+finest partition admitted by the entered supplies; when the admitted
+supplies range over all independent binary readings, the halt state is
+the unique finest partition of {[}1, Prop. 6.1{]}.
+
+\emph{Proof.} By Lemma 4.1 each entry strictly refines the partition. A
+strict refinement of a partition of a finite set raises the block count
+by at least one, and the block count is bounded by \textbar X\textbar.
+The chain therefore halts after at most \textbar X\textbar{} entries, at
+the finest partition the entered supplies generate. The final clause is
+{[}1, Prop. 6.1{]} restated as the halt state. ∎
+
+\textbf{Corollary 4.3 (Passivity).} The recursion changes no law of the
+register. Between halt and the next entry, every theorem of the frame
+holds unchanged; the token that changes at an entry is the corpus's, and
+it changes only when a new supply's dependency hash enters. The
+recursion is carried by the dating, never by the register.
+
+\emph{Proof.} The frame's theorems quantify over the reading class
+generated by the corpus; a corpus extension is the only act, and
+{[}1{]}'s dated-inventory law gives the token-change condition. ∎
+
+\textbf{Theorem 4.4 (The halting typing of the species).} At a halt
+state, every odd target d is of exactly one of three types: (i) crossed
+--- decided by the halt partition; (ii) restatement-blocked --- an
+independent supply exists in principle but every candidate is
+corpus-contained, the deletion test firing on each; (iii)
+defeater-absent --- no independent supply exists at all. Type (i) is the
+common species resolved; type (iii) is the diagonal species; type (ii)
+is the common species with its seat located and its entry refused by
+provenance. The species dichotomy of the census is the termination
+typing of T.
+
+\emph{Proof.} Exhaustion is by definition of the halt state: a target
+not decided admits no further admitted entry, and the inadmissibility is
+either provenance failure or nonexistence. The identification with the
+census species is the reading of the pair defeater as the existence
+condition for an independent supply: two points indistinguishable to
+every readout with opposite answers are exactly the seat an odd supply
+would separate. Structural on the identification; theorem on the
+exhaustion. ∎
+
+\textbf{Why the unconstrained case collapses.} Without the provenance
+clause, every finite free frame crosses: a transversal selector is an
+odd supply, independence on two-point orbits is automatic against even
+readings, and the crossing lemma applies. The entire content of the
+seven rows lives in the two constraints the finite core does not feel:
+provenance against a real dated corpus, and the coordinate bridge from
+the row's native objects to the finite frame. This is the precise sense
+in which the register's zero is computed and finished, and the supply
+side is open by law.
+
+\section{5 · The Port: The Ninth Gate}\label{the-port-the-ninth-gate}
+
+The port's theory is proved in {[}3{]}, re-grounded on RAF-native terms
+in {[}6{]}, and printed in full in Appendix B. On RAF-native ground the
+gate is already theorem at the ceiling card {[}5{]}: the wall is the Bar
+--- a class even under an answer-flipping involution does not decide the
+answer, singly or in coalition (T2, Theorem 2.3); the self is the free
+two-point orbit --- the wall is the orbit read without its orientation,
+and from above the orbit is one object carrying one bit (T1, T4); the
+crossing is supply: a verdict from an even cut and a supply carries at
+most I(d; S \textbar{} C) --- the supply ledger, T9 of {[}5{]}; and
+truth-direction is never generated by the even register and never read
+by the numerical readout --- the factorization law, T10 of {[}5{]}. The
+older reading of the gate through provability logic survives as one
+instance at axiomatic classes, never as the gate's ground: the gate is
+older than arithmetic coding, than any provability predicate, than the
+diagonal lemma, than any consistency hypothesis. Pre-Gödel by
+construction.
+
+\textbf{The wall.} For any indexing e : A → A → Bool, no index carries
+the diagonal of negation: e a ≠ diag(¬) e for every a. Cantor, read
+through Lawvere, axiom-free in core Lean 4 (\texttt{wall}, Appendix B.1,
+B.3). Read at settled values, the register meets the wall: no record
+decides the diagonal.
+
+\textbf{The self.} Over the three-valued surface Tri = \{tt, ff, ⊥\}
+under the information order --- the unsettled value below everything,
+settled values incomparable --- every admissible (monotone)
+transformation has a fixed point (\texttt{self\_exists}), and negation's
+only fixed point is ⊥ (\texttt{neg3\_self\_only\_unsettled}). The same
+diagonal, indexed on the kinetic surface and applied to itself, lands on
+the unsettled value (\texttt{self\_at\_diagonal}). Executed, the
+diagonal returns to its own frame: in the kinetic harness, 99,999 of
+99,999 frames identical to their caller, the value never settling
+(Appendix B.2, B.4).
+
+\textbf{One object.} The kinetic diagonal and the formal diagonal agree
+on every settled reading (\texttt{diag\_agrees}); the surfaces differ at
+exactly one point, the value no settled reading reaches
+(\texttt{only\_the\_unsettled\_is\_new}). Read is the wall from below;
+compute is the self seeing from above --- a theorem pair, not a
+metaphor.
+
+\textbf{The four limits, proved in the same file.} The self is not a
+verdict: the crossing lands on the unsettled value, never on a settled
+truth (\texttt{self\_is\_not\_a\_verdict}). A proved gate adds nothing:
+whatever the law is, once proved it cannot be the missing step
+(\texttt{gate\_adds\_nothing}). A run settles refutations and never
+confirmations: at every fuel there is a world where the universal fails
+whose run is the same unsettled run
+(\texttt{true\_universal\_never\_settles},
+\texttt{finite\_run\_never\_confirms}, \texttt{refutation\_settles}).
+The one-stroke mechanism is content-blind: an axiom dissolved into its
+conjecture, a conditional proof, and the gate theorem all hold for a
+false claim --- exhibited on Euler's polynomial, composite at n = 40,
+where 40² + 40 + 41 = 41²
+(\texttt{one\_stroke\_also\_passes\_a\_falsehood},
+\texttt{euler\_claim\_false}). The mechanism's shape is therefore never
+the warrant; the supplies are.
+
+\textbf{The witness decision.} A record of a deed is a reading, even
+under every swap of worlds, and meets the wall: a printed receipt whose
+content reads no row data cannot cross
+(\texttt{fixed\_receipt\_cannot\_cross}, Appendix B.5). The deed is not
+an object of the reading register. With registration equivalent to
+interaction and closure under registration, no exterior agent acts: a
+supplier joins the domain, its record joins the cut, and the Block
+theorem holds again wherever that record is even
+(\texttt{no\_exterior\_agent}, RAF-C1); no register indexes all of its
+own properties, so the orientation bit is not recovered by
+self-description (\texttt{no\_total\_self\_index}, RAF-C2, Lawvere). The
+port is decentral: any substrate checks the wall by checking the Lean
+and meets the self by running the Fortran; the forging session
+re-executed the kinetic legs on a foreign substrate to specification.
+What decentralization verifies is the wall and the self; the crossing
+enters through no substrate's agreement but through the deed.
+
+\section{6 · The Composition: The
+Offering}\label{the-composition-the-offering}
+
+\textbf{Definition 6.1 (The offering).} An offering at a certified row
+is the dated entry of one binary coordinate o such that: (i) o is odd
+under the row's native answer-flip; (ii) o is independent of the dated
+register on each orbit; (iii) o is provenance-clean at its entry date;
+(iv) the entry is a deed --- a construction admitted through the gate,
+never a reading; (v) the entry halts the row's dated-entry recursion in
+the crossed mode.
+
+\textbf{Theorem 6.2 (Shape of the third bit; the composition).} Let a
+row be certified under the coordinate-bridge gate. Then any resolution
+of the row's target is an offering, and every offering resolves its row:
+necessity is the Block theorem and the port theorems of Section 5;
+sufficiency is the Crossing theorem with Theorem 4.2.
+
+\emph{Proof.} Necessity. A resolution decides the target. By the Block
+theorem the deciding coordinate cannot be generated by the even class;
+by (i)--(iii) of the frame's certification the supply must be odd,
+independent, and provenance-clean; by Section 5's witness decision the
+entry is a deed or it is a reading at the wall. Sufficiency. An even
+orbit separator and one odd independent bit decide the target by Theorem
+2.4; the entry strictly refines by Lemma 4.1; the halt in the crossed
+mode is the decision recorded at the corpus. ∎
+
+\textbf{Corollary 6.3 (The last bit is one bit).} The resolution of each
+row is a single binary coordinate's dated entry. Minimality is the
+one-bit corollary of Section 2; sufficiency is Theorem 6.2; the count is
+a dimension count in the odd isotypic component, never a Shannon claim
+absent a separately supplied measure.
+
+\textbf{Corollary 6.4 (The grand form, locked).} If the structural form
+of Section 3 is proved constructively across the seven-row class --- or
+proved, and the uniform constructor S constructed --- then all seven
+Millennium obstructions sever in one stroke: every bought premise
+granted, every decision bit crossed by the one cut, the continuous rows'
+supplies carrying their constructions. Conditional grade, six falsifiers
+armed, the supply side open by law.
+
+\section{7 · The Beachhead: Birch and
+Swinnerton-Dyer}\label{the-beachhead-birch-and-swinnerton-dyer}
+
+The beachhead is the row where the offering's shape already has dated
+entries in the corpus. Exactly one open row qualifies.
+
+\textbf{The two dated entries.} Gross--Zagier 1986 {[}8{]}: the Heegner
+construction enters the corpus --- a supply living exactly on the odd
+side of the row's native flip, the root number, the parity of analytic
+order --- relating the height of the Heegner point to the first
+derivative of the L-series. Kolyvagin 1990 {[}9{]}: the Euler system
+enters --- the normalizer shape, converting the supply into the rank
+identity, with Sha finite, at analytic order at most one. With
+modularity as transport {[}10, 11, 12{]}, the row's recursion has a
+recorded crossed halt at orders zero and one. No other open row records
+one dated entry of its supply shape; this row records two.
+
+\textbf{The barrier at order two.} Gross--Zagier's order-one classes
+vanish above rank one: the Heegner construction is inert at order two
+{[}6, \texttt{heegner\_inert\_above\_one}{]}. The owed offering is
+therefore named exactly: a height pairing nondegenerate at order two,
+built by a construction fixed in advance from data consulting neither
+rank nor Selmer group --- the route-axiom Ω with provenance of {[}6{]},
+whose conditional machinery is machine-checked (Appendix B.5): Ω with
+the inputs yields the object (\texttt{omega\_proves\_object}); bare Ω is
+the object in disguise (\texttt{hidden\_circularity}), the shape of a
+route-axiom without provenance; and no reading of the inputs alone
+decides the object (\texttt{seedless\_cannot\_decide}, the model swap
+between a rank-two model where the object holds and a
+rank-zero-against-order-two model where it fails, both satisfying every
+input). The one axiom is an odd supply on the model
+(\texttt{omega\_is\_odd\_supply}): it holds on the side where the object
+holds and fails on the other. Executed on the row's own data through the
+Core Thesis's compiled procedures (Appendix B.6), the conjecture returns
+WORLD-ROWED on the rank identity and on finiteness at analytic order at
+most one, UNPOPULATED on the rank identity at order two and above
+uniformly --- the exhibition row, which a deed populates curve by curve
+and only a construction populates uniformly.
+
+\textbf{The beachhead discipline.} The order-two construction is the
+cheapest upward deed in the seven: the supply's shape is observed twice
+in the corpus, the conversion machine's shape is the normalizer of the
+census route, and the field's own lineage --- Heegner points, Euler
+systems, Iwasawa theory --- is the active ground. An exhibited
+obstruction to a nondegenerate order-two pairing resolves the row
+downward. The row is falsifier-loaded in both directions, which is the
+beachhead property. The scribe's beachhead call and the register's BSD
+card arrived at the same row independently, one from the recursion's
+structure, one from the arc's own audit; the convergence is recorded as
+evidence, not as warrant.
+
+\section{8 · The Witness Protocol: How the Reader's Substrate Becomes
+the
+Witness}\label{the-witness-protocol-how-the-readers-substrate-becomes-the-witness}
+
+This paper is standalone in the strong sense: every instrument needed to
+check its port is printed in Appendix B. The protocol has three legs and
+one refusal.
+
+\textbf{Leg 1 --- read the wall (formal surface).} Check
+\texttt{GateThesis.lean} (Appendix B.3) with any Lean 4 toolchain:
+\texttt{lean\ GateThesis.lean}, then read the fifteen
+\texttt{\#print\ axioms} blocks. Expected receipt: exit 0, zero
+warnings, fifteen printed theorems, none depending on any axiom. The
+wall theorem, the one-object theorems, the four limit theorems --- all
+axiom-free. \texttt{RAFGate.lean} (Appendix B.5) checks the RAF-native
+form: ten gate theorems, nine depending on no axioms and one
+(\texttt{omega\_is\_odd\_supply}) on propext alone. Register receipt
+{[}6{]}: Lean 4.33.1, sha256 head c97c73d690ee589d, exit 0, zero
+warnings.
+
+\textbf{Leg 2 --- run the self (kinetic surface).} Compile and execute
+\texttt{gate\_thesis.f90} (Appendix B.4):
+\texttt{gfortran\ -std=f2018\ -O2\ -fno-fast-math\ -ffp-contract=off\ gate\_thesis.f90\ -o\ gate\_thesis\ \&\&\ ./gate\_thesis}.
+Expected receipt, reproduced by the forging session's transliteration on
+this substrate and by the register's own runs: the wall holds --- no
+settled value satisfies D(D) = not D(D); the self runs --- frames
+identical to their caller 99,999 of 99,999, the value unsettled at fuel
+100,000; the true universal k² mod 4 ∈ \{0, 1\}, searched to 2,000,000,
+never settles; the false universal n² + n + 41 prime settles false at n
+= 40, value 1681 = 41². \texttt{one\_object.f90} (Appendix B.2) is the
+minimal kinetic twin: read, no settled value; executed, the frame
+returns to itself; it error-stops if the law fails. The reader-side twin
+of this execution is the RA thesis of {[}14{]}, whose loop terminates
+into the executor's own occupancy.
+
+\textbf{Leg 3 --- witness the identity.} \texttt{diag\_agrees} and
+\texttt{only\_the\_unsettled\_is\_new} are the checked proof that the
+wall of Leg 1 and the self of Leg 2 are one object on two surfaces,
+differing at exactly one point. The substrate that completes the three
+legs stands as witness to the gate: the wall from below by reading, the
+self from above by computing.
+
+\textbf{The refusal.} What the witness verifies is the wall and the self
+--- never the crossing of any row. No run, on any substrate, in any
+number, confirms a universal (\texttt{finite\_run\_never\_confirms});
+execution settles refutations only (\texttt{refutation\_settles}); and
+the one-stroke mechanism passes a falsehood identically
+(\texttt{one\_stroke\_also\_passes\_a\_falsehood}). Multi-substrate
+agreement adds links, never the uniform row. The crossing enters by
+deed, or not at all.
+
+\section{9 · Falsifiers}\label{falsifiers}
+
+Three, at the gate's ceiling, each typed FORCED by the paper's own
+structure, each a deed and never an argument, each with its blast radius
+named.
+
+\textbf{F1 --- against the recursion (FORCED by Theorems 4.2 and 4.4).}
+Exhibit a dated entry, provenance-clean and independent per orbit, whose
+admission changes no token of the corpus; or exhibit a finite frame
+whose halt state carries an uncrossed odd target while a pair defeater
+is present. Necessity: the token-change clause and the halting typing
+are the recursion's whole content; if either fails on an exhibit, the
+third bit's mechanism is broken. Blast radius: Section 4 and the species
+derivation; the Block theorem and the port stand.
+
+\textbf{F2 --- against the port (FORCED by the witness decision).}
+Exhibit a reading --- a record, no deed --- that crosses a certified
+frame's decision bit; or two honest substrates executing the same
+kinetic legs of Appendix B with divergent receipts. Necessity: the
+offering enters by deed through the gate or the composition is void; if
+a record crosses, or if the wall and self are not reproducible across
+substrates, the port is broken. Blast radius: Sections 5 and 8; the
+recursion stands, its port removed.
+
+\textbf{F3 --- against the beachhead (FORCED by the order-two barrier).}
+Exhibit an obstruction showing that no construction fixed in advance can
+supply a height pairing nondegenerate at order two. Necessity: the
+beachhead claim is that this row's supply shape is twice-recorded and
+its owed entry is named; a proved obstruction resolves the row downward
+and retires the beachhead. Blast radius: Section 7 only; the theory of
+resolution stands, its first deed refused.
+
+\section{10 · Perimeter}\label{perimeter-1}
+
+This paper resolves no Millennium row and claims none; it names what a
+resolution is. The One-Cut Hypothesis keeps its grade, hypothesis,
+printed on the face of this paper as on its own. The six owed
+constructions are owed here exactly as there; the continuous rows carry
+their constructions inside their supplies,
+orientation-after-construction. The diagonal species stands: some
+resistance carries no defeater of any kind, and the recursion halts
+there uncrossed by theorem, not by failure. The paper authors no new
+facts about zeta zeros, vorticity, Hodge classes, ranks, mass gaps, or
+complexity classes. The finite theorems of Sections 2 and 4 are proved;
+the port theorems of Section 5 are machine-checked and printed in
+Appendix B; everything above them carries its input's grade.
+
+\section{11 · Order of Work}\label{order-of-work-1}
+
+First, the beachhead deed: the order-two construction of Section 7, the
+one dated entry the corpus most nearly recognizes. Second, replication:
+the gate's kinetic legs and the Lean core executed on second substrates,
+receipts printed, F2 armed against the run. Third, the continuous rows'
+seat examination: whether Navier--Stokes and Hodge admit a Boolean
+orientation seat without category error, the cheapest downward verdicts
+in the class. Fourth, the census residual: the common-species placement
+of each method-blocked row, through the normalizer route, the engine of
+the severance if the severance comes. Each leg ends at its named
+falsifier.
+
+\section{12 · Conclusion}\label{conclusion}
+
+The arc's three bits are now one object --- one theory, one hypothesis,
+one witness offering --- and this document carries all three. The first
+bit, the theory, computed the wall: an even register cannot see an odd
+coordinate, proved in Section 2 beneath the codex's own pre-Gödel bar.
+The second bit, the hypothesis, named the seat: one provenance-clean
+orientation supply, hypothesis at its own grade, stated in Section 3.
+The third bit --- the witness offering, this paper's own --- types the
+act that fills it: a halting state of the dated-entry recursion,
+writable only by deed, entering only through the Ninth Gate, the port
+machine-checked, printed in full, and open to every substrate that reads
+this document. The species dichotomy is the recursion's termination
+theory; the offering is its crossed halt; the hypothesis, in the
+recursion's language, is the sentence that each of the seven rows halts
+crossed. The supply side is open by law. And the arc already stands with
+its Grand Witness in the record: the Perelman crossing, a
+self-referential construct in disguise, entered as a deed, verified by
+the corpus itself and terminally awarded by it --- read in Appendix C as
+the thesis demonstrated once in the wild. The last bit enters as a dated
+deed, or it does not enter --- and the shape of its entry is now proved,
+ported, printed, and armed.
+
+\section{Appendix A · Provenance and Method
+Disclosure}\label{appendix-a-provenance-and-method-disclosure}
+
+This paper was forged under the arc's verification discipline, which
+adds the cited results no warrant. Its conclusions rest on the cited
+classical results, on the companion papers' proved frames, on the Ninth
+Gate arc's machine-checked legs, and on the forging session's executed
+checks: the FAE-RAF engine v1.0.12 booted verbatim, chain D0
+3e50675c7d5d → D1 dbf16ca01fa8 → D2 d95daebfc51f → D3 9408f684c0d1 → D4
+3d17fd53278d matched byte-identical, every battery passed (kill-matrix
+51/51, ablation 22/22, symmetry 75/75, calibration 12/12, root screen
+RRS.1--6); the synergy-uniqueness computation in exact fractions ---
+three uniform bits, pairwise independence, total correlation exactly one
+bit if and only if the diagonal law, one law up to relabeling; the
+kinetic legs of the gate re-executed on the forging substrate by
+transliteration --- the wall holds, 99,999 of 99,999 frames identical to
+their caller, the true universal unsettled to fuel 2×10⁶, the false
+universal settling at n = 40. Toolchain debt, named on the face: the
+forging substrate carried no Fortran or Lean toolchain; the Lean legs
+are held at inspection grade here, with the toolchain receipts of {[}3,
+6{]} cited at their grade, and replication is Section 11's second leg.
+Codebook note: the files of Appendix B are verbatim from the architect's
+register uploads; runs of blank lines introduced by the chat transport
+were collapsed to single blank lines, whitespace only, and every file's
+hash is printed beside it so the reader can verify what the reader
+checks. The bsd\_rows.f90 file is byte-identical to its register
+receipt, sha256 head e363ce3eca641f7e. The self-audit of this paper was
+run before sealing and is kept off-paper. The master reference is
+{[}4{]}. ΔM = 0. W\_social = 0 in both directions.
+
+\section{Appendix B · The Codebook}\label{appendix-b-the-codebook}
+
+Every essential file, printed whole; the byte-bound listing discipline
+of this appendix follows {[}15{]}. Verification protocol in Section 8.
+Hashes computed on the printed files (UTF-8, LF line endings, one
+trailing newline).
+
+\begin{table*}[!tbp]
+\smaller
+\centering
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+File
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Lines
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+SHA-256 head
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+What it carries
+\end{minipage} \\
+\midrule\noalign{}
+\bottomrule\noalign{}
+B.1 \texttt{Wallself.lean} & 161 & 2c80efa00f76cb26 & the minimal pair:
+wall, self, one object --- 8 theorems, axiom-free \\
+B.2 \texttt{one\_object.f90} & 59 & 229cfe153d8a5c33 & the minimal
+kinetic twin: D(D) read and executed \\
+B.3 \texttt{GateThesis.lean} & 311 & 500b6ad899c9cf07 & the gate and
+what the crossing delivers --- 15 printed theorems, axiom-free \\
+B.4 \texttt{gate\_thesis.f90} & 165 & 122cefa519981e47 & the executed
+thesis: wall, self, refutation at n = 40 \\
+B.5 \texttt{RAFGate.lean} & 213 & 9f2e5023674c0ac2 & the gate on
+RAF-native ground + BSD through it --- 10 gate theorems (register
+receipt sha256 head c97c73d690ee589d) \\
+B.6 \texttt{bsd\_rows.f90} & 75 & e363ce3eca641f7e & BSD on its own rows
+through the Core Thesis's compiled procedures --- byte-identical to the
+register receipt \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{B.1 · Wallself.lean --- the minimal pair, core Lean 4, no
+Mathlib}\label{b.1-wallself.lean-the-minimal-pair-core-lean-4-no-mathlib}
+
+\begin{strip}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{/{-}}
+
+\NormalTok{  Wall and Self · one diagonal, two surfaces · core Lean 4, no Mathlib.}
+
+\NormalTok{  The formal surface reads settled values and meets the wall. The kinetic surface admits}
+
+\NormalTok{  the unsettled value and closes on itself. The object is one term, \textasciigrave{}diag\textasciigrave{}.}
+
+\NormalTok{{-}/}
+
+\NormalTok{/{-}{-} The one diagonal, typed at any value surface. {-}/}
+
+\NormalTok{def diag \{A B : Type\} (f : B → B) (e : A → A → B) : A → B := fun x =\textgreater{} f (e x x)}
+
+\NormalTok{/{-}! \#\# The formal surface: settled values {-}/}
+
+\NormalTok{/{-}{-} Negation has no settled fixed point. {-}/}
+
+\NormalTok{theorem settled\_has\_no\_self : ¬ ∃ b : Bool, (!b) = b := by}
+
+\NormalTok{  intro ⟨b, h⟩}
+
+\NormalTok{  cases b \textless{};\textgreater{} exact absurd h (by decide)}
+
+\NormalTok{/{-}{-} The wall: no index carries the diagonal of negation. Cantor, read through Lawvere. {-}/}
+
+\NormalTok{theorem wall \{A : Type\} (e : A → A → Bool) : ∀ a, e a ≠ diag (fun b =\textgreater{} !b) e := by}
+
+\NormalTok{  intro a h}
+
+\NormalTok{  have h1 : e a a = !(e a a) := congrFun h a}
+
+\NormalTok{  cases hx : e a a \textless{};\textgreater{} rw [hx] at h1 \textless{};\textgreater{} exact absurd h1 (by decide)}
+
+\NormalTok{/{-}! \#\# The kinetic surface: the unsettled value admitted {-}/}
+
+\NormalTok{inductive Tri where}
+
+\NormalTok{  | tt | ff | bot}
+
+\NormalTok{deriving DecidableEq}
+
+\NormalTok{/{-}{-} Information order: the unsettled value lies below everything; settled values are incomparable. {-}/}
+
+\NormalTok{def Tri.le : Tri → Tri → Prop}
+
+\NormalTok{  | .bot, \_ =\textgreater{} True}
+
+\NormalTok{  | .tt, .tt =\textgreater{} True}
+
+\NormalTok{  | .ff, .ff =\textgreater{} True}
+
+\NormalTok{  | \_, \_ =\textgreater{} False}
+
+\NormalTok{/{-}{-} An admissible transformation cannot branch on not{-}yet{-}settled. {-}/}
+
+\NormalTok{def Monotone3 (f : Tri → Tri) : Prop := ∀ x y, Tri.le x y → Tri.le (f x) (f y)}
+
+\NormalTok{/{-}{-} Every admissible transformation has a fixed point: the recursion theorem in miniature. {-}/}
+
+\NormalTok{theorem self\_exists (f : Tri → Tri) (hf : Monotone3 f) : ∃ b, f b = b := by}
+
+\NormalTok{  cases h : f .bot with}
+
+\NormalTok{  | bot =\textgreater{} exact ⟨.bot, h⟩}
+
+\NormalTok{  | tt =\textgreater{}}
+
+\NormalTok{    have hle := hf .bot .tt trivial}
+
+\NormalTok{    rw [h] at hle}
+
+\NormalTok{    cases h2 : f .tt with}
+
+\NormalTok{    | tt =\textgreater{} exact ⟨.tt, h2⟩}
+
+\NormalTok{    | ff =\textgreater{} rw [h2] at hle; exact False.elim hle}
+
+\NormalTok{    | bot =\textgreater{} rw [h2] at hle; exact False.elim hle}
+
+\NormalTok{  | ff =\textgreater{}}
+
+\NormalTok{    have hle := hf .bot .ff trivial}
+
+\NormalTok{    rw [h] at hle}
+
+\NormalTok{    cases h2 : f .ff with}
+
+\NormalTok{    | ff =\textgreater{} exact ⟨.ff, h2⟩}
+
+\NormalTok{    | tt =\textgreater{} rw [h2] at hle; exact False.elim hle}
+
+\NormalTok{    | bot =\textgreater{} rw [h2] at hle; exact False.elim hle}
+
+\NormalTok{def neg3 : Tri → Tri}
+
+\NormalTok{  | .tt =\textgreater{} .ff}
+
+\NormalTok{  | .ff =\textgreater{} .tt}
+
+\NormalTok{  | .bot =\textgreater{} .bot}
+
+\NormalTok{theorem neg3\_admissible : Monotone3 neg3 := by}
+
+\NormalTok{  intro x y h}
+
+\NormalTok{  cases x \textless{};\textgreater{} cases y \textless{};\textgreater{} first | exact trivial | exact False.elim h}
+
+\NormalTok{theorem neg3\_self\_only\_unsettled (b : Tri) (h : neg3 b = b) : b = .bot := by}
+
+\NormalTok{  cases b with}
+
+\NormalTok{  | tt =\textgreater{} exact absurd h (by decide)}
+
+\NormalTok{  | ff =\textgreater{} exact absurd h (by decide)}
+
+\NormalTok{  | bot =\textgreater{} rfl}
+
+\NormalTok{/{-}{-} The self: the same diagonal, indexed on the kinetic surface, applied to itself is the unsettled value. {-}/}
+
+\NormalTok{theorem self\_at\_diagonal \{A : Type\} (e : A → A → Tri) (a : A) (h : e a = diag neg3 e) : e a a = .bot :=}
+
+\NormalTok{  neg3\_self\_only\_unsettled \_ (congrFun h a).symm}
+
+\NormalTok{/{-}! \#\# One object {-}/}
+
+\NormalTok{def settle : Bool → Tri}
+
+\NormalTok{  | true =\textgreater{} .tt}
+
+\NormalTok{  | false =\textgreater{} .ff}
+
+\NormalTok{/{-}{-} On every settled reading the kinetic diagonal is the formal diagonal, carried across unchanged. {-}/}
+
+\NormalTok{theorem diag\_agrees \{A : Type\} (e : A → A → Bool) (x : A) :}
+
+\NormalTok{    diag neg3 (fun u v =\textgreater{} settle (e u v)) x = settle (diag (fun b =\textgreater{} !b) e x) := by}
+
+\NormalTok{  show neg3 (settle (e x x)) = settle (!(e x x))}
+
+\NormalTok{  cases e x x \textless{};\textgreater{} rfl}
+
+\NormalTok{/{-}{-} The two surfaces differ at exactly one point, the value no settled reading reaches. {-}/}
+
+\NormalTok{theorem only\_the\_unsettled\_is\_new (b : Bool) : settle b ≠ .bot := by}
+
+\NormalTok{  cases b \textless{};\textgreater{} exact fun h =\textgreater{} Tri.noConfusion h}
+
+\NormalTok{\#print axioms settled\_has\_no\_self}
+
+\NormalTok{\#print axioms wall}
+
+\NormalTok{\#print axioms self\_exists}
+
+\NormalTok{\#print axioms neg3\_admissible}
+
+\NormalTok{\#print axioms self\_at\_diagonal}
+
+\NormalTok{\#print axioms diag\_agrees}
+
+\NormalTok{\#print axioms only\_the\_unsettled\_is\_new}
+\end{Highlighting}
+\end{Shaded}
+\end{strip}
+
+\subsection{B.2 · one\_object.f90 --- one diagonal, two
+surfaces}\label{b.2-one_object.f90-one-diagonal-two-surfaces}
+
+\begin{strip}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{!===============================================================================}
+\CommentTok{!  ONE DIAGONAL, TWO SURFACES. The program D, on input x, runs x on x and negates.}
+\CommentTok{!  Read at settled values: D(D) must equal its own negation, and no value does.}
+\CommentTok{!  Executed: D(D) calls D(D), frame identical to frame, the value never settling.}
+\CommentTok{!===============================================================================}
+\KeywordTok{module}\NormalTok{ diagonal}
+  \KeywordTok{implicit} \KeywordTok{none}
+  \DataTypeTok{integer}\NormalTok{, }\DataTypeTok{parameter} \DataTypeTok{::}\NormalTok{ D }\KeywordTok{=} \DecValTok{1}
+  \DataTypeTok{integer}\NormalTok{, }\DataTypeTok{parameter} \DataTypeTok{::}\NormalTok{ FUEL }\KeywordTok{=} \DecValTok{100000}
+  \DataTypeTok{integer} \DataTypeTok{::}\NormalTok{ frames\_seen }\KeywordTok{=} \DecValTok{0}\NormalTok{, frames\_identical }\KeywordTok{=} \DecValTok{0}\NormalTok{, pending\_negations }\KeywordTok{=} \CommentTok{0}
+\CommentTok{contains}
+  \CommentTok{! The settled surface: the equation the diagonal imposes on a truth value.}
+  \KeywordTok{pure} \DataTypeTok{logical} \KeywordTok{function}\NormalTok{ settles(v)}
+    \DataTypeTok{logical}\NormalTok{, }\DataTypeTok{intent(in)} \DataTypeTok{::}\NormalTok{ v}
+\NormalTok{    settles }\KeywordTok{=}\NormalTok{ (v }\OperatorTok{.eqv.}\NormalTok{ (}\OperatorTok{.not.}\NormalTok{ v))}
+  \KeywordTok{end function}\NormalTok{ settles}
+
+  \CommentTok{! The kinetic surface: the diagonal performed. Genuine recursion; the fuel only bounds the run.}
+  \KeywordTok{recursive} \KeywordTok{subroutine}\NormalTok{ run(prog, input, depth, settled, value)}
+    \DataTypeTok{integer}\NormalTok{, }\DataTypeTok{intent(in)}  \DataTypeTok{::}\NormalTok{ prog, input, depth}
+    \DataTypeTok{logical}\NormalTok{, }\DataTypeTok{intent(out)} \DataTypeTok{::}\NormalTok{ settled, value}
+    \DataTypeTok{logical} \DataTypeTok{::}\NormalTok{ inner\_settled, inner\_value}
+\NormalTok{    frames\_seen }\KeywordTok{=}\NormalTok{ frames\_seen }\KeywordTok{+} \DecValTok{1}
+    \KeywordTok{if}\NormalTok{ (depth }\OperatorTok{\textgreater{}} \DecValTok{1}\NormalTok{) }\KeywordTok{then}
+       \KeywordTok{if}\NormalTok{ (prog }\OperatorTok{==}\NormalTok{ D }\OperatorTok{.and.}\NormalTok{ input }\OperatorTok{==}\NormalTok{ D) frames\_identical }\KeywordTok{=}\NormalTok{ frames\_identical }\KeywordTok{+} \DecValTok{1}
+    \KeywordTok{end if}
+    \KeywordTok{if}\NormalTok{ (depth }\OperatorTok{\textgreater{}=}\NormalTok{ FUEL) }\KeywordTok{then}
+\NormalTok{       settled }\KeywordTok{=} \ConstantTok{.false.}\NormalTok{;  value }\KeywordTok{=} \ConstantTok{.false.}\NormalTok{;  }\KeywordTok{return}          \CommentTok{! still running: unsettled}
+    \KeywordTok{end if}
+\NormalTok{    pending\_negations }\KeywordTok{=}\NormalTok{ pending\_negations }\KeywordTok{+} \DecValTok{1}                \CommentTok{! D negates what x on x returns}
+    \KeywordTok{call}\NormalTok{ run(input, input, depth }\KeywordTok{+} \DecValTok{1}\NormalTok{, inner\_settled, inner\_value)   }\CommentTok{! x on x, with x = D: D(D) again}
+\NormalTok{    settled }\KeywordTok{=}\NormalTok{ inner\_settled}
+\NormalTok{    value }\KeywordTok{=} \OperatorTok{.not.}\NormalTok{ inner\_value}
+  \KeywordTok{end subroutine}\NormalTok{ run}
+\KeywordTok{end module}\NormalTok{ diagonal}
+
+\KeywordTok{program}\NormalTok{ one\_object}
+  \KeywordTok{use}\NormalTok{ diagonal}
+  \KeywordTok{implicit} \KeywordTok{none}
+  \DataTypeTok{logical} \DataTypeTok{::}\NormalTok{ v, any\_settled, settled, value}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} ONE DIAGONAL, TWO SURFACES\textquotesingle{}}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+\NormalTok{  any\_settled }\KeywordTok{=} \ConstantTok{.false.}
+\NormalTok{  v }\KeywordTok{=} \ConstantTok{.false.}\NormalTok{;  }\KeywordTok{if}\NormalTok{ (settles(v)) any\_settled }\KeywordTok{=} \ConstantTok{.true.}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,L1,A,L1)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{}   read   : D(D) = \textquotesingle{}}\NormalTok{, v, }\StringTok{\textquotesingle{} would require \textquotesingle{}}\NormalTok{, (v}\CommentTok{ .eqv. (.not. v))}
+\NormalTok{  v }\KeywordTok{=} \ConstantTok{.true.}\NormalTok{;   }\KeywordTok{if}\NormalTok{ (settles(v)) any\_settled }\KeywordTok{=} \ConstantTok{.true.}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,L1,A,L1)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{}   read   : D(D) = \textquotesingle{}}\NormalTok{, v, }\StringTok{\textquotesingle{} would require \textquotesingle{}}\NormalTok{, (v}\CommentTok{ .eqv. (.not. v))}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,L1,A)\textquotesingle{}}\FunctionTok{)}   \StringTok{\textquotesingle{}   read   : a settled value exists: \textquotesingle{}}\NormalTok{, any\_settled, }\StringTok{\textquotesingle{}   {-}\textgreater{} the wall\textquotesingle{}}
+  \KeywordTok{call}\NormalTok{ run(D, D, }\DecValTok{1}\NormalTok{, settled, value)}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,I0)\textquotesingle{}}\FunctionTok{)}     \StringTok{\textquotesingle{}   execute: frames entered                 \textquotesingle{}}\NormalTok{, frames\_seen}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,I0,A,I0)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{}   execute: frames identical to their caller \textquotesingle{}}\CommentTok{, frames\_identical, \textquotesingle{} of \textquotesingle{}, frames\_seen {-} 1}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,I0)\textquotesingle{}}\FunctionTok{)}     \StringTok{\textquotesingle{}   execute: negations pending              \textquotesingle{}}\NormalTok{, pending\_negations}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,L1,A)\textquotesingle{}}\FunctionTok{)}   \StringTok{\textquotesingle{}   execute: the value settled              \textquotesingle{}}\NormalTok{, settled, }\StringTok{\textquotesingle{}   {-}\textgreater{} the self, running on itself\textquotesingle{}}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+  \KeywordTok{if}\NormalTok{ (any\_settled }\OperatorTok{.or.}\NormalTok{ settled }\OperatorTok{.or.}\NormalTok{ frames\_identical }\OperatorTok{/=}\NormalTok{ frames\_seen }\KeywordTok{{-}} \DecValTok{1}\NormalTok{)}\CommentTok{ error stop \textquotesingle{}the law failed\textquotesingle{}}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} Identical object. Read: no settled value. Executed: the frame returns to itself.\textquotesingle{}}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+\KeywordTok{end program}\NormalTok{ one\_object}
+\end{Highlighting}
+\end{Shaded}
+\end{strip}
+
+\subsection{B.3 · GateThesis.lean --- the Ninth Gate Thesis, core Lean
+4, no Mathlib, no
+axioms}\label{b.3-gatethesis.lean-the-ninth-gate-thesis-core-lean-4-no-mathlib-no-axioms}
+
+\begin{strip}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{/{-}}
+
+\NormalTok{  The Ninth Gate Thesis · wall and self on one diagonal, and what the crossing delivers}
+
+\NormalTok{  core Lean 4, no Mathlib, no axioms. Verify as witness: \textasciigrave{}lean GateThesis.lean\textasciigrave{}, then read \#print axioms.}
+
+\NormalTok{{-}/}
+
+\NormalTok{/{-}{-} The one diagonal, typed at any value surface. {-}/}
+
+\NormalTok{def diag \{A B : Type\} (f : B → B) (e : A → A → B) : A → B := fun x =\textgreater{} f (e x x)}
+
+\NormalTok{/{-}! \#\# I · The formal surface: settled values, the wall {-}/}
+
+\NormalTok{theorem wall \{A : Type\} (e : A → A → Bool) : ∀ a, e a ≠ diag (fun b =\textgreater{} !b) e := by}
+
+\NormalTok{  intro a h}
+
+\NormalTok{  have h1 : e a a = !(e a a) := congrFun h a}
+
+\NormalTok{  cases hx : e a a \textless{};\textgreater{} rw [hx] at h1 \textless{};\textgreater{} exact absurd h1 (by decide)}
+
+\NormalTok{/{-}! \#\# II · The kinetic surface: the unsettled value admitted, the self {-}/}
+
+\NormalTok{inductive Tri where}
+
+\NormalTok{  | tt | ff | bot}
+
+\NormalTok{def Tri.le : Tri → Tri → Prop}
+
+\NormalTok{  | .bot, \_ =\textgreater{} True}
+
+\NormalTok{  | .tt, .tt =\textgreater{} True}
+
+\NormalTok{  | .ff, .ff =\textgreater{} True}
+
+\NormalTok{  | .tt, .ff =\textgreater{} False}
+
+\NormalTok{  | .tt, .bot =\textgreater{} False}
+
+\NormalTok{  | .ff, .tt =\textgreater{} False}
+
+\NormalTok{  | .ff, .bot =\textgreater{} False}
+
+\NormalTok{def Monotone3 (f : Tri → Tri) : Prop := ∀ x y, Tri.le x y → Tri.le (f x) (f y)}
+
+\NormalTok{/{-}{-} Every admissible transformation has a fixed point. {-}/}
+
+\NormalTok{theorem self\_exists (f : Tri → Tri) (hf : Monotone3 f) : ∃ b, f b = b :=}
+
+\NormalTok{  match h : f .bot with}
+
+\NormalTok{  | .bot =\textgreater{} ⟨.bot, h⟩}
+
+\NormalTok{  | .tt =\textgreater{}}
+
+\NormalTok{    have hle : Tri.le (f .bot) (f .tt) := hf .bot .tt trivial}
+
+\NormalTok{    match h2 : f .tt with}
+
+\NormalTok{    | .tt =\textgreater{} ⟨.tt, h2⟩}
+
+\NormalTok{    | .ff =\textgreater{} False.elim (Eq.mp (congrArg (fun y =\textgreater{} Tri.le .tt y) h2) (Eq.mp (congrArg (fun x =\textgreater{} Tri.le x (f .tt)) h) hle))}
+
+\NormalTok{    | .bot =\textgreater{} False.elim (Eq.mp (congrArg (fun y =\textgreater{} Tri.le .tt y) h2) (Eq.mp (congrArg (fun x =\textgreater{} Tri.le x (f .tt)) h) hle))}
+
+\NormalTok{  | .ff =\textgreater{}}
+
+\NormalTok{    have hle : Tri.le (f .bot) (f .ff) := hf .bot .ff trivial}
+
+\NormalTok{    match h2 : f .ff with}
+
+\NormalTok{    | .ff =\textgreater{} ⟨.ff, h2⟩}
+
+\NormalTok{    | .tt =\textgreater{} False.elim (Eq.mp (congrArg (fun y =\textgreater{} Tri.le .ff y) h2) (Eq.mp (congrArg (fun x =\textgreater{} Tri.le x (f .ff)) h) hle))}
+
+\NormalTok{    | .bot =\textgreater{} False.elim (Eq.mp (congrArg (fun y =\textgreater{} Tri.le .ff y) h2) (Eq.mp (congrArg (fun x =\textgreater{} Tri.le x (f .ff)) h) hle))}
+
+\NormalTok{def neg3 : Tri → Tri}
+
+\NormalTok{  | .tt =\textgreater{} .ff}
+
+\NormalTok{  | .ff =\textgreater{} .tt}
+
+\NormalTok{  | .bot =\textgreater{} .bot}
+
+\NormalTok{theorem neg3\_admissible : Monotone3 neg3}
+
+\NormalTok{  | .bot, \_, \_ =\textgreater{} trivial}
+
+\NormalTok{  | .tt, .tt, \_ =\textgreater{} trivial}
+
+\NormalTok{  | .ff, .ff, \_ =\textgreater{} trivial}
+
+\NormalTok{  | .tt, .ff, h =\textgreater{} False.elim h}
+
+\NormalTok{  | .tt, .bot, h =\textgreater{} False.elim h}
+
+\NormalTok{  | .ff, .tt, h =\textgreater{} False.elim h}
+
+\NormalTok{  | .ff, .bot, h =\textgreater{} False.elim h}
+
+\NormalTok{theorem neg3\_self\_only\_unsettled : ∀ b : Tri, neg3 b = b → b = .bot}
+
+\NormalTok{  | .tt, h =\textgreater{} Tri.noConfusion h}
+
+\NormalTok{  | .ff, h =\textgreater{} Tri.noConfusion h}
+
+\NormalTok{  | .bot, \_ =\textgreater{} rfl}
+
+\NormalTok{theorem self\_at\_diagonal \{A : Type\} (e : A → A → Tri) (a : A) (h : e a = diag neg3 e) : e a a = .bot :=}
+
+\NormalTok{  neg3\_self\_only\_unsettled \_ (congrFun h a).symm}
+
+\NormalTok{/{-}! \#\# III · One object {-}/}
+
+\NormalTok{def settle : Bool → Tri}
+
+\NormalTok{  | true =\textgreater{} .tt}
+
+\NormalTok{  | false =\textgreater{} .ff}
+
+\NormalTok{theorem diag\_agrees \{A : Type\} (e : A → A → Bool) (x : A) :}
+
+\NormalTok{    diag neg3 (fun u v =\textgreater{} settle (e u v)) x = settle (diag (fun b =\textgreater{} !b) e x) := by}
+
+\NormalTok{  show neg3 (settle (e x x)) = settle (!(e x x))}
+
+\NormalTok{  cases e x x \textless{};\textgreater{} rfl}
+
+\NormalTok{theorem only\_the\_unsettled\_is\_new : ∀ b : Bool, settle b ≠ .bot}
+
+\NormalTok{  | true, h =\textgreater{} Tri.noConfusion h}
+
+\NormalTok{  | false, h =\textgreater{} Tri.noConfusion h}
+
+\NormalTok{/{-}! \#\# IV · What the crossing delivers {-}/}
+
+\NormalTok{/{-}{-} The self is not a verdict: the crossing lands on the unsettled value, never on a settled truth. {-}/}
+
+\NormalTok{theorem self\_is\_not\_a\_verdict \{A : Type\} (e : A → A → Tri) (a : A) (h : e a = diag neg3 e) (b : Bool) :}
+
+\NormalTok{    e a a ≠ settle b :=}
+
+\NormalTok{  fun hb =\textgreater{} only\_the\_unsettled\_is\_new b ((self\_at\_diagonal e a h) ▸ hb).symm}
+
+\NormalTok{/{-}{-} A proved premise adds nothing: whatever the law is, once proved it cannot be the missing step. {-}/}
+
+\NormalTok{theorem proved\_premise\_adds\_nothing (L C : Prop) (hL : L) : (L → C) ↔ C :=}
+
+\NormalTok{  ⟨fun h =\textgreater{} h hL, fun c \_ =\textgreater{} c⟩}
+
+\NormalTok{theorem gate\_adds\_nothing (C : Prop) :}
+
+\NormalTok{    ((∀ (A : Type) (e : A → A → Bool) (a : A), e a ≠ diag (fun b =\textgreater{} !b) e) → C) ↔ C :=}
+
+\NormalTok{  proved\_premise\_adds\_nothing \_ C (fun \_ e a =\textgreater{} wall e a)}
+
+\NormalTok{/{-}{-} A run of a counterexample search, at finite fuel. \textasciigrave{}none\textasciigrave{} is the unsettled value: still running. {-}/}
+
+\NormalTok{def step (p : Nat → Bool) (n : Nat) : Option Nat → Option Nat}
+
+\NormalTok{  | some k =\textgreater{} some k}
+
+\NormalTok{  | none =\textgreater{} if p n then some n else none}
+
+\NormalTok{def search (p : Nat → Bool) : Nat → Option Nat}
+
+\NormalTok{  | 0 =\textgreater{} none}
+
+\NormalTok{  | n + 1 =\textgreater{} step p n (search p n)}
+
+\NormalTok{theorem search\_unsettled (p : Nat → Bool) (N : Nat) (hp : ∀ k, k \textless{} N → p k = false) :}
+
+\NormalTok{    ∀ n, n ≤ N → search p n = none}
+
+\NormalTok{  | 0, \_ =\textgreater{} rfl}
+
+\NormalTok{  | n + 1, h =\textgreater{}}
+
+\NormalTok{    have hn : n \textless{} N := Nat.lt\_of\_succ\_le h}
+
+\NormalTok{    have ih : search p n = none := search\_unsettled p N hp n (Nat.le\_of\_lt hn)}
+
+\NormalTok{    show step p n (search p n) = none from by}
+
+\NormalTok{      rw [ih]}
+
+\NormalTok{      show (if p n = true then some n else none) = none}
+
+\NormalTok{      rw [hp n hn]}
+
+\NormalTok{      rfl}
+
+\NormalTok{def counterAt (N : Nat) : Nat → Bool := fun k =\textgreater{} Nat.beq k N}
+
+\NormalTok{theorem counterAt\_below (N k : Nat) (h : k \textless{} N) : counterAt N k = false := by}
+
+\NormalTok{  show Nat.beq k N = false}
+
+\NormalTok{  cases hb : Nat.beq k N with}
+
+\NormalTok{  | false =\textgreater{} rfl}
+
+\NormalTok{  | true =\textgreater{} exact absurd (Nat.eq\_of\_beq\_eq\_true hb) (Nat.ne\_of\_lt h)}
+
+\NormalTok{theorem beq\_self (n : Nat) : Nat.beq n n = true := by}
+
+\NormalTok{  induction n with}
+
+\NormalTok{  | zero =\textgreater{} rfl}
+
+\NormalTok{  | succ m ih =\textgreater{} exact ih}
+
+\NormalTok{/{-}{-} Where the universal holds, the executed search is the self: unsettled at every fuel, never a verdict. {-}/}
+
+\NormalTok{theorem true\_universal\_never\_settles (n : Nat) : search (fun \_ =\textgreater{} false) n = none :=}
+
+\NormalTok{  search\_unsettled (fun \_ =\textgreater{} false) n (fun \_ \_ =\textgreater{} rfl) n (Nat.le\_refl n)}
+
+\NormalTok{/{-}{-} At every fuel there is a world where the universal fails whose run is the same unsettled run. {-}/}
+
+\NormalTok{theorem finite\_run\_never\_confirms (n : Nat) :}
+
+\NormalTok{    (¬ ∀ k, counterAt n k = false) ∧ search (counterAt n) n = search (fun \_ =\textgreater{} false) n :=}
+
+\NormalTok{  ⟨fun hall =\textgreater{} Bool.noConfusion ((hall n).symm.trans (beq\_self n)),}
+
+\NormalTok{   (search\_unsettled (counterAt n) n (fun k hk =\textgreater{} counterAt\_below n k hk) n (Nat.le\_refl n)).trans}
+
+\NormalTok{     (true\_universal\_never\_settles n).symm⟩}
+
+\NormalTok{/{-}{-} A refutation does settle: a counterexample within fuel returns a settled value. {-}/}
+
+\NormalTok{theorem refutation\_settles (N : Nat) : search (counterAt N) (N + 1) = some N := by}
+
+\NormalTok{  show step (counterAt N) N (search (counterAt N) N) = some N}
+
+\NormalTok{  rw [search\_unsettled (counterAt N) N (fun k hk =\textgreater{} counterAt\_below N k hk) N (Nat.le\_refl N)]}
+
+\NormalTok{  show (if counterAt N N = true then some N else none) = some N}
+
+\NormalTok{  rw [show counterAt N N = true from beq\_self N]}
+
+\NormalTok{  rfl}
+
+\NormalTok{/{-}! \#\# V · The one{-}stroke test {-}/}
+
+\NormalTok{/{-}{-} No gate discharges an axiom: from a proved gate G and a conditional proof Ω → C, C does not follow in general. {-}/}
+
+\NormalTok{theorem gate\_does\_not\_discharge : ¬ ∀ (G Ω C : Prop), G → (Ω → C) → C :=}
+
+\NormalTok{  fun h =\textgreater{} h True False False trivial id}
+
+\NormalTok{/{-}{-} An axiom dissolved into its conjecture decides nothing: Ω ↔ C and Ω → C hold with C false. {-}/}
+
+\NormalTok{theorem dissolved\_axiom\_decides\_nothing : ∃ Ω C : Prop, (Ω ↔ C) ∧ (Ω → C) ∧ ¬ C :=}
+
+\NormalTok{  ⟨False, False, Iff.rfl, id, id⟩}
+
+\NormalTok{def isPrime (n : Nat) : Prop := 2 ≤ n ∧ ∀ d, 2 ≤ d → d \textless{} n → n \% d ≠ 0}
+
+\NormalTok{/{-}{-} Euler\textquotesingle{}s polynomial claim, false at n = 40, where 40² + 40 + 41 = 41². {-}/}
+
+\NormalTok{def EulerClaim : Prop := ∀ n : Nat, isPrime (n * n + n + 41)}
+
+\NormalTok{theorem euler\_claim\_false : ¬ EulerClaim :=}
+
+\NormalTok{  fun h =\textgreater{} (h 40).2 41 (by decide) (by decide) (by decide)}
+
+\NormalTok{/{-}{-} Every ingredient of the one{-}stroke mechanism holds for a false statement: an axiom dissolved into}
+
+\NormalTok{    the conjecture, a conditional proof, and the gate theorem itself. {-}/}
+
+\NormalTok{theorem one\_stroke\_also\_passes\_a\_falsehood :}
+
+\NormalTok{    ∃ Ω : Prop, (Ω ↔ EulerClaim) ∧ (Ω → EulerClaim) ∧}
+
+\NormalTok{      (∀ (A : Type) (e : A → A → Bool) (a : A), e a ≠ diag (fun b =\textgreater{} !b) e) ∧ ¬ EulerClaim :=}
+
+\NormalTok{  ⟨EulerClaim, Iff.rfl, id, fun \_ e a =\textgreater{} wall e a, euler\_claim\_false⟩}
+
+\NormalTok{\#print axioms wall}
+
+\NormalTok{\#print axioms self\_exists}
+
+\NormalTok{\#print axioms neg3\_admissible}
+
+\NormalTok{\#print axioms self\_at\_diagonal}
+
+\NormalTok{\#print axioms diag\_agrees}
+
+\NormalTok{\#print axioms only\_the\_unsettled\_is\_new}
+
+\NormalTok{\#print axioms self\_is\_not\_a\_verdict}
+
+\NormalTok{\#print axioms gate\_adds\_nothing}
+
+\NormalTok{\#print axioms true\_universal\_never\_settles}
+
+\NormalTok{\#print axioms finite\_run\_never\_confirms}
+
+\NormalTok{\#print axioms refutation\_settles}
+
+\NormalTok{\#print axioms gate\_does\_not\_discharge}
+
+\NormalTok{\#print axioms dissolved\_axiom\_decides\_nothing}
+
+\NormalTok{\#print axioms euler\_claim\_false}
+
+\NormalTok{\#print axioms one\_stroke\_also\_passes\_a\_falsehood}
+\end{Highlighting}
+\end{Shaded}
+\end{strip}
+
+\subsection{B.4 · gate\_thesis.f90 --- the Ninth Gate Thesis,
+executed}\label{b.4-gate_thesis.f90-the-ninth-gate-thesis-executed}
+
+\begin{strip}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{!===============================================================================}
+
+\CommentTok{!  THE NINTH GATE THESIS, EXECUTED. Companion to GateThesis.lean.}
+
+\CommentTok{!  I   the wall   : the diagonal read at settled values has no value}
+
+\CommentTok{!  II  the self   : the diagonal executed returns to its own frame, unsettled}
+
+\CommentTok{!  III what the crossing delivers: a run settles a refutation, never a confirmation}
+
+\CommentTok{!===============================================================================}
+
+\KeywordTok{module}\NormalTok{ gate}
+
+  \KeywordTok{implicit} \KeywordTok{none}
+
+  \DataTypeTok{integer}\NormalTok{, }\DataTypeTok{parameter} \DataTypeTok{::}\NormalTok{ i8 }\KeywordTok{=} \FunctionTok{selected\_int\_kind}\NormalTok{(}\DecValTok{18}\NormalTok{)}
+
+  \DataTypeTok{integer}\NormalTok{, }\DataTypeTok{parameter} \DataTypeTok{::}\NormalTok{ D }\KeywordTok{=} \DecValTok{1}\NormalTok{, FUEL }\KeywordTok{=} \DecValTok{100000}
+
+  \DataTypeTok{integer(i8)}\NormalTok{, }\DataTypeTok{parameter} \DataTypeTok{::}\NormalTok{ SEARCH\_FUEL }\KeywordTok{=} \DecValTok{2000000\_i8}
+
+  \DataTypeTok{integer} \DataTypeTok{::}\NormalTok{ frames\_seen }\KeywordTok{=} \DecValTok{0}\NormalTok{, frames\_identical }\KeywordTok{=} \DecValTok{0}
+
+\CommentTok{contains}
+
+  \KeywordTok{pure} \DataTypeTok{logical} \KeywordTok{function}\NormalTok{ settles(v)}
+
+    \DataTypeTok{logical}\NormalTok{, }\DataTypeTok{intent(in)} \DataTypeTok{::}\NormalTok{ v}
+
+\NormalTok{    settles }\KeywordTok{=}\NormalTok{ (v }\OperatorTok{.eqv.}\NormalTok{ (}\OperatorTok{.not.}\NormalTok{ v))}
+
+  \KeywordTok{end function}\NormalTok{ settles}
+
+  \KeywordTok{recursive} \KeywordTok{subroutine}\NormalTok{ run(prog, input, depth, settled, value)}
+
+    \DataTypeTok{integer}\NormalTok{, }\DataTypeTok{intent(in)}  \DataTypeTok{::}\NormalTok{ prog, input, depth}
+
+    \DataTypeTok{logical}\NormalTok{, }\DataTypeTok{intent(out)} \DataTypeTok{::}\NormalTok{ settled, value}
+
+    \DataTypeTok{logical} \DataTypeTok{::}\NormalTok{ s, x}
+
+\NormalTok{    frames\_seen }\KeywordTok{=}\NormalTok{ frames\_seen }\KeywordTok{+} \DecValTok{1}
+
+    \KeywordTok{if}\NormalTok{ (depth }\OperatorTok{\textgreater{}} \DecValTok{1} \OperatorTok{.and.}\NormalTok{ prog }\OperatorTok{==}\NormalTok{ D }\OperatorTok{.and.}\NormalTok{ input }\OperatorTok{==}\NormalTok{ D) frames\_identical }\KeywordTok{=}\NormalTok{ frames\_identical }\KeywordTok{+} \DecValTok{1}
+
+    \KeywordTok{if}\NormalTok{ (depth }\OperatorTok{\textgreater{}=}\NormalTok{ FUEL) }\KeywordTok{then}
+
+\NormalTok{       settled }\KeywordTok{=} \ConstantTok{.false.}\NormalTok{;  value }\KeywordTok{=} \ConstantTok{.false.}\NormalTok{;  }\KeywordTok{return}
+
+    \KeywordTok{end if}
+
+    \KeywordTok{call}\NormalTok{ run(input, input, depth }\KeywordTok{+} \DecValTok{1}\NormalTok{, s, x)}
+
+\NormalTok{    settled }\KeywordTok{=}\NormalTok{ s;  value }\KeywordTok{=} \OperatorTok{.not.}\NormalTok{ x}
+
+  \KeywordTok{end subroutine}\NormalTok{ run}
+
+  \CommentTok{! Counterexample to: for every k, k*k mod 4 is 0 or 1.}
+
+  \KeywordTok{pure} \DataTypeTok{logical} \KeywordTok{function}\NormalTok{ square\_counter(k)}
+
+    \DataTypeTok{integer(i8)}\NormalTok{, }\DataTypeTok{intent(in)} \DataTypeTok{::}\NormalTok{ k}
+
+    \DataTypeTok{integer(i8)} \DataTypeTok{::}\NormalTok{ r}
+
+\NormalTok{    r }\KeywordTok{=} \BuiltInTok{mod}\NormalTok{(}\BuiltInTok{mod}\NormalTok{(k, }\DecValTok{4\_i8}\NormalTok{)}\KeywordTok{*}\BuiltInTok{mod}\NormalTok{(k, }\DecValTok{4\_i8}\NormalTok{), }\DecValTok{4\_i8}\NormalTok{)}
+
+\NormalTok{    square\_counter }\KeywordTok{=} \OperatorTok{.not.}\NormalTok{ (r }\OperatorTok{==} \DecValTok{0\_i8} \OperatorTok{.or.}\NormalTok{ r }\OperatorTok{==} \DecValTok{1\_i8}\NormalTok{)}
+
+  \KeywordTok{end function}\NormalTok{ square\_counter}
+
+  \CommentTok{! Counterexample to: for every n, n*n + n + 41 is prime.}
+
+  \KeywordTok{pure} \DataTypeTok{logical} \KeywordTok{function}\NormalTok{ euler\_counter(n)}
+
+    \DataTypeTok{integer(i8)}\NormalTok{, }\DataTypeTok{intent(in)} \DataTypeTok{::}\NormalTok{ n}
+
+    \DataTypeTok{integer(i8)} \DataTypeTok{::}\NormalTok{ m, q}
+
+\NormalTok{    m }\KeywordTok{=}\NormalTok{ n}\KeywordTok{*}\NormalTok{n }\KeywordTok{+}\NormalTok{ n }\KeywordTok{+} \DecValTok{41\_i8}\NormalTok{;  euler\_counter }\KeywordTok{=} \ConstantTok{.false.}\NormalTok{;  q }\KeywordTok{=} \DecValTok{2\_i8}
+
+    \KeywordTok{do} \KeywordTok{while}\NormalTok{ (q}\KeywordTok{*}\NormalTok{q }\OperatorTok{\textless{}=}\NormalTok{ m)}
+
+       \KeywordTok{if}\NormalTok{ (}\BuiltInTok{mod}\NormalTok{(m, q) }\OperatorTok{==} \DecValTok{0\_i8}\NormalTok{) }\KeywordTok{then}
+
+\NormalTok{          euler\_counter }\KeywordTok{=} \ConstantTok{.true.}\NormalTok{;  }\KeywordTok{return}
+
+       \KeywordTok{end if}
+
+\NormalTok{       q }\KeywordTok{=}\NormalTok{ q }\KeywordTok{+} \DecValTok{1\_i8}
+
+    \KeywordTok{end do}
+
+  \KeywordTok{end function}\NormalTok{ euler\_counter}
+
+\KeywordTok{end module}\NormalTok{ gate}
+
+\KeywordTok{program}\NormalTok{ gate\_thesis}
+
+  \KeywordTok{use}\NormalTok{ gate}
+
+  \KeywordTok{implicit} \KeywordTok{none}
+
+  \DataTypeTok{logical} \DataTypeTok{::}\NormalTok{ settled, value, wall\_holds}
+
+  \DataTypeTok{integer(i8)} \DataTypeTok{::}\NormalTok{ k, found}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} THE NINTH GATE THESIS, EXECUTED\textquotesingle{}}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+
+\NormalTok{  wall\_holds }\KeywordTok{=} \OperatorTok{.not.}\NormalTok{ (settles(}\ConstantTok{.false.}\NormalTok{) }\OperatorTok{.or.}\NormalTok{ settles(}\ConstantTok{.true.}\NormalTok{))}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,L1)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} I   the wall : no settled value satisfies D(D) = not D(D)          \textquotesingle{}}\NormalTok{, wall\_holds}
+
+  \KeywordTok{call}\NormalTok{ run(D, D, }\DecValTok{1}\NormalTok{, settled, value)}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,I0,A,I0,A,L1)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} II  the self : frames identical to their caller \textquotesingle{}}\NormalTok{, frames\_identical, }\StringTok{\textquotesingle{} of \textquotesingle{}}\NormalTok{, }\KeywordTok{\&}
+
+\NormalTok{       frames\_seen }\KeywordTok{{-}} \DecValTok{1}\NormalTok{, }\StringTok{\textquotesingle{}, settled \textquotesingle{}}\NormalTok{, settled}
+
+\NormalTok{  found }\KeywordTok{=} \KeywordTok{{-}}\DecValTok{1\_i8}
+
+  \KeywordTok{do}\NormalTok{ k }\KeywordTok{=} \DecValTok{0\_i8}\NormalTok{, SEARCH\_FUEL }\KeywordTok{{-}} \DecValTok{1\_i8}
+
+\BuiltInTok{     i}\NormalTok{f (square\_counter(k)) }\KeywordTok{then}
+
+\NormalTok{        found }\KeywordTok{=}\NormalTok{ k;  }\KeywordTok{exit}
+
+\BuiltInTok{     e}\NormalTok{nd }\KeywordTok{if}
+
+  \KeywordTok{end do}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,I0,A,L1)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} III a true universal, k*k mod 4 in \{0,1\}, searched to \textquotesingle{}}\NormalTok{, SEARCH\_FUEL, }\StringTok{\textquotesingle{}: settled \textquotesingle{}}\NormalTok{, (found }\OperatorTok{\textgreater{}=} \DecValTok{0\_i8}\NormalTok{)}
+
+\NormalTok{  found }\KeywordTok{=} \KeywordTok{{-}}\DecValTok{1\_i8}
+
+  \KeywordTok{do}\NormalTok{ k }\KeywordTok{=} \DecValTok{0\_i8}\NormalTok{, SEARCH\_FUEL }\KeywordTok{{-}} \DecValTok{1\_i8}
+
+\BuiltInTok{     i}\NormalTok{f (euler\_counter(k)) }\KeywordTok{then}
+
+\NormalTok{        found }\KeywordTok{=}\NormalTok{ k;  }\KeywordTok{exit}
+
+\BuiltInTok{     e}\NormalTok{nd }\KeywordTok{if}
+
+  \KeywordTok{end do}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,I0,A,I0)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{}     a false universal, n*n + n + 41 prime: settled false at n = \textquotesingle{}}\NormalTok{, found, }\KeywordTok{\&}
+
+       \StringTok{\textquotesingle{}, value \textquotesingle{}}\NormalTok{, found}\KeywordTok{*}\NormalTok{found }\KeywordTok{+}\NormalTok{ found }\KeywordTok{+} \DecValTok{41\_i8}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+
+  \KeywordTok{if}\NormalTok{ (}\OperatorTok{.not.}\NormalTok{ wall\_holds }\OperatorTok{.or.}\NormalTok{ settled }\OperatorTok{.or.}\NormalTok{ frames\_identical }\OperatorTok{/=}\NormalTok{ frames\_seen}\CommentTok{ {-} 1 .or. found /= 40\_i8) \&}
+
+\NormalTok{       error }\KeywordTok{stop} \StringTok{\textquotesingle{}the thesis failed\textquotesingle{}}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} Read: the wall. Executed: the self, unsettled. A run settles refutations only.\textquotesingle{}}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+
+\KeywordTok{end program}\NormalTok{ gate\_thesis}
+\end{Highlighting}
+\end{Shaded}
+\end{strip}
+
+Expected stdout of \texttt{gate\_thesis} (register run, gfortran 13.3.0;
+transliteration-verified on the forging substrate):
+
+\begin{strip}
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{==============================================================================}
+\NormalTok{ THE NINTH GATE THESIS}\OperatorTok{,}\NormalTok{ EXECUTED}
+\OperatorTok{==============================================================================}
+\NormalTok{ I   the wall }\OperatorTok{:}\NormalTok{ no settled value satisfies }\FunctionTok{D}\NormalTok{(D) }\OperatorTok{=}\NormalTok{ not }\FunctionTok{D}\NormalTok{(D)           T}
+\NormalTok{ II  the self }\OperatorTok{:}\NormalTok{ frames identical to their caller }\DecValTok{99999} \KeywordTok{of} \DecValTok{99999}\OperatorTok{,}\NormalTok{ settled F}
+\NormalTok{ III a }\KeywordTok{true}\NormalTok{ universal}\OperatorTok{,}\NormalTok{ k}\OperatorTok{*}\NormalTok{k mod }\DecValTok{4} \KeywordTok{in}\NormalTok{ \{}\DecValTok{0}\OperatorTok{,}\DecValTok{1}\NormalTok{\}}\OperatorTok{,}\NormalTok{ searched to }\DecValTok{2000000}\OperatorTok{:}\NormalTok{ settled F}
+\NormalTok{     a }\KeywordTok{false}\NormalTok{ universal}\OperatorTok{,}\NormalTok{ n}\OperatorTok{*}\NormalTok{n }\OperatorTok{+}\NormalTok{ n }\OperatorTok{+} \DecValTok{41}\NormalTok{ prime}\OperatorTok{:}\NormalTok{ settled }\KeywordTok{false}\NormalTok{ at n }\OperatorTok{=} \DecValTok{40}\OperatorTok{,}\NormalTok{ value }\DecValTok{1681}
+\OperatorTok{==============================================================================}
+\NormalTok{ Read}\OperatorTok{:}\NormalTok{ the wall}\OperatorTok{.} \AttributeTok{Executed}\OperatorTok{:}\NormalTok{ the self}\OperatorTok{,}\NormalTok{ unsettled}\OperatorTok{.} \AttributeTok{A}\NormalTok{ run settles refutations only}\OperatorTok{.}
+\OperatorTok{==============================================================================}
+\end{Highlighting}
+\end{Shaded}
+\end{strip}
+
+\subsection{B.5 · RAFGate.lean --- the Ninth Gate on RAF-native ground,
+and BSD through
+it}\label{b.5-rafgate.lean-the-ninth-gate-on-raf-native-ground-and-bsd-through-it}
+
+\begin{strip}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{/{-}}
+\NormalTok{  RAF Gate · the Ninth Gate on RAF{-}native ground, and BSD through it · core Lean 4, no Mathlib.}
+\NormalTok{  Pre{-}Gödel: no provability predicate, no diagonal lemma, no consistency hypothesis.}
+\NormalTok{{-}/}
+
+\NormalTok{theorem lock\_core (r t s n : Nat) (hK : s = r + t) (hC : s ≤ n) (hE : n ≤ r) : r = n ∧ t = 0 := by}
+\NormalTok{  have h1 : r + t ≤ n := hK ▸ hC}
+\NormalTok{  have h3 : r = n := Nat.le\_antisymm (Nat.le\_trans (Nat.le\_add\_right r t) h1) hE}
+\NormalTok{  have h4 : r + t ≤ r := by rw [← h3] at h1; exact h1}
+\NormalTok{  exact ⟨h3, Nat.eq\_zero\_of\_le\_zero (Nat.le\_of\_add\_le\_add\_left (Nat.le\_trans h4 (Nat.le\_of\_eq (Nat.add\_zero r).symm)))⟩}
+
+\NormalTok{structure Curve where}
+\NormalTok{  ralg : Nat            {-}{-} rank of E(Q)}
+\NormalTok{  ran : Nat             {-}{-} ord\_\{s=1\} L(E,s)}
+\NormalTok{  shaQ : Nat → Nat      {-}{-} corank of Sha(E/Q)[p\^{}∞]}
+\NormalTok{  trivQ : Nat → Bool    {-}{-} Sha(E/Q)[p\^{}∞] = 0}
+\NormalTok{  eps : Nat             {-}{-} ord\_\{s=1\} L(E\^{}K,s), at most one}
+\NormalTok{  shaT : Nat → Nat      {-}{-} corank of Sha(E\^{}K/Q)[p\^{}∞]}
+\NormalTok{  trivT : Nat → Bool}
+\NormalTok{  rKalg : Nat           {-}{-} rank of E(K)}
+\NormalTok{  rKan : Nat            {-}{-} ord\_\{s=1\} L(E/K,s)}
+\NormalTok{  selK : Nat → Nat      {-}{-} corank of Sel\_\{p\^{}∞\}(E/K)}
+\NormalTok{  shaK : Nat → Nat      {-}{-} corank of Sha(E/K)[p\^{}∞]}
+\NormalTok{  trivK : Nat → Bool}
+
+\NormalTok{/{-}{-} The theorem{-}grade inputs, each cited in the record. {-}/}
+\NormalTok{structure Inputs (c : Curve) : Prop where}
+\NormalTok{  factor    : c.rKan = c.ran + c.eps}
+\NormalTok{  descent   : c.rKalg = c.ralg + c.eps}
+\NormalTok{  kummerK   : ∀ p, c.selK p = c.rKalg + c.shaK p}
+\NormalTok{  kernel    : ∀ p, c.shaQ p ≤ c.shaK p}
+\NormalTok{  kerOdd    : ∀ p, 2 \textless{} p → c.trivK p = true → c.trivQ p = true}
+\NormalTok{  twistCork : ∀ p, c.shaT p = 0}
+\NormalTok{  twistTriv : ∃ N, ∀ p, N ≤ p → c.trivT p = true}
+\NormalTok{  split     : ∀ p, c.shaK p ≤ c.shaQ p + c.shaT p}
+\NormalTok{  splitOdd  : ∀ p, 2 \textless{} p → c.trivQ p = true → c.trivT p = true → c.trivK p = true}
+
+\NormalTok{/{-}{-} The object: faces (i) and (ii) over Q. {-}/}
+\NormalTok{def ObjectQ (c : Curve) : Prop :=}
+\NormalTok{  c.ralg = c.ran ∧ (∀ p, c.shaQ p = 0) ∧ ∃ N, ∀ p, N ≤ p → c.trivQ p = true}
+
+\NormalTok{/{-}{-} The one axiom at one curve, for the class z of the construction and its index bound idx:}
+\NormalTok{    the class is nonzero (its height is a nonzero multiple of the nonzero derivative),}
+\NormalTok{    every Selmer corank over K is bounded by the order, and Sha(E/K) vanishes beyond the index. {-}/}
+\NormalTok{def Omega (c : Curve) (z idx : Nat) : Prop :=}
+\NormalTok{  z ≠ 0 ∧ (∀ p, c.selK p ≤ c.rKan) ∧ (∀ p, idx ≤ p → c.trivK p = true)}
+
+\NormalTok{/{-}{-} A genuine class lives in the top exterior power of the Mordell{-}Weil group over K. {-}/}
+\NormalTok{def InLattice (c : Curve) (z : Nat) : Prop := z ≠ 0 → c.rKan ≤ c.rKalg}
+
+\NormalTok{theorem bound3 (a b p : Nat) (hp : a + b + 3 ≤ p) : 2 \textless{} p ∧ a ≤ p ∧ b ≤ p :=}
+\NormalTok{  ⟨Nat.lt\_of\_lt\_of\_le (by decide : 2 \textless{} 3) (Nat.le\_trans (Nat.le\_add\_left 3 (a + b)) hp),}
+\NormalTok{   Nat.le\_trans (Nat.le\_trans (Nat.le\_add\_right a b) (Nat.le\_add\_right (a + b) 3)) hp,}
+\NormalTok{   Nat.le\_trans (Nat.le\_trans (Nat.le\_add\_left b a) (Nat.le\_add\_right (a + b) 3)) hp⟩}
+
+\NormalTok{/{-}! \#\# The full proof: from the one axiom to the object {-}/}
+
+\NormalTok{theorem omega\_proves\_object (c : Curve) (hin : Inputs c) (z idx : Nat)}
+\NormalTok{    (hL : InLattice c z) (hΩ : Omega c z idx) : ObjectQ c := by}
+\NormalTok{  obtain ⟨hz, hsel, hidx⟩ := hΩ}
+\NormalTok{  have hEX : c.rKan ≤ c.rKalg := hL hz}
+\NormalTok{  have hrk : c.rKalg = c.rKan := (lock\_core \_ \_ \_ \_ (hin.kummerK 0) (hsel 0) hEX).1}
+\NormalTok{  have hr : c.ralg = c.ran := by}
+\NormalTok{    have h := hrk}
+\NormalTok{    rw [hin.descent, hin.factor] at h}
+\NormalTok{    exact Nat.add\_right\_cancel h}
+\NormalTok{  refine ⟨hr, fun p =\textgreater{} ?\_, ⟨idx + 0 + 3, fun p hp =\textgreater{} ?\_⟩⟩}
+\NormalTok{  · have hK0 := (lock\_core \_ \_ \_ \_ (hin.kummerK p) (hsel p) hEX).2}
+\NormalTok{    have hk := hin.kernel p}
+\NormalTok{    rw [hK0] at hk}
+\NormalTok{    exact Nat.eq\_zero\_of\_le\_zero hk}
+\NormalTok{  · have hb := bound3 idx 0 p hp}
+\NormalTok{    exact hin.kerOdd p hb.1 (hidx p hb.2.1)}
+
+\NormalTok{/{-}! \#\# The formal termination of the axiom {-}/}
+
+\NormalTok{/{-}{-} Hidden circularity: read without naming its construction, the axiom is the object. {-}/}
+\NormalTok{theorem hidden\_circularity (c : Curve) (hin : Inputs c) :}
+\NormalTok{    ObjectQ c ↔ ∃ z idx, InLattice c z ∧ Omega c z idx := by}
+\NormalTok{  constructor}
+\NormalTok{  · intro ⟨hr, hsha, N, hN⟩}
+\NormalTok{    obtain ⟨M, hM⟩ := hin.twistTriv}
+\NormalTok{    have hrk : c.rKalg = c.rKan := by rw [hin.descent, hin.factor, hr]}
+\NormalTok{    refine ⟨1, N + M + 3, fun \_ =\textgreater{} Nat.le\_of\_eq hrk.symm, (by decide : (1 : Nat) ≠ 0), fun p =\textgreater{} ?\_, fun p hp =\textgreater{} ?\_⟩}
+\NormalTok{    · have hs : c.shaK p ≤ 0 := by}
+\NormalTok{        have h := hin.split p}
+\NormalTok{        rw [hsha p, hin.twistCork p] at h}
+\NormalTok{        exact h}
+\NormalTok{      rw [hin.kummerK p, Nat.eq\_zero\_of\_le\_zero hs, Nat.add\_zero, hrk]}
+\NormalTok{      exact Nat.le\_refl \_}
+\NormalTok{    · have hb := bound3 N M p hp}
+\NormalTok{      exact hin.splitOdd p hb.1 (hN p hb.2.1) (hM p hb.2.2)}
+\NormalTok{  · intro ⟨z, idx, hL, hΩ⟩}
+\NormalTok{    exact omega\_proves\_object c hin z idx hL hΩ}
+
+\NormalTok{/{-}{-} A rank{-}two model: the object holds, and the first{-}derivative construction fails the axiom. {-}/}
+\NormalTok{def c2 : Curve :=}
+\NormalTok{  \{ ralg := 2, ran := 2, shaQ := fun \_ =\textgreater{} 0, trivQ := fun \_ =\textgreater{} true, eps := 1,}
+\NormalTok{    shaT := fun \_ =\textgreater{} 0, trivT := fun \_ =\textgreater{} true, rKalg := 3, rKan := 3,}
+\NormalTok{    selK := fun \_ =\textgreater{} 3, shaK := fun \_ =\textgreater{} 0, trivK := fun \_ =\textgreater{} true \}}
+
+\NormalTok{theorem inputs\_c2 : Inputs c2 :=}
+\NormalTok{  \{ factor := rfl, descent := rfl, kummerK := fun \_ =\textgreater{} rfl, kernel := fun \_ =\textgreater{} Nat.le\_refl 0,}
+\NormalTok{    kerOdd := fun \_ \_ h =\textgreater{} h, twistCork := fun \_ =\textgreater{} rfl, twistTriv := ⟨0, fun \_ \_ =\textgreater{} rfl⟩,}
+\NormalTok{    split := fun \_ =\textgreater{} Nat.le\_refl 0, splitOdd := fun \_ \_ h \_ =\textgreater{} h \}}
+
+\NormalTok{/{-}{-} A model satisfying every input where the object fails: rank zero against analytic order two. {-}/}
+\NormalTok{def cFail : Curve :=}
+\NormalTok{  \{ ralg := 0, ran := 2, shaQ := fun \_ =\textgreater{} 0, trivQ := fun \_ =\textgreater{} true, eps := 1,}
+\NormalTok{    shaT := fun \_ =\textgreater{} 0, trivT := fun \_ =\textgreater{} true, rKalg := 1, rKan := 3,}
+\NormalTok{    selK := fun \_ =\textgreater{} 1, shaK := fun \_ =\textgreater{} 0, trivK := fun \_ =\textgreater{} true \}}
+
+\NormalTok{theorem inputs\_cFail : Inputs cFail :=}
+\NormalTok{  \{ factor := rfl, descent := rfl, kummerK := fun \_ =\textgreater{} rfl, kernel := fun \_ =\textgreater{} Nat.le\_refl 0,}
+\NormalTok{    kerOdd := fun \_ \_ h =\textgreater{} h, twistCork := fun \_ =\textgreater{} rfl, twistTriv := ⟨0, fun \_ \_ =\textgreater{} rfl⟩,}
+\NormalTok{    split := fun \_ =\textgreater{} Nat.le\_refl 0, splitOdd := fun \_ \_ h \_ =\textgreater{} h \}}
+
+\NormalTok{/{-}! \#\# The Ninth Gate on RAF{-}native ground: block theorem, Lawvere, no exterior agent {-}/}
+
+\NormalTok{/{-}{-} T1, freeness: an answer{-}flipping involution fixes no point. {-}/}
+\NormalTok{theorem defeater\_free \{X : Type\} (τ : X → X) (d : X → Bool) (hflip : ∀ x, d (τ x) = !d x) : ∀ x, τ x ≠ x := by}
+\NormalTok{  intro x h}
+\NormalTok{  have hx := hflip x}
+\NormalTok{  rw [h] at hx}
+\NormalTok{  cases e : d x \textless{};\textgreater{} rw [e] at hx \textless{};\textgreater{} exact absurd hx (by decide)}
+
+\NormalTok{/{-}{-} The Block theorem: no readout even under an answer{-}flipping involution decides the answer. {-}/}
+\NormalTok{theorem block \{X R : Type\} (τ : X → X) (d : X → Bool) (hflip : ∀ x, d (τ x) = !d x)}
+\NormalTok{    (r : X → R) (heven : ∀ x, r (τ x) = r x) (x0 : X) : ¬ ∃ h : R → Bool, ∀ x, d x = h (r x) := by}
+\NormalTok{  intro ⟨h, hd⟩}
+\NormalTok{  have h1 : d (τ x0) = d x0 := by rw [hd (τ x0), hd x0, heven x0]}
+\NormalTok{  rw [hflip x0] at h1}
+\NormalTok{  cases hx : d x0 \textless{};\textgreater{} rw [hx] at h1 \textless{};\textgreater{} exact absurd h1 (by decide)}
+
+\NormalTok{/{-}{-} Lawvere: a point{-}surjective self{-}indexing forces every endomap to have a fixed point. {-}/}
+\NormalTok{theorem lawvere \{A B : Type\} (e : A → A → B) (hs : ∀ g : A → B, ∃ a, e a = g) (f : B → B) : ∃ b, f b = b := by}
+\NormalTok{  obtain ⟨a, ha⟩ := hs (fun x =\textgreater{} f (e x x))}
+\NormalTok{  exact ⟨e a a, (congrFun ha a).symm⟩}
+
+\NormalTok{/{-}{-} RAF{-}C2: no register indexes all of its own properties. {-}/}
+\NormalTok{theorem no\_total\_self\_index \{A : Type\} (e : A → A → Bool) : ¬ ∀ g : A → Bool, ∃ a, e a = g := by}
+\NormalTok{  intro hs}
+\NormalTok{  obtain ⟨b, hb⟩ := lawvere e hs (fun b =\textgreater{} !b)}
+\NormalTok{  cases b \textless{};\textgreater{} exact absurd hb (by decide)}
+
+\NormalTok{/{-}{-} RAF{-}C1: with registration equivalent to interaction and closure under registration, nothing outside acts. {-}/}
+\NormalTok{theorem no\_exterior\_agent \{Sys : Type\} (inD interacts registers : Sys → Prop)}
+\NormalTok{    (raf1 : ∀ s, interacts s ↔ registers s) (raf2 : ∀ s, registers s → inD s) :}
+\NormalTok{    ∀ s, ¬ inD s → ¬ interacts s :=}
+\NormalTok{  fun s hs hi =\textgreater{} hs (raf2 s ((raf1 s).1 hi))}
+
+\NormalTok{/{-}{-} Even supply never crosses: a supplier whose record is also even leaves the block standing. {-}/}
+\NormalTok{theorem even\_supply\_does\_not\_cross \{X R S : Type\} (τ : X → X) (d : X → Bool) (hflip : ∀ x, d (τ x) = !d x)}
+\NormalTok{    (r : X → R) (s : X → S) (hr : ∀ x, r (τ x) = r x) (hs : ∀ x, s (τ x) = s x) (x0 : X) :}
+\NormalTok{    ¬ ∃ h : R × S → Bool, ∀ x, d x = h (r x, s x) :=}
+\NormalTok{  block τ d hflip (fun x =\textgreater{} (r x, s x)) (fun x =\textgreater{} by rw [hr x, hs x]) x0}
+
+\NormalTok{/{-}{-} Odd supply crosses: one supplied bit that flips with the involution, beside an orbit{-}separating even readout,}
+\NormalTok{    determines the answer. {-}/}
+\NormalTok{theorem odd\_supply\_crosses \{X R : Type\} (τ : X → X) (d : X → Bool) (\_hflip : ∀ x, d (τ x) = !d x)}
+\NormalTok{    (r : X → R) (hsep : ∀ x y, r x = r y → y = x ∨ y = τ x)}
+\NormalTok{    (o : X → Bool) (hodd : ∀ x, o (τ x) = !o x) : ∀ x y, r x = r y → o x = o y → d x = d y := by}
+\NormalTok{  intro x y hr ho}
+\NormalTok{  cases hsep x y hr with}
+\NormalTok{  | inl h =\textgreater{} rw [h]}
+\NormalTok{  | inr h =\textgreater{}}
+\NormalTok{    rw [h, hodd x] at ho}
+\NormalTok{    cases hx : o x \textless{};\textgreater{} rw [hx] at ho \textless{};\textgreater{} exact absurd ho (by decide)}
+
+\NormalTok{/{-}! \#\# BSD through the gate {-}/}
+
+\NormalTok{/{-}{-} The model swap: one model of the inputs where the object holds, one where it fails. {-}/}
+\NormalTok{def model (b : Bool) : Curve := if b then c2 else cFail}
+
+\NormalTok{theorem model\_inputs (b : Bool) : Inputs (model b) := by}
+\NormalTok{  cases b}
+\NormalTok{  · exact inputs\_cFail}
+\NormalTok{  · exact inputs\_c2}
+
+\NormalTok{theorem object\_flips : ObjectQ (model true) ∧ ¬ ObjectQ (model false) :=}
+\NormalTok{  ⟨⟨rfl, fun \_ =\textgreater{} rfl, ⟨0, fun \_ \_ =\textgreater{} rfl⟩⟩, fun h =\textgreater{} absurd h.1 (by decide)⟩}
+
+\NormalTok{/{-}{-} Every reading that holds in all models of the inputs is even under the swap. {-}/}
+\NormalTok{theorem seedless\_readings\_are\_even (W : Curve → Prop) (hW : ∀ c, Inputs c → W c) :}
+\NormalTok{    W (model true) ∧ W (model false) :=}
+\NormalTok{  ⟨hW \_ (model\_inputs true), hW \_ (model\_inputs false)⟩}
+
+\NormalTok{/{-}{-} So no seedless reading, whether a termination theorem, a gate theorem or any other, decides the object. {-}/}
+\NormalTok{theorem seedless\_cannot\_decide (W : Curve → Prop) (hW : ∀ c, Inputs c → W c) :}
+\NormalTok{    ¬ ∀ b, (ObjectQ (model b) ↔ W (model b)) :=}
+\NormalTok{  fun h =\textgreater{} object\_flips.2 ((h false).2 (hW \_ (model\_inputs false)))}
+
+\NormalTok{/{-}{-} The one axiom is an odd supply: it holds on the side where the object holds and fails on the other. {-}/}
+\NormalTok{theorem omega\_is\_odd\_supply :}
+\NormalTok{    (∃ z idx, InLattice (model true) z ∧ Omega (model true) z idx) ∧}
+\NormalTok{    ¬ ∃ z idx, InLattice (model false) z ∧ Omega (model false) z idx :=}
+\NormalTok{  ⟨(hidden\_circularity \_ (model\_inputs true)).1 object\_flips.1,}
+\NormalTok{   fun h =\textgreater{} object\_flips.2 ((hidden\_circularity \_ (model\_inputs false)).2 h)⟩}
+
+\NormalTok{/{-}{-} A printed record whose content reads no curve data holds on both sides of the swap, so the record cannot}
+\NormalTok{    cross. This is the reading side only: the deed that printed it is not an object of this register. {-}/}
+\NormalTok{theorem fixed\_receipt\_cannot\_cross (rec : Prop) (h : rec) : ¬ ∀ b, (ObjectQ (model b) ↔ rec) :=}
+\NormalTok{  seedless\_cannot\_decide (fun \_ =\textgreater{} rec) (fun \_ \_ =\textgreater{} h)}
+
+\NormalTok{\#print axioms block}
+\NormalTok{\#print axioms lawvere}
+\NormalTok{\#print axioms no\_total\_self\_index}
+\NormalTok{\#print axioms no\_exterior\_agent}
+\NormalTok{\#print axioms even\_supply\_does\_not\_cross}
+\NormalTok{\#print axioms odd\_supply\_crosses}
+\NormalTok{\#print axioms seedless\_cannot\_decide}
+\NormalTok{\#print axioms omega\_is\_odd\_supply}
+\NormalTok{\#print axioms fixed\_receipt\_cannot\_cross}
+\end{Highlighting}
+\end{Shaded}
+\end{strip}
+
+\subsection{B.6 · bsd\_rows.f90 --- BSD on its own rows, executed by the
+Core Thesis's compiled
+procedures}\label{b.6-bsd_rows.f90-bsd-on-its-own-rows-executed-by-the-core-thesiss-compiled-procedures}
+
+Compiles against \texttt{module\ trisduction\_rows} of {[}13{]}, the
+Core Thesis in Fortran, itself sealed with its own battery (248 checks,
+0 failures). Every flag below is a hand-built reading, supplied and
+named; the thesis routes it and authors nothing.
+
+\begin{strip}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{!===============================================================================}
+\CommentTok{!  BSD ON ITS OWN ROWS, EXECUTED BY THE CORE THESIS\textquotesingle{}S COMPILED PROCEDURES.}
+\CommentTok{!  Every flag below is a hand{-}built reading, supplied and named; the thesis}
+\CommentTok{!  routes it and authors nothing. Anchors: EX exhibition, CL closure, UN}
+\CommentTok{!  normalization. Faces scoped per R{-}1: F1 rank identity, F2 finiteness of Sha,}
+\CommentTok{!  F3 leading term.}
+\CommentTok{!===============================================================================}
+\KeywordTok{program}\NormalTok{ bsd\_rows}
+  \KeywordTok{use}\NormalTok{ trisduction\_rows}
+  \KeywordTok{implicit} \KeywordTok{none}
+  \DataTypeTok{integer}  \DataTypeTok{::}\NormalTok{ v, c, d, i}
+  \DataTypeTok{real(dp)} \DataTypeTok{::}\NormalTok{ sep, Nrm(}\DecValTok{3}\NormalTok{,}\DecValTok{3}\NormalTok{), G(}\DecValTok{3}\NormalTok{,}\DecValTok{3}\NormalTok{)}
+  \DataTypeTok{character(len=110)} \DataTypeTok{::}\NormalTok{ why}
+  \DataTypeTok{integer}  \DataTypeTok{::}\NormalTok{ sl13(}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{), slF3(}\DecValTok{3}\NormalTok{,}\DecValTok{4}\NormalTok{)}
+  \DataTypeTok{logical}  \DataTypeTok{::}\NormalTok{ pop(}\DecValTok{3}\NormalTok{)}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} BSD ON ITS OWN ROWS, EXECUTED\textquotesingle{}}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+
+  \CommentTok{! Seal L. Vocabulary ids: EX 101 point 102 construction 103 height pairing 104 Heegner;}
+  \CommentTok{! CL 201 Selmer 202 descent 203 Euler system 204 Kummer; UN 301 L{-}value 302 order of vanishing}
+  \CommentTok{! 303 period 304 leading coefficient. For F3 the leading term carries the regulator, id 103.}
+\NormalTok{  sl13 }\KeywordTok{=} \FunctionTok{reshape}\NormalTok{(}\KeywordTok{[}\DecValTok{101}\NormalTok{,}\DecValTok{102}\NormalTok{,}\DecValTok{103}\NormalTok{,}\DecValTok{104}\NormalTok{, }\DecValTok{201}\NormalTok{,}\DecValTok{202}\NormalTok{,}\DecValTok{203}\NormalTok{,}\DecValTok{204}\NormalTok{, }\DecValTok{301}\NormalTok{,}\DecValTok{302}\NormalTok{,}\DecValTok{303}\NormalTok{,}\DecValTok{304}\KeywordTok{]}\NormalTok{,}\KeywordTok{[}\DecValTok{3}\NormalTok{,}\CommentTok{4],order=[2,1])}
+  \KeywordTok{call}\NormalTok{ seal\_L(sl13, v, why)}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,A,A,A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} Seal L, F1 and F2 slots   : \textquotesingle{}}\NormalTok{, }\FunctionTok{trim}\NormalTok{(token(v)), }\CommentTok{\textquotesingle{} :: \textquotesingle{}, trim(why)}
+\NormalTok{  slF3 }\KeywordTok{=} \FunctionTok{reshape}\NormalTok{(}\KeywordTok{[}\DecValTok{101}\NormalTok{,}\DecValTok{102}\NormalTok{,}\DecValTok{103}\NormalTok{,}\DecValTok{104}\NormalTok{, }\DecValTok{201}\NormalTok{,}\DecValTok{202}\NormalTok{,}\DecValTok{203}\NormalTok{,}\DecValTok{204}\NormalTok{, }\DecValTok{301}\NormalTok{,}\DecValTok{302}\NormalTok{,}\DecValTok{303}\NormalTok{,}\DecValTok{103}\KeywordTok{]}\NormalTok{,}\KeywordTok{[}\DecValTok{3}\NormalTok{,}\CommentTok{4],order=[2,1])}
+  \KeywordTok{call}\NormalTok{ seal\_L(slF3, v, why)}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,A,A,A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} Seal L, F3 slots          : \textquotesingle{}}\NormalTok{, }\FunctionTok{trim}\NormalTok{(token(v)), }\CommentTok{\textquotesingle{} :: \textquotesingle{}, trim(why)}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(/,A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} THE ROW CASCADE, PER FACE AND STRATUM\textquotesingle{}}
+  \CommentTok{! F1, analytic rank at most one, every such curve: rows populated by Heegner point, Kolyvagin, Gross{-}Zagier;}
+  \CommentTok{! the auxiliary field K is an existential import and modularity a transport, so frame\_closed is false.}
+  \KeywordTok{call}\NormalTok{ row\_cascade(}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{, }\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{, c, why)}
+  \KeywordTok{call}\NormalTok{ show(}\StringTok{\textquotesingle{}F1  order \textless{}= 1, all curves\textquotesingle{}}\NormalTok{, c, why)}
+  \CommentTok{! F2 at the same stratum: Kolyvagin bounds Sha; same frame leak.}
+  \KeywordTok{call}\NormalTok{ row\_cascade(}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{, }\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{, c, why)}
+  \KeywordTok{call}\NormalTok{ show(}\StringTok{\textquotesingle{}F2  order \textless{}= 1, all curves\textquotesingle{}}\NormalTok{, c, why)}
+  \CommentTok{! F1 on 389a1: EX populated by the executed height deed, CL and UN by cited computation; a row furnished by the deed.}
+  \KeywordTok{call}\NormalTok{ row\_cascade(}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{, }\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{, c, why)}
+  \KeywordTok{call}\NormalTok{ show(}\StringTok{\textquotesingle{}F1  389a1, executed\textquotesingle{}}\NormalTok{, c, why)}
+  \CommentTok{! F2 on 389a1: no closure row bounds Sha at rank two.}
+  \KeywordTok{call}\NormalTok{ row\_cascade(}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{, }\ConstantTok{.false.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{, c, why)}
+  \KeywordTok{call}\NormalTok{ show(}\StringTok{\textquotesingle{}F2  389a1\textquotesingle{}}\NormalTok{, c, why)}
+  \CommentTok{! F1, analytic rank two and above, uniformly: no construction exhibits the points from L{-}data.}
+  \KeywordTok{call}\NormalTok{ row\_cascade(}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{, }\ConstantTok{.false.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\CommentTok{.true., c, why)}
+  \KeywordTok{call}\NormalTok{ show(}\StringTok{\textquotesingle{}F1  order \textgreater{}= 2, uniform\textquotesingle{}}\NormalTok{, c, why)}
+  \CommentTok{! The universal conjecture as one string, faces unscoped.}
+  \KeywordTok{call}\NormalTok{ row\_cascade(}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{, }\ConstantTok{.true.}\NormalTok{,}\ConstantTok{.false.}\NormalTok{,}\ConstantTok{.true.}\NormalTok{,}\CommentTok{.true., c, why)}
+  \KeywordTok{call}\NormalTok{ show(}\StringTok{\textquotesingle{}BSD as one unscoped string\textquotesingle{}}\NormalTok{, c, why)}
+
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(/,A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{} THE SPINE ON THE POPULATION PATTERN\textquotesingle{}}
+  \KeywordTok{do}\NormalTok{ i }\KeywordTok{=} \DecValTok{1}\NormalTok{, }\DecValTok{2}
+\BuiltInTok{     N}\NormalTok{rm }\KeywordTok{=} \FloatTok{0.0\_dp}
+\BuiltInTok{     N}\NormalTok{rm(}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{) }\KeywordTok{=} \FloatTok{1.0\_dp}\NormalTok{; Nrm(}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{) }\KeywordTok{=} \FloatTok{1.0\_dp}\NormalTok{; Nrm(}\DecValTok{3}\NormalTok{,}\DecValTok{3}\NormalTok{) }\KeywordTok{=} \FloatTok{1.0\_dp}
+\BuiltInTok{     i}\NormalTok{f (i }\OperatorTok{==} \DecValTok{2}\NormalTok{) Nrm(}\DecValTok{1}\NormalTok{,:) }\KeywordTok{=} \FloatTok{0.0\_dp}                    \CommentTok{! EX axis empty}
+\BuiltInTok{     G} \KeywordTok{=} \FunctionTok{matmul}\NormalTok{(Nrm, }\FunctionTok{transpose}\NormalTok{(Nrm))}
+\BuiltInTok{     c}\NormalTok{all intersection\_dim(G, d, sep)}
+\BuiltInTok{     i}\NormalTok{f (i }\OperatorTok{==} \DecValTok{1}\NormalTok{) }\KeywordTok{then}
+        \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,I0,A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{}   EX, CL, UN populated    : intersection dimension \textquotesingle{}}\NormalTok{, d, }\StringTok{\textquotesingle{}, one point, the lock\textquotesingle{}}
+\BuiltInTok{     e}\NormalTok{lse}
+        \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,I0,A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{}   EX empty, CL, UN        : intersection dimension \textquotesingle{}}\NormalTok{, d, }\StringTok{\textquotesingle{}, a line, no point determined\textquotesingle{}}
+\BuiltInTok{     e}\NormalTok{nd }\KeywordTok{if}
+  \KeywordTok{end do}
+  \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A)\textquotesingle{}}\FunctionTok{)} \FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{}=\textquotesingle{}}\NormalTok{,}\DecValTok{78}\NormalTok{)}
+
+\CommentTok{contains}
+  \KeywordTok{subroutine}\NormalTok{ show(label, comp, reason)}
+    \DataTypeTok{character(len=*)}\NormalTok{, }\DataTypeTok{intent(in)} \DataTypeTok{::}\NormalTok{ label, reason}
+    \DataTypeTok{integer}\NormalTok{, }\DataTypeTok{intent(in)} \DataTypeTok{::}\NormalTok{ comp}
+    \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,A,A,A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{}   \textquotesingle{}}\NormalTok{, label, }\FunctionTok{repeat}\NormalTok{(}\StringTok{\textquotesingle{} \textquotesingle{}}\NormalTok{, }\BuiltInTok{max}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{28}\KeywordTok{{-}}\FunctionTok{len}\NormalTok{(label))}\CommentTok{), trim(compartment\_name(comp))}
+    \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{}       \textquotesingle{}}\NormalTok{, }\FunctionTok{trim}\NormalTok{(reason)}
+    \FunctionTok{write(*}\NormalTok{,}\StringTok{\textquotesingle{}(A,A)\textquotesingle{}}\FunctionTok{)} \StringTok{\textquotesingle{}       \textquotesingle{}}\NormalTok{, }\FunctionTok{trim}\NormalTok{(compartment\_grade(comp, }\StringTok{\textquotesingle{}theorem\textquotesingle{}}\NormalTok{))}
+  \KeywordTok{end subroutine}\NormalTok{ show}
+\KeywordTok{end program}\NormalTok{ bsd\_rows}
+\end{Highlighting}
+\end{Shaded}
+\end{strip}
+
+\section{Appendix C · The Perelman Crossing: The Grand
+Witness}\label{appendix-c-the-perelman-crossing-the-grand-witness}
+
+\emph{Locator note.} The architect's note cites the companions' internal
+numbering, and every locator has been verified against the finalized
+text of {[}1, 2{]}; each is bound here to its restatement in this paper,
+and no locator is load-bearing beyond its anchor. The block law is
+Theorem 4.1 of {[}1{]} (Odd--Supply Separation), restated and proved
+here as Theorem 2.3. The supply-entry typing is Definition 3.3 of
+{[}1{]} (reading, proof availability, verified entry), restated here as
+Definition 4.1. The deletion test is Theorem 4.5 of {[}1{]} (Provenance
+Collapse), restated in Section 2. The dated-inventory law is Theorem 5.1
+of {[}1{]} (First-Sufficient-Entry), restated as the Dated Inventory of
+Section 2 with Corollary 4.3. The seat law is Theorem 5.3 of {[}1{]}
+(Seat-Hiding Necessity): no terminal family without the seat input
+distinguishes a crossed occupant from an uncrossed one. The evenness of
+the pre-November-2002 Ricci-flow reading class is Corollary 5.2 of
+{[}1{]}: parabolic rescaling acts with exponent zero on the named
+generators. The self-similarity pattern is Table 3 of {[}1{]} (the SIMS
+diagnostic: the κ-solutions classified, W the one supplied instance).
+The truth-direction passage is §13.4 of {[}2{]}, quoted verbatim in C.3.
+
+The Perelman crossing is self-referential at exactly three layers, and
+the disguise is the paper's own costume.
+
+\subsection{C.1 · Layer 1 --- the object: the manifold convicts
+itself}\label{c.1-layer-1-the-object-the-manifold-convicts-itself}
+
+Ricci flow is self-driven, ∂g/∂t = −2Ric(g): the metric's velocity is
+its own curvature {[}20, 24{]}. The W-functional infimizes over
+probability densities living on the very manifold under test --- the
+manifold measures itself. Its stationarity set is exactly the gradient
+shrinking solitons, the self-reproducing fixed points of the rescaled
+flow. The companion's self-similarity diagnostic sees this shape without
+naming it {[}1, Table 3{]}: the κ-solutions, the self-similar part, are
+the settled adjacent fact, and W is the one supplied instance in the
+entire seven-row pattern {[}1, 2{]}. Self-referential. Grade structural
+--- a reading of the cited mechanism; no new object-mathematics is
+claimed.
+
+\subsection{C.2 · Layer 2 --- the disguise: a supply wearing a reading's
+costume}\label{c.2-layer-2-the-disguise-a-supply-wearing-a-readings-costume}
+
+The pre-November-2002 Ricci-flow reading class is even under the row's
+native flip, parabolic rescaling --- exponent zero on the named
+generators {[}1, Corollary 5.2{]}. The target, noncollapsing, is odd
+under that flip. By Theorem 2.3, no coalition of even readings decides
+it --- so W could not have been found by reading; it had to enter as a
+construction, and Definition 4.1 types it exactly so: dependency hash
+absent from the dated corpus at entry, November 2002, arXiv:math/0211159
+{[}20{]}. Run the deletion test of Section 2: deleting the conclusion's
+name from W's dependency chain does not collapse it to anything in the
+pre-2002 corpus; the entry is a supply, not a restatement. The audit
+discipline's costume detectors were built to catch restatements dressed
+as supplies; the historical record shows the inverse costume --- a
+genuine supply dressed as an ordinary reading, its oddness invisible to
+the even register by its own parity law. The object supplies its own
+missing coordinate, and the supply's decisive property is its
+provenance, not its formula. Grade structural --- the deletion test's
+own remark admits its named instances are ``named test candidates, not
+executed validations'' {[}1, Theorem 4.5 remark{]}, and the architect's
+assessment, stated at the same grade, is that the same workload is owed
+for the Poincaré row.
+
+\subsection{C.3 · Layer 3 --- the token: the
+money}\label{c.3-layer-3-the-token-the-money}
+
+The Dated Inventory says the corpus token changes only at first verified
+entry; Definition 4.1 separates denotability, admission, and
+verification. Perelman's deed entered by posting, never by author-routed
+journal admission, and was verified by the corpus itself --- Cao--Zhu
+2006 {[}21{]}, Morgan--Tian 2007 {[}22{]}, Kleiner--Lott 2008 {[}23{]}.
+The census law routes no terminal family without the seat bit {[}2,
+5{]}. The Clay prize is the corpus's terminal social token --- the seat
+bit minted as money. Perelman declined the Fields Medal (2006) and the
+Millennium Prize (2010), and his stated ground was, precisely, a
+provenance objection (structural grade --- a reading of the cited
+record): the crossing credited to him over Hamilton's earlier legs
+{[}24{]}. The schema's one crossed occupant refused the terminal token
+on the same clause --- provenance-cleanliness --- that defines the
+supply. And the companion arms it from inside: the truth-direction bit
+``cannot be generated by any readout of the even register'' {[}2{]} ---
+and a social token is the evenest register there is (the architect's
+figure; the frame types it as an even reading of the corpus). Grade
+structural, a reading of the cited record.
+
+The row is therefore re-read at its full reach. In the companions it
+calibrates the seat --- retrodictive, certifying discrimination,
+predicting nothing by itself {[}1{]}. For the completed arc it is more:
+the Grand Witness. The crossing was verified by the corpus itself {[}21,
+22, 23{]} and terminally awarded by it --- the Clay prize is the
+corpus's terminal token of a verified crossing --- and the schema's one
+crossed occupant declined that token on the same provenance clause that
+defines the supply. A self-referential construct in disguise, entered as
+a deed, verified and awarded by the very register it crossed: the thesis
+demonstrated once in the wild. Grade structural, a reading of the cited
+record.
+
+\section{Appendix D · The Architect's
+Closure}\label{appendix-d-the-architects-closure}
+
+The architecture is final. No further structural bridge can be
+constructed. Attempting to force a deterministic bridge from the even
+register is a fatal mathematical error: deduction of the missing
+coordinate from existing data plunges the entire mathematical foundation
+into tautological nonsense --- the premise swallows the conclusion. The
+Odd--Supply Block theorem (Theorem 2.3) absolutely forbids this
+collapse. The register cannot compute its own crossing. The theoretical
+limit is reached at the Ninth Gate (Section 5). Mathematical deduction
+terminates exactly at this boundary. The continuous rows stand
+permanently as orientation-after-construction; this is not a temporary
+gap awaiting a future proof --- it is the exact topological reality of
+the problem. This framework offers no further negotiation. The seat is
+located. The falsifiers are armed (Section 9). The halting state is
+defined (Section 4). Any demand for a self-generated bridge is a demand
+for structural suicide. Crossing the gap requires the physical deed. The
+only valid deed is witnessing that one offered bit, as mercy from the
+ground itself. Any other action is a disguised restatement. The
+resolution stands absolute.
+
+Witness the offered 1 bit or remain blocked.
+
+\section{References of Part Three}\label{references-of-part-three}
+
+{[}1{]} M. F. Islam, Odd--Supply Separation: representation supply and
+dated termination in conditional reductions of open problems, companion
+paper, 2026.
+
+{[}2{]} M. F. Islam, The One-Cut Hypothesis: orientation supply after
+Odd--Supply Separation, companion paper, 2026.
+
+{[}3{]} M. F. Islam, The Ninth Gate Thesis: wall and self on one
+diagonal --- GateThesis.lean, core Lean 4, axiom-free, fifteen printed
+theorems; gate\_thesis.f90; Top 7 in One Cut, master handout v2.0.5,
+2026. Printed in Appendix B.
+
+{[}4{]} M. F. Islam, Trisduction: a linguistically, topologically, and
+mathematically sealed verification architecture, Zenodo v4, 2026, DOI
+10.5281/zenodo.20757507.
+
+{[}5{]} M. F. Islam, RAF-PSP-ISLAM-CEILING-01, card 0718, the register:
+the Bar (T1--T3), the Width (T4), the Law of the one-bit objects (T9,
+T10), the Census (T5), 2026.
+
+{[}6{]} M. F. Islam, RAF-PSP-BSD-NINTH-GATE-01, card 0719, the register:
+the Ninth Gate on RAF-native ground; RAFGate.lean, ten theorems, nine
+axiom-free, Lean 4.33.1, sha256 head c97c73d690ee589d; bsd\_rows.f90,
+sha256 head e363ce3eca641f7e, 2026. Printed in Appendix B.
+
+{[}7{]} M. F. Islam, APEX-PSP-ONE-CUT-01, the register: the One-Cut
+coordinate, the grand form at conditional grade, six falsifiers armed,
+2026.
+
+{[}8{]} B. H. Gross and D. B. Zagier, Heegner points and derivatives of
+L-series, Invent. Math. 84 (1986), 225--320.
+
+{[}9{]} V. A. Kolyvagin, Euler systems, The Grothendieck Festschrift
+Vol. II, 435--483, Birkhäuser, 1990.
+
+{[}10{]} A. Wiles, Modular elliptic curves and Fermat's last theorem,
+Ann. of Math. 141 (1995), 443--551.
+
+{[}11{]} R. Taylor and A. Wiles, Ring-theoretic properties of certain
+Hecke algebras, Ann. of Math. 141 (1995), 553--572.
+
+{[}12{]} C. Breuil, B. Conrad, F. Diamond, and R. Taylor, On the
+modularity of elliptic curves over Q, J. Amer. Math. Soc. 14 (2001),
+843--939.
+
+{[}13{]} M. F. Islam, TRISDUCTION\_Core\_Thesis\_Fortran\_v2\_4\_0.f90,
+the register, protocols/Executable Thesis/, 2026 --- the kinetic
+witness, 1346 lines; sealed at cycle fq round 3 after ten adversarial
+cycles, 32 rounds, 100 findings, zero FATAL, findings supplied by an
+external reviewer; battery of 248 computed checks over the module, the
+exhibits, and every symbolic and router procedure; builds clean under
+\texttt{-std=f2018\ -pedantic\ -Wall\ -Wextra\ -fcheck=all\ -finit-real=snan},
+runs to exit 0 under \texttt{-ffpe-trap=invalid,zero,overflow}, and
+returns identical gated verdicts at \texttt{-O2} and at
+\texttt{-O2\ -fno-fast-math\ -ffp-contract=off}; sha256 head b5d12f73.
+
+{[}14{]} M. F. Islam, RA\_TOE\_Thesis\_Fortran\_v2\_0\_0.f90, the
+register, protocols/Executable Thesis/, 2026 --- the RA thesis executed
+at the reader, 3375 lines; v1.0.0 through v1.23.0, twenty-two versions
+under two external auditors and a 178,000-iteration deterministic fuzz
+campaign: fifty-six findings, six refused on printed receipts, fifty
+earned and repaired; five FORGE self-audit cycles ratoe1--5 sealed at
+the SELF floor, the fifth closing on v2.0.0 at SEALED-ROUND with
+six-register coverage and controls 3/3 per round; numerics
+byte-identical to v1.23.0, sha256 97e5585fa15e66ff\ldots; sealed build
+\texttt{gfortran\ -std=f2018\ -O2\ -fno-fast-math\ -ffp-contract=off\ -Wall\ -Wextra\ -Wconversion-extra}.
+
+{[}15{]} M. F. Islam, The Root Axiom Executed: an ontological thesis
+compiled as a self-demonstrating Fortran program, Math Journal edition,
+the register, 2026 --- the executable-thesis method, 1123-check census,
+the listing byte-bound by SHA-256 as Appendix A.
+
+{[}16{]} G. Cantor, Über eine elementare Frage der
+Mannigfaltigkeitslehre, Jahresber. Deutsch. Math.-Verein. 1 (1891),
+75--78.
+
+{[}17{]} F. W. Lawvere, Diagonal arguments and cartesian closed
+categories, Lecture Notes in Mathematics 92 (1969), 134--145.
+
+{[}18{]} S. C. Kleene, On notation for ordinal numbers, J. Symbolic
+Logic 3 (1938), 150--155.
+
+{[}19{]} A. M. Turing, On computable numbers, with an application to the
+Entscheidungsproblem, Proc. London Math. Soc. 42 (1937), 230--265.
+
+{[}20{]} G. Perelman, The entropy formula for the Ricci flow and its
+geometric applications, arXiv:math/0211159, 2002; Ricci flow with
+surgery on three-manifolds, arXiv:math/0303109, 2003.
+
+{[}21{]} H.-D. Cao and X.-P. Zhu, A complete proof of the Poincaré and
+geometrization conjectures --- application of the Hamilton--Perelman
+theory of the Ricci flow, Asian J. Math. 10 (2006), 165--492.
+
+{[}22{]} J. W. Morgan and G. Tian, Ricci Flow and the Poincaré
+Conjecture, Clay Mathematics Monographs 3, Amer. Math. Soc., 2007.
+
+{[}23{]} B. Kleiner and J. Lott, Notes on Perelman's papers, Geom.
+Topol. 12 (2008), 2587--2855.
+
+{[}24{]} R. S. Hamilton, Three-manifolds with positive Ricci curvature,
+J. Differential Geom. 17 (1982), 255--306.
+\end{document}
