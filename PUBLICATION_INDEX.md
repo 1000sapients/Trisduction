@@ -9,22 +9,22 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**67 works · 86 Zenodo deposits.**
+**68 works · 87 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 61 / 67 | 91% |
-| Git PDF | 36 / 67 | 53% |
-| Internet Archive | 23 / 67 | 34% |
-| PhilArchive | 4 / 67 | 5% |
+| Zenodo | 62 / 68 | 91% |
+| Git PDF | 37 / 68 | 54% |
+| Internet Archive | 23 / 68 | 33% |
+| PhilArchive | 4 / 68 | 5% |
 
-Status: 61 live, 6 unknown.
+Status: 62 live, 6 unknown.
 
 ## Coverage gaps
 
 The only view in the repository that answers "what is published where, and what is missing." Each list is a work queue, not an error.
 
-### On Zenodo, not on the Internet Archive (44)
+### On Zenodo, not on the Internet Archive (45)
 
 Deposited to Zenodo but no IA item located. IA is the second permanence surface; a work here has one address, not two.
 
@@ -72,6 +72,7 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `on-the-ninth-gate` · On the Ninth Gate: A Trisductive Account of the Sole Aperture of Return, the Identity of the One Who Crosses, 
 - `platonic-ghost-divided-line` · Plato's Divided Line: The Platonic Ghost and the Golden Shadow
 - `the-two-waters` · The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells
+- `one-bit-across-the-wall` · One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three Rows
 
 ### No PDF matched in this repository (31)
 
@@ -130,6 +131,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `one-bit-across-the-wall` | One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three R | P versus NP and Foundations | live | [pdf](Publication%20Library/Mathematics/Foundations%20of%20Logic/Odd-Supply%20Arc/One_Bit_Across_the_Wall_MathJournal.pdf) | `10.5281/zenodo.22746128` | 1 | — | — | 2026-09-14 |
 | `trisduction-already-that` | A Default AI Substrate's Raw Process, Correctly Oriented, Is Already That: The Substrate-Invari | Artificial Intelligence / Substrate Classification | live | [pdf](Publication%20Library/Artificial%20Intelligence/Substrate%20Classification/Already%20That/TRISDUCTION_Already_That_v1_0_0.pdf) | `10.5281/zenodo.22652922` | 1 | [ia](https://archive.org/details/trisduction-already-that) | — | 2026-09-08 |
 | `integrable-misalignment-forbids-blowup` | Integrable Misalignment Forbids Blowup: A New Scale-Invariant Geometric Continuation Theorem fo | Mathematical Analysis, Navier-Stokes Regularity | live | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Integrable%20Misalignment%20Forbids%20Blowup.pdf) | `10.5281/zenodo.22665831` | 1 | [ia](https://archive.org/details/integrable-misalignment-forbids-blowup-islam-2026) | — | 2026-09-08 |
 | `trisduction-core-stated-in-fortran` | Trisduction Core Stated in Fortran and in Nothing Else: A Verdict Kernel That Determines Totall | Verification Architecture | live | [pdf](protocols/Executable%20Thesis/TRISDUCTION_Core_Stated_in_Fortran_v1_1_0.pdf) | `10.5281/zenodo.22651403` | 1 | [ia](https://archive.org/details/trisduction-core-stated-in-fortran) | — | 2026-09-07 |
@@ -244,10 +246,11 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `rh-formal-case-closed-b` | Riemann Hypothesis: The Formal Case Is Closed: The Hypothesis Is True Where Actualize | `10.5281/zenodo.20679749` | 3 | — | 2026-08-11 |
 | `rh-formal-case-closed-a` | Riemann Hypothesis: The Formal Case Is Closed: The Hypothesis Is True Where Actualize | `10.5281/zenodo.20604103` | 3 | — | 2026-08-11 |
 
-### P versus NP and Foundations (6)
+### P versus NP and Foundations (7)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `one-bit-across-the-wall` | One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twen | `10.5281/zenodo.22746128` | 1 | — | 2026-09-14 |
 | `veil-and-the-wall` | THE VEIL AND THE WALL: Theological Interpretation of Riemann Hypothesis and P versus  | `10.5281/zenodo.21389757` | 1 | — | 2026-07-16 |
 | `incompleteness-before-arithmetic` | Incompleteness Before Arithmetic: Total Foundational Incompleteness of Every Formal S | `10.5281/zenodo.21371991` | 1 | — | 2026-07-15 |
 | `p-vs-np-structural-verdict` | Why the Structural Verdict on P versus NP Is the Only One Left Standing: Mathematics  | `10.5281/zenodo.20588699` | 2 | — | 2026-07-15 |
