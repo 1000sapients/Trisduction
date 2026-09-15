@@ -1,0 +1,9 @@
+{
+ "banned": [
+  "  | 0,        a, _ => a"
+ ],
+ "required": [
+  "  | 0,        _, _ => 1",
+  "Exhaustion returns 1"
+ ]
+}

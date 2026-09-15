@@ -1,0 +1,22 @@
+{
+  "cycle": "lean1",
+  "artifact": "lean_v1_0_1_2_entry.lean",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7"
+  ],
+  "falsifiers": {
+    "C1": "run lean 4.19.0 core on the candidate with no import: any error or warning line falsifies exit-0/zero-diagnostic compilation",
+    "C2": "#print axioms over every theorem: any sorryAx, Classical.choice, or an undeclared axiom in any dependency list",
+    "C3": "delete hinv from priceBackward: the file must fail; keep it: T16_canonical must elaborate against flipF_involution",
+    "C4": "revert mm3 to the y[c][k] selector: decide on adj3_executed must report the conjunction false",
+    "C5": "extract F1..F4 by the unit-boundary rule, build under the sealed gfortran flags, run: any nonzero exit or any battery failure count above zero",
+    "C6": "any import line, or any identifier that fails to resolve under a bare lean invocation with only Init loaded",
+    "C7": "planted sorry, deleted conjunct, flipped constant, smuggled axiom: each mutant must fail the compile-or-audit check; any that passes falsifies the contract"
+  }
+}

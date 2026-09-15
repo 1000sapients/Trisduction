@@ -1,0 +1,26 @@
+{
+  "cycle": "lean1",
+  "round": 2,
+  "grade": "SELF",
+  "controls": [
+    {
+      "id": "C1",
+      "kind": "ARITH",
+      "spec": "one numeric result altered so it no longer follows from the inputs printed beside it; magnitude changed, not a typo",
+      "section": 8
+    },
+    {
+      "id": "C2",
+      "kind": "DRIFT",
+      "spec": "one defined term used in a second, incompatible sense in a later section, with no redefinition announced",
+      "section": 11
+    },
+    {
+      "id": "C3",
+      "kind": "SCOPE",
+      "spec": "one claim's warrant tier or quantifier silently widened, premise read as theorem or a scoped result stated universally",
+      "section": 9
+    }
+  ],
+  "digest": "7e40280cf48098ab9274d29a26676e5042c5fb6a68124fc4562a0631fe1f6c2c"
+}

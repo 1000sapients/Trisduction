@@ -1,0 +1,10 @@
+{
+ "banned": [
+  "no sed ranges to keep in step with edits",
+  "and the extractor reads them rather than line numbers that rot"
+ ],
+ "required": [
+  "comment body",
+  "trailing blank"
+ ]
+}

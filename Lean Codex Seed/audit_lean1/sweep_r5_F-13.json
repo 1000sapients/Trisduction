@@ -1,0 +1,8 @@
+{
+ "banned": [
+  "134 lines, with no import anywhere in the file"
+ ],
+ "required": [
+  "in one short section, with no import anywhere in the file"
+ ]
+}
