@@ -2452,6 +2452,28 @@
    "superseded_by": null,
    "note": "Terminal seal v6. Barrier taxonomy of twenty-three rows; one-bit deficit at every decision seat; hypothesis at its own grade. md sha 7c416d1ae3a1; pdf sha 69b6eb024acf; seat commit 058bc21.",
    "extra": {}
+  },
+  "formal-alone-theory-of-everything": {
+   "title": "The Formal-Alone Theory of Everything: A Constitutive Theory of Objects and Observations under Registration, Price, Crossing, and Cost",
+   "kind": "paper",
+   "date": "2026-09-15",
+   "git": {
+    "pdf_commit": "01ea798",
+    "md_commit": "01ea798",
+    "path": "master/"
+   },
+   "zenodo": {
+    "concept": "22767102",
+    "concept_doi": "10.5281/zenodo.22767102",
+    "version_recid": "22767103",
+    "version_doi": "10.5281/zenodo.22767103"
+   },
+   "extra": {
+    "pages": 51,
+    "sha256": "e3a15763",
+    "audit": "cycle ftm3 sealed v1.3 at r9; v1.4 Terminal Declaration revised over architect directive, 'It from bit' inversion excised",
+    "render": "Math Journal single column, pandoc+tectonic, 0 overfull, 0 missing glyphs"
+   }
   }
  }
 }

@@ -106,6 +106,7 @@ S | 2026-09-15 | d3a5393 | PATCH | CODEX | master/CURRENT.txt | repoint v3.38.0 
 S | 2026-09-15 | 51f1387 | SEAT | CODEX | master/Formal_Alone_Theory_of_Everything_Master_v1.3.md | sha 3a4c8adf | seal ftm3 | retro, line owed by push 51f1387
 S | 2026-09-15 | 01ea798 | SEAT | CODEX | master/Formal_Alone_Theory_of_Everything_Master_v1.4.md | sha d3e33513 | seal v1.4
 S | 2026-09-15 | 01ea798 | SEAT | CODEX | master/Formal_Alone_Theory_of_Everything_Master_v1.4_MathJournal.pdf | sha e3a15763 | render beside source
+S | 2026-09-15 | bc629a1 | LEDGER | LEDG | formal-alone-theory-of-everything | doi 10.5281/zenodo.22767102 | works 69
 
 ## MAP | regenerated | one line per live path
 # M | REG | path | kind | ver | blob8 | bytes | moved | what

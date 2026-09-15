@@ -9,25 +9,26 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**68 works · 87 Zenodo deposits.**
+**69 works · 87 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 62 / 68 | 91% |
-| Git PDF | 37 / 68 | 54% |
-| Internet Archive | 23 / 68 | 33% |
-| PhilArchive | 4 / 68 | 5% |
+| Zenodo | 63 / 69 | 91% |
+| Git PDF | 37 / 69 | 53% |
+| Internet Archive | 23 / 69 | 33% |
+| PhilArchive | 4 / 69 | 5% |
 
-Status: 62 live, 6 unknown.
+Status: 62 live, 7 unknown.
 
 ## Coverage gaps
 
 The only view in the repository that answers "what is published where, and what is missing." Each list is a work queue, not an error.
 
-### On Zenodo, not on the Internet Archive (45)
+### On Zenodo, not on the Internet Archive (46)
 
 Deposited to Zenodo but no IA item located. IA is the second permanence surface; a work here has one address, not two.
 
+- `formal-alone-theory-of-everything` · The Formal-Alone Theory of Everything: A Constitutive Theory of Objects and Observations under Registration, P
 - `navier-stokes-termination-formal-alone-register` · A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register
 - `p-vs-np-geometric-determination` · TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP
 - `p-vs-np-omega-seal` · TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL
@@ -74,10 +75,11 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `the-two-waters` · The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells
 - `one-bit-across-the-wall` · One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three Rows
 
-### No PDF matched in this repository (31)
+### No PDF matched in this repository (32)
 
 A Zenodo deposit with no corresponding PDF found under `Publication Library/`. Either the file was never filed in git, or it is filed under a name the matcher could not tie to the title. Assign the path by hand in the ledger to close the row.
 
+- `formal-alone-theory-of-everything` · The Formal-Alone Theory of Everything: A Constitutive Theory of Objects and Observations under Registration, P
 - `navier-stokes-termination-formal-alone-register` · A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register
 - `p-vs-np-geometric-determination` · TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP
 - `p-vs-np-omega-seal` · TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL
@@ -197,6 +199,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, What It Doe | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/The%20Forced%20Alternative%20Is%20a%20Filter.pdf) | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — | — |
 | `navier-stokes-termination-formal-alone-register` | A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register | Unfiled | ? | — | `10.5281/zenodo.22705896` | — | — | — | — |
 | `navier-stokes-effective-axiom-proof` | Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effective Axio | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Global%20Smoothness%20of%20Three-Dimensional%20Navier-Stokes%20from%20a%20Single%20Effective%20Axiom.pdf) | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — | — |
+| `formal-alone-theory-of-everything` | The Formal-Alone Theory of Everything: A Constitutive Theory of Objects and Observations under  | Unfiled | ? | — | `10.5281/zenodo.22767102` | — | — | — | — |
 | `closure-and-the-limits-of-forced-results` | Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When a Forced- | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Foundations%20of%20Logic/Closure%20and%20Transport/Closure%20and%20the%20Limits%20of%20Forced%20Results.pdf) | `10.5281/zenodo.22683805` | 1 | [ia](https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026) | — | — |
 | `anchoring-axioms-navier-stokes` | Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for Supplier-S | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Anchoring%20Axioms%20for%20Three-Dimensional%20Navier-Stokes%20Regularity.pdf) | `10.5281/zenodo.22670331` | 1 | [ia](https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026) | — | — |
 
@@ -292,7 +295,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `clean-gospel-of-mark` | Quranic Christology: THE CLEAN GOSPEL OF MARK: A Passage by Passage Commentary on the | `10.5281/zenodo.21756247` | 1 | — | 2026-08-02 |
 | `afterlife-and-the-return` | On the Afterlife and the Return: A Trisductive Grounding of the Soul, the Two Fates,  | `10.5281/zenodo.20554213` | 1 | — | 2026-06-05 |
 
-### Unfiled (6)
+### Unfiled (7)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
@@ -300,6 +303,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, W | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — |
 | `navier-stokes-termination-formal-alone-register` | A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register | `10.5281/zenodo.22705896` | — | — | — |
 | `navier-stokes-effective-axiom-proof` | Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effe | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — |
+| `formal-alone-theory-of-everything` | The Formal-Alone Theory of Everything: A Constitutive Theory of Objects and Observati | `10.5281/zenodo.22767102` | — | — | — |
 | `closure-and-the-limits-of-forced-results` | Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When | `10.5281/zenodo.22683805` | 1 | [ia](https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026) | — |
 | `anchoring-axioms-navier-stokes` | Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for  | `10.5281/zenodo.22670331` | 1 | [ia](https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026) | — |
 
