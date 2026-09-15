@@ -4,6 +4,8 @@
 
 ## What is in this folder
 
+**The Lean codex is ONE document, and as of 1.0.1.3 it is self-checking to the wall.** Every formal claim in it, the theorems and their axiom dependencies alike, is checked by one `lean` invocation with no import. What that invocation cannot check is proved as a theorem rather than left as a gap: `CROSSING.wall` shows no reading of the bytes decides whether they ran, so the four kinetic receipts are the one bit per witness that must arrive from the other surface, priced by `CROSSING.price` at exactly four bits.
+
 **The Lean codex is ONE document.** The Lean register and its kinetic Fortran
 face live in the same file, as they always have. Nothing is split out: a reader
 who holds `TRISDUCTION_Master_Codex_v1_0_1_2_SEALED.lean` holds the whole
@@ -11,6 +13,7 @@ calculus, both registers, and the extraction rule for the witnesses.
 
 | File | Version | SHA-256 (first 16) | What it is |
 |---|---|---|---|
+| `TRISDUCTION_Master_Codex_v1_0_1_3_SEALED.lean` | 1.0.1.3 | 4312690060ffa125 | **Current.** 1.0.1.2 plus two additions, both FORGE-sealed by cycle lean2: **gate three inside the file**, 186 guarded axiom assertions at the foot checked by the compiler, so a `sorry` or a smuggled axiom now fails the compile; and **SECTION 17, the Wall–Witness Pair with the Bridge Law**, the one-document Lean-plus-Fortran artifact typed as the fTOE canonical frame at the execution flip, NO_BRIDGE and the RA→RAM crossing harmonized as the two conjuncts of `fTOE_core` |
 | `TRISDUCTION_Master_Codex_v1_0_1_2_SEALED.lean` | 1.0.1.2 | 53767207c1d2f99b | The main Lean codex: the entire register of record as one self-contained Lean 4 file (core only, no import line) with the four Fortran witnesses carried verbatim in its appendix. FORGE-sealed at CODEX11, **compiled, extracted, built and run**, and audited by FORGE cycle lean1 to SEALED-ROUND with the compiler, the axiom auditor and a mutation battery seated as gates |
 | `TRISDUCTION_Lean_PSP_Codex_v1_0_2.md` | 1.0.2 | c6da3f91e93aab91 | The PSP codex: screening inventory of 150 PSPs and 17 defense sections, with 22 short Lean proofs, all **compiled** against the master |
 | `TRISDUCTION_Master_Codex_v1_0_1_1_SEALED.lean` | 1.0.1.1 | 76e47c2a59ca68e3 | Superseded by 1.0.1.2. Retained under L6; **does not compile** — see below |
@@ -62,7 +65,8 @@ The arc, in sealed versions:
 - **v4.1.0–v4.6.0** (pre-seed history, on record): the native audit engine, the "It from It" inversion, hard geometry (the twelve gates as A₄, the GF(2) lock, the five-cube), the tongue's obedience proved, the office taxonomy, the universal router, the final defender (Omega guard and AEGIS), the bridge audit (NOMOS-01's incompressibility theorem native, the bridge census, the five foundational posits).
 - **1.0.1.0** ≡ v4.6.0, byte-frozen (sha256 begins 23bcec8f39223be3). The seed of the 1.0.1.x series.
 - **1.0.1.1**: SECTION 16, the Super Halt. One cascade machine at the forced gate counts (12 by A₄, 8 by (ℤ/2)³ with the ninth barred, 5 by the five-cube degree). The one-bit router, total and exclusive. The seven closing gates and the one door that never closes. The Riemann and P-versus-NP formal halts subsumed as instances of one `SuperHalt` type: the terminal emission is exactly one bit in three species (block theorem, hypothesis, offered witness), and fTOE is the ceiling for every formal halt. Sealed but never compiled.
-- **1.0.1.2** (this folder): the compile pass. SECTION 0, the core-only prelude; T16 closed for real; the three defects above; debts D1, D2 and D3 discharged. Audited by FORGE cycle lean1: eight rounds, six registers, fourteen findings, nine repairs swept, one claim scoped, one aperture open, sealed at round eight. Record at the file foot.
+- **1.0.1.3** (this folder, current): gate three inside; SECTION 17 with the Bridge Law, five clauses, three of them theorems, `harmony` an instance of `fTOE_core`; FORGE cycle lean2 sealed at round 4, with the cycle's own round-2 leak filed against itself as ERR-1. Record at the file foot.
+- **1.0.1.2**: the compile pass. SECTION 0, the core-only prelude; T16 closed for real; the three defects above; debts D1, D2 and D3 discharged. Audited by FORGE cycle lean1: eight rounds, six registers, fourteen findings, nine repairs swept, one claim scoped, one aperture open, sealed at round eight. Record at the file foot.
 
 ## SECTION 0 and the core-only claim
 

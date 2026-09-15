@@ -1,0 +1,20 @@
+{
+  "cycle": "lean2",
+  "artifact": "lean2_entry.lean",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "falsifiers": {
+    "C1": "lean on the candidate: any error or warning line, or any guard mismatch, falsifies exit-0 with 186 guards",
+    "C2": "any SECTION 17 proof term that is not an application of a SECTION 2 or 3 theorem to the execution frame falsifies Delta-M = 0",
+    "C3": "the two conjuncts of harmony must be, verbatim, fTOE_core's two conjuncts instantiated at execFlip; any extra hypothesis or dropped conjunct falsifies",
+    "C4": "exhibit a function of formalRead that is odd at some seat",
+    "C5": "exhibit a constant target odd at some seat",
+    "C6": "planted sorry or smuggled axiom compiling to exit 0 against the guarded file"
+  }
+}
