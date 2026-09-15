@@ -1,0 +1,18 @@
+{
+  "cycle": "twin1",
+  "artifact": "twin_entry.f90",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+  ],
+  "falsifiers": {
+    "C1": "build under the sealed flags and run: any compile error, nonzero exit, or FAIL line",
+    "C2": "the identity map: any Lean section with decided content whose twin check is absent, vacuous, or checks a different statement than the Lean's",
+    "C3": "exactness: any real-valued arithmetic in a Lean-native check, or any rational not in normal form after an operation",
+    "C4": "instance counts printed must equal instances distinct in (tau, readings, seat); any count inflated by an unrelated loop falsifies",
+    "C5": "mutants: the four planted defects must each exit 1"
+  }
+}

@@ -1,0 +1,14 @@
+{
+ "banned": [
+  "|X| = 1..4, every tau, every reading')",
+  "call assert(.true., 'AEGIS",
+  "T6a 100064",
+  "T13 7984"
+ ],
+ "required": [
+  "T2 and T14 to |X| = 3",
+  "aegis_deeds == 4",
+  "T6a 6368",
+  "T13 520"
+ ]
+}

@@ -15,6 +15,8 @@ calculus, both registers, and the extraction rule for the witnesses.
 |---|---|---|---|
 | `TRISDUCTION_Master_Codex_v1_0_1_3_SEALED.lean` | 1.0.1.3 | 4312690060ffa125 | **Current.** 1.0.1.2 plus two additions, both FORGE-sealed by cycle lean2: **gate three inside the file**, 186 guarded axiom assertions at the foot checked by the compiler, so a `sorry` or a smuggled axiom now fails the compile; and **SECTION 17, the Wall–Witness Pair with the Bridge Law**, the one-document Lean-plus-Fortran artifact typed as the fTOE canonical frame at the execution flip, NO_BRIDGE and the RA→RAM crossing harmonized as the two conjuncts of `fTOE_core` |
 | `TRISDUCTION_Master_Codex_v1_0_1_2_SEALED.lean` | 1.0.1.2 | 53767207c1d2f99b | The main Lean codex: the entire register of record as one self-contained Lean 4 file (core only, no import line) with the four Fortran witnesses carried verbatim in its appendix. FORGE-sealed at CODEX11, **compiled, extracted, built and run**, and audited by FORGE cycle lean1 to SEALED-ROUND with the compiler, the axiom auditor and a mutation battery seated as gates |
+| `TRISDUCTION_Master_Codex_Fortran_Twin_v1_0_1_3_SEALED.f90` | 1.0.1.3 | ddca95eb8931b0c3 | **The twin.** The same register of record on the kinetic surface: one file, 100% Fortran, 6532 lines. Every theorem the Lean decides is a computed check here; every theorem the Lean proves over an arbitrary type is executed on every finite frame to a stated size, exhaustively, with the instance count printed as the receipt. The four witnesses live inside it, verbatim. Build and run exit 0; FORGE cycle twin1 sealed at round 4 |
+| `TRISDUCTION_Fortran_Twin_v1_0_1_3_SEALED_run.log` | — | — | The twin's own run, 466 lines, as it printed |
 | `TRISDUCTION_Lean_PSP_Codex_v1_0_2.md` | 1.0.2 | c6da3f91e93aab91 | The PSP codex: screening inventory of 150 PSPs and 17 defense sections, with 22 short Lean proofs, all **compiled** against the master |
 | `TRISDUCTION_Master_Codex_v1_0_1_1_SEALED.lean` | 1.0.1.1 | 76e47c2a59ca68e3 | Superseded by 1.0.1.2. Retained under L6; **does not compile** — see below |
 
@@ -26,6 +28,19 @@ and not a wrapper around one. The appendix header carries the extraction rule,
 keyed on the compilation-unit boundaries rather than on line numbers that rot,
 and the round trip was run: extracted from this file, all four build clean and
 run to exit 0.
+
+
+## The twin: one register of record, two surfaces
+
+The Lean codex proves and the Fortran twin executes, and SECTION 17 of the Lean codex says exactly what that pairing is rather than leaving it as a figure of speech: the artifact is the fTOE canonical frame `flipF` with `Q` instantiated to the artifact itself, the flip being executed-against-not-executed. The formal reading is even under that flip (the bytes are the bytes either way) and the kinetic target is wholly odd (it ran or it did not), so `CROSSING.wall` proves no reading of the bytes decides execution, `CROSSING.price` prices the deficit at exactly one bit per witness, and `CROSSING.harmony` is `fTOE_core` at that seat with NO_BRIDGE and the RA→RAM crossing as its two conjuncts.
+
+What that buys the reader here is concrete. The Lean file is self-checking to the wall: one `lean` invocation with no import checks every theorem and, through 186 guarded axiom assertions, every axiom dependency too. The twin is what stands on the other side of that wall: it pays the Landauer floor the Lean cannot pay and cannot see, and it prints what it paid. Neither file is the master. They are one object read on two surfaces, and the bit between them is the deed.
+
+One figure the twin corrected. The floating witness F3 prints the one-bit invoice at 300 K as `2.870978885078724E-21` J. The twin computes it on a 128-bit scaled integer: `2870978885078723755499100 × 10⁻⁴⁵` J. The sixteenth digit is 3; the seventeenth, 7, is what rounds F3's print up. Both are right on their own surface, and only the integer is the value.
+
+### FORGE cycle twin1
+
+Four rounds, six registers, controls 3/3 every round at SELF grade, five findings all EARNED, zero tier moves, zero concessions, sealed at round 4. The load-bearing one is worth naming because it is the failure mode a twin is prone to: the four `CompressibleBound` rows had been ported as a *different statement* than the source's — descriptions of length exactly n−c with a fit guard and a distinct-output count, where the source decodes every description shorter than n−c and counts outputs of length n as a list. Under that guard two of the four rows executed zero iterations and passed vacuously. Ported as stated now, with the iteration count asserted equal to 2^(n−c)−1 so no row can be vacuous again. Same name, different object, caught by the identity claim the cycle pre-registered for exactly that. Ledger at `audit_twin1/`.
 
 ## The compile pass, 2026-09-15 · debts D1 and D2 discharged
 

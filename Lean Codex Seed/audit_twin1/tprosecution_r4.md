@@ -1,0 +1,8 @@
+# Prosecution · cycle twin1 · round 4 · registers: kinematic, definitional (restated, highest yield)
+Artifact: twin_r4_seeded.f90. Named targets: none new since round two; every printed receipt figure re-read against the binary.
+
+P-1 [kinematic] The banner receipt prints 190 Lean-native checks; the binary prints 109 at the battery line and 109 again at the load line. Falsifier: run it.
+P-2 [definitional] The T5 comment describes the supply s as "even at x" while the guard beneath it tests oddness at x for both s and d, as the theorem's hypotheses require; an even supply at the seat would give no crossing and the guard would skip it. Falsifier: read the guard.
+P-3 [definitional] The GF(2) census label appends "and 4096 more with signs" to a count over three-row systems over the two-element field, which has no signs; the loop enumerates 4096 systems and nothing else. Falsifier: count the loop.
+P-4 [kinematic] Every figure in the banner receipt re-read against this round's binary output: 109 checks; T1 17824, T2 23552, T3 520, T4 568, T5 50032, T6a 6368, T6b 50032, T7 1136, T8 292 and 292, T9 340, T13 520, T14 1960, T17 67332; |Dtau| 2, 4, 8, 16; GF(2) 1344 and 2752; 84 pairs; F1 248/0; F2 1123/0; the exact invoice 2870978885078723755499100. Every figure equal. No finding.
+P-5 [definitional] One symbol, one meaning, checked across the file: `assert` is the twin battery's in the new modules and each witness's own internal procedure inside its converted subroutine, never both in one scope; `det3` names the F1 module's real determinant and `det3r` the twin's rational one; `qmul` is F1's and F2's, `qm` the twin's. No collision. No finding.

@@ -1,0 +1,10 @@
+{
+ "banned": [
+  "decoder_image(",
+  "checks_before > 0, 'every check above executed without consuming a posit"
+ ],
+ "required": [
+  "cb_bound(4, 12, 3, .false.)",
+  "iters == 2**(n-c) - 1"
+ ]
+}
