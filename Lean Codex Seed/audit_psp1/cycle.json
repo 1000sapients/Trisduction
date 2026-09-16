@@ -1,0 +1,14 @@
+{
+  "cycle": "psp1",
+  "artifact": "psp1_entry.md",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "falsifiers": {
+    "C1": "every class disposition is the one the entry's screening-basis column supports; any row whose basis names a different class falsifies",
+    "C2": "no entry raised above its printed grade: any row carrying a grade word above the grade its basis names",
+    "C3": "the M-class roster and the block list are in bijection and their counts agree everywhere the file prints them"
+  }
+}

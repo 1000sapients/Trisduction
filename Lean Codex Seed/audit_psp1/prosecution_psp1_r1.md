@@ -1,0 +1,6 @@
+# Prosecution · cycle psp1 · round 1 · registers: kinematic, definitional
+Artifact: the PSP codex 1.0.2, read alone.
+P-1 [kinematic] The file prints its own M-class count two ways: "22 M-class" at the head and "20 M-class proofs" in its closing line. The roster table carries 20 rows; §4 carries 22 blocks. Falsifier: count the blocks.
+P-2 [definitional] The 20 roster rows and the 22 blocks are not in bijection. Four blocks have no roster row (P17 the Decalogue, P18 the shield, P19 the import screen, P22 the two-group law) and two rows name no block (DELTAM-ADMIT-01 and O0-ADMISSION-PROTOCOL-01, whose "basis" column points at P17-adjacent censuses without a P number). A screening ledger whose roster and proofs cannot be paired row to block is not a ledger of what was proved. Falsifier: pair them.
+P-3 [kinematic] Every other census reconciles: 150 rows in all, 87 T, 20 M, 14 native, 13 N-OUT, 9 C, 5 F, 1 SUP, 1 REF, summing to 150, and the §6 prose figures 13, 9, 1, 1 match the table. No finding.
+P-4 [definitional] Class dispositions read against the basis column, all 150: T rows all name the triple, F rows all name a declaration bit only, N-OUT rows all name the out-of-band router, C rows all name a discipline, M rows all name a block or a census; none names a class other than its section's. No finding.

@@ -1,0 +1,14 @@
+{
+  "cycle": "psp2",
+  "artifact": "psp2_entry.lean",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "falsifiers": {
+    "C1": "the master body with SECTION 19 appended: any error, warning or guard mismatch",
+    "C2": "namespace collision: any SECTION 19 name resolving to a master declaration, or any master name shadowed",
+    "C3": "no posit consumed: any SECTION 19 declaration depending on a ROOT or POSTULATE axiom, on Classical.choice or sorryAx"
+  }
+}
