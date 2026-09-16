@@ -1,0 +1,20 @@
+{
+  "cycle": "lean5",
+  "artifact": "lean5_entry.lean",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "falsifiers": {
+    "C1": "full and barebone: any error, warning or guard mismatch on either, or a guard count that differs between them",
+    "C2": "the emitter: any located, unbroken reading emitting none; any crossing with a bit owed or a channel missing; checked on the 1536-reading native census and the twin's 180 emits",
+    "C3": "gate three: the generator's diff of declared names against guarded names nonzero; Rat.mk' or either polymorphic def unguarded",
+    "C4": "D5: any decoder, n, c on which compressible_bound_universal fails to elaborate",
+    "C5": "seals_distinct or CROSSING.wall carrying an axiom beyond propext-free",
+    "C6": "the barebone differs from the full in any declaration, guard, or #eval output"
+  }
+}
