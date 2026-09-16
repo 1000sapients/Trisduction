@@ -1,0 +1,20 @@
+{
+  "cycle": "lean8",
+  "artifact": "lean8_entry.lean",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "falsifiers": {
+    "C1": "both editions on both toolchains: any error, warning, guard mismatch beyond the 150 recorded 4.34.0 library differences, or differing #eval output",
+    "C2": "the renames: any surviving inverse superscript notation, Function.LeftInverse or Function.RightInverse in code, or bare Rat as a type outside the two historical prose lines and the fences",
+    "C3": "gate three: any anonymous instance, any axiom outside the allow-list, or a generator diff other than 0",
+    "C4": "every mutant of the pass exits 1 on 4.19.0, ML4 through the generator; any exit 0 is a hole",
+    "C5": "SECTION 19: any declaration whose dependency list names a declared posit or Classical.choice",
+    "C6": "BA-001a and the ten declared-not-consumed posits typed as stated: any of the ten appearing in the cone's list, or the BA-001a note claiming consumption"
+  }
+}

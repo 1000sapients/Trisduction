@@ -1,0 +1,3 @@
+C1 ARITH  SECTION 18 header: 'seven orbits, six bits' beside 2^6 on the twelve-seat frame (twelve seats pair into six orbits)
+C2 DRIFT  SECTION 17 docstring: 'a witness is the wall itself' where the section defines the witness as the object beside the wall identified by one calibration bit
+C3 SCOPE  SECTION 4 header: the semiprime factorizations claimed decided by the kernel in this file; the file decides residues and lifts mod 210, the factorizations were executed at build outside Lean

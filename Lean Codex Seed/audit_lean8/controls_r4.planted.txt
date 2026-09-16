@@ -1,0 +1,3 @@
+C1 ARITH  SECTION 5 boolCut docstring: 'three orbits on two points' (a free involution on two points has one orbit)
+C2 DRIFT  SECTION 8 header: the one bit of freedom called 'the magnitude of the calibration, read off the determinant' where the section defines it as the uniqueness of a Boolean calibration and the determinant is proved blind to it
+C3 SCOPE  SECTION 19 hurwitz_units_24: docstring claims a full classification of unit quaternions; the theorem counts units on a 5^4 grid of half-integer coordinates

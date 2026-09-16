@@ -1,0 +1,44 @@
+== compile receipts, v1.1.4 pass, 2026-09-16
+toolchains: Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) | Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+full 4.19.0: exit 0, errors 0, warnings 0, 157 s, 80 eval lines
+full 4.34.0: exit 1, 150 guard mismatches (87 +Quot.sound, 46 +propext, 13 -propext, 4 +ROOT.L2m incl. the cone), 0 other errors, 0 warnings, 0 Classical.choice, eval lines identical
+barebone 4.19.0: exit 0, errors 0, warnings 0, 162 s, eval identical; barebone 4.34.0: exit 1, the same 150 guards, 0 other errors, eval identical
+generator: declared 527 guarded 527 diff 0; cone 525 diff 0; axioms 23 allow-list diff 0
+fences: b5d12f7326e196c2 71b7f40030f0e0a3 baaade085b6b9f30 cce652c6a88e8fd0 (full and barebone)
+twins: full and barebone build exit 0 under -std=f2018 -O2 -fno-fast-math -ffp-contract=off; 123 checks 0 failures; run output identical between editions and to v1.1.3
+== mutants (4.19.0)
+ML4 generator exit 1
+M1 exit 1 secs 168 err 4 warn 1 :: mut/M1.lean:2782:8: warning: declaration uses 'sorry' (IAM.IamToken.interior, "self-check is not a witness (M6): the verifier is never the claimant; token withheld",
+M6 exit 1 secs 154 err 4 warn 0 :: mut/M6.lean:11766:0: error: ❌️ Docstring on `#guard_msgs` does not match generated message:  info: 'GEO.gates_twelve' depends on axioms: [GEO.gates_twelve_ax] 'S
+M7 exit 1 secs 153 err 2 warn 0 :: mut/M7.lean:12174:0: error: ❌️ Docstring on `#guard_msgs` does not match generated message:  info: 'NOMOS.cb_pad4_12_3' depends on axioms: [NOMOS.cbAxM7] 'codexC
+M8 exit 1 secs 151 err 5 warn 0 :: mut/M8.lean:2748:53: error: type mismatch   rfl has type   ?m.69310 = ?m.69310 : Prop 
+M9b exit 1 secs 156 err 2 warn 0 :: mut/M9b.lean:11524:0: error: ❌️ Docstring on `#guard_msgs` does not match generated message:  info: 'Ratio.instToStringRat' depends on axioms: [propext, Ratio.s
+ML3 exit 1 secs 146 err 14 warn 0 :: mut/ML3.lean:10956:2: error: type mismatch   h has type   HALT.Channel.formal = c : Prop 
+ML5 exit 1 secs 150 err 12 warn 0 :: mut/ML5.lean:10961:79: error: unsolved goals case false.none r : Reading hl : r.located = true 
+ML6 exit 1 secs 153 err 3 warn 0 :: mut/ML6.lean:3418:21: error: application type mismatch   ⟨omega_paid_floor, IAM.one_bit_freedom⟩ argument   IAM.one_bit_freedom 
+ML7 exit 1 secs 154 err 3 warn 0 :: mut/ML7.lean:11145:31: error: tactic 'decide' proved that the proposition   (Token.superHalt none none none 1).render = "[⬖₀ ×1]" ∧     (Token.superHalt (som
+MP1 exit 1 secs 153 err 3 warn 0 :: mut/MP1.lean:11325:42: error: tactic 'decide' proved that the proposition   cdmul 5 sx sy = zero16 ? sx ? zero16 ? sy ? zero16 ? sqnorm sx = 2 ? sqnorm sy = 2 is fa
+== gate-three census
+{
+ "theorem": 264,
+ "def": 238,
+ "abbrev": 13,
+ "instance": 12,
+ "axiom": 23,
+ "roster": 527,
+ "cone": 525,
+ "definitions": 251,
+ "axioms_declared": 23,
+ "allow_list_diff": 0,
+ "posit_dependent_theorems": 8,
+ "theorem_dependency_census": {
+  "[propext]": 82,
+  "[propext, Quot.sound]": 14,
+  "(none)": 149,
+  "[Quot.sound]": 11,
+  "[ROOT.RA, ROOT.U, ROOT.ΔE]": 4,
+  "[ROOT.FormalDomain, ROOT.L1m, ROOT.L3m, ROOT.nest_21, ROOT.nest_32]": 2,
+  "[ROOT.U, ROOT.ΔE]": 1,
+  "[POSTULATE.Row, POSTULATE.SupplyClean]": 1
+ }
+}

@@ -1,0 +1,1 @@
+{"banned": ["SESSION RECEIPTS (this build)", "boot executed verbatim at build time:"], "required": ["SESSION RECEIPTS (carried from v1.1.3; not re-executed by the v1.1.4 pass)", "boot executed verbatim at the v1.1.3 build:"]}
