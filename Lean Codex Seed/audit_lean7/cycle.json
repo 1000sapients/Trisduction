@@ -1,0 +1,20 @@
+{
+  "cycle": "lean7",
+  "artifact": "lean7_entry.lean",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "falsifiers": {
+    "C1": "both editions: any error, warning or guard mismatch, or eval output that differs",
+    "C2": "D4a: any integer matrix on which mm3Z m (adj3Z m) \u2260 diag3Z (det3Z m) in either order",
+    "C3": "D9 finite: any enumerated carrier and readout on which a record separating no pair fails to factor",
+    "C4": "the renders: any two owed counts below thirteen printing alike, or zero printing without its provenance mark",
+    "C5": "one_bit_freedom_priced: any conjunct of one_bit_freedom absent from its type",
+    "C6": "the K4 construction: any odd seat not its partner plus a positive multiple of 210"
+  }
+}
