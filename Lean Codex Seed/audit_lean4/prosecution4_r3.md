@@ -1,0 +1,8 @@
+# Prosecution · cycle lean4 · round 3 · registers: limit, symmetry
+Artifact: lean4_r3_seeded.lean. Targets: the projection, the emitter's edges, the multiplicity.
+
+P-1 [definitional] toEconomy sends a superHalt to sealed while the section table, the laws unlocated_is_plain_open and one_bit_apart, and the twin's state map all send it to open; a halt with its bit unsupplied that reads as sealed is the exact inversion the wall forbids. Falsifier: read one_bit_apart, which needs superHalt to image open.
+P-2 [definitional] The locus predicate's docstring now claims the decoration "and its inverse" are total; there is no inverse, since the projection is many-to-one and the plain [?] has no Locus preimage by no_seat_no_locus. Falsifier: try to invert on opn.
+P-3 [kinematic] k4_locus asserts sixteen seats on the K4 frame; the frame has six seats and the multiplicity theorem beneath it prices 2^6. Sixteen is the four-anchor fibre of SECTION 17, a different frame. Falsifier: count K4's seats.
+P-4 [limit] Edges of the emitter: seats 0 is admitted by the type and the render prints no multiplier below two; gdim none yields the bare token; a broken reading breaches regardless of every other field; a located reading with a supply but no channel is plain open and never a crossing, by crossed_requires_supply's contrapositive on the channel. No finding.
+P-5 [symmetry] Kinetic and formal are the two channels and the render, the ascii and the twin treat them identically except in the printed word; nothing in any law depends on which channel a crossing took, which is the Bridge Law's one-direction clause read at the token. No finding.

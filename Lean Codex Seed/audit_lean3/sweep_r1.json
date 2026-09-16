@@ -1,0 +1,10 @@
+{
+ "banned": [
+  "from two core lemmas over Nat.gcd",
+  "from two core lemmas over `Nat.gcd`"
+ ],
+ "required": [
+  "from three lemmas over Nat.gcd",
+  "theorem inv_zero"
+ ]
+}

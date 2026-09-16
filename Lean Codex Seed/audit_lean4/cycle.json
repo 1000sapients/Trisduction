@@ -1,0 +1,18 @@
+{
+  "cycle": "lean4",
+  "artifact": "lean4_entry.lean",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+  ],
+  "falsifiers": {
+    "C1": "lean 4.19.0 core: any error, warning or guard mismatch",
+    "C2": "three states: exhibit a Locus token whose economy image is none of sealed, broken, opn",
+    "C3": "the emitter: any reading on which a Locus law fails, in Lean or in the twin's 288-reading enumeration",
+    "C4": "wrap never patch: any exhaustive match in the sealed audit engine changed, or UC.routeHalt edited",
+    "C5": "not promoted: any emission of a halt-locus token for rhHalt or pnpHalt"
+  }
+}

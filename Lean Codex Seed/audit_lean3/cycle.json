@@ -1,0 +1,20 @@
+{
+  "cycle": "lean3",
+  "artifact": "lean3_entry.lean",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6"
+  ],
+  "falsifiers": {
+    "C1": "lean 4.19.0 core: any error, warning, or guard mismatch",
+    "C2": "the certified rational: exhibit any inhabitant of Rat with den = 0 or a non-coprime pair, or any Rat theorem depending on Classical.choice",
+    "C3": "one router: any ground dimension on which route and UC.routeHalt disagree",
+    "C4": "the aperture: any seven-gate prefix on which the eight-gate cascade returns none",
+    "C5": "grade pins: relabel any atomic claim and the compile must fail (M8)",
+    "C6": "the cone: any declaration of the file absent from codexCone other than the two universe-polymorphic ones named"
+  }
+}
