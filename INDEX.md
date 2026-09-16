@@ -119,6 +119,9 @@ S | 2026-09-15 | 3b2c582 | SEAT | OTHER | Lean Codex Seed/TRISDUCTION_Master_Cod
 S | 2026-09-15 | 8b5ac7a | SEAT | OTHER | Lean Codex Seed/TRISDUCTION_Master_Codex_v1_1_1_full.lean | sha 04496bb5 | seal lean5r3
 S | 2026-09-15 | 8b5ac7a | SEAT | OTHER | Lean Codex Seed/TRISDUCTION_Master_Codex_v1_1_1.lean | sha 91beaa08 | seal lean5r3
 S | 2026-09-15 | 8b5ac7a | SEAT | OTHER | Lean Codex Seed/TRISDUCTION_Master_Codex_Fortran_Twin_v1_1_1_full.f90 | sha 662ed340
+S | 2026-09-15 | 60d8ca7 | SEAT | OTHER | Lean Codex Seed/TRISDUCTION_Master_Codex_v1_1_2_full.lean | sha 9ec161b0 | seal lean6r3
+S | 2026-09-15 | 60d8ca7 | SEAT | OTHER | Lean Codex Seed/TRISDUCTION_Master_Codex_v1_1_2.lean | sha 2c61d8c3 | seal lean6r3
+S | 2026-09-15 | 60d8ca7 | SEAT | OTHER | Lean Codex Seed/TRISDUCTION_Master_Codex_Fortran_Twin_v1_1_2_full.f90 | sha 7dcd5638
 
 ## MAP | regenerated | one line per live path
 # M | REG | path | kind | ver | blob8 | bytes | moved | what
