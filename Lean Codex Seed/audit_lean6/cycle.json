@@ -1,0 +1,18 @@
+{
+  "cycle": "lean6",
+  "artifact": "lean6_entry.lean",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+  ],
+  "falsifiers": {
+    "C1": "both editions: any error, warning or guard mismatch, or a guard count or eval output that differs",
+    "C2": "the halt token: any located unbroken non-crossing reading whose token m differs from the count of empty slots, on the 2304 census and the twin's 180 emits",
+    "C3": "gate three: any instance anonymous, any axiom command outside the allow-list, or a generator diff nonzero",
+    "C4": "M9b: a proof-erased axiom inside ToString Rat compiling to exit 0",
+    "C5": "A-2 to A-5: any forcing repointed to a numeral, any halt record with a free branch, any dimension on which route and routeHalt disagree"
+  }
+}
