@@ -140,6 +140,7 @@ S | 2026-09-16 | 7286ac1 | PATCH | OTHER | Lean Codex Seed/README.md | sha a03e3
 S | 2026-09-16 | e3c554a | SEAT | CODEX | master/Formal_Alone_Theory_of_Everything_Master_v1.5.md | sha 64a6c356 | A.2 correction: T16 T17 machine-checked
 S | 2026-09-16 | e3c554a | SEAT | CODEX | master/Formal_Alone_Theory_of_Everything_Master_v1.5_MathJournal.pdf | sha 0ab6a142 | render beside source, 47 pp
 S | 2026-09-16 | e3c554a | SEAT | CODEX | master/Formal_Alone_Theory_of_Everything_Master_v1.5_MathJournal.tex | sha ab414058 | reproducible render source
+S | 2026-09-18 | 3ac2541 | SEAT | PROTO | protocols/RH One Bit/ | paper The Riemann Hypothesis Is Exactly One Bit, pdf 204725 ee1433bb + md 165529 + blog 61720 | 18 lean cones pinned, 2 f90 twins, verify.sh, manifest, handout, ledger | 32 files
 
 ## MAP | regenerated | one line per live path
 # M | REG | path | kind | ver | blob8 | bytes | moved | what
