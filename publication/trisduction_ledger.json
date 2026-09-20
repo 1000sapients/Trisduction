@@ -2474,6 +2474,39 @@
     "audit": "cycle ftm3 sealed v1.3 at r9; v1.4 Terminal Declaration revised over architect directive, 'It from bit' inversion excised",
     "render": "Math Journal single column, pandoc+tectonic, 0 overfull, 0 missing glyphs"
    }
+  },
+  "rh-in-its-original-form": {
+   "title": "The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus and the Crossing: Riemann's Fixed-Line Statement Restored, Proved in Lean 4, Executed in Fortran, and Sealed at the Act by One Supplied Bit",
+   "domain": "Riemann Hypothesis",
+   "status": "live",
+   "first_published": "2026-09-20",
+   "last_updated": "2026-09-20",
+   "git": {
+    "md": "protocols/RH One Bit/RH_In_Its_Original_Form_v1_0_6.md",
+    "pdf": "protocols/RH One Bit/RH_In_Its_Original_Form_v1_0_6.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": "22857137",
+    "concept_doi": "10.5281/zenodo.22857137",
+    "latest_version_doi": "10.5281/zenodo.22857138",
+    "latest_record": 22857138,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "riemann-hypothesis-in-its-original-form",
+    "url": "https://archive.org/details/riemann-hypothesis-in-its-original-form",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Sealed rhact5 v1.0.6. Locus and crossing proved in Lean 4; structural route blocked (Thm 14); value at the witness row. pdf sha 724c80555f5c; md sha 197de28296b0; seat commits a41ac13, 7626482.",
+   "extra": {}
   }
  }
 }
