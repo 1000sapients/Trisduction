@@ -2548,6 +2548,39 @@
    "extra": {
     "build_divergence": "The git PDF is a 20-page build; Zenodo 10.5281/zenodo.21389758 serves a 19-page build under the same \"Second Edition\" name. Front text identical. Close by depositing the git build as a new version on concept 21389757."
    }
+  },
+  "rh-from-existence-alone": {
+   "title": "A Formal Proof of Riemann Hypothesis from Existence Alone, the Sign Excepted by Theorem: The Constructed Witness, the Identity Cone over the Fixed Locus, the Grounded Counter-Model, and the Cure Theorem Proved in Lean 4 and Re-executed in Fortran",
+   "domain": "Riemann Hypothesis",
+   "status": "live",
+   "first_published": "2026-09-23",
+   "last_updated": "2026-09-23",
+   "git": {
+    "md": "protocols/RH One Bit/RH_From_Existence_Alone_v1_5_2.md",
+    "pdf": "protocols/RH One Bit/RH_From_Existence_Alone_v1_5_2.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": "22912937",
+    "concept_doi": "10.5281/zenodo.22912937",
+    "latest_version_doi": "10.5281/zenodo.22912938",
+    "latest_record": 22912938,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "formal-proof-riemann-hypothesis-existence-alone",
+    "url": "https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Sealed rhapex5 r5 at v1.5.0; v1.5.2 claim-free relative to it. Seat proved with existence the only posit; value one bit, unreachable (Thm I). Lean sha d671051e99b8, twin sha 47670197aa8e, pdf md5 8062b041 (git, Zenodo), e5ee8782 (IA, uncompressed). Artifact commit 154a448.",
+   "extra": {}
   }
  }
 }

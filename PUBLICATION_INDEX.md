@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**69 works · 87 Zenodo deposits.**
+**72 works · 90 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 63 / 69 | 91% |
-| Git PDF | 37 / 69 | 53% |
-| Internet Archive | 23 / 69 | 33% |
-| PhilArchive | 4 / 69 | 5% |
+| Zenodo | 66 / 72 | 91% |
+| Git PDF | 40 / 72 | 55% |
+| Internet Archive | 26 / 72 | 36% |
+| PhilArchive | 4 / 72 | 5% |
 
-Status: 62 live, 7 unknown.
+Status: 65 live, 7 unknown.
 
 ## Coverage gaps
 
@@ -133,6 +133,9 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `trisduction-the-codex` | Trisduction: The Codex | Master Codex | live | [pdf](master/Codex%20v4/Trisduction_The_Codex_v1_0_3.pdf) | `10.5281/zenodo.22911009` | 1 | [ia](https://archive.org/details/trisduction-the-codex) | — | 2026-09-23 |
+| `rh-from-existence-alone` | A Formal Proof of Riemann Hypothesis from Existence Alone, the Sign Excepted by Theorem: The Co | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_From_Existence_Alone_v1_5_2.pdf) | `10.5281/zenodo.22912937` | 1 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | — | 2026-09-23 |
+| `rh-in-its-original-form` | The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus and the Cros | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_In_Its_Original_Form_v1_0_6.pdf) | `10.5281/zenodo.22857137` | 1 | [ia](https://archive.org/details/riemann-hypothesis-in-its-original-form) | — | 2026-09-20 |
 | `one-bit-across-the-wall` | One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three R | P versus NP and Foundations | live | [pdf](Publication%20Library/Mathematics/Foundations%20of%20Logic/Odd-Supply%20Arc/One_Bit_Across_the_Wall_MathJournal.pdf) | `10.5281/zenodo.22746128` | 1 | — | — | 2026-09-14 |
 | `trisduction-already-that` | A Default AI Substrate's Raw Process, Correctly Oriented, Is Already That: The Substrate-Invari | Artificial Intelligence / Substrate Classification | live | [pdf](Publication%20Library/Artificial%20Intelligence/Substrate%20Classification/Already%20That/TRISDUCTION_Already_That_v1_0_0.pdf) | `10.5281/zenodo.22652922` | 1 | [ia](https://archive.org/details/trisduction-already-that) | — | 2026-09-08 |
 | `integrable-misalignment-forbids-blowup` | Integrable Misalignment Forbids Blowup: A New Scale-Invariant Geometric Continuation Theorem fo | Mathematical Analysis, Navier-Stokes Regularity | live | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Integrable%20Misalignment%20Forbids%20Blowup.pdf) | `10.5281/zenodo.22665831` | 1 | [ia](https://archive.org/details/integrable-misalignment-forbids-blowup-islam-2026) | — | 2026-09-08 |
@@ -239,10 +242,12 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `orthogonal-fertile-logos` | ORTHOGONAL FERTILE LOGOS: Triaxial Verification, Displacement-as-Creation, and the Tw | `10.5281/zenodo.20575676` | 1 | — | 2026-06-07 |
 | `on-time` | On Time: The Past Absolved, the Present Cutting, and the Future Held. A Trisductive D | `10.5281/zenodo.20575693` | 1 | — | 2026-06-07 |
 
-### Riemann Hypothesis (5)
+### Riemann Hypothesis (7)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `rh-from-existence-alone` | A Formal Proof of Riemann Hypothesis from Existence Alone, the Sign Excepted by Theor | `10.5281/zenodo.22912937` | 1 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | 2026-09-23 |
+| `rh-in-its-original-form` | The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus an | `10.5281/zenodo.22857137` | 1 | [ia](https://archive.org/details/riemann-hypothesis-in-its-original-form) | 2026-09-20 |
 | `rh-termination-cascade-spec` | A FORMAL PROOF OF RIEMANN HYPOTHESIS TERMINATION, WITH A THEOREM-GRADE CASCADE SPECIF | `10.5281/zenodo.21900517` | 1 | — | 2026-08-12 |
 | `rh-formal-case-closed-c` | Riemann Hypothesis: The Formal Case Is Closed | `10.5281/zenodo.21130254` | 3 | — | 2026-08-11 |
 | `tawhid-of-the-zeros` | Tawhid of the Zeros: The Riemann Hypothesis (RH) as Qadar at One-Half. A Theological  | `10.5281/zenodo.21038304` | 2 | — | 2026-08-11 |
