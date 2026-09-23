@@ -2270,36 +2270,43 @@
    "supersedes": null,
    "superseded_by": null,
    "git": {
-    "pdf": "master/Codex v4/Trisduction_The_Codex_v1_0_3.pdf",
-    "md": "master/Codex v4/TRISDUCTION_Master_Codex_v4_0_4.md",
+    "pdf": "master/Codex v4/Trisduction_The_Codex_v1_1_0.pdf",
+    "md": "master/Codex v4/TRISDUCTION_Master_Codex_v4_1_0.md",
     "editions": [
      "master/Codex v4/Codex.lean",
-     "master/Codex v4/Codex_Twin.f90"
+     "master/Codex v4/Codex_Twin.f90",
+     "master/Codex v4/Trisduction_The_Codex_v1_0_3.pdf"
     ]
    },
    "zenodo": {
     "conceptrecid": 22911009,
     "concept_doi": "10.5281/zenodo.22911009",
-    "latest_version_doi": "10.5281/zenodo.22911010",
-    "latest_record": 22911010,
-    "versions": 1,
+    "latest_version_doi": "10.5281/zenodo.22914388",
+    "latest_record": 22914388,
+    "versions": 2,
     "state": "published"
    },
    "ia": {
     "identifier": "trisduction-the-codex",
     "state": "live",
-    "url": "https://archive.org/details/trisduction-the-codex"
+    "url": "https://archive.org/details/trisduction-the-codex",
+    "file": "Trisduction_The_Codex_v1_1_0.pdf",
+    "note": "v1_0_3 file deleted-and-replaced 2026-09-23"
    },
    "philarchive": {
     "record": null,
     "url": null
    },
-   "note": "The fourth genre of the Master Codex, v4.0.4 in the register, public page v1.0.3: the culmination of the English-text geometric predecessor, the Unabridged Master Codex (the Geometric Mother Codex), which was not sealed in Lean and Fortran; this edition is. Archive bytes are the qpdf-uncompressed staging of the git PDF (md5 55ea6503…), Zenodo carries the git bytes (md5 fe322c7b…). A revision goes to the archive as delete-and-replace under the same filename and to Zenodo as a new version on the concept DOI.",
+   "note": "The fourth genre of the Master Codex, v4.1.0 in the register, public page v1.1.0: the culmination of the English-text geometric predecessor, the Unabridged Master Codex (the Geometric Mother Codex), which was not sealed in Lean and Fortran; this edition is. Archive bytes are the qpdf-uncompressed staging of the git PDF (md5 55ea6503…), Zenodo carries the git bytes (md5 fe322c7b…). A revision goes to the archive as delete-and-replace under the same filename and to Zenodo as a new version on the concept DOI.",
    "extra": {
     "audit_rounds": 7,
     "lean_guards": 601,
     "posits": 23,
-    "fortran": "135/0 248/0 1123/0"
+    "fortran": "135/0 248/0 1123/0",
+    "flagships_added_v4_1_0": [
+     "APEX-PSP-CAT-GAP-ELIMINATOR-01",
+     "APEX-PSP-RH-23-ONE-STROKE-01"
+    ]
    }
   },
   "trisductive-furqan": {
