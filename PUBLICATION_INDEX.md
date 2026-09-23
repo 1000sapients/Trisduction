@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**72 works · 90 Zenodo deposits.**
+**73 works · 91 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 66 / 72 | 91% |
-| Git PDF | 40 / 72 | 55% |
-| Internet Archive | 26 / 72 | 36% |
-| PhilArchive | 4 / 72 | 5% |
+| Zenodo | 67 / 73 | 91% |
+| Git PDF | 41 / 73 | 56% |
+| Internet Archive | 27 / 73 | 36% |
+| PhilArchive | 4 / 73 | 5% |
 
-Status: 65 live, 7 unknown.
+Status: 66 live, 7 unknown.
 
 ## Coverage gaps
 
@@ -134,6 +134,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
 | `trisduction-the-codex` | Trisduction: The Codex | Master Codex | live | [pdf](master/Codex%20v4/Trisduction_The_Codex_v1_0_3.pdf) | `10.5281/zenodo.22911009` | 1 | [ia](https://archive.org/details/trisduction-the-codex) | — | 2026-09-23 |
+| `rows-from-existence-alone` | A Formal Proof Across the Seven Millennium Rows and the Sixteen Extension Rows from Existence A | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Rows_From_Existence_Alone_v1_1_0.pdf) | `10.5281/zenodo.22913634` | 1 | [ia](https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone) | — | 2026-09-23 |
 | `rh-from-existence-alone` | A Formal Proof of Riemann Hypothesis from Existence Alone, the Sign Excepted by Theorem: The Co | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_From_Existence_Alone_v1_5_2.pdf) | `10.5281/zenodo.22912937` | 1 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | — | 2026-09-23 |
 | `rh-in-its-original-form` | The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus and the Cros | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_In_Its_Original_Form_v1_0_6.pdf) | `10.5281/zenodo.22857137` | 1 | [ia](https://archive.org/details/riemann-hypothesis-in-its-original-form) | — | 2026-09-20 |
 | `one-bit-across-the-wall` | One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three R | P versus NP and Foundations | live | [pdf](Publication%20Library/Mathematics/Foundations%20of%20Logic/Odd-Supply%20Arc/One_Bit_Across_the_Wall_MathJournal.pdf) | `10.5281/zenodo.22746128` | 1 | — | — | 2026-09-14 |

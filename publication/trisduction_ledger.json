@@ -2581,6 +2581,39 @@
    "superseded_by": null,
    "note": "Sealed rhapex5 r5 at v1.5.0; v1.5.2 claim-free relative to it. Seat proved with existence the only posit; value one bit, unreachable (Thm I). Lean sha d671051e99b8, twin sha 47670197aa8e, pdf md5 8062b041 (git, Zenodo), e5ee8782 (IA, uncompressed). Artifact commit 154a448.",
    "extra": {}
+  },
+  "rows-from-existence-alone": {
+   "title": "A Formal Proof Across the Seven Millennium Rows and the Sixteen Extension Rows from Existence Alone, the Value Excepted by Theorem on Every Row: The Constructed Witness on Every Row, the Poincare Row Included, One Seat under Twenty-Three Names, the Grounded Counter-Model, and the Cure Theorem Proved in Lean 4 and Re-executed in Fortran",
+   "domain": "Foundations of Mathematics",
+   "status": "live",
+   "first_published": "2026-09-23",
+   "last_updated": "2026-09-23",
+   "git": {
+    "md": "protocols/RH One Bit/Rows_From_Existence_Alone_v1_1_0.md",
+    "pdf": "protocols/RH One Bit/Rows_From_Existence_Alone_v1_1_0.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": "22913634",
+    "concept_doi": "10.5281/zenodo.22913634",
+    "latest_version_doi": "10.5281/zenodo.22913635",
+    "latest_record": 22913635,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "formal-proof-across-twenty-three-rows-existence-alone",
+    "url": "https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Sealed rows2 r6 at v1.1.0. Spine: rh-from-existence-alone (10.5281/zenodo.22912937). Seat assigned by the grounding reading on all 23 rows; value one bit each, 22 owed, Poincare recorded crossed; one row embedded, 22 embeddings owed. Lean sha 0ce3de5a2315, twin sha fa3b0417fd56, pdf md5 8dedf85f (git, Zenodo), a100c2b5 (IA). Artifact commit 83cf57a.",
+   "extra": {}
   }
  }
 }
