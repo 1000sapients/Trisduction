@@ -1,0 +1,56 @@
+{
+ "staged": "2026-09-23",
+ "round": "post external rounds 1 to 4",
+ "files": [
+  {
+   "name": "TRISDUCTION_Master_Codex_v4_0_4.md",
+   "bytes": 1301200,
+   "sha256": "fffd75d167d472159b66f4c9e7613e641751dfeacec04e08792d4a3f017f51e7"
+  },
+  {
+   "name": "Trisduction_The_Codex_v1_0_3.pdf",
+   "bytes": 2209939,
+   "sha256": "94f81e6d4900cab928f02be9e1a2128c23c2dc55ccdb9edf7f684e15a0d241c8"
+  },
+  {
+   "name": "Trisduction_The_Codex_v1_0_3.tex",
+   "bytes": 777447,
+   "sha256": "aea27f4e2fe3fb07e16756791aaeb0ca4df80fabdfa47bd49573b789de7d4735"
+  },
+  {
+   "name": "Codex.lean",
+   "bytes": 241086,
+   "sha256": "5d92b717383e1465b65a3f286c403444ca7bf215273f33754646139e4735fe07"
+  },
+  {
+   "name": "Codex_Twin.f90",
+   "bytes": 297018,
+   "sha256": "68be9ccf295d6e114c41b253a68f655e8753deb2032544c365ce0d0ee33b56d5"
+  },
+  {
+   "name": "Codex_v4_0_4_build_and_receipts.zip",
+   "bytes": 217285,
+   "sha256": "6719f4d66562f5bcb09281857db0b6b662c84de61f9b590c962a7996448db5d5"
+  },
+  {
+   "name": "MathJournal_build_kit.zip",
+   "bytes": 13738,
+   "sha256": "835bbe0564f245fe2d19035f8d087e6b56c9940b6b442e75b68a47a6559917a9"
+  },
+  {
+   "name": "GEOMETRIC_MOTHER_CODEX.md",
+   "bytes": 1932,
+   "sha256": "b97cc98d0ad2ad8ef4d660e295492faf9411aac995eb47f74c062a2c8ac4973c"
+  },
+  {
+   "name": "AUDIT_LOG_v4_0_4.md",
+   "bytes": 30833,
+   "sha256": "118b1385bccc667dca5bdf5d4bc7715ed7e2ca3b905b91fc76d57c5fb9410661"
+  }
+ ],
+ "mother": {
+  "path": "master/TRISDUCTION_Master_Codex_Unabridged_v3_39_0.md",
+  "bytes": 3734851,
+  "sha256": "4e1bfb64335c523c1b1b53378f4085099064d6a202d539a49e5f410bf0cd950c"
+ }
+}
