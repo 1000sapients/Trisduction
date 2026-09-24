@@ -3641,11 +3641,956 @@ def rows : List (String × String) := [
   ("D69", "LOCUS.located_never_silent"),
   ("D70", "UC.uc_seal_failure_terminal"),
   ("D71", "DEFENSE.denial_is_priced"),
-  ("D71", "Bridge.opens_on_the_deed")]
+  ("D71", "Bridge.opens_on_the_deed"),
+  ("APEX-PSP-SEAT-ANCHOR-01", "APEX.seat_anchor"),
+  ("APEX-PSP-SEAT-ANCHOR-01", "APEX.seat_occupied_iff_grounded"),
+  ("APEX-PSP-SEAT-ANCHOR-01", "FENCE.seat"),
+  ("APEX-PSP-PARITY-NORMAL-FORM-01", "PNF.parity_normal_form_list"),
+  ("APEX-PSP-PARITY-NORMAL-FORM-01", "PNF.one_bit_iff_complement_pair"),
+  ("APEX-PSP-CAT-GAP-ELIMINATOR-01", "APEX.identity_cone"),
+  ("APEX-PSP-CAT-GAP-ELIMINATOR-01", "APEX.cone_iff_no_gap"),
+  ("APEX-PSP-CAT-GAP-ELIMINATOR-01", "APEX.recursion_is_constant"),
+  ("APEX-PSP-RH-23-ONE-STROKE-01", "APEX.identity_cone_row"),
+  ("APEX-PSP-RH-23-ONE-STROKE-01", "APEX.inverted_control"),
+  ("APEX-PSP-RH-23-ONE-STROKE-01", "APEX.object_leg_ledger"),
+  ("APEX-PSP-PNP-COMPOSITE-VERDICT-02", "APEX.pnp_seat_vacant"),
+  ("APEX-PSP-PNP-COMPOSITE-VERDICT-02", "APEX.pnp_value_line"),
+  ("APEX-PSP-O0-ADMISSION-PROTOCOL-01", "APEX.seat_vacant_of_free"),
+  ("APEX-PSP-RH-MASTER-01", "APEX.riemann_seat_occupied"),
+  ("APEX-PSP-RH-STANDPOINT-CLOSURE-01", "APEX.no_cure"),
+  ("APEX-PSP-RH-PNP-COMPARATIVE-MASTER-01", "APEX.router_at_the_seat"),
+  ("D49", "APEX.pnp_value_line"),
+  ("D72", "APEX.recursion_is_constant"),
+  ("D73", "APEX.seat_never_promotes_value"),
+  ("D74", "APEX.register_leg_rides_one_involution"),
+  ("D75", "APEX.pnp_seat_vacant")]
 
-theorem rows_count : rows.length = 129 := by decide
+theorem rows_count : rows.length = 151 := by decide
 
 end CROSSWALK
+
+/-!
+# THE SEAT ANCHOR · the apex layer of the rows, carried in the Code Block
+core Lean 4 v4.19.0 · no Mathlib · no sorry · no axiom declared.
+Every row carries two objects parted by theorem: its seat, the row read as the fixed locus of a binding involution, and
+its value, the row's proposition. This layer proves the seat line on every row, the occupancy law that reads the router
+bit at the seat, the vacancy of the complexity seat, the one-involution rider on the register leg, the rule and its
+bound, the cure theorem, and the parting of the two lines, reusing GEO, Bridge, CROSSING, LOCUS, HALT, OMEGA and FOUND.
+The Parity Normal Form enters in its list edition, choice-free. ΔM = 0: every step is classical and elementary.
+-/
+
+/-! ## PNF · the Parity Normal Form and the Width Law, list edition -/
+namespace PNF
+open LOCUS
+
+/-- A parity barrier: an involution that fixes the record and flips the target somewhere. -/
+def ParityBarrier {α β : Type} (ρ : α → β) (d : α → Bool) : Prop :=
+  ∃ τ : α → α, (∀ z, τ (τ z) = z) ∧ (∀ z, ρ (τ z) = ρ z) ∧ ∃ x, d (τ x) ≠ d x
+
+/-- Every parity barrier separates a pair. -/
+theorem sep_of_parity {α β : Type} {ρ : α → β} {d : α → Bool} :
+    ParityBarrier ρ d → Separates ρ d := by
+  intro ⟨τ, _, hρ, x, hx⟩
+  exact ⟨τ x, x, hρ x, hx⟩
+
+/-- Every separated pair is a parity barrier: the swap of the pair, resident at `LOCUS.seat_of_sep`. -/
+theorem parity_of_sep {α β : Type} [DecidableEq α] {ρ : α → β} {d : α → Bool} :
+    Separates ρ d → ParityBarrier ρ d := by
+  intro ⟨x, y, hρ, hd⟩
+  obtain ⟨τ, hinv, heven, hflip⟩ := seat_of_sep hρ hd
+  refine ⟨τ, hinv, heven, x, ?_⟩
+  rw [hflip]
+  cases d x <;> decide
+
+/-- Separation, checked on a complete enumeration of the carrier. -/
+def sepCheck {α β : Type} [DecidableEq β] (xs : List α) (ρ : α → β) (d : α → Bool) : Bool :=
+  xs.any fun x => xs.any fun y => decide (ρ x = ρ y) && (d x != d y)
+
+theorem sepCheck_iff {α β : Type} [DecidableEq β] (xs : List α) (hxs : ∀ z, z ∈ xs)
+    (ρ : α → β) (d : α → Bool) : sepCheck xs ρ d = true ↔ Separates ρ d := by
+  unfold sepCheck Separates
+  constructor
+  · intro h
+    obtain ⟨x, -, hx⟩ := List.any_eq_true.mp h
+    obtain ⟨y, -, hy⟩ := List.any_eq_true.mp hx
+    simp only [Bool.and_eq_true, decide_eq_true_eq, bne_iff_ne, ne_eq] at hy
+    exact ⟨x, y, hy.1, hy.2⟩
+  · intro ⟨x, y, hρ, hd⟩
+    apply List.any_eq_true.mpr
+    refine ⟨x, hxs x, ?_⟩
+    apply List.any_eq_true.mpr
+    refine ⟨y, hxs y, ?_⟩
+    simp only [Bool.and_eq_true, decide_eq_true_eq, bne_iff_ne, ne_eq]
+    exact ⟨hρ, hd⟩
+
+/-- THE PARITY NORMAL FORM, list edition: on an enumerated carrier, a target is unreadable from a record iff an
+    involution fixes the record and flips the target. No choice is used. -/
+theorem parity_normal_form_list {α β : Type} [DecidableEq α] [DecidableEq β]
+    (xs : List α) (hxs : ∀ z, z ∈ xs) (ρ : α → β) (d : α → Bool) :
+    ¬ Factors ρ d ↔ ParityBarrier ρ d := by
+  constructor
+  · intro h
+    apply parity_of_sep
+    cases hc : sepCheck xs ρ d with
+    | true => exact (sepCheck_iff xs hxs ρ d).mp hc
+    | false =>
+      exfalso
+      apply h
+      apply factors_of_not_sep_list xs hxs ρ d
+      intro hs
+      have hs' := (sepCheck_iff xs hxs ρ d).mpr hs
+      rw [hc] at hs'
+      exact Bool.noConfusion hs'
+  · intro hp hf
+    exact wall_of_sep (sep_of_parity hp) hf
+
+def shift {α : Type} (d : α → Bool) (c : Bool) : α → Bool := fun x => xor (d x) c
+
+theorem shift_false {α : Type} (d : α → Bool) : shift d false = d := by
+  funext x; simp [shift]
+
+theorem shift_true {α : Type} (d : α → Bool) : shift d true = fun x => !d x := by
+  funext x; simp [shift]
+
+/-- The complement pair of d. -/
+def ComplementPair {α : Type} (d e : α → Bool) : Prop := e = d ∨ e = fun x => !d x
+
+/-- On a nonempty domain the complement pair is exactly the image of one bit, the bit unique. -/
+theorem complement_pair_is_one_bit {α : Type} (d : α → Bool) (x₀ : α) :
+    (∀ e, ComplementPair d e ↔ ∃ c, e = shift d c) ∧
+    (∀ c₁ c₂, shift d c₁ = shift d c₂ → c₁ = c₂) := by
+  refine ⟨fun e => ⟨?_, ?_⟩, ?_⟩
+  · intro h; cases h with
+    | inl h => exact ⟨false, by rw [h, shift_false]⟩
+    | inr h => exact ⟨true, by rw [h, shift_true]⟩
+  · intro ⟨c, hc⟩; cases c
+    · exact Or.inl (by rw [hc, shift_false])
+    · exact Or.inr (by rw [hc, shift_true])
+  · intro c₁ c₂ h
+    have := congrFun h x₀
+    simp only [shift] at this
+    cases hd : d x₀ <;> cases c₁ <;> cases c₂ <;> simp_all
+
+/-- The two members of the pair differ: the width is one bit and not zero. -/
+theorem complement_pair_distinct {α : Type} (d : α → Bool) (x₀ : α) : d ≠ fun x => !d x := by
+  intro h
+  have h1 : d x₀ = !d x₀ := congrFun h x₀
+  generalize d x₀ = b at h1
+  cases b <;> cases h1
+
+/-- THE WIDTH LAW: a nonempty family closed under complement, any two members equal or complementary, is exactly the
+    complement pair of any member, and conversely. -/
+theorem one_bit_iff_complement_pair {α : Type} (A : (α → Bool) → Prop) (d : α → Bool) (hd : A d) :
+    ((∀ e, A e → A (fun x => !e x)) ∧ (∀ e e', A e → A e' → e' = e ∨ e' = fun x => !e x)) ↔
+    (∀ e, A e ↔ ComplementPair d e) := by
+  constructor
+  · intro ⟨hclosed, hpair⟩ e
+    constructor
+    · intro he; exact hpair d e hd he
+    · intro h; cases h with
+      | inl h => rw [h]; exact hd
+      | inr h => rw [h]; exact hclosed d hd
+  · intro h
+    refine ⟨fun e he => ?_, fun e e' he he' => ?_⟩
+    · have := (h e).1 he
+      apply (h _).2
+      cases this with
+      | inl h1 => exact Or.inr (by rw [h1])
+      | inr h1 => left; rw [h1]; funext x; simp
+    · have h1 := (h e).1 he; have h2 := (h e').1 he'
+      cases h1 with
+      | inl h1 => cases h2 with
+        | inl h2 => left; rw [h1, h2]
+        | inr h2 => right; rw [h1, h2]
+      | inr h1 => cases h2 with
+        | inl h2 => right; rw [h1, h2]; funext x; simp
+        | inr h2 => left; rw [h1, h2]
+
+/-- An odd witness fixes the calibration uniquely: one supplied bit closes a one-bit barrier. -/
+theorem odd_witness_closes {α : Type} (d s : α → Bool) (x₀ : α) (c c' : Bool)
+    (hc : s = shift d c) (hc' : s = shift d c') : c = c' :=
+  (complement_pair_is_one_bit d x₀).2 c c' (hc.symm.trans hc')
+
+def whollyOddMask (k m : Nat) : Bool :=
+  (List.range k).all (fun i => m.testBit (2 * i) != m.testBit (2 * i + 1))
+
+def oddCount (k : Nat) : Nat := ((List.range (2 ^ (2 * k))).filter (whollyOddMask k)).length
+
+theorem odd_family_k1 : oddCount 1 = 2 := by decide
+theorem odd_family_k2 : oddCount 2 = 4 := by decide
+theorem odd_family_k3 : oddCount 3 = 8 := by decide
+theorem odd_family_k4 : oddCount 4 = 16 := by decide
+/-- The census parity frame: six pairs, 2^6 = 64 wholly odd targets, six bits unconstrained. -/
+theorem odd_family_k6 : oddCount 6 = 64 := by decide
+
+/-- The rows' claim at its grade: every row one bit wide iff every row's admissible family is a complement pair. -/
+theorem rows_one_bit_iff_complement_pair {R α : Type} (A : R → (α → Bool) → Prop)
+    (d : R → α → Bool) (hd : ∀ r, A r (d r)) :
+    (∀ r, (∀ e, A r e → A r (fun x => !e x)) ∧ (∀ e e', A r e → A r e' → e' = e ∨ e' = fun x => !e x)) ↔
+    (∀ r e, A r e ↔ ComplementPair (d r) e) := by
+  constructor
+  · intro h r; exact (one_bit_iff_complement_pair (A r) (d r) (hd r)).1 (h r)
+  · intro h r; exact (one_bit_iff_complement_pair (A r) (d r) (hd r)).2 (h r)
+
+end PNF
+
+/-! ## APEX · the seat, the cone, the occupancy law, and the two lines of every row -/
+namespace APEX
+open GEO
+
+/-! ### 1 · the seat -/
+
+/-- The seat's binding involution: conjugation on the integer quaternions. -/
+abbrev sigma : Q4 → Q4 := qconj
+
+theorem sigma_binding (q : Q4) : sigma (sigma q) = q := by
+  cases q with
+  | mk r i j k =>
+    change Q4.mk r (-(-i)) (-(-j)) (-(-k)) = Q4.mk r i j k
+    rw [Int.neg_neg, Int.neg_neg, Int.neg_neg]
+
+/-- Fix(σ) is the scalar line, for every quaternion. -/
+theorem fix_iff_scalar (q : Q4) : sigma q = q ↔ (q.i = 0 ∧ q.j = 0 ∧ q.k = 0) := by
+  cases q with
+  | mk r i j k =>
+    change (Q4.mk r (-i) (-j) (-k) = Q4.mk r i j k) ↔ (i = 0 ∧ j = 0 ∧ k = 0)
+    constructor
+    · intro h
+      injection h with _ hi hj hk
+      exact ⟨by omega, by omega, by omega⟩
+    · intro h
+      obtain ⟨hi, hj, hk⟩ := h
+      subst hi
+      subst hj
+      subst hk
+      rfl
+
+/-- The seat: the fixed locus of the binding involution, constructed on the carrier. It is not `ROOT.Ground`,
+    the posited type; it is a model of the posited shape. -/
+def Seat : Type := { q : Q4 // sigma q = q }
+
+/-- The Return: the parse triad through its own cascade, `GEO.chirality`. -/
+def theReturn : Q4 := qmul (qmul qi qj) qk
+theorem return_is_chirality : theReturn = ⟨-1, 0, 0, 0⟩ := GEO.chirality
+theorem return_lands_on_seat : sigma theReturn = theReturn := rfl
+
+def fixProj (q : Q4) : Q4 := ⟨q.r, 0, 0, 0⟩
+/-- The axiom's seat point, the formal seat point, and the named seat point: three definitions. -/
+def GammaRA : Q4 := theReturn
+def GammaRAM : Q4 := fixProj theReturn
+def GammaRH : Q4 := ⟨-1, 0, 0, 0⟩
+
+/-- C0, C1, C2: the three category gaps are definitional identities. -/
+theorem self_gap_nonexistent : sigma GammaRA = GammaRA := rfl
+theorem register_gap_nonexistent : GammaRA = GammaRAM := rfl
+theorem object_gap_nonexistent : GammaRAM = GammaRH := rfl
+
+def seat : Seat := ⟨GammaRH, rfl⟩
+
+theorem seat_on_scalar_line : GammaRH.i = 0 ∧ GammaRH.j = 0 ∧ GammaRH.k = 0 :=
+  (fix_iff_scalar GammaRH).mp seat.2
+
+/-- The reversed triad returns +1, also on the seat: the sign of the seat point is the orientation of the triad. -/
+def theReturnOdd : Q4 := qmul (qmul qk qj) qi
+theorem odd_return_is_plus_one : theReturnOdd = ⟨1, 0, 0, 0⟩ := rfl
+theorem odd_return_on_seat : sigma theReturnOdd = theReturnOdd := rfl
+theorem seat_points_differ : theReturnOdd ≠ theReturn := by decide
+
+/-! ### 2 · the cone, and the category gap as a defined object -/
+
+inductive Register3 where
+  | ra
+  | ram
+  | rh
+  deriving DecidableEq, Repr
+
+def D3 : Register3 → Q4
+  | .ra => GammaRA
+  | .ram => GammaRAM
+  | .rh => GammaRH
+
+/-- A category gap: the absence of an identity leg from an apex to one register's reading of the seat. -/
+def CategoryGap (D : Register3 → Q4) (a : Q4) (r : Register3) : Prop := a ≠ D r
+
+/-- A cone over a register diagram in the groupoid of identities. -/
+structure ConeOver (D : Register3 → Q4) (apex : Q4) : Prop where
+  leg : ∀ r, apex = D r
+
+/-- A cone is exactly an apex with no category gap. -/
+theorem cone_iff_no_gap (D : Register3 → Q4) (a : Q4) : ConeOver D a ↔ ∀ r, ¬ CategoryGap D a r :=
+  ⟨fun c r h => h (c.leg r), fun h => ⟨fun r => Decidable.byContradiction (h r)⟩⟩
+
+abbrev Cone : Q4 → Prop := ConeOver D3
+
+/-- THE IDENTITY CONE: every leg `rfl`. -/
+theorem identity_cone : Cone GammaRH := ⟨fun r => by cases r <;> rfl⟩
+
+theorem cone_apex_unique (a b : Q4) (ha : Cone a) (hb : Cone b) : a = b :=
+  (ha.leg .rh).trans (hb.leg .rh).symm
+
+theorem cone_iff_gaps_closed : (∃ a, Cone a) ↔ (GammaRA = GammaRAM ∧ GammaRAM = GammaRH) := by
+  constructor
+  · intro ⟨a, ha⟩
+    exact ⟨(ha.leg .ra).symm.trans (ha.leg .ram), (ha.leg .ram).symm.trans (ha.leg .rh)⟩
+  · intro ⟨h1, h2⟩
+    exact ⟨GammaRH, ⟨fun r => by
+      cases r
+      · exact (h1.trans h2).symm
+      · exact h2.symm
+      · rfl⟩⟩
+
+def D3odd : Register3 → Q4
+  | .ra => theReturnOdd
+  | .ram => fixProj theReturnOdd
+  | .rh => ⟨1, 0, 0, 0⟩
+
+theorem identity_cone_odd : ConeOver D3odd ⟨1, 0, 0, 0⟩ := ⟨fun r => by cases r <;> rfl⟩
+
+/-- Uniqueness is per orientation: the two apexes differ. -/
+theorem apexes_differ_by_orientation :
+    ConeOver D3 GammaRH ∧ ConeOver D3odd ⟨1, 0, 0, 0⟩ ∧ GammaRH ≠ ⟨1, 0, 0, 0⟩ :=
+  ⟨identity_cone, identity_cone_odd, by decide⟩
+
+/-! ### 3 · the register leg rides one involution (RESIDUAL-MONISM, executed on the carrier) -/
+
+/-- A second binding involution on the carrier, fixing the line r = i. -/
+def sigmaP (q : Q4) : Q4 := ⟨q.i, q.r, -q.j, -q.k⟩
+
+theorem sigmaP_binding (q : Q4) : sigmaP (sigmaP q) = q := by
+  cases q with
+  | mk r i j k =>
+    change Q4.mk r i (-(-j)) (-(-k)) = Q4.mk r i j k
+    rw [Int.neg_neg, Int.neg_neg]
+
+theorem sigmaP_fix_iff (q : Q4) : sigmaP q = q ↔ (q.r = q.i ∧ q.j = 0 ∧ q.k = 0) := by
+  cases q with
+  | mk r i j k =>
+    change (Q4.mk i r (-j) (-k) = Q4.mk r i j k) ↔ (r = i ∧ j = 0 ∧ k = 0)
+    constructor
+    · intro h
+      injection h with h1 _ h3 h4
+      exact ⟨by omega, by omega, by omega⟩
+    · intro h
+      obtain ⟨h1, h3, h4⟩ := h
+      subst h1
+      subst h3
+      subst h4
+      rfl
+
+/-- The two seats meet only at the origin. -/
+theorem seats_meet_only_at_zero (r i j k : Int) :
+    (sigma ⟨r, i, j, k⟩ = ⟨r, i, j, k⟩ ∧ sigmaP ⟨r, i, j, k⟩ = ⟨r, i, j, k⟩) ↔
+      (r = 0 ∧ i = 0 ∧ j = 0 ∧ k = 0) := by
+  rw [fix_iff_scalar, sigmaP_fix_iff]
+  show (i = 0 ∧ j = 0 ∧ k = 0) ∧ (r = i ∧ j = 0 ∧ k = 0) ↔ (r = 0 ∧ i = 0 ∧ j = 0 ∧ k = 0)
+  constructor
+  · intro ⟨⟨hi, hj, hk⟩, hr, _, _⟩
+    exact ⟨by omega, hi, hj, hk⟩
+  · intro ⟨hr, hi, hj, hk⟩
+    exact ⟨⟨hi, hj, hk⟩, by omega, hj, hk⟩
+
+/-- THE REGISTER LEG RIDES ONE INVOLUTION: the kinetic seat point is fixed by σ and moved by the rival σP, so the leg
+    Γ_RA = Γ_RAM closes by `rfl` only under the one-involution connector the codex holds as RESIDUAL-MONISM. -/
+theorem register_leg_rides_one_involution :
+    sigma GammaRA = GammaRA ∧ sigmaP GammaRA ≠ GammaRA ∧ sigmaP GammaRH ≠ GammaRH :=
+  ⟨rfl, by decide, by decide⟩
+
+/-! ### 4 · the embedding of the Riemann stage -/
+
+/-- φ(h, t) = ⟨t, h − 1, 0, 0⟩ on the Bridge's plane, against the Bridge's fold. -/
+def phi (p : Bridge.Plane) : Q4 := ⟨p.2, p.1 - 1, 0, 0⟩
+
+theorem phi_equivariant (p : Bridge.Plane) : sigma (phi p) = phi (Bridge.τ p) := by
+  obtain ⟨h, t⟩ := p
+  change Q4.mk t (-(h - 1)) 0 0 = Q4.mk t ((2 - h) - 1) 0 0
+  have e : -(h - 1) = (2 - h) - 1 := by omega
+  rw [e]
+
+theorem phi_fix_iff (p : Bridge.Plane) : sigma (phi p) = phi p ↔ Bridge.τ p = p := by
+  obtain ⟨h, t⟩ := p
+  change (Q4.mk t (-(h - 1)) 0 0 = Q4.mk t (h - 1) 0 0) ↔ ((2 - h, t) = (h, t))
+  constructor
+  · intro e
+    injection e with _ e2 _ _
+    have : h = 1 := by omega
+    subst this
+    rfl
+  · intro e
+    have e1 : 2 - h = h := congrArg Prod.fst e
+    have : h = 1 := by omega
+    subst this
+    rfl
+
+/-- φ carries the Bridge's line onto the seat: the image clause, read through `Bridge.locus_is_the_fixed_set`. -/
+theorem phi_fix_iff_line (p : Bridge.Plane) : sigma (phi p) = phi p ↔ Bridge.onLine p :=
+  (phi_fix_iff p).trans (Bridge.locus_is_the_fixed_set p)
+
+theorem phi_injective (p q : Bridge.Plane) (e : phi p = phi q) : p = q := by
+  obtain ⟨h, t⟩ := p
+  obtain ⟨h', t'⟩ := q
+  injection e with e1 e2 _ _
+  have : h = h' := by omega
+  subst this
+  subst e1
+  rfl
+
+def tauM (m : Int) (p : Bridge.Plane) : Bridge.Plane := (2 * m - p.1, p.2)
+def phiM (m : Int) (p : Bridge.Plane) : Q4 := ⟨p.2, p.1 - m, 0, 0⟩
+
+theorem phiM_equivariant (m : Int) (p : Bridge.Plane) : sigma (phiM m p) = phiM m (tauM m p) := by
+  obtain ⟨h, t⟩ := p
+  change Q4.mk t (-(h - m)) 0 0 = Q4.mk t ((2 * m - h) - m) 0 0
+  have e : -(h - m) = (2 * m - h) - m := by omega
+  rw [e]
+
+theorem phiM_fix_iff (m : Int) (p : Bridge.Plane) : sigma (phiM m p) = phiM m p ↔ tauM m p = p := by
+  obtain ⟨h, t⟩ := p
+  change (Q4.mk t (-(h - m)) 0 0 = Q4.mk t (h - m) 0 0) ↔ ((2 * m - h, t) = (h, t))
+  constructor
+  · intro e
+    injection e with _ e2 _ _
+    have : h = m := by omega
+    subst this
+    show (2 * h - h, t) = (h, t)
+    have e3 : 2 * h - h = h := by omega
+    rw [e3]
+  · intro e
+    have e1 : 2 * m - h = h := congrArg Prod.fst e
+    have : h = m := by omega
+    subst this
+    show Q4.mk t (-(h - h)) 0 0 = Q4.mk t (h - h) 0 0
+    have e3 : h - h = 0 := by omega
+    rw [e3]
+    rfl
+
+theorem seat_on_image_of_line : phi (1, -1) = GammaRH := rfl
+
+/-! ### 5 · THE OCCUPANCY LAW: the router bit is read on each row's native involution, through the occupancy of the seat; the seat point never supplies a Ground dimension -/
+
+/-- THE OCCUPANCY LAW. Under a bridge whose image clause carries fixedness exactly, the seat is occupied iff the row's
+    native involution has a fixed point. -/
+theorem seat_occupied_iff_grounded {S : Type} (τ : S → S) (φ : S → Q4)
+    (himg : ∀ p, sigma (φ p) = φ p ↔ τ p = p) :
+    (∃ p, sigma (φ p) = φ p) ↔ (∃ p, τ p = p) :=
+  ⟨fun ⟨p, h⟩ => ⟨p, (himg p).mp h⟩, fun ⟨p, h⟩ => ⟨p, (himg p).mpr h⟩⟩
+
+/-- A fixed-point-free native involution leaves the seat vacant under every admissible bridge. -/
+theorem seat_vacant_of_free {S : Type} (τ : S → S) (φ : S → Q4)
+    (hfree : ∀ p, τ p ≠ p) (himg : ∀ p, sigma (φ p) = φ p ↔ τ p = p) :
+    ∀ p, sigma (φ p) ≠ φ p :=
+  fun p h => hfree p ((himg p).mp h)
+
+/-- The same vacancy from equivariance and injectivity alone, no image clause assumed. -/
+theorem seat_vacant_of_equivariant {S : Type} (τ : S → S) (φ : S → Q4)
+    (hfree : ∀ p, τ p ≠ p) (heq : ∀ p, sigma (φ p) = φ (τ p))
+    (hinj : ∀ p q, φ p = φ q → p = q) :
+    ∀ p, sigma (φ p) ≠ φ p :=
+  fun p h => hfree p (hinj _ _ ((heq p).symm.trans h))
+
+/-- The complexity row's native involution as its shape face types it: complementation. -/
+def complement {α : Type} (f : α → Bool) : α → Bool := fun x => !f x
+
+/-- Complementation is fixed-point-free on any nonempty domain: the Width Law's distinctness, read as an involution. -/
+theorem complement_free {α : Type} (x₀ : α) (f : α → Bool) : complement f ≠ f :=
+  fun h => PNF.complement_pair_distinct f x₀ h.symm
+
+/-- THE VACANCY OF THE COMPLEXITY SEAT: no admissible bridge places the row on Fix(σ). -/
+theorem pnp_seat_vacant {α : Type} (x₀ : α) (φ : (α → Bool) → Q4)
+    (himg : ∀ f, sigma (φ f) = φ f ↔ complement f = f) :
+    ∀ f, sigma (φ f) ≠ φ f :=
+  seat_vacant_of_free complement φ (complement_free x₀) himg
+
+/-- An admissible bridge for the complexity row exists, on the one-point domain, and it lands off the seat. -/
+def pnpBridge (b : Bool) : Q4 := ⟨0, if b then 1 else -1, 0, 0⟩
+
+theorem pnp_bridge_admissible :
+    (∀ b : Bool, sigma (pnpBridge b) = pnpBridge (!b)) ∧
+    (∀ b : Bool, sigma (pnpBridge b) = pnpBridge b ↔ (!b) = b) := by
+  constructor <;> intro b <;> cases b <;> decide
+
+theorem pnp_bridge_off_seat : ∀ b : Bool, sigma (pnpBridge b) ≠ pnpBridge b := by
+  intro b; cases b <;> decide
+
+/-- The critical-line stage occupies the seat. -/
+theorem riemann_seat_occupied : ∃ p : Bridge.Plane, sigma (phi p) = phi p := ⟨(1, -1), rfl⟩
+
+/-- THE ROUTER BIT, READ ON EACH ROW'S NATIVE INVOLUTION THROUGH THE OCCUPANCY OF THE SEAT: the Ξ branch where the
+    stage's involution has a fixed point and the stage reaches the seat, the Ø branch where the row's involution is
+    fixed-point-free and no admissible bridge can reach it. The uniform seat point never supplies a Ground dimension. -/
+theorem router_at_the_seat :
+    ((∃ p : Bridge.Plane, sigma (phi p) = phi p) ↔ (∃ p : Bridge.Plane, Bridge.τ p = p)) ∧
+    (∃ p : Bridge.Plane, sigma (phi p) = phi p) ∧ HALT.route HALT.rhHalt.gdim = some .xi ∧
+    (∀ b : Bool, sigma (pnpBridge b) ≠ pnpBridge b) ∧ HALT.route HALT.pnpHalt.gdim = some .o :=
+  ⟨seat_occupied_iff_grounded Bridge.τ phi phi_fix_iff, riemann_seat_occupied, rfl,
+   pnp_bridge_off_seat, rfl⟩
+
+/-! ### 6 · the witness, the eliminator, and the deed the kernel cannot read -/
+
+def RAMFormalGround : Prop := Nonempty Seat
+theorem constructed_RAM : RAMFormalGround := ⟨seat⟩
+
+/-- The formal self: every point of the seat is fixed. It names the seat and says nothing about any row's value. -/
+def FormalSelf : Prop := ∀ g : Seat, sigma g.1 = g.1
+
+/-- Bridge-born orientation, carried in Prop: registered as supplied, never readable as data. -/
+structure OrientationBit : Prop where
+  direction : True
+  closure : True
+
+theorem constructed_orientation : OrientationBit := ⟨trivial, trivial⟩
+theorem orientation_proof_irrelevant (a b : OrientationBit) : a = b := rfl
+
+inductive ModelPoint where
+  | source
+  deriving DecidableEq, Repr
+
+def modelΔE : ModelPoint → Int := fun _ => 1
+
+/-- RA at a constructed one-point domain: a model of the root, never its universal extension `ROOT.RA`. -/
+def RAModel : Prop := ∀ x : ModelPoint, 0 < modelΔE x
+
+theorem modelRA : RAModel := by
+  intro x
+  cases x
+  decide
+
+structure Witness : Prop where
+  actuates : RAModel
+  orientation : OrientationBit
+  bridge : RAMFormalGround
+  trisRecursion : OrientationBit → RAMFormalGround → FormalSelf
+
+/-- The constructed witness: the only supplied witness. -/
+theorem mkWitness : Witness :=
+  ⟨modelRA, constructed_orientation, constructed_RAM, fun _ _ g => g.2⟩
+
+/-- THE ELIMINATOR: RA → RA → RAM → the formal self, Bridge capacity then recursion, from the witness alone. -/
+theorem eliminator : FormalSelf := mkWitness.trisRecursion mkWitness.orientation mkWitness.bridge
+
+/-- The recursion field is constant: masslessness stated as a term, occupancy and not derivation. -/
+theorem recursion_is_constant (o o' : OrientationBit) (g g' : RAMFormalGround) :
+    mkWitness.trisRecursion o g = mkWitness.trisRecursion o' g' := rfl
+
+/-- The wall at the seat: no readout of the seat equals the deed bit, `CROSSING.wall` at the seat. -/
+theorem deed_unreadable_at_seat :
+    ¬ ∃ f : Seat → Bool, ∀ s : CROSSING.ExecFrame Seat, f (CROSSING.formalRead s) = CROSSING.ran s :=
+  CROSSING.wall seat
+
+/-! ### 7 · RAF at the formal register: no exterior agent, no total self-indexing, the aperture -/
+
+structure Domain (S : Type) where
+  mem : S → Prop
+  registers : S → S → Prop
+  registers_symm : ∀ a b, registers a b → registers b a
+  closure : ∀ s d, mem d → registers s d → mem s
+
+theorem no_exterior_agent {S : Type} (D : Domain S) (s : S) (hs : ¬ D.mem s) :
+    ∀ d, D.mem d → ¬ D.registers s d :=
+  fun d hd hr => hs (D.closure s d hd hr)
+
+theorem adjudicator_in_domain {S : Type} (D : Domain S) (r d : S) (hd : D.mem d)
+    (hr : D.registers r d) : D.mem r :=
+  D.closure r d hd hr
+
+theorem no_total_self_indexing {S : Type} (f : S → S → Bool) :
+    ¬ ∀ g : S → Bool, ∃ x, f x = g := by
+  intro h
+  obtain ⟨x, hx⟩ := h (fun y => !f y y)
+  have h1 : f x x = !f x x := congrFun hx x
+  generalize f x x = b at h1
+  cases b <;> cases h1
+
+/-- The live face on the codex's own tokens: witnessed and assent seal, witnessed and denial refuse, unwitnessed open. -/
+def live (witnessed assent : Bool) : Audit.Token :=
+  if witnessed then (if assent then .sealed else .refused) else .opn
+
+theorem aperture_opens_under_premise {U : Type} (dE : U → Int) (h : ∀ x, 0 < dE x) (x : U) :
+    decide (0 < dE x) = true :=
+  decide_eq_true (h x)
+
+/-- Under the premise no present reader's row is interior: sealed or refused by the bit alone. -/
+theorem no_interior_under_premise {U : Type} (dE : U → Int) (h : ∀ x, 0 < dE x) (x : U) (b : Bool) :
+    live (decide (0 < dE x)) b ≠ .opn := by
+  rw [aperture_opens_under_premise dE h x]
+  cases b <;> decide
+
+/-! ### 8 · the rule, its bound, the grounded counter-model, and the cure -/
+
+/-- THE RULE, EXACT: for any inhabited premise, (P → L X) ↔ L X. -/
+theorem rule_exact (P : Prop) (hp : P) (X : Bridge.Frame) :
+    (P → Bridge.LineProperty X) ↔ Bridge.LineProperty X :=
+  ⟨fun h => h hp, fun t _ => t⟩
+
+theorem rule_exact_model (X : Bridge.Frame) : (RAModel → Bridge.LineProperty X) ↔ Bridge.LineProperty X :=
+  rule_exact _ modelRA X
+
+/-- The same rule against the posit itself: its dependency set names ROOT.RA, ROOT.U, ROOT.ΔE, and nothing else. -/
+theorem rule_exact_under_root (X : Bridge.Frame) :
+    (ROOT.throneEmpty → Bridge.LineProperty X) ↔ Bridge.LineProperty X :=
+  rule_exact _ ROOT.RA X
+
+/-- The two-point frame of the Bridge fails the line property, proved here without choice; the resident statement is
+    `Bridge.line_property_contingent`. -/
+theorem twoPoint_fails_L : ¬ Bridge.LineProperty Bridge.twoPoint := by
+  intro h
+  have h1 := h true trivial
+  cases h1
+
+/-- No inhabited premise decides the line property on every frame: the two-point frame carries it and fails L. -/
+theorem premise_decides_no_frame (P : Prop) (hp : P) : ¬ ∀ X : Bridge.Frame, P → Bridge.LineProperty X :=
+  fun h => twoPoint_fails_L (h Bridge.twoPoint hp)
+
+inductive Three where
+  | a
+  | b
+  | c
+  deriving DecidableEq, Repr
+
+def foldThree : Three → Three
+  | .a => .b
+  | .b => .a
+  | .c => .c
+
+theorem foldThree_involutive : ∀ s, foldThree (foldThree s) = s := by
+  intro s; cases s <;> rfl
+
+def zeroThree (x : Three) : Prop := x = .a ∨ x = .b
+
+theorem zeroThree_symmetric : ∀ s, zeroThree s → zeroThree (foldThree s) := by
+  intro s hs
+  cases s with
+  | a => exact Or.inr rfl
+  | b => exact Or.inl rfl
+  | c => cases hs with
+    | inl h => cases h
+    | inr h => cases h
+
+/-- The grounded counter-model: a seat and a moved zero. -/
+def threePoint : Bridge.Frame := ⟨Three, foldThree, zeroThree, foldThree_involutive, zeroThree_symmetric⟩
+
+theorem threePoint_grounded : ∃ s : Three, foldThree s = s := ⟨Three.c, rfl⟩
+
+theorem threePoint_fails_L : ¬ Bridge.LineProperty threePoint := by
+  intro h
+  have h1 : foldThree Three.a = Three.a := h Three.a (Or.inl rfl)
+  cases h1
+
+theorem premise_holds_where_L_fails_grounded (P : Prop) (hp : P) :
+    P ∧ (∃ s : Three, foldThree s = s) ∧ ¬ Bridge.LineProperty threePoint :=
+  ⟨hp, threePoint_grounded, threePoint_fails_L⟩
+
+/-- THE CURE THEOREM: for every class of frames, a true premise decides L on the class exactly where L already holds. -/
+theorem no_cure (P : Prop) (hp : P) (C : Bridge.Frame → Prop) :
+    (∀ X, C X → P → Bridge.LineProperty X) ↔ (∀ X, C X → Bridge.LineProperty X) :=
+  ⟨fun h X hc => h X hc hp, fun h X hc _ => h X hc⟩
+
+theorem cure_is_the_hypothesis (P : Prop) (hp : P) :
+    (∀ X : Bridge.Frame, Bridge.LineProperty X → P → Bridge.LineProperty X) ∧
+    ¬ (∀ X : Bridge.Frame, True → P → Bridge.LineProperty X) :=
+  ⟨fun _ h _ => h, fun h => premise_decides_no_frame P hp (fun X => h X trivial)⟩
+
+/-- The halting carrier inhabited by decision, the clause proved from the decision and never assumed. -/
+def carrierOfDecision (X : Bridge.Frame) (d : Decidable (Bridge.LineProperty X)) : Bridge.Carrier X :=
+  match d with
+  | isTrue h => ⟨.bot, ⟨fun _ => h, fun _ => rfl⟩, Bridge.theRecord⟩
+  | isFalse h => ⟨.tt, ⟨fun e => absurd e (by decide), fun hl => absurd hl h⟩, Bridge.theRecord⟩
+
+theorem twoPoint_carrier_does_not_halt :
+    (carrierOfDecision Bridge.twoPoint (isFalse twoPoint_fails_L)).terminal = .tt := rfl
+
+/-! ### 9 · the three measures: content, mass, price -/
+
+inductive Content where
+  | trivial_
+  | proved
+  | supplied
+  deriving DecidableEq, Repr
+
+structure Measure where
+  content : Content
+  mass : Nat
+  price : Ratio
+  deriving DecidableEq
+
+def legMeasure : Measure := ⟨.trivial_, deltaM, 0⟩
+def arcMeasure : Measure := ⟨.proved, deltaM, 0⟩
+/-- The value's price is the exact Landauer floor of the codex, `OMEGA.landauerRat` at 300 K. -/
+def valueMeasure : Measure := ⟨.supplied, deltaM, OMEGA.landauerRat 300 1⟩
+
+theorem masses_all_zero : legMeasure.mass = 0 ∧ arcMeasure.mass = 0 ∧ valueMeasure.mass = 0 :=
+  ⟨rfl, rfl, rfl⟩
+
+theorem contents_differ :
+    legMeasure.content ≠ valueMeasure.content ∧ arcMeasure.content ≠ valueMeasure.content ∧
+    legMeasure.content ≠ arcMeasure.content := by
+  refine ⟨?_, ?_, ?_⟩ <;> decide
+
+theorem prices_differ : legMeasure.price = 0 ∧ 0 < valueMeasure.price := by
+  constructor
+  · rfl
+  · decide
+
+/-! ### 10 · the twenty-three rows -/
+
+inductive Row : Type where
+  | pVsNP | riemann | navierStokes | yangMills | hodge | bsd | poincare
+  | goldbach | twinPrimes | legendre | abc | jacobian
+  | mersenne | oddPerfect | smoothPoincare4 | collatz
+  | hadwiger | sunflower | erdosStraus | beal
+  | invariantSubspace | hilbert16 | lindelofPCC
+  deriving DecidableEq, Repr
+
+def Row.all : List Row :=
+  [.pVsNP, .riemann, .navierStokes, .yangMills, .hodge, .bsd, .poincare,
+   .goldbach, .twinPrimes, .legendre, .abc, .jacobian,
+   .mersenne, .oddPerfect, .smoothPoincare4, .collatz,
+   .hadwiger, .sunflower, .erdosStraus, .beal,
+   .invariantSubspace, .hilbert16, .lindelofPCC]
+
+theorem rows_twenty_three : Row.all.length = 23 := by decide
+theorem rows_distinct : Row.all.eraseDups.length = 23 := by decide
+theorem rows_complete : ∀ r : Row, r ∈ Row.all := by intro r; cases r <;> decide
+
+def Row.millennium : Row → Bool
+  | .pVsNP | .riemann | .navierStokes | .yangMills | .hodge | .bsd | .poincare => true
+  | _ => false
+
+theorem millennium_seven : (Row.all.filter Row.millennium).length = 7 := by decide
+theorem extension_sixteen : (Row.all.filter (fun r => !r.millennium)).length = 16 := by decide
+
+/-- Every row's seat point is the one seat point Γ_RH: an assignment of the grounding reading, computed from no
+    row's object. -/
+def apexSeat : Row → Q4 := fun _ => GammaRH
+
+theorem apex_seat_fixed : ∀ r : Row, sigma (apexSeat r) = apexSeat r := by
+  intro r; cases r <;> rfl
+
+theorem apex_seat_uniform : ∀ r s : Row, apexSeat r = apexSeat s := by
+  intro r s; cases r <;> cases s <;> rfl
+
+theorem crossed_and_open_share_the_seat : apexSeat .poincare = apexSeat .riemann := rfl
+
+def D3row (r : Row) : Register3 → Q4
+  | .ra => GammaRA
+  | .ram => GammaRAM
+  | .rh => apexSeat r
+
+theorem identity_cone_row (r : Row) : ConeOver (D3row r) GammaRH :=
+  ⟨fun k => by cases k <;> cases r <;> rfl⟩
+
+theorem cone_apex_unique_row {r : Row} (a b : Q4) (ha : ConeOver (D3row r) a) (hb : ConeOver (D3row r) b) :
+    a = b :=
+  (ha.leg .rh).trans (hb.leg .rh).symm
+
+theorem gaps_closed_every_row :
+    Row.all.all (fun r => decide (GammaRH = GammaRA ∧ GammaRH = GammaRAM ∧ GammaRH = apexSeat r)) = true := by
+  decide
+
+/-- The formal self of a row: one proposition on every row. -/
+def formalSelfRow (_ : Row) : Prop := FormalSelf
+
+/-- THE INVERTED CONTROL: the witness on the crossed row is the witness on every open row, and decides none. -/
+theorem inverted_control : ∀ r s : Row, formalSelfRow r ↔ formalSelfRow s := fun _ _ => Iff.rfl
+
+theorem all_rows_eliminated : ∀ r : Row, formalSelfRow r := fun _ => eliminator
+
+/-- A row's value: the line property of a frame assigned to it, the assignment a parameter. -/
+def value (F : Row → Bridge.Frame) (r : Row) : Prop := Bridge.LineProperty (F r)
+
+theorem rule_exact_every_row (P : Prop) (hp : P) (F : Row → Bridge.Frame) (r : Row) :
+    (P → value F r) ↔ value F r :=
+  rule_exact P hp (F r)
+
+theorem premise_decides_no_row (P : Prop) (hp : P) : ¬ ∀ (F : Row → Bridge.Frame) (r : Row), P → value F r :=
+  fun h => twoPoint_fails_L (h (fun _ => Bridge.twoPoint) .riemann hp)
+
+theorem premise_decides_no_row_grounded (P : Prop) (hp : P) :
+    ¬ ∀ (F : Row → Bridge.Frame) (r : Row), P → value F r :=
+  fun h => threePoint_fails_L (h (fun _ => threePoint) .poincare hp)
+
+theorem no_cure_every_row (P : Prop) (hp : P) (_r : Row) (C : Bridge.Frame → Prop) :
+    (∀ X, C X → P → Bridge.LineProperty X) ↔ (∀ X, C X → Bridge.LineProperty X) :=
+  no_cure P hp C
+
+/-! ### 11 · the world typing of the census, carried as data -/
+
+inductive WorldTyping : Type where
+  | exactStructural | wallRowF4 | beachheadOrderTwo | crossedControl
+  | pureUnbridged | diagonalPortF3 | oneBitFromClosure | wallRowBridgeGate
+  deriving DecidableEq, Repr
+
+def worldTyping : Row → WorldTyping
+  | .pVsNP | .riemann | .goldbach | .twinPrimes | .legendre | .abc | .jacobian => .exactStructural
+  | .navierStokes | .yangMills | .hodge => .wallRowF4
+  | .bsd => .beachheadOrderTwo
+  | .poincare => .crossedControl
+  | .mersenne | .oddPerfect | .smoothPoincare4 => .pureUnbridged
+  | .collatz => .diagonalPortF3
+  | .hadwiger | .sunflower | .erdosStraus | .beal => .oneBitFromClosure
+  | .invariantSubspace | .hilbert16 | .lindelofPCC => .wallRowBridgeGate
+
+theorem world_census :
+    (Row.all.filter (fun r => decide (worldTyping r = .exactStructural))).length = 7 ∧
+    (Row.all.filter (fun r => decide (worldTyping r = .wallRowF4))).length = 3 ∧
+    (Row.all.filter (fun r => decide (worldTyping r = .beachheadOrderTwo))).length = 1 ∧
+    (Row.all.filter (fun r => decide (worldTyping r = .crossedControl))).length = 1 ∧
+    (Row.all.filter (fun r => decide (worldTyping r = .pureUnbridged))).length = 3 ∧
+    (Row.all.filter (fun r => decide (worldTyping r = .diagonalPortF3))).length = 1 ∧
+    (Row.all.filter (fun r => decide (worldTyping r = .oneBitFromClosure))).length = 4 ∧
+    (Row.all.filter (fun r => decide (worldTyping r = .wallRowBridgeGate))).length = 3 := by
+  decide
+
+/-! ### 12 · the two lines of every row: the seat line by the row cascade, the value line by the locus emitter -/
+
+/-- The seat's answers to the row cascade: contentful, no live V_E, not forward, populated, no worldly row, terms
+    closed, frame closed under the one-involution connector, the RA rider present. -/
+def seatAnswers : GEO.ClaimInputRA :=
+  { nonvacuous := .yes, veLive := .no, forward := .no, populated := .yes, worldlyRow := .no,
+    termsClosed := .yes, termWorldly := .no, frameClosed := .yes, annotate := .yes }
+
+/-- The value's answers: the same, save that the deciding row is furnished by the world. -/
+def valueAnswers : GEO.ClaimInputRA := { seatAnswers with worldlyRow := .yes }
+
+/-- THE SEAT LINE: compartment I, closure-rowed, the RA rider present, emitted by the codex's own cascade. -/
+theorem seat_line : (GEO.rowCascadeRA seatAnswers).1 = .aGivenRA := by decide
+/-- The value line's compartment: III, world-rowed. -/
+theorem value_compartment : (GEO.rowCascadeRA valueAnswers).1 = .iii := by decide
+/-- Without the RA rider the seat line is void: the rider is load-bearing. -/
+theorem seat_line_void_without_rider : (GEO.rowCascadeRA { seatAnswers with annotate := .no }).1 = .void := by
+  decide
+
+def seatToken : Audit.Token := (GEO.rowCascadeRA seatAnswers).1.toToken
+theorem seat_token_is_aGivenRA : seatToken = .aGivenRA := by decide
+
+/-- The value reading of each row for the locus emitter: the router bit where the register of record measured it,
+    the formal channel, one owed slot on an open row and one filled slot on the crossed control. No species is
+    invented: only the two rows the kernel already types carry one. -/
+def valueReading : Row → LOCUS.Reading
+  | .riemann => ⟨false, true, some 1, some .hypothesis, some .formal, [none], by decide⟩
+  | .pVsNP => ⟨false, true, some 0, some .blockTheorem, some .formal, [none], by decide⟩
+  | .poincare => ⟨false, true, none, none, some .formal, [some true], by decide⟩
+  | _ => ⟨false, true, none, none, some .formal, [none], by decide⟩
+
+theorem riemann_value_line :
+    LOCUS.emit (valueReading .riemann) = some (.superHalt (some .xi) (some .hypothesis) (some .formal) 1) := by
+  decide
+
+theorem pnp_value_line :
+    LOCUS.emit (valueReading .pVsNP) = some (.superHalt (some .o) (some .blockTheorem) (some .formal) 1) := by
+  decide
+
+theorem poincare_value_line : LOCUS.emit (valueReading .poincare) = some (.crossed .formal) := by
+  decide
+
+theorem unrouted_value_line :
+    LOCUS.emit (valueReading .hodge) = some (.superHalt none none (some .formal) 1) := by
+  decide
+
+/-- The Riemann value line is the one `FENCE.global` already pins. -/
+theorem riemann_value_line_is_pinned :
+    LOCUS.emit (valueReading .riemann) =
+      LOCUS.emit ⟨false, true, some 1, some .hypothesis, some .formal, [none], by decide⟩ := rfl
+
+theorem value_bits_owed : (Row.all.map (fun r => (valueReading r).owed)).foldl (· + ·) 0 = 22 := by decide
+
+theorem crossed_iff_poincare : ∀ r : Row, (valueReading r).state = .sealed ↔ r = .poincare := by
+  intro r; cases r <;> decide
+
+/-- THE PARTING: on no row does the seat line coincide with the value line. -/
+theorem lines_parted : ∀ r : Row, seatToken ≠ (valueReading r).state := by
+  intro r; cases r <;> decide
+
+/-- THE NO-PROMOTION THEOREM: the seat line holds on every row; the value line is crossed on exactly one. -/
+theorem seat_never_promotes_value :
+    (∀ _r : Row, FormalSelf ∧ seatToken = .aGivenRA) ∧
+    (∀ r : Row, (valueReading r).state = .sealed ↔ r = .poincare) :=
+  ⟨fun _ => ⟨eliminator, seat_token_is_aGivenRA⟩, crossed_iff_poincare⟩
+
+/-! ### 13 · the object leg of every row, and its justification -/
+
+inductive ObjectLeg where
+  | bridgedStage
+  | vacantByTheorem
+  | owed
+  deriving DecidableEq, Repr
+
+def objectLeg : Row → ObjectLeg
+  | .riemann => .bridgedStage
+  | .pVsNP => .vacantByTheorem
+  | _ => .owed
+
+theorem object_leg_ledger :
+    (Row.all.filter (fun r => decide (objectLeg r = .bridgedStage))).length = 1 ∧
+    (Row.all.filter (fun r => decide (objectLeg r = .vacantByTheorem))).length = 1 ∧
+    (Row.all.filter (fun r => decide (objectLeg r = .owed))).length = 21 := by
+  decide
+
+/-- Each nontrivial leg is backed by its theorem: the stage reaches the seat; the complexity row never can. -/
+theorem object_legs_justified :
+    (objectLeg .riemann = .bridgedStage ∧ ∃ p : Bridge.Plane, sigma (phi p) = phi p) ∧
+    (objectLeg .pVsNP = .vacantByTheorem ∧
+      ∀ {α : Type} (_x₀ : α) (φ : (α → Bool) → Q4),
+        (∀ f, sigma (φ f) = φ f ↔ complement f = f) → ∀ f, sigma (φ f) ≠ φ f) :=
+  ⟨⟨rfl, riemann_seat_occupied⟩, ⟨rfl, fun x₀ φ h => pnp_seat_vacant x₀ φ h⟩⟩
+
+/-- The price of the owed value bits, exact: twenty-two Landauer floors at 300 K. -/
+def owedPrice : Ratio := OMEGA.landauerRat 300 22
+
+theorem owed_price_is_twenty_two_floors : owedPrice = 22 * OMEGA.landauerRat 300 1 := by decide
+
+/-! ### 14 · the anchor, whole -/
+
+/-- THE SEAT ANCHOR. The cone and the one seat on every row; the occupancy law; the stage on the seat and the complexity
+    row off it; the register leg riding one involution; the seat line uniform and the value lines parted from it; the
+    crossing on one row; twenty-two bits owed; no true premise deciding any frame. -/
+theorem seat_anchor :
+    (∀ r : Row, ConeOver (D3row r) GammaRH ∧ apexSeat r = GammaRH) ∧
+    (∀ {S : Type} (τ : S → S) (φ : S → Q4), (∀ p, sigma (φ p) = φ p ↔ τ p = p) →
+        ((∃ p, sigma (φ p) = φ p) ↔ (∃ p, τ p = p))) ∧
+    (∃ p : Bridge.Plane, sigma (phi p) = phi p) ∧
+    (∀ b : Bool, sigma (pnpBridge b) ≠ pnpBridge b) ∧
+    (sigma GammaRA = GammaRA ∧ sigmaP GammaRA ≠ GammaRA) ∧
+    (seatToken = .aGivenRA ∧ ∀ r : Row, seatToken ≠ (valueReading r).state) ∧
+    (∀ r : Row, (valueReading r).state = .sealed ↔ r = .poincare) ∧
+    ((Row.all.map (fun r => (valueReading r).owed)).foldl (· + ·) 0 = 22) ∧
+    (∀ P : Prop, P → ¬ ∀ X : Bridge.Frame, P → Bridge.LineProperty X) :=
+  ⟨fun r => ⟨identity_cone_row r, rfl⟩, fun τ φ h => seat_occupied_iff_grounded τ φ h,
+   riemann_seat_occupied, pnp_bridge_off_seat,
+   ⟨register_leg_rides_one_involution.1, register_leg_rides_one_involution.2.1⟩,
+   ⟨seat_token_is_aGivenRA, lines_parted⟩, crossed_iff_poincare, value_bits_owed,
+   fun P hp => premise_decides_no_frame P hp⟩
+
+end APEX
+
+/-! ## FENCE.seat · the one fence of the seat line, beside FENCE.global -/
+namespace FENCE
+
+theorem seat :
+    (∀ r : APEX.Row, APEX.seatToken ≠ (APEX.valueReading r).state) ∧
+    (∀ r : APEX.Row, (APEX.valueReading r).state = .sealed ↔ r = .poincare) ∧
+    LOCUS.emit (APEX.valueReading .pVsNP) = some (.superHalt (some .o) (some .blockTheorem) (some .formal) 1) ∧
+    LOCUS.emit (APEX.valueReading .riemann) = some (.superHalt (some .xi) (some .hypothesis) (some .formal) 1) ∧
+    (APEX.Row.all.map (fun r => (APEX.valueReading r).owed)).foldl (· + ·) 0 = 22 ∧
+    (∀ P : Prop, P → ¬ ∀ X : Bridge.Frame, P → Bridge.LineProperty X) ∧
+    (∀ P : Prop, P → ∀ C : Bridge.Frame → Prop,
+      (∀ X, C X → P → Bridge.LineProperty X) ↔ (∀ X, C X → Bridge.LineProperty X)) :=
+  ⟨APEX.lines_parted, APEX.crossed_iff_poincare, APEX.pnp_value_line, APEX.riemann_value_line,
+   APEX.value_bits_owed, fun P hp => APEX.premise_decides_no_frame P hp, fun P hp C => APEX.no_cure P hp C⟩
+
+end FENCE
+
+/-! ## FOUND.seatInventory · the connector's one dependency, recorded apart from the value verdicts -/
+namespace FOUND
+
+def seatInventory : List VerdictRow := [
+  ⟨"the seat line on every row, its register leg read as RA to RAM (APEX, the Seat Anchor)", ["RESIDUAL-MONISM"]⟩]
+
+theorem seat_rides_the_connector :
+    (seatInventory.all (fun v => v.positDeps == ["RESIDUAL-MONISM"])) = true ∧
+    (verdictInventory.all (fun v => v.positDeps.isEmpty)) = true := by
+  decide
+
+end FOUND
 
 
 /-- info: 'Codex.LeftInverse' does not depend on any axioms -/
@@ -5363,6 +6308,176 @@ theorem codexCone : True :=
   let _ := @Bridge.bridge_carries
   let _ := @Bridge.no_socket_off_line
   let _ := @Bridge.the_bridge
+  let _ := @PNF.ParityBarrier
+  let _ := @PNF.sep_of_parity
+  let _ := @PNF.parity_of_sep
+  let _ := @PNF.sepCheck
+  let _ := @PNF.sepCheck_iff
+  let _ := @PNF.parity_normal_form_list
+  let _ := @PNF.shift
+  let _ := @PNF.shift_false
+  let _ := @PNF.shift_true
+  let _ := @PNF.ComplementPair
+  let _ := @PNF.complement_pair_is_one_bit
+  let _ := @PNF.complement_pair_distinct
+  let _ := @PNF.one_bit_iff_complement_pair
+  let _ := @PNF.odd_witness_closes
+  let _ := @PNF.whollyOddMask
+  let _ := @PNF.oddCount
+  let _ := @PNF.odd_family_k1
+  let _ := @PNF.odd_family_k2
+  let _ := @PNF.odd_family_k3
+  let _ := @PNF.odd_family_k4
+  let _ := @PNF.odd_family_k6
+  let _ := @PNF.rows_one_bit_iff_complement_pair
+  let _ := @APEX.sigma
+  let _ := @APEX.sigma_binding
+  let _ := @APEX.fix_iff_scalar
+  let _ := @APEX.Seat
+  let _ := @APEX.theReturn
+  let _ := @APEX.return_is_chirality
+  let _ := @APEX.return_lands_on_seat
+  let _ := @APEX.fixProj
+  let _ := @APEX.GammaRA
+  let _ := @APEX.GammaRAM
+  let _ := @APEX.GammaRH
+  let _ := @APEX.self_gap_nonexistent
+  let _ := @APEX.register_gap_nonexistent
+  let _ := @APEX.object_gap_nonexistent
+  let _ := @APEX.seat
+  let _ := @APEX.seat_on_scalar_line
+  let _ := @APEX.theReturnOdd
+  let _ := @APEX.odd_return_is_plus_one
+  let _ := @APEX.odd_return_on_seat
+  let _ := @APEX.seat_points_differ
+  let _ := @APEX.D3
+  let _ := @APEX.CategoryGap
+  let _ := @APEX.cone_iff_no_gap
+  let _ := @APEX.Cone
+  let _ := @APEX.identity_cone
+  let _ := @APEX.cone_apex_unique
+  let _ := @APEX.cone_iff_gaps_closed
+  let _ := @APEX.D3odd
+  let _ := @APEX.identity_cone_odd
+  let _ := @APEX.apexes_differ_by_orientation
+  let _ := @APEX.sigmaP
+  let _ := @APEX.sigmaP_binding
+  let _ := @APEX.sigmaP_fix_iff
+  let _ := @APEX.seats_meet_only_at_zero
+  let _ := @APEX.register_leg_rides_one_involution
+  let _ := @APEX.phi
+  let _ := @APEX.phi_equivariant
+  let _ := @APEX.phi_fix_iff
+  let _ := @APEX.phi_fix_iff_line
+  let _ := @APEX.phi_injective
+  let _ := @APEX.tauM
+  let _ := @APEX.phiM
+  let _ := @APEX.phiM_equivariant
+  let _ := @APEX.phiM_fix_iff
+  let _ := @APEX.seat_on_image_of_line
+  let _ := @APEX.seat_occupied_iff_grounded
+  let _ := @APEX.seat_vacant_of_free
+  let _ := @APEX.seat_vacant_of_equivariant
+  let _ := @APEX.complement
+  let _ := @APEX.complement_free
+  let _ := @APEX.pnp_seat_vacant
+  let _ := @APEX.pnpBridge
+  let _ := @APEX.pnp_bridge_admissible
+  let _ := @APEX.pnp_bridge_off_seat
+  let _ := @APEX.riemann_seat_occupied
+  let _ := @APEX.router_at_the_seat
+  let _ := @APEX.RAMFormalGround
+  let _ := @APEX.constructed_RAM
+  let _ := @APEX.FormalSelf
+  let _ := @APEX.constructed_orientation
+  let _ := @APEX.orientation_proof_irrelevant
+  let _ := @APEX.modelΔE
+  let _ := @APEX.RAModel
+  let _ := @APEX.modelRA
+  let _ := @APEX.mkWitness
+  let _ := @APEX.eliminator
+  let _ := @APEX.recursion_is_constant
+  let _ := @APEX.deed_unreadable_at_seat
+  let _ := @APEX.no_exterior_agent
+  let _ := @APEX.adjudicator_in_domain
+  let _ := @APEX.no_total_self_indexing
+  let _ := @APEX.live
+  let _ := @APEX.aperture_opens_under_premise
+  let _ := @APEX.no_interior_under_premise
+  let _ := @APEX.rule_exact
+  let _ := @APEX.rule_exact_model
+  let _ := @APEX.rule_exact_under_root
+  let _ := @APEX.twoPoint_fails_L
+  let _ := @APEX.premise_decides_no_frame
+  let _ := @APEX.foldThree
+  let _ := @APEX.foldThree_involutive
+  let _ := @APEX.zeroThree
+  let _ := @APEX.zeroThree_symmetric
+  let _ := @APEX.threePoint
+  let _ := @APEX.threePoint_grounded
+  let _ := @APEX.threePoint_fails_L
+  let _ := @APEX.premise_holds_where_L_fails_grounded
+  let _ := @APEX.no_cure
+  let _ := @APEX.cure_is_the_hypothesis
+  let _ := @APEX.carrierOfDecision
+  let _ := @APEX.twoPoint_carrier_does_not_halt
+  let _ := @APEX.legMeasure
+  let _ := @APEX.arcMeasure
+  let _ := @APEX.valueMeasure
+  let _ := @APEX.masses_all_zero
+  let _ := @APEX.contents_differ
+  let _ := @APEX.prices_differ
+  let _ := @APEX.Row.all
+  let _ := @APEX.rows_twenty_three
+  let _ := @APEX.rows_distinct
+  let _ := @APEX.rows_complete
+  let _ := @APEX.Row.millennium
+  let _ := @APEX.millennium_seven
+  let _ := @APEX.extension_sixteen
+  let _ := @APEX.apexSeat
+  let _ := @APEX.apex_seat_fixed
+  let _ := @APEX.apex_seat_uniform
+  let _ := @APEX.crossed_and_open_share_the_seat
+  let _ := @APEX.D3row
+  let _ := @APEX.identity_cone_row
+  let _ := @APEX.cone_apex_unique_row
+  let _ := @APEX.gaps_closed_every_row
+  let _ := @APEX.formalSelfRow
+  let _ := @APEX.inverted_control
+  let _ := @APEX.all_rows_eliminated
+  let _ := @APEX.value
+  let _ := @APEX.rule_exact_every_row
+  let _ := @APEX.premise_decides_no_row
+  let _ := @APEX.premise_decides_no_row_grounded
+  let _ := @APEX.no_cure_every_row
+  let _ := @APEX.worldTyping
+  let _ := @APEX.world_census
+  let _ := @APEX.seatAnswers
+  let _ := @APEX.valueAnswers
+  let _ := @APEX.seat_line
+  let _ := @APEX.value_compartment
+  let _ := @APEX.seat_line_void_without_rider
+  let _ := @APEX.seatToken
+  let _ := @APEX.seat_token_is_aGivenRA
+  let _ := @APEX.valueReading
+  let _ := @APEX.riemann_value_line
+  let _ := @APEX.pnp_value_line
+  let _ := @APEX.poincare_value_line
+  let _ := @APEX.unrouted_value_line
+  let _ := @APEX.riemann_value_line_is_pinned
+  let _ := @APEX.value_bits_owed
+  let _ := @APEX.crossed_iff_poincare
+  let _ := @APEX.lines_parted
+  let _ := @APEX.seat_never_promotes_value
+  let _ := @APEX.objectLeg
+  let _ := @APEX.object_leg_ledger
+  let _ := @APEX.object_legs_justified
+  let _ := @APEX.owedPrice
+  let _ := @APEX.owed_price_is_twenty_two_floors
+  let _ := @APEX.seat_anchor
+  let _ := @FENCE.seat
+  let _ := @FOUND.seatInventory
+  let _ := @FOUND.seat_rides_the_connector
   trivial
 
 /-- info: 'codexCone' depends on axioms: [propext,
@@ -5514,10 +6629,1671 @@ open Lean Elab Command in
 /-- info: 'CROSSWALK.rows_count' does not depend on any axioms -/
 #guard_msgs in #print axioms CROSSWALK.rows_count
 
-/-- info: crosswalk audit: 129 rows, 0 unresolved, [] -/
+
+/-! ## SEAT ANCHOR cones: every declaration of the apex layer carries its receipt -/
+/-- info: 'PNF.ParityBarrier' does not depend on any axioms -/
+#guard_msgs in #print axioms PNF.ParityBarrier
+/-- info: 'PNF.sep_of_parity' does not depend on any axioms -/
+#guard_msgs in #print axioms PNF.sep_of_parity
+/-- info: 'PNF.parity_of_sep' depends on axioms: [propext] -/
+#guard_msgs in #print axioms PNF.parity_of_sep
+/-- info: 'PNF.sepCheck' does not depend on any axioms -/
+#guard_msgs in #print axioms PNF.sepCheck
+/-- info: 'PNF.sepCheck_iff' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNF.sepCheck_iff
+/-- info: 'PNF.parity_normal_form_list' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNF.parity_normal_form_list
+/-- info: 'PNF.shift' does not depend on any axioms -/
+#guard_msgs in #print axioms PNF.shift
+/-- info: 'PNF.shift_false' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNF.shift_false
+/-- info: 'PNF.shift_true' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNF.shift_true
+/-- info: 'PNF.ComplementPair' does not depend on any axioms -/
+#guard_msgs in #print axioms PNF.ComplementPair
+/-- info: 'PNF.complement_pair_is_one_bit' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNF.complement_pair_is_one_bit
+/-- info: 'PNF.complement_pair_distinct' does not depend on any axioms -/
+#guard_msgs in #print axioms PNF.complement_pair_distinct
+/-- info: 'PNF.one_bit_iff_complement_pair' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNF.one_bit_iff_complement_pair
+/-- info: 'PNF.odd_witness_closes' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNF.odd_witness_closes
+/-- info: 'PNF.whollyOddMask' depends on axioms: [propext] -/
+#guard_msgs in #print axioms PNF.whollyOddMask
+/-- info: 'PNF.oddCount' depends on axioms: [propext] -/
+#guard_msgs in #print axioms PNF.oddCount
+/-- info: 'PNF.odd_family_k1' depends on axioms: [propext] -/
+#guard_msgs in #print axioms PNF.odd_family_k1
+/-- info: 'PNF.odd_family_k2' depends on axioms: [propext] -/
+#guard_msgs in #print axioms PNF.odd_family_k2
+/-- info: 'PNF.odd_family_k3' depends on axioms: [propext] -/
+#guard_msgs in #print axioms PNF.odd_family_k3
+/-- info: 'PNF.odd_family_k4' depends on axioms: [propext] -/
+#guard_msgs in #print axioms PNF.odd_family_k4
+/-- info: 'PNF.odd_family_k6' depends on axioms: [propext] -/
+#guard_msgs in #print axioms PNF.odd_family_k6
+/-- info: 'PNF.rows_one_bit_iff_complement_pair' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNF.rows_one_bit_iff_complement_pair
+/-- info: 'APEX.sigma' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.sigma
+/-- info: 'APEX.sigma_binding' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.sigma_binding
+/-- info: 'APEX.fix_iff_scalar' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms APEX.fix_iff_scalar
+/-- info: 'APEX.Seat' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.Seat
+/-- info: 'APEX.theReturn' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.theReturn
+/-- info: 'APEX.return_is_chirality' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.return_is_chirality
+/-- info: 'APEX.return_lands_on_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.return_lands_on_seat
+/-- info: 'APEX.fixProj' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.fixProj
+/-- info: 'APEX.GammaRA' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.GammaRA
+/-- info: 'APEX.GammaRAM' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.GammaRAM
+/-- info: 'APEX.GammaRH' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.GammaRH
+/-- info: 'APEX.self_gap_nonexistent' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.self_gap_nonexistent
+/-- info: 'APEX.register_gap_nonexistent' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.register_gap_nonexistent
+/-- info: 'APEX.object_gap_nonexistent' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.object_gap_nonexistent
+/-- info: 'APEX.seat' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat
+/-- info: 'APEX.seat_on_scalar_line' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms APEX.seat_on_scalar_line
+/-- info: 'APEX.theReturnOdd' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.theReturnOdd
+/-- info: 'APEX.odd_return_is_plus_one' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.odd_return_is_plus_one
+/-- info: 'APEX.odd_return_on_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.odd_return_on_seat
+/-- info: 'APEX.seat_points_differ' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat_points_differ
+/-- info: 'APEX.D3' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.D3
+/-- info: 'APEX.CategoryGap' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.CategoryGap
+/-- info: 'APEX.cone_iff_no_gap' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.cone_iff_no_gap
+/-- info: 'APEX.Cone' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.Cone
+/-- info: 'APEX.identity_cone' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.identity_cone
+/-- info: 'APEX.cone_apex_unique' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.cone_apex_unique
+/-- info: 'APEX.cone_iff_gaps_closed' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.cone_iff_gaps_closed
+/-- info: 'APEX.D3odd' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.D3odd
+/-- info: 'APEX.identity_cone_odd' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.identity_cone_odd
+/-- info: 'APEX.apexes_differ_by_orientation' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.apexes_differ_by_orientation
+/-- info: 'APEX.sigmaP' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.sigmaP
+/-- info: 'APEX.sigmaP_binding' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.sigmaP_binding
+/-- info: 'APEX.sigmaP_fix_iff' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms APEX.sigmaP_fix_iff
+/-- info: 'APEX.seats_meet_only_at_zero' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms APEX.seats_meet_only_at_zero
+/-- info: 'APEX.register_leg_rides_one_involution' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.register_leg_rides_one_involution
+/-- info: 'APEX.phi' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.phi
+/-- info: 'APEX.phi_equivariant' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms APEX.phi_equivariant
+/-- info: 'APEX.phi_fix_iff' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms APEX.phi_fix_iff
+/-- info: 'APEX.phi_fix_iff_line' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms APEX.phi_fix_iff_line
+/-- info: 'APEX.phi_injective' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms APEX.phi_injective
+/-- info: 'APEX.tauM' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.tauM
+/-- info: 'APEX.phiM' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.phiM
+/-- info: 'APEX.phiM_equivariant' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms APEX.phiM_equivariant
+/-- info: 'APEX.phiM_fix_iff' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms APEX.phiM_fix_iff
+/-- info: 'APEX.seat_on_image_of_line' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat_on_image_of_line
+/-- info: 'APEX.seat_occupied_iff_grounded' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat_occupied_iff_grounded
+/-- info: 'APEX.seat_vacant_of_free' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat_vacant_of_free
+/-- info: 'APEX.seat_vacant_of_equivariant' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat_vacant_of_equivariant
+/-- info: 'APEX.complement' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.complement
+/-- info: 'APEX.complement_free' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.complement_free
+/-- info: 'APEX.pnp_seat_vacant' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.pnp_seat_vacant
+/-- info: 'APEX.pnpBridge' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.pnpBridge
+/-- info: 'APEX.pnp_bridge_admissible' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.pnp_bridge_admissible
+/-- info: 'APEX.pnp_bridge_off_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.pnp_bridge_off_seat
+/-- info: 'APEX.riemann_seat_occupied' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.riemann_seat_occupied
+/-- info: 'APEX.router_at_the_seat' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms APEX.router_at_the_seat
+/-- info: 'APEX.RAMFormalGround' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.RAMFormalGround
+/-- info: 'APEX.constructed_RAM' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.constructed_RAM
+/-- info: 'APEX.FormalSelf' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.FormalSelf
+/-- info: 'APEX.constructed_orientation' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.constructed_orientation
+/-- info: 'APEX.orientation_proof_irrelevant' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.orientation_proof_irrelevant
+/-- info: 'APEX.modelΔE' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.modelΔE
+/-- info: 'APEX.RAModel' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.RAModel
+/-- info: 'APEX.modelRA' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.modelRA
+/-- info: 'APEX.mkWitness' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.mkWitness
+/-- info: 'APEX.eliminator' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.eliminator
+/-- info: 'APEX.recursion_is_constant' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.recursion_is_constant
+/-- info: 'APEX.deed_unreadable_at_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.deed_unreadable_at_seat
+/-- info: 'APEX.no_exterior_agent' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.no_exterior_agent
+/-- info: 'APEX.adjudicator_in_domain' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.adjudicator_in_domain
+/-- info: 'APEX.no_total_self_indexing' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.no_total_self_indexing
+/-- info: 'APEX.live' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.live
+/-- info: 'APEX.aperture_opens_under_premise' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.aperture_opens_under_premise
+/-- info: 'APEX.no_interior_under_premise' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.no_interior_under_premise
+/-- info: 'APEX.rule_exact' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.rule_exact
+/-- info: 'APEX.rule_exact_model' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.rule_exact_model
+/-- info: 'APEX.rule_exact_under_root' depends on axioms: [ROOT.RA, ROOT.U, ROOT.ΔE] -/
+#guard_msgs in #print axioms APEX.rule_exact_under_root
+/-- info: 'APEX.twoPoint_fails_L' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.twoPoint_fails_L
+/-- info: 'APEX.premise_decides_no_frame' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.premise_decides_no_frame
+/-- info: 'APEX.foldThree' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.foldThree
+/-- info: 'APEX.foldThree_involutive' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.foldThree_involutive
+/-- info: 'APEX.zeroThree' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.zeroThree
+/-- info: 'APEX.zeroThree_symmetric' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.zeroThree_symmetric
+/-- info: 'APEX.threePoint' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.threePoint
+/-- info: 'APEX.threePoint_grounded' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.threePoint_grounded
+/-- info: 'APEX.threePoint_fails_L' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.threePoint_fails_L
+/-- info: 'APEX.premise_holds_where_L_fails_grounded' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.premise_holds_where_L_fails_grounded
+/-- info: 'APEX.no_cure' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.no_cure
+/-- info: 'APEX.cure_is_the_hypothesis' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.cure_is_the_hypothesis
+/-- info: 'APEX.carrierOfDecision' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.carrierOfDecision
+/-- info: 'APEX.twoPoint_carrier_does_not_halt' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.twoPoint_carrier_does_not_halt
+/-- info: 'APEX.legMeasure' depends on axioms: [propext] -/
+#guard_msgs in #print axioms APEX.legMeasure
+/-- info: 'APEX.arcMeasure' depends on axioms: [propext] -/
+#guard_msgs in #print axioms APEX.arcMeasure
+/-- info: 'APEX.valueMeasure' depends on axioms: [propext] -/
+#guard_msgs in #print axioms APEX.valueMeasure
+/-- info: 'APEX.masses_all_zero' depends on axioms: [propext] -/
+#guard_msgs in #print axioms APEX.masses_all_zero
+/-- info: 'APEX.contents_differ' depends on axioms: [propext] -/
+#guard_msgs in #print axioms APEX.contents_differ
+/-- info: 'APEX.prices_differ' depends on axioms: [propext] -/
+#guard_msgs in #print axioms APEX.prices_differ
+/-- info: 'APEX.Row.all' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.Row.all
+/-- info: 'APEX.rows_twenty_three' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.rows_twenty_three
+/-- info: 'APEX.rows_distinct' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.rows_distinct
+/-- info: 'APEX.rows_complete' depends on axioms: [propext] -/
+#guard_msgs in #print axioms APEX.rows_complete
+/-- info: 'APEX.Row.millennium' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.Row.millennium
+/-- info: 'APEX.millennium_seven' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.millennium_seven
+/-- info: 'APEX.extension_sixteen' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.extension_sixteen
+/-- info: 'APEX.apexSeat' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.apexSeat
+/-- info: 'APEX.apex_seat_fixed' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.apex_seat_fixed
+/-- info: 'APEX.apex_seat_uniform' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.apex_seat_uniform
+/-- info: 'APEX.crossed_and_open_share_the_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.crossed_and_open_share_the_seat
+/-- info: 'APEX.D3row' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.D3row
+/-- info: 'APEX.identity_cone_row' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.identity_cone_row
+/-- info: 'APEX.cone_apex_unique_row' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.cone_apex_unique_row
+/-- info: 'APEX.gaps_closed_every_row' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.gaps_closed_every_row
+/-- info: 'APEX.formalSelfRow' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.formalSelfRow
+/-- info: 'APEX.inverted_control' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.inverted_control
+/-- info: 'APEX.all_rows_eliminated' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.all_rows_eliminated
+/-- info: 'APEX.value' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.value
+/-- info: 'APEX.rule_exact_every_row' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.rule_exact_every_row
+/-- info: 'APEX.premise_decides_no_row' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.premise_decides_no_row
+/-- info: 'APEX.premise_decides_no_row_grounded' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.premise_decides_no_row_grounded
+/-- info: 'APEX.no_cure_every_row' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.no_cure_every_row
+/-- info: 'APEX.worldTyping' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.worldTyping
+/-- info: 'APEX.world_census' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.world_census
+/-- info: 'APEX.seatAnswers' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seatAnswers
+/-- info: 'APEX.valueAnswers' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.valueAnswers
+/-- info: 'APEX.seat_line' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat_line
+/-- info: 'APEX.value_compartment' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.value_compartment
+/-- info: 'APEX.seat_line_void_without_rider' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat_line_void_without_rider
+/-- info: 'APEX.seatToken' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seatToken
+/-- info: 'APEX.seat_token_is_aGivenRA' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat_token_is_aGivenRA
+/-- info: 'APEX.valueReading' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.valueReading
+/-- info: 'APEX.riemann_value_line' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.riemann_value_line
+/-- info: 'APEX.pnp_value_line' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.pnp_value_line
+/-- info: 'APEX.poincare_value_line' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.poincare_value_line
+/-- info: 'APEX.unrouted_value_line' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.unrouted_value_line
+/-- info: 'APEX.riemann_value_line_is_pinned' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.riemann_value_line_is_pinned
+/-- info: 'APEX.value_bits_owed' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.value_bits_owed
+/-- info: 'APEX.crossed_iff_poincare' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.crossed_iff_poincare
+/-- info: 'APEX.lines_parted' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.lines_parted
+/-- info: 'APEX.seat_never_promotes_value' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat_never_promotes_value
+/-- info: 'APEX.objectLeg' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.objectLeg
+/-- info: 'APEX.object_leg_ledger' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.object_leg_ledger
+/-- info: 'APEX.object_legs_justified' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.object_legs_justified
+/-- info: 'APEX.owedPrice' depends on axioms: [propext] -/
+#guard_msgs in #print axioms APEX.owedPrice
+/-- info: 'APEX.owed_price_is_twenty_two_floors' depends on axioms: [propext] -/
+#guard_msgs in #print axioms APEX.owed_price_is_twenty_two_floors
+/-- info: 'APEX.seat_anchor' does not depend on any axioms -/
+#guard_msgs in #print axioms APEX.seat_anchor
+/-- info: 'FENCE.seat' does not depend on any axioms -/
+#guard_msgs in #print axioms FENCE.seat
+/-- info: 'FOUND.seatInventory' does not depend on any axioms -/
+#guard_msgs in #print axioms FOUND.seatInventory
+/-- info: 'FOUND.seat_rides_the_connector' does not depend on any axioms -/
+#guard_msgs in #print axioms FOUND.seat_rides_the_connector
+
+/-- info: crosswalk audit: 151 rows, 0 unresolved, [] -/
 #guard_msgs in
 open Lean Elab Command in
 #eval show CommandElabM Unit from do
   let env ← getEnv
   let missing := CROSSWALK.rows.filter fun r => !(env.contains r.2.toName)
   logInfo m!"crosswalk audit: {CROSSWALK.rows.length} rows, {missing.length} unresolved, {missing.map (·.1)}"
+
+/-! ## THE RH ENGINE · the eighth module. `RA_Li_Bridge.lean` as the final paper, Zenodo record 22929637, prints it in its Appendix A,
+    sha256 f2d0f4e33e82ad5d…, 1058 lines, carried whole with each `#print axioms` pinned under `#guard_msgs`;
+    the verbatim file stands at `protocols/RH One Bit/`. It declares no axiom and adds no posit. -/
+/-
+RA_Li_Bridge.lean · the bridge from RA's positivity to Li positivity on ζ, typed.
+Nothing here is an axiom. RA, Li's criterion, and the bridge enter as hypotheses,
+so #print axioms shows exactly what the kernel used. ΔM = 0.
+-/
+
+namespace RALi
+
+/-- The existents and their energies, as in ROOT, but as parameters. -/
+structure Substrate where
+  U  : Type
+  ΔE : U → Int
+
+/-- RA as a hypothesis on a substrate: to exist is to actuate. -/
+def RA (S : Substrate) : Prop := ∀ x : S.U, 0 < S.ΔE x
+
+/-- An L-function reduced to what Li's criterion reads: its RH, and the
+    sign bit of each Li coefficient λₙ (n ≥ 1). -/
+structure LiData where
+  RH      : Prop
+  nonneg  : Nat → Prop
+
+/-- Li 1997 (Bombieri-Lagarias 1999 for the general case), cited, not proved:
+    RH ↔ every λₙ ≥ 0. Carried as a hypothesis on the data. -/
+def LiCriterion (L : LiData) : Prop := L.RH ↔ ∀ n, 1 ≤ n → L.nonneg n
+
+/-- THE BRIDGE. One existent per Li step, and a reading that turns its
+    positive energy into the sign of λₙ. The whole content lives in `read`. -/
+structure Bridge (S : Substrate) (L : LiData) where
+  φ    : Nat → S.U
+  read : ∀ n, 1 ≤ n → 0 < S.ΔE (φ n) → L.nonneg n
+
+/-- 1. The bridge closes: RA, a bridge, and Li's criterion give RH. -/
+theorem bridge_yields_RH (S : Substrate) (L : LiData)
+    (hRA : RA S) (hLi : LiCriterion L) (B : Bridge S L) : L.RH :=
+  hLi.mpr (fun n hn => B.read n hn (hRA (B.φ n)))
+
+/-- 2. The bridge is keyed: RA alone never supplies it. A substrate where RA
+    holds, paired with data carrying one negative λ, admits no bridge. -/
+def oneEnergy : Substrate := ⟨Unit, fun _ => 1⟩
+def badData : LiData := ⟨False, fun n => n ≠ 5⟩
+
+theorem ra_holds_in_model : RA oneEnergy := fun _ => show (0 : Int) < 1 by decide
+
+theorem bridge_is_keyed : RA oneEnergy ∧ ¬ Nonempty (Bridge oneEnergy badData) := by
+  refine ⟨ra_holds_in_model, fun ⟨B⟩ => ?_⟩
+  exact B.read 5 (by decide) (ra_holds_in_model (B.φ 5)) rfl
+
+/-- 3. No uniform bridge. If the reading does not consume the L-function,
+    it forces positivity on every member of the family. One member with a
+    negative λ (the Eisenstein L-function ζ(s)ζ(s-k+1): Euler product and
+    functional equation, zeros off its centre, so some λₙ < 0 by
+    Bombieri-Lagarias) kills every uniform bridge. -/
+structure UniformBridge (S : Substrate) (F : Type) (L : F → LiData) where
+  φ    : Nat → S.U
+  read : ∀ f n, 1 ≤ n → 0 < S.ΔE (φ n) → (L f).nonneg n
+
+theorem no_uniform_bridge (S : Substrate) (F : Type) (L : F → LiData)
+    (hRA : RA S) (hctl : ∃ f n, 1 ≤ n ∧ ¬ (L f).nonneg n) :
+    ¬ Nonempty (UniformBridge S F L) := by
+  intro ⟨B⟩
+  obtain ⟨f, n, hn, hneg⟩ := hctl
+  exact hneg (B.read f n hn (hRA (B.φ n)))
+
+/-- 4. The type repair. The arrow supplies one bit; Li turns RH's vanishing
+    into one sign bit per step. Given decidable signs, the Li family is a
+    Nat → Bool, the shape the deed can supply, and RH is its constancy. -/
+theorem li_is_a_bit_stream (L : LiData) (hLi : LiCriterion L)
+    [dec : ∀ n, Decidable (L.nonneg n)] :
+    L.RH ↔ ∀ n, 1 ≤ n → decide (L.nonneg n) = true := by
+  refine hLi.trans ?_
+  exact ⟨fun h n hn => decide_eq_true (h n hn), fun h n hn => of_decide_eq_true (h n hn)⟩
+
+end RALi
+
+/-- info: 'RALi.bridge_yields_RH' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.bridge_yields_RH
+/-- info: 'RALi.bridge_is_keyed' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.bridge_is_keyed
+/-- info: 'RALi.no_uniform_bridge' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.no_uniform_bridge
+/-- info: 'RALi.li_is_a_bit_stream' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.li_is_a_bit_stream
+
+/-! ## PART II · Does [Ξ₀] retire on the united register? -/
+namespace RALi
+
+inductive Grade | premise | structural | theorem deriving DecidableEq, Repr
+def Grade.rank : Grade → Nat | .premise => 0 | .structural => 1 | .theorem => 2
+def Grade.weakest (a b : Grade) : Grade := if a.rank ≤ b.rank then a else b
+
+inductive Verdict | seal (g : Grade) | xi0 deriving DecidableEq, Repr
+
+/-- The united register. Unity is the claim that the formal reading and the
+    kinetic reading are one; on ζ it is stated as the supply of the bridge,
+    carried at the grade of whatever supplies it. -/
+structure Unity (S : Substrate) (L : LiData) where
+  bridge : Bridge S L
+  grade  : Grade
+
+/-- The emitter on the formal string: with unity supplied, the verdict is a
+    seal at the weakest grade on the chain; without it, [Ξ₀]. -/
+def emit {S : Substrate} {L : LiData} : Option (Unity S L) → Verdict
+  | some u => .seal (Grade.weakest u.grade .theorem)
+  | none   => .xi0
+
+/-- 5. [Ξ₀] retires exactly when unity is supplied, and the seal it becomes
+    is sound: it carries RH. -/
+theorem xi0_retires_iff_unity (S : Substrate) (L : LiData) (u : Option (Unity S L)) :
+    emit u ≠ .xi0 ↔ u.isSome := by
+  cases u <;> simp [emit]
+
+theorem retired_seal_is_sound (S : Substrate) (L : LiData)
+    (hRA : RA S) (hLi : LiCriterion L) (u : Unity S L) : L.RH :=
+  bridge_yields_RH S L hRA hLi u.bridge
+
+/-- 6. The grade law: the retired verdict is never stronger than its unity
+    posit. A premise-grade unity yields a premise-grade seal. -/
+theorem retired_grade_capped {S : Substrate} {L : LiData} (u : Unity S L) :
+    emit (some u) = .seal (Grade.weakest u.grade .theorem) ∧
+    (Grade.weakest u.grade .theorem).rank ≤ u.grade.rank := by
+  refine ⟨rfl, ?_⟩
+  cases h : u.grade <;> decide
+
+/-- 7. Unity is not free: RA does not supply it (from theorem 2). -/
+theorem unity_is_keyed : RA oneEnergy ∧ ¬ Nonempty (Unity oneEnergy badData) :=
+  ⟨ra_holds_in_model, fun ⟨u⟩ => bridge_is_keyed.2 ⟨u.bridge⟩⟩
+
+/-- 8. The Ghost. A reading that deletes the arrow returns one verdict for a
+    claim and its negation: it cannot be a verdict on either. -/
+def arrowDeleted (_ : Prop) : Verdict := .xi0
+theorem ghost (P : Prop) : arrowDeleted P = arrowDeleted (¬ P) := rfl
+
+end RALi
+
+/-- info: 'RALi.xi0_retires_iff_unity' depends on axioms: [propext] -/
+#guard_msgs in #print axioms RALi.xi0_retires_iff_unity
+/-- info: 'RALi.retired_seal_is_sound' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.retired_seal_is_sound
+/-- info: 'RALi.retired_grade_capped' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.retired_grade_capped
+/-- info: 'RALi.unity_is_keyed' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.unity_is_keyed
+/-- info: 'RALi.ghost' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.ghost
+
+/-! ## PART III · The try. Which Codex instruments can supply `Bridge.read` for ζ? -/
+namespace RALi
+
+/-- 9. The uniformity trap. A family of bridges that picks its existents
+    without reading which L-function it serves is a uniform bridge. Every
+    instrument carried at ΔM = 0 (the eliminator, the multi-recursion
+    collapse, the one-bit species, the bare arrow) chooses its existents
+    that way, so it lands here. -/
+theorem common_phi_is_uniform (S : Substrate) (F : Type) (L : F → LiData)
+    (φ₀ : Nat → S.U) (B : ∀ f, Bridge S (L f)) (hφ : ∀ f, (B f).φ = φ₀) :
+    Nonempty (UniformBridge S F L) :=
+  ⟨⟨φ₀, fun f n hn h => (B f).read n hn (by rw [hφ f]; exact h)⟩⟩
+
+/-- 10. Hence dead: with RA and one family member carrying a negative λ,
+    no ζ-blind choice of existents can serve every member. -/
+theorem blind_constructions_die (S : Substrate) (F : Type) (L : F → LiData)
+    (hRA : RA S) (hctl : ∃ f n, 1 ≤ n ∧ ¬ (L f).nonneg n)
+    (φ₀ : Nat → S.U) : ¬ ∃ B : (∀ f, Bridge S (L f)), ∀ f, (B f).φ = φ₀ :=
+  fun ⟨B, hφ⟩ => no_uniform_bridge S F L hRA hctl (common_phi_is_uniform S F L φ₀ B hφ)
+
+/-- 11. What positivity on the Euler product does reach. Mertens' identity
+    3 + 4 cos θ + cos 2θ = 2(1 + cos θ)² ≥ 0, with cos 2θ = 2c² − 1, is the
+    positivity that yields ζ(1 + it) ≠ 0: the wall at Re = 1. Checked here on
+    integer c as the polynomial identity it is. -/
+theorem mertens_identity (c : Int) : 3 + 4 * c + (2 * c * c - 1) = 2 * ((1 + c) * (1 + c)) := by
+  simp only [Int.add_mul, Int.mul_add, Int.one_mul, Int.mul_one, Int.mul_assoc]
+  omega
+
+theorem mertens_nonneg (c : Int) : 0 ≤ 3 + 4 * c + (2 * c * c - 1) := by
+  rw [mertens_identity]
+  refine Int.mul_nonneg (by decide) ?_
+  rcases Int.le_total 0 (1 + c) with h | h
+  · exact Int.mul_nonneg h h
+  · have h' : 0 ≤ -(1 + c) := by omega
+    have := Int.mul_nonneg h' h'
+    rwa [Int.neg_mul_neg] at this
+
+end RALi
+
+/-- info: 'RALi.common_phi_is_uniform' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.common_phi_is_uniform
+/-- info: 'RALi.blind_constructions_die' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.blind_constructions_die
+/-- info: 'RALi.mertens_nonneg' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.mertens_nonneg
+
+/-! ## PART IV · Time, made exact. The Li modes on the Bridge plane.
+A zero ρ = h/2 + i t sits at (h, t) in half-units, the Bridge plane, fold (h,t) ↦ (2-h, t).
+Li's coefficient is λₙ = Σ_ρ [1 - zρⁿ] with the mode zρ = 1 - 1/ρ = (ρ-1)/ρ, so step
+n ↦ n+1 multiplies each mode by zρ. |zρ|² = |ρ-1|²/|ρ|², scaled by 4:
+  N1 = (h-2)² + 4t²,   N0 = h² + 4t².
+A mode is unitary (perpetual, neither growing nor dying) iff N1 = N0; it grows iff N1 > N0. -/
+namespace RALi
+
+def N1 (h t : Int) : Int := (h - 2) * (h - 2) + 4 * (t * t)
+def N0 (h t : Int) : Int := h * h + 4 * (t * t)
+
+theorem N1_sub_N0 (h t : Int) : N1 h t - N0 h t = 4 - 4 * h := by
+  simp only [N1, N0, Int.sub_mul, Int.mul_sub]
+  omega
+
+/-- 12. A mode is unitary exactly on the line: perpetuity in time is the fixed locus. -/
+theorem unitary_iff_on_line (h t : Int) : N1 h t = N0 h t ↔ h = 1 := by
+  have := N1_sub_N0 h t
+  exact ⟨fun e => by omega, fun e => by omega⟩
+
+/-- 13. Left of the line the mode grows; right of it the mode dies. -/
+theorem grows_left (h t : Int) (hl : h < 1) : N0 h t < N1 h t := by
+  have := N1_sub_N0 h t; omega
+theorem dies_right (h t : Int) (hr : 1 < h) : N1 h t < N0 h t := by
+  have := N1_sub_N0 h t; omega
+
+/-- 14. The fold forbids a quiet exit: any off-line zero, together with its mirror under
+the functional equation, carries a growing mode. -/
+theorem off_line_forces_growth (h t : Int) (hoff : h ≠ 1) :
+    N0 h t < N1 h t ∨ N0 (2 - h) t < N1 (2 - h) t := by
+  have a := N1_sub_N0 h t; have b := N1_sub_N0 (2 - h) t; omega
+
+/-- 15. PERPETUAL STABILITY IS THE LINE PROPERTY. For any fold-invariant zero set on the
+plane: no mode grows under the time step iff every zero lies on h = 1. -/
+theorem stability_iff_line (Z : Int × Int → Prop)
+    (hinv : ∀ p, Z p → Z (2 - p.1, p.2)) :
+    (∀ p, Z p → N1 p.1 p.2 ≤ N0 p.1 p.2) ↔ (∀ p, Z p → p.1 = 1) := by
+  constructor
+  · intro hs p hp
+    have a := hs p hp
+    have b := hs (2 - p.1, p.2) (hinv p hp)
+    have c := N1_sub_N0 p.1 p.2
+    have d := N1_sub_N0 (2 - p.1) p.2
+    simp only at b d
+    omega
+  · intro hl p hp
+    have := hl p hp
+    have c := N1_sub_N0 p.1 p.2
+    omega
+
+end RALi
+
+/-- info: 'RALi.unitary_iff_on_line' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.unitary_iff_on_line
+/-- info: 'RALi.off_line_forces_growth' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.off_line_forces_growth
+/-- info: 'RALi.stability_iff_line' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.stability_iff_line
+
+/-! ## PART V · The monism rule, hardened. "What happens once happens again." -/
+namespace RALi
+
+/-- 16. One repeating one: the rule, with its step, is induction. -/
+theorem one_repeats_one (P : Nat → Prop) (h0 : P 0) (step : ∀ n, P n → P (n + 1)) :
+    ∀ n, P n := by
+  intro n; induction n with
+  | zero => exact h0
+  | succ k ih => exact step k ih
+
+/-- 17. The step is the whole content: the universal claim is exactly the base plus the step. -/
+theorem the_step_is_the_claim (P : Nat → Prop) :
+    (∀ n, P n) ↔ (P 0 ∧ ∀ n, P n → P (n + 1)) :=
+  ⟨fun h => ⟨h 0, fun n _ => h (n + 1)⟩, fun ⟨h0, s⟩ => one_repeats_one P h0 s⟩
+
+/-- 18. The monism posit: one principle means the property does not vary with the index.
+Under it, one instance forces all. -/
+theorem monism_posit_forces (P : Nat → Prop) (uniform : ∀ n m, P n ↔ P m) (h0 : P 0) :
+    ∀ n, P n := fun n => (uniform 0 n).mp h0
+
+/-- 19. Finite confirmation never forces. For every height N there is a property true on
+every index below N and false beyond: Skewes, Mertens, Pólya are this shape. -/
+theorem finite_never_forces (N : Nat) :
+    ∃ P : Nat → Prop, (∀ n, n < N → P n) ∧ ¬ ∀ n, P n :=
+  ⟨fun n => n < N, fun _ h => h, fun h => Nat.lt_irrefl N (h N)⟩
+
+/-- 20. Monism is not a law of the fold. A fold-invariant zero set can hold one zero on the
+line and a mirror pair off it: "on the line once" does not recur by symmetry alone.
+This is the Davenport-Heilbronn shape on the Bridge plane. -/
+def mixedZ (p : Int × Int) : Prop := p = (1, 0) ∨ p = (0, 5) ∨ p = (2, 5)
+
+theorem mixed_is_fold_invariant : ∀ p, mixedZ p → mixedZ (2 - p.1, p.2) := by
+  intro p hp
+  rcases hp with h | h | h <;> subst h
+  · exact Or.inl rfl
+  · exact Or.inr (Or.inr rfl)
+  · exact Or.inr (Or.inl rfl)
+
+theorem mixed_recurrence_fails :
+    mixedZ (1, 0) ∧ mixedZ (0, 5) ∧ ¬ (∀ p, mixedZ p → p.1 = 1) :=
+  ⟨Or.inl rfl, Or.inr (Or.inl rfl), fun h => by
+    have := h (0, 5) (Or.inr (Or.inl rfl)); cases this⟩
+
+end RALi
+
+/-- info: 'RALi.one_repeats_one' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.one_repeats_one
+/-- info: 'RALi.the_step_is_the_claim' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.the_step_is_the_claim
+/-- info: 'RALi.monism_posit_forces' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.monism_posit_forces
+/-- info: 'RALi.finite_never_forces' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.finite_never_forces
+/-- info: 'RALi.mixed_is_fold_invariant' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.mixed_is_fold_invariant
+/-- info: 'RALi.mixed_recurrence_fails' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.mixed_recurrence_fails
+
+/-! ## PART VI · Actualism. Only measured zeros are actual. -/
+namespace RALi
+
+/-- A zero set on a carrier, a line predicate, and the time at which each zero is measured
+(none if never). The actual zeros at time T are those measured by T. -/
+structure Actualized (α : Type) where
+  Z        : α → Prop
+  onLine   : α → Prop
+  measured : α → Option Nat
+
+def RHfull {α : Type} (A : Actualized α) : Prop := ∀ z, A.Z z → A.onLine z
+def RHactual {α : Type} (A : Actualized α) : Prop :=
+  ∀ z, A.Z z → A.measured z ≠ none → A.onLine z
+
+/-- 21. The full claim yields the actual one. -/
+theorem full_gives_actual {α : Type} (A : Actualized α) : RHfull A → RHactual A :=
+  fun h z hz _ => h z hz
+
+/-- 22. The actual claim does not yield the full one: one never-measured zero off the line. -/
+def unreached : Actualized Bool := ⟨fun _ => True, fun b => b = true, fun b => if b then some 0 else none⟩
+
+theorem actual_not_full : RHactual unreached ∧ ¬ RHfull unreached := by
+  refine ⟨fun z _ hm => ?_, fun h => by cases h false trivial⟩
+  cases z
+  · exact absurd rfl hm
+  · rfl
+
+/-- 23. Given sufficient time, every zero is measured, and then the actual claim over all
+time is exactly the full claim: actualism re-routes to the same step and does not bypass it. -/
+theorem sufficient_time {α : Type} (A : Actualized α) (reach : ∀ z, A.Z z → A.measured z ≠ none) :
+    RHactual A ↔ RHfull A :=
+  ⟨fun h z hz => h z hz (reach z hz), full_gives_actual A⟩
+
+end RALi
+
+/-- info: 'RALi.full_gives_actual' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.full_gives_actual
+/-- info: 'RALi.actual_not_full' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.actual_not_full
+/-- info: 'RALi.sufficient_time' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.sufficient_time
+
+/-! ## PART VII · The constructed witness, reconstructed from Residual Monism.
+The paper's witness is built from RA and read through RAF and RAM. Here the witness is
+built from the Codex connector directly: one substrate, one involution serving both routes
+(σ = σ′), and one principle that does not vary with the index. The index is time. -/
+namespace RALi
+
+structure Q4 where
+  r : Int
+  i : Int
+  j : Int
+  k : Int
+  deriving DecidableEq, Repr
+
+/-- The geometric route's involution and the formal route's involution, written apart. -/
+def sigmaGeo (q : Q4) : Q4 := ⟨q.r, -q.i, -q.j, -q.k⟩
+def sigmaForm (q : Q4) : Q4 := ⟨q.r, -q.i, -q.j, -q.k⟩
+
+/-- THE MONISM WITNESS. One involution, one principle, one seed. -/
+structure MonismWitness (P : Nat → Prop) : Prop where
+  one_involution : ∀ q, sigmaGeo q = sigmaForm q
+  uniform        : ∀ n m, P n ↔ P m
+  seed           : P 0
+
+/-- 24. The seat field is constructed, not posited: σ = σ′ holds by rfl. -/
+theorem one_involution_constructed : ∀ q, sigmaGeo q = sigmaForm q := fun _ => rfl
+
+/-- 25. The timeless reading and the timed reading coincide under one principle:
+the claim over all time is the claim at one instant. Deleting time loses nothing. -/
+theorem timeless_equals_timed (P : Nat → Prop) (u : ∀ n m, P n ↔ P m) :
+    (∀ n, P n) ↔ P 0 :=
+  ⟨fun h => h 0, fun h n => (u 0 n).mp h⟩
+
+/-- 26. The witness closes the record, past and future. -/
+theorem monism_closes (P : Nat → Prop) (w : MonismWitness P) : ∀ n, P n :=
+  (timeless_equals_timed P w.uniform).mpr w.seed
+
+/-- 27. The witness is exactly the claim: a monism witness for P exists iff P holds at
+every index. Its value field carries the whole of the claim, as theorem 17 required. -/
+theorem monism_witness_is_the_claim (P : Nat → Prop) :
+    MonismWitness P ↔ ∀ n, P n :=
+  ⟨monism_closes P, fun h => ⟨one_involution_constructed,
+    fun n m => ⟨fun _ => h m, fun _ => h n⟩, h 0⟩⟩
+
+/-- 28. Constructed at the model, as the paper constructs RA at one point. -/
+theorem constructed_monism : MonismWitness (fun _ => True) :=
+  ⟨one_involution_constructed, fun _ _ => Iff.rfl, trivial⟩
+
+/-- 29. Unlike the RA witness, the monism witness is not silent on counter-models:
+it cannot be constructed where the property breaks, so it decides by containing. -/
+theorem monism_absent_on_breaks : ¬ MonismWitness (fun n => n = 0) :=
+  fun w => absurd ((w.uniform 0 1).mp rfl) (by decide)
+
+/-- 30. Run through the RA-Li bridge. Replace the bridge by the monism witness on Li's
+sign stream: the witness, with Li's criterion, gives RH. -/
+theorem monism_yields_RH (L : LiData) (hLi : LiCriterion L)
+    (w : MonismWitness (fun n => L.nonneg (n + 1))) : L.RH :=
+  hLi.mpr (fun n hn => by
+    obtain ⟨k, rfl⟩ : ∃ k, n = k + 1 := ⟨n - 1, by omega⟩
+    exact monism_closes _ w k)
+
+/-- 31. And the price, stated: on ζ the witness exists iff every Li sign is nonnegative,
+which by Li is RH. Reconstruction moves the owed bit into `uniform`; it does not remove it. -/
+theorem monism_on_li_is_RH (L : LiData) (hLi : LiCriterion L) :
+    MonismWitness (fun n => L.nonneg (n + 1)) ↔ L.RH := by
+  rw [monism_witness_is_the_claim]
+  refine ⟨fun h => monism_yields_RH L hLi ((monism_witness_is_the_claim _).mpr h), fun h n => ?_⟩
+  exact (hLi.mp h) (n + 1) (by omega)
+
+end RALi
+
+/-- info: 'RALi.one_involution_constructed' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.one_involution_constructed
+/-- info: 'RALi.timeless_equals_timed' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.timeless_equals_timed
+/-- info: 'RALi.monism_closes' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.monism_closes
+/-- info: 'RALi.monism_witness_is_the_claim' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.monism_witness_is_the_claim
+/-- info: 'RALi.constructed_monism' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.constructed_monism
+/-- info: 'RALi.monism_absent_on_breaks' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.monism_absent_on_breaks
+/-- info: 'RALi.monism_yields_RH' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.monism_yields_RH
+/-- info: 'RALi.monism_on_li_is_RH' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.monism_on_li_is_RH
+
+/-! ## PART VIII · Re-anchoring the monism witness to mathematical standard.
+Calibration case: Perelman. The standard form of "one principle, the same result again"
+is not a free uniformity; it is one dynamics, one invariant, and a PROVED transport of the
+invariant along the dynamics (induction on the orbit; Lyapunov monotonicity; Perelman's
+W-entropy under Ricci flow). -/
+namespace RALi
+
+/-- 32. Monism as a schema over all properties is inconsistent: uniformity cannot be
+posited for every P. It must be anchored to a principle, not spread over properties. -/
+theorem global_monism_inconsistent : ¬ ∀ P : Nat → Prop, ∀ n m, P n ↔ P m :=
+  fun h => absurd ((h (fun n => n = 0) 0 1).mp rfl) (by decide)
+
+def iter {S : Type} (f : S → S) : Nat → S → S
+  | 0, s => s
+  | n + 1, s => f (iter f n s)
+
+/-- THE ANCHORED MONISM WITNESS. One substrate S, one principle f (the dynamics),
+one invariant I, the transport of I along f, and a seed. -/
+structure AnchoredMonism (S : Type) where
+  f         : S → S
+  I         : S → Prop
+  transport : ∀ s, I s → I (f s)
+  s0        : S
+  seed      : I s0
+
+/-- 33. The anchored witness closes its whole orbit, past and future. -/
+theorem anchored_closes {S : Type} (A : AnchoredMonism S) : ∀ n, A.I (iter A.f n A.s0) := by
+  intro n; induction n with
+  | zero => exact A.seed
+  | succ k ih => exact A.transport _ ih
+
+/-- 34. The free monism witness is DERIVED from the anchored one: uniformity is no longer
+posited, it is manufactured by the transport. -/
+theorem anchored_derives_monism {S : Type} (A : AnchoredMonism S) :
+    MonismWitness (fun n => A.I (iter A.f n A.s0)) :=
+  ⟨one_involution_constructed,
+   fun n m => ⟨fun _ => anchored_closes A m, fun _ => anchored_closes A n⟩,
+   A.seed⟩
+
+/-- 35. THE PERELMAN SHAPE. A quantity monotone along one flow, here a discrete flow on its
+time index, is an anchored monism witness for the property "never below its start." Perelman's
+W-entropy along Ricci flow has this shape; it is a structural analogue and is not formalized. -/
+def lyapunovWitness (W : Nat → Int) (mono : ∀ n, W n ≤ W (n + 1)) : AnchoredMonism Nat :=
+  ⟨Nat.succ, fun n => W 0 ≤ W n, fun n h => Int.le_trans h (mono n), 0, Int.le_refl _⟩
+
+theorem lyapunov_is_monism (W : Nat → Int) (mono : ∀ n, W n ≤ W (n + 1)) :
+    MonismWitness (fun n => W 0 ≤ W (iter Nat.succ n 0)) :=
+  anchored_derives_monism (lyapunovWitness W mono)
+
+/-- 36. The calibration's grade law: the closure is as strong as its transport. -/
+structure GradedAnchor (S : Type) where
+  A      : AnchoredMonism S
+  tgrade : Grade
+
+def closureGrade {S : Type} (G : GradedAnchor S) : Grade := Grade.weakest G.tgrade .theorem
+
+theorem closure_grade_is_transport_grade {S : Type} (G : GradedAnchor S) :
+    closureGrade G = G.tgrade := by
+  unfold closureGrade Grade.weakest; cases G.tgrade <;> rfl
+
+/-- 37. The RH instance. On Li's sign stream with the time step as the principle, an
+anchored witness exists iff RH. The transport is `nonneg (n+1) → nonneg (n+2)`: the
+ζ-analogue of Perelman's monotonicity formula, not yet proved by anyone. -/
+theorem rh_anchor_is_the_claim (L : LiData) (hLi : LiCriterion L) :
+    (∃ A : AnchoredMonism Nat, A.f = Nat.succ ∧ A.s0 = 0 ∧
+        ∀ n, A.I n ↔ L.nonneg (n + 1)) ↔ L.RH := by
+  constructor
+  · rintro ⟨A, hf, hs, hI⟩
+    apply (monism_on_li_is_RH L hLi).mp
+    refine (monism_witness_is_the_claim _).mpr (fun n => ?_)
+    have key : ∀ n, iter A.f n A.s0 = n := by
+      intro n; induction n with
+      | zero => exact hs
+      | succ k ih => show A.f (iter A.f k A.s0) = k + 1; rw [ih, hf]
+    have := anchored_closes A n
+    rw [key n] at this
+    exact (hI n).mp this
+  · intro h
+    have all := (monism_witness_is_the_claim _).mp ((monism_on_li_is_RH L hLi).mpr h)
+    exact ⟨⟨Nat.succ, fun n => L.nonneg (n + 1), fun n _ => all (n + 1), 0, all 0⟩,
+      rfl, rfl, fun _ => Iff.rfl⟩
+
+end RALi
+
+/-- info: 'RALi.global_monism_inconsistent' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.global_monism_inconsistent
+/-- info: 'RALi.anchored_closes' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.anchored_closes
+/-- info: 'RALi.anchored_derives_monism' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.anchored_derives_monism
+/-- info: 'RALi.lyapunov_is_monism' depends on axioms: [propext] -/
+#guard_msgs in #print axioms RALi.lyapunov_is_monism
+/-- info: 'RALi.closure_grade_is_transport_grade' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.closure_grade_is_transport_grade
+/-- info: 'RALi.rh_anchor_is_the_claim' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.rh_anchor_is_the_claim
+
+/-! ## PART IX · ζ's time has a proved monotonicity formula, and it runs the wrong way.
+The de Bruijn-Newman heat flow H_t(z) = ∫ e^{t u²} Φ(u) cos(z u) du, Φ built from ξ.
+de Bruijn (1950): if every zero of H_0 lies in |Im z| ≤ Δ, every zero of H_t lies in
+|Im z| ≤ √max(Δ² − 2t, 0). RH is "all zeros of H_0 real". Λ is the least t with all zeros
+of H_t real; Newman (1976) defined it, Rodgers-Tao (2020) proved Λ ≥ 0, Polymath 15 (2019)
+proved Λ ≤ 0.22. So RH ⇔ Λ = 0. Modelled here on the strip bound, widths in Nat, half-steps
+of time; a toy of the bound, not of the flow. -/
+namespace RALi
+
+/-- Squared strip width after t time steps: max(d2 − 2t, 0). -/
+def flow (d2 t : Nat) : Nat := d2 - 2 * t
+def realAt (d2 t : Nat) : Prop := flow d2 t = 0
+
+/-- 38. THE MONOTONICITY FORMULA. The width never grows along ζ's time. -/
+theorem flow_monotone (d2 t : Nat) : flow d2 (t + 1) ≤ flow d2 t := by
+  unfold flow; omega
+
+/-- 39. Its transport, proved: once every zero is real, every zero stays real. This is
+de Bruijn's theorem in the toy, the ζ-analogue of Perelman's monotonicity, at theorem grade. -/
+theorem reality_transported (d2 t : Nat) (h : realAt d2 t) : realAt d2 (t + 1) := by
+  unfold realAt flow at *; omega
+
+/-- Λ in the toy: the first time the strip closes. -/
+def Lam (d2 : Nat) : Nat := (d2 + 1) / 2
+
+theorem real_at_Lam (d2 : Nat) : realAt d2 (Lam d2) := by unfold realAt flow Lam; omega
+
+/-- 40. In the toy, the strip is closed at time zero iff Λ = 0. For ζ, RH ↔ Λ = 0 is the cited
+result of Newman with Rodgers and Tao and enters the cone as `hLam`. -/
+theorem rh_iff_lambda_zero (d2 : Nat) : realAt d2 0 ↔ Lam d2 = 0 := by
+  unfold realAt flow Lam
+  exact ⟨fun h => by omega, fun h => by omega⟩
+
+/-- 41. The anchored monism witness exists for ζ's time, transport proved, seeded at Λ.
+It closes the whole future of the flow from Λ on. -/
+def deBruijnWitness (d2 : Nat) : AnchoredMonism Nat :=
+  ⟨Nat.succ, realAt d2, fun t h => reality_transported d2 t h, Lam d2, real_at_Lam d2⟩
+
+theorem iter_succ (n s : Nat) : iter Nat.succ n s = s + n := by
+  induction n with
+  | zero => rfl
+  | succ k ih => show Nat.succ (iter Nat.succ k s) = s + (k + 1); rw [ih]; omega
+
+theorem future_closed (d2 n : Nat) : realAt d2 (Lam d2 + n) := by
+  have := anchored_closes (deBruijnWitness d2) n
+  rwa [show (deBruijnWitness d2).f = Nat.succ from rfl, iter_succ] at this
+
+/-- 42. THE RECORD FORGETS. After one step the record of the width-zero state and the
+width-one state coincide: the forward flow is even in the RH bit, so no readout of the
+flowed record decides RH. This is the fTOE wall, T1, executed on ζ's own time. -/
+theorem flowed_record_forgets (T : Nat) (hT : 1 ≤ T) :
+    ¬ ∃ g : Nat → Bool, ∀ d2, g (flow d2 T) = decide (d2 = 0) := by
+  rintro ⟨g, hg⟩
+  have a := hg 0; have b := hg 1
+  have e : flow 1 T = flow 0 T := by unfold flow; omega
+  rw [e, a] at b
+  exact absurd b (by decide)
+
+/-- 43. The upstream direction is not a transport. Going backward from a real record,
+both answers are admissible: the preimage of "real at T" holds the RH state and a non-RH
+state. The forward arrow proves; the backward arrow must be supplied. -/
+theorem upstream_is_not_forced (T : Nat) (hT : 1 ≤ T) :
+    realAt 0 T ∧ realAt 1 T ∧ realAt 0 0 ∧ ¬ realAt 1 0 := by
+  unfold realAt flow
+  exact ⟨by omega, by omega, rfl, fun h => by omega⟩
+
+end RALi
+
+/-- info: 'RALi.flow_monotone' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.flow_monotone
+/-- info: 'RALi.reality_transported' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.reality_transported
+/-- info: 'RALi.rh_iff_lambda_zero' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.rh_iff_lambda_zero
+/-- info: 'RALi.future_closed' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.future_closed
+/-- info: 'RALi.flowed_record_forgets' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.flowed_record_forgets
+/-- info: 'RALi.upstream_is_not_forced' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.upstream_is_not_forced
+
+/-! ## PART X · Halted Uniduction with the category-gap eliminator. The regress, closed.
+Every "missing piece" of Parts I-IX is a register's reading of one seat. Exhibit each as a
+leg of one cone with apex RH; then the hunt has one gap, not a sequence of them. -/
+namespace RALi
+
+structure Hunt where
+  S     : Substrate
+  L     : LiData
+  u0    : S.U
+  hRA   : RA S
+  hLi   : LiCriterion L
+  lamZero : Prop                -- the upstream reading: Λ = 0
+  hLam  : L.RH ↔ lamZero        -- Newman's definition with Rodgers-Tao, cited
+
+/-- The legs. Each register's reading of the owed seat, proved equal to the apex. -/
+theorem leg_bridge (H : Hunt) : Nonempty (Bridge H.S H.L) ↔ H.L.RH :=
+  ⟨fun ⟨B⟩ => bridge_yields_RH H.S H.L H.hRA H.hLi B,
+   fun h => ⟨⟨fun _ => H.u0, fun n hn _ => (H.hLi.mp h) n hn⟩⟩⟩
+
+theorem leg_unity (H : Hunt) : Nonempty (Unity H.S H.L) ↔ H.L.RH :=
+  ⟨fun ⟨u⟩ => retired_seal_is_sound H.S H.L H.hRA H.hLi u,
+   fun h => let ⟨B⟩ := (leg_bridge H).mpr h; ⟨⟨B, .premise⟩⟩⟩
+
+theorem leg_monism (H : Hunt) : MonismWitness (fun n => H.L.nonneg (n + 1)) ↔ H.L.RH :=
+  monism_on_li_is_RH H.L H.hLi
+
+theorem leg_transport (H : Hunt) :
+    (∃ A : AnchoredMonism Nat, A.f = Nat.succ ∧ A.s0 = 0 ∧ ∀ n, A.I n ↔ H.L.nonneg (n + 1))
+      ↔ H.L.RH :=
+  rh_anchor_is_the_claim H.L H.hLi
+
+theorem leg_upstream (H : Hunt) : H.lamZero ↔ H.L.RH := H.hLam.symm
+
+/-- The five readings, as a diagram of propositions. -/
+inductive Reg5 | bridge | unity | monism | transport | upstream deriving DecidableEq, Repr
+
+def D5 (H : Hunt) : Reg5 → Prop
+  | .bridge    => Nonempty (Bridge H.S H.L)
+  | .unity     => Nonempty (Unity H.S H.L)
+  | .monism    => MonismWitness (fun n => H.L.nonneg (n + 1))
+  | .transport => ∃ A : AnchoredMonism Nat, A.f = Nat.succ ∧ A.s0 = 0 ∧ ∀ n, A.I n ↔ H.L.nonneg (n + 1)
+  | .upstream  => H.lamZero
+
+/-- 44. THE CONE. RH is the apex of a cone over all five readings, every leg an
+equivalence: the category gaps between the hunt's registers are eliminated. -/
+theorem hunt_cone (H : Hunt) : ∀ r, D5 H r ↔ H.L.RH := by
+  intro r; cases r
+  · exact leg_bridge H
+  · exact leg_unity H
+  · exact leg_monism H
+  · exact leg_transport H
+  · exact leg_upstream H
+
+/-- 45. ONE GAP. Any two readings are the same proposition. The quantity monotone against
+the flow (upstream) IS the bridge's read, the unity posit, the monism field, the transport. -/
+theorem one_gap (H : Hunt) (r s : Reg5) : D5 H r ↔ D5 H s :=
+  (hunt_cone H r).trans (hunt_cone H s).symm
+
+/-- 46. THE HALT. Every proposition proved equivalent to the hypothesis lands on the same apex
+as the five readings; which future propositions are equivalent is not decided here. -/
+theorem regress_halts (H : Hunt) (P : Prop) (hP : P ↔ H.L.RH) (r : Reg5) : P ↔ D5 H r :=
+  hP.trans (hunt_cone H r).symm
+
+/-- 47. Given a true proposition Q, proving Q → RH is the same as proving RH: conditioning on a
+true premise adds nothing (Theorem E of the prior paper, here on the hunt's apex). -/
+theorem nothing_weaker (H : Hunt) (Q : Prop) (hq : Q) : (Q → H.L.RH) ↔ H.L.RH :=
+  ⟨fun f => f hq, fun h _ => h⟩
+
+end RALi
+
+/-- info: 'RALi.hunt_cone' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.hunt_cone
+/-- info: 'RALi.one_gap' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.one_gap
+/-- info: 'RALi.regress_halts' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.regress_halts
+/-- info: 'RALi.nothing_weaker' does not depend on any axioms -/
+#guard_msgs in #print axioms RALi.nothing_weaker
+
+/-! ## PART X, completed · a sufficient route closes every reading at once. -/
+namespace RALi
+
+/-- 48. Theorem 46 covers every reformulation equivalent to the apex. A route strictly
+stronger than the apex (a specific operator, a hypothesis over a family) is not equivalent,
+and it does not open a new gap either: any sufficient route supplies all five readings. -/
+theorem sufficient_closes_all (H : Hunt) (P : Prop) (hP : P → H.L.RH) (p : P) :
+    ∀ r, D5 H r :=
+  fun r => (hunt_cone H r).mpr (hP p)
+
+end RALi
+
+/-- info: 'RALi.sufficient_closes_all' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RALi.sufficient_closes_all
+
+/-! ## PART XI · Timeless Residual Monism, stated as Postulate M, and its equivalence with the line property. -/
+namespace TimeLocus
+
+def onLine (p : Int × Int) : Prop := p.1 = 1
+
+/-- A timed world: the locus at each time, and the zeros present at each time. -/
+structure World where
+  locus : Nat → (Int × Int → Prop)
+  zeros : Nat → (Int × Int → Prop)
+
+/-- TIME PSP premise: prior and posterior locus are the SAME locus, the line, at every time. -/
+def SameLocus (W : World) : Prop := ∀ t p, W.locus t p ↔ onLine p
+
+/-- The claim to be tested: every zero at every time is bound to the locus. -/
+def Bound (W : World) : Prop := ∀ t p, W.zeros t p → W.locus t p
+
+/-- Fold-invariance at every time: the functional equation acts at each iteration. -/
+def FoldInv (W : World) : Prop := ∀ t p, W.zeros t p → W.zeros t (2 - p.1, p.2)
+
+/-- 51. Given the same locus at all times, being bound IS the line property at all times. -/
+theorem bound_iff_line (W : World) (h : SameLocus W) :
+    Bound W ↔ ∀ t p, W.zeros t p → onLine p :=
+  ⟨fun b t p z => (h t p).mp (b t p z), fun l t p z => (h t p).mpr (l t p z)⟩
+
+/-- 52, the test world. A world where the locus is the same line at every time, the fold acts at every
+    time, the on-line zero recurs at every time, and a mirror pair sits off the line at every time. -/
+def testWorld : World :=
+  ⟨fun _ p => onLine p, fun _ p => p = (1, 0) ∨ p = (0, 5) ∨ p = (2, 5)⟩
+
+theorem test_same_locus : SameLocus testWorld := fun _ _ => Iff.rfl
+
+theorem test_fold_inv : FoldInv testWorld := by
+  intro _ p hp
+  rcases hp with h | h | h <;> subst h
+  · exact Or.inl rfl
+  · exact Or.inr (Or.inr rfl)
+  · exact Or.inr (Or.inl rfl)
+
+theorem test_not_bound : ¬ Bound testWorld := fun b => by
+  have := b 0 (0, 5) (Or.inr (Or.inl rfl)); cases this
+
+/-- 52. Therefore SameLocus and FoldInv, at every time, do not imply Bound. -/
+theorem time_does_not_bind :
+    ¬ ∀ W : World, SameLocus W → FoldInv W → Bound W :=
+  fun h => test_not_bound (h testWorld test_same_locus test_fold_inv)
+
+end TimeLocus
+
+namespace TimeLocus
+
+/-- Residual Monism read as the Codex states it: one involution serves both routes. -/
+def sigmaGeo (p : Int × Int) : Int × Int := (2 - p.1, p.2)
+def sigmaForm (p : Int × Int) : Int × Int := (2 - p.1, p.2)
+def OneInvolution : Prop := ∀ p, sigmaGeo p = sigmaForm p
+
+/-- Residual Monism read as timeless: whether the zeros sit on the locus does not vary in time. -/
+def P (W : World) (t : Nat) : Prop := ∀ p, W.zeros t p → onLine p
+def Timeless (W : World) : Prop := ∀ t s, P W t ↔ P W s
+
+/-- 53. Both readings hold in the counter-world: one involution by rfl, and timelessness because
+    the property "all zeros on the line" is constantly false there. Timeless and unbound. -/
+theorem monism_holds_in_counter_world :
+    OneInvolution ∧ Timeless testWorld ∧ ¬ Bound testWorld :=
+  ⟨fun _ => rfl, fun _ _ => Iff.rfl, test_not_bound⟩
+
+/-- 54. What timeless monism does do: it makes one instant decide all time. With the seed, binding
+    follows; the seed is "every zero present at the instant is on the line". -/
+theorem timeless_with_seed_binds (W : World) (h : SameLocus W) (u : Timeless W) (s0 : P W 0) :
+    Bound W :=
+  (bound_iff_line W h).mpr (fun t p z => ((u 0 t).mp s0) p z)
+
+end TimeLocus
+
+namespace TimeLocus
+
+/-- THE CONSTRUCTED WITNESS from RESIDUAL-MONISM + TIME PSP, as asked: one involution, the
+    timeless interface (the Barzakh instant, t = 0, upstream of time), and the downstream times
+    agreeing with it. No field is a premise; each must be built as a term. -/
+structure MonismTimeWitness (W : World) : Prop where
+  one_involution : OneInvolution
+  same_locus     : SameLocus W
+  timeless       : Timeless W
+  interface      : P W 0          -- every zero present at the timeless interface is on the line
+
+/-- 55. When it can be built, it proves the bound everywhere downstream. -/
+theorem witness_proves_bound (W : World) (w : MonismTimeWitness W) : Bound W :=
+  timeless_with_seed_binds W w.same_locus w.timeless w.interface
+
+/-- 55, completed. It can be built exactly when the bound already holds: its existence IS the line property. -/
+theorem witness_iff_bound (W : World) (h : SameLocus W) :
+    Nonempty (MonismTimeWitness W) ↔ Bound W := by
+  refine ⟨fun ⟨w⟩ => witness_proves_bound W w, fun b => ?_⟩
+  have l := (bound_iff_line W h).mp b
+  exact ⟨⟨fun _ => rfl, h, fun t s => ⟨fun _ p z => l s p z, fun _ p z => l t p z⟩, fun p z => l 0 p z⟩⟩
+
+/-- 56. Built at a model whose zeros are on the line, as the prior paper builds RA at one point. -/
+def goodWorld : World := ⟨fun _ p => onLine p, fun _ p => p = (1, 0)⟩
+theorem constructed_at_model : Nonempty (MonismTimeWitness goodWorld) :=
+  (witness_iff_bound goodWorld (fun _ _ => Iff.rfl)).mpr (fun _ p z => by subst z; rfl)
+
+/-- 57. Not buildable at the counter-world: the interface field fails there. -/
+theorem not_constructible_off_line : ¬ Nonempty (MonismTimeWitness testWorld) :=
+  fun w => test_not_bound ((witness_iff_bound testWorld test_same_locus).mp w)
+
+end TimeLocus
+
+namespace TimeLocus
+
+/-- Postulate M on an enumerated zero set. Stage k is when a zero is located; L t says every
+    zero located by stage t lies on the line; M says the truth of L t does not depend on t. -/
+def Lstage {α : Type} (Z : α → Prop) (onL : α → Prop) (stage : α → Nat) (t : Nat) : Prop :=
+  ∀ z, Z z → stage z ≤ t → onL z
+def PostulateM {α : Type} (Z : α → Prop) (onL : α → Prop) (stage : α → Nat) : Prop :=
+  ∀ t s, Lstage Z onL stage t ↔ Lstage Z onL stage s
+
+/-- 49. POSTULATE M IS EQUIVALENT TO THE LINE PROPERTY, given the computed seed L 0 and an
+    exhaustive enumeration (every zero is located at some finite stage, built into `stage`). -/
+theorem postulateM_iff_line {α : Type} (Z : α → Prop) (onL : α → Prop) (stage : α → Nat)
+    (seed : Lstage Z onL stage 0) :
+    PostulateM Z onL stage ↔ ∀ z, Z z → onL z := by
+  constructor
+  · intro m z hz
+    exact ((m 0 (stage z)).mp seed) z hz (Nat.le_refl _)
+  · intro h t s
+    exact ⟨fun _ z hz _ => h z hz, fun _ z hz _ => h z hz⟩
+
+/-- 50. And Postulate M is not free: it holds in a world whose zeros are all on the line, and
+    it cannot hold with the seed in a world with a located off-line zero. -/
+theorem postulateM_decides {α : Type} (Z : α → Prop) (onL : α → Prop) (stage : α → Nat)
+    (seed : Lstage Z onL stage 0) (z : α) (hz : Z z) (off : ¬ onL z) :
+    ¬ PostulateM Z onL stage :=
+  fun m => off ((postulateM_iff_line Z onL stage seed).mp m z hz)
+
+end TimeLocus
+
+/-- info: 'TimeLocus.bound_iff_line' does not depend on any axioms -/
+#guard_msgs in #print axioms TimeLocus.bound_iff_line
+/-- info: 'TimeLocus.time_does_not_bind' does not depend on any axioms -/
+#guard_msgs in #print axioms TimeLocus.time_does_not_bind
+/-- info: 'TimeLocus.monism_holds_in_counter_world' does not depend on any axioms -/
+#guard_msgs in #print axioms TimeLocus.monism_holds_in_counter_world
+/-- info: 'TimeLocus.timeless_with_seed_binds' does not depend on any axioms -/
+#guard_msgs in #print axioms TimeLocus.timeless_with_seed_binds
+/-- info: 'TimeLocus.witness_iff_bound' does not depend on any axioms -/
+#guard_msgs in #print axioms TimeLocus.witness_iff_bound
+/-- info: 'TimeLocus.constructed_at_model' does not depend on any axioms -/
+#guard_msgs in #print axioms TimeLocus.constructed_at_model
+/-- info: 'TimeLocus.not_constructible_off_line' does not depend on any axioms -/
+#guard_msgs in #print axioms TimeLocus.not_constructible_off_line
+/-- info: 'TimeLocus.postulateM_iff_line' does not depend on any axioms -/
+#guard_msgs in #print axioms TimeLocus.postulateM_iff_line
+/-- info: 'TimeLocus.postulateM_decides' does not depend on any axioms -/
+#guard_msgs in #print axioms TimeLocus.postulateM_decides
+
+/-! ## PART XII · The demand correctly addressed, and [.] at the collapse foundation. -/
+namespace DotRH
+
+inductive Token where
+  | sealed | broken | opn | dot
+  deriving DecidableEq, Repr
+
+def Token.inEconomy : Token → Bool
+  | .dot => false
+  | _    => true
+
+/-- I · THE COLLAPSE FOUNDATION and its stop. -/
+structure Collapse (V : Prop) where
+  Reg     : Type
+  reading : Reg → Prop
+  leg     : ∀ r, reading r ↔ V
+
+-- Theorem 58.
+theorem self_referential_limit {V : Prop} (C : Collapse V) (r s : C.Reg) :
+    (C.reading r ↔ V) ∧ (C.reading r ↔ C.reading s) :=
+  ⟨C.leg r, (C.leg r).trans (C.leg s).symm⟩
+
+def emitAtFoundation {V : Prop} (_ : Collapse V) : Token := .dot
+-- Theorem 59.
+theorem value_marked_dot {V : Prop} (C : Collapse V) : emitAtFoundation C = .dot := rfl
+theorem dot_is_not_a_verdict :
+    Token.dot ≠ .sealed ∧ Token.dot ≠ .broken ∧ Token.dot ≠ .opn := by decide
+theorem dot_outside_economy : Token.inEconomy .dot = false := rfl
+
+def trivialCollapse (V : Prop) : Collapse V := ⟨Unit, fun _ => V, fun _ => Iff.rfl⟩
+
+/-- Inside the collapse register, a demand for a verdict is a ghost: the register returns
+    the same mark for the value and its negation. -/
+-- Theorem 60.
+theorem demand_is_ghost_in_register {V : Prop} (C : Collapse V) (C' : Collapse (¬ V)) :
+    emitAtFoundation C = emitAtFoundation C' := rfl
+
+/-- II · THE SELF-GROUNDING ROOT. A root R is self-grounding when acts occur and every act of
+    adjudication, assent or denial, is itself an instance of R. Then a denial of R re-enacts R,
+    no external proof adds to it, and a demand for one is a ghost. This is the seat of the
+    analogy: a root that grounds itself cannot be proved from outside itself. -/
+structure SelfGrounding (R : Prop) where
+  Act       : Type
+  anAct     : Act
+  instances : Act → R
+
+-- Theorem 61.
+theorem denial_reenacts_root {R : Prop} (G : SelfGrounding R) (denial : G.Act) : R :=
+  G.instances denial
+
+-- Theorem 61, completed.
+theorem external_proof_adds_nothing {R : Prop} (G : SelfGrounding R) (Q : Prop) :
+    (Q → R) ↔ R :=
+  ⟨fun _ => G.instances G.anAct, fun r _ => r⟩
+
+/-- The Root Axiom at the constructed domain is self-grounding: every act is a deed, and a
+    deed actuates. -/
+def RA : Prop := (0 : Int) < 1
+def raSelfGrounding : SelfGrounding RA := ⟨Unit, (), fun _ => show (0 : Int) < 1 by decide⟩
+
+/-- III · A HYPOTHESIS ABOUT AN OBJECT is not self-grounding. Its value is fixed by the object,
+    acts do not instance it, and a finite witness can refute it. -/
+structure Frame where
+  S : Type
+  τ : S → S
+  Z : S → Prop
+
+def LineProperty (X : Frame) : Prop := ∀ s, X.Z s → X.τ s = s
+
+/-- A located zero off the line refutes the line property, constructively. -/
+theorem refuted_by_witness (X : Frame) (s : X.S) (hz : X.Z s) (off : X.τ s ≠ s) :
+    ¬ LineProperty X :=
+  fun h => off (h s hz)
+
+def twoPoint : Frame := ⟨Bool, fun b => !b, fun _ => True⟩
+
+/-- On a frame whose line property fails, no occurring act can instance it: the line
+    property of a frame is not self-grounding. -/
+-- Theorem 62.
+theorem line_not_self_grounding : ¬ Nonempty (SelfGrounding (LineProperty twoPoint)) :=
+  fun ⟨G⟩ => refuted_by_witness twoPoint true trivial (fun h => Bool.noConfusion h) (G.instances G.anAct)
+
+/-- IV · THE HARDENED FOUNDATION, in toto. The collapse marks the value [.] and the demand is
+    a ghost inside that register; the self-grounding root cannot be proved from outside and
+    re-enacts under denial; a hypothesis about an object is witness-refutable and is not
+    self-grounding, so the self-grounding exemption does not transfer to it. -/
+theorem foundation_hardened :
+    (∀ (V : Prop) (C : Collapse V), emitAtFoundation C = .dot) ∧
+    Token.inEconomy .dot = false ∧
+    (∀ (V : Prop) (C : Collapse V) (C' : Collapse (¬ V)), emitAtFoundation C = emitAtFoundation C') ∧
+    (∀ Q : Prop, (Q → RA) ↔ RA) ∧
+    (∀ a : Unit, RA ∧ raSelfGrounding.instances a = raSelfGrounding.instances a) ∧
+    ¬ Nonempty (SelfGrounding (LineProperty twoPoint)) :=
+  ⟨fun _ _ => rfl, rfl, fun _ _ _ => rfl, external_proof_adds_nothing raSelfGrounding,
+   fun a => ⟨raSelfGrounding.instances a, rfl⟩, line_not_self_grounding⟩
+
+/-! V · THE DEMAND, CORRECTLY ADDRESSED.
+    "A proof of the Riemann Hypothesis cannot be demanded of the foundation. Every reading the
+    foundation supplies is equivalent to the hypothesis, so any derivation from those readings
+    alone would presuppose what it derives. The demand is well-posed when addressed to the
+    object, the function zeta, whose structure fixes where its zeros lie." -/
+
+/-- A foundation resource is any property of frames the foundation supplies. -/
+def Resource := Frame → Prop
+
+/-- (a) Misaddressed: any resource that also holds on a frame where the line property fails
+    cannot, by itself, yield the line property on every frame it covers. -/
+-- Theorem 63.
+theorem misaddressed_to_foundation (R : Resource) (hR : R twoPoint) :
+    ¬ ∀ X, R X → LineProperty X :=
+  fun h => refuted_by_witness twoPoint true trivial (fun e => Bool.noConfusion e) (h twoPoint hR)
+
+/-- (b) Presupposition: a derivation of the value from a reading equivalent to it uses the
+    value's own content; the reading and the value stand or fall together. -/
+-- Theorem 64.
+theorem derivation_presupposes {V P : Prop} (leg : P ↔ V) : (P → V) ∧ (V → P) ∧ (¬ V → ¬ P) :=
+  ⟨leg.mp, leg.mpr, fun nv p => nv (leg.mp p)⟩
+
+/-- (c) Well-addressed: the object decides. A frame settles its own line property, in one
+    direction by a located off-line witness, in the other by its own structure. -/
+def onLineFrame : Frame := ⟨Unit, fun u => u, fun _ => True⟩
+-- Theorem 65.
+theorem object_decides :
+    ¬ LineProperty twoPoint ∧ LineProperty onLineFrame :=
+  ⟨refuted_by_witness twoPoint true trivial (fun e => Bool.noConfusion e), fun _ _ => rfl⟩
+
+/-- THE DEMAND, IN TOTO. Made to the foundation, it is misaddressed and any answer from
+    there presupposes the value; made to the object, it is well-posed and the object answers. -/
+-- Theorem 66.
+theorem demand_correctly_addressed :
+    (∀ R : Resource, R twoPoint → ¬ ∀ X, R X → LineProperty X) ∧
+    (∀ {V P : Prop}, (P ↔ V) → (¬ V → ¬ P)) ∧
+    (¬ LineProperty twoPoint ∧ LineProperty onLineFrame) :=
+  ⟨misaddressed_to_foundation, fun leg => (derivation_presupposes leg).2.2, object_decides⟩
+
+end DotRH
+
+namespace DotRH
+/-- Theorem 67. Attached to the paper's cone: the readings of Parts X and XI collapse onto
+    the hypothesis, and the foundation marks the value [.]. -/
+def rhCollapse (H : RALi.Hunt) : Collapse H.L.RH := ⟨RALi.Reg5, RALi.D5 H, RALi.hunt_cone H⟩
+theorem rh_marked_dot (H : RALi.Hunt) : emitAtFoundation (rhCollapse H) = .dot := rfl
+end DotRH
+
+/-- info: 'DotRH.self_referential_limit' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.self_referential_limit
+/-- info: 'DotRH.value_marked_dot' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.value_marked_dot
+/-- info: 'DotRH.dot_is_not_a_verdict' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.dot_is_not_a_verdict
+/-- info: 'DotRH.demand_is_ghost_in_register' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.demand_is_ghost_in_register
+/-- info: 'DotRH.denial_reenacts_root' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.denial_reenacts_root
+/-- info: 'DotRH.external_proof_adds_nothing' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.external_proof_adds_nothing
+/-- info: 'DotRH.refuted_by_witness' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.refuted_by_witness
+/-- info: 'DotRH.line_not_self_grounding' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.line_not_self_grounding
+/-- info: 'DotRH.foundation_hardened' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.foundation_hardened
+/-- info: 'DotRH.misaddressed_to_foundation' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.misaddressed_to_foundation
+/-- info: 'DotRH.derivation_presupposes' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.derivation_presupposes
+/-- info: 'DotRH.object_decides' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.object_decides
+/-- info: 'DotRH.demand_correctly_addressed' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.demand_correctly_addressed
+/-- info: 'DotRH.rh_marked_dot' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms DotRH.rh_marked_dot
+
+/-! ## PART XIII · The six-register cone: Postulate M joined to the apex. -/
+namespace SixCone
+
+/-- The hunt with one more reading. The zeros are enumerated by stage, the seed holds, and
+    the hypothesis is, by its definition, the line property of the enumerated zeros; that
+    identification enters as the hypothesis `hDef`, carried by citation as Li's criterion and
+    Newman's equivalence are. -/
+structure Hunt6 extends RALi.Hunt where
+  α     : Type
+  Z     : α → Prop
+  onL   : α → Prop
+  stage : α → Nat
+  seed  : TimeLocus.Lstage Z onL stage 0
+  hDef  : L.RH ↔ ∀ z, Z z → onL z
+
+inductive Reg6 where
+  | five (r : RALi.Reg5)
+  | postulateM
+
+def D6 (H : Hunt6) : Reg6 → Prop
+  | .five r     => RALi.D5 H.toHunt r
+  | .postulateM => TimeLocus.PostulateM H.Z H.onL H.stage
+
+-- Theorem 68.
+/-- The cone over six readings: the five of Part X and Postulate M, every leg an equivalence
+    with the hypothesis. -/
+theorem hunt_cone6 (H : Hunt6) : ∀ r, D6 H r ↔ H.L.RH := by
+  intro r
+  cases r with
+  | five r => exact RALi.hunt_cone H.toHunt r
+  | postulateM =>
+      exact (TimeLocus.postulateM_iff_line H.Z H.onL H.stage H.seed).trans H.hDef.symm
+
+-- Theorem 69.
+/-- The collapse foundation over six readings, and its mark on the value. -/
+def rhCollapse6 (H : Hunt6) : DotRH.Collapse H.L.RH := ⟨Reg6, D6 H, hunt_cone6 H⟩
+theorem rh_marked_dot6 (H : Hunt6) : DotRH.emitAtFoundation (rhCollapse6 H) = .dot := rfl
+
+end SixCone
+
+/-- info: 'SixCone.hunt_cone6' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms SixCone.hunt_cone6
+/-- info: 'SixCone.rh_marked_dot6' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms SixCone.rh_marked_dot6
+
+namespace DotRH
+-- Theorem 63, general form.
+/-- Any resource that also holds on some frame whose line property fails cannot, by itself,
+    yield the line property on every frame it covers. -/
+theorem misaddressed_general (R : Resource) (Y : Frame) (hY : ¬ LineProperty Y) (hR : R Y) :
+    ¬ ∀ X, R X → LineProperty X :=
+  fun h => hY (h Y hR)
+end DotRH
+
+/-- info: 'DotRH.misaddressed_general' does not depend on any axioms -/
+#guard_msgs in #print axioms DotRH.misaddressed_general
+
+/-! ## PART XIV · The logical form of the hypothesis: the only existence lives in the denial. -/
+namespace LogicalForm
+
+-- Theorem 70.
+/-- A universal sentence carries no existential import: over an empty zero set the line
+    property holds vacuously. The hypothesis posits no object. -/
+theorem universal_posits_nothing {α : Type} (onL : α → Prop) :
+    ∀ z : α, (fun _ => False) z → onL z :=
+  fun _ h => h.elim
+
+-- Theorem 71.
+/-- The denial posits an object: a located zero off the line refutes the hypothesis. -/
+theorem denial_posits_a_witness {α : Type} (Z onL : α → Prop) :
+    (∃ z, Z z ∧ ¬ onL z) → ¬ ∀ z, Z z → onL z :=
+  fun ⟨z, hz, off⟩ h => off (h z hz)
+
+-- Theorem 72.
+/-- With a decidable line predicate, the hypothesis fails only by a witness: it holds iff no
+    off-line zero exists. The denial carries the whole existential load. -/
+theorem fails_only_by_witness {α : Type} (Z onL : α → Prop) [∀ z, Decidable (onL z)] :
+    (∀ z, Z z → onL z) ↔ ¬ ∃ z, Z z ∧ ¬ onL z := by
+  constructor
+  · intro h ⟨z, hz, off⟩; exact off (h z hz)
+  · intro h z hz
+    exact Decidable.byContradiction (fun off => h ⟨z, hz, off⟩)
+
+-- Theorem 73.
+/-- A witness is a finite check: for a decidable predicate on the naturals, one index at which
+    the check fails refutes the universal, and the check at that index is a computation. -/
+theorem witness_is_a_finite_check (bad : Nat → Bool) (n : Nat) (h : bad n = true) :
+    ¬ ∀ m, bad m = false :=
+  fun hall => by rw [hall n] at h; cases h
+
+end LogicalForm
+
+/-- info: 'LogicalForm.universal_posits_nothing' does not depend on any axioms -/
+#guard_msgs in #print axioms LogicalForm.universal_posits_nothing
+/-- info: 'LogicalForm.denial_posits_a_witness' does not depend on any axioms -/
+#guard_msgs in #print axioms LogicalForm.denial_posits_a_witness
+/-- info: 'LogicalForm.fails_only_by_witness' does not depend on any axioms -/
+#guard_msgs in #print axioms LogicalForm.fails_only_by_witness
+/-- info: 'LogicalForm.witness_is_a_finite_check' does not depend on any axioms -/
+#guard_msgs in #print axioms LogicalForm.witness_is_a_finite_check
+
+namespace RHEngine
+
+/-- THE ENGINE'S CONE. Every receipted theorem of the RH engine in one term, so one print shows
+    what the engine adds to the environment's posits: nothing, only propext and Quot.sound. -/
+theorem engineCone : True :=
+  let _ := @RALi.bridge_yields_RH
+  let _ := @RALi.bridge_is_keyed
+  let _ := @RALi.no_uniform_bridge
+  let _ := @RALi.li_is_a_bit_stream
+  let _ := @RALi.xi0_retires_iff_unity
+  let _ := @RALi.retired_seal_is_sound
+  let _ := @RALi.retired_grade_capped
+  let _ := @RALi.unity_is_keyed
+  let _ := @RALi.ghost
+  let _ := @RALi.common_phi_is_uniform
+  let _ := @RALi.blind_constructions_die
+  let _ := @RALi.mertens_nonneg
+  let _ := @RALi.unitary_iff_on_line
+  let _ := @RALi.off_line_forces_growth
+  let _ := @RALi.stability_iff_line
+  let _ := @RALi.one_repeats_one
+  let _ := @RALi.the_step_is_the_claim
+  let _ := @RALi.monism_posit_forces
+  let _ := @RALi.finite_never_forces
+  let _ := @RALi.mixed_is_fold_invariant
+  let _ := @RALi.mixed_recurrence_fails
+  let _ := @RALi.full_gives_actual
+  let _ := @RALi.actual_not_full
+  let _ := @RALi.sufficient_time
+  let _ := @RALi.one_involution_constructed
+  let _ := @RALi.timeless_equals_timed
+  let _ := @RALi.monism_closes
+  let _ := @RALi.monism_witness_is_the_claim
+  let _ := @RALi.constructed_monism
+  let _ := @RALi.monism_absent_on_breaks
+  let _ := @RALi.monism_yields_RH
+  let _ := @RALi.monism_on_li_is_RH
+  let _ := @RALi.global_monism_inconsistent
+  let _ := @RALi.anchored_closes
+  let _ := @RALi.anchored_derives_monism
+  let _ := @RALi.lyapunov_is_monism
+  let _ := @RALi.closure_grade_is_transport_grade
+  let _ := @RALi.rh_anchor_is_the_claim
+  let _ := @RALi.flow_monotone
+  let _ := @RALi.reality_transported
+  let _ := @RALi.rh_iff_lambda_zero
+  let _ := @RALi.future_closed
+  let _ := @RALi.flowed_record_forgets
+  let _ := @RALi.upstream_is_not_forced
+  let _ := @RALi.hunt_cone
+  let _ := @RALi.one_gap
+  let _ := @RALi.regress_halts
+  let _ := @RALi.nothing_weaker
+  let _ := @RALi.sufficient_closes_all
+  let _ := @TimeLocus.bound_iff_line
+  let _ := @TimeLocus.time_does_not_bind
+  let _ := @TimeLocus.monism_holds_in_counter_world
+  let _ := @TimeLocus.timeless_with_seed_binds
+  let _ := @TimeLocus.witness_iff_bound
+  let _ := @TimeLocus.constructed_at_model
+  let _ := @TimeLocus.not_constructible_off_line
+  let _ := @TimeLocus.postulateM_iff_line
+  let _ := @TimeLocus.postulateM_decides
+  let _ := @DotRH.self_referential_limit
+  let _ := @DotRH.value_marked_dot
+  let _ := @DotRH.dot_is_not_a_verdict
+  let _ := @DotRH.demand_is_ghost_in_register
+  let _ := @DotRH.denial_reenacts_root
+  let _ := @DotRH.external_proof_adds_nothing
+  let _ := @DotRH.refuted_by_witness
+  let _ := @DotRH.line_not_self_grounding
+  let _ := @DotRH.foundation_hardened
+  let _ := @DotRH.misaddressed_to_foundation
+  let _ := @DotRH.derivation_presupposes
+  let _ := @DotRH.object_decides
+  let _ := @DotRH.demand_correctly_addressed
+  let _ := @DotRH.rh_marked_dot
+  let _ := @SixCone.hunt_cone6
+  let _ := @SixCone.rh_marked_dot6
+  let _ := @DotRH.misaddressed_general
+  let _ := @LogicalForm.universal_posits_nothing
+  let _ := @LogicalForm.denial_posits_a_witness
+  let _ := @LogicalForm.fails_only_by_witness
+  let _ := @LogicalForm.witness_is_a_finite_check
+  trivial
+
+end RHEngine
+
+/-- info: 'RHEngine.engineCone' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RHEngine.engineCone
+
+/-! ## THE DIRECTIONAL CAN'T · the ninth module. `Directional_Cant.lean` as the architect supplies it,
+    sha256 eb4f0ced664d1bb7…, 60 lines, carried whole with each `#print axioms` pinned under `#guard_msgs`;
+    the verbatim file stands at `protocols/RH One Bit/`. It declares no axiom and adds no posit. -/
+/-!
+# Directional_Cant.lean · the two "can'ts" are not equal: which one seals
+Core Lean 4.19.0 · no library · no sorry · no axiom declaration.
+Abstract: a proposition RH, a provability predicate for the foundation, and the one property
+that makes the directions unequal, Σ₁-completeness: if a finite witness to the denial exists,
+the foundation proves the denial. That property is carried as a named hypothesis (a cited
+theorem of arithmetic), not proved here.
+-/
+namespace DirCant
+
+structure Setting where
+  RH        : Prop
+  Prov      : Prop → Prop
+  /-- Σ₁-completeness, carried as a hypothesis: a false RH is refutable. -/
+  sigma1    : ¬ RH → Prov (¬ RH)
+  /-- Soundness of the foundation on the denial: it proves ¬RH only if ¬RH. -/
+  sound_neg : Prov (¬ RH) → ¬ RH
+
+-- D1.
+/-- THE SEALED DIRECTION. If the foundation can't refute the hypothesis, the hypothesis holds.
+    The denial's "can't" is decisive. -/
+theorem cant_refute_seals (S : Setting) (h : ¬ S.Prov (¬ S.RH)) : S.RH :=
+  Classical.byContradiction (fun n => h (S.sigma1 n))
+
+-- D2.
+/-- The same, constructively, for a decidable hypothesis. -/
+theorem cant_refute_seals_dec (S : Setting) [Decidable S.RH] (h : ¬ S.Prov (¬ S.RH)) : S.RH :=
+  Decidable.byContradiction (fun n => h (S.sigma1 n))
+
+-- D3.
+/-- And conversely, under soundness on the denial: the hypothesis holds exactly when the
+    foundation can't refute it. The denial's "can't" and the hypothesis are one statement. -/
+theorem rh_iff_cant_refute (S : Setting) [Decidable S.RH] : S.RH ↔ ¬ S.Prov (¬ S.RH) :=
+  ⟨fun r p => S.sound_neg p r, cant_refute_seals_dec S⟩
+
+-- D4.
+/-- THE UNSEALED DIRECTION. The assent's "can't" decides nothing: a setting where the
+    hypothesis holds and the foundation can't prove it (independence) satisfies every field. -/
+def independentTrue : Setting :=
+  ⟨True, fun _ => False, fun n => absurd trivial n, fun p => p.elim⟩
+
+theorem cant_prove_does_not_seal_false :
+    independentTrue.RH ∧ ¬ independentTrue.Prov independentTrue.RH :=
+  ⟨trivial, id⟩
+
+-- D5.
+/-- THE ASYMMETRY, IN ONE THEOREM. Can't-refute seals the hypothesis; can't-prove is compatible
+    with the hypothesis being true; the two "can'ts" are not mirror images. -/
+theorem asymmetry :
+    (∀ S : Setting, ¬ S.Prov (¬ S.RH) → S.RH) ∧
+    (∃ S : Setting, S.RH ∧ ¬ S.Prov S.RH) :=
+  ⟨cant_refute_seals, ⟨independentTrue, cant_prove_does_not_seal_false⟩⟩
+
+end DirCant
+
+/-- info: 'DirCant.cant_refute_seals' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms DirCant.cant_refute_seals
+/-- info: 'DirCant.cant_refute_seals_dec' does not depend on any axioms -/
+#guard_msgs in #print axioms DirCant.cant_refute_seals_dec
+/-- info: 'DirCant.rh_iff_cant_refute' does not depend on any axioms -/
+#guard_msgs in #print axioms DirCant.rh_iff_cant_refute
+/-- info: 'DirCant.cant_prove_does_not_seal_false' does not depend on any axioms -/
+#guard_msgs in #print axioms DirCant.cant_prove_does_not_seal_false
+/-- info: 'DirCant.asymmetry' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms DirCant.asymmetry
+
+namespace DirCantCone
+
+/-- The directional cone: every declaration of the ninth module, so its whole axiom footprint is pinned. -/
+theorem dirCone : True :=
+  let _ := @DirCant.cant_refute_seals
+  let _ := @DirCant.cant_refute_seals_dec
+  let _ := @DirCant.rh_iff_cant_refute
+  let _ := @DirCant.independentTrue
+  let _ := @DirCant.cant_prove_does_not_seal_false
+  let _ := @DirCant.asymmetry
+  trivial
+
+end DirCantCone
+
+/-- info: 'DirCantCone.dirCone' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms DirCantCone.dirCone

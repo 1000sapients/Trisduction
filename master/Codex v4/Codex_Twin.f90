@@ -527,6 +527,7 @@ contains
   subroutine run_gates()
     integer :: perms(4,24), np, a, b, c, d, k, n_even, hits, i, j, s
     integer :: gates(2,12), ng
+    integer :: nv, ne, nfc
     call section('SECTION 4D · THE TWELVE GATES: A4 = 12 rotations, simply transitive on the gates')
     np = 0
     do a = 0, 3; do b = 0, 3; do c = 0, 3; do d = 0, 3
@@ -561,7 +562,18 @@ contains
        end do
     end do
     call assert(failures == 0, 'A4 simply transitive: 144 gate pairs, one rotation each')
-    call assert(4 - 6 + 4 == 2, 'Euler closure V - E + F = 2 on the tetrahedron')
+    nv = 0; ne = 0; nfc = 0
+    do a = 0, 3
+       nv = nv + 1
+       do b = a + 1, 3
+          ne = ne + 1
+          do c = b + 1, 3
+             nfc = nfc + 1
+          end do
+       end do
+    end do
+    call assert(nv - ne + nfc == 2 .and. nv == 4 .and. ne == 6 .and. nfc == 4, &
+         'Euler closure V - E + F = 2 on the tetrahedron, counted from its vertices, edges, and faces')
     s = 0
     do k = 0, 2**3 - 1
        s = s + 1
@@ -1008,7 +1020,8 @@ contains
   end function bt
   subroutine run_crossing()
     integer :: nq, n, q, e, g, w, x, c, ncand, cnt, k, opk, g1, g2, h
-    logical :: exists, ok, even_all
+    integer :: nfib, b1, b2, b3, b4, codes(16), u, v
+    logical :: exists, ok, even_all, distinct
     call section('SECTION 17 · THE WALL-WITNESS PAIR: the execution frame Bool x Q, |Q| = 1..4, every reading, every witness')
     do nq = 1, 4
        n = 2*nq
@@ -1098,7 +1111,19 @@ contains
        call assert(failures == 0, 'IDENTITY: agreement at one seat is agreement on the orbit')
        write(*,'(A,I0,A,I0,A,I0)') '   |Q| = ', nq, '  seats ', n, '  |Dtau| = ', cnt
     end do
-    call assert(16 == 2**4, 'this file: four witnesses, sixteen orientation patterns, four bits owed from the other surface')
+    nfib = 0
+    do b1 = 0, 1; do b2 = 0, 1; do b3 = 0, 1; do b4 = 0, 1
+       nfib = nfib + 1
+       codes(nfib) = 8*b1 + 4*b2 + 2*b3 + b4
+    end do; end do; end do; end do
+    distinct = .true.
+    do u = 1, nfib
+       do v = u + 1, nfib
+          if (codes(u) == codes(v)) distinct = .false.
+       end do
+    end do
+    call assert(nfib == 16 .and. distinct, &
+         'this file: four witnesses, sixteen orientation patterns enumerated and distinct, four bits owed from the other surface')
     k = 0; e = 0; q = 0
   contains
     pure integer function flip(x)
@@ -1399,6 +1424,850 @@ contains
   end subroutine run_bridge
 end module twin_bridge
 
+module twin_apex
+  ! THE SEAT ANCHOR, EXECUTED. The finite content of the Lean layer APEX and PNF, re-executed by enumeration:
+  ! the seat, the Return, the cone, the embedding, the occupancy law over every involution on six points, the
+  ! complementation vacancy, the rival involution, the premise and the cure, the twenty-three rows with their two
+  ! lines, and the Parity Normal Form with the Width Law. Every assert reads a computed quantity; every battery
+  ! prints what it enumerated. Delta-M = 0.
+  use twin_kinds
+  use twin_battery
+  use twin_omega, only: landauer_scaled
+  use twin_locus, only: emit, render, to_economy, T_SUPERHALT, T_CROSSED, B_XI, B_O, B_NONE, C_FORMAL, &
+       E_SEALED, E_OPN
+  implicit none
+  private
+  public :: run_apex
+  integer, parameter :: R = 6, W = 8
+  ! the codex token vocabulary, as Audit.Token orders it
+  integer, parameter :: TK_SEALED = 1, TK_OPN = 3, TK_VOID = 9, TK_AGIVENRA = 10
+  ! the RA row cascade verdicts, as GEO.RAVerdict orders them
+  integer, parameter :: RV_REFUSED = 1, RV_III = 2, RV_II = 3, RV_VOID = 4, RV_AGIVENRA = 5
+contains
+
+  pure function qmul(a, b) result(c)
+    integer, intent(in) :: a(4), b(4)
+    integer :: c(4)
+    c(1) = a(1)*b(1) - a(2)*b(2) - a(3)*b(3) - a(4)*b(4)
+    c(2) = a(1)*b(2) + a(2)*b(1) + a(3)*b(4) - a(4)*b(3)
+    c(3) = a(1)*b(3) - a(2)*b(4) + a(3)*b(1) + a(4)*b(2)
+    c(4) = a(1)*b(4) + a(2)*b(3) - a(3)*b(2) + a(4)*b(1)
+  end function qmul
+
+  pure function sig(a) result(c)
+    integer, intent(in) :: a(4)
+    integer :: c(4)
+    c = [a(1), -a(2), -a(3), -a(4)]
+  end function sig
+
+  pure function sigp(a) result(c)
+    integer, intent(in) :: a(4)
+    integer :: c(4)
+    c = [a(2), a(1), -a(3), -a(4)]
+  end function sigp
+
+  ! phi_m(h, t) = <t, h - m, 0, 0>, the embedding of the stage at resolution m
+  pure function phim(m, h, t) result(c)
+    integer, intent(in) :: m, h, t
+    integer :: c(4)
+    c = [t, h - m, 0, 0]
+  end function phim
+
+  pure function proj(a) result(c)
+    integer, intent(in) :: a(4)
+    integer :: c(4)
+    c = [a(1), 0, 0, 0]
+  end function proj
+
+  ! GEO.rowCascadeRACore, mirrored
+  pure integer function cascade_ra(nonvac, velive, fwd, pop, worldly, tclosed, tworldly, fclosed, annot)
+    logical, intent(in) :: nonvac, velive, fwd, pop, worldly, tclosed, tworldly, fclosed, annot
+    if (.not. nonvac) then
+       cascade_ra = RV_REFUSED
+    else if (velive .or. fwd) then
+       cascade_ra = RV_III
+    else if (.not. pop) then
+       cascade_ra = RV_II
+    else if (worldly) then
+       cascade_ra = RV_III
+    else if (.not. tclosed) then
+       if (tworldly) then
+          cascade_ra = RV_III
+       else
+          cascade_ra = RV_II
+       end if
+    else if (.not. fclosed) then
+       cascade_ra = RV_III
+    else if (.not. annot) then
+       cascade_ra = RV_VOID
+    else
+       cascade_ra = RV_AGIVENRA
+    end if
+  end function cascade_ra
+
+  ! GEO.RAVerdict.toToken, mirrored: refused, determined, determined, void, aGivenRA
+  pure integer function rv_token(v)
+    integer, intent(in) :: v
+    select case (v)
+    case (RV_REFUSED);  rv_token = 4
+    case (RV_III);      rv_token = 5
+    case (RV_II);       rv_token = 5
+    case (RV_VOID);     rv_token = TK_VOID
+    case default;       rv_token = TK_AGIVENRA
+    end select
+  end function rv_token
+
+  subroutine run_apex()
+    call section('SECTION 20 · THE SEAT ANCHOR: the seat, the cone, the occupancy law, the two lines of every row')
+    call a1_seat()
+    call a2_return()
+    call a3_cone()
+    call a4_embedding()
+    call a5_occupancy()
+    call a6_complement()
+    call a7_rival()
+    call a8_premise_cure()
+    call a9_rows()
+    call a10_pnf()
+  end subroutine run_apex
+
+  subroutine a1_seat()
+    integer :: r0, i0, j0, k0, nfix, bad, q(4)
+    nfix = 0; bad = 0
+    do r0 = -R, R; do i0 = -R, R; do j0 = -R, R; do k0 = -R, R
+       q = [r0, i0, j0, k0]
+       if (any(sig(sig(q)) /= q)) bad = bad + 1
+       if ((all(sig(q) == q)) .neqv. (i0 == 0 .and. j0 == 0 .and. k0 == 0)) bad = bad + 1
+       if (all(sig(q) == q)) nfix = nfix + 1
+    end do; end do; end do; end do
+    write(*,'(A,I0,A,I0)') '   A1 ball points ', (2*R+1)**4, ', fixed by sigma ', nfix
+    call assert(bad == 0, 'A1 sigma binding and fixed iff scalar on every point of the ball')
+    call assert(nfix == 2*R+1, 'A1 the seat in the ball is the scalar line: 13 points')
+  end subroutine a1_seat
+
+  subroutine a2_return()
+    integer :: e(4,3), p(3,6), s, k, q(4), ret(4), odd(4)
+    logical :: even
+    e = 0; e(2,1) = 1; e(3,2) = 1; e(4,3) = 1
+    p = reshape([1,2,3, 2,3,1, 3,1,2, 2,1,3, 1,3,2, 3,2,1], [3,6])
+    s = 0
+    do k = 1, 6
+       q = qmul(qmul(e(:,p(1,k)), e(:,p(2,k))), e(:,p(3,k)))
+       even = (k <= 3)
+       if (even .and. all(q == [-1,0,0,0])) s = s + 1
+       if ((.not. even) .and. all(q == [1,0,0,0])) s = s + 1
+    end do
+    ret = qmul(qmul(e(:,1), e(:,2)), e(:,3))
+    odd = qmul(qmul(e(:,3), e(:,2)), e(:,1))
+    call assert(s == 6, 'A2 six orderings: the three even land at -1, the three odd at +1')
+    call assert(all(ret == [-1,0,0,0]) .and. all(sig(ret) == ret), 'A2 the Return is -1 and lies on the seat')
+    call assert(all(odd == [1,0,0,0]) .and. all(sig(odd) == odd) .and. any(odd /= ret), &
+         'A2 the reversed triad is +1, on the seat, and differs')
+  end subroutine a2_return
+
+  subroutine a3_cone()
+    integer :: e(4,3), gra(4), gram(4), grh(4), odd(4), a(4), r0, i0, j0, k0, n1, n2
+    e = 0; e(2,1) = 1; e(3,2) = 1; e(4,3) = 1
+    gra = qmul(qmul(e(:,1), e(:,2)), e(:,3)); gram = proj(gra); grh = [-1,0,0,0]
+    odd = qmul(qmul(e(:,3), e(:,2)), e(:,1))
+    call assert(all(sig(gra) == gra) .and. all(gra == gram) .and. all(gram == grh), &
+         'A3 the three gaps are identities: gap vector (0,0,0)')
+    n1 = 0; n2 = 0
+    do r0 = -R, R; do i0 = -R, R; do j0 = -R, R; do k0 = -R, R
+       a = [r0, i0, j0, k0]
+       if (all(a == gra) .and. all(a == gram) .and. all(a == grh)) n1 = n1 + 1
+       if (all(a == odd) .and. all(a == proj(odd)) .and. all(a == [1,0,0,0])) n2 = n2 + 1
+    end do; end do; end do; end do
+    write(*,'(A,I0,A,I0)') '   A3 apexes over the ordered diagram ', n1, ', over the reversed ', n2
+    call assert(n1 == 1 .and. n2 == 1, 'A3 exactly one apex per orientation over the ball')
+  end subroutine a3_cone
+
+  subroutine a4_embedding()
+    integer :: m, h, t, h2, t2, nline, nhit, bad, p(4)
+    bad = 0
+    do m = -3, 3
+       nline = 0; nhit = 0
+       do h = -W, W; do t = -W, W
+          p = phim(m, h, t)
+          if (any(sig(p) /= phim(m, 2*m - h, t))) bad = bad + 1
+          if ((all(sig(p) == p)) .neqv. (2*m - h == h)) bad = bad + 1
+          if (2*m - h == h) nline = nline + 1
+          do h2 = -W, W; do t2 = -W, W
+             if (all(phim(m, h2, t2) == p)) then
+                nhit = nhit + 1
+                if (h2 /= h .or. t2 /= t) bad = bad + 1
+             end if
+          end do; end do
+       end do; end do
+       if (nline /= 2*W + 1 .or. nhit /= (2*W + 1)**2) bad = bad + 1
+    end do
+    write(*,'(A,I0,A)') '   A4 seven resolutions, ', (2*W+1)**2, ' stage points each: equivariance, image clause, injectivity'
+    call assert(bad == 0, 'A4 phi_m equivariant, fixed iff on the line, injective, 17 line points, at m = -3..3')
+    p = qmul(qmul([0,1,0,0], [0,0,1,0]), [0,0,0,1])
+    call assert(all(phim(1, 1, -1) == proj(p)), 'A4 phi(1,-1) is the named seat point, the Return projected')
+  end subroutine a4_embedding
+
+  ! THE OCCUPANCY LAW over every involution on 1 to 6 points and every map into a nine-point window of the carrier,
+  ! (r, i) in {-1,0,1}^2 with j = k = 0; a window point is on the seat iff i = 0.
+  subroutine a5_occupancy()
+    integer :: n, tcode, c, pw, p, d, f, ninv, ntot, nadm, bad, fpf, neq, badeq, digit(6), tau(6), expect, m
+    logical :: isinv, grounded, occ, img, eqv, inj
+    integer :: eqcount(3)
+    ntot = 0; bad = 0; badeq = 0; eqcount = 0
+    do n = 1, 6
+       ninv = 0
+       do tcode = 0, n**n - 1
+          do p = 1, n
+             tau(p) = mod(tcode / n**(p-1), n) + 1
+          end do
+          isinv = .true.
+          do p = 1, n
+             if (tau(tau(p)) /= p) isinv = .false.
+          end do
+          if (.not. isinv) cycle
+          ninv = ninv + 1
+          f = count([(tau(p) == p, p = 1, n)])
+          grounded = (f > 0)
+          nadm = 0; neq = 0
+          pw = 9**n
+          do c = 0, pw - 1
+             do p = 1, n
+                digit(p) = mod(c / 9**(p-1), 9)
+             end do
+             img = .true.; occ = .false.
+             do p = 1, n
+                ! window point (r, i) = (digit/3 - 1, mod(digit,3) - 1); on the seat iff i = 0
+                if ((mod(digit(p), 3) == 1) .neqv. (tau(p) == p)) img = .false.
+                if (mod(digit(p), 3) == 1) occ = .true.
+             end do
+             if (img) then
+                nadm = nadm + 1
+                if (occ .neqv. grounded) bad = bad + 1
+             end if
+             if (.not. grounded) then
+                eqv = .true.; inj = .true.
+                do p = 1, n
+                   d = 3*(digit(p)/3) + (2 - mod(digit(p), 3))     ! sigma on the window
+                   if (d /= digit(tau(p))) eqv = .false.
+                   do m = p + 1, n
+                      if (digit(m) == digit(p)) inj = .false.
+                   end do
+                end do
+                if (eqv .and. inj) then
+                   neq = neq + 1
+                   if (occ) badeq = badeq + 1
+                end if
+             end if
+          end do
+          expect = 3**f * 6**(n - f)
+          if (nadm /= expect .or. nadm == 0) bad = bad + 1
+          if (.not. grounded) then
+             fpf = n / 2
+             eqcount(fpf) = neq
+          end if
+       end do
+       ntot = ntot + ninv
+    end do
+    write(*,'(A,I0,A)') '   A5 involutions on 1..6 points: ', ntot, '; admissible maps counted as 3^f 6^(n-f) on each'
+    write(*,'(A,3I4)') '   A5 equivariant injective bridges of the fixed-point-free involutions on 2, 4, 6 points: ', eqcount
+    call assert(ntot == 119, 'A5 one hundred nineteen involutions enumerated')
+    call assert(bad == 0, 'A5 occupancy law: under every image-clause bridge, occupied iff grounded')
+    call assert(badeq == 0 .and. all(eqcount == [6, 24, 48]), &
+         'A5 vacancy by equivariance and injectivity alone: 6, 24, 48 bridges, none on the seat')
+  end subroutine a5_occupancy
+
+  subroutine a6_complement()
+    integer :: m, f, full, bad, b, pb(4), pc(4)
+    bad = 0
+    do m = 1, 3
+       full = 2**m - 1
+       do f = 0, full
+          if (ieor(f, full) == f) bad = bad + 1
+       end do
+    end do
+    call assert(bad == 0, 'A6 complementation fixes no Boolean function on domains of 1, 2, 3 points')
+    bad = 0
+    do b = 0, 1
+       pb = [0, merge(1, -1, b == 1), 0, 0]
+       pc = [0, merge(1, -1, b == 0), 0, 0]
+       if (any(sig(pb) /= pc)) bad = bad + 1
+       if (all(sig(pb) == pb)) bad = bad + 1
+    end do
+    call assert(bad == 0, 'A6 the complexity bridge exists, is equivariant, and lands off the seat')
+  end subroutine a6_complement
+
+  subroutine a7_rival()
+    integer :: r0, i0, j0, k0, nfixp, nboth, bad, q(4)
+    nfixp = 0; nboth = 0; bad = 0
+    do r0 = -R, R; do i0 = -R, R; do j0 = -R, R; do k0 = -R, R
+       q = [r0, i0, j0, k0]
+       if (any(sigp(sigp(q)) /= q)) bad = bad + 1
+       if (all(sigp(q) == q)) nfixp = nfixp + 1
+       if (all(sigp(q) == q) .and. all(sig(q) == q)) nboth = nboth + 1
+    end do; end do; end do; end do
+    write(*,'(A,I0,A,I0)') '   A7 rival involution: fixed line of 13 expected, found ', nfixp, '; meeting points ', nboth
+    call assert(bad == 0 .and. nfixp == 2*R+1, 'A7 sigmaP is binding and fixes the line r = i')
+    call assert(nboth == 1, 'A7 the two seats meet only at the origin')
+    call assert(any(sigp([-1,0,0,0]) /= [-1,0,0,0]), 'A7 the rival moves the kinetic seat point: the leg rides one involution')
+  end subroutine a7_rival
+
+  subroutine a8_premise_cure()
+    integer :: tau(3,4), t, z, s, nfr, nl, nfail, ngr, bad, frames(2,6), nf2, cls, ncured, k
+    logical :: sym, lprop, grnd, prem, allimp, alll
+    tau = reshape([1,2,3, 2,1,3, 3,2,1, 1,3,2], [3,4])
+    prem = .true.
+    nfr = 0; nl = 0; nfail = 0; ngr = 0; bad = 0
+    do t = 1, 4
+       do z = 0, 7
+          sym = .true.; lprop = .true.; grnd = .false.
+          do s = 1, 3
+             if (btest(z, s-1) .and. .not. btest(z, tau(s,t)-1)) sym = .false.
+             if (btest(z, s-1) .and. tau(s,t) /= s) lprop = .false.
+             if (tau(s,t) == s) grnd = .true.
+          end do
+          if (.not. sym) cycle
+          nfr = nfr + 1
+          if (((.not. prem) .or. lprop) .neqv. lprop) bad = bad + 1
+          if (lprop) then
+             nl = nl + 1
+          else
+             nfail = nfail + 1
+             if (grnd) ngr = ngr + 1
+          end if
+       end do
+    end do
+    write(*,'(A,I0,A,I0,A,I0,A,I0)') '   A8 three-point frames with symmetric zeros ', nfr, ': L holds ', nl, &
+         ', fails ', nfail, ', grounded counter-models ', ngr
+    call assert(bad == 0 .and. nfr == 20 .and. nl == 14 .and. nfail == 6, &
+         'A8 the rule is exact on every frame; twenty frames, fourteen on the line, six off')
+    call assert(ngr == nfail, 'A8 every counter-model is grounded: the bound needs no seatless frame')
+    ! two-point frames with symmetric zeros: identity with any zero set, the swap with none or both
+    nf2 = 0
+    do t = 0, 1
+       do z = 0, 3
+          if (t == 1 .and. .not. (z == 0 .or. z == 3)) cycle
+          nf2 = nf2 + 1
+          frames(1, nf2) = t; frames(2, nf2) = z
+       end do
+    end do
+    ncured = 0
+    do cls = 0, 2**nf2 - 1
+       allimp = .true.; alll = .true.
+       do k = 1, nf2
+          if (.not. btest(cls, k-1)) cycle
+          lprop = .not. (frames(1,k) == 1 .and. frames(2,k) /= 0)
+          if (.not. ((.not. prem) .or. lprop)) allimp = .false.
+          if (.not. lprop) alll = .false.
+       end do
+       if (allimp .neqv. alll) bad = bad + 1
+       if (allimp) ncured = ncured + 1
+    end do
+    write(*,'(A,I0,A,I0)') '   A8 two-point frame classes ', 2**nf2, ': cured ', ncured
+    call assert(bad == 0 .and. nf2 == 6 .and. ncured == 32, &
+         'A8 the cure theorem: a class is cured iff L already holds on it, 32 of 64')
+  end subroutine a8_premise_cure
+
+  subroutine a9_rows()
+    character(len=26) :: nm(23)
+    integer :: typing(23), gd(23), nsup(23), leg(23), census(8), k, tok, br, chn, mult, owed, ncross, bad
+    integer :: nleg(3), led(5), n, v, seat_rv, value_rv, void_rv, seattok, valtok
+    character(len=40) :: rr
+    integer(i16) :: p22, p1
+    nm = [character(len=26) :: 'P versus NP', 'Riemann Hypothesis', 'Navier-Stokes', 'Yang-Mills', 'Hodge', 'BSD', &
+         'Poincare', 'Goldbach', 'Twin primes', 'Legendre', 'abc', 'Jacobian', 'Mersenne primes', &
+         'Odd perfect numbers', 'Smooth 4D Poincare', 'Collatz', 'Hadwiger', 'Sunflower', 'Erdos-Straus', 'Beal', &
+         'Invariant subspace', 'Hilbert 16 second part', 'Lindelof / Montgomery PCC']
+    typing = [1,1,2,2,2,3,4, 1,1,1,1,1, 5,5,5, 6, 7,7,7,7, 8,8,8]
+    gd = -1; gd(1) = 0; gd(2) = 1
+    nsup = 0; nsup(7) = 1
+    leg = 3; leg(2) = 1; leg(1) = 2
+    census = 0
+    do k = 1, 23
+       census(typing(k)) = census(typing(k)) + 1
+    end do
+    call assert(all(census == [7,3,1,1,3,1,4,3]), 'A9 the world census 7, 3, 1, 1, 3, 1, 4, 3')
+    ! the RA cascade, its 512-input ledger against the kernel's GEO.ra_ledger theorems
+    led = 0
+    do n = 0, 511
+       v = cascade_ra(btest(n,8), btest(n,7), btest(n,6), btest(n,5), btest(n,4), btest(n,3), btest(n,2), &
+            btest(n,1), btest(n,0))
+       led(v) = led(v) + 1
+    end do
+    call assert(all(led == [256, 216, 36, 2, 2]), 'A9 the RA cascade ledger: 256 refused, 216 III, 36 II, 2 void, 2 A|RA')
+    seat_rv  = cascade_ra(.true., .false., .false., .true., .false., .true., .false., .true., .true.)
+    value_rv = cascade_ra(.true., .false., .false., .true., .true., .true., .false., .true., .true.)
+    void_rv  = cascade_ra(.true., .false., .false., .true., .false., .true., .false., .true., .false.)
+    call assert(seat_rv == RV_AGIVENRA .and. value_rv == RV_III .and. void_rv == RV_VOID, &
+         'A9 the seat line is compartment I, the value line III, and the seat line without its rider is void')
+    seattok = rv_token(seat_rv)
+    owed = 0; ncross = 0; bad = 0; nleg = 0
+    do k = 1, 23
+       call emit(.false., .true., gd(k), C_FORMAL, nsup(k), 1, tok, br, chn, mult)
+       rr = render(tok, br, mult)
+       owed = owed + mult
+       if (tok == T_CROSSED) ncross = ncross + 1
+       if (tok == T_CROSSED .neqv. k == 7) bad = bad + 1
+       select case (k)
+       case (1); if (trim(rr) /= '[HALT-LOCUS-O x1]') bad = bad + 1
+       case (2); if (trim(rr) /= '[HALT-LOCUS-XI x1]') bad = bad + 1
+       case (7); if (trim(rr) /= '[SEAL-LOCUS]') bad = bad + 1
+       case default; if (trim(rr) /= '[HALT-LOCUS x1]') bad = bad + 1
+       end select
+       if (to_economy(tok) == E_SEALED) then
+          valtok = TK_SEALED
+       else if (to_economy(tok) == E_OPN) then
+          valtok = TK_OPN
+       else
+          valtok = 0
+       end if
+       if (seattok == valtok) bad = bad + 1
+       nleg(leg(k)) = nleg(leg(k)) + 1
+       if (k <= 2 .or. k == 7) write(*,'(A,A26,A,A,A)') '   A9 ', nm(k), '  seat [A|RA]  value ', trim(rr), ''
+    end do
+    call assert(bad == 0, 'A9 every value line rendered as the kernel emits it, and parted from the seat line on every row')
+    call assert(owed == 22 .and. ncross == 1, 'A9 twenty-two bits owed, one crossing, the Poincare row')
+    call assert(all(nleg == [1, 1, 21]), 'A9 object legs: one bridged on the stage, one vacant by theorem, twenty-one owed')
+    p1 = landauer_scaled(300, 1); p22 = landauer_scaled(300, owed)
+    write(*,'(A,I0,A)') '   A9 price of the owed bits at 300 K: ', p22, ' x 10^-45 J'
+    call assert(p22 == 22_i16 * p1 .and. p22 > 0_i16, 'A9 the owed bits are priced at twenty-two exact floors')
+  end subroutine a9_rows
+
+  subroutine a10_pnf()
+    integer :: k, msk, i, cnt, cnts(6), m, nf, full, a, d, e, e2, npair, bad, ok_l, ok_r
+    integer :: npt, nb, rcode, dcode, ntau, tcode, p, g, nbar, pairs, x, y
+    integer :: rho(4), dd(4), tau(4)
+    logical :: wo, lhs, rhs, fac, pb, sep, isinv, heven, flip, found
+    ! the unconstrained odd family on k orbits is 2^k wide
+    do k = 1, 6
+       cnt = 0
+       do msk = 0, 2**(2*k) - 1
+          wo = .true.
+          do i = 0, k - 1
+             if (btest(msk, 2*i) .eqv. btest(msk, 2*i+1)) wo = .false.
+          end do
+          if (wo) cnt = cnt + 1
+       end do
+       cnts(k) = cnt
+    end do
+    write(*,'(A,6I4)') '   A10 wholly odd targets on k = 1..6 orbits: ', cnts
+    call assert(all(cnts == [2, 4, 8, 16, 32, 64]), 'A10 the odd family on k orbits is 2^k: six bits at the census frame')
+    ! the Width Law on every family of Boolean functions over two and three points
+    bad = 0
+    do m = 2, 3
+       nf = 2**m; full = nf - 1; npair = 0
+       do a = 1, 2**nf - 1
+          do d = 0, nf - 1
+             if (.not. btest(a, d)) cycle
+             ok_l = 1
+             do e = 0, nf - 1
+                if (.not. btest(a, e)) cycle
+                if (.not. btest(a, ieor(e, full))) ok_l = 0
+                do e2 = 0, nf - 1
+                   if (.not. btest(a, e2)) cycle
+                   if (e2 /= e .and. e2 /= ieor(e, full)) ok_l = 0
+                end do
+             end do
+             ok_r = 0
+             if (a == ior(ishft(1, d), ishft(1, ieor(d, full)))) ok_r = 1
+             lhs = (ok_l == 1); rhs = (ok_r == 1)
+             if (lhs .neqv. rhs) bad = bad + 1
+             if (rhs) npair = npair + 1
+          end do
+       end do
+       if (npair /= nf) bad = bad + 1
+    end do
+    call assert(bad == 0, 'A10 the Width Law: one bit wide iff the admissible family is a complement pair, every family')
+    ! the barrier criterion and the parity normal form on three and four points
+    bad = 0; nbar = 0; pairs = 0
+    do npt = 3, 4
+       nb = npt - 1
+       do rcode = 0, nb**npt - 1
+          do p = 1, npt
+             rho(p) = mod(rcode / nb**(p-1), nb)
+          end do
+          do dcode = 0, 2**npt - 1
+             pairs = pairs + 1
+             do p = 1, npt
+                dd(p) = merge(1, 0, btest(dcode, p-1))
+             end do
+             fac = .false.
+             do g = 0, 2**nb - 1
+                found = .true.
+                do p = 1, npt
+                   if (merge(1, 0, btest(g, rho(p))) /= dd(p)) found = .false.
+                end do
+                if (found) fac = .true.
+             end do
+             sep = .false.
+             do x = 1, npt
+                do y = 1, npt
+                   if (rho(x) == rho(y) .and. dd(x) /= dd(y)) sep = .true.
+                end do
+             end do
+             pb = .false.; ntau = 0
+             do tcode = 0, npt**npt - 1
+                do p = 1, npt
+                   tau(p) = mod(tcode / npt**(p-1), npt) + 1
+                end do
+                isinv = .true.; heven = .true.; flip = .false.
+                do p = 1, npt
+                   if (tau(tau(p)) /= p) isinv = .false.
+                   if (rho(tau(p)) /= rho(p)) heven = .false.
+                   if (dd(tau(p)) /= dd(p)) flip = .true.
+                end do
+                if (isinv) ntau = ntau + 1
+                if (isinv .and. heven .and. flip) pb = .true.
+             end do
+             if (npt == 3 .and. ntau /= 4) bad = bad + 1
+             if (npt == 4 .and. ntau /= 10) bad = bad + 1
+             if (((.not. fac) .neqv. pb) .or. (pb .neqv. sep)) bad = bad + 1
+             if (pb) nbar = nbar + 1
+          end do
+       end do
+    end do
+    write(*,'(A,I0,A,I0)') '   A10 record-target pairs on three and four points ', pairs, ', barriers ', nbar
+    call assert(bad == 0 .and. nbar > 0, &
+         'A10 the parity normal form: unreadable iff a record-even involution flips the target iff a pair separates')
+  end subroutine a10_pnf
+
+end module twin_apex
+
+! =====================================================================
+! SECTION 21 · THE RH ENGINE, EXECUTED. The finite and numeric content of the eighth Lean module,
+! RA_Li_Bridge.lean, re-executed by enumeration: the Li modes on the Bridge plane, stability as the
+! line property on every fold-invariant set of a finite plane, the Mertens identity, the toy of de
+! Bruijn's bound, Postulate M on every enumerated world of up to four zeros, the general identity at
+! complex points, and the Eisenstein and zeta controls as data. Every assert reads a computed quantity.
+! =====================================================================
+module twin_rali
+  use twin_kinds
+  use twin_battery
+  implicit none
+  private
+  public :: run_rali
+  ! the first ten ordinates of zeta, computed in the forging session by mpmath at twenty-five digits
+  real(dp), parameter :: GAM(10) = [14.134725141734694_dp, 21.022039638771555_dp, &
+       25.010857580145689_dp, 30.424876125859513_dp, 32.93506158773919_dp, &
+       37.586178158825671_dp, 40.918719012147495_dp, 43.327073280915_dp, &
+       48.00515088116716_dp, 49.773832477672302_dp]
+contains
+  pure function n1(h, t) result(v)
+    integer(i8), intent(in) :: h, t
+    integer(i8) :: v
+    v = (h - 2_i8)*(h - 2_i8) + 4_i8*(t*t)
+  end function n1
+  pure function n0(h, t) result(v)
+    integer(i8), intent(in) :: h, t
+    integer(i8) :: v
+    v = h*h + 4_i8*(t*t)
+  end function n0
+  pure function flow(d2, t) result(v)
+    integer, intent(in) :: d2, t
+    integer :: v
+    v = max(d2 - 2*t, 0)
+  end function flow
+
+  subroutine run_rali()
+    call section('SECTION 21 · THE RH ENGINE: the Li modes, stability as the line, the toy flow, ' // &
+         'Postulate M, the controls as data, the logical form')
+    call r1_modes()
+    call r2_stability()
+    call r3_mertens()
+    call r4_flow()
+    call r5_postulate_m()
+    call r6_general_identity()
+    call r7_controls()
+    call r8_logical_form()
+  end subroutine run_rali
+
+  subroutine r1_modes()
+    integer(i8) :: h, t
+    integer :: b1, b2, b3, b4
+    b1 = 0; b2 = 0; b3 = 0; b4 = 0
+    do h = -60_i8, 60_i8
+       do t = -25_i8, 25_i8
+          if (n1(h, t) - n0(h, t) /= 4_i8 - 4_i8*h) b1 = b1 + 1
+          if ((n1(h, t) == n0(h, t)) .neqv. (h == 1_i8)) b2 = b2 + 1
+          if (h < 1_i8 .and. .not. (n0(h, t) < n1(h, t))) b3 = b3 + 1
+          if (h > 1_i8 .and. .not. (n1(h, t) < n0(h, t))) b3 = b3 + 1
+          if (h /= 1_i8) then
+             if (.not. (n0(h, t) < n1(h, t) .or. n0(2_i8 - h, t) < n1(2_i8 - h, t))) b4 = b4 + 1
+          end if
+       end do
+    end do
+    call assert(b1 == 0, 'R1 the mode law N1 - N0 = 4 - 4h on 6171 plane points, RALi.N1_sub_N0')
+    call assert(b2 == 0, 'R1 a mode is unitary exactly on the line, RALi.unitary_iff_on_line')
+    call assert(b3 == 0, 'R1 left of the line the mode grows, right of it it dies, RALi.grows_left, RALi.dies_right')
+    call assert(b4 == 0, 'R1 an off-line zero or its mirror carries a growing mode, RALi.off_line_forces_growth')
+  end subroutine r1_modes
+
+  subroutine r2_stability()
+    integer :: msk, o, bad, i, k
+    integer(i8) :: t, ph(3), pt(3)
+    logical :: stable, online, inv, found
+    bad = 0
+    do msk = 0, 511
+       stable = .true.; online = .true.
+       do o = 0, 8
+          if (.not. btest(msk, o)) cycle
+          t = int(o/3, i8)
+          select case (mod(o, 3))
+          case (0)
+             call visit(1_i8, t)
+          case (1)
+             call visit(0_i8, t); call visit(2_i8, t)
+          case default
+             call visit(-1_i8, t); call visit(3_i8, t)
+          end select
+       end do
+       if (stable .neqv. online) bad = bad + 1
+    end do
+    call assert(bad == 0, 'R2 on all 512 fold-invariant zero sets of a five by three plane, no growing mode ' // &
+         'iff every zero on the line, RALi.stability_iff_line')
+    ph = [1_i8, 0_i8, 2_i8]; pt = [0_i8, 5_i8, 5_i8]
+    inv = .true.
+    do i = 1, 3
+       found = .false.
+       do k = 1, 3
+          if (ph(k) == 2_i8 - ph(i) .and. pt(k) == pt(i)) found = .true.
+       end do
+       if (.not. found) inv = .false.
+    end do
+    stable = .true.; online = .true.
+    do i = 1, 3
+       call visit(ph(i), pt(i))
+    end do
+    call assert(inv .and. (.not. stable) .and. (.not. online), 'R2 the mixed set is fold-invariant, off the line ' // &
+         'and unstable, RALi.mixed_is_fold_invariant, RALi.mixed_recurrence_fails')
+  contains
+    subroutine visit(h, tt)
+      integer(i8), intent(in) :: h, tt
+      if (n1(h, tt) > n0(h, tt)) stable = .false.
+      if (h /= 1_i8) online = .false.
+    end subroutine visit
+  end subroutine r2_stability
+
+  subroutine r3_mertens()
+    integer(i8) :: c
+    integer :: bad, k
+    real(dp) :: th, v, vmin
+    bad = 0
+    do c = -10000_i8, 10000_i8
+       if (3_i8 + 4_i8*c + (2_i8*c*c - 1_i8) /= 2_i8*((1_i8 + c)*(1_i8 + c))) bad = bad + 1
+       if (3_i8 + 4_i8*c + (2_i8*c*c - 1_i8) < 0_i8) bad = bad + 1
+    end do
+    call assert(bad == 0, 'R3 the Mertens identity 3 + 4c + (2c^2 - 1) = 2(1 + c)^2 >= 0 on 20001 integers, ' // &
+         'RALi.mertens_nonneg')
+    vmin = huge(1.0_dp)
+    do k = 0, 100000
+       th = 2.0_dp*acos(-1.0_dp)*real(k, dp)/100000.0_dp
+       v = 3.0_dp + 4.0_dp*cos(th) + cos(2.0_dp*th)
+       vmin = min(vmin, v)
+    end do
+    call assert(vmin > -1.0e-12_dp, 'R3 the Mertens positivity 3 + 4 cos t + cos 2t >= 0 at 100001 angles')
+  end subroutine r3_mertens
+
+  subroutine r4_flow()
+    integer :: d2, t, bm, br, bl, bh, bf, lam
+    logical :: up
+    bm = 0; br = 0; bl = 0; bh = 0; bf = 0
+    do d2 = 0, 200
+       lam = (d2 + 1)/2
+       if (flow(d2, lam) /= 0) bl = bl + 1
+       if ((flow(d2, 0) == 0) .neqv. (lam == 0)) bh = bh + 1
+       do t = 0, 150
+          if (flow(d2, t + 1) > flow(d2, t)) bm = bm + 1
+          if (flow(d2, t) == 0 .and. flow(d2, t + 1) /= 0) br = br + 1
+       end do
+    end do
+    do t = 1, 150
+       if (flow(0, t) /= flow(1, t)) bf = bf + 1
+    end do
+    up = flow(0, 7) == 0 .and. flow(1, 7) == 0 .and. flow(0, 0) == 0 .and. flow(1, 0) /= 0
+    call assert(bm == 0, 'R4 the width never grows along the toy flow, RALi.flow_monotone')
+    call assert(br == 0, 'R4 once every zero is real it stays real, RALi.reality_transported')
+    call assert(bl == 0 .and. bh == 0, 'R4 the strip closes at Lambda and the hypothesis is Lambda = 0, ' // &
+         'RALi.rh_iff_lambda_zero')
+    call assert(bf == 0, 'R4 after any positive time the flowed record forgets the bit, RALi.flowed_record_forgets')
+    call assert(up, 'R4 upstream both answers stay admissible, RALi.upstream_is_not_forced')
+  end subroutine r4_flow
+
+  subroutine r5_postulate_m()
+    integer :: n, w, i, k, c, st(4), tt, ss, bad, nseed, noff
+    logical :: on(4), seed, pm, line, lt(0:3), found, finv, bnd, tl, pw(0:3)
+    integer(i8) :: zh(3), zt(3)
+    bad = 0; nseed = 0; noff = 0; st = 0; on = .false.
+    do n = 0, 4
+       do w = 0, 8**n - 1
+          c = w
+          do i = 1, n
+             st(i) = mod(c, 8)/2; on(i) = mod(mod(c, 8), 2) == 1; c = c/8
+          end do
+          seed = .true.
+          do i = 1, n
+             if (st(i) == 0 .and. .not. on(i)) seed = .false.
+          end do
+          if (.not. seed) cycle
+          nseed = nseed + 1
+          do tt = 0, 3
+             lt(tt) = .true.
+             do i = 1, n
+                if (st(i) <= tt .and. .not. on(i)) lt(tt) = .false.
+             end do
+          end do
+          pm = .true.
+          do tt = 0, 3
+             do ss = 0, 3
+                if (lt(tt) .neqv. lt(ss)) pm = .false.
+             end do
+          end do
+          line = .true.
+          do i = 1, n
+             if (.not. on(i)) line = .false.
+          end do
+          if (pm .neqv. line) bad = bad + 1
+          if (.not. line) noff = noff + 1
+       end do
+    end do
+    call assert(bad == 0, 'R5 on every world of up to four zeros with the seed, Postulate M iff every zero ' // &
+         'on the line, TimeLocus.postulateM_iff_line')
+    call assert(nseed > 0 .and. noff > 0, 'R5 every seeded world with a located off-line zero refutes M, ' // &
+         'TimeLocus.postulateM_decides')
+    zh = [1_i8, 0_i8, 2_i8]; zt = [0_i8, 5_i8, 5_i8]
+    finv = .true.
+    do i = 1, 3
+       found = .false.
+       do k = 1, 3
+          if (zh(k) == 2_i8 - zh(i) .and. zt(k) == zt(i)) found = .true.
+       end do
+       if (.not. found) finv = .false.
+    end do
+    bnd = all(zh == 1_i8)
+    do tt = 0, 3
+       pw(tt) = all(zh == 1_i8)
+    end do
+    tl = all(pw .eqv. pw(0))
+    call assert(finv .and. (.not. bnd) .and. tl, 'R5 the counter-world: the fold at every time, a mirror pair ' // &
+         'off the line, unbound and timeless, TimeLocus.time_does_not_bind')
+  end subroutine r5_postulate_m
+
+  subroutine r6_general_identity()
+    integer :: k, bad1, bad2, bad3
+    integer(i8) :: s
+    real(dp) :: sg, gm, lhs, rhs, zabs
+    complex(dp) :: rho
+    s = 20260622_i8; bad1 = 0; bad2 = 0; bad3 = 0
+    do k = 1, 20000
+       s = mod(1103515245_i8*s + 12345_i8, 2147483648_i8); sg = -3.0_dp + 6.0_dp*real(s, dp)/2147483648.0_dp
+       s = mod(1103515245_i8*s + 12345_i8, 2147483648_i8); gm = -60.0_dp + 120.0_dp*real(s, dp)/2147483648.0_dp
+       rho = cmplx(sg, gm, dp)
+       if (abs(rho) < 1.0e-6_dp) cycle
+       lhs = abs(rho - 1.0_dp)**2 - abs(rho)**2
+       rhs = 1.0_dp - 2.0_dp*sg
+       if (abs(lhs - rhs) > 1.0e-9_dp*(1.0_dp + abs(rho)**2)) bad1 = bad1 + 1
+       zabs = abs(1.0_dp - 1.0_dp/rho)
+       if (abs(sg - 0.5_dp) > 1.0e-6_dp) then
+          if ((zabs > 1.0_dp) .neqv. (sg < 0.5_dp)) bad3 = bad3 + 1
+       end if
+    end do
+    do k = -600, 600
+       rho = cmplx(0.5_dp, 0.1_dp*real(k, dp), dp)
+       if (abs(abs(1.0_dp - 1.0_dp/rho) - 1.0_dp) > 1.0e-12_dp) bad2 = bad2 + 1
+    end do
+    call assert(bad1 == 0, 'R6 the general identity |rho - 1|^2 - |rho|^2 = 1 - 2 sigma at 20000 complex points')
+    call assert(bad2 == 0, 'R6 on the line every Li mode is unitary, |1 - 1/rho| = 1 at 1201 ordinates')
+    call assert(bad3 == 0, 'R6 off the line |z_rho| > 1 exactly when sigma < 1/2 at every drawn point')
+  end subroutine r6_general_identity
+
+  subroutine r7_controls()
+    integer :: k
+    real(dp) :: part, upper, tail, lz, pz, pi, g2
+    real(dp), parameter :: REALZ(4) = [-2.5_dp, -0.5_dp, 1.5_dp, 3.5_dp]
+    pi = acos(-1.0_dp)
+    tail = 2.0_dp/pi*(log(50.0_dp) + 1.0_dp)/50.0_dp
+    part = sum(1.0_dp/REALZ)
+    do k = 1, 10
+       g2 = GAM(k)**2
+       part = part + 2.0_dp*(g2 - 30.0_dp)/((25.0_dp + g2)*(36.0_dp + g2))
+    end do
+    upper = part + tail
+    write(*,'(A,F11.6,A,F11.6)') '   R7 Eisenstein lambda_1 of zeta(s)zeta(s-11), normalized: ', part, &
+         ' <= lambda_1 <= ', upper
+    call assert(upper < 0.0_dp, 'R7 the Eisenstein control as data: lambda_1 < 0 over its real zeros and the ' // &
+         'ordinates to height 50, tail bounded, a witness of the hypothesis of RALi.no_uniform_bridge')
+    lz = 1.0_dp + 0.57721566490153286_dp/2.0_dp - log(4.0_dp*pi)/2.0_dp
+    pz = 0.0_dp
+    do k = 1, 10
+       pz = pz + 1.0_dp/(0.25_dp + GAM(k)**2)
+    end do
+    write(*,'(A,F13.10,A,F13.10)') '   R7 zeta lambda_1 closed form ', lz, ', partial over ten ordinates ', pz
+    call assert(lz > 0.0_dp .and. pz <= lz .and. lz <= pz + tail/2.0_dp, 'R7 the zeta control: lambda_1 = ' // &
+         '1 + gamma/2 - log(4 pi)/2 > 0, bracketed by its partial sum and tail')
+  end subroutine r7_controls
+  subroutine r8_logical_form()
+    ! Part XIV of the engine executed exhaustively on finite domains. A zero set Z and a line predicate onL
+    ! on three points are 3-bit masks; the universal and the witness are computed by independent expressions.
+    integer :: z, o, k, n, v1, v2, v3, v4
+    logical :: univ, wit
+    v1 = 0; v2 = 0; v3 = 0; v4 = 0
+    do o = 0, 7
+       if (.not. all([((.not. btest(0, k)) .or. btest(o, k), k = 0, 2)])) v1 = v1 + 1
+    end do
+    do z = 0, 7
+       do o = 0, 7
+          univ = all([((.not. btest(z, k)) .or. btest(o, k), k = 0, 2)])
+          wit = any([(btest(z, k) .and. .not. btest(o, k), k = 0, 2)])
+          if (wit .and. univ) v2 = v2 + 1
+          if (univ .eqv. wit) v3 = v3 + 1
+       end do
+    end do
+    do n = 1, 255
+       if (all([(.not. btest(n, k), k = 0, 7)])) v4 = v4 + 1
+    end do
+    write(*,'(A)') '   R8 the logical form: 8 line predicates on the empty set, 64 zero-set pairs, 255 check patterns'
+    call assert(v1 == 0, 'R8 Theorem 70: over the empty zero set the line property holds for every line predicate')
+    call assert(v2 == 0, 'R8 Theorem 71: a located off-line zero refutes the line property on every pair')
+    call assert(v3 == 0, 'R8 Theorem 72: the line property holds exactly when no off-line zero exists, 64 of 64')
+    call assert(v4 == 0, 'R8 Theorem 73: one failing index refutes the universal, 255 of 255 patterns')
+  end subroutine r8_logical_form
+end module twin_rali
+
+! SECTION 22 · THE DIRECTIONAL CAN'T, EXECUTED. The finite content of the ninth Lean module,
+! Directional_Cant.lean: every setting of the hypothesis, its provability and the provability of
+! its denial, eight in all, screened by the two fields, sigma1 and sound_neg, and read against
+! D1 to D5. The field sigma1 is the carried Sigma-1 completeness; nothing here proves it.
+module twin_dircant
+  use twin_battery
+  implicit none
+  private
+  public :: run_dircant
+contains
+  subroutine run_dircant()
+    integer :: r, pr, pn, nadm, v1, v3, nwit
+    logical :: rh, prv, prn
+    call section('SECTION 22 · THE DIRECTIONAL CAN''T: the two fields and the five theorems on the eight finite settings')
+    nadm = 0; v1 = 0; v3 = 0; nwit = 0
+    do r = 0, 1
+      do pr = 0, 1
+        do pn = 0, 1
+          rh = (r == 1); prv = (pr == 1); prn = (pn == 1)
+          if (.not. ((rh .or. prn) .and. .not. (prn .and. rh))) cycle
+          nadm = nadm + 1
+          if (.not. prn .and. .not. rh) v1 = v1 + 1
+          if (rh .neqv. (.not. prn)) v3 = v3 + 1
+          if (rh .and. .not. prv) nwit = nwit + 1
+        end do
+      end do
+    end do
+    write(*,'(A)') '   D1 to D5 on the 8 settings of the hypothesis, its provability and the denial''s'
+    call assert(nadm == 4, 'D0 the two fields admit 4 of the 8 settings, the denial provable exactly when it holds')
+    call assert(v1 == 0, 'D1 and D2: where the denial is not provable the hypothesis holds, 4 of 4')
+    call assert(v3 == 0, 'D3: the hypothesis holds exactly when the denial is not provable, 4 of 4')
+    call assert(nwit == 1, 'D4 and D5: one admitted setting holds the hypothesis unproved; not proving it decides nothing')
+  end subroutine run_dircant
+end module twin_dircant
+
+
 program trisduction_codex_twin
   use twin_kinds
   use twin_battery
@@ -1412,6 +2281,9 @@ program trisduction_codex_twin
   use twin_posits,   only: run_posits
   use twin_locus,    only: run_locus
   use twin_bridge,   only: run_bridge
+  use twin_apex,     only: run_apex
+  use twin_rali,     only: run_rali
+  use twin_dircant,  only: run_dircant
   implicit none
   integer :: a, b, c, before
   type(rat) :: x, y, z
@@ -1468,6 +2340,9 @@ program trisduction_codex_twin
   call run_crossing()
   call run_locus()
   call run_bridge()
+  call run_apex()
+  call run_rali()
+  call run_dircant()
 
   before = checks
   call run_posits(before)

@@ -443,10 +443,9 @@ theorem anchored_derives_monism {S : Type} (A : AnchoredMonism S) :
    fun n m => ⟨fun _ => anchored_closes A m, fun _ => anchored_closes A n⟩,
    A.seed⟩
 
-/-- 35. PERELMAN, CALIBRATED. A quantity monotone along one flow (Perelman's W-entropy,
-nondecreasing along Ricci flow coupled to the conjugate heat equation; here a discrete flow on its time index) is an anchored
-monism witness for the property "never below its start." The Lyapunov witness is a
-derivative of the monism witness, with its transport proved. -/
+/-- 35. THE PERELMAN SHAPE. A quantity monotone along one flow, here a discrete flow on its
+time index, is an anchored monism witness for the property "never below its start." Perelman's
+W-entropy along Ricci flow has this shape; it is a structural analogue and is not formalized. -/
 def lyapunovWitness (W : Nat → Int) (mono : ∀ n, W n ≤ W (n + 1)) : AnchoredMonism Nat :=
   ⟨Nat.succ, fun n => W 0 ≤ W n, fun n h => Int.le_trans h (mono n), 0, Int.le_refl _⟩
 
@@ -523,7 +522,8 @@ def Lam (d2 : Nat) : Nat := (d2 + 1) / 2
 
 theorem real_at_Lam (d2 : Nat) : realAt d2 (Lam d2) := by unfold realAt flow Lam; omega
 
-/-- 40. RH is Λ = 0: ζ sits exactly at the critical time of its own flow. -/
+/-- 40. In the toy, the strip is closed at time zero iff Λ = 0. For ζ, RH ↔ Λ = 0 is the cited
+result of Newman with Rodgers and Tao and enters the cone as `hLam`. -/
 theorem rh_iff_lambda_zero (d2 : Nat) : realAt d2 0 ↔ Lam d2 = 0 := by
   unfold realAt flow Lam
   exact ⟨fun h => by omega, fun h => by omega⟩
@@ -628,13 +628,13 @@ the flow (upstream) IS the bridge's read, the unity posit, the monism field, the
 theorem one_gap (H : Hunt) (r s : Reg5) : D5 H r ↔ D5 H s :=
   (hunt_cone H r).trans (hunt_cone H s).symm
 
-/-- 46. THE HALT. Any further reformulation found by a further hunt lands on the same apex:
-the regress adds no new gap. The sweep stops at one point. -/
+/-- 46. THE HALT. Every proposition proved equivalent to the hypothesis lands on the same apex
+as the five readings; which future propositions are equivalent is not decided here. -/
 theorem regress_halts (H : Hunt) (P : Prop) (hP : P ↔ H.L.RH) (r : Reg5) : P ↔ D5 H r :=
   hP.trans (hunt_cone H r).symm
 
-/-- 47. And nothing weaker closes it: a true premise independent of the apex adds nothing
-(Theorem E of the paper, here on the hunt's apex). -/
+/-- 47. Given a true proposition Q, proving Q → RH is the same as proving RH: conditioning on a
+true premise adds nothing (Theorem E of the prior paper, here on the hunt's apex). -/
 theorem nothing_weaker (H : Hunt) (Q : Prop) (hq : Q) : (Q → H.L.RH) ↔ H.L.RH :=
   ⟨fun f => f hq, fun h _ => h⟩
 
@@ -1016,3 +1016,43 @@ theorem misaddressed_general (R : Resource) (Y : Frame) (hY : ¬ LineProperty Y)
 end DotRH
 
 #print axioms DotRH.misaddressed_general
+
+/-! ## PART XIV · The logical form of the hypothesis: the only existence lives in the denial. -/
+namespace LogicalForm
+
+-- Theorem 70.
+/-- A universal sentence carries no existential import: over an empty zero set the line
+    property holds vacuously. The hypothesis posits no object. -/
+theorem universal_posits_nothing {α : Type} (onL : α → Prop) :
+    ∀ z : α, (fun _ => False) z → onL z :=
+  fun _ h => h.elim
+
+-- Theorem 71.
+/-- The denial posits an object: a located zero off the line refutes the hypothesis. -/
+theorem denial_posits_a_witness {α : Type} (Z onL : α → Prop) :
+    (∃ z, Z z ∧ ¬ onL z) → ¬ ∀ z, Z z → onL z :=
+  fun ⟨z, hz, off⟩ h => off (h z hz)
+
+-- Theorem 72.
+/-- With a decidable line predicate, the hypothesis fails only by a witness: it holds iff no
+    off-line zero exists. The denial carries the whole existential load. -/
+theorem fails_only_by_witness {α : Type} (Z onL : α → Prop) [∀ z, Decidable (onL z)] :
+    (∀ z, Z z → onL z) ↔ ¬ ∃ z, Z z ∧ ¬ onL z := by
+  constructor
+  · intro h ⟨z, hz, off⟩; exact off (h z hz)
+  · intro h z hz
+    exact Decidable.byContradiction (fun off => h ⟨z, hz, off⟩)
+
+-- Theorem 73.
+/-- A witness is a finite check: for a decidable predicate on the naturals, one index at which
+    the check fails refutes the universal, and the check at that index is a computation. -/
+theorem witness_is_a_finite_check (bad : Nat → Bool) (n : Nat) (h : bad n = true) :
+    ¬ ∀ m, bad m = false :=
+  fun hall => by rw [hall n] at h; cases h
+
+end LogicalForm
+
+#print axioms LogicalForm.universal_posits_nothing
+#print axioms LogicalForm.denial_posits_a_witness
+#print axioms LogicalForm.fails_only_by_witness
+#print axioms LogicalForm.witness_is_a_finite_check

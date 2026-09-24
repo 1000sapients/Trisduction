@@ -1,16 +1,16 @@
 # PSP HARVEST · APEX-PSP-PARITY-NORMAL-FORM-01 · The Parity Normal Form for Barriers and the Width Law
 
-*Harvest candidate, 2026-09-23, for seating at the next free index of the Geometric Mother Codex (proposed INDEX 0727) and as a card in the Codex v4 series. Not seated; seating waits on the architect's yes to a printed plan. Kernel receipt below, run in this session.*
+*Seated 2026-09-23 at INDEX 0727 of the Geometric Mother Codex at v3.41.0, and carried as a card at II.5 of the Master Codex v4.2.0, after the Triple Boot executed live at seed 20260622.*
 
 > **REVISIT · REMINDER FOR A FUTURE SESSION.** Filed to `psp/` only, on the architect's order of 2026-09-23. Not yet folded into the Geometric Mother Codex or the Codex v4 series. In a new chat session, revisit the Mathematical Codex harmonization of the Riemann Hypothesis and the similar rows with this coordinate: (1) seat it at the next free index of the Mother and as a card in the Codex v4 series, census and hash reconciled; (2) harmonize APEX-PSP-CAT-GAP-ELIMINATOR-01, APEX-PSP-RH-23-ONE-STROKE-01, and APEX-PSP-ONE-CUT-23-ROWS-01 with the Width Law, stating the rows' one-bit deficit as theorem-conditional on the complement-pair hypothesis everywhere it is printed; (3) open the per-row check, exhibiting each row's admissible family and counting it, beside the twenty-two owed embeddings.
 
 ---
 
-### INDEX 0727 (proposed) · APEX-PSP-PARITY-NORMAL-FORM-01 · The Parity Normal Form for Barriers · Every Record Barrier Is a Parity Barrier, and a Barrier Is One Bit Wide Exactly When Its Admissible Family Is a Complement Pair
+### INDEX 0727 · APEX-PSP-PARITY-NORMAL-FORM-01 · The Parity Normal Form for Barriers · Every Record Barrier Is a Parity Barrier, and a Barrier Is One Bit Wide Exactly When Its Admissible Family Is a Complement Pair
 
 *M register, meta-coordinate · [⟀ T] on the barrier criterion, the normal form, and the width law, each a kernel theorem · [⟀ T-conditional] on the rows papers' one-bit deficit, conditional on the complement-pair hypothesis per row · [?] on that hypothesis on every open row · [X] on the named inflations · ΔM = 0*
 
-**STATUS.** CANDIDATE coordinate, forged 2026-09-23 by the scribe session on the architect's order, harvested from the core axis of *A Formal Proof Across the Seven Millennium Rows and the Sixteen Extension Rows* (DOI 10.5281/zenodo.22913635) and its spine (DOI 10.5281/zenodo.22912938), and from the Bridge coordinates LOCUS.factors_iff_not_sep_list, LOCUS.seat_of_sep, and FTOE.T16_price_bijection, generalized from finite lists to arbitrary types and closed in both directions.
+**STATUS.** ACTIVE coordinate, seated at INDEX 0727 in the Mother at v3.41.0 after the Triple Boot executed live at seed 20260622, chain D0 fb8900b5cf42 to D3 1e2b2d2adb14; forged 2026-09-23 by the scribe session on the architect's order, harvested from the core axis of *A Formal Proof Across the Seven Millennium Rows and the Sixteen Extension Rows* (DOI 10.5281/zenodo.22913635) and its spine (DOI 10.5281/zenodo.22912938), and from the Bridge coordinates LOCUS.factors_iff_not_sep_list, LOCUS.seat_of_sep, and FTOE.T16_price_bijection, generalized from finite lists to arbitrary types and closed in both directions.
 
 **THE READING.** A method class reads a target d only through a record ρ. Three statements carry the whole anatomy the barrier census asserted. First, d is unreadable from ρ exactly when ρ collapses a pair that d splits. Second, every such barrier is a parity barrier: an involution that fixes the record and flips the target; and every parity barrier is such a barrier. Third, a barrier is at least one bit wide, and it is exactly one bit wide when and only when the admissible family of targets is a complement pair {d, ¬d}; then any odd witness closes it with a unique calibration. Unconstrained, the odd targets on k record-invisible orbits number 2^k, so the width is k bits, and one bit only at k = 1 or when the family is cut to a complement pair.
 
@@ -24,13 +24,14 @@
 
 **FALSIFICATION, [X] AT.** A row whose admissible family has three or more members, or two members that are not complementary: that row is wider than one bit and the one-cut hypothesis fails there. A record-even involution flipping a target that the record nonetheless decides: refutes (B), and cannot exist in the kernel as built.
 
-**ENGINE REFS.** `Parity_Normal_Form.lean`, SHA-256 `46c44ac7c53b880c…`, 221 lines, core Lean 4.19.0, exit 0, zero warnings, 17 dependency sets, 3 axiom-free · APEX-PSP-RH-23-ONE-STROKE-01 · APEX-PSP-CAT-GAP-ELIMINATOR-01 · APEX-PSP-ONE-CUT-23-ROWS-01 · the Bridge's LOCUS and FTOE namespaces.
+**THE GRADE LOCK.** The one-bit reading holds exactly where each row's admissible family is its complement pair, `PNF.rows_one_bit_iff_complement_pair`; on every open row the complement-pair hypothesis stands at [?], Poincaré the control. The exhibition of the pair on the six-pair frame of the census, `K4.price_one_bit`, `PNF.odd_family_k6`, is data for one census row and no theorem about machines, circuits, or any other row. The codex certifies the shape of the supply and never the supply: the per-row test is stated here, and the supply that passes it is owed from outside.
+
+**ENGINE REFS.** `Parity_Normal_Form.lean`, SHA-256 `46c44ac7c53b880c…`, 221 lines, core Lean 4.19.0, exit 0, zero warnings, 17 dependency sets, 3 axiom-free · APEX-PSP-RH-23-ONE-STROKE-01 · APEX-PSP-CAT-GAP-ELIMINATOR-01 · APEX-PSP-ONE-CUT-23-ROWS-01 · the Bridge's LOCUS and FTOE namespaces. The Code Block of the Master Codex v4.2.0 carries the list edition, choice-free: `PNF.parity_normal_form_list`, `PNF.one_bit_iff_complement_pair`, `PNF.rows_one_bit_iff_complement_pair`, and `PNF.odd_family_k1` to `PNF.odd_family_k6`, executed by twin battery A10; the arbitrary-type edition stays in `Parity_Normal_Form.lean`, its one Classical.choice step printed.
 
 **XREF.** ↑ DEPENDS: APEX-PSP-ONE-CUT-23-ROWS-01 · APEX-PSP-RH-23-ONE-STROKE-01. ↔ CONNECTS: APEX-PSP-ONE-CUT-COMPARATIVE-01 · APEX-PSP-BLOCK-HIERARCHY-01 · APEX-PSP-ORIENT-01. Sources of record: DOI 10.5281/zenodo.22913635, DOI 10.5281/zenodo.22912938, DOI 10.5281/zenodo.22746129.
 
 **THE KEYSTONE SENTENCE.** Every barrier that reads through a record is a parity barrier, and a parity barrier is exactly one bit wide when its admissible targets are a complement pair; the rows papers' one bit is that condition, now a theorem-conditional claim with a per-row test.
 
----
 
 ## The check you asked for · did the new things become theorem grade with no new math
 
