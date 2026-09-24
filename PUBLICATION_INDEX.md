@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**73 works · 91 Zenodo deposits.**
+**74 works · 93 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 67 / 73 | 91% |
-| Git PDF | 41 / 73 | 56% |
-| Internet Archive | 27 / 73 | 36% |
-| PhilArchive | 4 / 73 | 5% |
+| Zenodo | 68 / 74 | 91% |
+| Git PDF | 42 / 74 | 56% |
+| Internet Archive | 28 / 74 | 37% |
+| PhilArchive | 4 / 74 | 5% |
 
-Status: 66 live, 7 unknown.
+Status: 67 live, 7 unknown.
 
 ## Coverage gaps
 
@@ -133,8 +133,9 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
-| `trisduction-the-codex` | Trisduction: The Codex | Master Codex | live | [pdf](master/Codex%20v4/Trisduction_The_Codex_v1_0_3.pdf) | `10.5281/zenodo.22911009` | 1 | [ia](https://archive.org/details/trisduction-the-codex) | — | 2026-09-23 |
+| `trisduction-the-codex` | Trisduction: The Codex | Master Codex | live | [pdf](master/Codex%20v4/Trisduction_The_Codex_v1_1_0.pdf) | `10.5281/zenodo.22911009` | 2 | [ia](https://archive.org/details/trisduction-the-codex) | — | 2026-09-23 |
 | `rows-from-existence-alone` | A Formal Proof Across the Seven Millennium Rows and the Sixteen Extension Rows from Existence A | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Rows_From_Existence_Alone_v1_1_0.pdf) | `10.5281/zenodo.22913634` | 1 | [ia](https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone) | — | 2026-09-23 |
+| `rh-has-one-address` | A Formal Completed Proof That the Riemann Hypothesis Has One Address and Not a Sequence of Miss | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_Has_One_Address_v1_0_0.pdf) | `10.5281/zenodo.22929636` | 1 | [ia](https://archive.org/details/formal-completed-proof-riemann-hypothesis-one-address) | — | 2026-09-23 |
 | `rh-from-existence-alone` | A Formal Proof of Riemann Hypothesis from Existence Alone, the Sign Excepted by Theorem: The Co | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_From_Existence_Alone_v1_5_2.pdf) | `10.5281/zenodo.22912937` | 1 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | — | 2026-09-23 |
 | `rh-in-its-original-form` | The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus and the Cros | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_In_Its_Original_Form_v1_0_6.pdf) | `10.5281/zenodo.22857137` | 1 | [ia](https://archive.org/details/riemann-hypothesis-in-its-original-form) | — | 2026-09-20 |
 | `one-bit-across-the-wall` | One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three R | P versus NP and Foundations | live | [pdf](Publication%20Library/Mathematics/Foundations%20of%20Logic/Odd-Supply%20Arc/One_Bit_Across_the_Wall_MathJournal.pdf) | `10.5281/zenodo.22746128` | 1 | — | — | 2026-09-14 |
@@ -243,10 +244,11 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `orthogonal-fertile-logos` | ORTHOGONAL FERTILE LOGOS: Triaxial Verification, Displacement-as-Creation, and the Tw | `10.5281/zenodo.20575676` | 1 | — | 2026-06-07 |
 | `on-time` | On Time: The Past Absolved, the Present Cutting, and the Future Held. A Trisductive D | `10.5281/zenodo.20575693` | 1 | — | 2026-06-07 |
 
-### Riemann Hypothesis (7)
+### Riemann Hypothesis (8)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `rh-has-one-address` | A Formal Completed Proof That the Riemann Hypothesis Has One Address and Not a Sequen | `10.5281/zenodo.22929636` | 1 | [ia](https://archive.org/details/formal-completed-proof-riemann-hypothesis-one-address) | 2026-09-23 |
 | `rh-from-existence-alone` | A Formal Proof of Riemann Hypothesis from Existence Alone, the Sign Excepted by Theor | `10.5281/zenodo.22912937` | 1 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | 2026-09-23 |
 | `rh-in-its-original-form` | The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus an | `10.5281/zenodo.22857137` | 1 | [ia](https://archive.org/details/riemann-hypothesis-in-its-original-form) | 2026-09-20 |
 | `rh-termination-cascade-spec` | A FORMAL PROOF OF RIEMANN HYPOTHESIS TERMINATION, WITH A THEOREM-GRADE CASCADE SPECIF | `10.5281/zenodo.21900517` | 1 | — | 2026-08-12 |
@@ -313,12 +315,13 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `closure-and-the-limits-of-forced-results` | Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When | `10.5281/zenodo.22683805` | 1 | [ia](https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026) | — |
 | `anchoring-axioms-navier-stokes` | Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for  | `10.5281/zenodo.22670331` | 1 | [ia](https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026) | — |
 
-## Zenodo version chains (15)
+## Zenodo version chains (16)
 
 Works carrying more than one deposit. Full per-version DOIs and checksums are in `Zenodo Snapshot [2026-09-01]/MANIFEST.md`.
 
 | Work key | Versions | Concept DOI | Latest version DOI | First | Latest |
 |---|---|---|---|---|---|
+| `trisduction-the-codex` | 2 | `10.5281/zenodo.22911009` | `10.5281/zenodo.22914388` | 2026-09-23 | 2026-09-23 |
 | `master-codex-unabridged` | 7 | `10.5281/zenodo.20576757` | `10.5281/zenodo.22217824` | 2026-06-07 | 2026-09-01 |
 | `master-codex-condensed` | 2 | `10.5281/zenodo.20175604` | `10.5281/zenodo.22217783` | 2026-05-14 | 2026-09-01 |
 | `geometry-convergent-epistemic-warrant` | 3 | `10.5281/zenodo.19345045` | `10.5281/zenodo.22217812` | 2026-03-31 | 2026-09-01 |
