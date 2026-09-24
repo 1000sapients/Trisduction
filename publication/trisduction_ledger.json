@@ -2621,6 +2621,39 @@
    "superseded_by": null,
    "note": "Sealed rows2 r6 at v1.1.0. Spine: rh-from-existence-alone (10.5281/zenodo.22912937). Seat assigned by the grounding reading on all 23 rows; value one bit each, 22 owed, Poincare recorded crossed; one row embedded, 22 embeddings owed. Lean sha 0ce3de5a2315, twin sha fa3b0417fd56, pdf md5 8dedf85f (git, Zenodo), a100c2b5 (IA). Artifact commit 83cf57a.",
    "extra": {}
+  },
+  "rh-has-one-address": {
+   "title": "A Formal Completed Proof That the Riemann Hypothesis Has One Address and Not a Sequence of Missing Pieces: Li's Modes Unitary Exactly on the Critical Line, Stability Proved Equivalent to the Line Property, and Five Readings Collapsed onto One Seat · Trisduction in Core Lean 4",
+   "domain": "Riemann Hypothesis",
+   "status": "live",
+   "first_published": "2026-09-23",
+   "last_updated": "2026-09-23",
+   "git": {
+    "md": "protocols/RH One Bit/RH_Has_One_Address_v1_0_0.md",
+    "pdf": "protocols/RH One Bit/RH_Has_One_Address_v1_0_0.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": "22929636",
+    "concept_doi": "10.5281/zenodo.22929636",
+    "latest_version_doi": "10.5281/zenodo.22929637",
+    "latest_record": 22929637,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "formal-completed-proof-riemann-hypothesis-one-address",
+    "url": "https://archive.org/details/formal-completed-proof-riemann-hypothesis-one-address",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Self-audit rh1 (7 rounds, HALT-STALE) on the body; rh2 (4 rounds, HALT-DIVERGENT) on 6.10, 6.11, Parts XI to XIII; SELF controls, aperture open. Reduction proved: six readings one proposition, Postulate M equivalent to the hypothesis, demand misaddressed at the foundation; the hypothesis itself not claimed. Lean sha 1c56b2a6, 1018 lines, 75 sets; pdf md5 c769a243 (git, Zenodo), 0a2e2556 (IA, uncompressed). Artifact commits 8f3b501..f25847f, index a0aade5.",
+   "extra": {}
   }
  }
 }
