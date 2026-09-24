@@ -2627,10 +2627,10 @@
    "domain": "Riemann Hypothesis",
    "status": "live",
    "first_published": "2026-09-23",
-   "last_updated": "2026-09-23",
+   "last_updated": "2026-09-24",
    "git": {
-    "md": "protocols/RH One Bit/RH_Has_One_Address_v1_0_0.md",
-    "pdf": "protocols/RH One Bit/RH_Has_One_Address_v1_0_0.pdf",
+    "md": "protocols/RH One Bit/RH_Has_One_Address_v1_2_0.md",
+    "pdf": "protocols/RH One Bit/RH_Has_One_Address_v1_2_0.pdf",
     "editions": []
    },
    "zenodo": {
@@ -2652,7 +2652,7 @@
    },
    "supersedes": null,
    "superseded_by": null,
-   "note": "Self-audit rh1 (7 rounds, HALT-STALE) on the body; rh2 (4 rounds, HALT-DIVERGENT) on 6.10, 6.11, Parts XI to XIII; SELF controls, aperture open. Reduction proved: six readings one proposition, Postulate M equivalent to the hypothesis, demand misaddressed at the foundation; the hypothesis itself not claimed. Lean sha 1c56b2a6, 1018 lines, 75 sets; pdf md5 c769a243 (git, Zenodo), 0a2e2556 (IA, uncompressed). Artifact commits 8f3b501..f25847f, index a0aade5.",
+   "note": "v1.2.0: self-audit rh1 (7 rounds, HALT-STALE), rh2 (4 rounds, HALT-DIVERGENT), rh3 on an external review (4 rounds, HALT-STALE); Section 6.12, the logical form, added after rh3, unaudited. SELF controls, aperture open. Reduction proved; the hypothesis itself not claimed. Lean RA_Li_Bridge_v1_2_0.lean sha f2d0f4e3, 1058 lines, 79 sets. PDF md5 9fbb971d on git and on Zenodo 22929637, replaced in place by the architect on 2026-09-24 under the same DOI (record metadata still reads version 1.0.0); IA md5 cf67345a (uncompressed), replaced 2026-09-24. v1.0.0 artifacts retained in git at protocols/RH One Bit/*_v1_0_0.* and RA_Li_Bridge.lean. v1.2.0 commits fd785d1..65d1eb1, index c899366.",
    "extra": {}
   }
  }
