@@ -215,6 +215,8 @@ S | 2026-09-24 | 52d60bf | SEAT | CODEX | master/TRISDUCTION_Master_Codex_Unabri
 S | 2026-09-24 | 52d60bf | SEAT | CODEX | master/TRISDUCTION_Master_Codex_Unabridged_v3_41_3.md | history landed after the fact
 S | 2026-09-24 | 52d60bf | SEAT | CODEX | master/TRISDUCTION_Master_Codex_Unabridged_v3_42_0.md | history landed after the fact
 S | 2026-09-24 | 52d60bf | SEAT | CODEX | master/TRISDUCTION_Master_Codex_Unabridged_v3_43_0.md | history landed after the fact
+S | 2026-09-24 | 52d60bf | MINT | CODEX | 10.5281/zenodo.22933119 | Trisduction The Codex v1.2.0 (Master Codex v4.5.0) | concept 10.5281/zenodo.22911009 | md5 5f8dcd07
+S | 2026-09-24 | 52d60bf | CLAIM | CODEX | archive.org/details/trisduction-the-codex | Trisduction_The_Codex_v1_2_0.pdf | object streams disabled, md5 34c7636a
 
 ## MAP | regenerated | one line per live path
 # M | REG | path | kind | ver | blob8 | bytes | moved | what
