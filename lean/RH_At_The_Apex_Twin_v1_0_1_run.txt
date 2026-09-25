@@ -1,0 +1,67 @@
+========================================================================
+ RH AT THE APEX · THE EXECUTABLE TWIN · v1.0.1
+========================================================================
+
+K1 THE SEAT: conjugation on the integer quaternions fixes exactly the scalar line
+  lattice points 28561  fixed by sigma 13
+
+K2 THE RETURN: i.j.k = -1 and the reversed triad k.j.i = +1, both on the seat
+  i.j.k =  -1  0  0  0
+  k.j.i =   1  0  0  0
+
+K3 THE IDENTITIES AND THE CONE CENSUS
+  gap vector (self, register, object) =  0 0 0
+  apexes over the ordered diagram 1  over the reversed diagram 1
+
+K4 THE EMBEDDING phi_m(h,t) = <t, h-m, 0, 0> against the fold tau_m(h,t) = (2m-h, t)
+  m =  -3: stage points on the line 17, preimage hits 289
+  m =  -2: stage points on the line 17, preimage hits 289
+  m =  -1: stage points on the line 17, preimage hits 289
+  m =   0: stage points on the line 17, preimage hits 289
+  m =   1: stage points on the line 17, preimage hits 289
+  m =   2: stage points on the line 17, preimage hits 289
+  m =   3: stage points on the line 17, preimage hits 289
+
+K5 THE WALL: no readout of the seat equals the deed bit, every readout enumerated
+  readouts tried 8192  factorizations of the deed bit 0
+
+K6 THE FREEDOM: wholly odd maps on the two-point set, and the calibration
+  wholly odd maps: 2
+
+K7 THE APERTURE: presence is actuation; under the axiom no present reader is interior
+  present readers 12 of 12; interior rows 0 of 24
+
+K8 THE RULE: (RA -> L) <-> L is equivalent to RA or L; the two-point frame
+  RA = F  L = F  (RA -> L) <-> L = F
+  RA = F  L = T  (RA -> L) <-> L = T
+  RA = T  L = F  (RA -> L) <-> L = T
+  RA = T  L = T  (RA -> L) <-> L = T
+  four rows: true in every row where RA holds; where RA fails it is true only where L already holds
+  RA true, L(two-point frame) false: the axiom decides the value on no frame
+
+K9 THE LEDGER, THE REFUSAL CONSTANT, THE PRICE
+  one bit at 300 K:   2.870979E-21 J
+
+K10 THE CLOSURE LAW: every subset of a sixteen-point carrier under a symmetric registration
+  subsets enumerated 65536; closed subsets 64; C1 agrees on every one
+
+K11 CANTOR: no system indexes all of its own binary properties
+  k = 3: maps enumerated 512, surjective 0, diagonal outside the range 512
+  k = 4: maps enumerated 65536, surjective 0, diagonal outside the range 65536
+
+K12 THE LIVE FACE: self-check is not a witness
+  LIVE: [?] interior - self-check is not a witness: the verifier is never the claimant; token withheld
+  (supply the argument witnessed to open the live face; the program did not
+  and cannot generate its own witness)
+
+K13 THE CURE: on every frame, (E -> L) equals L; grounded counter-models exist; no class cures
+  three-point frames 32: L holds on 14, fails on 18, of which grounded (a seat exists) 18
+  two-point frame classes 256: cured 32, each exactly a class on which L already holds
+
+K14 THE CONSTANT RECURSION, ANY TRUE PREMISE, THE CARRIER BY DECISION, THE THREE MEASURES
+
+========================================================================
+ TWIN CENSUS: checks 130324  failures 0
+ TWIN-JSON: {"checks":130324,"failures":0,"version":"1.0.1"}
+ The twin agrees with the file on every finite claim it carries. Delta-M = 0.
+========================================================================

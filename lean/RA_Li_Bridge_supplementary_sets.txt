@@ -1,0 +1,17 @@
+'RALi.ra_holds_in_model' does not depend on any axioms
+'RALi.mertens_identity' depends on axioms: [propext, Quot.sound]
+'RALi.N1_sub_N0' depends on axioms: [propext, Quot.sound]
+'RALi.grows_left' depends on axioms: [propext, Quot.sound]
+'RALi.dies_right' depends on axioms: [propext, Quot.sound]
+'RALi.real_at_Lam' depends on axioms: [propext, Quot.sound]
+'RALi.iter_succ' depends on axioms: [propext, Quot.sound]
+'RALi.leg_bridge' does not depend on any axioms
+'RALi.leg_unity' does not depend on any axioms
+'RALi.leg_monism' depends on axioms: [propext, Quot.sound]
+'RALi.leg_transport' depends on axioms: [propext, Quot.sound]
+'RALi.leg_upstream' does not depend on any axioms
+'TimeLocus.test_same_locus' does not depend on any axioms
+'TimeLocus.test_fold_inv' does not depend on any axioms
+'TimeLocus.test_not_bound' does not depend on any axioms
+'TimeLocus.witness_proves_bound' does not depend on any axioms
+'DotRH.dot_outside_economy' does not depend on any axioms
