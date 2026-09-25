@@ -2593,7 +2593,11 @@
       "supersedes": null,
       "superseded_by": null,
       "note": "Sealed rhapex5 r5 at v1.5.0; v1.5.2 claim-free relative to it. Seat proved with existence the only posit; value one bit, unreachable (Thm I). Lean sha d671051e99b8, twin sha 47670197aa8e, pdf md5 8062b041 (git, Zenodo), e5ee8782 (IA, uncompressed). Artifact commit 154a448. | v2.0.0 (2026-09-24): retitled A Formal Proof of the Real Part of the Riemann Hypothesis; Part I = v1.5.2 whole, Part II = One Address (22929637), Part III = the Real part proved, Unicorn part set apart; cycles v2f, u2f, x1f, x2f, x3f; four external batches answered; pdf md5 c768b347 (git, Zenodo, IA), md md5 86c6743f; twin v1.0.1 sha 40fbb4f8; kernel audits completed (91 and 100 sets). Zenodo 22949645.",
-      "extra": {}
+      "extra": {
+        "medium": "https://trisduction.medium.com/a-formal-proof-of-the-real-part-of-the-riemann-hypothesis-c5ed02a291c5",
+        "substack": "https://trisduction.substack.com/p/a-formal-proof-of-the-real-part-of",
+        "x": "https://x.com/0xApis/status/2103308564291092721"
+      }
     },
     "rows-from-existence-alone": {
       "title": "A Formal Proof Across the Seven Millennium Rows and the Sixteen Extension Rows from Existence Alone, the Value Excepted by Theorem on Every Row: The Constructed Witness on Every Row, the Poincare Row Included, One Seat under Twenty-Three Names, the Grounded Counter-Model, and the Cure Theorem Proved in Lean 4 and Re-executed in Fortran",

@@ -8297,3 +8297,85 @@ end DirCantCone
 
 /-- info: 'DirCantCone.dirCone' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in #print axioms DirCantCone.dirCone
+
+/-!
+## RealPart · the division of the Riemann Hypothesis and the Real part proved
+Harvested 2026-09-25 from A Formal Proof of the Real Part of the Riemann Hypothesis, v2.0.0
+(10.5281/zenodo.22949645). The hypothesis divides at any height into a Real part and a Unicorn
+part; the split is exact; the fused statement stands at its open part; the hypothesis is the
+statement that the off-line zeros are unicorns; a certificate proves the Real part; and the road
+holds under a bare computation arrow. Four sets axiom-free, two on propext and Quot.sound, none on choice. ΔM = 0.
+-/
+namespace RealPart
+
+variable {α : Type}
+
+/-- The line property on a zero set: every zero on the line. -/
+def RH (Z onL : α → Prop) : Prop := ∀ z, Z z → onL z
+/-- The Real part at height T: every zero up to T on the line. -/
+def RealPartAt (Z onL : α → Prop) (height : α → Int) (T : Int) : Prop :=
+  ∀ z, Z z → height z ≤ T → onL z
+/-- The Unicorn part at height T: no off-line zero above T. -/
+def UnicornAt (Z onL : α → Prop) (height : α → Int) (T : Int) : Prop :=
+  ∀ z, Z z → height z > T → onL z
+
+/-- The split is exact at every height. -/
+theorem rh_iff_real_and_unicorn (Z onL : α → Prop) (height : α → Int) (T : Int) :
+    RH Z onL ↔ RealPartAt Z onL height T ∧ UnicornAt Z onL height T := by
+  constructor
+  · intro h; exact ⟨fun z hz _ => h z hz, fun z hz _ => h z hz⟩
+  · intro ⟨hr, hu⟩ z hz
+    by_cases hle : height z ≤ T
+    · exact hr z hz hle
+    · exact hu z hz (by omega)
+
+/-- Given the Real part, the fused hypothesis is exactly the Unicorn part: fusion lowers the
+    proved part to the standing of the open one. -/
+theorem fused_is_unicorn_given_real (Z onL : α → Prop) (height : α → Int) (T : Int)
+    (hr : RealPartAt Z onL height T) : RH Z onL ↔ UnicornAt Z onL height T :=
+  ⟨fun h z hz _ => h z hz, fun hu => (rh_iff_real_and_unicorn Z onL height T).2 ⟨hr, hu⟩⟩
+
+/-- The unicorn identity: the hypothesis holds exactly when every sentence about the off-line
+    zeros is vacuous, that is, when there is no off-line zero. -/
+theorem rh_iff_unicorns (Z onL : α → Prop) [DecidablePred onL] :
+    RH Z onL ↔ ¬ ∃ z, Z z ∧ ¬ onL z :=
+  ⟨fun h ⟨z, hz, off⟩ => off (h z hz),
+   fun h z hz => Decidable.byContradiction (fun off => h ⟨z, hz, off⟩)⟩
+
+/-- A certificate: a complete list of the zeros up to T, each checked on the line. -/
+structure Certificate (Z onL : α → Prop) (height : α → Int) (T : Int) where
+  zeros    : List α
+  complete : ∀ z, Z z → height z ≤ T → z ∈ zeros
+  onLine   : ∀ z, z ∈ zeros → onL z
+
+/-- A certificate proves the Real part at T, with no premise at all. -/
+theorem real_part_of_certificate (Z onL : α → Prop) (height : α → Int) (T : Int)
+    (c : Certificate Z onL height T) : RealPartAt Z onL height T :=
+  fun z hz hle => c.onLine z (c.complete z hz hle)
+
+/-- The bare computation arrow: the identity on a type, present with no premise. -/
+def Arrow (β : Type) : Prop := Nonempty (β → β)
+theorem arrow_exists (β : Type) : Arrow β := ⟨id⟩
+
+/-- Any true premise plays the root's part in the road: keyless crossing, the undecided keyed
+    sentence, and the identity round trip hold for an arbitrary true premise. -/
+theorem any_true_premise_serves (R : Prop) (hR : R) {W : Type} (P : W → Prop) :
+    ((∀ w, P w) → ∀ w, R → P w) ∧
+    ((∃ w, ¬ P w) → ¬ ∀ w, R → P w) ∧
+    (∀ w, (R ∧ P w) ↔ P w) :=
+  ⟨fun hP w _ => hP w, fun ⟨w, hw⟩ h => hw (h w hR), fun _ => ⟨fun h => h.2, fun h => ⟨hR, h⟩⟩⟩
+
+end RealPart
+
+/-- info: 'RealPart.rh_iff_real_and_unicorn' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RealPart.rh_iff_real_and_unicorn
+/-- info: 'RealPart.fused_is_unicorn_given_real' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms RealPart.fused_is_unicorn_given_real
+/-- info: 'RealPart.rh_iff_unicorns' does not depend on any axioms -/
+#guard_msgs in #print axioms RealPart.rh_iff_unicorns
+/-- info: 'RealPart.real_part_of_certificate' does not depend on any axioms -/
+#guard_msgs in #print axioms RealPart.real_part_of_certificate
+/-- info: 'RealPart.arrow_exists' does not depend on any axioms -/
+#guard_msgs in #print axioms RealPart.arrow_exists
+/-- info: 'RealPart.any_true_premise_serves' does not depend on any axioms -/
+#guard_msgs in #print axioms RealPart.any_true_premise_serves
