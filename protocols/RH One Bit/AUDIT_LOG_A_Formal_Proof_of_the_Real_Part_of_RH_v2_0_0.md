@@ -187,3 +187,7 @@ Same ruling. Both reports find no new Lean-level defect and restate the title ob
 ## v2.0.1 · disclosure edition (architect-ordered)
 
 Two additions to the Provenance, no claim changed: a Disclosure and Transparency Note stating exactly what the kernel establishes from first principles and what is cited (the Platt–Trudgian numerics for ζ), the grade join, and the author's independence of any prior proof; and a note, The Division Is Riemann's, placing the counted part, the probable remainder, and the proof set aside in the order of the 1859 sentence. The own-form subsection carries the three clauses in that order. Editions line updated; version 2.0.1.
+
+## v2.0.2 · standing edition · cycle s1f
+
+Added to the Standard of Proof: the paper's standing without the certificate, one paragraph and one table (component, standing, dependence on the certified height), stating that with the Platt–Trudgian result deleted exactly one sentence falls and every numbered theorem stands. A one-page companion handout carries the same declaration for distribution. Cycle s1f: three rounds, controls 9/9, one earned finding (row one graded the three measures whole as K; the assignments are K and the physical reading is a reading), SEALED-ROUND.
