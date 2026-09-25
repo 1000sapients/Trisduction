@@ -2561,15 +2561,20 @@
       "domain": "Riemann Hypothesis",
       "status": "live",
       "first_published": "2026-09-23",
-      "last_updated": "2026-09-24",
+      "last_updated": "2026-09-25",
       "git": {
-        "md": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_0.md",
-        "pdf": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_0.pdf",
+        "md": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_1.md",
+        "pdf": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_1.pdf",
         "editions": [
           {
             "version": "1.5.2",
             "md": "protocols/RH One Bit/RH_From_Existence_Alone_v1_5_2.md",
             "pdf": "protocols/RH One Bit/RH_From_Existence_Alone_v1_5_2.pdf"
+          },
+          {
+            "version": "2.0.0",
+            "md": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_0.md",
+            "pdf": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_0.pdf"
           }
         ]
       },
@@ -2592,7 +2597,7 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": "Sealed rhapex5 r5 at v1.5.0; v1.5.2 claim-free relative to it. Seat proved with existence the only posit; value one bit, unreachable (Thm I). Lean sha d671051e99b8, twin sha 47670197aa8e, pdf md5 8062b041 (git, Zenodo), e5ee8782 (IA, uncompressed). Artifact commit 154a448. | v2.0.0 (2026-09-24): retitled A Formal Proof of the Real Part of the Riemann Hypothesis; Part I = v1.5.2 whole, Part II = One Address (22929637), Part III = the Real part proved, Unicorn part set apart; cycles v2f, u2f, x1f, x2f, x3f; four external batches answered; pdf md5 c768b347 (git, Zenodo, IA), md md5 86c6743f; twin v1.0.1 sha 40fbb4f8; kernel audits completed (91 and 100 sets). Zenodo 22949645.",
+      "note": "Sealed rhapex5 r5 at v1.5.0; v1.5.2 claim-free relative to it. Seat proved with existence the only posit; value one bit, unreachable (Thm I). Lean sha d671051e99b8, twin sha 47670197aa8e, pdf md5 8062b041 (git, Zenodo), e5ee8782 (IA, uncompressed). Artifact commit 154a448. | v2.0.0 (2026-09-24): retitled A Formal Proof of the Real Part of the Riemann Hypothesis; Part I = v1.5.2 whole, Part II = One Address (22929637), Part III = the Real part proved, Unicorn part set apart; cycles v2f, u2f, x1f, x2f, x3f; four external batches answered; pdf md5 c768b347 (git, Zenodo, IA), md md5 86c6743f; twin v1.0.1 sha 40fbb4f8; kernel audits completed (91 and 100 sets). Zenodo 22949645. | v2.0.1 (2026-09-25, git): disclosure and transparency note; the division is Riemann's; audit disclosure condensed to its multi-substrate form (Grok, Gemini, Kimi K3, GPT Aster 6 prosecuted; controls SELF grade); no claim changed; pdf md5 47b3903b, md md5 3ffdbd6b. Zenodo and IA remain at v2.0.0 (22949645) pending the architect's yes.",
       "extra": {
         "medium": "https://trisduction.medium.com/a-formal-proof-of-the-real-part-of-the-riemann-hypothesis-c5ed02a291c5",
         "substack": "https://trisduction.substack.com/p/a-formal-proof-of-the-real-part-of",

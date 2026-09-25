@@ -183,3 +183,7 @@ No finding in three rounds; controls 9 of 9; SEALED-ROUND.
 ## Final round · v1.4 · two closing re-audits
 
 Same ruling. Both reports find no new Lean-level defect and restate the title objection, refused as the architect's locked ruling. Two items acted on: the release identifier now matches the front matter (v1.4.0, with an Editions line in the Provenance tracing v1.0 to v1.4), and the seed's stage-zero condition is completed with its vacuity case (if stage zero located no zero, the seed would be vacuous and Postulate M the hypothesis itself; the stage is taken at the certified height). The keystone objection in the second report is answered by the text it audits, which infers nothing from historical non-delivery. A Blog edition is built from the rendered LaTeX with citations resolved and mathematics in Unicode.
+
+## v2.0.1 · disclosure edition (architect-ordered)
+
+Two additions to the Provenance, no claim changed: a Disclosure and Transparency Note stating exactly what the kernel establishes from first principles and what is cited (the Platt–Trudgian numerics for ζ), the grade join, and the author's independence of any prior proof; and a note, The Division Is Riemann's, placing the counted part, the probable remainder, and the proof set aside in the order of the 1859 sentence. The own-form subsection carries the three clauses in that order. Editions line updated; version 2.0.1.
