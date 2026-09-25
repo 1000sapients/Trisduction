@@ -2563,32 +2563,18 @@
    "first_published": "2026-09-23",
    "last_updated": "2026-09-25",
    "git": {
-    "md": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_2.md",
-    "pdf": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_2.pdf",
+    "md": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_1_0.md",
+    "pdf": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_1_0.pdf",
     "editions": [
-     {
-      "version": "1.5.2",
-      "md": "protocols/RH One Bit/RH_From_Existence_Alone_v1_5_2.md",
-      "pdf": "protocols/RH One Bit/RH_From_Existence_Alone_v1_5_2.pdf"
-     },
-     {
-      "version": "2.0.0",
-      "md": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_0.md",
-      "pdf": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_0.pdf"
-     },
-     {
-      "version": "2.0.1",
-      "md": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_1.md",
-      "pdf": "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_1.pdf"
-     }
+     "protocols/RH One Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_1_0_single_column.pdf"
     ]
    },
    "zenodo": {
     "conceptrecid": "22912937",
     "concept_doi": "10.5281/zenodo.22912937",
-    "latest_version_doi": "10.5281/zenodo.22951886",
-    "latest_record": 22951886,
-    "versions": 3,
+    "latest_version_doi": "10.5281/zenodo.22954865",
+    "latest_record": 22954865,
+    "versions": 4,
     "state": "published"
    },
    "ia": {
@@ -2602,33 +2588,34 @@
    },
    "supersedes": null,
    "superseded_by": null,
-   "note": "Sealed rhapex5 r5 at v1.5.0; v1.5.2 claim-free relative to it. Seat proved with existence the only posit; value one bit, unreachable (Thm I). Lean sha d671051e99b8, twin sha 47670197aa8e, pdf md5 8062b041 (git, Zenodo), e5ee8782 (IA, uncompressed). Artifact commit 154a448. | v2.0.0 (2026-09-24): retitled A Formal Proof of the Real Part of the Riemann Hypothesis; Part I = v1.5.2 whole, Part II = One Address (22929637), Part III = the Real part proved, Unicorn part set apart; cycles v2f, u2f, x1f, x2f, x3f; four external batches answered; pdf md5 c768b347 (git, Zenodo, IA), md md5 86c6743f; twin v1.0.1 sha 40fbb4f8; kernel audits completed (91 and 100 sets). Zenodo 22949645. | v2.0.1 (2026-09-25, git): disclosure and transparency note; the division is Riemann's; audit disclosure condensed to its multi-substrate form (Grok, Gemini, Kimi K3, GPT Aster 6 prosecuted; controls SELF grade); no claim changed; pdf md5 47b3903b, md md5 3ffdbd6b. Zenodo and IA remain at v2.0.0 (22949645) pending the architect's yes. | v2.0.2 (2026-09-25): standing declaration and table in the Standard of Proof (with the certificate deleted, one sentence falls, every theorem stands); one-page handout beside it; cycle s1f SEALED-ROUND; pdf md5 8dd35c0c, md a7741b7b, blog f521a0c1, handout 69ebadd1 (git, Zenodo 22951886, IA). v2.0.1 was git-only.",
+   "note": "v2.1.0 released 2026-09-25: Part III gains the formal block of the Unicorn part, Theorems III.45-III.49 with rh_register_proof_complete (closed to derivation; the aperture one bit wide; the supply side silent at the register; no bypass; the three bits as one term) and Appendix I, RH_Unicorn_Block.lean, 9 sets, all reported as depending on no axiom; the three-bit arc in the abstract, introduction, discussion, and conclusion; the proof complete on the register side; the hypothesis not claimed proved. Zenodo record 22954865; IA replaced (the v2.0.2 files and blog retired from the item, the Standing handout kept). pdf md5 e4103e99 / 11d46c97, md md5 73d53776. Commit 657cba3, index 2160a1d. Prior: Sealed rhapex5 r5 at v1.5.0; v1.5.2 claim-free relative to it. Seat proved with existence the only posit; value one bit, unreachable (Thm I). Lean sha d671051e99b8, twin sha 47670197aa8e, pdf md5 8062b041 (git, Zenodo), e5ee8782 (IA, uncompressed). Artifact commit 154a448. | v2.0.0 (2026-09-24): retitled A Formal Proof of the Real Part of the Riemann Hypothesis; Part I = v1.5.2 whole, Part II = One Address (22929637), Part III = the Real part proved, Unicorn part set apart; cycles v2f, u2f, x1f, x2f, x3f; four external batches answered; pdf md5 c768b347 (git, Zenodo, IA), md md5 86c6743f; twin v1.0.1 sha 40fbb4f8; kernel audits completed (91 and 100 sets). Zenodo 22949645. | v2.0.1 (2026-09-25, git): disclosure and transparency note; the division is Riemann's; audit disclosure condensed to its multi-substrate form (Grok, Gemini, Kimi K3, GPT Aster 6 prosecuted; controls SELF grade); no claim changed; pdf md5 47b3903b, md md5 3ffdbd6b. Zenodo and IA remain at v2.0.0 (22949645) pending the architect's yes. | v2.0.2 (2026-09-25): standing declaration and table in the Standard of Proof (with the certificate deleted, one sentence falls, every theorem stands); one-page handout beside it; cycle s1f SEALED-ROUND; pdf md5 8dd35c0c, md a7741b7b, blog f521a0c1, handout 69ebadd1 (git, Zenodo 22951886, IA). v2.0.1 was git-only.",
    "extra": {
     "medium": "https://trisduction.medium.com/a-formal-proof-of-the-real-part-of-the-riemann-hypothesis-c5ed02a291c5",
     "substack": "https://trisduction.substack.com/p/a-formal-proof-of-the-real-part-of",
     "x": "https://x.com/0xApis/status/2103308564291092721",
-    "handout": "protocols/RH One Bit/Standing_Without_the_Certificate_Handout_v1_0_0.pdf"
+    "handout": "protocols/RH One Bit/Standing_Without_the_Certificate_Handout_v1_0_0.pdf",
+    "lean": "lean/RH_Unicorn_Block.lean"
    }
   },
   "rows-from-existence-alone": {
-   "title": "The Cut-Agnostic Division Theorem: Why Every Open Problem Is Exactly Its Proved Part and Its Unicorn · One Theorem for Any Cut on Any Row, Proved in Core Lean 4 Without Axiom, and Applied to the Seven Millennium Rows and the Sixteen Extension Rows · Twenty Real Parts Sealed on Citation, Two Rows Assigned No Cut, One Row Crossed, and the Fusion Law That Lowers Gold to Lead",
+   "title": "The Cut-Agnostic Division Theorem: Why Every Open Problem Is Exactly Its Proved Part and Its Unicorn · One Theorem for Any Cut on Any Row, Proved in Core Lean 4 Without Axiom, and Applied to the Seven Millennium Rows and the Sixteen Extension Rows · Twenty Real Parts Sealed on Citation, Two Rows Assigned No Cut, One Row Crossed, the Fusion Law That Lowers Gold to Lead, and the Unicorn Part of Every Open Row Closed to Derivation, by Theorem, the Aperture Uncrossed",
    "domain": "Foundations of Mathematics",
    "status": "live",
    "first_published": "2026-09-23",
    "last_updated": "2026-09-25",
    "git": {
-    "md": "protocols/RH One Bit/The_Cut_Agnostic_Division_Theorem_v2_0_0.md",
-    "pdf": "protocols/RH One Bit/The_Cut_Agnostic_Division_Theorem_v2_0_0.pdf",
+    "md": "protocols/RH One Bit/The_Cut_Agnostic_Division_Theorem_v2_1_0.md",
+    "pdf": "protocols/RH One Bit/The_Cut_Agnostic_Division_Theorem_v2_1_0.pdf",
     "editions": [
-     "protocols/RH One Bit/The_Cut_Agnostic_Division_Theorem_v2_0_0_single_column.pdf"
+     "protocols/RH One Bit/The_Cut_Agnostic_Division_Theorem_v2_1_0_single_column.pdf"
     ]
    },
    "zenodo": {
     "conceptrecid": "22913634",
     "concept_doi": "10.5281/zenodo.22913634",
-    "latest_version_doi": "10.5281/zenodo.22953598",
-    "latest_record": 22953598,
-    "versions": 2,
+    "latest_version_doi": "10.5281/zenodo.22954862",
+    "latest_record": 22954862,
+    "versions": 3,
     "state": "published"
    },
    "ia": {
@@ -2642,7 +2629,7 @@
    },
    "supersedes": null,
    "superseded_by": null,
-   "note": "v2.0.0 released 2026-09-25 as the edition of this concept: the cut-agnostic division (Row_Split.lean, 27 sets, none on any axiom), twenty Real parts sealed on citation, two rows assigned no cut, one crossed, census 9/11/2/1; the v1.1.0 text carried whole in its kernel file; One Bit Across the Wall (10.5281/zenodo.22746129) carried as data; ZFC under RAM (Codex v4.7.0) as placement. Audited: 6 internal rounds, 2 external batches of five reviewers, SEALED-ROUND; log AUDIT_LOG_The_Cut_Agnostic_Division_Theorem_v2_0_0.md. Title ruled by the architect 2026-09-25. pdf md5 5137ca43 (two-column) and 4bfce449 (single-column), md md5 45726547, identical on git, Zenodo, IA (delete-and-replace). Artifact commit 9002f50, index 9cea83e. Prior: Sealed rows2 r6 at v1.1.0. Spine: rh-from-existence-alone (10.5281/zenodo.22912937). Seat assigned by the grounding reading on all 23 rows; value one bit each, 22 owed, Poincare recorded crossed; one row embedded, 22 embeddings owed. Lean sha 0ce3de5a2315, twin sha fa3b0417fd56, pdf md5 8dedf85f (git, Zenodo), a100c2b5 (IA). Artifact commit 83cf57a.",
+   "note": "v2.1.0 released 2026-09-25: the three-bit arc (one bit divided, one bit proved, one bit refused at theorem grade); the formal block of the Unicorn part, Theorems 28-33 (closed to derivation; the aperture one bit wide; the supply side silent at the register, supply_side_silent; the three bits as one term, register_proof_complete); the proof complete on the register side on every row; no row claimed proved. Row_Split.lean 33 sets, all reported as depending on no axiom. Ten internal rounds, two external batches, two architect findings, SEALED-ROUND. pdf md5 6513f562 / 5e4979f1, md md5 7fafdb15, identical on git, Zenodo, IA. Commit 657cba3, index 2160a1d. Prior: v2.0.0 released 2026-09-25 as the edition of this concept: the cut-agnostic division (Row_Split.lean, 27 sets, none on any axiom), twenty Real parts sealed on citation, two rows assigned no cut, one crossed, census 9/11/2/1; the v1.1.0 text carried whole in its kernel file; One Bit Across the Wall (10.5281/zenodo.22746129) carried as data; ZFC under RAM (Codex v4.7.0) as placement. Audited: 6 internal rounds, 2 external batches of five reviewers, SEALED-ROUND; log AUDIT_LOG_The_Cut_Agnostic_Division_Theorem_v2_0_0.md. Title ruled by the architect 2026-09-25. pdf md5 5137ca43 (two-column) and 4bfce449 (single-column), md md5 45726547, identical on git, Zenodo, IA (delete-and-replace). Artifact commit 9002f50, index 9cea83e. Prior: Sealed rows2 r6 at v1.1.0. Spine: rh-from-existence-alone (10.5281/zenodo.22912937). Seat assigned by the grounding reading on all 23 rows; value one bit each, 22 owed, Poincare recorded crossed; one row embedded, 22 embeddings owed. Lean sha 0ce3de5a2315, twin sha fa3b0417fd56, pdf md5 8dedf85f (git, Zenodo), a100c2b5 (IA). Artifact commit 83cf57a.",
    "extra": {
     "lean": "lean/Row_Split.lean",
     "prior_edition": {
