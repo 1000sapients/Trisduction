@@ -494,7 +494,7 @@
    "last_updated": "2026-07-16",
    "git": {
     "md": null,
-    "pdf": "Publication Library/Science/Physics/Emergent Gravity/Emergent_Substrate_Gravity_Journal.pdf",
+    "pdf": null,
     "editions": []
    },
    "zenodo": {
@@ -516,7 +516,7 @@
    },
    "supersedes": null,
    "superseded_by": null,
-   "note": null,
+   "note": "git copy moved to the private target 2026-09-25, held pending v2; Zenodo record public at its DOI",
    "extra": {}
   },
   "formal-alone-theory-of-everything": {

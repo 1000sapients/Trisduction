@@ -64,6 +64,7 @@ moves:
 filed:
   - category: "Science"
     path: "Publication Library/Science/Physics/Emergent Gravity/Emergent_Substrate_Gravity_Journal.pdf"
+    moved: "2026-09-25 to the private target, held pending v2; see CODEX_DELETIONS.log"
   - category: "Mathematics"
     path: "Publication Library/Mathematics/Complexity Theory/P versus NP/Why the Structural Verdict on P versus NP Is the Only One Left Standing - Mathematics Proves That Mathematics Cannot Rule Here.pdf"
   - category: "Scripture"

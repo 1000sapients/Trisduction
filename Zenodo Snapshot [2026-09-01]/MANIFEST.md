@@ -303,6 +303,8 @@ Concept `10.5281/zenodo.21389757` · 1 version · 2026-07-16 to 2026-07-16
 
 ## V - Physics
 
+> Mirror copies of the three deposits below were moved to the private target on 2026-09-25 and are held there pending v2 (see `CODEX_DELETIONS.log`). The Zenodo records remain public at the DOIs listed.
+
 ### The Four Forces, Matter, and the Dark Sector as Configurations of One Actuating Substrate
 
 Concept `10.5281/zenodo.21438932` · 1 version · 2026-07-19 to 2026-07-19
