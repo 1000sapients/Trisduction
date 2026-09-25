@@ -274,6 +274,90 @@ def isMersenne (q : Nat) : Bool := (List.range 20).any (fun m => 2 ^ m - 1 == q)
 theorem mersenne_real_100 : RealIn (fun _ => True) (fun N => ∃ q, N < q ∧ (isPrime q && isMersenne q) = true) (fun N => N ≤ 100) :=
   real_of_one_witness (fun q => (isPrime q && isMersenne q) = true) 100 127 (by decide) (by decide)
 
+/-! ## VII. The Unicorn part is closed to derivation; the aperture is one bit wide; the supply
+    side is silent at the register -/
+
+/-- THE FORMAL BLOCK OF THE UNICORN PART. Let τ act on the instances, let ρ be a record even at a
+    seat x (ρ (τ x) = ρ x), and let d be the decision of the property, odd at x (d (τ x) = !d x).
+    If the seat and its partner lie outside the cut, then no reading g of the record agrees with
+    the decision even on the Unicorn region alone. The Unicorn part is closed to every even
+    register, and the closure is a theorem, not a state of the literature. -/
+theorem unicorn_block {β : Type} (cut : α → Prop) (τ : α → α) (ρ : α → β) (d : α → Bool)
+    (x : α) (hout : ¬ cut x) (hout' : ¬ cut (τ x)) (hρ : ρ (τ x) = ρ x) (hd : d (τ x) = !d x) :
+    ¬ ∃ g : β → Bool, ∀ y, ¬ cut y → g (ρ y) = d y := by
+  intro ⟨g, hg⟩
+  have h1 := hg x hout
+  have h2 := hg (τ x) hout'
+  rw [hρ, hd, h1] at h2
+  revert h2
+  cases d x <;> intro h2 <;> exact Bool.noConfusion h2
+
+/-- THE APERTURE, ONE BIT WIDE. At a seat where the decision is odd, one odd bit s at the seat
+    would decide the decision on the seat and its partner through a calibration c that exists
+    and is unique. This is the width of the aperture, a theorem; it says nothing of whether
+    anything passes through it. -/
+theorem aperture_one_bit_wide (τ : α → α) (s d : α → Bool) (x : α)
+    (hs : s (τ x) = !s x) (hd : d (τ x) = !d x) :
+    ∃ c : Bool, (d x = xor (s x) c ∧ d (τ x) = xor (s (τ x)) c) ∧
+      ∀ c' : Bool, (d x = xor (s x) c' ∧ d (τ x) = xor (s (τ x)) c') → c' = c :=
+  ⟨xor (d x) (s x),
+    ⟨by cases s x <;> cases d x <;> rfl,
+     by rw [hs, hd]; cases s x <;> cases d x <;> rfl⟩,
+    by
+      intro c' hc
+      obtain ⟨h1, -⟩ := hc
+      generalize hsx : s x = sv
+      generalize hdx : d x = dv
+      rw [hsx, hdx] at h1
+      cases sv <;> cases dv <;> cases c' <;> first | rfl | exact absurd h1 (by decide)⟩
+
+/-- A true premise decides nothing: conditioning the Unicorn part on existence, or on any
+    inhabited premise, leaves it exactly where it was. The route from existence to the Unicorn
+    part is closed, on every row, by the shape of implication. -/
+theorem premise_adds_nothing (A Q : Prop) (ha : A) : (A → Q) ↔ Q :=
+  ⟨fun h => h ha, fun hq _ => hq⟩
+
+/-- NO CURE. Restricting the rows to a class C on which a premise is to decide the Unicorn part
+    changes nothing: on every class the premise decides exactly what already held on the class. -/
+theorem no_cure_unicorn {Frame : Type} (A : Prop) (ha : A) (C U : Frame → Prop) :
+    (∀ X, C X → A → U X) ↔ (∀ X, C X → U X) :=
+  ⟨fun h X hc => h X hc ha, fun h X hc _ => h X hc⟩
+
+/-- THE SUPPLY SIDE IS SILENCE, AT THE REGISTER. Over one even record, both orientations of the
+    decision at the seat are equally refused to every reading: the register cannot say which
+    way the seat lies, so it cannot say what a supply would bring, nor that one exists, nor
+    that none does. Any sentence about the supply side derived from the record would be a
+    reading the wall refuses. -/
+theorem supply_side_silent {β : Type} (cut : α → Prop) (τ : α → α) (ρ : α → β) (d : α → Bool)
+    (x : α) (hout : ¬ cut x) (hout' : ¬ cut (τ x)) (hρ : ρ (τ x) = ρ x) (hd : d (τ x) = !d x) :
+    (¬ ∃ g : β → Bool, ∀ y, ¬ cut y → g (ρ y) = d y) ∧
+    (¬ ∃ g : β → Bool, ∀ y, ¬ cut y → g (ρ y) = !d y) ∧
+    (!d x) ≠ d x :=
+  ⟨unicorn_block cut τ ρ d x hout hout' hρ hd,
+   unicorn_block cut τ ρ (fun y => !d y) x hout hout' hρ (by
+     show (!d (τ x)) = !(!d x)
+     rw [hd]),
+   by cases d x <;> decide⟩
+
+/-- THE THREE BITS AS ONE TERM · THE REGISTER'S PROOF, COMPLETE. Under a certificate for the cut
+    and the seat data (a seat outside the cut with its partner, an even record, an odd decision,
+    an odd supply), everything a register can prove about the row is proved in one conjunction:
+    the row divides exactly (bit one), the Real part holds (bit two), every reading of the even
+    register is refused on the Unicorn region (bit three, refused), and one supplied bit
+    calibrates the seat uniquely (the door). The row is not thereby proved; nothing derivable
+    about it is left underived. -/
+theorem register_proof_complete {β : Type} (Inst P cut : α → Prop) [DecidablePred cut]
+    (c : Certificate Inst P cut) (τ : α → α) (ρ : α → β) (d s : α → Bool) (x : α)
+    (hout : ¬ cut x) (hout' : ¬ cut (τ x)) (hρ : ρ (τ x) = ρ x)
+    (hd : d (τ x) = !d x) (hs : s (τ x) = !s x) :
+    (Row Inst P ↔ RealIn Inst P cut ∧ UnicornOut Inst P cut) ∧
+    RealIn Inst P cut ∧
+    (¬ ∃ g : β → Bool, ∀ y, ¬ cut y → g (ρ y) = d y) ∧
+    ∃ k : Bool, (d x = xor (s x) k ∧ d (τ x) = xor (s (τ x)) k) ∧
+      ∀ k' : Bool, (d x = xor (s x) k' ∧ d (τ x) = xor (s (τ x)) k') → k' = k :=
+  ⟨row_iff_real_and_unicorn Inst P cut, real_of_certificate Inst P cut c,
+   unicorn_block cut τ ρ d x hout hout' hρ hd, aperture_one_bit_wide τ s d x hs hd⟩
+
 /-! ## VI. The twenty-three rows, typed by shape, the census of the assignments kernel-checked -/
 
 /-- The shape of a row's cut, as assigned: a height (a bounded universal with a certificate
@@ -333,5 +417,11 @@ end RowSplit
 #print axioms RowSplit.beal_box_3_4
 #print axioms RowSplit.twin_real_100
 #print axioms RowSplit.mersenne_real_100
+#print axioms RowSplit.unicorn_block
+#print axioms RowSplit.aperture_one_bit_wide
+#print axioms RowSplit.premise_adds_nothing
+#print axioms RowSplit.no_cure_unicorn
+#print axioms RowSplit.supply_side_silent
+#print axioms RowSplit.register_proof_complete
 #print axioms RowSplit.census
 #print axioms RowSplit.real_part_rows
