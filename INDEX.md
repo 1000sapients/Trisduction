@@ -283,6 +283,7 @@ S | 2026-09-25 | f864bfb | PATCH | ZSNAP | Zenodo Snapshot [2026-09-01]/MANIFEST
 S | 2026-09-25 | f864bfb | PATCH | ZSNAP | Zenodo Snapshot [2026-09-01]/manifest.json | held field on 3 entries
 S | 2026-09-26 | 243826e | SEAT | PAPER | protocols/RH One Bit/Nothing Escapes Three Plus One | sha 83e8914f | doi 10.5281/zenodo.22976494 | ia nothing-escapes-three-plus-one-rh-closure-v3-14-0 | seal rh46r3
 S | 2026-09-27 | 4afdd88 | SEAT | PAPER | protocols/RH One Bit/Nothing Escapes Twenty Three Rows | sha 9c72aa36 | seal rh59r3 | v1.9.2, 36 theorems, twin 3n-1
+S | 2026-09-27 | 4afdd88 | MINT | PAPER | protocols/RH One Bit/Nothing Escapes Twenty Three Rows | doi 10.5281/zenodo.22985562 | ia nothing-escapes-twenty-three-rows-v1-9-2
 
 ## MAP | regenerated | one line per live path
 # M | REG | path | kind | ver | blob8 | bytes | moved | what
