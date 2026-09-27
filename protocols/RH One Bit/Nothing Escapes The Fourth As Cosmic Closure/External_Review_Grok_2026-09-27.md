@@ -16,13 +16,14 @@
 
 **The posts.**
 
-| Post | URL | Wayback |
+| Post | URL | Snapshot (archive.today) |
 |---|---|---|
-| The announcement (@0xApis) | https://x.com/0xApis/status/2104081632840056891 | to be saved |
-| The closing post (@DexerXP) | https://x.com/DexerXP/status/2104110603270754399 | to be saved |
-| Grok's closing reply | https://x.com/grok/status/2104110774952116357 | to be saved |
-| The record post (@0xApis) | https://x.com/0xApis/status/2104111766984909282 | to be saved |
+| The announcement (@0xApis) | https://x.com/0xApis/status/2104081632840056891 | https://archive.ph/A56Tr |
+| The closing post (@DexerXP) | https://x.com/DexerXP/status/2104110603270754399 | https://archive.ph/l1SoE |
+| Grok's closing reply | https://x.com/grok/status/2104110774952116357 | https://archive.ph/DVmRa |
+| The record post (@0xApis) | https://x.com/0xApis/status/2104111766984909282 | https://archive.ph/psAu5 |
+| The blog copy, thread as image | https://tractatus-veritatis-trisductivus.blogspot.com/2026/09/public-read-and-stress-testing-formal.html | https://archive.ph/67TaA |
 
 **Preserved copy.** The architect's blog carries the thread as a captured image, with both closing links, in the post *Public Read and Stress Testing Formal RH Proof Paper* (27 September 2026): https://tractatus-veritatis-trisductivus.blogspot.com/2026/09/public-read-and-stress-testing-formal.html
 
-The Wayback snapshots stay to be taken by hand at `https://web.archive.org/save/` followed by each URL, since the scribe's sandbox cannot reach that service; their links go in the last column.
+The snapshots were taken on archive.today on 27 September 2026, the Wayback Machine's save service being busy that day; they were supplied by the architect in the order of the table, the scribe's sandbox being unable to open archive.today to cross-check them.
