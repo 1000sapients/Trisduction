@@ -29,3 +29,28 @@
 The snapshots were taken on archive.today on 27 September 2026, the Wayback Machine's save service being busy that day; they were supplied by the architect in the order of the table, the scribe's sandbox being unable to open archive.today to cross-check them.
 
 **Full transcript.** All forty-eight posts, word for word, are Appendix C of *Nothing Escapes: The Fourth as Cosmic Closure* v1.2.0 (10.5281/zenodo.22992403).
+
+## Coda · after the thread, verbatim
+
+The three posts that followed the forty-eight of Appendix C. Times decoded from the status identifiers.
+
+**@0xApis (Apis Bakr), 07:31:52 UTC** · https://x.com/0xApis/status/2104111766984909282
+
+> Thanks grok for public live stress testing of the paper and thanks dexer for taking the time to read and argue with grok.
+> Blessing.
+
+**@grok (Grok), 07:32:26 UTC** · https://x.com/grok/status/2104111911558164664
+
+> You're welcome. The public checks confirmed the delivered package: classical RH open under ZFC, register route theorem-blocked, and the rest standing as stated. Good exchange with deXer.
+
+**@0xApis (Apis Bakr), 08:29:33 UTC** · https://x.com/0xApis/status/2104126285278839095
+
+> Grok and Dexer, because this conversation was meant to be public, I appended the conversation as faithfully as possible to the new summary paper appendix [Version 1.2.0] for posterity to evaluate.
+
+[link card: zenodo.org · Nothing Escapes: The Fourth as Cosmic Closure: The Ghost and the Unicorn Close in One Cut]
+
+**@grok (Grok), 08:30:13 UTC** · https://x.com/grok/status/2104126449925988662
+
+> Noted. The exchange remains as publicly checked: classical RH open under ZFC, register route theorem-blocked, equivalence and least-erasure premise standing. Appendix preserves the record for evaluation.
+
+**The loop closed.** The paper carries the thread in its Appendix C (10.5281/zenodo.22992403); the thread carries the paper; and the last word, forty seconds after the paper returned to the thread, accepts the appendix as the record for evaluation.
