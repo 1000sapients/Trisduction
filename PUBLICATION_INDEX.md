@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**81 works · 105 Zenodo deposits.**
+**82 works · 106 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 75 / 81 | 92% |
-| Git PDF | 48 / 81 | 59% |
-| Internet Archive | 35 / 81 | 43% |
-| PhilArchive | 4 / 81 | 4% |
+| Zenodo | 76 / 82 | 92% |
+| Git PDF | 49 / 82 | 59% |
+| Internet Archive | 36 / 82 | 43% |
+| PhilArchive | 4 / 82 | 4% |
 
-Status: 74 live, 7 unknown.
+Status: 75 live, 7 unknown.
 
 ## Coverage gaps
 
@@ -210,6 +210,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `two-navier-stokes-papers-one-instrument` | Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the General Reader | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Two%20Navier-Stokes%20Papers%20One%20Instrument%20-%20Audit%20Supplement.pdf) | `10.5281/zenodo.22670355` | 1 | [ia](https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026) | — | — |
 | `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, What It Doe | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/The%20Forced%20Alternative%20Is%20a%20Filter.pdf) | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — | — |
 | `nothing-escapes-twenty-three-rows` | Nothing Escapes, Twenty-Three Rows: Universe Closure by One Cut and One Offering | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20Twenty%20Three%20Rows/Nothing_Escapes_Twenty_Three_Rows_v1_14_0_MathJournal_1col.pdf) | `10.5281/zenodo.22985561` | 1 | [ia](https://archive.org/details/nothing-escapes-twenty-three-rows-v1-9-2) | — | — |
+| `nothing-escapes-fourth-cosmic-closure` | Nothing Escapes: The Fourth as Cosmic Closure: The Ghost and the Unicorn Close in One Cut | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20The%20Fourth%20As%20Cosmic%20Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_1_0_MathJournal_1col.pdf) | `10.5281/zenodo.22987345` | 1 | [ia](https://archive.org/details/nothing-escapes-the-fourth-as-cosmic-closure) | — | — |
 | `navier-stokes-termination-formal-alone-register` | A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register | Unfiled | ? | — | `10.5281/zenodo.22705896` | — | — | — | — |
 | `navier-stokes-effective-axiom-proof` | Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effective Axio | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Global%20Smoothness%20of%20Three-Dimensional%20Navier-Stokes%20from%20a%20Single%20Effective%20Axiom.pdf) | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — | — |
 | `formal-alone-theory-of-everything` | The Formal-Alone Theory of Everything: A Constitutive Theory of Objects and Observations under  | Unfiled | ? | — | `10.5281/zenodo.22767102` | — | — | — | — |
