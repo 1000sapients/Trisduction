@@ -2892,7 +2892,7 @@
    "ia": {
     "identifier": "nothing-escapes-witness-the-fluid-is-the-witness",
     "url": "https://archive.org/details/nothing-escapes-witness-the-fluid-is-the-witness",
-    "state": "pending"
+    "state": "live"
    },
    "philarchive": {
     "record": null,
@@ -2900,7 +2900,7 @@
    },
    "supersedes": null,
    "superseded_by": null,
-   "note": "v1.4.0 published 2026-09-27 as a new concept: a constructed witness for the closure template of Nothing Escapes, Twenty-Three Rows; engine and twin printed in the appendices. Internet Archive item not yet created: the archive answered SlowDown (503) to every upload attempt on 2026-09-27; the identifier is reserved in the plan and the upload is to be retried. Retried 2026-09-27 on the architect's order: the archive again answered SlowDown (503) for this item and for a shorter fresh identifier, while the same session's other new item landed.",
+   "note": "v1.4.0 published 2026-09-27 as a new concept: a constructed witness for the closure template of Nothing Escapes, Twenty-Three Rows; engine and twin printed in the appendices. Internet Archive item not yet created: the archive answered SlowDown (503) to every upload attempt on 2026-09-27; the identifier is reserved in the plan and the upload is to be retried. Retried 2026-09-27 on the architect's order: the archive again answered SlowDown (503) for this item and for a shorter fresh identifier, while the same session's other new item landed. Internet Archive item created 2026-09-27 on the next retry.",
    "extra": {}
   },
   "nothing-escapes-fourth-cosmic-closure": {
@@ -2908,18 +2908,18 @@
    "domain": "Foundations of Mathematics",
    "status": "live",
    "first_published": "",
-   "last_updated": "",
+   "last_updated": "2026-09-27",
    "git": {
-    "md": "protocols/RH One Bit/Nothing Escapes The Fourth As Cosmic Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_1_0.md",
-    "pdf": "protocols/RH One Bit/Nothing Escapes The Fourth As Cosmic Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_1_0_MathJournal_1col.pdf",
+    "md": "protocols/RH One Bit/Nothing Escapes The Fourth As Cosmic Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_2_0.md",
+    "pdf": "protocols/RH One Bit/Nothing Escapes The Fourth As Cosmic Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_2_0_MathJournal_1col.pdf",
     "editions": []
    },
    "zenodo": {
     "conceptrecid": 22987345,
     "concept_doi": "10.5281/zenodo.22987345",
-    "latest_version_doi": "22987346",
-    "latest_record": null,
-    "versions": 1,
+    "latest_version_doi": "10.5281/zenodo.22992403",
+    "latest_record": 22992403,
+    "versions": 2,
     "state": "published"
    },
    "ia": {
@@ -2933,7 +2933,7 @@
    },
    "supersedes": null,
    "superseded_by": null,
-   "note": "v1.1.0 published 2026-09-27 as a new concept: the dual-register mirror of the Riemann closure, the ghost and the unicorn closed in one cut, the witness ledger as Section 8; kernel One_Cut.lean (16 theorems, no axiom declared) and twin One_Cut_Twin.f90 (8 checks).",
+   "note": "v1.1.0 published 2026-09-27 as a new concept: the dual-register mirror of the Riemann closure, the ghost and the unicorn closed in one cut, the witness ledger as Section 8; kernel One_Cut.lean (16 theorems, no axiom declared) and twin One_Cut_Twin.f90 (8 checks). v1.2.0 published 2026-09-27: the nine papers of the series in the references; Appendix C, the first public reading, the full Grok thread verbatim (48 posts).",
    "extra": {}
   }
  }

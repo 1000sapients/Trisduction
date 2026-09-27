@@ -9,7 +9,7 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**82 works · 106 Zenodo deposits.**
+**82 works · 107 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
@@ -134,6 +134,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `nothing-escapes-fourth-cosmic-closure` | Nothing Escapes: The Fourth as Cosmic Closure: The Ghost and the Unicorn Close in One Cut | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20The%20Fourth%20As%20Cosmic%20Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_2_0_MathJournal_1col.pdf) | `10.5281/zenodo.22987345` | 2 | [ia](https://archive.org/details/nothing-escapes-the-fourth-as-cosmic-closure) | — | 2026-09-27 |
 | `rows-from-existence-alone` | The Cut-Agnostic Division Theorem: Why Every Open Problem Is Exactly Its Proved Part and Its Un | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/The_Cut_Agnostic_Division_Theorem_v2_1_0.pdf) | `10.5281/zenodo.22913634` | 3 | [ia](https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone) | — | 2026-09-25 |
 | `rh-from-existence-alone` | A Formal Proof of the Real Part of the Riemann Hypothesis: The Seat, the Address, and the Divis | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_1_0.pdf) | `10.5281/zenodo.22912937` | 4 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | — | 2026-09-25 |
 | `rh-has-one-address` | A Formal Completed Proof That the Riemann Hypothesis Has One Address and Not a Sequence of Miss | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_Has_One_Address_v1_2_0.pdf) | `10.5281/zenodo.22929636` | 1 | [ia](https://archive.org/details/formal-completed-proof-riemann-hypothesis-one-address) | — | 2026-09-24 |
@@ -210,7 +211,6 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `two-navier-stokes-papers-one-instrument` | Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the General Reader | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Two%20Navier-Stokes%20Papers%20One%20Instrument%20-%20Audit%20Supplement.pdf) | `10.5281/zenodo.22670355` | 1 | [ia](https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026) | — | — |
 | `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, What It Doe | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/The%20Forced%20Alternative%20Is%20a%20Filter.pdf) | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — | — |
 | `nothing-escapes-twenty-three-rows` | Nothing Escapes, Twenty-Three Rows: Universe Closure by One Cut and One Offering | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20Twenty%20Three%20Rows/Nothing_Escapes_Twenty_Three_Rows_v1_14_0_MathJournal_1col.pdf) | `10.5281/zenodo.22985561` | 1 | [ia](https://archive.org/details/nothing-escapes-twenty-three-rows-v1-9-2) | — | — |
-| `nothing-escapes-fourth-cosmic-closure` | Nothing Escapes: The Fourth as Cosmic Closure: The Ghost and the Unicorn Close in One Cut | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20The%20Fourth%20As%20Cosmic%20Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_1_0_MathJournal_1col.pdf) | `10.5281/zenodo.22987345` | 1 | [ia](https://archive.org/details/nothing-escapes-the-fourth-as-cosmic-closure) | — | — |
 | `navier-stokes-termination-formal-alone-register` | A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register | Unfiled | ? | — | `10.5281/zenodo.22705896` | — | — | — | — |
 | `navier-stokes-effective-axiom-proof` | Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effective Axio | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Global%20Smoothness%20of%20Three-Dimensional%20Navier-Stokes%20from%20a%20Single%20Effective%20Axiom.pdf) | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — | — |
 | `formal-alone-theory-of-everything` | The Formal-Alone Theory of Everything: A Constitutive Theory of Objects and Observations under  | Unfiled | ? | — | `10.5281/zenodo.22767102` | — | — | — | — |
@@ -330,12 +330,13 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `closure-and-the-limits-of-forced-results` | Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When | `10.5281/zenodo.22683805` | 1 | [ia](https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026) | — |
 | `anchoring-axioms-navier-stokes` | Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for  | `10.5281/zenodo.22670331` | 1 | [ia](https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026) | — |
 
-## Zenodo version chains (18)
+## Zenodo version chains (19)
 
 Works carrying more than one deposit. Full per-version DOIs and checksums are in `Zenodo Snapshot [2026-09-01]/MANIFEST.md`.
 
 | Work key | Versions | Concept DOI | Latest version DOI | First | Latest |
 |---|---|---|---|---|---|
+| `nothing-escapes-fourth-cosmic-closure` | 2 | `10.5281/zenodo.22987345` | `10.5281/zenodo.22992403` | — | 2026-09-27 |
 | `rows-from-existence-alone` | 3 | `10.5281/zenodo.22913634` | `10.5281/zenodo.22954862` | 2026-09-23 | 2026-09-25 |
 | `rh-from-existence-alone` | 4 | `10.5281/zenodo.22912937` | `10.5281/zenodo.22954865` | 2026-09-23 | 2026-09-25 |
 | `trisduction-the-codex` | 2 | `10.5281/zenodo.22911009` | `10.5281/zenodo.22914388` | 2026-09-23 | 2026-09-23 |

@@ -1,6 +1,6 @@
 # External Review Record · Grok on X · 27 September 2026
 
-**Subject.** *Complete Formal Closure of the Riemann Hypothesis* (10.5281/zenodo.22976494), *Nothing Escapes, Twenty-Three Rows* (10.5281/zenodo.22986551), *Nothing Escapes: The Fourth as Cosmic Closure* (10.5281/zenodo.22987346) and the six constructed witnesses (10.5281/zenodo.22986553 to 22986563), reviewed in a public thread by the xAI assistant Grok between 01:52 and 03:27 UTC.
+**Subject.** *Complete Formal Closure of the Riemann Hypothesis* (10.5281/zenodo.22976494), *Nothing Escapes, Twenty-Three Rows* (10.5281/zenodo.22986551), *Nothing Escapes: The Fourth as Cosmic Closure* (10.5281/zenodo.22987346) and the six constructed witnesses (10.5281/zenodo.22986553 to 22986563), reviewed in a public thread by the xAI assistant Grok between 05:32 and 07:31 UTC (01:32 to 03:31 EDT, as X displayed them; corrected from the status identifiers).
 
 **Course of the thread.** Grok opened with "not mathematically or logically correct". Across the replies it conceded, in order: the equivalence theorems are pure logic and use no Root Axiom; the Root Axiom enters only as a declared premise; the block holds by theorem; the kernels compile in core Lean with no axiom declared; the six Fortran twins report zero failures; `One_Cut.lean` runs as described. It closed by agreeing that its "classical RH stays open" and the papers' "ZFC route blocked by theorem" name one fact.
 
@@ -27,3 +27,5 @@
 **Preserved copy.** The architect's blog carries the thread as a captured image, with both closing links, in the post *Public Read and Stress Testing Formal RH Proof Paper* (27 September 2026): https://tractatus-veritatis-trisductivus.blogspot.com/2026/09/public-read-and-stress-testing-formal.html
 
 The snapshots were taken on archive.today on 27 September 2026, the Wayback Machine's save service being busy that day; they were supplied by the architect in the order of the table, the scribe's sandbox being unable to open archive.today to cross-check them.
+
+**Full transcript.** All forty-eight posts, word for word, are Appendix C of *Nothing Escapes: The Fourth as Cosmic Closure* v1.2.0 (10.5281/zenodo.22992403).
