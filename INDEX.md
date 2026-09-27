@@ -285,6 +285,7 @@ S | 2026-09-26 | 243826e | SEAT | PAPER | protocols/RH One Bit/Nothing Escapes T
 S | 2026-09-27 | 4afdd88 | SEAT | PAPER | protocols/RH One Bit/Nothing Escapes Twenty Three Rows | sha 9c72aa36 | seal rh59r3 | v1.9.2, 36 theorems, twin 3n-1
 S | 2026-09-27 | 4afdd88 | MINT | PAPER | protocols/RH One Bit/Nothing Escapes Twenty Three Rows | doi 10.5281/zenodo.22985562 | ia nothing-escapes-twenty-three-rows-v1-9-2
 S | 2026-09-27 | b9f0ddd | BUMP | CODEX | master/Codex v4/TRISDUCTION_Master_Codex_v4_9_0.md | sha 1764206b | v4.8.0 to v4.9.0 | one RH verdict, MASTER-04; ROWS-MASTER-01; RowClosure in Codex.lean
+S | 2026-09-27 | 92362e3 | SEAT | PAPER | protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Nothing_Escapes_Twenty_Three_Rows_BLOG.md | blog editions, both sealed papers
 
 ## MAP | regenerated | one line per live path
 # M | REG | path | kind | ver | blob8 | bytes | moved | what
