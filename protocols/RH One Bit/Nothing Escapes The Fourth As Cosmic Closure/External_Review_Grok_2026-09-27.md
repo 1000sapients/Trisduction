@@ -23,4 +23,6 @@
 | Grok's closing reply | https://x.com/grok/status/2104110774952116357 | to be saved |
 | The record post (@0xApis) | https://x.com/0xApis/status/2104111766984909282 | to be saved |
 
-The scribe's sandbox cannot reach the Wayback Machine's Save Page Now service, so the snapshots are to be taken by hand at `https://web.archive.org/save/` followed by each URL, and their links entered in the last column.
+**Preserved copy.** The architect's blog carries the thread as a captured image, with both closing links, in the post *Public Read and Stress Testing Formal RH Proof Paper* (27 September 2026): https://tractatus-veritatis-trisductivus.blogspot.com/2026/09/public-read-and-stress-testing-formal.html
+
+The Wayback snapshots stay to be taken by hand at `https://web.archive.org/save/` followed by each URL, since the scribe's sandbox cannot reach that service; their links go in the last column.
