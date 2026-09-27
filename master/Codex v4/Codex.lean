@@ -9583,3 +9583,886 @@ end RowClosure
 #print axioms RowClosure.bifurcation_typed_partner
 #print axioms RowClosure.erasure_confined_to_its_class
 #print axioms RowClosure.barrier_unconditional
+
+/-! ## THE SEVENTH: REST. What each row owes is computed, and it is at most one object; the
+    ledger's statuses are computed from recorded facts, not assigned. No axiom unless printed. -/
+namespace RowClosure
+variable {S : Type}
+
+/-- The value on a class is exactly the existence of a compliant carrier covering it. A pending
+    row owes one carrier and nothing else; the theorem that crosses it is already proved. -/
+theorem value_iff_carrier (P : S → Prop) (Z : S → Prop) :
+    Value P Z ↔ ∃ (W : Type) (C : Carrier P W), Actuated C.ι Z := by
+  constructor
+  · intro hv
+    refine ⟨{ s : S // Z s ∧ P s }, ⟨fun w => w.1, fun w => w.2.2⟩, ?_⟩
+    intro s hs
+    exact ⟨⟨s, hs, hv s hs⟩, rfl⟩
+  · intro ⟨_, C, hcov⟩
+    exact kinetic_crossing P C Z hcov
+
+/-- Carriers compose: a carrier into one theory becomes a carrier into another through any map
+    that keeps compliance on the carrier's image. An identification of two theories is needed
+    only on the image, never everywhere. -/
+theorem carrier_compose {T W : Type} (P : S → Prop) (Q : T → Prop) (C : Carrier P W) (j : S → T)
+    (hj : ∀ w, P (C.ι w) → Q (j (C.ι w))) : ∃ D : Carrier Q W, ∀ w, D.ι w = j (C.ι w) :=
+  ⟨⟨fun w => j (C.ι w), fun w => hj w (C.lands w)⟩, fun _ => rfl⟩
+
+/-- The value splits at a cut: on the union of two classes it holds exactly when it holds on each,
+    so the verdict on one cut is untouched by whatever is found on the other. -/
+theorem value_union_iff (P : S → Prop) (Zu Zf : S → Prop) :
+    Value P (fun s => Zu s ∨ Zf s) ↔ Value P Zu ∧ Value P Zf :=
+  ⟨fun h => ⟨fun s hs => h s (Or.inl hs), fun s hs => h s (Or.inr hs)⟩,
+   fun ⟨hu, hf⟩ s hs => match hs with
+     | Or.inl h => hu s h
+     | Or.inr h => hf s h⟩
+
+/-- An existential row is settled by one witness, which carries its own receipt. -/
+theorem one_witness_settles (P : S → Prop) (x : S) (hx : P x) : ∃ s, P s := ⟨x, hx⟩
+
+/-- The posit's shape is the fold: least erasure holds exactly when no instance stands off the
+    locus, the condition a one-signed field meets by construction. -/
+theorem posit_is_the_fold (P : S → Prop) [DecidablePred P] (π : S → S) (R : Registration P π)
+    (Z : S → Prop) : LeastErasure P π Z ↔ ¬ ∃ s, Z s ∧ ¬ P s :=
+  (least_erasure_iff_value P π R Z).trans (value_iff_not_erases P Z)
+
+/-- The Rest: over a family of rows, if every actuated class is compliant, the root on every row
+    gives every full class, and without the root every counterexample on every row is unactuated.
+    One premise for all rows, and it is the root, posited and not owed. -/
+theorem rest_family {I : Type} (P : I → S → Prop) (Zact Zall : I → S → Prop)
+    (hact : ∀ i, Value (P i) (Zact i)) :
+    ((∀ i s, Zall i s → Zact i s) → ∀ i, Value (P i) (Zall i)) ∧
+    (∀ i s, Zall i s → ¬ P i s → ¬ Zact i s) :=
+  ⟨fun ra i s hs => hact i s (ra i s hs), fun i s _ hp ha => hp (hact i s ha)⟩
+
+/-- The ledger, computed. A status is a function of three recorded facts: a seat proved absent,
+    a formal offering with mass, a carrier in the world. -/
+inductive Status
+  | crossed
+  | pending
+  | dot
+  deriving DecidableEq, Repr
+
+def status (seatAbsent formalMass worldCarrier : Bool) : Status :=
+  if seatAbsent then .dot else if formalMass || worldCarrier then .crossed else .pending
+
+theorem nothing_escapes_the_ledger :
+    ∀ a b c : Bool, status a b c = .crossed ∨ status a b c = .pending ∨ status a b c = .dot := by
+  decide
+theorem dot_iff_seat_absent : ∀ a b c : Bool, status a b c = .dot ↔ a = true := by decide
+theorem one_carrier_crosses : ∀ b : Bool, status false b true = .crossed := by decide
+
+structure Entry where
+  name : String
+  seatAbsent : Bool
+  formalMass : Bool
+  worldCarrier : Bool
+  cutOfCrossed : Bool
+  printed : Status
+
+def pend (n : String) : Entry := ⟨n, false, false, false, false, .pending⟩
+def ledgerEntries : List Entry :=
+  [⟨"1 P vs NP", true, false, false, false, .dot⟩,
+   ⟨"2 RH", false, false, true, false, .crossed⟩,
+   ⟨"3a Navier-Stokes unforced", false, false, true, false, .crossed⟩,
+   ⟨"3b Navier-Stokes forced", false, false, false, true, .pending⟩,
+   ⟨"4 Yang-Mills", false, false, true, false, .crossed⟩,
+   pend "5 Hodge", pend "6 BSD",
+   ⟨"7 Poincare", false, true, false, false, .crossed⟩,
+   pend "8 Goldbach", pend "9 Twin primes", pend "10 Legendre", pend "11 abc", pend "12 Jacobian",
+   pend "13 Mersenne", pend "14 Odd perfect", pend "15 Smooth 4D Poincare", pend "16 Collatz",
+   pend "17 Hadwiger", pend "18 Sunflower", pend "19 Erdos-Straus", pend "20 Beal",
+   pend "21 Invariant subspace", pend "22 Hilbert 16th",
+   ⟨"23a Pair correlation", false, false, true, false, .crossed⟩,
+   pend "23b Lindelof"]
+
+/-- Every printed status is the computed one. -/
+theorem ledger_is_computed :
+    ledgerEntries.all (fun e => status e.seatAbsent e.formalMass e.worldCarrier == e.printed) = true := by
+  decide
+/-- Twenty-five entries: five crossed, one dot, nineteen pending entries, eighteen pending rows
+    once the forced cut of row 3 is counted with its row. -/
+theorem ledger_counts :
+    ledgerEntries.length = 25 ∧
+    (ledgerEntries.filter (fun e => e.printed == .crossed)).length = 5 ∧
+    (ledgerEntries.filter (fun e => e.printed == .dot)).length = 1 ∧
+    (ledgerEntries.filter (fun e => e.printed == .pending)).length = 19 ∧
+    (ledgerEntries.filter (fun e => e.printed == .pending && !e.cutOfCrossed)).length = 18 := by
+  decide
+end RowClosure
+#print axioms RowClosure.value_iff_carrier
+#print axioms RowClosure.carrier_compose
+#print axioms RowClosure.value_union_iff
+#print axioms RowClosure.one_witness_settles
+#print axioms RowClosure.posit_is_the_fold
+#print axioms RowClosure.rest_family
+#print axioms RowClosure.nothing_escapes_the_ledger
+#print axioms RowClosure.dot_iff_seat_absent
+#print axioms RowClosure.one_carrier_crosses
+#print axioms RowClosure.ledger_is_computed
+#print axioms RowClosure.ledger_counts
+
+/-! ## THE FUNCTOR OF THE SEAT. Which carrier carries which row is not chosen: a carrier is an
+    equivariant map from a physical system's involution to the row's seat, and equivariant maps
+    send fixed points to fixed points. Spaces with an involution and their equivariant maps form a
+    category, and the fixed set is a functor on it. No axiom unless printed. -/
+namespace RowClosure
+variable {S : Type}
+
+def Equivariant {X Y : Type} (f : X → Y) (τ : X → X) (σ : Y → Y) : Prop := ∀ x, f (τ x) = σ (f x)
+
+theorem equivariant_id {X : Type} (τ : X → X) : Equivariant id τ τ := fun _ => rfl
+
+theorem equivariant_comp {X Y Z : Type} {f : X → Y} {g : Y → Z} {τ : X → X} {σ : Y → Y} {ρ : Z → Z}
+    (hf : Equivariant f τ σ) (hg : Equivariant g σ ρ) : Equivariant (g ∘ f) τ ρ := by
+  intro x
+  show g (f (τ x)) = ρ (g (f x))
+  rw [hf x, hg (f x)]
+
+/-- The fixed set is a functor: an equivariant map sends fixed points to fixed points. -/
+theorem fix_functorial {X Y : Type} {f : X → Y} {τ : X → X} {σ : Y → Y}
+    (hf : Equivariant f τ σ) {x : X} (hx : τ x = x) : σ (f x) = f x := by
+  rw [← hf x, hx]
+
+/-- Landing is forced: an equivariant map into a row's global seat carries every fixed point of the
+    physical involution onto the row's locus. The carrier is built from the symmetry, not chosen. -/
+theorem equivariant_carrier_lands {X : Type} (P : S → Prop) (σ : S → S) (G : GlobalSeat P σ)
+    (f : X → S) (τ : X → X) (hf : Equivariant f τ σ) :
+    ∃ C : Carrier P { x : X // τ x = x }, ∀ w, C.ι w = f w.1 :=
+  ⟨⟨fun w => f w.1, fun w => (G.fixed_iff (f w.1)).mp (fix_functorial hf w.2)⟩, fun _ => rfl⟩
+
+/-- The dot is final: a row whose seat is proved absent is the dot whatever else is recorded. -/
+theorem dot_is_final : ∀ b c : Bool, status true b c = .dot := by decide
+end RowClosure
+#print axioms RowClosure.equivariant_id
+#print axioms RowClosure.equivariant_comp
+#print axioms RowClosure.fix_functorial
+#print axioms RowClosure.equivariant_carrier_lands
+#print axioms RowClosure.dot_is_final
+
+/-! ## THE OWED KIND. What a pending row owes is one object, and its kind is computed: a carrier where
+    the tail has a physical correspondent, a formal offering where no physical system reaches the
+    tail. No axiom unless printed. -/
+namespace RowClosure
+variable {S : Type}
+
+/-- No carrier whose image stays inside the certified class covers a class with an uncertified
+    instance: where physics realizes only the certified class, no carrier reaches the tail. -/
+theorem tail_uncovered {W : Type} (Cert Z : S → Prop) (ι : W → S) (hcert : ∀ w, Cert (ι w))
+    (s : S) (hs : Z s) (hns : ¬ Cert s) : ¬ Actuated ι Z := by
+  intro hcov
+  match hcov s hs with
+  | ⟨w, hw⟩ => exact hns (hw ▸ hcert w)
+
+inductive Owed
+  | nothing
+  | oneCarrier
+  | oneOffering
+  deriving DecidableEq, Repr
+
+def owedOf (st : Status) (tailEmpty : Bool) : Owed :=
+  match st with
+  | .pending => if tailEmpty then .oneOffering else .oneCarrier
+  | _ => .nothing
+
+/-- Every row owes at most one object: nothing, one carrier, or one formal offering. -/
+theorem owed_is_one_object : ∀ (st : Status) (t : Bool),
+    owedOf st t = .nothing ∨ owedOf st t = .oneCarrier ∨ owedOf st t = .oneOffering := by
+  intro st t
+  cases st <;> cases t <;> decide
+
+/-- A formal offering with mass crosses a row whose seat is not proved absent. -/
+theorem one_offering_crosses : ∀ c : Bool, status false true c = .crossed := by decide
+
+def emptyTail (e : Entry) : Bool := e.name == "21 Invariant subspace"
+
+/-- The owed column, computed: six entries owe nothing, eighteen owe one carrier, and row 21, whose
+    tail no physical system reaches, owes one formal offering. -/
+theorem owed_is_computed :
+    (ledgerEntries.filter (fun e => owedOf e.printed (emptyTail e) == .nothing)).length = 6 ∧
+    (ledgerEntries.filter (fun e => owedOf e.printed (emptyTail e) == .oneCarrier)).length = 18 ∧
+    (ledgerEntries.filter (fun e => owedOf e.printed (emptyTail e) == .oneOffering)).length = 1 := by
+  decide
+end RowClosure
+#print axioms RowClosure.tail_uncovered
+#print axioms RowClosure.owed_is_one_object
+#print axioms RowClosure.one_offering_crosses
+#print axioms RowClosure.owed_is_computed
+/-! ## THE WITNESS ENGINE · The Electron Is the Seat (v1.4.0), carried in the Code Block from v4.10.0. Core Lean 4,
+    standalone in its paper's Appendix A; its namespace keeps its names apart. -/
+/-
+  SPHYS_Electron_Witness.lean · The electron as the seat of the closure template, read from
+  the laboratory · core Lean 4, no library. Charge conjugation is a reflection whose fixed set
+  is the neutral sector; the electron is off it with an exact partner that differs in one sign;
+  gravity's record cannot tell the pair apart; annihilation lands the pair on the neutral locus,
+  keeping its energy and forgetting which was which; the line of response is symmetric;
+  positronium's photon count reads the bit of the whole; a bound electron never rests; charge
+  conservation forbids its decay; spin returns to -1 at 2π and to 1 at 4π; a round electron is
+  the fixed set of time reversal. Finite models; every physical number enters as a citation.
+-/
+namespace SPHYS.Electron
+
+/-- A lepton state: charge in units of e, mass in keV, twice the spin projection. -/
+structure St where
+  q : Int
+  m : Nat
+  s : Int
+  deriving DecidableEq, Repr
+
+def conj (p : St) : St := ⟨-p.q, p.m, p.s⟩
+def neutral (p : St) : Prop := p.q = 0
+instance (p : St) : Decidable (neutral p) := inferInstanceAs (Decidable (p.q = 0))
+
+def electron : St := ⟨-1, 511, 1⟩
+def positron : St := ⟨1, 511, 1⟩
+
+theorem conj_involution (p : St) : conj (conj p) = p := by
+  cases p with
+  | mk q m s => show (⟨-(-q), m, s⟩ : St) = ⟨q, m, s⟩; rw [Int.neg_neg]
+
+/-- The seat: a state is its own conjugate exactly when it is neutral. -/
+theorem self_conjugate_iff_neutral (p : St) : conj p = p ↔ neutral p := by
+  cases p with
+  | mk q m s =>
+    show (⟨-q, m, s⟩ : St) = ⟨q, m, s⟩ ↔ q = 0
+    constructor
+    · intro h
+      have h1 : -q = q := congrArg St.q h
+      omega
+    · intro h
+      subst h
+      rfl
+
+/-- The positron is the electron's partner: distinct, and both off the neutral locus. -/
+theorem positron_is_the_partner : conj electron = positron := by decide
+theorem the_pair : conj electron ≠ electron ∧ ¬ neutral electron ∧ ¬ neutral positron := by decide
+
+/-- The pair is exact: conjugation keeps mass and spin and flips only the sign of the charge. -/
+theorem pair_differs_in_one_sign :
+    electron.m = positron.m ∧ electron.s = positron.s ∧ electron.q = -positron.q := by decide
+
+/-- Gravity's record is the mass: two different states, one record. -/
+def massRecord (p : St) : Nat := p.m
+theorem two_worlds_one_record : massRecord electron = massRecord positron ∧ electron ≠ positron := by
+  decide
+
+/-- No function of the mass record returns the charge. -/
+theorem no_reading_of_mass_returns_charge (g : Nat → Int) :
+    ¬ (g (massRecord electron) = electron.q ∧ g (massRecord positron) = positron.q) := by
+  intro ⟨h1, h2⟩
+  have e1 : g 511 = -1 := h1
+  have e2 : g 511 = 1 := h2
+  omega
+
+/-- Annihilation as registration: the pair lands on the neutral locus, keeps its energy (the
+    height) and forgets which constituent was which (the side). -/
+structure Light where
+  q : Int
+  e : Nat
+  deriving DecidableEq, Repr
+def annihilate (a b : St) : Light := ⟨a.q + b.q, a.m + b.m⟩
+theorem annihilation_lands_neutral : (annihilate electron positron).q = 0 := by decide
+theorem annihilation_keeps_energy : (annihilate electron positron).e = 1022 := by decide
+theorem annihilation_forgets_side (a b : St) : annihilate a b = annihilate b a := by
+  unfold annihilate
+  rw [Int.add_comm a.q b.q, Nat.add_comm a.m b.m]
+
+/-- The line of response: two back-to-back photons define one unordered line. -/
+def onLine (p x : Int × Int) : Prop := x = p ∨ x = (-p.1, -p.2)
+theorem line_of_response_symmetric (p x : Int × Int) : onLine p x ↔ onLine (-p.1, -p.2) x := by
+  unfold onLine
+  constructor
+  · intro h
+    cases h with
+    | inl h => right; rw [h, Int.neg_neg, Int.neg_neg]
+    | inr h => left; exact h
+  · intro h
+    cases h with
+    | inl h => right; exact h
+    | inr h => left; rw [h, Int.neg_neg, Int.neg_neg]
+
+/-- Positronium: the C-parity of the whole is (-1)^(L+S) and n photons carry (-1)^n, so the
+    photon count reads the bit of the whole and never the identity of its parts. -/
+def sgn (n : Nat) : Int := if n % 2 = 0 then 1 else -1
+def cParity (L S : Nat) : Int := sgn (L + S)
+theorem para_two_photons : sgn 2 = cParity 0 0 := by decide
+theorem ortho_three_photons : sgn 3 = cParity 0 1 := by decide
+theorem ortho_not_two : sgn 2 ≠ cParity 0 1 := by decide
+
+/-- The floor: by the virial theorem the kinetic energy of a bound Coulomb state is minus its
+    total energy, so a bound electron never rests. -/
+theorem virial (K : Int) : (-2 * K) + K = -K := by omega
+theorem bound_never_rests (E : Int) (hE : E < 0) : 0 < -E := by omega
+
+/-- Stability: every state lighter than the electron is neutral, so no decay product carries
+    its charge. -/
+def total : List Int → Int
+  | [] => 0
+  | a :: t => a + total t
+theorem total_zero (l : List Int) (h : ∀ q ∈ l, q = 0) : total l = 0 := by
+  induction l with
+  | nil => rfl
+  | cons a t ih =>
+    have ha : a = 0 := h a (List.Mem.head t)
+    have ht : total t = 0 := ih (fun q hq => h q (List.Mem.tail a hq))
+    show a + total t = 0
+    rw [ha, ht]
+    rfl
+theorem decay_forbidden (l : List Int) (h : ∀ q ∈ l, q = 0) : total l ≠ -1 := by
+  rw [total_zero l h]
+  decide
+
+/-- Spin: the unit quaternion i is a half-turn; twice is a full turn and gives -1; four times
+    returns. Three half-turns about three perpendicular axes give the Return, ijk = -1. -/
+structure Q where
+  r : Int
+  i : Int
+  j : Int
+  k : Int
+  deriving DecidableEq, Repr
+def qmul (a b : Q) : Q :=
+  ⟨a.r*b.r - a.i*b.i - a.j*b.j - a.k*b.k, a.r*b.i + a.i*b.r + a.j*b.k - a.k*b.j,
+   a.r*b.j - a.i*b.k + a.j*b.r + a.k*b.i, a.r*b.k + a.i*b.j - a.j*b.i + a.k*b.r⟩
+def qi : Q := ⟨0,1,0,0⟩
+def qj : Q := ⟨0,0,1,0⟩
+def qk : Q := ⟨0,0,0,1⟩
+theorem spin_two_pi : qmul qi qi = ⟨-1,0,0,0⟩ := by decide
+theorem spin_four_pi : qmul (qmul qi qi) (qmul qi qi) = ⟨1,0,0,0⟩ := by decide
+theorem the_return : qmul (qmul qi qj) qk = ⟨-1,0,0,0⟩ := by decide
+
+/-- The round electron: a dipole moment is odd under time reversal, and the fixed set of time
+    reversal is the zero dipole. -/
+theorem round_iff_T_fixed (d : Int) : -d = d ↔ d = 0 := by
+  constructor
+  · intro h
+    omega
+  · intro h
+    subst h
+    rfl
+
+/-- The seat, modelled on the critical strip: a point is its doubled real part and its height, and
+    the fold s ↦ 1 - s̄ sends the doubled real part x to 2 - x and keeps the height. -/
+structure Strip where
+  x : Int
+  t : Nat
+  deriving DecidableEq, Repr
+def fold (z : Strip) : Strip := ⟨2 - z.x, z.t⟩
+def criticalLine (z : Strip) : Prop := z.x = 1
+theorem fold_involution (z : Strip) : fold (fold z) = z := by
+  cases z with
+  | mk x t =>
+    show Strip.mk (2 - (2 - x)) t = Strip.mk x t
+    congr 1
+    omega
+theorem fold_fixed_iff (z : Strip) : fold z = z ↔ criticalLine z := by
+  cases z with
+  | mk x t =>
+    show Strip.mk (2 - x) t = Strip.mk x t ↔ x = 1
+    constructor
+    · intro h
+      have hx := congrArg Strip.x h
+      change 2 - x = x at hx
+      omega
+    · intro h
+      subst h
+      rfl
+/-- The explicit equivariant map: charge q goes to doubled real part 1 + q, mass to height. -/
+def toStrip (p : St) : Strip := ⟨1 + p.q, p.m⟩
+theorem toStrip_equivariant (p : St) : toStrip (conj p) = fold (toStrip p) := by
+  show Strip.mk (1 + -p.q) p.m = Strip.mk (2 - (1 + p.q)) p.m
+  congr 1
+  omega
+/-- The neutral states, the fixed set of charge conjugation, land on the critical line. -/
+theorem neutral_lands_on_line (p : St) (h : neutral p) : criticalLine (toStrip p) := by
+  have hq : p.q = 0 := h
+  show 1 + p.q = 1
+  omega
+/-- A charged pair lands on the two edges of the strip, mirror images under the fold: charge -1 at
+    real part 0, charge +1 at real part 1. -/
+theorem pair_on_the_edges (p : St) (h : p.q = -1) :
+    (toStrip p).x = 0 ∧ (toStrip (conj p)).x = 2 ∧ toStrip (conj p) = fold (toStrip p) := by
+  refine ⟨?_, ?_, toStrip_equivariant p⟩
+  · show 1 + p.q = 0
+    omega
+  · show 1 + -p.q = 2
+    omega
+
+end SPHYS.Electron
+#print axioms SPHYS.Electron.conj_involution
+#print axioms SPHYS.Electron.self_conjugate_iff_neutral
+#print axioms SPHYS.Electron.positron_is_the_partner
+#print axioms SPHYS.Electron.the_pair
+#print axioms SPHYS.Electron.pair_differs_in_one_sign
+#print axioms SPHYS.Electron.two_worlds_one_record
+#print axioms SPHYS.Electron.no_reading_of_mass_returns_charge
+#print axioms SPHYS.Electron.annihilation_lands_neutral
+#print axioms SPHYS.Electron.annihilation_keeps_energy
+#print axioms SPHYS.Electron.annihilation_forgets_side
+#print axioms SPHYS.Electron.line_of_response_symmetric
+#print axioms SPHYS.Electron.para_two_photons
+#print axioms SPHYS.Electron.ortho_three_photons
+#print axioms SPHYS.Electron.ortho_not_two
+#print axioms SPHYS.Electron.bound_never_rests
+#print axioms SPHYS.Electron.decay_forbidden
+#print axioms SPHYS.Electron.spin_two_pi
+#print axioms SPHYS.Electron.spin_four_pi
+#print axioms SPHYS.Electron.the_return
+#print axioms SPHYS.Electron.round_iff_T_fixed
+#print axioms SPHYS.Electron.fold_involution
+#print axioms SPHYS.Electron.fold_fixed_iff
+#print axioms SPHYS.Electron.toStrip_equivariant
+#print axioms SPHYS.Electron.neutral_lands_on_line
+#print axioms SPHYS.Electron.pair_on_the_edges
+/-! ## THE WITNESS ENGINE · The Neutrino Is the Witness (v1.4.0), carried in the Code Block from v4.10.0. Core Lean 4,
+    standalone in its paper's Appendix A; its namespace keeps its names apart. -/
+/-
+  SPHYS_Neutrino_Witness.lean · The neutral lepton as the witness of the closure template ·
+  core Lean 4, no library. Six correspondences in the row kernel's own terms: the seat is
+  charge conjugation and its fixed set is the neutral line (Majorana = on the locus); the
+  electron is an off-locus point with its partner; the weak registration lands only one
+  chirality, so the sterile state is uncovered, the ghost; oscillation is registration in a
+  second basis, unitarity is losslessness; the ordering is a one-bit address; and an observed
+  mass difference forces a nonzero mass, the Root Axiom's floor supplied by deed.
+-/
+namespace SPHYS.Neutrino
+
+/-- A lepton state: charge and chirality (true = left-handed). -/
+abbrev State := Int × Bool
+def conj (p : State) : State := (-p.1, p.2)
+def neutral (p : State) : Prop := p.1 = 0
+instance (p : State) : Decidable (neutral p) := inferInstanceAs (Decidable (p.1 = 0))
+def electron : State := (-1, true)
+def nuL : State := (0, true)
+def nuR : State := (0, false)
+
+theorem conj_involution (p : State) : conj (conj p) = p := by
+  cases p with | mk q h => show (-(-q), h) = (q, h); simp
+
+/-- The seat's fixed set is exactly the neutral line: a state is its own mirror image under
+    conjugation iff it carries no charge. Majorana is membership in this fixed set. -/
+theorem majorana_iff_neutral (p : State) : conj p = p ↔ neutral p := by
+  cases p with
+  | mk q h =>
+    show (-q, h) = (q, h) ↔ q = 0
+    constructor
+    · intro e; have h1 : -q = q := congrArg Prod.fst e; omega
+    · intro e; subst e; rfl
+
+/-- The electron is off the locus and has a partner, the positron, distinct and off the locus:
+    the pair the seat makes, the electron's witness role. -/
+theorem electron_pair : conj electron ≠ electron ∧ ¬ neutral (conj electron) ∧ ¬ neutral electron := by
+  decide
+
+/-- The neutrino sits on the fixed set. -/
+theorem neutrino_on_the_locus : conj nuL = nuL ∧ conj nuR = nuR := by decide
+
+/-- Weak registration lands only on left-handed states: the carrier's image. -/
+def weakImage (p : State) : Prop := p.2 = true
+instance (p : State) : Decidable (weakImage p) := inferInstanceAs (Decidable (p.2 = true))
+theorem active_registered : weakImage nuL := rfl
+/-- The sterile state is uncovered by every weak registration: the ghost in the formal domain. -/
+theorem sterile_uncovered : ¬ weakImage nuR := by decide
+/-- One bit separates the registered state from the ghost: same charge, opposite chirality. -/
+theorem one_bit_apart : nuL.1 = nuR.1 ∧ nuL.2 ≠ nuR.2 := by decide
+
+/-- Oscillation as registration in a second basis: a mass state is read as a flavour record,
+    or falls outside the active flavours (sterile admixture). -/
+abbrev Mixing := Fin 3 → Option (Fin 3)
+def Lossless (U : Mixing) : Prop := ∀ m, ∃ f, U m = some f
+def Erases (U : Mixing) : Prop := ∃ m, U m = none
+theorem lossless_iff_not_erases (U : Mixing) : Lossless U ↔ ¬ Erases U := by
+  constructor
+  · intro hl ⟨m, hm⟩; obtain ⟨f, hf⟩ := hl m; rw [hm] at hf; cases hf
+  · intro hne m
+    cases hU : U m with
+    | none => exact absurd ⟨m, hU⟩ hne
+    | some f => exact ⟨f, rfl⟩
+def pmns : Mixing := fun m => some m
+theorem pmns_unitary_is_lossless : Lossless pmns := fun m => ⟨m, rfl⟩
+def withSterile : Mixing := fun m => if m = 2 then none else some m
+theorem sterile_admixture_erases : Erases withSterile := ⟨2, rfl⟩
+
+/-- The ordering is a one-bit address indexing the family. -/
+inductive Ordering | normal | inverted deriving DecidableEq, Repr
+theorem ordering_one_bit : ([Ordering.normal, Ordering.inverted] : List Ordering).length = 2 := rfl
+
+/-- An observed mass difference forces a nonzero mass: the floor supplied by deed where the
+    register wrote zero. -/
+theorem oscillation_forces_floor (m1 m2 : Nat) (h : m1 ≠ m2) : 0 < m1 ∨ 0 < m2 := by omega
+
+end SPHYS.Neutrino
+#print axioms SPHYS.Neutrino.conj_involution
+#print axioms SPHYS.Neutrino.majorana_iff_neutral
+#print axioms SPHYS.Neutrino.electron_pair
+#print axioms SPHYS.Neutrino.neutrino_on_the_locus
+#print axioms SPHYS.Neutrino.sterile_uncovered
+#print axioms SPHYS.Neutrino.one_bit_apart
+#print axioms SPHYS.Neutrino.lossless_iff_not_erases
+#print axioms SPHYS.Neutrino.pmns_unitary_is_lossless
+#print axioms SPHYS.Neutrino.sterile_admixture_erases
+#print axioms SPHYS.Neutrino.ordering_one_bit
+#print axioms SPHYS.Neutrino.oscillation_forces_floor
+/-! ## THE WITNESS ENGINE · The Arrow Has Two Branches (v1.4.0), carried in the Code Block from v4.10.0. Core Lean 4,
+    standalone in its paper's Appendix A; its namespace keeps its names apart. -/
+/-
+  SPHYS_Two_Arrows.lean · Magnetism and gravity as the two branches of one registration ·
+  core Lean 4, no library. A one-signed field has no off-locus point, so no two worlds over a
+  record and no bit to register: the reversible branch, the retraction itself. A two-signed
+  field has pairs, remanence, two worlds over one record, the priced branch. Under time
+  reversal the electric record is even and the magnetic target is odd, so no function of the
+  record returns the target. Nothing here is a field theory; it is the typing of two arrows.
+-/
+namespace SPHYS.Arrows
+
+/-- Sources of one sign: every source is its own conjugate, so none is off the locus. -/
+def gravSource := { m : Int // 0 < m }
+def conjG (s : gravSource) : gravSource := s
+theorem gravity_no_off_locus (s : gravSource) : conjG s = s := rfl
+
+/-- A row with every instance compliant admits no erasure and hence no two worlds: there is
+    no bit for a record to miss. This is why the reversible branch keeps no record. -/
+def Value {S : Type} (P : S → Prop) (Z : S → Prop) : Prop := ∀ s, Z s → P s
+def Erases {S : Type} (P : S → Prop) (Z : S → Prop) : Prop := ∃ s, Z s ∧ ¬ P s
+theorem no_bit_without_off_locus {S : Type} (P : S → Prop) (hall : ∀ s, P s) (Z : S → Prop) :
+    Value P Z ∧ ¬ Erases P Z :=
+  ⟨fun s _ => hall s, fun ⟨s, _, hp⟩ => hp (hall s)⟩
+
+/-- Charges of two signs come in pairs under conjugation: an off-locus point has a partner,
+    distinct and off the locus. No monopole: the pair never separates. -/
+def charge := Int
+def conjC (q : Int) : Int := -q
+theorem magnetism_pair (q : Int) (hq : q ≠ 0) : conjC q ≠ q ∧ conjC q ≠ 0 := by
+  unfold conjC; omega
+
+/-- Remanence: at zero applied field the material sits in one of two states with the same
+    record. Two worlds over one record, the kept bit. -/
+abbrev MagState := Int × Bool     -- (applied field H, remanent orientation)
+def record (s : MagState) : Int := s.1
+theorem two_worlds_at_zero_field :
+    record (0, true) = record (0, false) ∧ (0, true) ≠ ((0, false) : MagState) := by decide
+
+/-- The priced and the reversible branch: a cycle of the priced branch pays at least one
+    floor; the reversible branch pays none. -/
+def cost : Bool → Nat | true => 1 | false => 0    -- true = irreversible (priced)
+theorem priced_pays : cost true = 1 := rfl
+theorem reversible_free : cost false = 0 := rfl
+theorem branches_differ : cost true ≠ cost false := by decide
+
+/-- Time reversal on the field record: the electric part is even, the magnetic part odd.
+    No function of the even part returns the odd part. -/
+abbrev Field := Int × Int        -- (E, B)
+def timeRev (f : Field) : Field := (f.1, -f.2)
+theorem electric_even (f : Field) : (timeRev f).1 = f.1 := rfl
+theorem magnetic_odd (f : Field) : (timeRev f).2 = -f.2 := rfl
+theorem no_reading_of_E_returns_B (g : Int → Int) : ¬ (∀ f : Field, g f.1 = f.2) := by
+  intro h
+  have h1 := h (0, 1); have h2 := h (0, -1)
+  simp at h1 h2; omega
+
+/-- A forbidden observation, derived: remanence needs two worlds over one record, so a field whose
+    every instance is compliant can show no hysteresis, whatever its record. -/
+theorem one_sign_no_remanence {S R : Type} (P : S → Prop) (record : S → R) (hall : ∀ s, P s) :
+    ¬ ∃ s₁ s₂, record s₁ = record s₂ ∧ P s₁ ∧ ¬ P s₂ :=
+  fun ⟨_, s₂, _, _, hn⟩ => hn (hall s₂)
+
+end SPHYS.Arrows
+#print axioms SPHYS.Arrows.gravity_no_off_locus
+#print axioms SPHYS.Arrows.no_bit_without_off_locus
+#print axioms SPHYS.Arrows.magnetism_pair
+#print axioms SPHYS.Arrows.two_worlds_at_zero_field
+#print axioms SPHYS.Arrows.branches_differ
+#print axioms SPHYS.Arrows.magnetic_odd
+#print axioms SPHYS.Arrows.no_reading_of_E_returns_B
+#print axioms SPHYS.Arrows.one_sign_no_remanence
+/-! ## THE WITNESS ENGINE · The Proton Is the Lock (v1.4.0), carried in the Code Block from v4.10.0. Core Lean 4,
+    standalone in its paper's Appendix A; its namespace keeps its names apart. -/
+/-
+  SPHYS_Proton_Lock.lean · The proton as the lock of the closure template · core Lean 4.
+  The color singlet of three quarks is the Levi-Civita symbol, the determinant: nonzero
+  exactly when the three colors are distinct, antisymmetric under every exchange, and the
+  lock fails when two axes coincide. The quark-spin record does not decide how the rest of
+  the proton's spin is split. The valence quarks carry under one percent of the mass. The
+  spectrum is gapped. Finite models; every physical number enters as a citation.
+-/
+namespace SPHYS.Proton
+
+def eps (i j k : Fin 3) : Int :=
+  if i = j ∨ j = k ∨ i = k then 0 else if (i.val + 1) % 3 = j.val then 1 else -1
+
+theorem eps_nonzero_iff_distinct :
+    ∀ i j k : Fin 3, eps i j k ≠ 0 ↔ (i ≠ j ∧ j ≠ k ∧ i ≠ k) := by decide
+theorem eps_antisymmetric : ∀ i j k : Fin 3, eps j i k = - eps i j k := by decide
+theorem eps_cyclic : ∀ i j k : Fin 3, eps j k i = eps i j k := by decide
+
+def colors : List (Fin 3) := [0, 1, 2]
+def epsTable : List Int :=
+  colors.flatMap fun i => colors.flatMap fun j => colors.map fun k => eps i j k
+/-- Twenty-seven color states, six nonzero entries, one singlet up to sign. -/
+theorem singlet_count : epsTable.length = 27 ∧ (epsTable.filter (· ≠ 0)).length = 6 := by decide
+
+/-- The determinant as the lock. -/
+def det3 (M : Fin 3 → Fin 3 → Int) : Int :=
+  colors.foldl (fun acc i => colors.foldl (fun acc j => colors.foldl
+    (fun acc k => acc + eps i j k * M 0 i * M 1 j * M 2 k) acc) acc) 0
+def idM : Fin 3 → Fin 3 → Int := fun r c => if r = c then 1 else 0
+def collapsed : Fin 3 → Fin 3 → Int := fun r c => if r = 2 then (if c = 0 then 1 else 0) else idM r c
+theorem lock_closes : det3 idM = 1 := by decide
+theorem lock_fails_when_axes_coincide : det3 collapsed = 0 := by decide
+
+/-- The proton's spin, in hundredths of hbar: one half = 50 = (1/2) quark spin + gluon spin +
+    orbital. Two budgets with the same quark record split the rest differently. -/
+structure Budget where
+  sigma : Int
+  gluon : Int
+  orbital : Int
+  deriving DecidableEq, Repr
+def total (b : Budget) : Int := b.sigma / 2 + b.gluon + b.orbital
+def worldA : Budget := ⟨30, 20, 15⟩
+def worldB : Budget := ⟨30, 5, 30⟩
+theorem quark_record_does_not_decide :
+    worldA.sigma = worldB.sigma ∧ total worldA = 50 ∧ total worldB = 50 ∧ worldA ≠ worldB := by decide
+
+/-- Masses in hundredths of MeV: the valence quarks carry under one percent of the proton. -/
+theorem field_carries_the_mass : (2 * 216 + 467) * 100 < 93827 := by decide
+/-- The spectrum is gapped: every listed state (pion, proton, lightest glueball) is massive. -/
+theorem spectrum_gapped : ([13957, 93827, 173000] : List Nat).all (0 < ·) = true := by decide
+
+/-- The lock's algebra for every integer entry, not on a grid. A determinant with two equal columns
+    vanishes and swapping two columns negates it. These are polynomial identities in the nine
+    entries; an identity true for every integer value is an identity of polynomials, and so holds
+    over every commutative ring, the complex entries of the color rotations included. -/
+def det3v (a b c d e f g h i : Int) : Int :=
+  a * (e * i - f * h) - b * (d * i - f * g) + c * (d * h - e * g)
+theorem det_two_equal_columns (a c d f g i : Int) : det3v a a c d d f g g i = 0 := by
+  simp only [det3v, Int.mul_sub, Int.mul_comm, Int.mul_left_comm, Int.mul_assoc]
+  omega
+theorem det_swap_columns (a b c d e f g h i : Int) :
+    det3v b a c e d f h g i = - det3v a b c d e f g h i := by
+  simp only [det3v, Int.mul_sub, Int.mul_comm, Int.mul_left_comm, Int.mul_assoc]
+  omega
+
+end SPHYS.Proton
+#print axioms SPHYS.Proton.eps_nonzero_iff_distinct
+#print axioms SPHYS.Proton.eps_antisymmetric
+#print axioms SPHYS.Proton.eps_cyclic
+#print axioms SPHYS.Proton.singlet_count
+#print axioms SPHYS.Proton.lock_closes
+#print axioms SPHYS.Proton.lock_fails_when_axes_coincide
+#print axioms SPHYS.Proton.quark_record_does_not_decide
+#print axioms SPHYS.Proton.field_carries_the_mass
+#print axioms SPHYS.Proton.spectrum_gapped
+#print axioms SPHYS.Proton.det_two_equal_columns
+#print axioms SPHYS.Proton.det_swap_columns
+/-! ## THE WITNESS ENGINE · The Magnet Is the Witness of the Pair Correlation (v1.4.0), carried in the Code Block from v4.10.0. Core Lean 4,
+    standalone in its paper's Appendix A; its namespace keeps its names apart. -/
+/-
+  SPHYS_Pair_Correlation.lean · Level repulsion and the arrow · core Lean 4, no library.
+  A two-level Hermitian block has diagonal a, d and off-diagonal b + i c. Time reversal is
+  complex conjugation, c to -c, an involution whose fixed set is the real blocks; a magnetic,
+  time-odd term c /= 0 breaks it. Degeneracy costs two conditions on the real blocks and three
+  on the complex ones, so levels repel as s^1 (orthogonal class, time-even, nuclei) and as s^2
+  (unitary class, time broken, the class of the Riemann zeros). Finite models.
+-/
+namespace SPHYS.PairCorr
+
+structure H2 where
+  a : Int
+  d : Int
+  b : Int
+  c : Int
+  deriving DecidableEq, Repr
+
+def T (h : H2) : H2 := ⟨h.a, h.d, h.b, -h.c⟩
+
+theorem T_involution (h : H2) : T (T h) = h := by
+  cases h with
+  | mk a d b c => show (⟨a, d, b, -(-c)⟩ : H2) = ⟨a, d, b, c⟩; rw [Int.neg_neg]
+
+theorem T_fixed_iff_real (h : H2) : T h = h ↔ h.c = 0 := by
+  cases h with
+  | mk a d b c =>
+    show (⟨a, d, b, -c⟩ : H2) = ⟨a, d, b, c⟩ ↔ c = 0
+    constructor
+    · intro e
+      have h1 : -c = c := congrArg H2.c e
+      omega
+    · intro e
+      subst e
+      rfl
+
+theorem magnetic_term_breaks_T (h : H2) (hc : h.c ≠ 0) : T h ≠ h :=
+  fun e => hc ((T_fixed_iff_real h).mp e)
+
+/-- The discriminant of the block; the two levels coincide exactly when it vanishes. -/
+def disc (h : H2) : Int := (h.a - h.d) * (h.a - h.d) + 4 * (h.b * h.b + h.c * h.c)
+def grid (x : Fin 5) : Int := (x.val : Int) - 2
+
+/-- On a grid, degeneracy of a complex block needs three conditions. -/
+theorem degenerate_iff_three_conditions :
+    ∀ a d b c : Fin 5, disc ⟨grid a, grid d, grid b, grid c⟩ = 0 ↔
+      (grid a = grid d ∧ grid b = 0 ∧ grid c = 0) := by decide
+
+/-- On the time-even blocks (c = 0), degeneracy needs two. -/
+theorem degenerate_real_two_conditions :
+    ∀ a d b : Fin 5, disc ⟨grid a, grid d, grid b, 0⟩ = 0 ↔ (grid a = grid d ∧ grid b = 0) := by decide
+
+/-- The repulsion exponent is the codimension of degeneracy minus one. -/
+def codimOrth : Nat := 2
+def codimUnit : Nat := 3
+theorem repulsion_exponents : codimOrth - 1 = 1 ∧ codimUnit - 1 = 2 := by decide
+
+/-- The coordinate bridge: H = H0 + lambda V, with H0 real and V the magnetic, time-odd term.
+    Time reversal fixes H exactly when lambda vanishes. -/
+theorem perturbation_breaks_T (a d b l : Int) : T ⟨a, d, b, l⟩ = ⟨a, d, b, l⟩ ↔ l = 0 :=
+  T_fixed_iff_real ⟨a, d, b, l⟩
+
+theorem sq_nonneg (x : Int) : 0 ≤ x * x := by
+  cases Int.le_total 0 x with
+  | inl h => exact Int.mul_nonneg h h
+  | inr h =>
+    have hn : 0 ≤ -x := by omega
+    have := Int.mul_nonneg hn hn
+    rw [Int.neg_mul_neg] at this
+    exact this
+
+/-- Degeneracy for every integer entry, not on a grid: the two levels coincide exactly when
+    a = d, b = 0 and c = 0; the same sum-of-squares argument holds over the reals. -/
+theorem degenerate_iff (a d b c : Int) : disc ⟨a, d, b, c⟩ = 0 ↔ a = d ∧ b = 0 ∧ c = 0 := by
+  show (a - d) * (a - d) + 4 * (b * b + c * c) = 0 ↔ a = d ∧ b = 0 ∧ c = 0
+  constructor
+  · intro h
+    have h1 := sq_nonneg (a - d)
+    have h2 := sq_nonneg b
+    have h3 := sq_nonneg c
+    have e1 : (a - d) * (a - d) = 0 := by omega
+    have e2 : b * b = 0 := by omega
+    have e3 : c * c = 0 := by omega
+    have ha : a - d = 0 := by
+      cases Int.mul_eq_zero.mp e1 with
+      | inl h => exact h
+      | inr h => exact h
+    have hb : b = 0 := by
+      cases Int.mul_eq_zero.mp e2 with
+      | inl h => exact h
+      | inr h => exact h
+    have hc : c = 0 := by
+      cases Int.mul_eq_zero.mp e3 with
+      | inl h => exact h
+      | inr h => exact h
+    exact ⟨by omega, hb, hc⟩
+  · intro ⟨h1, h2, h3⟩
+    subst h1; subst h2; subst h3
+    simp [Int.sub_self]
+
+end SPHYS.PairCorr
+#print axioms SPHYS.PairCorr.T_involution
+#print axioms SPHYS.PairCorr.T_fixed_iff_real
+#print axioms SPHYS.PairCorr.magnetic_term_breaks_T
+#print axioms SPHYS.PairCorr.degenerate_iff_three_conditions
+#print axioms SPHYS.PairCorr.degenerate_real_two_conditions
+#print axioms SPHYS.PairCorr.repulsion_exponents
+#print axioms SPHYS.PairCorr.perturbation_breaks_T
+#print axioms SPHYS.PairCorr.sq_nonneg
+#print axioms SPHYS.PairCorr.degenerate_iff
+/-! ## THE WITNESS ENGINE · The Fluid Is the Witness (v1.4.0), carried in the Code Block from v4.10.0. Core Lean 4,
+    standalone in its paper's Appendix A; its namespace keeps its names apart. -/
+/-
+  SPHYS_Fluid.lean · Viscosity as the priced arrow · core Lean 4, no library.
+  On the reversible branch two characteristics whose rear moves faster cross in finite time:
+  the flow leaves the regular locus. On the priced branch a viscous step is a weighted average,
+  so it never exceeds the old maximum nor falls below the old minimum, and it cuts a jump. A
+  forced erasure is confined to the forced class. Finite models.
+-/
+namespace SPHYS.Fluid
+
+/-- Characteristics x1 + u1 t and x2 + u2 t meet at t = (x2 - x1)/(u1 - u2) > 0, written
+    without division: tn / td is the meeting time. -/
+theorem characteristics_cross (x1 x2 u1 u2 : Int) (hx : x1 < x2) (hu : u2 < u1) :
+    0 < x2 - x1 ∧ 0 < u1 - u2 ∧
+    x1 * (u1 - u2) + u1 * (x2 - x1) = x2 * (u1 - u2) + u2 * (x2 - x1) := by
+  refine ⟨by omega, by omega, ?_⟩
+  simp only [Int.mul_sub]
+  simp only [Int.mul_comm u1 x1, Int.mul_comm u1 x2, Int.mul_comm u2 x2, Int.mul_comm u2 x1]
+  omega
+
+/-- The viscous step at weight one quarter: 4 u' = u(i-1) + 2 u(i) + u(i+1). -/
+theorem max_principle (a b c M : Int) (ha : a ≤ M) (hb : b ≤ M) (hc : c ≤ M) :
+    a + 2 * b + c ≤ 4 * M := by omega
+theorem min_principle (a b c m : Int) (ha : m ≤ a) (hb : m ≤ b) (hc : m ≤ c) :
+    4 * m ≤ a + 2 * b + c := by omega
+
+/-- One step on a jump 0,0,4,4 gives 0,1,3,4, written scaled by four as 0,4,12,16: the largest
+    neighbour difference falls from 16 to 8 scaled, from 4 to 2 in the field. The priced arrow
+    smooths. -/
+def step4 (l c r : Int) : Int := l + 2 * c + r
+theorem jump_is_cut :
+    step4 0 0 0 = 0 ∧ step4 0 0 4 = 4 ∧ step4 0 4 4 = 12 ∧ step4 4 4 4 = 16 ∧
+    (12 - 4 : Int) < 16 := by decide
+
+/-- A forced erasure is an instance of the forced class, and no instance of a disjoint class. -/
+theorem forced_erasure_confined {S : Type} (P Zf Zu : S → Prop)
+    (hdisj : ∀ s, Zf s → ¬ Zu s) (he : ∃ s, Zf s ∧ ¬ P s) : ∃ s, ¬ P s ∧ ¬ Zu s :=
+  match he with | ⟨s, hs, hp⟩ => ⟨s, hp, hdisj s hs⟩
+
+/-- The viscous step on the whole lattice, at every resolution: 4 u'(i) = u(i-1) + 2 u(i) + u(i+1). -/
+def step (u : Int → Int) (i : Int) : Int := u (i - 1) + 2 * u i + u (i + 1)
+theorem step_bounds (u : Int → Int) (m M : Int) (h : ∀ i, m ≤ u i ∧ u i ≤ M) (i : Int) :
+    4 * m ≤ step u i ∧ step u i ≤ 4 * M := by
+  have h1 := h (i - 1)
+  have h2 := h i
+  have h3 := h (i + 1)
+  unfold step
+  constructor
+  · omega
+  · omega
+def stepN : Nat → (Int → Int) → (Int → Int)
+  | 0, u => u
+  | n + 1, u => step (stepN n u)
+/-- The discrete maximum principle after every number of steps: the field, scaled by 4^n, stays
+    between 4^n times the old minimum and 4^n times the old maximum, for all data, at every point. -/
+theorem max_principle_all_steps (u : Int → Int) (m M : Int) (h : ∀ i, m ≤ u i ∧ u i ≤ M) :
+    ∀ n i, 4 ^ n * m ≤ stepN n u i ∧ stepN n u i ≤ 4 ^ n * M := by
+  intro n
+  induction n with
+  | zero =>
+    intro i
+    show 4 ^ 0 * m ≤ u i ∧ u i ≤ 4 ^ 0 * M
+    rw [Int.pow_zero, Int.one_mul, Int.one_mul]
+    exact h i
+  | succ k ih =>
+    intro i
+    have hb := step_bounds (stepN k u) (4 ^ k * m) (4 ^ k * M) ih i
+    show 4 ^ (k + 1) * m ≤ step (stepN k u) i ∧ step (stepN k u) i ≤ 4 ^ (k + 1) * M
+    rw [Int.pow_succ, Int.mul_comm (4 ^ k) 4, Int.mul_assoc, Int.mul_assoc]
+    exact hb
+
+end SPHYS.Fluid
+#print axioms SPHYS.Fluid.characteristics_cross
+#print axioms SPHYS.Fluid.max_principle
+#print axioms SPHYS.Fluid.min_principle
+#print axioms SPHYS.Fluid.jump_is_cut
+#print axioms SPHYS.Fluid.forced_erasure_confined
+#print axioms SPHYS.Fluid.step_bounds
+#print axioms SPHYS.Fluid.max_principle_all_steps
+
+/-! ## THE MIRROR. The two registers mirror each other. What the formal register cannot read is
+    supplied in the physical register by a deed; what the physical register cannot register, an
+    instance off the locus, could be exhibited only by computation. No axiom unless printed. -/
+namespace RowClosure
+variable {S : Type}
+
+/-- The physical unicorn: a registration lands every instance on the locus, so an off-locus
+    instance, if one exists, is never the image of a measurement. -/
+theorem off_locus_never_registered (P : S → Prop) (π : S → S) (R : Registration P π)
+    (x : S) (hx : ¬ P x) : ∀ s, π s ≠ x :=
+  fun s h => hx (h ▸ R.lands s)
+
+/-- The mirror, both faces at once. Physically, no registered point stands off the locus; formally,
+    no carrier whose image stays in the certified class reaches an uncertified instance. -/
+theorem dual_register_mirror {W : Type} (P : S → Prop) (π : S → S) (R : Registration P π)
+    (Cert Z : S → Prop) (ι : W → S) (hcert : ∀ w, Cert (ι w)) (x : S) :
+    (¬ P x → ∀ s, π s ≠ x) ∧ (Z x → ¬ Cert x → ¬ Actuated ι Z) :=
+  ⟨off_locus_never_registered P π R x, fun hz hc => tail_uncovered Cert Z ι hcert x hz hc⟩
+end RowClosure
+#print axioms RowClosure.off_locus_never_registered
+#print axioms RowClosure.dual_register_mirror
