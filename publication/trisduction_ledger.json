@@ -2892,7 +2892,7 @@
    "ia": {
     "identifier": "nothing-escapes-witness-the-fluid-is-the-witness",
     "url": "https://archive.org/details/nothing-escapes-witness-the-fluid-is-the-witness",
-    "state": "live"
+    "state": "pending"
    },
    "philarchive": {
     "record": null,
@@ -2900,7 +2900,7 @@
    },
    "supersedes": null,
    "superseded_by": null,
-   "note": "v1.4.0 published 2026-09-27 as a new concept: a constructed witness for the closure template of Nothing Escapes, Twenty-Three Rows; engine and twin printed in the appendices.",
+   "note": "v1.4.0 published 2026-09-27 as a new concept: a constructed witness for the closure template of Nothing Escapes, Twenty-Three Rows; engine and twin printed in the appendices. Internet Archive item not yet created: the archive answered SlowDown (503) to every upload attempt on 2026-09-27; the identifier is reserved in the plan and the upload is to be retried.",
    "extra": {}
   }
  }
