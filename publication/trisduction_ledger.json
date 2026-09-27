@@ -2671,6 +2671,237 @@
    "superseded_by": null,
    "note": "v1.2.0: self-audit rh1 (7 rounds, HALT-STALE), rh2 (4 rounds, HALT-DIVERGENT), rh3 on an external review (4 rounds, HALT-STALE); Section 6.12, the logical form, added after rh3, unaudited. SELF controls, aperture open. Reduction proved; the hypothesis itself not claimed. Lean RA_Li_Bridge_v1_2_0.lean sha f2d0f4e3, 1058 lines, 79 sets. PDF md5 9fbb971d on git and on Zenodo 22929637, replaced in place by the architect on 2026-09-24 under the same DOI (record metadata still reads version 1.0.0); IA md5 cf67345a (uncompressed), replaced 2026-09-24. v1.0.0 artifacts retained in git at protocols/RH One Bit/*_v1_0_0.* and RA_Li_Bridge.lean. v1.2.0 commits fd785d1..65d1eb1, index c899366.",
    "extra": {}
+  },
+  "nothing-escapes-twenty-three-rows": {
+   "title": "Nothing Escapes, Twenty-Three Rows: Universe Closure by One Cut and One Offering",
+   "domain": "Foundations of Mathematics",
+   "status": "live",
+   "first_published": "",
+   "last_updated": "",
+   "git": {
+    "md": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Nothing_Escapes_Twenty_Three_Rows_v1_14_0.md",
+    "pdf": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Nothing_Escapes_Twenty_Three_Rows_v1_14_0_MathJournal_1col.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22985561,
+    "concept_doi": "10.5281/zenodo.22985561",
+    "latest_version_doi": "22986551",
+    "latest_record": null,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "nothing-escapes-twenty-three-rows-v1-9-2",
+    "url": "https://archive.org/details/nothing-escapes-twenty-three-rows-v1-9-2",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "v1.14.0 published 2026-09-27 as the third version of the concept: the witness ledger, the seventh (rest), the functor of the seat, the owed kind computed; kernel Universal_Closure.lean, every new theorem axiom-free.",
+   "extra": {}
+  },
+  "witness-electron-is-the-seat": {
+   "title": "The Electron Is the Seat: Charge Conjugation as the Reflection, the Positron as the Partner, Annihilation as the Registration That Keeps the Energy and Forgets the Side, and Spin as the Return to Minus One",
+   "domain": "Physics",
+   "status": "live",
+   "first_published": "",
+   "last_updated": "",
+   "git": {
+    "md": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Electron_Is_The_Seat_v1_4_0.md",
+    "pdf": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Electron_Is_The_Seat_v1_4_0_MathJournal_1col.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22986552,
+    "concept_doi": "10.5281/zenodo.22986552",
+    "latest_version_doi": "22986553",
+    "latest_record": null,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "nothing-escapes-witness-the-electron-is-the-seat",
+    "url": "https://archive.org/details/nothing-escapes-witness-the-electron-is-the-seat",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "v1.4.0 published 2026-09-27 as a new concept: a constructed witness for the closure template of Nothing Escapes, Twenty-Three Rows; engine and twin printed in the appendices.",
+   "extra": {}
+  },
+  "witness-neutrino-is-the-witness": {
+   "title": "The Neutrino Is the Witness: How the Closure Template of the Riemann Hypothesis Is Instantiated by the Particle That Never Leaves the Ground",
+   "domain": "Physics",
+   "status": "live",
+   "first_published": "",
+   "last_updated": "",
+   "git": {
+    "md": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Neutrino_Is_The_Witness_v1_4_0.md",
+    "pdf": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Neutrino_Is_The_Witness_v1_4_0_MathJournal_1col.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22986554,
+    "concept_doi": "10.5281/zenodo.22986554",
+    "latest_version_doi": "22986555",
+    "latest_record": null,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "nothing-escapes-witness-the-neutrino-is-the-witness",
+    "url": "https://archive.org/details/nothing-escapes-witness-the-neutrino-is-the-witness",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "v1.4.0 published 2026-09-27 as a new concept: a constructed witness for the closure template of Nothing Escapes, Twenty-Three Rows; engine and twin printed in the appendices.",
+   "extra": {}
+  },
+  "witness-arrow-has-two-branches": {
+   "title": "The Arrow Has Two Branches: Magnetism and Gravity as the Priced and the Reversible Registration of One Arrow",
+   "domain": "Physics",
+   "status": "live",
+   "first_published": "",
+   "last_updated": "",
+   "git": {
+    "md": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Arrow_Has_Two_Branches_v1_4_0.md",
+    "pdf": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Arrow_Has_Two_Branches_v1_4_0_MathJournal_1col.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22986556,
+    "concept_doi": "10.5281/zenodo.22986556",
+    "latest_version_doi": "22986557",
+    "latest_record": null,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "nothing-escapes-witness-the-arrow-has-two-branches",
+    "url": "https://archive.org/details/nothing-escapes-witness-the-arrow-has-two-branches",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "v1.4.0 published 2026-09-27 as a new concept: a constructed witness for the closure template of Nothing Escapes, Twenty-Three Rows; engine and twin printed in the appendices.",
+   "extra": {}
+  },
+  "witness-proton-is-the-lock": {
+   "title": "The Proton Is the Lock: Three Colors, One Singlet, and the Gap Made Flesh",
+   "domain": "Physics",
+   "status": "live",
+   "first_published": "",
+   "last_updated": "",
+   "git": {
+    "md": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Proton_Is_The_Lock_v1_4_0.md",
+    "pdf": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Proton_Is_The_Lock_v1_4_0_MathJournal_1col.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22986558,
+    "concept_doi": "10.5281/zenodo.22986558",
+    "latest_version_doi": "22986559",
+    "latest_record": null,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "nothing-escapes-witness-the-proton-is-the-lock",
+    "url": "https://archive.org/details/nothing-escapes-witness-the-proton-is-the-lock",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "v1.4.0 published 2026-09-27 as a new concept: a constructed witness for the closure template of Nothing Escapes, Twenty-Three Rows; engine and twin printed in the appendices.",
+   "extra": {}
+  },
+  "witness-magnet-pair-correlation": {
+   "title": "The Magnet Is the Witness of the Pair Correlation: Time Reversal Broken by a Magnetic Term Turns Orthogonal Level Statistics into the Unitary Class of the Riemann Zeros",
+   "domain": "Physics",
+   "status": "live",
+   "first_published": "",
+   "last_updated": "",
+   "git": {
+    "md": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Magnet_Is_The_Witness_Of_The_Pair_Correlation_v1_4_0.md",
+    "pdf": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Magnet_Is_The_Witness_Of_The_Pair_Correlation_v1_4_0_MathJournal_1col.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22986560,
+    "concept_doi": "10.5281/zenodo.22986560",
+    "latest_version_doi": "22986561",
+    "latest_record": null,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "nothing-escapes-witness-the-magnet-pair-correlation",
+    "url": "https://archive.org/details/nothing-escapes-witness-the-magnet-pair-correlation",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "v1.4.0 published 2026-09-27 as a new concept: a constructed witness for the closure template of Nothing Escapes, Twenty-Three Rows; engine and twin printed in the appendices.",
+   "extra": {}
+  },
+  "witness-fluid-is-the-witness": {
+   "title": "The Fluid Is the Witness: Viscosity as the Priced Arrow That Keeps Every Actual Flow Regular",
+   "domain": "Physics",
+   "status": "live",
+   "first_published": "",
+   "last_updated": "",
+   "git": {
+    "md": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Fluid_Is_The_Witness_v1_4_0.md",
+    "pdf": "protocols/RH One Bit/Nothing Escapes Twenty Three Rows/Witnesses/The_Fluid_Is_The_Witness_v1_4_0_MathJournal_1col.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": 22986562,
+    "concept_doi": "10.5281/zenodo.22986562",
+    "latest_version_doi": "22986563",
+    "latest_record": null,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "nothing-escapes-witness-the-fluid-is-the-witness",
+    "url": "https://archive.org/details/nothing-escapes-witness-the-fluid-is-the-witness",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "v1.4.0 published 2026-09-27 as a new concept: a constructed witness for the closure template of Nothing Escapes, Twenty-Three Rows; engine and twin printed in the appendices.",
+   "extra": {}
   }
  }
 }

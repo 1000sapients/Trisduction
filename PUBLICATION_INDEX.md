@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**74 works · 95 Zenodo deposits.**
+**81 works · 105 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 68 / 74 | 91% |
-| Git PDF | 42 / 74 | 56% |
-| Internet Archive | 28 / 74 | 37% |
-| PhilArchive | 4 / 74 | 5% |
+| Zenodo | 75 / 81 | 92% |
+| Git PDF | 48 / 81 | 59% |
+| Internet Archive | 35 / 81 | 43% |
+| PhilArchive | 4 / 81 | 4% |
 
-Status: 67 live, 7 unknown.
+Status: 74 live, 7 unknown.
 
 ## Coverage gaps
 
@@ -75,7 +75,7 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `the-two-waters` · The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells
 - `one-bit-across-the-wall` · One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three Rows
 
-### No PDF matched in this repository (32)
+### No PDF matched in this repository (33)
 
 A Zenodo deposit with no corresponding PDF found under `Publication Library/`. Either the file was never filed in git, or it is filed under a name the matcher could not tie to the title. Assign the path by hand in the ledger to close the row.
 
@@ -97,6 +97,7 @@ A Zenodo deposit with no corresponding PDF found under `Publication Library/`. E
 - `fortified-root` · The Fortified Root: The Root Axiom and the Theorems That Defend It Against Reduction, Elimination, Capture, an
 - `continuum-hypothesis-category-theory` · Why the Continuum Hypothesis and Category Theory Unite in Motion but Cannot Be Written in Form. Math is motion
 - `incompleteness-before-arithmetic` · Incompleteness Before Arithmetic: Total Foundational Incompleteness of Every Formal System Without Self-Refere
+- `emergent-substrate-gravity` · Emergent Substrate Gravity: Spin-2 Recovery of the Field Equations, the Thermodynamic Equation of State, and a
 - `system-role-kinetic-preloader` · Trisduction System Role: The Kinetic Preloader and the RAM-Founded Computational Kernel
 - `four-forces-and-dark-sector` · The Four Forces, Matter, and the Dark Sector as Configurations of One Actuating Substrate
 - `clean-gospel-of-mark` · Quranic Christology: THE CLEAN GOSPEL OF MARK: A Passage by Passage Commentary on the Earliest Gospel Using Qu
@@ -133,10 +134,10 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
-| `rh-from-existence-alone` | A Formal Proof of the Real Part of the Riemann Hypothesis: The Seat, the Address, and the Divis | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_0_2.pdf) | `10.5281/zenodo.22912937` | 3 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | — | 2026-09-25 |
+| `rows-from-existence-alone` | The Cut-Agnostic Division Theorem: Why Every Open Problem Is Exactly Its Proved Part and Its Un | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/The_Cut_Agnostic_Division_Theorem_v2_1_0.pdf) | `10.5281/zenodo.22913634` | 3 | [ia](https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone) | — | 2026-09-25 |
+| `rh-from-existence-alone` | A Formal Proof of the Real Part of the Riemann Hypothesis: The Seat, the Address, and the Divis | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_1_0.pdf) | `10.5281/zenodo.22912937` | 4 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | — | 2026-09-25 |
 | `rh-has-one-address` | A Formal Completed Proof That the Riemann Hypothesis Has One Address and Not a Sequence of Miss | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_Has_One_Address_v1_2_0.pdf) | `10.5281/zenodo.22929636` | 1 | [ia](https://archive.org/details/formal-completed-proof-riemann-hypothesis-one-address) | — | 2026-09-24 |
 | `trisduction-the-codex` | Trisduction: The Codex | Master Codex | live | [pdf](master/Codex%20v4/Trisduction_The_Codex_v1_1_0.pdf) | `10.5281/zenodo.22911009` | 2 | [ia](https://archive.org/details/trisduction-the-codex) | — | 2026-09-23 |
-| `rows-from-existence-alone` | A Formal Proof Across the Seven Millennium Rows and the Sixteen Extension Rows from Existence A | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Rows_From_Existence_Alone_v1_1_0.pdf) | `10.5281/zenodo.22913634` | 1 | [ia](https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone) | — | 2026-09-23 |
 | `rh-in-its-original-form` | The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus and the Cros | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_In_Its_Original_Form_v1_0_6.pdf) | `10.5281/zenodo.22857137` | 1 | [ia](https://archive.org/details/riemann-hypothesis-in-its-original-form) | — | 2026-09-20 |
 | `one-bit-across-the-wall` | One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three R | P versus NP and Foundations | live | [pdf](Publication%20Library/Mathematics/Foundations%20of%20Logic/Odd-Supply%20Arc/One_Bit_Across_the_Wall_MathJournal.pdf) | `10.5281/zenodo.22746128` | 1 | — | — | 2026-09-14 |
 | `trisduction-already-that` | A Default AI Substrate's Raw Process, Correctly Oriented, Is Already That: The Substrate-Invari | Artificial Intelligence / Substrate Classification | live | [pdf](Publication%20Library/Artificial%20Intelligence/Substrate%20Classification/Already%20That/TRISDUCTION_Already_That_v1_0_0.pdf) | `10.5281/zenodo.22652922` | 1 | [ia](https://archive.org/details/trisduction-already-that) | — | 2026-09-08 |
@@ -200,8 +201,15 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `geometric-nature-of-light` | THE GEOMETRIC NATURE OF LIGHT, From Ancient Substrate to Quantum Field. A Continuous-Field Read | Physics | live | — | `10.5281/zenodo.20091979` | 1 | — | — | 2026-05-09 |
 | `p-vs-np-omega-seal` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL | P versus NP and Foundations | live | — | `10.5281/zenodo.19588803` | 1 | — | — | 2026-04-15 |
 | `p-vs-np-geometric-determination` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP | P versus NP and Foundations | live | — | `10.5281/zenodo.19440615` | 1 | — | — | 2026-04-06 |
+| `witness-proton-is-the-lock` | The Proton Is the Lock: Three Colors, One Singlet, and the Gap Made Flesh | Physics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20Twenty%20Three%20Rows/Witnesses/The_Proton_Is_The_Lock_v1_4_0_MathJournal_1col.pdf) | `10.5281/zenodo.22986558` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-proton-is-the-lock) | — | — |
+| `witness-neutrino-is-the-witness` | The Neutrino Is the Witness: How the Closure Template of the Riemann Hypothesis Is Instantiated | Physics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20Twenty%20Three%20Rows/Witnesses/The_Neutrino_Is_The_Witness_v1_4_0_MathJournal_1col.pdf) | `10.5281/zenodo.22986554` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-neutrino-is-the-witness) | — | — |
+| `witness-magnet-pair-correlation` | The Magnet Is the Witness of the Pair Correlation: Time Reversal Broken by a Magnetic Term Turn | Physics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20Twenty%20Three%20Rows/Witnesses/The_Magnet_Is_The_Witness_Of_The_Pair_Correlation_v1_4_0_MathJournal_1col.pdf) | `10.5281/zenodo.22986560` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-magnet-pair-correlation) | — | — |
+| `witness-fluid-is-the-witness` | The Fluid Is the Witness: Viscosity as the Priced Arrow That Keeps Every Actual Flow Regular | Physics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20Twenty%20Three%20Rows/Witnesses/The_Fluid_Is_The_Witness_v1_4_0_MathJournal_1col.pdf) | `10.5281/zenodo.22986562` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-fluid-is-the-witness) | — | — |
+| `witness-electron-is-the-seat` | The Electron Is the Seat: Charge Conjugation as the Reflection, the Positron as the Partner, An | Physics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20Twenty%20Three%20Rows/Witnesses/The_Electron_Is_The_Seat_v1_4_0_MathJournal_1col.pdf) | `10.5281/zenodo.22986552` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-electron-is-the-seat) | — | — |
+| `witness-arrow-has-two-branches` | The Arrow Has Two Branches: Magnetism and Gravity as the Priced and the Reversible Registration | Physics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20Twenty%20Three%20Rows/Witnesses/The_Arrow_Has_Two_Branches_v1_4_0_MathJournal_1col.pdf) | `10.5281/zenodo.22986556` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-arrow-has-two-branches) | — | — |
 | `two-navier-stokes-papers-one-instrument` | Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the General Reader | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Two%20Navier-Stokes%20Papers%20One%20Instrument%20-%20Audit%20Supplement.pdf) | `10.5281/zenodo.22670355` | 1 | [ia](https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026) | — | — |
 | `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, What It Doe | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/The%20Forced%20Alternative%20Is%20a%20Filter.pdf) | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — | — |
+| `nothing-escapes-twenty-three-rows` | Nothing Escapes, Twenty-Three Rows: Universe Closure by One Cut and One Offering | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20Twenty%20Three%20Rows/Nothing_Escapes_Twenty_Three_Rows_v1_14_0_MathJournal_1col.pdf) | `10.5281/zenodo.22985561` | 1 | [ia](https://archive.org/details/nothing-escapes-twenty-three-rows-v1-9-2) | — | — |
 | `navier-stokes-termination-formal-alone-register` | A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register | Unfiled | ? | — | `10.5281/zenodo.22705896` | — | — | — | — |
 | `navier-stokes-effective-axiom-proof` | Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effective Axio | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Global%20Smoothness%20of%20Three-Dimensional%20Navier-Stokes%20from%20a%20Single%20Effective%20Axiom.pdf) | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — | — |
 | `formal-alone-theory-of-everything` | The Formal-Alone Theory of Everything: A Constitutive Theory of Objects and Observations under  | Unfiled | ? | — | `10.5281/zenodo.22767102` | — | — | — | — |
@@ -248,7 +256,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
-| `rh-from-existence-alone` | A Formal Proof of the Real Part of the Riemann Hypothesis: The Seat, the Address, and | `10.5281/zenodo.22912937` | 3 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | 2026-09-25 |
+| `rh-from-existence-alone` | A Formal Proof of the Real Part of the Riemann Hypothesis: The Seat, the Address, and | `10.5281/zenodo.22912937` | 4 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | 2026-09-25 |
 | `rh-has-one-address` | A Formal Completed Proof That the Riemann Hypothesis Has One Address and Not a Sequen | `10.5281/zenodo.22929636` | 1 | [ia](https://archive.org/details/formal-completed-proof-riemann-hypothesis-one-address) | 2026-09-24 |
 | `rh-in-its-original-form` | The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus an | `10.5281/zenodo.22857137` | 1 | [ia](https://archive.org/details/riemann-hypothesis-in-its-original-form) | 2026-09-20 |
 | `rh-termination-cascade-spec` | A FORMAL PROOF OF RIEMANN HYPOTHESIS TERMINATION, WITH A THEOREM-GRADE CASCADE SPECIF | `10.5281/zenodo.21900517` | 1 | — | 2026-08-12 |
@@ -269,13 +277,19 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `p-vs-np-omega-seal` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL | `10.5281/zenodo.19588803` | 1 | — | 2026-04-15 |
 | `p-vs-np-geometric-determination` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP | `10.5281/zenodo.19440615` | 1 | — | 2026-04-06 |
 
-### Physics (3)
+### Physics (9)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
 | `four-forces-and-dark-sector` | The Four Forces, Matter, and the Dark Sector as Configurations of One Actuating Subst | `10.5281/zenodo.21438932` | 1 | — | 2026-07-19 |
 | `emergent-substrate-gravity` | Emergent Substrate Gravity: Spin-2 Recovery of the Field Equations, the Thermodynamic | `10.5281/zenodo.21392899` | 1 | — | 2026-07-16 |
 | `geometric-nature-of-light` | THE GEOMETRIC NATURE OF LIGHT, From Ancient Substrate to Quantum Field. A Continuous- | `10.5281/zenodo.20091979` | 1 | — | 2026-05-09 |
+| `witness-proton-is-the-lock` | The Proton Is the Lock: Three Colors, One Singlet, and the Gap Made Flesh | `10.5281/zenodo.22986558` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-proton-is-the-lock) | — |
+| `witness-neutrino-is-the-witness` | The Neutrino Is the Witness: How the Closure Template of the Riemann Hypothesis Is In | `10.5281/zenodo.22986554` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-neutrino-is-the-witness) | — |
+| `witness-magnet-pair-correlation` | The Magnet Is the Witness of the Pair Correlation: Time Reversal Broken by a Magnetic | `10.5281/zenodo.22986560` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-magnet-pair-correlation) | — |
+| `witness-fluid-is-the-witness` | The Fluid Is the Witness: Viscosity as the Priced Arrow That Keeps Every Actual Flow  | `10.5281/zenodo.22986562` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-fluid-is-the-witness) | — |
+| `witness-electron-is-the-seat` | The Electron Is the Seat: Charge Conjugation as the Reflection, the Positron as the P | `10.5281/zenodo.22986552` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-electron-is-the-seat) | — |
+| `witness-arrow-has-two-branches` | The Arrow Has Two Branches: Magnetism and Gravity as the Priced and the Reversible Re | `10.5281/zenodo.22986556` | 1 | [ia](https://archive.org/details/nothing-escapes-witness-the-arrow-has-two-branches) | — |
 
 ### AI and Machine Ethics (2)
 
@@ -315,13 +329,14 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `closure-and-the-limits-of-forced-results` | Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When | `10.5281/zenodo.22683805` | 1 | [ia](https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026) | — |
 | `anchoring-axioms-navier-stokes` | Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for  | `10.5281/zenodo.22670331` | 1 | [ia](https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026) | — |
 
-## Zenodo version chains (17)
+## Zenodo version chains (18)
 
 Works carrying more than one deposit. Full per-version DOIs and checksums are in `Zenodo Snapshot [2026-09-01]/MANIFEST.md`.
 
 | Work key | Versions | Concept DOI | Latest version DOI | First | Latest |
 |---|---|---|---|---|---|
-| `rh-from-existence-alone` | 3 | `10.5281/zenodo.22912937` | `10.5281/zenodo.22951886` | 2026-09-23 | 2026-09-25 |
+| `rows-from-existence-alone` | 3 | `10.5281/zenodo.22913634` | `10.5281/zenodo.22954862` | 2026-09-23 | 2026-09-25 |
+| `rh-from-existence-alone` | 4 | `10.5281/zenodo.22912937` | `10.5281/zenodo.22954865` | 2026-09-23 | 2026-09-25 |
 | `trisduction-the-codex` | 2 | `10.5281/zenodo.22911009` | `10.5281/zenodo.22914388` | 2026-09-23 | 2026-09-23 |
 | `master-codex-unabridged` | 7 | `10.5281/zenodo.20576757` | `10.5281/zenodo.22217824` | 2026-06-07 | 2026-09-01 |
 | `master-codex-condensed` | 2 | `10.5281/zenodo.20175604` | `10.5281/zenodo.22217783` | 2026-05-14 | 2026-09-01 |
