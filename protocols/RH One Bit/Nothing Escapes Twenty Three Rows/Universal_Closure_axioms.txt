@@ -1,0 +1,31 @@
+'RowClosure.least_erasure_iff_value' does not depend on any axioms
+'RowClosure.closure_forced' does not depend on any axioms
+'RowClosure.rh_is_an_instance' depends on axioms: [propext]
+'RowClosure.least_erasure_iff_value_classical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowClosure.flow_registration' does not depend on any axioms
+'RowClosure.two_worlds_inside' does not depend on any axioms
+'RowClosure.no_reading_of_the_record_decides' does not depend on any axioms
+'RowClosure.value_iff_fixed' does not depend on any axioms
+'RowClosure.registration_exists' depends on axioms: [propext]
+'RowClosure.fixed_set_is_the_line' does not depend on any axioms
+'RowClosure.rh_registration_half_units' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RowClosure.line_reflection_is_global' depends on axioms: [propext]
+'RowClosure.local_seat_of_registration' depends on axioms: [propext]
+'RowClosure.kinetic_crossing_is_least_erasure' does not depend on any axioms
+'RowClosure.off_locus_uncovered' does not depend on any axioms
+'RowClosure.family_member_iff' does not depend on any axioms
+'RowClosure.value_on_image' does not depend on any axioms
+'RowClosure.actuated_iff_subset_image' does not depend on any axioms
+'RowClosure.off_locus_pair' does not depend on any axioms
+'RowClosure.line_rows_typed' depends on axioms: [propext]
+'RowClosure.value_iff_not_erases' does not depend on any axioms
+'RowClosure.value_mono' does not depend on any axioms
+'RowClosure.no_extension_without_coverage' does not depend on any axioms
+'RowClosure.block_of_one_point' does not depend on any axioms
+'RowClosure.surplus_is_the_unactuated' does not depend on any axioms
+'RowClosure.classes_coincide_under_RA' does not depend on any axioms
+'RowClosure.crossing_is_a_proof' does not depend on any axioms
+'RowClosure.evaluator_dual_frame' does not depend on any axioms
+'RowClosure.bifurcation_typed_partner' does not depend on any axioms
+'RowClosure.erasure_confined_to_its_class' does not depend on any axioms
+'RowClosure.barrier_unconditional' does not depend on any axioms

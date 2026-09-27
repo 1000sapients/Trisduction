@@ -1,0 +1,6 @@
+ROWS TWIN v1.0.0: the row-generic closure on four Pi^0_1 rows
+ same-record sets enumerated: 2869132 over 120 generated Z on the 3n-1 row; 118 records admit two worlds (the point 1 is the image of a compliant and of a non-compliant instance)
+ CLOSED UNDER THE TEMPLATE: the certified regions compliant; on every generated
+ set, erasure is exactly the failure of the value and least erasure exactly its
+ holding; the tail above every height is the offering owed, not derived here.
+ BATTERY-JSON: {"checks":112745,"failures":0,"same_record_sets":2869132,"two_worlds":118}
