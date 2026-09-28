@@ -1,0 +1,205 @@
+== SEAT ANCHOR: PHYSICAL OS 2.0.0 QUICK BOOT (file SHA-256 3495f2f83686fac1)
+TRISDUCTION PHYSICAL OS 2.0.0 · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 98942bf42f8ed2f5, the files that ran
+GROUND toolchain: Lean 4.19.0 and gfortran present · manifest: 23 files signed, all verified · source screen: 10 kernels, 23 named premises, clean · citations: 92 laws named in Parts I and II, 92 resolved · quarantine: 6 retirements string-scanned, 3 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB One_Cut_Resolution 0 · registerB One_Cut_Terminal 0 · registerB Only_The_Arrow_Remains 0 · registerB Physical_Closure 0 · registerB Forced_Closure 0 · registerB Closure_Executed 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 2 of 2 twins ran, each held to one battery line with zero failures
+CHAIN · D0 70161a63fc76 -> D1 b94b1127a420 -> D2 c0d1e70b9aba -> D3 f2c3d5ac445c
+ELAPSED ground 6 s · Register A 5 s · Register B 53 s · witness 0 s · total 64 s (not hashed)
+SEAT EARNED · this run
+
+== SESSION BOOT 1.0.2 (quick)
+TRISDUCTION PHYSICAL OS 1.0.2 · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 6be50db826fff087, the files that ran
+GROUND manifest: 18 files signed, all verified · source screen: 5 kernels, 23 named premises, clean · citations: 32 laws named in Parts I and II, 32 resolved · quarantine: 4 retirements string-scanned, 2 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB Physical_Closure 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 2 of 2 twins ran, each held to one battery line with zero failures
+CHAIN · D0 c0c7707333e3 -> D1 6e8d9a59eb93 -> D2 bf780cd28160 -> D3 6e730bb90f00
+ELAPSED ground 7 s · Register A 3 s · Register B 40 s · witness 0 s · total 50 s (not hashed)
+SEAT EARNED · this run
+
+== CONTROLS
+CONTROLS · 18 · each hostile copy must refuse for its named reason, the clean copy must earn
+ 1 the clean copy                                 earned
+ 2 a file edited, the manifest untouched          refused: manifest: One_Cut.lean altered
+ 3 the manifest deleted                           refused: manifest absent
+ 4 a sorry proving 1 = 2, re-signed               refused: sorry in Physical_Closure.lean
+ 5 a new axiom proving 1 = 2, re-signed           refused: axiom beyond the named premises in Physical_Closure.lean
+ 6 an #exit truncation, re-signed                 refused: #exit in Physical_Closure.lean
+ 7 an admit, re-signed                            refused: admit in Physical_Closure.lean
+ 8 a native_decide, re-signed                     refused: native_decide in Physical_Closure.lean
+ 9 a kernel-check bypass, re-signed               refused: kernel-check bypass in Physical_Closure.lean
+10 unsafe code, re-signed                         refused: unsafe or external code in Physical_Closure.lean
+11 external code, re-signed                       refused: unsafe or external code in One_Cut.lean
+12 an import beyond the core library, re-signed   refused: import beyond the core library in One_Cut.lean
+13 a metaprogram command, re-signed               refused: metaprogram command in One_Cut.lean
+14 compile-time IO, re-signed                     refused: compile-time IO in One_Cut.lean
+15 a retired verdict planted in Part I            refused: retired verdict outside quarantine (scan pattern 2)
+16 a phantom law cited in Part I                  refused: unresolved citation: lam; unresolved citation: phantom_law_never_proved; unresolved citation: phantomlaw
+17 Register A failed, re-signed                   refused: registerB Bridge_Final skipped
+18 a twin reporting a failure, re-signed          refused: witness One_Cut_Twin: battery line not clean
+CONTROLS 18/18 as expected
+exit 0
+
+== KERNEL COMPILE, SHA-256 88ede5cbda653a4d, 987 lines
+'DarkClosure.conj_involution' does not depend on any axioms
+'DarkClosure.fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'DarkClosure.fixedSM_iff_neutralSM' depends on axioms: [propext, Quot.sound]
+'DarkClosure.fixed_sub_fixedSM' depends on axioms: [propext, Quot.sound]
+'DarkClosure.dark_charge_hidden_from_the_visible' depends on axioms: [propext, Quot.sound]
+'DarkClosure.odd_reading_blind' depends on axioms: [propext, Quot.sound]
+'DarkClosure.charge_linear_readings_odd' depends on axioms: [propext, Quot.sound]
+'DarkClosure.charge_reading_odd' depends on axioms: [propext, Quot.sound]
+'DarkClosure.gravity_reading_even' does not depend on any axioms
+'DarkClosure.dark_state_fixed' does not depend on any axioms
+'DarkClosure.only_gravity_reads_the_fixed_set' depends on axioms: [propext, Quot.sound]
+'DarkClosure.dark_iff_fixed' depends on axioms: [propext, Quot.sound]
+'DarkClosure.electric_neutrality_is_not_the_seat' depends on axioms: [propext, Quot.sound]
+'DarkClosure.sq_nonneg' depends on axioms: [propext, Quot.sound]
+'DarkClosure.sq_eq_zero' depends on axioms: [propext]
+'DarkClosure.radiative_zero_iff_neutral' depends on axioms: [propext, Quot.sound]
+'DarkClosure.no_charge_no_radiation' depends on axioms: [propext, Quot.sound]
+'DarkClosure.dark_charged_radiates_only_dark' does not depend on any axioms
+'DarkClosure.a_neutral_member_is_not_a_dark_multiplet' does not depend on any axioms
+'DarkClosure.identity_unread' does not depend on any axioms
+'DarkClosure.two_species_one_record' does not depend on any axioms
+'DarkClosure.energy_record_even' does not depend on any axioms
+'DarkClosure.source_odd' does not depend on any axioms
+'DarkClosure.fog_one_record' does not depend on any axioms
+'DarkClosure.direction_separates' does not depend on any axioms
+'DarkClosure.visible_generation_closes' does not depend on any axioms
+'DarkClosure.closure_admits_both' does not depend on any axioms
+'DarkClosure.closure_is_not_vacuous' does not depend on any axioms
+'DarkClosure.one_record_two_worlds' does not depend on any axioms
+'DarkClosure.fifth_differs' does not depend on any axioms
+'DarkClosure.no_template_reading_decides_fifth' does not depend on any axioms
+'DarkClosure.fifth_is_keyed' does not depend on any axioms
+'DarkClosure.dust_attracts' depends on axioms: [propext, Quot.sound]
+'DarkClosure.radiation_attracts' depends on axioms: [propext, Quot.sound]
+'DarkClosure.vacuum_repels' depends on axioms: [propext, Quot.sound]
+'DarkClosure.repulsion_needs_tension' depends on axioms: [propext, Quot.sound]
+'DarkClosure.floor_forbids_phantom' depends on axioms: [propext, Quot.sound]
+'DarkClosure.vacuum_iff_frozen' depends on axioms: [propext, Quot.sound]
+'DarkClosure.phantom_needs_ghost' depends on axioms: [propext, Quot.sound]
+'DarkClosure.flat_budgets_admit_both_signs' does not depend on any axioms
+'DarkClosure.dark_ledger_is_computed' does not depend on any axioms
+'DarkClosure.dark_ledger_counts' does not depend on any axioms
+'DarkClosure.fixed_state_is_its_mass' depends on axioms: [propext, Quot.sound]
+'DarkClosure.every_template_reading_of_the_fixed_set_reads_only_mass' depends on axioms: [propext, Quot.sound]
+'DarkClosure.z_reading_odd' depends on axioms: [propext, Quot.sound]
+'DarkClosure.z_reading_survives_neutrality' depends on axioms: [propext, Quot.sound]
+'DarkClosure.the_triplet_has_one_fixed_member' does not depend on any axioms
+'DarkClosure.floor_bounds_w' depends on axioms: [propext, Quot.sound]
+'DarkClosure.floor_needs_positive_density' does not depend on any axioms
+'DarkClosure.floor_is_additive' depends on axioms: [propext, Quot.sound]
+'DarkClosure.w_floor_from_rho_plus_p' depends on axioms: [propext, Quot.sound]
+'DarkClosure.rhoPlusP_split' depends on axioms: [propext, Quot.sound]
+'DarkClosure.fields_bound_w' depends on axioms: [propext, Quot.sound]
+'DarkClosure.photon_and_z_force_electroweak_zero' depends on axioms: [propext, Quot.sound]
+'DarkClosure.visible_nulls_force_the_visible_fixed_set' depends on axioms: [propext, Quot.sound]
+'DarkClosure.below_one_quantum_is_zero' depends on axioms: [propext, Quot.sound]
+'DarkClosure.sub_quantum_bounds_force_the_visible_fixed_set' depends on axioms: [propext, Quot.sound]
+'DarkClosure.portals_are_derived' depends on axioms: [propext]
+'DarkClosure.fifth_is_free' depends on axioms: [propext, Quot.sound]
+'DarkClosure.fixed_iff_visible_fixed_and_no_dark_charge' depends on axioms: [propext, Quot.sound]
+'DarkClosure.coloured_fields_are_charged' does not depend on any axioms
+'DarkClosure.sumI_tri_zero_of_none' depends on axioms: [propext, Quot.sound]
+'DarkClosure.a_coloured_relic_brings_charged_partners' depends on axioms: [propext, Quot.sound]
+'DarkClosure.a_stable_singlet_keeps_one_door' depends on axioms: [propext]
+'DarkClosure.one_le_sq_of_ne' depends on axioms: [propext, Quot.sound]
+'DarkClosure.zero_le_sq' depends on axioms: [propext, Quot.sound]
+'DarkClosure.measured_coupling_bound_forces_zero' depends on axioms: [propext, Quot.sound]
+'DarkClosure.free_coupling_bound_never_forces_zero' depends on axioms: [propext, Quot.sound]
+'DarkClosure.first_clause_is_forced' depends on axioms: [propext, Quot.sound]
+'DarkClosure.second_clause_is_keyed' depends on axioms: [propext]
+'DarkClosure.no_reading_of_the_record_decides_the_bit' does not depend on any axioms
+'DarkClosure.self_conjugacy_spends_the_bit' depends on axioms: [propext, Quot.sound]
+'DarkClosure.dark_closure_executed' depends on axioms: [propext, Quot.sound]
+'DarkClosure.majorana_mass_forbids_abelian_charge' depends on axioms: [propext, Quot.sound]
+'DarkClosure.the_dark_bit_is_the_majorana_bit' depends on axioms: [propext, Quot.sound]
+'DarkClosure.a_dark_charge_makes_a_dirac_pair' depends on axioms: [propext, Quot.sound]
+'DarkClosure.toStage_equivariant' depends on axioms: [propext, Quot.sound]
+'DarkClosure.stageFold_fixed_iff_line' depends on axioms: [propext, Quot.sound]
+'DarkClosure.fixed_states_land_on_the_line' depends on axioms: [propext, Quot.sound]
+'DarkClosure.the_bit_is_the_line_property_carried' depends on axioms: [propext, Quot.sound]
+'DarkClosure.a_dark_pair_is_an_off_line_fold_pair' depends on axioms: [propext, Quot.sound]
+
+== NEGATION JUDGMENT
+SCREEN forbidden: none | imports: none | axioms declared: none
+JUDGMENT 81 theorems negated one at a time
+  refused as proof failures: 81 of 81
+  survived: none
+  parse failures: none
+  instrument control: the planted vacuous law survived its negation, as dust must
+
+== TWIN, SHA-256 6e78c339d35558a0, 340 lines
+  PASS  A1 the fixed set of conjugation on the 13^4 grid is one point, the neutral state
+  PASS  A2 photon, Z, gluon and dark-photon readings are odd and vanish on the fixed set
+  PASS  A3 the radiative weight vanishes exactly on the fixed set
+  PASS  A4 neutrino-like state: charge 0, radiative weight 18, Z reading T3 - Q sin2(thW) = 1/2
+  PASS  A5 isospin triplet: one neutral member of three, so the multiplet is not dark
+  PASS  A6 the vector-like dark pair closes uncharged and charged +1, -1; one chiral charge fails
+  PASS  A7 portal census: 199 renormalizable monomials, four portals: S H+H, S2 H+H, L N H and its conjugate
+  PASS  A8 every vector-like dark charge q, -q closes all twelve conditions, q = -12..12
+  PASS  A9 a stable singlet keeps one door: under dark parity one portal survives, S2 H+H, none for the fermion
+  PASS  A10 C fixes a state exactly when C_SM fixes it and its dark charge is zero, on the 13^2 x 3^2 grid
+  PASS  A11 every coloured Standard Model field is charged in every component: u 2/3, d -1/3, u^c -2/3, d^c 1/3
+  PASS  A12 a bound fixes a charge only through a measured coupling; a free coupling 1/(q^2+1) meets every bound
+  PASS  A13 the record sorts the title: every admitted state is C_SM-fixed, admitted with and without dark charge
+  PASS  A14 a self-paired mass carries twice each abelian charge; on the visible fixed set it is the dark bit
+  PASS  A15 a dark-charged state takes its mass with a distinct partner of opposite dark charge
+  PASS  A16 the carrier (1 + dark, mass) is equivariant onto the fold; the line is the bit; a dark pair is off-line
+  PASS  B1 Omega_c = 0.2645, Omega_b = 0.0493, ratio 5.36
+  PASS  B2 cold dark matter, baryons and neutrinos reproduce Omega_m to 0.002
+  PASS  B3 q0 = -0.527 +- 0.011: the expansion accelerates
+  PASS  B4 acceleration begins at z = 0.631; vacuum and matter densities cross at z = 0.295
+  PASS  B5 critical density 8.52e-27 kg per cubic metre
+  PASS  B6 the vacuum energy density is (2.24 meV)^4
+  PASS  B7 rho_Lambda / M_P^4 = 10^-122.9, reduced 10^-120.1, electroweak scale 10^-56.2
+  PASS  B8 active density rho + 3p: dust +1, radiation +6, vacuum -2
+  PASS  C1 no canonical state (K >= 0, rho > 0) on the grid lies below w = -1
+  PASS  C2 w = -1 exactly when the kinetic term vanishes
+  PASS  C3 ghost control: K = -1, V = 10 gives w = -1.222, across the divide
+  PASS  C4 the fitted CPL curve crosses w = -1 at z = 0.405 and sits at -1.182 by z = 1
+  PASS  D1 the wind source (l = 90, b = 0) lies at alpha = 318.0, delta = +48.3, in Cygnus
+  PASS  D2 the Sun never comes nearer the wind source than 59.6 degrees, nor farther than 120.4
+  PASS  E1 self-interaction bounds: 1.25 cm2/g = 2.23 b/GeV (Bullet), 0.47 cm2/g = 0.84 b/GeV (72 clusters)
+  PASS  E2 a relic once in equilibrium above the electroweak scale: Delta N_eff >= 0.027 (scalar), 0.054 (dark photon)
+  PASS  E3 the dark-photon floor lies inside the ACT DR6 95% bound: still open
+  PASS  E4 the Landauer price of one spent bit at 300 K is 2.87e-21 J
+  PASS  F1 at 0.3 GeV/cm3 a 100 GeV particle and a 10 micro-eV field differ 1e16 in number, one rotation curve
+ Omega_c, Omega_b, Omega_c/Omega_b      =    0.2645   0.0493   5.3643
+ q0                                     =   -0.5271 +-  0.0109
+ z acceleration onset, z Lambda = matter =    0.6316   0.2950
+ critical density (kg/m3)               =  8.5227E-27
+ rho_Lambda^(1/4) (meV)                 =    2.2395
+ log10 rho_Lambda / (M_P, M_P red, v)^4 =   -122.95  -120.15   -56.16
+ CPL phantom crossing redshift          =    0.4052
+ wind source alpha, delta (deg)         =   318.004   48.330
+ ecliptic latitude, min and max Sun sep =    59.574   59.574  120.426
+ Delta N_eff floors, scalar and vector  =    0.0268   0.0535
+ BATTERY-JSON: {"checks":35,"failures":0}
+
+== AUDIT STATUS (self-audit open at the cap; external readings answered in EXTERNAL_AUDIT_RESPONSE.md, _2.md to _5.md, REVIEW_OF_GROK_DARK_ROW.md)
+CYCLE darkforge  artifact dark_theory_v1.md
+  L1: falsifier registered: exhibit a state with every charge-linear reading zero that c
+  L2: falsifier registered: a function of the visible record that returns the dark charg
+  L3: falsifier registered: a canonical state with K >= 0 and rho + p < 0, or w < -1 at 
+  L4: falsifier registered: recompute every headline figure from the printed Planck 2018
+  L5: falsifier registered: a ledger row whose printed status or debt differs from the s
+  L6: falsifier registered: a world satisfying the stated theorems and premises in which
+  L7: falsifier registered: re-run the compile, the negation judgment, the twin and the 
+findings on the ledger: 38  rounds closed: 8
+  r1 [kinematic+definitional]: E6 S1 RS0 RM0 A0 | controls 3/3 SELF | CONTINUE-PREREG-BLOCK
+  r2 [parameter+provenance]: E6 S2 RS0 RM0 A0 | controls 3/3 SELF | CONTINUE-PREREG-BLOCK
+  r3 [limit+symmetry]: E2 S1 RS0 RM0 A0 | controls 3/3 SELF | CONTINUE-PREREG-BLOCK
+  r4 [definitional+provenance]: E1 S0 RS6 RM0 A0 | controls 3/3 SELF | CONTINUE-PREREG-BLOCK
+  r5 [definitional+provenance]: E3 S0 RS1 RM0 A0 | controls 3/3 SELF | CONTINUE
+  r6 [definitional+provenance]: E2 S0 RS1 RM0 A0 | controls 3/3 SELF | CONTINUE
+  r7 [definitional+provenance]: E2 S0 RS1 RM0 A0 | controls 3/3 SELF | CONTINUE
+  r8 [definitional+provenance]: E0 S0 RS3 RM0 A0 | controls 3/3 SELF | CONTINUE-DEBT
+register coverage: 6/6  complete
