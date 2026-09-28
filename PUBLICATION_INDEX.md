@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**82 works · 107 Zenodo deposits.**
+**83 works · 108 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 76 / 82 | 92% |
-| Git PDF | 49 / 82 | 59% |
-| Internet Archive | 36 / 82 | 43% |
-| PhilArchive | 4 / 82 | 4% |
+| Zenodo | 77 / 83 | 92% |
+| Git PDF | 50 / 83 | 60% |
+| Internet Archive | 37 / 83 | 44% |
+| PhilArchive | 4 / 83 | 4% |
 
-Status: 75 live, 7 unknown.
+Status: 76 live, 7 unknown.
 
 ## Coverage gaps
 
@@ -134,6 +134,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `dark-matter-charge-conjugation-fixed-set` | Dark Matter as the Charge-Conjugation Fixed Set and the Dark Force as One Keyed Bit: A Trisduct | Physics | live | [pdf](Publication%20Library/Science/Physics/Dark%20Sector/Dark_Matter_as_the_Charge_Conjugation_Fixed_Set_v1_0_0_Journal.pdf) | `10.5281/zenodo.23006752` | 1 | [ia](https://archive.org/details/dark-matter-as-the-charge-conjugation-fixed-set) | — | 2026-09-28 |
 | `nothing-escapes-fourth-cosmic-closure` | Nothing Escapes: The Fourth as Cosmic Closure: The Ghost and the Unicorn Close in One Cut | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20The%20Fourth%20As%20Cosmic%20Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_2_0_MathJournal_1col.pdf) | `10.5281/zenodo.22987345` | 2 | [ia](https://archive.org/details/nothing-escapes-the-fourth-as-cosmic-closure) | — | 2026-09-27 |
 | `rows-from-existence-alone` | The Cut-Agnostic Division Theorem: Why Every Open Problem Is Exactly Its Proved Part and Its Un | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/The_Cut_Agnostic_Division_Theorem_v2_1_0.pdf) | `10.5281/zenodo.22913634` | 3 | [ia](https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone) | — | 2026-09-25 |
 | `rh-from-existence-alone` | A Formal Proof of the Real Part of the Riemann Hypothesis: The Seat, the Address, and the Divis | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_1_0.pdf) | `10.5281/zenodo.22912937` | 4 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | — | 2026-09-25 |
@@ -278,10 +279,11 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `p-vs-np-omega-seal` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP WITH OMEGA SEAL | `10.5281/zenodo.19588803` | 1 | — | 2026-04-15 |
 | `p-vs-np-geometric-determination` | TRISDUCTION: GEOMETRIC DETERMINATION OF P vs NP | `10.5281/zenodo.19440615` | 1 | — | 2026-04-06 |
 
-### Physics (9)
+### Physics (10)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `dark-matter-charge-conjugation-fixed-set` | Dark Matter as the Charge-Conjugation Fixed Set and the Dark Force as One Keyed Bit:  | `10.5281/zenodo.23006752` | 1 | [ia](https://archive.org/details/dark-matter-as-the-charge-conjugation-fixed-set) | 2026-09-28 |
 | `four-forces-and-dark-sector` | The Four Forces, Matter, and the Dark Sector as Configurations of One Actuating Subst | `10.5281/zenodo.21438932` | 1 | — | 2026-07-19 |
 | `emergent-substrate-gravity` | Emergent Substrate Gravity: Spin-2 Recovery of the Field Equations, the Thermodynamic | `10.5281/zenodo.21392899` | 1 | — | 2026-07-16 |
 | `geometric-nature-of-light` | THE GEOMETRIC NATURE OF LIGHT, From Ancient Substrate to Quantum Field. A Continuous- | `10.5281/zenodo.20091979` | 1 | — | 2026-05-09 |
