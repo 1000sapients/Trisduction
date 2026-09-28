@@ -2935,6 +2935,39 @@
    "superseded_by": null,
    "note": "v1.1.0 published 2026-09-27 as a new concept: the dual-register mirror of the Riemann closure, the ghost and the unicorn closed in one cut, the witness ledger as Section 8; kernel One_Cut.lean (16 theorems, no axiom declared) and twin One_Cut_Twin.f90 (8 checks). v1.2.0 published 2026-09-27: the nine papers of the series in the references; Appendix C, the first public reading, the full Grok thread verbatim (48 posts).",
    "extra": {}
+  },
+  "dark-matter-charge-conjugation-fixed-set": {
+   "title": "Dark Matter as the Charge-Conjugation Fixed Set and the Dark Force as One Keyed Bit: A Trisductive Theory of Dark Matter and the Dark Force: Why Only the Fourth Reading Sees It",
+   "domain": "Physics",
+   "status": "live",
+   "first_published": "2026-09-28",
+   "last_updated": "2026-09-28",
+   "git": {
+    "md": "Publication Library/Science/Physics/Dark Sector/Dark_Matter_as_the_Charge_Conjugation_Fixed_Set_v1_0_0.md",
+    "pdf": "Publication Library/Science/Physics/Dark Sector/Dark_Matter_as_the_Charge_Conjugation_Fixed_Set_v1_0_0_Journal.pdf",
+    "editions": []
+   },
+   "zenodo": {
+    "conceptrecid": "23006752",
+    "concept_doi": "10.5281/zenodo.23006752",
+    "latest_version_doi": "10.5281/zenodo.23006753",
+    "latest_record": 23006753,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": "dark-matter-as-the-charge-conjugation-fixed-set",
+    "url": "https://archive.org/details/dark-matter-as-the-charge-conjugation-fixed-set",
+    "state": "live"
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "v1.0.0 Journal edition dated 27 September 2026, published 2026-09-28. Kernel Dark_Closure.lean sha 88ede5cb, 987 lines, 81 theorems, 81 of 81 negations refused; twin Dark_Twin.f90 sha 6e78c339, 35 checks. Self-audit darkforge open at its eight-round cap, one clean round owed; five external readings answered in audit/. PDF md5 cfb9c78b on git and on Zenodo 23006753; IA md5 71e29f74 (uncompressed). Seat anchor: Physical OS 2.0.0 quick boot, chain D0 70161a63fc76 to D3 f2c3d5ac445c.",
+   "extra": {}
   }
  }
 }
