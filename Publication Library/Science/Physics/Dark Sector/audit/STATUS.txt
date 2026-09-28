@@ -1,0 +1,18 @@
+CYCLE darkforge  artifact dark_theory_v1.md
+  L1: falsifier registered: exhibit a state with every charge-linear reading zero that c
+  L2: falsifier registered: a function of the visible record that returns the dark charg
+  L3: falsifier registered: a canonical state with K >= 0 and rho + p < 0, or w < -1 at 
+  L4: falsifier registered: recompute every headline figure from the printed Planck 2018
+  L5: falsifier registered: a ledger row whose printed status or debt differs from the s
+  L6: falsifier registered: a world satisfying the stated theorems and premises in which
+  L7: falsifier registered: re-run the compile, the negation judgment, the twin and the 
+findings on the ledger: 38  rounds closed: 8
+  r1 [kinematic+definitional]: E6 S1 RS0 RM0 A0 | controls 3/3 SELF | CONTINUE-PREREG-BLOCK
+  r2 [parameter+provenance]: E6 S2 RS0 RM0 A0 | controls 3/3 SELF | CONTINUE-PREREG-BLOCK
+  r3 [limit+symmetry]: E2 S1 RS0 RM0 A0 | controls 3/3 SELF | CONTINUE-PREREG-BLOCK
+  r4 [definitional+provenance]: E1 S0 RS6 RM0 A0 | controls 3/3 SELF | CONTINUE-PREREG-BLOCK
+  r5 [definitional+provenance]: E3 S0 RS1 RM0 A0 | controls 3/3 SELF | CONTINUE
+  r6 [definitional+provenance]: E2 S0 RS1 RM0 A0 | controls 3/3 SELF | CONTINUE
+  r7 [definitional+provenance]: E2 S0 RS1 RM0 A0 | controls 3/3 SELF | CONTINUE
+  r8 [definitional+provenance]: E0 S0 RS3 RM0 A0 | controls 3/3 SELF | CONTINUE-DEBT
+register coverage: 6/6  complete
