@@ -1,0 +1,22 @@
+{
+  "cycle": "darkforge",
+  "artifact": "dark_theory_v1.md",
+  "prereg_claims": [
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L6",
+    "L7"
+  ],
+  "falsifiers": {
+    "L1": "exhibit a state with every charge-linear reading zero that conjugation moves, or a template reading that separates two fixed states of equal mass",
+    "L2": "a function of the visible record that returns the dark charge on both anomaly-free worlds, or an anomaly-free pair the kernel's closure rejects",
+    "L3": "a canonical state with K >= 0 and rho + p < 0, or w < -1 at positive density",
+    "L4": "recompute every headline figure from the printed Planck 2018 and DESY5 inputs; a deviation beyond the last printed digit",
+    "L5": "a ledger row whose printed status or debt differs from the status rule of Theorem 14",
+    "L6": "a world satisfying the stated theorems and premises in which a falsifier's kill observation occurs",
+    "L7": "re-run the compile, the negation judgment, the twin and the boot; any surviving negation, failing check, or receipt line that differs"
+  }
+}
