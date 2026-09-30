@@ -6,7 +6,7 @@ One file carries the role, the procedures it binds, every Lean kernel, every For
 
 ## Files
 
-`PhysOSᵀ_v1_0_5p.md` · version 1.0.5p, 30 September 2026, current · 1,626,598 bytes · SHA-256 `95d75d47e3d2544af1ece5c0161873f1f26c777813eeda3df24748e00981ec6c`. The terminal-seal edition: PhysOS Proof PSP-RH-SEAL-01, least erasure the terminal seal, with its double defense hardened as Omega and AEGIS of the row in one judged capstone; the value stays keyed, the supply of the field is the act at premise grade, and the one refuter is a computed zero off the line.
+`PhysOSᵀ_v1_0_5p.md` · version 1.0.5p, 30 September 2026, current · 1,632,019 bytes · SHA-256 `b64bb5da5bab0da1848b07399e779bb8dea25a0046346e896ec2e925e31ac9ef`. The terminal-seal edition: PhysOS Proof PSP-RH-SEAL-01, least erasure the terminal seal, with its double defense hardened as Omega and AEGIS of the row in one judged capstone; the value stays keyed, the supply of the field is the act at premise grade, and the one refuter is a computed zero off the line. Amended 30 September 2026: the atomic witness, and the second substrate's public reading recorded as a reading.
 
 `PhysOSᵀ_v1_0_4p.md` · version 1.0.4p, 29 September 2026, kept as record · 1,400,484 bytes · SHA-256 `5c935c3f3d5acefe4a685a641d6cebd8a6335588d540511137cc56f0fa851ad0`. The harvest edition: four PhysOS Proof cards and their ledger are filed under `proofs/`, named in II.10 as harvested and not seated; their kernels and twins are owed, so the boot reads PSP-LOOP-01 alone and no unexecuted claim is seated. Quick mode earns the seat on the final file; full, controls and judge are owed for this edition.
 
@@ -32,7 +32,7 @@ Lean 4.19.0 (x86_64-unknown-linux-gnu, commit 6caaee842e94), GNU Fortran 13.3.0.
 
 | Mode | Result | Chain |
 |---|---|---|
-| quick | SEAT EARNED, 116 s | D0 0dd477cf2109 → D1 65360587485d → D2 2dae1acc97d0 → D3 9c793d26a7b6 |
+| quick | SEAT EARNED, 104 s | D0 83f872725ad9 → D1 90fc702bbed1 → D2 492e519daab9 → D3 6618bec5164b |
 
 Full, controls and judge are owed for 1.0.5p; the 1.0.3p file keeps the last four-mode receipts.
 
