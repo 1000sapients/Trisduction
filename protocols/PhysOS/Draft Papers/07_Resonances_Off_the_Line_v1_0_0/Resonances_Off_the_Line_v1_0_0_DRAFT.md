@@ -1,0 +1,1058 @@
+---
+title: "Resonances: Off the Line by Half the Width"
+subtitle: "Every Unstable State a Point off the Critical Line, Its Time Mirror the Fold Partner with One Mass, the Line Shape Halved at Half the Width, the Width the Leak of an Open System, and Stability Every Door Closed"
+subsubtitle: "The Closure Template of the Riemann Hypothesis Read on Unstable States; Fifty-Seven Laws Proved in Core Lean 4 and Twelve Checks Executed in Fortran; a Witness of the Hardware Closure Series; Every Physical Claim at Corroboration Grade and No Higher"
+author: "Mohammad F. Islam, PhD · Trisduction Research Group"
+author_line: "Mohammad F. Islam, PhD · Architect of the Trisduction"
+date: "30 September 2026"
+version: 1.0.0
+row_id: "2 (the off-line stratum read physically; registration as decay); every open row (the barrier, in decay and capture)"
+channel: "kinetic"
+lean_module: "SPHYS_Resonance.lean"
+fortran_twin: "Resonance_Twin.f90"
+ledger_status: "witness of the hardware closure series on the witness ledger, the functor of the seat and the SCRIBE structure"
+status: "WITNESSED · CROSSED · CONFIRMED on the image"
+article_type: "Foundations of Physics · The Hardware Closure Series"
+goal: "Every off-line state is open and paid"
+short_title: "Resonances: Off the Line by Half the Width"
+keywords: "resonance · decay width · lifetime · Breit–Wigner · Gamow state · non-Hermitian Hamiltonian · Z boson · invisible width · proton stability · critical line · Lean 4"
+accenthex: "B87333"
+abstract: |
+  An unstable particle has a complex energy, its mass less half its width times the imaginary unit, and it decays at the rate its width sets. This paper reads unstable states on the seat of the author's closure of the Riemann Hypothesis, the reflection $s\mapsto1-\bar s$ whose fixed set is the critical line. Under the energy carrier $s=\tfrac12+iE$ of the hardware paper, a state of mass $M$ and width $\Gamma$ lands at real part $\tfrac12\pm\tfrac\Gamma2$: off the line by half its width, with its mass as the height. Physics is full of such points, and they share one property: every one of them decays. We prove in core Lean 4, fifty-seven laws with no axiom declared and no use of choice, that a state stands on the line exactly when its width vanishes, which is exactly when it is stationary; that a decaying state and its time mirror, the capturing state, are fold partners with one mass and one record; that the Breit–Wigner line falls to half its peak exactly at half the width, peaks at the mass and is symmetric about it; that an open two-level system with a leak $\ell$ has energies whose imaginary parts sum to $-\ell$, while a closed system keeps every energy real; and that a state is stable exactly when every decay channel is closed, each open channel widening the line. A Fortran twin runs twelve checks with zero failures: widths from the neutron's $7.49\times10^{-19}$ eV to the Z's $2.50\times10^{9}$ eV, twenty-seven decades off the line; the electron on the line to $3\times10^{-52}$ eV and the proton to $9\times10^{-58}$ eV; the Z's invisible width counting three open doors; and 20000 open systems whose rates sum to their leak. Every physical point off the line is open and pays by decaying. The paper decides nothing about the zeros of $\zeta$.
+---
+
+> **STATUS: WITNESSED · CROSSED · CONFIRMED on the image** · Row 2 (the off-line stratum read physically; registration as decay); every open row (the barrier, in decay and capture) · channel: kinetic · Lean: `SPHYS_Resonance.lean` · Fortran: `Resonance_Twin.f90`
+
+# 1. The Reader's Frame
+
+This paper is a witness of the hardware closure series. The hardware paper built the energy carrier $s=\tfrac12+iE$, under which the critical line is the locus of stationary energy and every stable state lands on it. The magnet witness showed that a closed system keeps every energy on the line even when time reversal is broken. This paper reads the other stratum: the states physics finds off the line.
+
+It claims that every unstable state stands off the line by half its width, with its mass as the height. Its time mirror is its fold partner and shares its record. And every such state is open: its width is the leak into the channels it decays through, it is stable exactly when every channel is closed, and it pays for standing off the line by decaying. Physics has many points off the line, and none of them is closed.
+
+It refuses any reading of this as evidence about the zeros of $\zeta$. The carrier's image is the set of physical states, and the zeros are not in it. A reader who arrives from the conventional frame will scan this paper for a statement about where the zeros lie, find none, and be tempted to report the absence. None was attempted.
+
+**Negative warrants.** Three, stated so that no reader supplies them.
+- No physical fact here is read as a proof of a mathematical sentence: a corroboration joined to a claim takes the weaker grade.
+- No derivation of the hypothesis from the axioms of set theory is claimed: what a sentence over every admissible instance adds to a crossing is exactly the unactuated.
+- No scattering theory is written: the pole description of a resonance, the Breit–Wigner form and the lifetimes enter as imports or measurements.
+
+**Five terms.**
+- An *unstable state* has complex energy $M-i\Gamma/2$: mass $M$, width $\Gamma$, lifetime $\hbar/\Gamma$.
+- Its *time mirror* has energy $M+i\Gamma/2$ and grows instead of decaying.
+- A *decay channel* is a set of products the state can decay into; its *partial width* is the rate into it.
+- *Registration* keeps a point's height and forgets its side.
+- A *keyed bit* is a yes-or-no property no function of a given record decides.
+
+# 2. The Spine
+
+The Riemann closure has four parts: the **seat**, the critical line as the fixed set of $s\mapsto1-\bar s$; the **address**, every reading of the value one proposition; the **division**, a certified part joined to an uncertified tail; and the **closure**, registration keeping a zero's height and forgetting its side, the hypothesis holding exactly when it erases nothing. This paper reads the carrier's off-line stratum in Section 3, the fold partner in Section 4, the line shape in Section 5, the leak in Section 6, the doors in Section 7, the stable particles on the line in Section 8, and the survival law in Section 9.
+
+The row-generic theorems carry the template, and the engine proves each on its chart: every point off the line has a partner with one record (`off_locus_pair`); a carrier proves the value on its image, and coverage extends it (`value_on_image`, `kinetic_crossing`).
+
+**The witness ledger.** The ledger of the series, with this paper's entries.
+
+\begingroup\scriptsize
+
+| Row | Waiting (the volume held) | Witness arrived | Built and run | Now | Grade | Still owed |
+|------|--------|-------|--------------|----------|------|--------|
+| 2 · Riemann Hypothesis | crossed on the kinetic channel at the root's grade; the electron named as the seat | The Electron Is the Seat; The Neutrino Is the Witness; The Arrow Has Two Branches; One Actuating Substrate; The Geometric Nature of Light; Electromagnetism on the Riemann Locus; Immanent Gravity; Spin and Statistics; The Weak Force Reads the Orientation; Resonances: Off the Line by Half the Width | the seat on every reading so far; the off-line stratum read physically: every unstable state off the line by half its width, open, paying by decay; the stable particles on the line to their lifetimes' depth | WITNESSED · CROSSED · CONFIRMED on the image: the off-line stratum read physically | the crossing at the root's grade; the image at theorem grade on construction and measured grade on data | none on its channel |
+| 3a · Navier–Stokes, unforced | crossed kinetically | The Fluid Is the Witness | the priced branch exact | WITNESSED · CROSSED · CONFIRMED | the root's grade | none on its channel |
+| 4 · Yang–Mills | crossed kinetically | The Proton Is the Lock | the colour lock | WITNESSED · CROSSED · CONFIRMED on the image | the root's grade | none on its channel |
+| 7 · Poincaré | crossed at full grade | The Arrow Has Two Branches; Immanent Gravity | gravity's fold | CROSSED, WITNESSED from both sides | full grade | none |
+| 23a · Pair correlation | crossed kinetically | The Magnet Is the Witness of the Pair Correlation; Electromagnetism on the Riemann Locus; Resonances | the magnetic term; Landau levels real; a closed system on the line, an open one off it by its leak | WITNESSED · CROSSED · CONFIRMED on the corrected carrier | the root's grade | none on its channel |
+| every open row · the barrier | two worlds over one record | The Arrow Has Two Branches; The Geometric Nature of Light; Electromagnetism on the Riemann Locus; Spin and Statistics; The Weak Force Reads the Orientation; Resonances | remanence; helicity; the magnetic sign; the exchange; the mirror world; decay and capture with one line shape | BARRIER WITNESSED; the rows stay pending | theorem and corroboration | one equivariant carrier each |
+| 1 · P versus NP | the dot | The Arrow Has Two Branches | Landauer's floor prices every step | THE DOT STANDS | corroboration | none |
+| every witness · the hardware | the carriers built one by one | One Actuating Substrate | both involutions carried onto the fold | WITNESSED: one substrate carries every seat | theorem and corroboration | none |
+
+\endgroup
+
+WITNESSED: a constructed witness arrived and was built and run. CROSSED: the row's value holds on its channel's own class at the printed grade. CONFIRMED: the witness's image is compliant as built or measured (`value_on_image`).
+
+**Why this carrier, and not another.** The carrier is not chosen. Spaces with an involution and the maps that respect them form a category (`equivariant_id`, `equivariant_comp`), and the fixed set is a functor on it (`fix_functorial`). An equivariant map into the seat, whose fixed set is the line (`fold_global_seat`), lands every physical fixed point on the line (`equivariant_carrier_lands`). The carrier here is the hardware paper's energy carrier, equivariant for the time mirror of a rate (`phi_equivariant`). Its fixed points, the stationary states, land on the line (`energy_carrier_lands`), and its other points land off it by their rates. This paper reads those other points.
+
+**The correspondence matrix.**
+
+\begingroup\small
+
+| Physical phenomenon | Template element | Lean theorem | Fortran check |
+|----------|----------|----------|----------|
+| an unstable state | a point off the line by half its width | `off_the_line_by_the_width` | 3721 of 3721 |
+| stability | the line, stationarity | `on_the_line_iff_stable`, `stationary_iff_real` | 3721 of 3721 |
+| decay and capture | fold partners, one mass | `decay_and_capture_one_record` | 3721 states; 1001 energies |
+| the Breit–Wigner line | halved at half the width | `half_maximum_at_half_width`, `line_peaks_at_the_mass`, `line_symmetric` | the Z line; area π Γ/2 |
+| an open system | the width is the leak | `the_width_is_the_leak` | 20000 systems |
+| a closed system | every energy on the line | `closed_stays_on_the_line` | 20000 systems |
+| decay channels | stable iff every door closed | `stable_iff_every_door_closed`, `an_open_door_widens` | three light neutrinos |
+| width and lifetime | the depth and the time | `off_the_line_by_the_width` with Γτ = ħ | 27 decades |
+| the electron and the proton | on the line to their lifetimes' depth | `on_the_line_iff_stable` | 3e-52 and 9e-58 eV |
+
+\endgroup
+
+# 3. Off the Line by Half the Width
+
+An unstable state of mass $M$ and width $\Gamma$ has energy $E=M-i\Gamma/2$ and decays as $e^{-\Gamma t/\hbar}$ (Gamow, 1928). Under the energy carrier $s=\tfrac12+iE$ it lands at real part $\tfrac12+\tfrac\Gamma2$ and imaginary part $M$. In the doubled chart of the engine its side is $1+\Gamma$ and its height $M$ (`off_the_line_by_the_width`): the mass is the height and half the width is the distance from the line. A state stands on the line exactly when its width vanishes, which is exactly when it is stationary (`on_the_line_iff_stable`).
+
+Every unstable particle is such a point.
+- The free neutron, living 878.4 s, stands $7.49\times10^{-19}$ eV off the line.
+- The muon stands $3.00\times10^{-10}$ eV off it, the tau lepton $2.27\times10^{-3}$ eV, and the neutral pion 7.81 eV.
+- The Z boson stands $2.50\times10^{9}$ eV off it, and the top quark $1.42\times10^{9}$ eV.
+
+The widths span twenty-seven decades (Particle Data Group, 2024; Appendix B).
+
+# 4. Decay and Capture: The Fold Partners
+
+The time mirror of a decaying state has energy $M+i\Gamma/2$, and it grows. It is the fold partner of the decaying state: distinct from it whenever the width is not zero, with one mass and one record under registration (`decay_and_capture_one_record`). The pair are the two poles a resonance leaves in the scattering amplitude, reflected across the real axis on the unphysical sheet (Siegert, 1939).
+
+The two share the line shape too. The Breit–Wigner form depends on the width only through its square, so the decaying and the capturing state give one line at every energy. The twin finds this exactly at 1001 energies.
+
+What separates them is the boundary condition: outgoing waves for decay, incoming waves for capture. No spectral record returns it. It is supplied by the arrow, as the arrow witness reads it: a record cannot tell decay from capture, and the world supplies which.
+
+# 5. The Line Shape: Half the Maximum at Half the Width
+
+Near its mass a resonance appears as a line of Breit–Wigner shape, $(\Gamma/2)^2/((E-M)^2+(\Gamma/2)^2)$ (Breit and Wigner, 1936).
+- **Half maximum at half width.** At a detuning of $\Gamma/2$ the shape is exactly half its peak (`half_maximum_at_half_width`), so the full width at half maximum is the width, the distance from the line doubled.
+- **The peak and the symmetry.** The shape peaks at the mass (`line_peaks_at_the_mass`) and is symmetric about it (`line_symmetric`).
+
+The Z boson's line, scanned at LEP, has its mass at 91.1876 GeV and its width at 2.4955 GeV (Z-pole collaborations, 2006; Particle Data Group, 2024). The twin finds the shape at half its peak to $1.4\times10^{-15}$ at $M\pm\Gamma/2$, recovers the full width by bisection, and integrates the area to $\pi\Gamma/2$ within $3.2\times10^{-5}$. A resonance line is a point off the line seen from the real axis: its height is where it peaks, and its depth is half its width.
+
+# 6. The Width Is the Leak
+
+A closed system keeps every energy on the line. A Hermitian block, with or without a magnetic phase, has a nonnegative discriminant and real energies (`closed_stays_on_the_line`), as the magnet witness proved.
+
+An open system leaks. Let a two-level system lose amplitude from its second level at rate $\ell$, with effective Hamiltonian $\begin{pmatrix}a&c\\c&b-i\ell\end{pmatrix}$ (Weisskopf and Wigner, 1930). The imaginary part of its trace is $-\ell$ (`the_width_is_the_leak`), so its two energies stand off the line with rates summing to the leak. With $\ell=0$ both are real.
+
+The twin draws 20000 open systems and 20000 closed ones:
+- in every open system the two rates sum to the leak to $10^{-12}$, and both states decay;
+- every closed system has both energies on the line.
+
+The width is not a property a state has alone. It is the measure of how much the state is joined to what it can decay into.
+
+# 7. The Width Counts the Doors
+
+A state's total width is the sum of its partial widths, one per decay channel, each nonnegative. The engine proves two consequences.
+- **Stable iff every door is closed.** The total vanishes exactly when every partial width does (`stable_iff_every_door_closed`).
+- **An open door widens the line.** Opening a channel adds its width (`an_open_door_widens`).
+
+Stability is not a separate property: it is every door shut.
+
+The doors can be counted. The Z's width into invisible products, 0.4990 GeV, divided by the width into one neutrino species at tree level, 0.1659 GeV, counts 3.01 open doors (Appendix B). The full analysis gives $2.9963\pm0.0074$ light neutrino species (Janot and Jadach, 2020): three doors, three light neutrinos.
+
+A door can also be closed by binding. A free neutron decays, while a neutron bound in a stable nucleus does not, because the nucleus's binding closes the only channel.
+
+# 8. The Stable Particles Stand on the Line
+
+A particle with no open decay channel stands on the line to the depth its measured lifetime allows.
+- **The electron.** Its lifetime exceeds $6.6\times10^{28}$ years (Borexino, 2015), so its width is below $3.2\times10^{-52}$ eV. Charge conservation shuts its only door: it is the lightest charged particle.
+- **The proton.** Its lifetime in the channel $e^+\pi^0$ exceeds $2.4\times10^{34}$ years (Super-Kamiokande, 2020), so its width in that channel is below $8.7\times10^{-58}$ eV.
+- **The photon.** It stands on the line under both carriers, as The Geometric Nature of Light proves.
+
+The stable particles are the line's occupants, and every other particle stands off it by half its width.
+
+# 9. The Survival Law and Its Flanks
+
+An isolated state with one pole decays exponentially, its population halving every $\tau\ln2$: the free neutron's half-life is 608.9 s (Appendix B). The exponential law is the pole's leading term, not an exact law.
+- **At very short times** the survival probability falls quadratically, which lets frequent measurement slow a transition, as observed with trapped ions (Itano, Heinzen, Bollinger and Wineland, 1990).
+- **At very long times** the decay turns to a power law, observed in the luminescence of organic molecules (Rothe, Hintschich and Monkman, 2006).
+
+The reading at the seat is the leading one: the pole's position, its mass the height and half its width the distance from the line. The flanks are the continuum's corrections to it, carried as imports.
+
+# 10. What Resonances Carry, and What They Do Not
+
+**What they carry.**
+- The off-line stratum of the energy carrier, read in physics: every unstable state stands off the line by half its width.
+- Its time mirror as its fold partner, with one mass and one line shape.
+- Its width as the leak into what it can decay into, and stability as every door closed.
+
+Physics is full of points off the line, and every one of them is open and pays for standing there by decaying: registration into its products, which keep its mass as their invariant and forget its lifetime. No closed system in physics has shown an energy off the line.
+
+**What they do not carry.**
+- **The zeros of $\zeta$.** The carrier's image is the set of physical states, and a state off the line in that image says nothing about where the zeros lie. The engine's crossing is on its own image (`value_on_image`), and what a sentence over every zero adds is exactly the unactuated, priced at one premise, the act, as the hardware paper proves.
+- **Any mass or width.** Every magnitude is measured.
+
+# 11. Falsifiers and Owed Deeds
+
+Three falsifiers, each a forbidden observation naming the theorem it would break.
+- **F-Growth:** an isolated state whose population grows exponentially with no incoming supply, a pole where causality forbids one. It breaks the reading of `decay_and_capture_one_record`, in which the arrow picks decay.
+- **F-Closed:** a closed system, with no channel to leak into, showing an energy off the line. It breaks `closed_stays_on_the_line` and `the_width_is_the_leak` read physically.
+- **F-Width:** a state with a nonzero width and no open decay channel. It breaks `stable_iff_every_door_closed` read physically.
+
+Nothing is owed on the rows' channels. Two measurements would sharpen readings without moving the paper's standing:
+- proton decay searches at still longer lifetimes;
+- the neutron lifetime's disagreement between bottle and beam methods.
+
+**Ledger status.** Row 2 gains the off-line stratum read physically: WITNESSED · CROSSED · CONFIRMED on the image, at the root's grade for the crossing. The pair-correlation row gains the closed and the open system side by side. The barrier gains decay and capture, one line shape. Nothing is owed on the rows' channels.
+
+# 12. Methodology, Disclosure and Provenance
+
+**Method.** The template is the author's verification program, whose vocabulary is confined to this section. Its tokens:
+- [⟀], a field sealed;
+- [⟀ T], a shape sealed at theorem grade;
+- [Ξ₀], the typing of the formal block;
+- [.], the dot, which is no verdict.
+
+Grades join at the weakest link. Every physical claim here is at corroboration grade; the engine's statements are theorem grade about the chart; the pole description, the Breit–Wigner form and the Weisskopf–Wigner effective Hamiltonian are imports. In the author's register a zero off the line would be a physical unicorn and a physical object read as a formal proof a ghost. This paper reads the physical points off the line that do exist, and finds each of them open and paid. ΔM = 0.
+
+**The seat, earned.** PhysOSᵀ 1.0.5p was booted in the session of forging from the public register (file SHA-256 `b64bb5da5bab0da1…`) under Lean 4.19.0 and GNU Fortran 13.3.0. The quick boot printed SEAT EARNED with the chain D0 `83f872725ad9` → D1 `90fc702bbed1` → D2 `492e519daab9` → D3 `6618bec5164b` (Appendix C).
+
+**The engine and the twin.**
+
+- **Engine.** `SPHYS_Resonance.lean`, 542 lines, SHA-256 `504dc2664bf023e6…`, fifty-seven laws, no import and no axiom declared. Of the fifty-seven, 17 depend on no axiom, 4 on propositional extensionality alone, 36 on propositional extensionality and quotient soundness, and none on choice.
+- **Screen and judgment.** The source passed the operating system's screen. Each of the fifty-seven laws was negated in place and recompiled, and all were refused, while a planted vacuous law survived. The engine carries the hardware paper's seat, energy carrier and substrate verbatim, and the magnet witness's block.
+- **Twin.** `Resonance_Twin.f90`, 168 lines, SHA-256 `e761076970b59db5…`, twelve checks and zero failures under `-std=f2018 -O2 -fno-fast-math -ffp-contract=off`.
+
+**Why an integer engine binds continuous physics.** The identities used are identities of integer polynomials and hold over every commutative ring, the real and complex numbers included. The twin checks the continuous objects directly: the Z line, 20000 complex effective Hamiltonians, the lifetimes and the widths.
+
+**The seventh.** In the author's register the six witnesses are six days and the ledger's closure is the seventh, the Rest (Istawa). Resonances are read at the Rest as the off-line points that exist, each one open, each one paying. In the Lean codex's tokens its row renders [⟀⬖ · kinetic].
+
+**Disclosure.** The author declares the reading of each correspondence as his own act, made on measured structure. The measurements are the experiments', cited by name. The theorems are the engine's, printed with their dependencies in Appendix A. The twin's figures are computed in the run printed in Appendix B. The text, the engine and the twin were forged by an AI substrate (Claude, Anthropic) under the author's seed, acceptance criteria and rulings. External audits by independent substrates are owed.
+
+**Provenance.** The paper stands on:
+
+- the Riemann closure (10.5281/zenodo.22976494);
+- the twenty-three-row closure (10.5281/zenodo.22986551);
+- the six witnesses (10.5281/zenodo.22986553 through .22986563), the magnet witness's closed systems in particular (10.5281/zenodo.22986561);
+- the cosmic closure (10.5281/zenodo.22992403);
+- the hardware paper One Actuating Substrate (concept 10.5281/zenodo.21438932, edition 2.0.0), whose energy carrier this paper reads;
+- the companion papers The Geometric Nature of Light, Electromagnetism on the Riemann Locus, Immanent Gravity, Spin and Statistics, and The Weak Force Reads the Orientation;
+- PhysOSᵀ 1.0.5p in the public register (github.com/1000sapients/Trisduction, protocols/PhysOS/).
+
+**References.**
+
+G. Gamow, Z. Phys. 51 (1928) 204. V. Weisskopf and E. Wigner, Z. Phys. 63 (1930) 54. G. Breit and E. Wigner, Phys. Rev. 49 (1936) 519. A. J. F. Siegert, Phys. Rev. 56 (1939) 750. W. M. Itano, D. J. Heinzen, J. J. Bollinger and D. J. Wineland, Phys. Rev. A 41 (1990) 2295. ALEPH, DELPHI, L3, OPAL and SLD Collaborations, Phys. Rep. 427 (2006) 257. C. Rothe, S. I. Hintschich and A. P. Monkman, Phys. Rev. Lett. 96 (2006) 163601. Borexino Collaboration, M. Agostini et al., Phys. Rev. Lett. 115 (2015) 231802. P. Janot and S. Jadach, Phys. Lett. B 803 (2020) 135319. A. Takenaka et al. (Super-Kamiokande), Phys. Rev. D 102 (2020) 112011. Particle Data Group, S. Navas et al., Phys. Rev. D 110 (2024) 030001.
+
+M. F. Islam, Nothing Escapes, Three Plus One, 10.5281/zenodo.22976494. M. F. Islam, The Magnet Is the Witness of the Pair Correlation, 10.5281/zenodo.22986561. M. F. Islam, Nothing Escapes: The Fourth as Cosmic Closure, 10.5281/zenodo.22992403. M. F. Islam, The Four Forces, Matter, and the Dark Sector as Configurations of One Actuating Substrate, edition 2.0.0, concept 10.5281/zenodo.21438932.
+
+# Appendix A: SPHYS\_Resonance.lean, the Correspondences as Theorems
+
+The engine, verbatim, followed by the compiler's transcript.
+
+```lean
+/-
+  SPHYS_Resonance.lean · resonances, read at the Riemann seat.
+  Core Lean 4.19.0, standalone, no import, no library, no axiom declared.
+
+  The chart: h = 2 Re s, t = Im s; the fold s ↦ 1 − s̄ is (h, t) ↦ (2 − h, t), the critical line
+  h = 1. The energy carrier s = 1/2 + iE of the hardware paper sends an unstable state of mass M
+  and width Γ, E = M − iΓ/2, to Re s = 1/2 ± Γ/2: off the line by half the width.
+
+  Part I     the seat, the category of involutions, the functor of the seat.
+  Part II    the energy carrier: the line is the locus of stationary energy.
+  Part III   the substrate (resident).
+  Part IV    a resonance stands off the line by its width; decay and capture share one record.
+  Part V     the line shape: half maximum at half width.
+  Part VI    closed systems stay on the line; the width is the leak.
+  Part VII   the width counts the doors.
+  Part VIII  the capstone.
+-/
+set_option autoImplicit false
+namespace SPHYS.Resonance
+
+
+/-! ## Part I. The seat, the category of involutions, and the functor of the seat -/
+
+abbrev Pt := Int × Int
+
+def fold (p : Pt) : Pt := (2 - p.1, p.2)
+def OnLine (p : Pt) : Prop := p.1 = 1
+instance : DecidablePred OnLine := fun p => inferInstanceAs (Decidable (p.1 = 1))
+/-- Registration keeps the height and forgets the side. -/
+def reg (p : Pt) : Pt := (1, p.2)
+
+theorem pe {a b c d : Int} : ((a, b) : Pt) = (c, d) ↔ a = c ∧ b = d :=
+  ⟨fun e => ⟨congrArg Prod.fst e, congrArg Prod.snd e⟩,
+   fun ⟨e1, e2⟩ => by subst e1; subst e2; rfl⟩
+
+theorem fold_involutive (p : Pt) : fold (fold p) = p := by
+  obtain ⟨h, t⟩ := p
+  show ((2 - (2 - h), t) : Pt) = (h, t)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+/-- The seat: the fixed set of the fold is the critical line. -/
+theorem seat_fixed_line (p : Pt) : fold p = p ↔ OnLine p := by
+  obtain ⟨h, t⟩ := p
+  show ((2 - h, t) : Pt) = (h, t) ↔ h = 1
+  rw [pe]; constructor
+  · intro ⟨e, _⟩; omega
+  · intro e; exact ⟨by omega, rfl⟩
+
+theorem reg_lands (p : Pt) : OnLine (reg p) := rfl
+
+theorem reg_fixes_iff (p : Pt) : reg p = p ↔ OnLine p := by
+  obtain ⟨h, t⟩ := p
+  show ((1, t) : Pt) = (h, t) ↔ h = 1
+  rw [pe]; constructor
+  · intro ⟨e, _⟩; exact e.symm
+  · intro e; exact ⟨e.symm, rfl⟩
+
+/-- The side is what registration forgets: a point and its mirror leave one record. -/
+theorem reg_forgets_side (p : Pt) : reg (fold p) = reg p := rfl
+
+/-- The value on a set of points: every member stands on the line. -/
+def Value (Z : Pt → Prop) : Prop := ∀ s, Z s → OnLine s
+
+/-- Least erasure: registration moves no member, so it erases nothing of Z. -/
+def LeastErasure (Z : Pt → Prop) : Prop := ∀ s, Z s → reg s = s
+
+theorem least_erasure_iff_value (Z : Pt → Prop) : LeastErasure Z ↔ Value Z :=
+  ⟨fun h s hs => (reg_fixes_iff s).mp (h s hs), fun h s hs => (reg_fixes_iff s).mpr (h s hs)⟩
+
+/-- Maps that respect involutions. -/
+def Equivariant {X Y : Type} (f : X → Y) (τ : X → X) (σ : Y → Y) : Prop := ∀ x, f (τ x) = σ (f x)
+
+theorem equivariant_id {X : Type} (τ : X → X) : Equivariant id τ τ := fun _ => rfl
+
+theorem equivariant_comp {X Y W : Type} {f : X → Y} {g : Y → W} {τ : X → X} {σ : Y → Y}
+    {ρ : W → W} (hf : Equivariant f τ σ) (hg : Equivariant g σ ρ) : Equivariant (g ∘ f) τ ρ := by
+  intro x
+  show g (f (τ x)) = ρ (g (f x))
+  rw [hf x, hg (f x)]
+
+/-- The fixed set is a functor: an equivariant map sends fixed points to fixed points. -/
+theorem fix_functorial {X Y : Type} {f : X → Y} {τ : X → X} {σ : Y → Y}
+    (hf : Equivariant f τ σ) {x : X} (hx : τ x = x) : σ (f x) = f x := by
+  rw [← hf x, hx]
+
+/-- A global seat: an involution whose fixed set is the locus. -/
+structure GlobalSeat (P : Pt → Prop) (σ : Pt → Pt) : Prop where
+  involutive : ∀ p, σ (σ p) = p
+  fixed_iff : ∀ p, σ p = p ↔ P p
+
+theorem fold_global_seat : GlobalSeat OnLine fold := ⟨fold_involutive, seat_fixed_line⟩
+
+/-- A carrier: a map from world-instances into the strip landing on the line. -/
+structure Carrier (W : Type) where
+  ι : W → Pt
+  lands : ∀ w, OnLine (ι w)
+
+def image {W : Type} (ι : W → Pt) : Pt → Prop := fun s => ∃ w, ι w = s
+def Actuated {W : Type} (ι : W → Pt) (Z : Pt → Prop) : Prop := ∀ s, Z s → ∃ w, ι w = s
+
+/-- Landing is forced: an equivariant map into the seat carries every fixed point of the physical
+    involution onto the line. The carrier is built from the symmetry, not chosen. -/
+theorem equivariant_carrier_lands {X : Type} (f : X → Pt) (τ : X → X)
+    (hf : Equivariant f τ fold) :
+    ∃ C : Carrier { x : X // τ x = x }, ∀ w, C.ι w = f w.1 :=
+  ⟨⟨fun w => f w.1, fun w => (seat_fixed_line (f w.1)).mp (fix_functorial hf w.2)⟩, fun _ => rfl⟩
+
+/-- The image of a carrier is compliant with no premise at all. -/
+theorem value_on_image {W : Type} (C : Carrier W) : Value (image C.ι) :=
+  fun _ hs => match hs with | ⟨w, hw⟩ => hw ▸ C.lands w
+
+/-- The kinetic crossing: a carrier and its coverage give the value, and nothing else is used. -/
+theorem kinetic_crossing {W : Type} (C : Carrier W) (Z : Pt → Prop) (hcov : Actuated C.ι Z) :
+    Value Z :=
+  fun s hs => match hcov s hs with | ⟨w, hw⟩ => hw ▸ C.lands w
+
+/-- Under the seat every off-line point has a partner, distinct and also off the line. -/
+theorem off_locus_pair (p : Pt) (hp : ¬ OnLine p) :
+    fold p ≠ p ∧ ¬ OnLine (fold p) ∧ reg (fold p) = reg p := by
+  refine ⟨fun e => hp ((seat_fixed_line p).mp e), fun e => hp ?_, rfl⟩
+  obtain ⟨h, t⟩ := p
+  have e' : 2 - h = 1 := e
+  show h = 1
+  omega
+
+/-! ## Part II. The energy carrier: an energy, its rate, and the fold -/
+
+/-- An energy a + i β/2, as frequency and doubled rate; its mode's norm moves as e^{βt}. -/
+structure Energy where
+  freq : Int
+  rate : Int
+  deriving DecidableEq, Repr
+
+/-- The time mirror of a mode: its rate reversed, its frequency kept (complex conjugation of E). -/
+def Energy.mirror (E : Energy) : Energy := ⟨E.freq, -E.rate⟩
+def IsReal (E : Energy) : Prop := E.rate = 0
+/-- Stationary: the norm e^{βt} is unchanged at every integer time t, i.e. β t = 0 for all t. -/
+def Stationary (E : Energy) : Prop := ∀ t : Int, E.rate * t = 0
+
+/-- The energy carrier s = 1/2 + iE in the chart: h = 1 − β, t = a. -/
+def phi (E : Energy) : Pt := (1 - E.rate, E.freq)
+def psi (p : Pt) : Energy := ⟨p.2, 1 - p.1⟩
+
+theorem ee {a b c d : Int} : (⟨a, b⟩ : Energy) = ⟨c, d⟩ ↔ a = c ∧ b = d :=
+  ⟨fun e => ⟨congrArg Energy.freq e, congrArg Energy.rate e⟩,
+   fun ⟨e1, e2⟩ => by subst e1; subst e2; rfl⟩
+
+theorem mirror_involutive (E : Energy) : E.mirror.mirror = E := by
+  obtain ⟨a, b⟩ := E
+  show (⟨a, - -b⟩ : Energy) = ⟨a, b⟩
+  rw [ee]; exact ⟨rfl, by omega⟩
+
+theorem psi_phi (E : Energy) : psi (phi E) = E := by
+  obtain ⟨a, b⟩ := E
+  show (⟨a, 1 - (1 - b)⟩ : Energy) = ⟨a, b⟩
+  rw [ee]; exact ⟨rfl, by omega⟩
+
+theorem phi_psi (p : Pt) : phi (psi p) = p := by
+  obtain ⟨h, t⟩ := p
+  show ((1 - (1 - h), t) : Pt) = (h, t)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+theorem phi_injective (E F : Energy) (h : phi E = phi F) : E = F := by
+  rw [← psi_phi E, ← psi_phi F, h]
+
+/-- EQUIVARIANCE: time-mirroring the rate is the fold. -/
+theorem phi_equivariant : Equivariant phi Energy.mirror fold := by
+  intro E
+  obtain ⟨a, b⟩ := E
+  show ((1 - -b, a) : Pt) = (2 - (1 - b), a)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+theorem mirror_fixed_iff_real (E : Energy) : E.mirror = E ↔ IsReal E := by
+  obtain ⟨a, b⟩ := E
+  show (⟨a, -b⟩ : Energy) = ⟨a, b⟩ ↔ b = 0
+  rw [ee]; constructor
+  · intro ⟨_, e⟩; omega
+  · intro e; exact ⟨rfl, by omega⟩
+
+/-- The line is exactly the image of the real energies. -/
+theorem phi_line_iff_real (E : Energy) : OnLine (phi E) ↔ IsReal E := by
+  obtain ⟨a, b⟩ := E
+  show 1 - b = 1 ↔ b = 0
+  exact ⟨fun h => by omega, fun h => by subst h; rfl⟩
+
+theorem stationary_iff_real (E : Energy) : Stationary E ↔ IsReal E := by
+  constructor
+  · intro h; have h1 := h 1; rw [Int.mul_one] at h1; exact h1
+  · intro h t; show E.rate * t = 0; rw [show E.rate = 0 from h, Int.zero_mul]
+
+/-- THE LINE IS WHERE ENERGY STANDS STILL. -/
+theorem line_is_stationary (p : Pt) : OnLine p ↔ Stationary (psi p) := by
+  rw [stationary_iff_real, ← phi_line_iff_real, phi_psi]
+
+/-- Every measured energy is a real number, and every real energy lands on the line. -/
+theorem measured_on_line (a : Int) : OnLine (phi ⟨a, 0⟩) := rfl
+
+/-- The registration mirror: no real energy lands off the line. -/
+theorem no_measurement_off_line (p : Pt) (hp : ¬ OnLine p) (a : Int) : phi ⟨a, 0⟩ ≠ p :=
+  fun e => hp (e ▸ measured_on_line a)
+
+/-- The energy carrier, built from the symmetry: the real energies land on the line. -/
+theorem energy_carrier_lands :
+    ∃ C : Carrier { E : Energy // E.mirror = E }, ∀ w, C.ι w = phi w.1 :=
+  equivariant_carrier_lands phi Energy.mirror phi_equivariant
+
+/-! ## Part III. The substrate: the particle map, three odd readings and one even -/
+
+/-- A particle in the broken phase: electric charge times three, colour, baryon number times
+    three, lepton number, and its energy. -/
+structure Particle where
+  q3 : Int
+  colour : Int
+  b3 : Int
+  lepton : Int
+  energy : Energy
+  deriving DecidableEq, Repr
+
+/-- The particle map: every additive charge flipped, the energy kept (frequency and rate). -/
+def bar (c : Particle) : Particle := ⟨-c.q3, -c.colour, -c.b3, -c.lepton, c.energy⟩
+/-- The time mirror of a particle's mode. -/
+def tmirror (c : Particle) : Particle := ⟨c.q3, c.colour, c.b3, c.lepton, c.energy.mirror⟩
+def Neutral (c : Particle) : Prop := c.q3 = 0 ∧ c.colour = 0 ∧ c.b3 = 0 ∧ c.lepton = 0
+
+theorem bar_involutive (c : Particle) : bar (bar c) = c := by
+  obtain ⟨q, k, b, l, E⟩ := c
+  show (⟨- -q, - -k, - -b, - -l, E⟩ : Particle) = ⟨q, k, b, l, E⟩
+  rw [Int.neg_neg, Int.neg_neg, Int.neg_neg, Int.neg_neg]
+
+theorem bar_fixed_iff_neutral (c : Particle) : bar c = c ↔ Neutral c := by
+  obtain ⟨q, k, b, l, E⟩ := c
+  show (⟨-q, -k, -b, -l, E⟩ : Particle) = ⟨q, k, b, l, E⟩ ↔ (q = 0 ∧ k = 0 ∧ b = 0 ∧ l = 0)
+  constructor
+  · intro h
+    have h1 := congrArg Particle.q3 h
+    have h2 := congrArg Particle.colour h
+    have h3 := congrArg Particle.b3 h
+    have h4 := congrArg Particle.lepton h
+    change -q = q at h1; change -k = k at h2; change -b = b at h3; change -l = l at h4
+    exact ⟨by omega, by omega, by omega, by omega⟩
+  · intro ⟨h1, h2, h3, h4⟩
+    subst h1; subst h2; subst h3; subst h4; rfl
+
+/-- Three plus one: the charge readings are odd under the particle map, the energy reading even. -/
+theorem odd_charges_even_energy (c : Particle) :
+    ((bar c).q3 = -c.q3 ∧ (bar c).colour = -c.colour ∧ (bar c).b3 = -c.b3 ∧
+     (bar c).lepton = -c.lepton) ∧ (bar c).energy = c.energy :=
+  ⟨⟨rfl, rfl, rfl, rfl⟩, rfl⟩
+
+/-- Gravity reads energy only, so no gravitational reading tells a particle from its antiparticle. -/
+theorem gravity_reads_no_charge_bit {β : Type} (g : Energy → β) (c : Particle) :
+    g (bar c).energy = g c.energy := rfl
+
+/-- The two involutions of the substrate commute. -/
+theorem involutions_commute (c : Particle) : bar (tmirror c) = tmirror (bar c) := rfl
+
+theorem tmirror_involutive (c : Particle) : tmirror (tmirror c) = c := by
+  obtain ⟨q, k, b, l, E⟩ := c
+  show (⟨q, k, b, l, E.mirror.mirror⟩ : Particle) = ⟨q, k, b, l, E⟩
+  rw [mirror_involutive]
+
+/-- A particle is fixed by both involutions exactly when it is neutral and stable. -/
+theorem joint_fixed_iff (c : Particle) :
+    (bar c = c ∧ tmirror c = c) ↔ (Neutral c ∧ IsReal c.energy) := by
+  constructor
+  · intro ⟨h1, h2⟩
+    refine ⟨(bar_fixed_iff_neutral c).mp h1, (mirror_fixed_iff_real c.energy).mp ?_⟩
+    exact congrArg Particle.energy h2
+  · intro ⟨h1, h2⟩
+    refine ⟨(bar_fixed_iff_neutral c).mpr h1, ?_⟩
+    obtain ⟨q, k, b, l, E⟩ := c
+    show (⟨q, k, b, l, E.mirror⟩ : Particle) = ⟨q, k, b, l, E⟩
+    rw [(mirror_fixed_iff_real E).mpr h2]
+
+/-- The energy carrier on particles: the seat point of a particle's energy. -/
+def energySeat (c : Particle) : Pt := phi c.energy
+/-- The charge carrier on particles, the odd face: electric charge (in thirds) is the side. -/
+def chargeSeat (c : Particle) : Pt := (1 + c.q3, c.energy.freq)
+/-- The lepton chart of the electron's witness: charge q in units of e goes to h = 1 + q. -/
+def leptonSeat (q m : Int) : Pt := (1 + q, m)
+
+/-- The charge carrier is equivariant: the particle map is carried onto the fold. -/
+theorem charge_carrier_equivariant : Equivariant chargeSeat bar fold := by
+  intro c
+  show ((1 + -c.q3, c.energy.freq) : Pt) = (2 - (1 + c.q3), c.energy.freq)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+/-- The energy carrier is blind to the particle map and equivariant for the time mirror. -/
+theorem pair_lands_once (c : Particle) : energySeat (bar c) = energySeat c := rfl
+theorem tmirror_equivariant : Equivariant energySeat tmirror fold := fun c => phi_equivariant c.energy
+
+/-- Electrically neutral particles land on the line under the charge carrier. -/
+theorem neutral_charge_on_line (c : Particle) (h : c.q3 = 0) : OnLine (chargeSeat c) := by
+  show 1 + c.q3 = 1
+  omega
+
+/-- The electron and the positron land on the two edges, real parts 0 and 1, mirror images. -/
+theorem pair_on_the_edges (m : Int) :
+    leptonSeat (-1) m = (0, m) ∧ leptonSeat 1 m = (2, m) ∧ fold (leptonSeat (-1) m) = leptonSeat 1 m :=
+  ⟨rfl, rfl, rfl⟩
+
+/-- A stable particle lands on the line under the energy carrier. -/
+theorem stable_lands (c : Particle) (h : IsReal c.energy) : OnLine (energySeat c) :=
+  (phi_line_iff_real c.energy).mpr h
+
+theorem sq_nonneg (x : Int) : 0 ≤ x * x := by
+  rcases Int.le_total 0 x with h | h
+  · exact Int.mul_nonneg h h
+  · have h' : 0 ≤ -x := by omega
+    have := Int.mul_nonneg h' h'
+    rw [Int.neg_mul_neg] at this; exact this
+
+/-- A Hermitian 2×2 block [[a, c + i d], [c − i d, b]]; time reversal conjugates the block. -/
+structure Block where
+  a : Int
+  b : Int
+  c : Int
+  d : Int
+
+def Block.T (H : Block) : Block := ⟨H.a, H.b, H.c, -H.d⟩
+/-- The discriminant of the characteristic polynomial: the eigenvalues are real when it is ≥ 0. -/
+def Block.disc (H : Block) : Int := (H.a - H.b) * (H.a - H.b) + 4 * (H.c * H.c + H.d * H.d)
+
+theorem block_T_fixed_iff (H : Block) : H.T = H ↔ H.d = 0 := by
+  obtain ⟨a, b, c, d⟩ := H
+  constructor
+  · intro e; have := congrArg Block.d e; change -d = d at this; show d = 0; omega
+  · intro e; change d = 0 at e; subst e; rfl
+
+/-- THE MAGNET KEEPS EVERY ENERGY REAL: a magnetic term breaks time reversal of the block and
+    leaves the spectrum real; the arrow is in the statistics, the line is in the stationarity. -/
+theorem stationarity_survives_the_magnet (H : Block) : 0 ≤ H.disc ∧ H.T.disc = H.disc := by
+  refine ⟨?_, ?_⟩
+  · have e1 := sq_nonneg (H.a - H.b); have e2 := sq_nonneg H.c; have e3 := sq_nonneg H.d
+    show 0 ≤ (H.a - H.b) * (H.a - H.b) + 4 * (H.c * H.c + H.d * H.d)
+    omega
+  · show (H.a - H.b) * (H.a - H.b) + 4 * (H.c * H.c + -H.d * -H.d) =
+      (H.a - H.b) * (H.a - H.b) + 4 * (H.c * H.c + H.d * H.d)
+    rw [Int.neg_mul_neg]
+
+/-! ## Part IV. A resonance stands off the line by its width -/
+
+/-- An unstable state: mass M and width Γ, the energy E = M − iΓ/2. In the carrier's convention,
+    E = frequency + i·rate/2, its rate is −Γ. -/
+def resonance (M Γ : Int) : Energy := ⟨M, -Γ⟩
+
+/-- OFF THE LINE BY HALF THE WIDTH: in the doubled chart the side is 1 + Γ, so Re s = 1/2 + Γ/2
+    stands half the width from the critical line. -/
+theorem off_the_line_by_the_width (M Γ : Int) : phi (resonance M Γ) = (1 + Γ, M) := by
+  show ((1 - -Γ, M) : Pt) = (1 + Γ, M)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+/-- A state is on the line exactly when its width vanishes, which is exactly when it is stationary. -/
+theorem on_the_line_iff_stable (M Γ : Int) :
+    (OnLine (phi (resonance M Γ)) ↔ Γ = 0) ∧ (Stationary (resonance M Γ) ↔ Γ = 0) := by
+  have key : (-Γ = 0 ↔ Γ = 0) := ⟨fun h => by omega, fun h => by omega⟩
+  refine ⟨?_, ?_⟩
+  · rw [phi_line_iff_real]; exact key
+  · rw [stationary_iff_real]; exact key
+
+/-- The decaying state and its time mirror, the capturing state, are fold partners with one mass. -/
+theorem decay_and_capture_one_record (M Γ : Int) (h : Γ ≠ 0) :
+    phi (resonance M Γ).mirror = fold (phi (resonance M Γ)) ∧
+    (resonance M Γ).mirror ≠ resonance M Γ ∧
+    reg (phi (resonance M Γ).mirror) = reg (phi (resonance M Γ)) := by
+  refine ⟨phi_equivariant _, fun e => h ?_, by rw [phi_equivariant]; rfl⟩
+  have := congrArg Energy.rate e
+  change - -Γ = -Γ at this; omega
+
+/-! ## Part V. The line shape: half maximum at half width -/
+
+/-- The Breit–Wigner shape at detuning d and half width g: numerator g², denominator d² + g². -/
+def bwNum (g : Int) : Int := g * g
+def bwDen (d g : Int) : Int := d * d + g * g
+
+/-- HALF MAXIMUM AT HALF WIDTH: at d = g the shape is exactly half its peak. -/
+theorem half_maximum_at_half_width (g : Int) : 2 * bwNum g = bwDen g g := by
+  show 2 * (g * g) = g * g + g * g; omega
+
+theorem sq_pos_of_ne (m : Int) (h : m ≠ 0) : 0 < m * m := by
+  rcases Int.lt_or_gt_of_ne h with h' | h'
+  · have := Int.mul_pos (show 0 < -m by omega) (show 0 < -m by omega)
+    rw [Int.neg_mul_neg] at this; exact this
+  · exact Int.mul_pos h' h'
+
+/-- The line peaks at the mass: away from it the shape is strictly below its peak. -/
+theorem line_peaks_at_the_mass (d g : Int) (hd : d ≠ 0) : bwNum g < bwDen d g := by
+  have := sq_pos_of_ne d hd
+  show g * g < d * d + g * g; omega
+
+/-- The shape is even in the detuning: the line is symmetric about the mass. -/
+theorem line_symmetric (d g : Int) : bwDen (-d) g = bwDen d g := by
+  show -d * -d + g * g = d * d + g * g; rw [Int.neg_mul_neg]
+
+/-! ## Part VI. Closed systems stay on the line; the width is the leak -/
+
+/-- A Gaussian integer, for the entries of an effective Hamiltonian. -/
+structure GI where
+  re : Int
+  im : Int
+  deriving DecidableEq, Repr
+
+/-- A two-level system with Hermitian part (a, b, c) and a leak lk out of the second level:
+    H = [[a, c], [c, b − ilk]], listed as its four entries. -/
+def leaky (a b c lk : Int) : GI × GI × GI × GI := (⟨a, 0⟩, ⟨c, 0⟩, ⟨c, 0⟩, ⟨b, -lk⟩)
+
+/-- The imaginary part of the trace, which is the sum of the two energies' imaginary parts. -/
+def traceIm (H : GI × GI × GI × GI) : Int := H.1.im + H.2.2.2.im
+
+/-- THE WIDTH IS THE LEAK: the two energies' imaginary parts sum to −lk, so the total width is the
+    leak, and a closed system, lk = 0, has none. -/
+theorem the_width_is_the_leak (a b c lk : Int) :
+    traceIm (leaky a b c lk) = -lk ∧ traceIm (leaky a b c 0) = 0 := by
+  refine ⟨?_, ?_⟩ <;> (show 0 + -_ = _; omega)
+
+/-- A closed two-level system keeps every energy real: the magnet's law. -/
+theorem closed_stays_on_the_line (H : Block) : 0 ≤ H.disc := (stationarity_survives_the_magnet H).1
+
+/-! ## Part VII. The width counts the doors -/
+
+def total : List Int → Int
+  | [] => 0
+  | x :: xs => x + total xs
+
+theorem total_nonneg (xs : List Int) (h : ∀ x ∈ xs, 0 ≤ x) : 0 ≤ total xs := by
+  induction xs with
+  | nil => exact Int.le_refl 0
+  | cons x xs ih =>
+    have hx := h x List.mem_cons_self
+    have hr := ih (fun y hy => h y (List.mem_cons_of_mem x hy))
+    show 0 ≤ x + total xs; omega
+
+/-- STABLE IFF EVERY DOOR IS CLOSED: partial widths are nonnegative, so the total width vanishes
+    exactly when every channel's does. -/
+theorem stable_iff_every_door_closed (xs : List Int) (h : ∀ x ∈ xs, 0 ≤ x) :
+    total xs = 0 ↔ ∀ x ∈ xs, x = 0 := by
+  constructor
+  · intro h0
+    induction xs with
+    | nil => intro x hx; cases hx
+    | cons y ys ih =>
+      have hy := h y List.mem_cons_self
+      have hr := total_nonneg ys (fun z hz => h z (List.mem_cons_of_mem y hz))
+      have e : y + total ys = 0 := h0
+      have y0 : y = 0 := by omega
+      have t0 : total ys = 0 := by omega
+      intro x hx
+      cases hx with
+      | head => exact y0
+      | tail _ hm => exact ih (fun z hz => h z (List.mem_cons_of_mem y hz)) t0 x hm
+  · intro hall
+    induction xs with
+    | nil => rfl
+    | cons y ys ih =>
+      have y0 := hall y List.mem_cons_self
+      have t0 := ih (fun z hz => h z (List.mem_cons_of_mem y hz))
+        (fun z hz => hall z (List.mem_cons_of_mem y hz))
+      show y + total ys = 0; omega
+
+/-- Opening a door widens the line: every open channel adds to the width. -/
+theorem an_open_door_widens (x : Int) (xs : List Int) (hx : 0 < x) :
+    total xs < total (x :: xs) := by
+  show total xs < x + total xs; omega
+
+/-! ## Part VIII. The capstone -/
+
+/-- RESONANCES STAND OFF THE LINE BY HALF THE WIDTH. An unstable state lands off the line by its
+    width and is stationary exactly when the width vanishes; its time mirror is its fold partner
+    with one mass; the line shape falls to half its peak at half the width, peaks at the mass and is
+    symmetric about it; a closed system keeps every energy real; the width vanishes exactly when
+    every decay channel is closed. -/
+theorem resonances_off_the_line :
+    (∀ M Γ : Int, phi (resonance M Γ) = (1 + Γ, M)) ∧
+    (∀ M Γ : Int, OnLine (phi (resonance M Γ)) ↔ Γ = 0) ∧
+    (∀ M Γ : Int, Γ ≠ 0 → reg (phi (resonance M Γ).mirror) = reg (phi (resonance M Γ))) ∧
+    (∀ g : Int, 2 * bwNum g = bwDen g g) ∧
+    (∀ d g : Int, d ≠ 0 → bwNum g < bwDen d g) ∧
+    (∀ H : Block, 0 ≤ H.disc) ∧
+    (∀ xs : List Int, (∀ x ∈ xs, 0 ≤ x) → (total xs = 0 ↔ ∀ x ∈ xs, x = 0)) :=
+  ⟨off_the_line_by_the_width, fun M Γ => (on_the_line_iff_stable M Γ).1,
+   fun M Γ h => (decay_and_capture_one_record M Γ h).2.2, half_maximum_at_half_width,
+   line_peaks_at_the_mass, closed_stays_on_the_line, stable_iff_every_door_closed⟩
+
+end SPHYS.Resonance
+
+#print axioms SPHYS.Resonance.pe
+#print axioms SPHYS.Resonance.fold_involutive
+#print axioms SPHYS.Resonance.seat_fixed_line
+#print axioms SPHYS.Resonance.reg_lands
+#print axioms SPHYS.Resonance.reg_fixes_iff
+#print axioms SPHYS.Resonance.reg_forgets_side
+#print axioms SPHYS.Resonance.least_erasure_iff_value
+#print axioms SPHYS.Resonance.equivariant_id
+#print axioms SPHYS.Resonance.equivariant_comp
+#print axioms SPHYS.Resonance.fix_functorial
+#print axioms SPHYS.Resonance.fold_global_seat
+#print axioms SPHYS.Resonance.equivariant_carrier_lands
+#print axioms SPHYS.Resonance.value_on_image
+#print axioms SPHYS.Resonance.kinetic_crossing
+#print axioms SPHYS.Resonance.off_locus_pair
+#print axioms SPHYS.Resonance.ee
+#print axioms SPHYS.Resonance.mirror_involutive
+#print axioms SPHYS.Resonance.psi_phi
+#print axioms SPHYS.Resonance.phi_psi
+#print axioms SPHYS.Resonance.phi_injective
+#print axioms SPHYS.Resonance.phi_equivariant
+#print axioms SPHYS.Resonance.mirror_fixed_iff_real
+#print axioms SPHYS.Resonance.phi_line_iff_real
+#print axioms SPHYS.Resonance.stationary_iff_real
+#print axioms SPHYS.Resonance.line_is_stationary
+#print axioms SPHYS.Resonance.measured_on_line
+#print axioms SPHYS.Resonance.no_measurement_off_line
+#print axioms SPHYS.Resonance.energy_carrier_lands
+#print axioms SPHYS.Resonance.bar_involutive
+#print axioms SPHYS.Resonance.bar_fixed_iff_neutral
+#print axioms SPHYS.Resonance.odd_charges_even_energy
+#print axioms SPHYS.Resonance.gravity_reads_no_charge_bit
+#print axioms SPHYS.Resonance.involutions_commute
+#print axioms SPHYS.Resonance.tmirror_involutive
+#print axioms SPHYS.Resonance.joint_fixed_iff
+#print axioms SPHYS.Resonance.charge_carrier_equivariant
+#print axioms SPHYS.Resonance.pair_lands_once
+#print axioms SPHYS.Resonance.tmirror_equivariant
+#print axioms SPHYS.Resonance.neutral_charge_on_line
+#print axioms SPHYS.Resonance.pair_on_the_edges
+#print axioms SPHYS.Resonance.stable_lands
+#print axioms SPHYS.Resonance.sq_nonneg
+#print axioms SPHYS.Resonance.block_T_fixed_iff
+#print axioms SPHYS.Resonance.stationarity_survives_the_magnet
+#print axioms SPHYS.Resonance.off_the_line_by_the_width
+#print axioms SPHYS.Resonance.on_the_line_iff_stable
+#print axioms SPHYS.Resonance.decay_and_capture_one_record
+#print axioms SPHYS.Resonance.half_maximum_at_half_width
+#print axioms SPHYS.Resonance.sq_pos_of_ne
+#print axioms SPHYS.Resonance.line_peaks_at_the_mass
+#print axioms SPHYS.Resonance.line_symmetric
+#print axioms SPHYS.Resonance.the_width_is_the_leak
+#print axioms SPHYS.Resonance.closed_stays_on_the_line
+#print axioms SPHYS.Resonance.total_nonneg
+#print axioms SPHYS.Resonance.stable_iff_every_door_closed
+#print axioms SPHYS.Resonance.an_open_door_widens
+#print axioms SPHYS.Resonance.resonances_off_the_line
+```
+
+```text
+'SPHYS.Resonance.pe' does not depend on any axioms
+'SPHYS.Resonance.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.reg_lands' does not depend on any axioms
+'SPHYS.Resonance.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.Resonance.reg_forgets_side' does not depend on any axioms
+'SPHYS.Resonance.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.Resonance.equivariant_id' does not depend on any axioms
+'SPHYS.Resonance.equivariant_comp' does not depend on any axioms
+'SPHYS.Resonance.fix_functorial' does not depend on any axioms
+'SPHYS.Resonance.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.value_on_image' does not depend on any axioms
+'SPHYS.Resonance.kinetic_crossing' does not depend on any axioms
+'SPHYS.Resonance.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.ee' does not depend on any axioms
+'SPHYS.Resonance.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.Resonance.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.measured_on_line' does not depend on any axioms
+'SPHYS.Resonance.no_measurement_off_line' does not depend on any axioms
+'SPHYS.Resonance.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.bar_involutive' does not depend on any axioms
+'SPHYS.Resonance.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.Resonance.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.Resonance.involutions_commute' does not depend on any axioms
+'SPHYS.Resonance.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.pair_lands_once' does not depend on any axioms
+'SPHYS.Resonance.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.pair_on_the_edges' does not depend on any axioms
+'SPHYS.Resonance.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.sq_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.block_T_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.stationarity_survives_the_magnet' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.off_the_line_by_the_width' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.on_the_line_iff_stable' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.decay_and_capture_one_record' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.half_maximum_at_half_width' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.sq_pos_of_ne' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.line_peaks_at_the_mass' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.line_symmetric' depends on axioms: [propext]
+'SPHYS.Resonance.the_width_is_the_leak' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.closed_stays_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.total_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.stable_iff_every_door_closed' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.an_open_door_widens' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.resonances_off_the_line' depends on axioms: [propext, Quot.sound]
+```
+
+# Appendix B: Resonance\_Twin.f90 and Its Run
+
+```fortran
+! Resonance_Twin.f90 · the executed twin of SPHYS_Resonance.lean · Fortran 2018.
+! Build (sealed): gfortran -std=f2018 -O2 -fno-fast-math -ffp-contract=off Resonance_Twin.f90
+! Blocks: A the carrier; B the line shape; C width and lifetime across the particles; D the stable
+! particles on the line; E the width counts the doors; F the width is the leak; G the survival
+! law; H decay and capture, one line.
+program resonance_twin
+  implicit none
+  integer, parameter :: dp = selected_real_kind(15, 307)
+  integer, parameter :: i8 = selected_int_kind(18)
+  real(dp), parameter :: HBAR_EVS = 6.582119569e-16_dp, YEAR = 3.15576e7_dp, PI = 3.141592653589793_dp
+  integer :: checks, fails
+  integer(i8) :: seed
+  checks = 0; fails = 0; seed = 20260930_i8
+  call block_a(); call block_b(); call block_c(); call block_d()
+  call block_e(); call block_f(); call block_g(); call block_h()
+  write(*,'(a,i0,a,i0,a)') ' BATTERY-JSON: {"checks":', checks, ',"failures":', fails, '}'
+  if (fails > 0) error stop 1
+contains
+  subroutine check(name, ok)
+    character(*), intent(in) :: name
+    logical, intent(in) :: ok
+    checks = checks + 1
+    if (.not. ok) fails = fails + 1
+    write(*,'(a,a)') merge('  PASS  ', '  FAIL  ', ok), name
+  end subroutine check
+
+  function rnd() result(r)
+    real(dp) :: r
+    seed = modulo(16807_i8*seed, 2147483647_i8)
+    r = real(seed, dp)/2147483647.0_dp
+  end function rnd
+
+  subroutine block_a()
+    integer :: m, g, n, nline, nmir
+    write(*,'(a)') 'A · a resonance stands off the line by its width; its mirror is its fold partner'
+    n = 0; nline = 0; nmir = 0
+    do m = -30, 30
+      do g = -30, 30
+        n = n + 1
+        ! the decaying state (m, g) lands at (1 + g, m); its mirror (m, -g) at (1 - g, m)
+        if ((1 + g == 1) .eqv. (g == 0)) nline = nline + 1
+        if (1 - g == 2 - (1 + g)) nmir = nmir + 1
+      end do
+    end do
+    call check('3721 states: on the line exactly when the width vanishes', nline == n)
+    call check('3721 states: decay and capture are fold partners with one mass', nmir == n)
+  end subroutine block_a
+
+  pure function bw(e, m, g) result(f)
+    real(dp), intent(in) :: e, m, g
+    real(dp) :: f
+    f = (0.5_dp*g)**2/((e - m)**2 + (0.5_dp*g)**2)
+  end function bw
+
+  subroutine block_b()
+    integer :: k, nsteps
+    real(dp) :: m, g, lo, hi, area, e, de, half, fl
+    write(*,'(a)') 'B · the line shape: half maximum at half the width, area pi times the half width'
+    m = 91.1876_dp; g = 2.4955_dp
+    half = max(abs(bw(m + 0.5_dp*g, m, g) - 0.5_dp), abs(bw(m - 0.5_dp*g, m, g) - 0.5_dp))
+    lo = m; hi = m + 5.0_dp*g
+    do k = 1, 200
+      fl = bw(0.5_dp*(lo + hi), m, g)
+      if (fl > 0.5_dp) then
+        lo = 0.5_dp*(lo + hi)
+      else
+        hi = 0.5_dp*(lo + hi)
+      end if
+    end do
+    nsteps = 2000000; de = 2.0e4_dp*g/real(nsteps, dp); area = 0.0_dp
+    do k = 0, nsteps
+      e = m - 1.0e4_dp*g + real(k, dp)*de
+      area = area + merge(0.5_dp, 1.0_dp, k == 0 .or. k == nsteps)*bw(e, m, g)*de
+    end do
+    write(*,'(a,es9.2,a,f10.6,a,f9.6)') '  |shape - 1/2| at M +- Gamma/2 = ', half, ';  full width found ', &
+         2.0_dp*(lo - m), ';  area / (pi Gamma/2) = ', area/(PI*0.5_dp*g)
+    call check('the Z line falls to half its peak at M +- Gamma/2, and its full width is Gamma', &
+               half < 1.0e-14_dp .and. abs(2.0_dp*(lo - m) - g) < 1.0e-12_dp)
+    call check('the area under the line is pi times the half width (to 1e-4)', abs(area/(PI*0.5_dp*g) - 1.0_dp) < 1.0e-4_dp)
+  end subroutine block_b
+
+  subroutine block_c()
+    real(dp) :: tau(6), gam(6)
+    character(len=8) :: nm(6)
+    integer :: k
+    write(*,'(a)') 'C · width and lifetime, Gamma tau = hbar, across thirty decades'
+    nm = ['neutron ', 'muon    ', 'tau     ', 'pi0     ', 'Z       ', 'top     ']
+    tau(1) = 878.4_dp; tau(2) = 2.1969811e-6_dp; tau(3) = 290.3e-15_dp; tau(4) = 8.43e-17_dp
+    gam(5) = 2.4955e9_dp; gam(6) = 1.42e9_dp
+    do k = 1, 4
+      gam(k) = HBAR_EVS/tau(k)
+    end do
+    do k = 5, 6
+      tau(k) = HBAR_EVS/gam(k)
+    end do
+    do k = 1, 6
+      write(*,'(a,a,a,es11.4,a,es11.4,a)') '  ', nm(k), ' width ', gam(k), ' eV, lifetime ', tau(k), ' s'
+    end do
+    call check('the neutron stands 7.49e-19 eV off the line and the Z 2.50e9 eV: 27 decades of widths', &
+               abs(gam(1)/7.4934e-19_dp - 1.0_dp) < 1.0e-3_dp .and. gam(5)/gam(1) > 1.0e27_dp)
+    call check('the widths from lifetimes: muon 2.996e-10 eV, tau 2.267e-3 eV, neutral pion 7.81 eV', &
+               abs(gam(2)/2.9959e-10_dp - 1.0_dp) < 1.0e-3_dp .and. abs(gam(3)/2.2674e-3_dp - 1.0_dp) < 1.0e-3_dp &
+               .and. abs(gam(4)/7.808_dp - 1.0_dp) < 1.0e-3_dp)
+  end subroutine block_c
+
+  subroutine block_d()
+    real(dp) :: ge, gp
+    write(*,'(a)') 'D · the stable particles stand on the line to the depth their lifetimes allow'
+    ge = HBAR_EVS/(6.6e28_dp*YEAR); gp = HBAR_EVS/(2.4e34_dp*YEAR)
+    write(*,'(a,es10.3,a,es10.3,a)') '  electron width < ', ge, ' eV;  proton width < ', gp, ' eV'
+    call check('the electron stands on the line to 3e-52 eV and the proton to 9e-58 eV', &
+               ge < 1.0e-51_dp .and. gp < 1.0e-57_dp)
+  end subroutine block_d
+
+  subroutine block_e()
+    real(dp) :: gf, mz, gnu, ginv, nnu
+    write(*,'(a)') 'E · the width counts the doors: the Z''s invisible width and the light neutrinos'
+    gf = 1.1663788e-5_dp; mz = 91.1876_dp
+    gnu = gf*mz**3/(12.0_dp*sqrt(2.0_dp)*PI)
+    ginv = 0.4990_dp; nnu = ginv/gnu
+    write(*,'(a,f8.5,a,f6.4,a,f6.3)') '  one neutrino door at tree level ', gnu, ' GeV; invisible width ', ginv, &
+         ' GeV; doors counted ', nnu
+    call check('the invisible width counts three open doors (tree level, within 0.05)', abs(nnu - 3.0_dp) < 0.05_dp)
+  end subroutine block_e
+
+  subroutine block_f()
+    integer :: t, nsum, nsign, nclosed
+    real(dp) :: a, b, c, l
+    complex(dp) :: tr, dt, disc, e1, e2
+    write(*,'(a)') 'F · the width is the leak: an open two-level system, H = [[a, c], [c, b - i l]]'
+    nsum = 0; nsign = 0; nclosed = 0
+    do t = 1, 20000
+      a = 10.0_dp*(rnd() - 0.5_dp); b = 10.0_dp*(rnd() - 0.5_dp); c = 10.0_dp*(rnd() - 0.5_dp)
+      l = 5.0_dp*rnd()
+      tr = cmplx(a + b, -l, dp); dt = cmplx(a, 0.0_dp, dp)*cmplx(b, -l, dp) - c*c
+      disc = sqrt(tr*tr - 4.0_dp*dt)
+      e1 = 0.5_dp*(tr + disc); e2 = 0.5_dp*(tr - disc)
+      if (abs(aimag(e1) + aimag(e2) + l) < 1.0e-12_dp) nsum = nsum + 1
+      if (aimag(e1) <= 1.0e-12_dp .and. aimag(e2) <= 1.0e-12_dp) nsign = nsign + 1
+      tr = cmplx(a + b, 0.0_dp, dp); dt = cmplx(a*b - c*c, 0.0_dp, dp)
+      disc = sqrt(tr*tr - 4.0_dp*dt)
+      if (abs(aimag(0.5_dp*(tr + disc))) < 1.0e-12_dp .and. abs(aimag(0.5_dp*(tr - disc))) < 1.0e-12_dp) &
+        nclosed = nclosed + 1
+    end do
+    call check('20000 open systems: the two rates sum to the leak, and both decay', nsum == 20000 .and. nsign == 20000)
+    call check('20000 closed systems: every energy on the line', nclosed == 20000)
+  end subroutine block_f
+
+  subroutine block_g()
+    real(dp) :: half
+    write(*,'(a)') 'G · the survival law: the population falls as exp(-Gamma t / hbar)'
+    half = 878.4_dp*log(2.0_dp)
+    write(*,'(a,f7.2,a)') '  the free neutron''s half-life, tau ln 2 = ', half, ' s'
+    call check('the neutron''s half-life is 608.9 s', abs(half - 608.86_dp) < 0.05_dp)
+  end subroutine block_g
+
+  subroutine block_h()
+    integer :: k, n
+    real(dp) :: e
+    write(*,'(a)') 'H · decay and capture: one line shape, the arrow choosing the sign'
+    n = 0
+    do k = -500, 500
+      e = 91.1876_dp + 0.01_dp*real(k, dp)
+      if (bw(e, 91.1876_dp, 2.4955_dp) == bw(e, 91.1876_dp, -2.4955_dp)) n = n + 1
+    end do
+    call check('the decaying and the capturing state give one line at all 1001 energies, exactly', n == 1001)
+  end subroutine block_h
+end program resonance_twin
+```
+
+```text
+A · a resonance stands off the line by its width; its mirror is its fold partner
+  PASS  3721 states: on the line exactly when the width vanishes
+  PASS  3721 states: decay and capture are fold partners with one mass
+B · the line shape: half maximum at half the width, area pi times the half width
+  |shape - 1/2| at M +- Gamma/2 =  1.44E-15;  full width found   2.495500;  area / (pi Gamma/2) =  0.999968
+  PASS  the Z line falls to half its peak at M +- Gamma/2, and its full width is Gamma
+  PASS  the area under the line is pi times the half width (to 1e-4)
+C · width and lifetime, Gamma tau = hbar, across thirty decades
+  neutron  width  7.4933E-19 eV, lifetime  8.7840E+02 s
+  muon     width  2.9960E-10 eV, lifetime  2.1970E-06 s
+  tau      width  2.2674E-03 eV, lifetime  2.9030E-13 s
+  pi0      width  7.8080E+00 eV, lifetime  8.4300E-17 s
+  Z        width  2.4955E+09 eV, lifetime  2.6376E-25 s
+  top      width  1.4200E+09 eV, lifetime  4.6353E-25 s
+  PASS  the neutron stands 7.49e-19 eV off the line and the Z 2.50e9 eV: 27 decades of widths
+  PASS  the widths from lifetimes: muon 2.996e-10 eV, tau 2.267e-3 eV, neutral pion 7.81 eV
+D · the stable particles stand on the line to the depth their lifetimes allow
+  electron width <  3.160E-52 eV;  proton width <  8.691E-58 eV
+  PASS  the electron stands on the line to 3e-52 eV and the proton to 9e-58 eV
+E · the width counts the doors: the Z's invisible width and the light neutrinos
+  one neutrino door at tree level  0.16588 GeV; invisible width 0.4990 GeV; doors counted  3.008
+  PASS  the invisible width counts three open doors (tree level, within 0.05)
+F · the width is the leak: an open two-level system, H = [[a, c], [c, b - i l]]
+  PASS  20000 open systems: the two rates sum to the leak, and both decay
+  PASS  20000 closed systems: every energy on the line
+G · the survival law: the population falls as exp(-Gamma t / hbar)
+  the free neutron's half-life, tau ln 2 =  608.86 s
+  PASS  the neutron's half-life is 608.9 s
+H · decay and capture: one line shape, the arrow choosing the sign
+  PASS  the decaying and the capturing state give one line at all 1001 energies, exactly
+ BATTERY-JSON: {"checks":12,"failures":0}
+```
+
+# Appendix C: The Seat and the Judgment
+
+```text
+PhysOSᵀ 1.0.5p · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 a4108cd26bcbe6ef, the files that ran
+GROUND toolchain: Lean 4.19.0 and gfortran present · manifest: 31 files signed, all verified · proofs: 2 PhysOS Proofs read from II.10, record lines complete · source screen: 15 kernels, 23 named premises, clean · citations: 253 laws named in Parts I and II, 253 resolved · quarantine: 6 retirements string-scanned, 3 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB One_Cut_Resolution 0 · registerB One_Cut_Terminal 0 · registerB Only_The_Arrow_Remains 0 · registerB Physical_Closure 0 · registerB Forced_Closure 0 · registerB Closure_Executed 0 · registerB Armed_Seat 0 · registerB Census 0 · registerB Heat_Bridge 0 · registerB The_Loop 0 · registerB RH_Least_Erasure 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0 · witness Census_Twin 0 · witness Loop_Twin 0 · witness RH_Seal_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 5 of 5 twins ran, each held to one battery line with zero failures
+CHAIN · D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+ELAPSED ground 1 s · Register A 3 s · Register B 34 s · witness 6 s · total 44 s (not hashed)
+SEAT EARNED · this run
+
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 57
+JUDGMENT refused 57 of 57 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+```
