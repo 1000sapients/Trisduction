@@ -1,0 +1,129 @@
+RECEIPTS · Immanent Gravity v2.0.0 · 30 September 2026
+e5f12bb60a57107fd1e8b7044a8c18963c0d6b6311d0d911c053ad3ac576d057  SPHYS_Gravity.lean
+1e2a8d2d5f87aa53b133cb0d74e15a930e5a6d17e6ba730e707583894f917c65  Gravity_Twin.f90
+c785f10dac7611d559f4b6280e2bd04169a2d4d18604a73f8561ac740be5869c  grav.pdf
+
+===== grav_seat_and_judgment.txt
+PhysOSᵀ 1.0.5p · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 a4108cd26bcbe6ef, the files that ran
+GROUND toolchain: Lean 4.19.0 and gfortran present · manifest: 31 files signed, all verified · proofs: 2 PhysOS Proofs read from II.10, record lines complete · source screen: 15 kernels, 23 named premises, clean · citations: 253 laws named in Parts I and II, 253 resolved · quarantine: 6 retirements string-scanned, 3 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB One_Cut_Resolution 0 · registerB One_Cut_Terminal 0 · registerB Only_The_Arrow_Remains 0 · registerB Physical_Closure 0 · registerB Forced_Closure 0 · registerB Closure_Executed 0 · registerB Armed_Seat 0 · registerB Census 0 · registerB Heat_Bridge 0 · registerB The_Loop 0 · registerB RH_Least_Erasure 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0 · witness Census_Twin 0 · witness Loop_Twin 0 · witness RH_Seal_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 5 of 5 twins ran, each held to one battery line with zero failures
+CHAIN · D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+ELAPSED ground 1 s · Register A 3 s · Register B 34 s · witness 6 s · total 44 s (not hashed)
+SEAT EARNED · this run
+
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 68
+JUDGMENT refused 68 of 68 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+
+===== grav_kernel_run.txt
+'SPHYS.Gravity.pe' does not depend on any axioms
+'SPHYS.Gravity.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.reg_lands' does not depend on any axioms
+'SPHYS.Gravity.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.Gravity.reg_forgets_side' does not depend on any axioms
+'SPHYS.Gravity.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.Gravity.equivariant_id' does not depend on any axioms
+'SPHYS.Gravity.equivariant_comp' does not depend on any axioms
+'SPHYS.Gravity.fix_functorial' does not depend on any axioms
+'SPHYS.Gravity.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.value_on_image' does not depend on any axioms
+'SPHYS.Gravity.kinetic_crossing' does not depend on any axioms
+'SPHYS.Gravity.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.ee' does not depend on any axioms
+'SPHYS.Gravity.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.Gravity.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.measured_on_line' does not depend on any axioms
+'SPHYS.Gravity.no_measurement_off_line' does not depend on any axioms
+'SPHYS.Gravity.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.bar_involutive' does not depend on any axioms
+'SPHYS.Gravity.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.Gravity.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.Gravity.involutions_commute' does not depend on any axioms
+'SPHYS.Gravity.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.pair_lands_once' does not depend on any axioms
+'SPHYS.Gravity.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.pair_on_the_edges' does not depend on any axioms
+'SPHYS.Gravity.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.gravity_even_branch' does not depend on any axioms
+'SPHYS.Gravity.gravity_factors_through_registration' does not depend on any axioms
+'SPHYS.Gravity.composition_blind' does not depend on any axioms
+'SPHYS.Gravity.even_is_not_the_record' does not depend on any axioms
+'SPHYS.Gravity.every_source_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.charged_source_off_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.total_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.one_sign_no_screening' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.charge_can_be_screened' does not depend on any axioms
+'SPHYS.Gravity.conservative_motion_reversible' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.motion_retraces' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.redshift_equivariant' does not depend on any axioms
+'SPHYS.Gravity.redshift_keeps_the_line' does not depend on any axioms
+'SPHYS.Gravity.redshift_commutes_with_registration' does not depend on any axioms
+'SPHYS.Gravity.clocks_co_move' depends on axioms: [propext]
+'SPHYS.Gravity.gravity_reads_the_deficit' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.the_bond_weighs_less' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.waves_two_polarizations' depends on axioms: [propext]
+'SPHYS.Gravity.polarization_count' does not depend on any axioms
+'SPHYS.Gravity.sq_pos_of_ne' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.massive_slower' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.odd_reading_blind' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.only_gravity_reads_the_dark' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.the_vacuum_repels' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.one_sign_of_energy_not_of_pull' does not depend on any axioms
+'SPHYS.Gravity.kinetic_floor' depends on axioms: [propext, Quot.sound]
+'SPHYS.Gravity.gravity_is_the_record' depends on axioms: [propext, Quot.sound]
+
+===== grav_twin_run.txt
+A · gravity reads the record: even under the particle map, blind to the side
+  PASS  gravity reads a particle and its antiparticle (-q, -colour, e) alike (2665 of 2665)
+  PASS  gravity is blind to charge at fixed energy (2665 of 2665)
+  PASS  every gravitational source stands on the line; every charged source off it
+B · the equivalence principle, and the deficit read with the rest
+  binding fraction of the mass: titanium  0.93645 %, platinum  0.85095 %, difference  8.550E-04
+  MICROSCOPE |eta| <=  4.246E-15: the binding deficit falls with the rest to  4.966E-12
+  PASS  the deficit of nuclear binding is read by gravity to better than 1e-11 of itself
+  PASS  antihydrogen falls down, a = (0.75 +- 0.21) g, repulsion excluded (ALPHA-g 2023)
+C · one sign: gravity cannot be screened, charge can
+  of 20000 random sets of four nonzero charges, neutral: 1834;  of 20000 non-empty mass sets, massless: 0
+  PASS  charges screen (neutral sets exist); masses never total zero unless all are zero
+D · no bit, and reversible: a Kepler orbit run forward and backward
+  ten revolutions: max |dE/E| =  4.29E-06;  retrace error after reversal =  5.17E-10
+  PASS  the orbit keeps its energy to 1e-5 over ten revolutions
+  PASS  run backwards, the orbit retraces its start to 1e-9
+E · gravity and time co-move: one factor shifts every clock
+  10000 clock pairs in 10000 potentials: max change of their ratio  3.33E-16
+  PASS  every ratio of clocks is kept by the gravitational shift (to 1e-15)
+  Pound-Rebka tower 22.5 m: dnu/nu =  2.455E-15;  optical clocks 33 cm:  3.601E-17
+  PASS  the tower shift is 2.455e-15 and the 33 cm shift 3.60e-17
+F · the classical floor, computed from the constants
+  deflection at the solar limb  1.7512 arcsec; Mercury  42.981 arcsec per century; PSR B1913+16 dPb/dt = -2.40210E-12
+  PASS  light grazing the Sun bends 1.751 arcsec, twice the Newtonian angle
+  PASS  Mercury's perihelion advances 42.98 arcsec per century
+  PASS  the binary pulsar's orbital decay is -2.4026e-12, the GR value (Weisberg and Huang 2016)
+G · the waves: two polarizations, the speed of light
+  polarizations 10 - 4 - 4 = 2;  GW170817 dv/c <=  4.24E-16
+  PASS  two polarizations, each moved by parity, and gravity at the speed of light to 1e-15
+H · the two branches: the reversible run registers nothing; the kept bit is priced
+  gravity's reversed orbit: 0 bits committed;  the magnet's bit:  174.2 floors per switch
+  PASS  the reversible branch commits no bit while the priced branch pays above the floor
+I · the sky's budget: dust attracts, the vacuum repels, and the sign is read
+  flat budget of Planck 2018: q0 = -0.5271 (all matter:  0.50);  acceleration begins at z =  0.632;  the vacuum overtakes matter at z =  0.295
+  PASS  the two budgets give decelerations of opposite sign: q0 = -0.527 against +0.5
+  PASS  the acceleration begins at z = 0.63 and the vacuum overtakes matter at z = 0.295
+ BATTERY-JSON: {"checks":17,"failures":0}
