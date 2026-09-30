@@ -1,0 +1,112 @@
+RECEIPTS · Resonances v1.0.0 · 30 September 2026 · PhysOSᵀ 1.0.5p seat (re-run, this session)
+504dc2664bf023e6f173f9e5aae90a64b57d0adfa0131094a3c46e597de3a1e9  SPHYS_Resonance.lean
+e761076970b59db5d2e62c8bed780ed08b7ab01aa6d8be8de391f89ebecfcc35  Resonance_Twin.f90
+e499ef542f5d6154d6d2ee883a4471d545c288eb82ece9c2c96dc3d93238f09e  res.pdf
+
+===== res_seat_and_judgment.txt
+PhysOSᵀ 1.0.5p · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 a4108cd26bcbe6ef, the files that ran
+GROUND toolchain: Lean 4.19.0 and gfortran present · manifest: 31 files signed, all verified · proofs: 2 PhysOS Proofs read from II.10, record lines complete · source screen: 15 kernels, 23 named premises, clean · citations: 253 laws named in Parts I and II, 253 resolved · quarantine: 6 retirements string-scanned, 3 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB One_Cut_Resolution 0 · registerB One_Cut_Terminal 0 · registerB Only_The_Arrow_Remains 0 · registerB Physical_Closure 0 · registerB Forced_Closure 0 · registerB Closure_Executed 0 · registerB Armed_Seat 0 · registerB Census 0 · registerB Heat_Bridge 0 · registerB The_Loop 0 · registerB RH_Least_Erasure 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0 · witness Census_Twin 0 · witness Loop_Twin 0 · witness RH_Seal_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 5 of 5 twins ran, each held to one battery line with zero failures
+CHAIN · D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+ELAPSED ground 1 s · Register A 3 s · Register B 34 s · witness 6 s · total 44 s (not hashed)
+SEAT EARNED · this run
+
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 57
+JUDGMENT refused 57 of 57 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+
+===== res_kernel_run.txt
+'SPHYS.Resonance.pe' does not depend on any axioms
+'SPHYS.Resonance.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.reg_lands' does not depend on any axioms
+'SPHYS.Resonance.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.Resonance.reg_forgets_side' does not depend on any axioms
+'SPHYS.Resonance.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.Resonance.equivariant_id' does not depend on any axioms
+'SPHYS.Resonance.equivariant_comp' does not depend on any axioms
+'SPHYS.Resonance.fix_functorial' does not depend on any axioms
+'SPHYS.Resonance.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.value_on_image' does not depend on any axioms
+'SPHYS.Resonance.kinetic_crossing' does not depend on any axioms
+'SPHYS.Resonance.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.ee' does not depend on any axioms
+'SPHYS.Resonance.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.Resonance.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.measured_on_line' does not depend on any axioms
+'SPHYS.Resonance.no_measurement_off_line' does not depend on any axioms
+'SPHYS.Resonance.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.bar_involutive' does not depend on any axioms
+'SPHYS.Resonance.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.Resonance.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.Resonance.involutions_commute' does not depend on any axioms
+'SPHYS.Resonance.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.pair_lands_once' does not depend on any axioms
+'SPHYS.Resonance.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.pair_on_the_edges' does not depend on any axioms
+'SPHYS.Resonance.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.sq_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.block_T_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.stationarity_survives_the_magnet' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.off_the_line_by_the_width' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.on_the_line_iff_stable' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.decay_and_capture_one_record' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.half_maximum_at_half_width' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.sq_pos_of_ne' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.line_peaks_at_the_mass' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.line_symmetric' depends on axioms: [propext]
+'SPHYS.Resonance.the_width_is_the_leak' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.closed_stays_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.total_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.stable_iff_every_door_closed' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.an_open_door_widens' depends on axioms: [propext, Quot.sound]
+'SPHYS.Resonance.resonances_off_the_line' depends on axioms: [propext, Quot.sound]
+
+===== res_twin_run.txt
+A · a resonance stands off the line by its width; its mirror is its fold partner
+  PASS  3721 states: on the line exactly when the width vanishes
+  PASS  3721 states: decay and capture are fold partners with one mass
+B · the line shape: half maximum at half the width, area pi times the half width
+  |shape - 1/2| at M +- Gamma/2 =  1.44E-15;  full width found   2.495500;  area / (pi Gamma/2) =  0.999968
+  PASS  the Z line falls to half its peak at M +- Gamma/2, and its full width is Gamma
+  PASS  the area under the line is pi times the half width (to 1e-4)
+C · width and lifetime, Gamma tau = hbar, across thirty decades
+  neutron  width  7.4933E-19 eV, lifetime  8.7840E+02 s
+  muon     width  2.9960E-10 eV, lifetime  2.1970E-06 s
+  tau      width  2.2674E-03 eV, lifetime  2.9030E-13 s
+  pi0      width  7.8080E+00 eV, lifetime  8.4300E-17 s
+  Z        width  2.4955E+09 eV, lifetime  2.6376E-25 s
+  top      width  1.4200E+09 eV, lifetime  4.6353E-25 s
+  PASS  the neutron stands 7.49e-19 eV off the line and the Z 2.50e9 eV: 27 decades of widths
+  PASS  the widths from lifetimes: muon 2.996e-10 eV, tau 2.267e-3 eV, neutral pion 7.81 eV
+D · the stable particles stand on the line to the depth their lifetimes allow
+  electron width <  3.160E-52 eV;  proton width <  8.691E-58 eV
+  PASS  the electron stands on the line to 3e-52 eV and the proton to 9e-58 eV
+E · the width counts the doors: the Z's invisible width and the light neutrinos
+  one neutrino door at tree level  0.16588 GeV; invisible width 0.4990 GeV; doors counted  3.008
+  PASS  the invisible width counts three open doors (tree level, within 0.05)
+F · the width is the leak: an open two-level system, H = [[a, c], [c, b - i l]]
+  PASS  20000 open systems: the two rates sum to the leak, and both decay
+  PASS  20000 closed systems: every energy on the line
+G · the survival law: the population falls as exp(-Gamma t / hbar)
+  the free neutron's half-life, tau ln 2 =  608.86 s
+  PASS  the neutron's half-life is 608.9 s
+H · decay and capture: one line shape, the arrow choosing the sign
+  PASS  the decaying and the capturing state give one line at all 1001 energies, exactly
+ BATTERY-JSON: {"checks":12,"failures":0}
