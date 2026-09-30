@@ -1,0 +1,126 @@
+RECEIPTS · Spin and Statistics v1.0.0 · 30 September 2026 · PhysOSᵀ 1.0.5p seat (re-run, this session)
+b0de4a65721def7e6e5121fb7d598e4438ce6d1e1038bcf01480b153ba58a2bc  SPHYS_Spin_Statistics.lean
+35d4a89f624aca6faa3543324aab203030e160d67291d7395385caa799463b9a  SpinStat_Twin.f90
+8348726806e492426ff82b9fe3cc15f8155845f6b1219be8762ebebb67435f3a  ss.pdf
+
+===== ss_seat_and_judgment.txt
+PhysOSᵀ 1.0.5p · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 a4108cd26bcbe6ef, the files that ran
+GROUND toolchain: Lean 4.19.0 and gfortran present · manifest: 31 files signed, all verified · proofs: 2 PhysOS Proofs read from II.10, record lines complete · source screen: 15 kernels, 23 named premises, clean · citations: 253 laws named in Parts I and II, 253 resolved · quarantine: 6 retirements string-scanned, 3 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB One_Cut_Resolution 0 · registerB One_Cut_Terminal 0 · registerB Only_The_Arrow_Remains 0 · registerB Physical_Closure 0 · registerB Forced_Closure 0 · registerB Closure_Executed 0 · registerB Armed_Seat 0 · registerB Census 0 · registerB Heat_Bridge 0 · registerB The_Loop 0 · registerB RH_Least_Erasure 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0 · witness Census_Twin 0 · witness Loop_Twin 0 · witness RH_Seal_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 5 of 5 twins ran, each held to one battery line with zero failures
+CHAIN · D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+ELAPSED ground 1 s · Register A 3 s · Register B 34 s · witness 6 s · total 44 s (not hashed)
+SEAT EARNED · this run
+
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 69
+JUDGMENT refused 69 of 69 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+
+===== ss_kernel_run.txt
+'SPHYS.SpinStatistics.pe' does not depend on any axioms
+'SPHYS.SpinStatistics.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.reg_lands' does not depend on any axioms
+'SPHYS.SpinStatistics.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.SpinStatistics.reg_forgets_side' does not depend on any axioms
+'SPHYS.SpinStatistics.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.SpinStatistics.equivariant_id' does not depend on any axioms
+'SPHYS.SpinStatistics.equivariant_comp' does not depend on any axioms
+'SPHYS.SpinStatistics.fix_functorial' does not depend on any axioms
+'SPHYS.SpinStatistics.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.value_on_image' does not depend on any axioms
+'SPHYS.SpinStatistics.kinetic_crossing' does not depend on any axioms
+'SPHYS.SpinStatistics.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.ee' does not depend on any axioms
+'SPHYS.SpinStatistics.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.SpinStatistics.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.measured_on_line' does not depend on any axioms
+'SPHYS.SpinStatistics.no_measurement_off_line' does not depend on any axioms
+'SPHYS.SpinStatistics.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.bar_involutive' does not depend on any axioms
+'SPHYS.SpinStatistics.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.SpinStatistics.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.SpinStatistics.involutions_commute' does not depend on any axioms
+'SPHYS.SpinStatistics.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.pair_lands_once' does not depend on any axioms
+'SPHYS.SpinStatistics.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.pair_on_the_edges' does not depend on any axioms
+'SPHYS.SpinStatistics.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.swap_involutive' does not depend on any axioms
+'SPHYS.SpinStatistics.exchange_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.symmetric_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.exchange_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.antisymmetric_at_height_zero' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.exchange_two_worlds' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.pauli_exclusion' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.slater_vanishes_on_diagonal' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.bosons_may_share' depends on axioms: [propext]
+'SPHYS.SpinStatistics.fermion_occupation_is_a_bit' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.qext' depends on axioms: [propext]
+'SPHYS.SpinStatistics.qmul_neg_left' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.qmul_neg_right' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.qconj_neg' does not depend on any axioms
+'SPHYS.SpinStatistics.qneg_neg' depends on axioms: [propext]
+'SPHYS.SpinStatistics.qmul_one_left' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.the_return' does not depend on any axioms
+'SPHYS.SpinStatistics.full_turn_negates_spinors' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.full_turn_fixes_vectors' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.two_turns_are_identity' does not depend on any axioms
+'SPHYS.SpinStatistics.double_cover_two_to_one' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.turnSign_val' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.half_integer_spin_is_odd' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.statistics_one_bit' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.anyon_needs_the_plane' does not depend on any axioms
+'SPHYS.SpinStatistics.bosons_bunch_fermions_part' does not depend on any axioms
+'SPHYS.SpinStatistics.statistics_unread_by_one_body' does not depend on any axioms
+'SPHYS.SpinStatistics.spin_and_statistics_on_the_seat' depends on axioms: [propext, Quot.sound]
+
+===== ss_twin_run.txt
+A · the exchange is the fold: bosons on the line, fermions at height zero
+  PASS  equivariance on 3721 pair amplitudes: the exchange is the fold
+  PASS  a pair amplitude is on the line exactly when it is symmetric (3721)
+  PASS  antisymmetric amplitudes stand at height zero, off the line unless zero (61)
+  PASS  a pair and its exchange share one record (3660 unsymmetric pairs)
+B · Pauli exclusion: the odd amplitude is blind on the diagonal; the occupation is a bit
+  PASS  1000 random antisymmetric amplitudes vanish exactly on every diagonal entry
+  PASS  1000 random Slater amplitudes f(a)g(b) - f(b)g(a) vanish at a = b
+  PASS  an occupation equal to its own square is 0 or 1 (101 of 101)
+C · the Return: a full turn is -1 on spinors, +1 on vectors; the cover is two to one
+  full turn: |q - (-1)| <=  1.22E-16;  vectors return to  2.22E-16;  spinors to -psi within  1.11E-16
+  PASS  a full turn about 1000 random axes is -1 on spinors and the identity on vectors
+  PASS  two full turns are the identity, and q and -q rotate every vector alike (1000)
+D · statistics is one bit in three dimensions; the anyon needs the plane
+  exchange phases on a grid of 3600 whose square is the identity: 2 (0 and pi)
+  PASS  only the phases +1 and -1 square to the identity
+  PASS  the fractional phase pi/3 of the nu = 1/3 anyon does not square to the identity
+E · the record reads the bit: bosons bunch, fermions part
+  PASS  at a balanced splitter, full overlap: bosons never coincide, fermions always do
+  one thermal mode at mean occupation 0.3: Bose g2 =  2.000000;  Fermi g2 =  0.000000
+  PASS  a thermal Bose mode bunches, g2 = 2 (helium-4), and a Fermi mode antibunches, g2 = 0 (helium-3)
+F · the periodic table from the bit: two states per orbital, one per state
+  shell closures from the Madelung order:     2   10   18   36   54   86  118
+  PASS  the noble gases stand at 2, 10, 18, 36, 54, 86, 118
+G · degeneracy: the fermion bit holds a white dwarf up to Chandrasekhar's mass
+  Chandrasekhar mass for mu_e = 2:  1.434 solar masses
+  PASS  the degenerate-electron limit is 1.43 solar masses (ideal, mu_e = 2)
+H · condensation: the boson bit, London's estimate for helium-4
+  ideal Bose gas at liquid-helium density: T_c =  3.134 K (the lambda point is 2.17 K)
+  PASS  London's ideal-gas temperature is 3.13 K, the scale of the lambda transition
+I · spin and statistics on the table: the turn sign is the exchange sign
+  PASS  twelve particles and atoms: half-integer spin exactly when an odd number of fermions
+ BATTERY-JSON: {"checks":17,"failures":0}
