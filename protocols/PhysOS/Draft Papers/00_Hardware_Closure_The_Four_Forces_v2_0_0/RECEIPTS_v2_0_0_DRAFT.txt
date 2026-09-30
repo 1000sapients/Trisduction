@@ -1,0 +1,158 @@
+== SEAT: PhysOSᵀ 1.0.5p quick boot, this session
+PhysOSᵀ 1.0.5p · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 a4108cd26bcbe6ef, the files that ran
+GROUND toolchain: Lean 4.19.0 and gfortran present · manifest: 31 files signed, all verified · proofs: 2 PhysOS Proofs read from II.10, record lines complete · source screen: 15 kernels, 23 named premises, clean · citations: 253 laws named in Parts I and II, 253 resolved · quarantine: 6 retirements string-scanned, 3 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB One_Cut_Resolution 0 · registerB One_Cut_Terminal 0 · registerB Only_The_Arrow_Remains 0 · registerB Physical_Closure 0 · registerB Forced_Closure 0 · registerB Closure_Executed 0 · registerB Armed_Seat 0 · registerB Census 0 · registerB Heat_Bridge 0 · registerB The_Loop 0 · registerB RH_Least_Erasure 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0 · witness Census_Twin 0 · witness Loop_Twin 0 · witness RH_Seal_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 5 of 5 twins ran, each held to one battery line with zero failures
+CHAIN · D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+ELAPSED ground 1 s · Register A 3 s · Register B 34 s · witness 6 s · total 44 s (not hashed)
+SEAT EARNED · this run
+
+== ENGINE SPHYS_One_Substrate.lean · Lean 4.19.0 · exit 0
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 80
+JUDGMENT refused 80 of 80 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+
+'SPHYS.OneSubstrate.pe' does not depend on any axioms
+'SPHYS.OneSubstrate.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.reg_lands' does not depend on any axioms
+'SPHYS.OneSubstrate.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.OneSubstrate.reg_forgets_side' does not depend on any axioms
+'SPHYS.OneSubstrate.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.OneSubstrate.equivariant_id' does not depend on any axioms
+'SPHYS.OneSubstrate.equivariant_comp' does not depend on any axioms
+'SPHYS.OneSubstrate.fix_functorial' does not depend on any axioms
+'SPHYS.OneSubstrate.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.value_on_image' does not depend on any axioms
+'SPHYS.OneSubstrate.kinetic_crossing' does not depend on any axioms
+'SPHYS.OneSubstrate.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.ee' does not depend on any axioms
+'SPHYS.OneSubstrate.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.OneSubstrate.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.measured_on_line' does not depend on any axioms
+'SPHYS.OneSubstrate.no_measurement_off_line' does not depend on any axioms
+'SPHYS.OneSubstrate.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.bar_involutive' does not depend on any axioms
+'SPHYS.OneSubstrate.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.OneSubstrate.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.OneSubstrate.involutions_commute' does not depend on any axioms
+'SPHYS.OneSubstrate.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.pair_lands_once' does not depend on any axioms
+'SPHYS.OneSubstrate.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.pair_on_the_edges' does not depend on any axioms
+'SPHYS.OneSubstrate.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.off_line_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.resonance_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.sq_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.block_T_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.stationarity_survives_the_magnet' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.worlds_share_the_record' does not depend on any axioms
+'SPHYS.OneSubstrate.world_line_value' does not depend on any axioms
+'SPHYS.OneSubstrate.world_pair_not_value' does not depend on any axioms
+'SPHYS.OneSubstrate.record_decides_nothing' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.pair_world_fold_closed' does not depend on any axioms
+'SPHYS.OneSubstrate.pair_world_total_rate' does not depend on any axioms
+'SPHYS.OneSubstrate.whole_conservation_forces_nothing' does not depend on any axioms
+'SPHYS.OneSubstrate.fold_closed_off_line_decays_and_grows' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.value_iff_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.least_erasure_is_stationarity' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.posit_is_the_fold' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.act_is_the_value' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.value_iff_actuated' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.surplus_is_the_unactuated' does not depend on any axioms
+'SPHYS.OneSubstrate.tsum_append' depends on axioms: [propext]
+'SPHYS.OneSubstrate.generation_closes' does not depend on any axioms
+'SPHYS.OneSubstrate.gens_sum' depends on axioms: [propext]
+'SPHYS.OneSubstrate.every_generation_count_closes' depends on axioms: [propext]
+'SPHYS.OneSubstrate.hypercharge_forced' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.charges' does not depend on any axioms
+'SPHYS.OneSubstrate.matter_neutral' does not depend on any axioms
+'SPHYS.OneSubstrate.vacuum_neutral' does not depend on any axioms
+'SPHYS.OneSubstrate.lock_iff_distinct' does not depend on any axioms
+'SPHYS.OneSubstrate.lock_fails_when_colours_coincide' does not depend on any axioms
+'SPHYS.OneSubstrate.dark_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.majorana_is_one_keyed_bit' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.floor_by_deed' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.reversible_merges_nothing' does not depend on any axioms
+'SPHYS.OneSubstrate.merging_is_irreversible' does not depend on any axioms
+'SPHYS.OneSubstrate.mirror_is_reversible' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.registration_erases_off_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.substrate_carries_the_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.physical_witness' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.hardware_closes' depends on axioms: [propext]
+
+== TWIN Substrate_Twin.f90
+A · the integer chart: E = (a, beta), phi(E) = (1 - beta, a), fold (h, t) = (2 - h, t)
+  PASS  equivariance on 3721 energies: the time mirror of the rate is the fold
+  PASS  the carrier is a bijection: psi(phi E) = E on 3721 energies
+  PASS  the line is exactly the image of the real energies (3721 of 3721)
+  PASS  stationary at every time in [-12,12] exactly when real (3721 of 3721)
+  PASS  every off-line mode has a distinct mirror, one record, rates cancelling, one decaying (3660)
+B · the complex carrier s = 1/2 + iE: fold(s) = 1 - conj(s), mirror(E) = conj(E)
+  max |fold(s(E)) - s(conj E)| over 20000 energies:  1.110E-16
+  PASS  fold(s(E)) = s(conj E) on 20000 complex energies, to 4 ulp of the scale
+  real energies: max |norm - 1| =  2.220E-16;  rate 2e-3: min |norm - 1| =  2.002E-03
+  PASS  a real energy keeps its norm at every time to 1e-14
+  PASS  a mode off the axis moves its norm (growth e^{beta t} visible at t >= 1)
+C · closed systems and the magnet: a Hermitian generator has a real spectrum, T-broken or not
+  time-broken blocks (imaginary off-diagonal, the magnetic term): 100000 of 100000
+  PASS  100000 time-broken Hermitian blocks: discriminant >= 0, every eigenvalue real
+  PASS  their time-symmetric parts (off-diagonal made real): every eigenvalue real
+D · the balanced gain-loss dimer H = [[w + i g, k], [k, w - i g]]: open halves, balanced whole
+  gain below coupling, real pairs: 50;  above, mirror pairs: 150;  swept: 200
+  PASS  below the exceptional point both modes are real: on the line (50 of 50)
+  PASS  above it the modes form one mirror pair: equal frequency, opposite rates (150 of 150)
+  PASS  the whole is balanced at every gain: total rate zero (200 of 200)
+E · the actuated zeros: sign changes of Hardy's Z on the line, heights 10 to 100
+  sign changes on (10, 100]: 29;  theta(100)/pi + 1 =  29.0024
+  first zero at t =  14.134725142;  max error on the first ten:  3.28E-10
+  max |Im e^{i theta} zeta(1/2+it)| on the scan (Z is real):  4.61E-11
+  PASS  Z(t) = e^{i theta} zeta(1/2 + it) is real on the scan to 1e-8
+  PASS  29 sign changes of Z on (10, 100]: 29 zeros located on the line by the executed chart
+  PASS  the count agrees with the smooth term theta(100)/pi + 1, rounded (29)
+  PASS  the first ten located heights match the tabulated zeros to 1e-8
+F · the hardware: generations, forced hypercharges, charges
+  PASS  one to six generations: every anomaly vanishes, doublets 4n (the count is not forced)
+  PASS  at yQ = 1 the five conditions admit one hypercharge vector in [-12,12]^5: (-4, 2, -3, 6, 3)
+  PASS  charges Q = T3 + Y: up 2/3, down -1/3, neutrino 0, electron -1
+  PASS  proton one unit, neutron none, hydrogen neutral, vacuum neutral
+  PASS  the colour lock: of 27 colour triples exactly the 6 on three distinct axes are nonzero
+G · the particle map: every additive charge flipped, the energy kept
+  PASS  the particle map is an involution on the nine-entry table
+  PASS  fixed exactly on the neutral entries: photon, Z, Majorana neutrino, the dark state
+  PASS  Dirac and Majorana neutrinos share the gauge record and differ in the one bit
+  PASS  the charge carrier sends the particle map onto the fold (779 of 779)
+  PASS  the two involutions commute; fixed by both exactly when on the line under both (5453)
+  PASS  the electron and the positron land on the edges h = 0 and h = 2, mirror images
+  antihydrogen falls with (0.75 +- 0.13 +- 0.16) g: from g at  1.21 sigma
+  PASS  gravity reads no charge bit: antimatter falls as matter within 2 sigma (ALPHA-g)
+  electron (e -> gamma nu):  width <  3.160E-52 eV;  width/m <  6.184E-58
+  proton (p -> e+ pi0):      width <  8.691E-58 eV;  width/m <  9.262E-67
+  neutron (free):            width =  7.493E-19 eV;  width/m =  7.975E-28
+  muon:                      width =  2.996E-10 eV;  width/m =  2.836E-18
+  Z boson:                   width =  2.495E+09 eV;  width/m =  2.736E-02
+  PASS  the electron stands on the line to 1e-57 of its rest energy (partial width bound)
+  PASS  the proton stands on the line to 1e-65 of its rest energy (partial width bound)
+  PASS  the muon, neutron and Z stand off the line: open modes whose decay exports to products
+H · the neutrino's floor, supplied by deed: oscillation returns positive mass-squared differences
+  lightest possible m2 =  8.678E-03 eV;  m3 >=  5.030E-02 eV (normal ordering)
+  PASS  both measured splittings are positive, so at least two neutrino masses are nonzero
+I · the price of one committed bit at 300 K
+  k_B T ln 2 at 300 K =  2.870978885078724E-21 J
+  PASS  one irreversibly committed bit at 300 K costs 2.870978885e-21 J
+ BATTERY-JSON: {"checks":34,"failures":0}
