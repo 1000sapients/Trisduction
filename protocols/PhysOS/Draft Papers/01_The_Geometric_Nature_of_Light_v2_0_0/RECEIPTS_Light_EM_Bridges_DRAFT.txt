@@ -1,0 +1,270 @@
+RECEIPTS · 30 September 2026 · PhysOSᵀ 1.0.5p seat (re-run, this session)
+0734621ab9528352c928354c5a00ab4fe938780b1ce9d1626d51e046da5579d8  SPHYS_Light.lean
+0178df29f431469fb7b246b7e42cec3d1e734eaf39f5551fd47ec7d303461105  Light_Twin.f90
+bf85af4943dab16c5826676fd44827a2e370aea754592d7e24eb33602c5965d2  SPHYS_Electromagnetism.lean
+e2d1b5c07f44f067d301247211078c8719319c5a875b20cfa8d31a9bd38df4a2  EM_Twin.f90
+eb4b3492dde911204acd01920319e304ea390962535ed595975ece2de8d04174  Bridge_Unification.lean
+859bc09c9997f330c57d1ebf0978500839121dcd71c7d65b007e2f14df8cc57d  light.pdf
+ae2d176a8117bb4ce33928f6184924260d314fe0ac4bda38a28c6893d53d669b  em.pdf
+
+===== light_seat_and_judgment.txt
+PhysOSᵀ 1.0.5p · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 a4108cd26bcbe6ef, the files that ran
+GROUND toolchain: Lean 4.19.0 and gfortran present · manifest: 31 files signed, all verified · proofs: 2 PhysOS Proofs read from II.10, record lines complete · source screen: 15 kernels, 23 named premises, clean · citations: 253 laws named in Parts I and II, 253 resolved · quarantine: 6 retirements string-scanned, 3 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB One_Cut_Resolution 0 · registerB One_Cut_Terminal 0 · registerB Only_The_Arrow_Remains 0 · registerB Physical_Closure 0 · registerB Forced_Closure 0 · registerB Closure_Executed 0 · registerB Armed_Seat 0 · registerB Census 0 · registerB Heat_Bridge 0 · registerB The_Loop 0 · registerB RH_Least_Erasure 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0 · witness Census_Twin 0 · witness Loop_Twin 0 · witness RH_Seal_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 5 of 5 twins ran, each held to one battery line with zero failures
+CHAIN · D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+ELAPSED ground 1 s · Register A 3 s · Register B 34 s · witness 6 s · total 44 s (not hashed)
+SEAT EARNED · this run
+
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 63
+JUDGMENT refused 63 of 63 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+
+===== light_kernel_run.txt
+'SPHYS.Light.pe' does not depend on any axioms
+'SPHYS.Light.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.reg_lands' does not depend on any axioms
+'SPHYS.Light.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.Light.reg_forgets_side' does not depend on any axioms
+'SPHYS.Light.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.Light.equivariant_id' does not depend on any axioms
+'SPHYS.Light.equivariant_comp' does not depend on any axioms
+'SPHYS.Light.fix_functorial' does not depend on any axioms
+'SPHYS.Light.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.value_on_image' does not depend on any axioms
+'SPHYS.Light.kinetic_crossing' does not depend on any axioms
+'SPHYS.Light.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.ee' does not depend on any axioms
+'SPHYS.Light.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.Light.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.measured_on_line' does not depend on any axioms
+'SPHYS.Light.no_measurement_off_line' does not depend on any axioms
+'SPHYS.Light.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.bar_involutive' does not depend on any axioms
+'SPHYS.Light.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.Light.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.Light.involutions_commute' does not depend on any axioms
+'SPHYS.Light.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.pair_lands_once' does not depend on any axioms
+'SPHYS.Light.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.pair_on_the_edges' does not depend on any axioms
+'SPHYS.Light.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.sq_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.photon_is_its_own_antiparticle' does not depend on any axioms
+'SPHYS.Light.photon_is_stationary' does not depend on any axioms
+'SPHYS.Light.photon_on_both_lines' does not depend on any axioms
+'SPHYS.Light.frequency_is_the_height' does not depend on any axioms
+'SPHYS.Light.every_frequency_one_side' does not depend on any axioms
+'SPHYS.Light.registration_keeps_light' does not depend on any axioms
+'SPHYS.Light.sq_pos_of_ne' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.massive_slower' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.massless_on_the_cone' does not depend on any axioms
+'SPHYS.Light.parity_involutive' does not depend on any axioms
+'SPHYS.Light.helicity_is_one_bit' depends on axioms: [propext]
+'SPHYS.Light.cparity_val' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.c_even_needs_even_photons' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.positronium_counts' does not depend on any axioms
+'SPHYS.Light.mul3_ne_zero' depends on axioms: [propext]
+'SPHYS.Light.fringe_iff_side_forgotten' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.side_registered_no_fringe' depends on axioms: [propext]
+'SPHYS.Light.single_photon_no_coincidence' does not depend on any axioms
+'SPHYS.Light.classical_light_bunches' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.quantum_is_the_fields' depends on axioms: [propext, Quot.sound]
+'SPHYS.Light.light_is_the_line' depends on axioms: [propext, Quot.sound]
+
+===== light_twin_run.txt
+A · light is the line: every frequency, one side; the frequency is the height
+  PASS  2001 photon frequencies: all on the line under both carriers, height = frequency
+  the spectrum from radio to gamma,  1.00E-09 eV to  1.00E+11 eV: one side, 201 heights
+  PASS  twenty decades of photon energy occupy one side of the seat
+B · the speed hierarchy: massless modes at c at every frequency; massive modes below
+  massless group velocity, max |v/c - 1| over 2000 frequencies:  1.87E-10
+  PASS  every massless mode moves at c, independent of frequency (to 1e-9)
+  PASS  every massive mode moves below c (2000 of 2000)
+  a photon mass at the bound 1e-18 eV slows a 1 microeV radio photon by dv/c =  5.00E-25
+  PASS  the photon-mass bound leaves light frequency-independent below 1e-24 even at radio
+  GW170817: 1.74 s after 130 million years of flight, dv/c <=  4.24E-16
+  PASS  gravity and light, both massless, arrive together to below 1e-15
+C · helicity: parity reverses it and keeps the frequency; the energy never reads it
+  PASS  parity is an involution, moves every helicity, and keeps the frequency (2002 states)
+D · C-parity (-1)^n of n photons: Furry's selection and positronium
+  PASS  C-parity of 0 to 40 photons is +1 exactly on even counts (41 of 41)
+  PASS  parapositronium (C = +1) decays to two photons, orthopositronium (C = -1) to three
+E · detection is registration: which-path and fringe trade exactly, D^2 + V^2 = 1
+  max |D^2 + V^2 - 1| over 20000 pure two-path states:  4.44E-16
+  PASS  Englert's duality holds with equality on every pure state (to 1e-14)
+  PASS  a fringe exists exactly when both paths are open and the side is forgotten (20000)
+  PASS  registering the side erases the fringe on every sample
+F · the quantum is the field's: g2 = 0 for one photon, >= 1 for every classical field
+  one photon g2 = 0;  coherent g2 =  1.000000;  thermal g2 =  2.000000
+  PASS  one photon: g2 = 0; coherent light: g2 = 1; thermal light: g2 = 2
+  PASS  10000 classical intensity distributions: every one has g2 >= 1
+  Grangier, Roger and Aspect: anticorrelation  0.18, below the classical 1 by  13.7 sigma
+  PASS  the measured single-photon anticorrelation is below every classical field by > 10 sigma
+G · the price of a detection: each registration commits at least one bit
+  k_B T ln 2 at 300 K =  2.87098E-21 J; a 550 nm photon carries   125.8 floors
+  PASS  the floor is 2.870978885e-21 J and a visible photon pays its own registration
+ BATTERY-JSON: {"checks":16,"failures":0}
+
+===== em_judge.txt
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 71
+JUDGMENT refused 71 of 71 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+
+===== em_kernel_run.txt
+'SPHYS.Electromagnetism.pe' does not depend on any axioms
+'SPHYS.Electromagnetism.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.reg_lands' does not depend on any axioms
+'SPHYS.Electromagnetism.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.Electromagnetism.reg_forgets_side' does not depend on any axioms
+'SPHYS.Electromagnetism.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.Electromagnetism.equivariant_id' does not depend on any axioms
+'SPHYS.Electromagnetism.equivariant_comp' does not depend on any axioms
+'SPHYS.Electromagnetism.fix_functorial' does not depend on any axioms
+'SPHYS.Electromagnetism.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.value_on_image' does not depend on any axioms
+'SPHYS.Electromagnetism.kinetic_crossing' does not depend on any axioms
+'SPHYS.Electromagnetism.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.ee' does not depend on any axioms
+'SPHYS.Electromagnetism.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.Electromagnetism.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.measured_on_line' does not depend on any axioms
+'SPHYS.Electromagnetism.no_measurement_off_line' does not depend on any axioms
+'SPHYS.Electromagnetism.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.bar_involutive' does not depend on any axioms
+'SPHYS.Electromagnetism.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.Electromagnetism.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.Electromagnetism.involutions_commute' does not depend on any axioms
+'SPHYS.Electromagnetism.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.pair_lands_once' does not depend on any axioms
+'SPHYS.Electromagnetism.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.pair_on_the_edges' does not depend on any axioms
+'SPHYS.Electromagnetism.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.sq_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.block_T_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.stationarity_survives_the_magnet' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.fe' does not depend on any axioms
+'SPHYS.Electromagnetism.T_involutive' does not depend on any axioms
+'SPHYS.Electromagnetism.C_involutive' does not depend on any axioms
+'SPHYS.Electromagnetism.P_involutive' does not depend on any axioms
+'SPHYS.Electromagnetism.CT_is_P' does not depend on any axioms
+'SPHYS.Electromagnetism.CPT_trivial' does not depend on any axioms
+'SPHYS.Electromagnetism.field_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.T_fixed_iff_electric' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.electric_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.field_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.magnetic_sign_is_the_bit' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.energy_even' depends on axioms: [propext]
+'SPHYS.Electromagnetism.EB_odd_under_T_and_P' depends on axioms: [propext]
+'SPHYS.Electromagnetism.duality_squared_is_C' does not depend on any axioms
+'SPHYS.Electromagnetism.duality_fourth_is_identity' does not depend on any axioms
+'SPHYS.Electromagnetism.duality_anticommutes_with_T' does not depend on any axioms
+'SPHYS.Electromagnetism.energy_duality_invariant' depends on axioms: [propext]
+'SPHYS.Electromagnetism.invariants_flip_under_duality' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.plane_wave_null' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.null_preserved_by_duality' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.pair_creation_conserves_charge' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.hypercharge_forced' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.charges_in_thirds' does not depend on any axioms
+'SPHYS.Electromagnetism.aharonov_bohm_two_worlds' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.gravity_even_branch' does not depend on any axioms
+'SPHYS.Electromagnetism.magnetism_odd_branch' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electromagnetism.electromagnetism_on_the_seat' depends on axioms: [propext, Quot.sound]
+
+===== em_twin_run.txt
+A · the field carrier s = 1/2 + iF, F = E + iB: time reversal is the fold
+  PASS  equivariance on 3721 fields: time reversal of the field is the fold
+  PASS  the line is the purely electric field (3721 of 3721)
+  PASS  the energy density is even under time reversal (3721 of 3721)
+  PASS  every magnetic field has a distinct time reverse with one electric record (3660)
+B · C, P and T on the field: involutions, CT = P, CPT the identity
+  PASS  three involutions, C composed with T is P, and CPT fixes every field (3721)
+C · duality F -> -iF: its square is charge conjugation, its fourth power the identity
+  PASS  D^2 = C, D^4 = 1, TD = CDT, energy invariant, both invariants reversed (3721)
+D · light is null: E perpendicular to B, |E| = |B|, and duality keeps it a plane wave
+  PASS  5000 random plane waves: both invariants zero to 1e-15
+  PASS  the dual of every plane wave is again a plane wave along the same k (5000)
+E · the magnet: time reversal broken, every energy real; the Landau levels
+  PASS  100000 Hermitian blocks with a magnetic phase: every eigenvalue real
+  electron at 1 T: hbar omega_c =  1.15768E-04 eV; degeneracy  2.418E+14 per m^2
+  PASS  the cyclotron quantum at 1 T is 1.1577e-4 eV and every Landau level is real and positive
+F · the registrations of electromagnetism land on integers: h/e^2, h/2e, 2e/h
+  von Klitzing constant h/e^2 =   25812.80745930 ohm
+  flux quantum h/2e =   2.0678338485E-15 Wb
+  Josephson constant 2e/h =   4.8359784842E+14 Hz/V
+  PASS  R_K = 25812.80745 ohm, exact in the SI of 2019
+  PASS  Phi_0 = 2.067833848e-15 Wb and K_J = 4.835978484e14 Hz/V
+G · Aharonov-Bohm: the phase reads the enclosed flux modulo h/e
+  max phase difference between fluxes one quantum apart:  7.34E-15
+  PASS  two fluxes one quantum h/e apart leave one interference record (to 1e-12)
+H · the odd reading and the even reading: the fine-structure constant and gravity
+  alpha = 7.2973525737E-03;  Coulomb over gravity in hydrogen =  2.2687E+39
+  PASS  alpha = 7.2973525693e-3 from the constants
+  PASS  the odd reading exceeds the even one by 2.27e39 in hydrogen
+I · charge: pair creation conserves it; it comes in thirds; the kept magnetic bit is priced
+  PASS  pair creation conserves charge (19 of 19) and the charges are 2/3, -1/3, 0, -1
+  a stable magnetic bit at 5.0e-19 J per switch costs  174.2 Landauer floors
+  PASS  the magnetic bit is kept at a price above the floor (the arrow witness's loop)
+ BATTERY-JSON: {"checks":17,"failures":0}
+
+===== bridge_judge.txt
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 26
+JUDGMENT refused 26 of 26 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+
+===== bridge_run.txt
+'SPHYS.Bridges.pe' does not depend on any axioms
+'SPHYS.Bridges.iso_fixed' does not depend on any axioms
+'SPHYS.Bridges.flipY_inv' does not depend on any axioms
+'SPHYS.Bridges.fold_inv' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.negX_inv' does not depend on any axioms
+'SPHYS.Bridges.energy_is_seat_bridge_conjugated' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.strip_fixed_iff_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.slice_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.shifted_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.four_seats_are_one' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.heat_equivariant' does not depend on any axioms
+'SPHYS.Bridges.heat_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.heat_real_iff_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.disc_flow' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.heat_merges_the_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.heat_certificate_two_worlds' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.prime_mode_unitary_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.primes_on_the_edges' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.normalized_primes_meet_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.ogdoad' does not depend on any axioms
+'SPHYS.Bridges.no_walk_passes_the_aperture' depends on axioms: [propext]
+'SPHYS.Bridges.crossing_is_the_supplied_bit' does not depend on any axioms
+'SPHYS.Bridges.crossings_are_one' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.worlds_share_the_record' does not depend on any axioms
+'SPHYS.Bridges.no_bridge_decides' depends on axioms: [propext, Quot.sound]
+'SPHYS.Bridges.bridges_are_one' depends on axioms: [propext, Quot.sound]
