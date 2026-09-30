@@ -1,0 +1,108 @@
+RECEIPTS · Weak v1.0.0 · 30 September 2026 · PhysOSᵀ 1.0.5p seat (re-run, this session)
+98ffbd3dd30cd2e3b77a1ef175a131a85d6eb152b77af073cbba1026bf8912c9  SPHYS_Weak.lean
+6ba4aee26d599ac5a5db07daf9d0dca630f0e26cb7552928a016bc5509f4832b  Weak_Twin.f90
+85731e3899765de3d0c40e4fb8696c67b9e9b0c013a0d48527956eba30695de3  weak.pdf
+
+===== weak_seat_and_judgment.txt
+PhysOSᵀ 1.0.5p · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 a4108cd26bcbe6ef, the files that ran
+GROUND toolchain: Lean 4.19.0 and gfortran present · manifest: 31 files signed, all verified · proofs: 2 PhysOS Proofs read from II.10, record lines complete · source screen: 15 kernels, 23 named premises, clean · citations: 253 laws named in Parts I and II, 253 resolved · quarantine: 6 retirements string-scanned, 3 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB One_Cut_Resolution 0 · registerB One_Cut_Terminal 0 · registerB Only_The_Arrow_Remains 0 · registerB Physical_Closure 0 · registerB Forced_Closure 0 · registerB Closure_Executed 0 · registerB Armed_Seat 0 · registerB Census 0 · registerB Heat_Bridge 0 · registerB The_Loop 0 · registerB RH_Least_Erasure 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0 · witness Census_Twin 0 · witness Loop_Twin 0 · witness RH_Seal_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 5 of 5 twins ran, each held to one battery line with zero failures
+CHAIN · D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+ELAPSED ground 1 s · Register A 3 s · Register B 34 s · witness 6 s · total 44 s (not hashed)
+SEAT EARNED · this run
+
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 59
+JUDGMENT refused 59 of 59 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+
+===== weak_kernel_run.txt
+'SPHYS.Weak.pe' does not depend on any axioms
+'SPHYS.Weak.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.reg_lands' does not depend on any axioms
+'SPHYS.Weak.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.Weak.reg_forgets_side' does not depend on any axioms
+'SPHYS.Weak.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.Weak.equivariant_id' does not depend on any axioms
+'SPHYS.Weak.equivariant_comp' does not depend on any axioms
+'SPHYS.Weak.fix_functorial' does not depend on any axioms
+'SPHYS.Weak.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.value_on_image' does not depend on any axioms
+'SPHYS.Weak.kinetic_crossing' does not depend on any axioms
+'SPHYS.Weak.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.ee' does not depend on any axioms
+'SPHYS.Weak.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.Weak.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.measured_on_line' does not depend on any axioms
+'SPHYS.Weak.no_measurement_off_line' does not depend on any axioms
+'SPHYS.Weak.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.bar_involutive' does not depend on any axioms
+'SPHYS.Weak.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.Weak.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.Weak.involutions_commute' does not depend on any axioms
+'SPHYS.Weak.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.pair_lands_once' does not depend on any axioms
+'SPHYS.Weak.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.pair_on_the_edges' does not depend on any axioms
+'SPHYS.Weak.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.parity_involutive' does not depend on any axioms
+'SPHYS.Weak.orientation_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.vector_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.orientation_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.photon_coupling_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.charged_current_off_the_line' does not depend on any axioms
+'SPHYS.Weak.z_parity_depth_is_isospin' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.neutrino_has_no_right_hand' depends on axioms: [propext]
+'SPHYS.Weak.dot_products_blind' depends on axioms: [propext]
+'SPHYS.Weak.triple_product_reads_orientation' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.spin_momentum_correlation_odd' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.even_readings_blind_to_mirror' does not depend on any axioms
+'SPHYS.Weak.weak_breaks_C_and_P_keeps_CP' does not depend on any axioms
+'SPHYS.Weak.cp_violation_is_t_violation' does not depend on any axioms
+'SPHYS.Weak.one_phase_at_three' does not depend on any axioms
+'SPHYS.Weak.three_is_the_least' depends on axioms: [propext, Quot.sound]
+'SPHYS.Weak.electron_channel_suppressed' does not depend on any axioms
+'SPHYS.Weak.weak_reads_the_orientation' depends on axioms: [propext, Quot.sound]
+
+===== weak_twin_run.txt
+A · parity is the fold on couplings: vector couplings on the line, the charged current off it
+  PASS  equivariance on 3721 couplings: parity is the fold
+  PASS  a coupling is on the line exactly when it treats both hands alike (3721)
+  PASS  the Z's left-right difference is the weak isospin at every charge and mixing weight (1071)
+B · the mirror: every dot product is blind, every triple product reverses
+  PASS  5000 random triples: dot products unchanged by the mirror, exactly
+  PASS  5000 random triples: the triple product reversed by the mirror, exactly
+C · the charged current: left-handed particles and right-handed antiparticles
+  PASS  C moves the coupling on every state, P on every state, CP on none (4 states each)
+D · the mixing matrix: unitary, one phase at three generations, J = 3.1e-5
+  |V V* - 1| <=  1.11E-16;  Jarlskog invariant J =  3.1170E-05
+  PASS  the three-generation mixing matrix is unitary to 1e-15
+  PASS  its one phase gives J = 3.1e-5, the measure of CP violation in quarks
+  PASS  physical phases (n-1)(n-2)/2 for n = 1..6 are 0, 0, 1, 3, 6, 10: none below three
+E · helicity suppression: the pion decays to the muon, not the electron
+  Gamma(e nu)/Gamma(mu nu) at tree level =  1.2833E-04  (phase space alone:  5.487)
+  PASS  the left-handed coupling suppresses the electron channel to 1.28e-4, measured 1.2327e-4
+F · the other forces do not read the orientation: the neutron's electric dipole
+  neutron EDM <  1.80E-26 e cm; the weak force alone induces about  1.00E-32 e cm
+  PASS  no time- and parity-odd reading beyond the weak force is seen: the bound sits 6 orders above it
+G · the Z reads each fermion's orientation by its isospin: A_f = 2 gV gA / (gV^2 + gA^2)
+  neutrino  1.0000;  charged lepton  0.1470;  up-type  0.6675;  down-type  0.9355
+  PASS  the neutrino is purely left-handed to the Z: A = 1 exactly
+  PASS  lepton, charm and bottom asymmetries 0.147, 0.668, 0.936 against measured 0.1513, 0.670, 0.923
+ BATTERY-JSON: {"checks":13,"failures":0}
