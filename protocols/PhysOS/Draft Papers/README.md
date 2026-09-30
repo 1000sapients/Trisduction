@@ -17,3 +17,5 @@ Forged under PhysOSᵀ 1.0.5p (seat earned in session, chain D0 83f872725ad9 →
 - `98_Toolchain/`: build.py, mathjournal_1col.tex, judge_kernel.py with os_check.py, and the seat's boot receipt.
 
 The series manifest with per-file sizes and hashes is `MANIFEST_DRAFT.md`.
+
+The whole folder is also filed as one archive, `Hardware_Physical_Witness_Bundle_2026-09-30_DRAFT.zip`, holding the same papers, engines, twins, receipts and toolchain, for filing on demand. It is a draft like everything here.
