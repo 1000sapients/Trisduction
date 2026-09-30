@@ -3657,6 +3657,40 @@ theorem double_defense_hardened :
     (∃ Z : World, FoldClosed Z ∧ ¬ LeastErasure Z)) :=
   ⟨least_erasure_is_the_value, rh_from_the_act, socket_is_the_value, forces_or_has_a_twin, rh_is_the_weakest_forcing_premise, rejection_is_a_witness, keyless_forces_nothing, record_decides_nothing, certified_height_never_forces, no_coalition_decides, root_does_not_cross_the_line, root_does_not_cross_the_denial, price_zero_iff_least_erasure, landauer_floor_exact, least_erasure_reads_past_the_record, double_security⟩
 
+/-! ## XXVI · The atomic witness
+
+A witness with its check is an atomic proof of the existential it witnesses. The paper, its readings, its push and its
+author's post are witnesses of the record: each proves that the record exists as it stands at its timestamp. A fact that
+holds on every world forces nothing, so they decide nothing about the value. The atomic witness for the hypothesis is one
+term of `ActualZeros` whose zeros are those of ζ, its field of supply the hypothesis itself; the atomic witness against it
+is one zero off the line. -/
+
+/-- A witness with its check is an atomic proof of the existential it witnesses. -/
+theorem witness_proves_exists {α : Type} (P : α → Prop) (w : α) (h : P w) : ∃ x, P x := ⟨w, h⟩
+
+/-- THE ATOMIC WITNESS. The seal stands; a witness proves exactly its existential; a fact true on every world forces
+nothing; the witness for the hypothesis is a term of `ActualZeros`; the witness against it is a zero off the line. -/
+theorem atomic_witness :
+    ((∀ Z : World, LeastErasure Z ↔ RH Z) ∧
+    (∀ A : ActualZeros, RH A.zeros) ∧
+    ((∀ A : ActualZeros, RH A.zeros) ∧
+    (∀ Z : World, LeastErasure Z ↔ RH Z) ∧
+    (∀ Z : World, ¬ LeastErasure Z ↔ OffLine Z) ∧
+    (∀ Act : Type, Act → RootAct) ∧
+    (¬ ∀ Z : World, RootAct → RH Z) ∧
+    (¬ ∀ Z : World, RootAct → ¬ RH Z) ∧
+    (¬ ∃ G : SelfGrounding (RH W2f), Nonempty G.Act) ∧
+    (∀ C : FinCfg, C.price true = 0 ↔ LeastErasure C.world) ∧
+    landauerFloor = 2870978885078723755499100 ∧
+    ¬ RespectsRecord LeastErasure ∧
+    (∃ Z : World, FoldClosed Z ∧ ¬ LeastErasure Z))) ∧
+    (∀ {α : Type} (P : α → Prop) (w : α), P w → ∃ x, P x) ∧
+    (∀ (A : World → Prop) (hA : Keyless A), ¬ Forces A) ∧
+    (∀ (A : ActualZeros), RH A.zeros) ∧
+    (∀ (Z : World), ¬ LeastErasure Z ↔ OffLine Z) :=
+  ⟨least_erasure_terminal_seal, @fun _ P w h => witness_proves_exists P w h, keyless_forces_nothing, rh_from_the_act,
+   rejection_is_a_witness⟩
+
 end PrimeFreedom
 
 /-! ## Cones, printed: sections I to XVI -/
@@ -4277,3 +4311,4 @@ end PrimeFreedom
 /-! ## Cone, printed: the terminal seal -/
 #print axioms PrimeFreedom.least_erasure_terminal_seal
 #print axioms PrimeFreedom.double_defense_hardened
+#print axioms PrimeFreedom.atomic_witness
