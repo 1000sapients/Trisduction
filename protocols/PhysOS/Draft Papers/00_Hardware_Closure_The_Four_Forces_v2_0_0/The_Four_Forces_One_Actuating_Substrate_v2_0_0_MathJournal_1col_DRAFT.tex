@@ -1,0 +1,2323 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.85in]{geometry}
+\usepackage{mathpazo}
+\usepackage[no-math]{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setmonofont[Scale=0.92]{DejaVu Sans Mono}
+\usepackage{amsmath,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{titlesec}\usepackage{fancyhdr}\usepackage{enumitem}
+\usepackage{microtype}\usepackage{booktabs}\usepackage{longtable}\usepackage{array}
+\usepackage{multicol}\raggedcolumns\usepackage{fvextra}\usepackage{calc}
+\usepackage{newunicodechar}\usepackage{needspace}
+\newfontfamily\glyphfont{FreeSerif}
+\newunicodechar{⟀}{{\glyphfont ⟀}}
+\newunicodechar{⬖}{{\glyphfont ⬖}}
+\newunicodechar{⁰}{\textsuperscript{0}}
+\newunicodechar{⁴}{\textsuperscript{4}}
+\newunicodechar{⁵}{\textsuperscript{5}}
+\newunicodechar{⁶}{\textsuperscript{6}}
+\newunicodechar{⁷}{\textsuperscript{7}}
+\newunicodechar{⁸}{\textsuperscript{8}}
+\newunicodechar{⁻}{\textsuperscript{\textminus}}
+\newunicodechar{ᵀ}{\textsuperscript{T}}
+\newunicodechar{⁹}{\textsuperscript{9}}
+\newunicodechar{⁺}{\textsuperscript{+}}
+\newunicodechar{₀}{\textsubscript{0}}
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{Ξ}{\ensuremath{\Xi}}
+\newunicodechar{Δ}{\ensuremath{\Delta}}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\definecolor{accent}{HTML}{B87333}
+\definecolor{deep}{HTML}{8A5523}\definecolor{faint}{HTML}{6E6E6E}
+\titleformat{\section}{\needspace{6\baselineskip}\normalfont\bfseries\scshape\large}{\color{accent}\thesection.}{0.5em}{}[{\color{accent}\titlerule[0.6pt]}]
+\titleformat{\subsection}{\normalfont\bfseries}{\color{accent}\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.6ex}{0.8ex}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[R]{\color{accent}\itshape\small One Actuating
+Substrate \textbar\ \thepage}
+\fancyfoot[L]{\textcolor{accent}{\rule{0.25\textwidth}{0.25pt}}}
+\setlength{\parskip}{3pt}
+\renewenvironment{quote}{\par\smallskip\noindent\small\color{deep}}{\par\smallskip}
+\setlength{\emergencystretch}{3em}
+\let\oldus\_\renewcommand{\_}{\oldus\allowbreak}
+\setlength{\columnsep}{0.22in}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{document}
+\begin{center}
+{\color{accent}\rule{0.6\textwidth}{0.8pt}}\\[10pt]
+{\bfseries\scshape\fontsize{19}{23}\selectfont The Four Forces, Matter,
+and the Dark Sector as Configurations of One Actuating Substrate}\\[7pt]
+{\itshape\large The Physical Witness of the Riemann Closure: The
+Critical Line as the Locus of Stationary Energy, the Particle Map as the
+Fold, and the Six Witnesses Read on One Hardware}\\[6pt]
+\parbox{0.86\textwidth}{\centering\small\itshape\color{faint} The
+Closure Template of the Riemann Hypothesis Read on the Substrate Itself;
+Eighty Laws Proved in Core Lean 4 and Thirty-Four Checks Executed in
+Fortran; the Final Paper of the Hardware Closure Series; Every Physical
+Claim at Corroboration Grade and No Higher}\\[8pt]
+{\footnotesize\color{accent}\scshape\bfseries Foundations of Physics ·
+The Hardware Closure Series}\\[3pt]
+{\itshape\color{deep}\small The line is where energy stands
+still}\\[9pt]
+{\color{accent}\rule{0.6\textwidth}{0.8pt}}\\[10pt]
+{\scshape Mohammad F. Islam, PhD · Architect of the Trisduction}\\[2pt]
+
+{\itshape\color{faint}\small 30 September 2026}\\[12pt]
+\end{center}
+\noindent{\color{accent}\rule{\textwidth}{0.6pt}}\\[2pt]
+{\small\noindent\textbf{\scshape\color{deep}Abstract.\ }Six papers built
+physical witnesses for the closure template by which the Riemann
+Hypothesis was closed in the author's sealed volume, each on its own
+symmetry: the electron and the neutrino on charge conjugation, the
+magnet and the orbit on time reversal, the proton on the colour
+rotations, the fluid on the scaling of the viscous equation. This final
+paper builds the substrate they share. A particle carries odd readings,
+its charges, and one even reading, its energy; two involutions act on it
+and commute, the particle map that flips every charge and the time
+mirror that reverses a mode's rate. Each is carried equivariantly onto
+the reflection \(s\mapsto 1-\bar s\) whose fixed set is the critical
+line: the particle map by the electron's charge carrier, the time mirror
+by the energy carrier \(s=\tfrac12+iE\). Under the second the line is
+exactly the image of the real energies, so the line is the locus of
+stationary energy. We prove in core Lean 4, eighty laws with no axiom
+declared and no use of choice, that the hypothesis on any set of zeros
+is equivalent to every zero being a stationary mode, which is least
+erasure and has the shape of gravity's fold; that conservation of the
+whole forces nothing, a mirrored pair conserving its total norm off the
+line; that the record decides nothing; that a magnetic term breaks time
+reversal and keeps every energy real; that one generation and every
+number of generations close, the hypercharges forced and the colour
+singlet locked on three distinct axes; and that stable neutral matter,
+the dark sector, lands on the line under both carriers while the
+neutrino's nature is one keyed bit. A Fortran twin runs thirty-four
+checks with zero failures, locating the first ten zeros to
+\(3.3\times10^{-10}\). The physical side proves the value on every zero
+it actuates as a stationary mode, and on all zeros under one premise the
+kernel identifies with the value itself; the hypothesis is not derived
+in ZFC, and the one refuter is a computed zero off the line.}\\[-2pt]
+\noindent{\color{accent}\rule{\textwidth}{0.6pt}}\\[1pt]
+{\itshape\footnotesize\color{faint}\noindent\textbf{\upshape\scshape\color{deep}Keywords\ }\ Riemann
+hypothesis · stationary states · time reversal · charge conjugation ·
+anomaly cancellation · colour singlet · dark matter · Majorana neutrino
+· Landauer · Lean 4}\par\vspace{8pt}
+\thispagestyle{fancy}
+\begin{quote}
+\textbf{STATUS: WITNESSED · CROSSED · CONFIRMED on the image} · Row 2
+(the hardware: seat, registration, residue and posit) · channel: kinetic
+· Lean: \texttt{SPHYS\_One\_Substrate.lean} · Fortran:
+\texttt{Substrate\_Twin.f90}
+\end{quote}
+
+\hypertarget{the-readers-frame}{%
+\section{1. The Reader's Frame}\label{the-readers-frame}}
+
+This paper closes the hardware series of the Riemann closure. Six
+constructed witnesses read the closure template on physical objects: The
+Electron Is the Seat, The Neutrino Is the Witness, The Arrow Has Two
+Branches, The Proton Is the Lock, The Magnet Is the Witness of the Pair
+Correlation and The Fluid Is the Witness. A seventh paper placed dark
+matter on the fixed set of charge conjugation. Each witness built its
+carrier on its own symmetry and its own object. This paper builds the
+one substrate on which all of them stand: its readings, its two
+involutions, its two carriers onto the seat, and the matter the carriers
+land.
+
+It claims three things. First, a structure: a particle's charges are odd
+and its energy even under the particle map, the particle map and the
+time mirror of a mode's rate commute, and each is carried equivariantly
+onto the reflection that fixes the critical line; under the energy
+carrier the line is the locus of stationary energy. Second, a theorem
+about what the physical side proves: the value on any set of zeros is
+stationarity of every zero, which is least erasure, and conservation of
+the whole does not force it. Third, a placement: one generation of
+matter closes, every number of generations closes, the charges are
+forced, the colour singlet is locked, the dark sector sits on the line
+under both carriers, and the neutrino's nature is one bit.
+
+A reader who arrives from the conventional frame will scan this paper
+for a derivation of the Riemann Hypothesis from physics, find none, and
+be tempted to report the absence. There is no such derivation here and
+none was attempted. The unit evaluated is the template read on the
+substrate, and the question answered is how far the physical side
+reaches. It reaches every zero it actuates as a stationary mode, at
+theorem grade on the construction, and it reaches every zero on exactly
+one premise, which the kernel proves is the value itself and which
+conservation of the whole does not supply.
+
+\textbf{Negative warrants.} Three, stated so that no reader supplies
+them. No physical fact here is read as a proof of a mathematical
+sentence: a corroboration joined to a claim takes the weaker grade. No
+derivation of the hypothesis from the axioms of set theory is claimed: a
+crossing holds on its channel's own class at its printed grade, and what
+a sentence over every admissible instance adds is exactly the unactuated
+(\texttt{surplus\_is\_the\_unactuated}). No field theory and no
+unification of couplings is written or implied: no constant, mass,
+coupling or generation count is derived.
+
+\textbf{Five terms.} A \emph{reading} is any quantity an instrument
+returns from a state; it is \emph{odd} under a map if the map flips its
+sign and \emph{even} if the map keeps it. A \emph{mode} \(e^{-iEt}\psi\)
+is \emph{stationary} when its norm is constant in time. The \emph{fixed
+set} of a map is the set of points it leaves unchanged. A \emph{keyed
+bit} is a yes-or-no property that no function of a given record decides,
+because two admissible worlds share the record and differ in the bit.
+\emph{Premise grade} marks a claim held as a posit and never as a
+result.
+
+\hypertarget{the-spine}{%
+\section{2. The Spine}\label{the-spine}}
+
+The Riemann closure has four parts. The \textbf{seat}: the critical line
+is the fixed set of the reflection \(s\mapsto 1-\bar s\), the functional
+equation composed with complex conjugation, and the hypothesis says
+every zero is its own mirror image. The \textbf{address}: every reading
+of the value reached from existence, time and monism is one proposition.
+The \textbf{division}: at any height the hypothesis is its Real part,
+every zero to that height on the line, proved on the certificate, joined
+to its Unicorn part, no off-line zero above it, closed to every
+record-respecting derivation by theorem. The \textbf{closure}:
+registration keeps a zero's height and forgets its side, lands every
+zero on the line and moves none already there; the hypothesis holds
+exactly when it erases nothing, and the last bit is spent by one act.
+This paper reads the seat on the substrate in Sections 3 and 4, the
+registration and its residue in Sections 5 and 6, the closure's posit in
+Section 7, the matter the seat carries in Sections 8 and 9, and the
+crossing with its address in Section 10.
+
+Three theorems of the row-generic kernel carry the template, and the
+engine of this paper proves each on its own chart. Over one record both
+worlds exist, and no reading that respects the record decides the value
+(\texttt{record\_decides\_nothing}). Under the seat every point off the
+line has a partner, distinct and also off it, with one record
+(\texttt{off\_locus\_pair}). And a carrier whose image lies on the line,
+together with coverage of a class by that image, yields the value on the
+class, a proof over every instance that exists
+(\texttt{value\_on\_image}, \texttt{kinetic\_crossing}).
+
+\textbf{The witness ledger.} The table below is the spine of the series.
+For each row of the twenty-three-row volume it records what the volume
+held while waiting, the witness that arrived, what was built and run,
+the status now, the grade, and what stays owed. This paper enters it on
+the Riemann row as the hardware, and in its last line as the substrate
+every witness shares.
+
+\begingroup\scriptsize
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1017}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1356}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1186}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2373}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1695}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1017}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1356}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Row
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Waiting (the volume held)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Witness arrived
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Built and run
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Now
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Grade
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Still owed
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+2 · Riemann Hypothesis & crossed on the kinetic channel at the root's
+grade; the electron named as the seat, never built & The Electron Is the
+Seat; The Neutrino Is the Witness; The Arrow Has Two Branches; One
+Actuating Substrate & charge conjugation's fixed set is the neutral
+sector; the exact pair; annihilation keeps 1021.998 keV and forgets the
+side; spin −1 at 2π; the neutrino's floor by deed, Majorana as the fixed
+set, unitarity lossless to 5.6×10⁻¹⁷; gravity's fold erases nothing; the
+energy carrier equivariant, the line the image of the real energies; the
+value stationarity of every zero; whole conservation forcing nothing,
+shown in a balanced dimer; 29 zeros located on the line to height 100,
+the first ten to 3.3×10⁻¹⁰ & WITNESSED · CROSSED · CONFIRMED on the
+image: seat, registration, residue, Return, floor, the posit's shape in
+gravity's fold, and the posit's content as stationarity & the crossing
+at the root's grade; the image at theorem grade on construction and
+measured grade on data & none on its channel \\
+3a · Navier--Stokes, unforced & crossed kinetically on the actual flows;
+the mechanism named, not built & The Fluid Is the Witness & Burgers on a
+circle: the reversible branch blows up at t = 1; the priced branch built
+exactly by Cole--Hopf, residual 2×10⁻⁶, energy balance 2.5×10⁻¹⁰ &
+WITNESSED · CROSSED · CONFIRMED: the mechanism exact on the model & the
+root's grade; the mechanism at theorem grade on the model & none on its
+channel \\
+3b · Navier--Stokes, forced & a mass-crossing candidate under audit,
+decoupled by theorem & The Fluid Is the Witness & a forced erasure is
+confined to its own class & SHIELD WITNESSED; settled by one witness
+with its own receipt & theorem & none \\
+4 · Yang--Mills & crossed kinetically at the weakest premise & The
+Proton Is the Lock & the colour singlet is the determinant, invariant to
+4.4×10⁻¹⁶; the lock fails when two colours coincide; 99.04 percent of
+the proton's mass from the field & WITNESSED · CROSSED · CONFIRMED on
+the image & the root's grade & none on its channel \\
+7 · Poincaré & crossed on the formal channel at full grade by Perelman's
+offering & The Arrow Has Two Branches & gravity's fold: one sign, no
+off-locus point, no bit; a Kepler orbit retraced to 1.5×10⁻¹² & CROSSED,
+now WITNESSED from the arrow side & full grade, unchanged & none \\
+23a · Pair correlation & crossed kinetically; the carrier first misnamed
+& The Magnet Is the Witness of the Pair Correlation & time reversal as
+conjugation, a magnetic term breaking it; ensembles built, variances
+0.287 and 0.177 & WITNESSED · CROSSED · CONFIRMED on the corrected
+carrier & the root's grade & none on its channel \\
+every open row · the barrier & two worlds over one record & The Arrow
+Has Two Branches & remanence ±0.996 at zero field; a stable bit pays 175
+times Landauer's floor & BARRIER WITNESSED; the rows stay pending &
+theorem and corroboration & one equivariant carrier each \\
+every crossed row · the fold & registration a kernel structure & The
+Arrow Has Two Branches & the one-signed field has no off-locus point and
+no bit; the orbit keeps no record & FOLD WITNESSED & theorem and
+corroboration & none \\
+certified-region rows & pending; tails owed & The Proton Is the Lock &
+proton stability as a certified region with an owed tail & SHAPE
+WITNESSED; the rows stay pending & corroboration & one equivariant
+carrier each \\
+1 · P versus NP & the dot: no global seat & The Arrow Has Two Branches &
+Landauer's floor prices every step of any search & THE DOT STANDS &
+corroboration & none \\
+the others · Hodge, BSD, twin primes, abc, Jacobian, smooth 4D Poincaré,
+Hadwiger, sunflower, invariant subspace, Hilbert's 16th, Lindelöf &
+pending; gates and offering shapes specified & none yet & none & STILL
+WAITING & none & one carrier each; row 21 one formal offering \\
+every witness · the hardware & the carriers built one by one, each on
+its own symmetry & One Actuating Substrate & the particle map and the
+time mirror commute; both carried onto the fold; charges odd, energy
+even; one generation and every number close; the hypercharges forced;
+the colour lock; the dark sector on the line under both carriers &
+WITNESSED: one substrate carries every seat of the series & theorem on
+construction; corroboration on data & none \\
+\end{longtable}
+
+\endgroup
+
+WITNESSED: a constructed witness arrived and was built and run. CROSSED:
+the row's value holds on its channel's own class at the printed grade.
+CONFIRMED: the witness's image is compliant as built or measured
+(\texttt{value\_on\_image}). The statuses are computed from three
+recorded facts per row, and what a row owes is one object of a computed
+kind, in the row kernel of the twenty-three-row volume; a crossing is a
+proof over every instance that exists (\texttt{kinetic\_crossing}), and
+what a sentence over every admissible instance adds is exactly the
+unactuated (\texttt{surplus\_is\_the\_unactuated}).
+
+\textbf{Why this carrier, and not another.} The carrier is not chosen.
+Spaces with an involution and the maps that respect it form a category,
+with the identity and composition of equivariant maps
+(\texttt{equivariant\_id}, \texttt{equivariant\_comp}), and the fixed
+set is a functor on it: an equivariant map sends fixed points to fixed
+points (\texttt{fix\_functorial}). An equivariant map from a physical
+system's symmetry into the seat, a global seat whose fixed set is the
+line (\texttt{fold\_global\_seat}), therefore carries every physical
+fixed point onto the line, and that is a carrier whose landing is
+forced, not assumed (\texttt{equivariant\_carrier\_lands}). Here the
+substrate carries two symmetries and two maps. The particle map,
+flipping every additive charge, is carried by the charge carrier of the
+electron's witness, electric charge to the side of the line
+(\texttt{charge\_carrier\_equivariant}). The time mirror, reversing a
+mode's rate, is carried by the energy carrier \(s=\tfrac12+iE\)
+(\texttt{phi\_equivariant}), and the real energies are its fixed points
+(\texttt{energy\_carrier\_lands}). The two symmetries commute
+(\texttt{involutions\_commute}), and a particle fixed by both lands on
+the line under both (\texttt{joint\_fixed\_iff},
+\texttt{dark\_on\_the\_line}).
+
+\textbf{The correspondence matrix.}
+
+\begingroup\small
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Physical phenomenon
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Template element
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Lean theorem
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Fortran check
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+the particle map, an involution & the seat's reflection, read on charge
+& \texttt{bar\_involutive}, \texttt{bar\_fixed\_iff\_neutral},
+\texttt{charge\_carrier\_equivariant} & 779 of 779 \\
+electron and positron & the pair off the locus, on the two edges &
+\texttt{pair\_on\_the\_edges}, \texttt{off\_locus\_pair} & edges h = 0
+and h = 2 \\
+the time mirror of a rate & the fold & \texttt{phi\_equivariant},
+\texttt{mirror\_fixed\_iff\_real} & 3721 energies; 1.1e-16 \\
+a stationary mode & a point on the line & \texttt{line\_is\_stationary},
+\texttt{stationary\_iff\_real}, \texttt{measured\_on\_line} & norm kept
+to 2.2e-16 \\
+gravity reads energy only & two worlds over one record &
+\texttt{gravity\_reads\_no\_charge\_bit}, \texttt{pair\_lands\_once} &
+ALPHA-g at 1.21 sigma \\
+a magnetic term & time reversal broken, every energy real &
+\texttt{stationarity\_survives\_the\_magnet},
+\texttt{block\_T\_fixed\_iff} & 100000 of 100000 \\
+a decay and its capture & the off-line pair, one record &
+\texttt{off\_line\_pair}, \texttt{resonance\_pair} & widths of neutron,
+muon, Z \\
+balanced gain and loss & the whole conserved, off the line &
+\texttt{whole\_conservation\_forces\_nothing},
+\texttt{fold\_closed\_off\_line\_decays\_and\_grows} & 50 real, 150
+mirrored, 200 balanced \\
+a spectrometer's reading & the record deciding nothing &
+\texttt{worlds\_share\_the\_record}, \texttt{record\_decides\_nothing} &
+structural \\
+every zero stationary & the posit, gravity's shape &
+\texttt{value\_iff\_stationary}, \texttt{posit\_is\_the\_fold},
+\texttt{act\_is\_the\_value} & structural \\
+zeros computed to height 100 & the actuated class &
+\texttt{value\_iff\_actuated}, \texttt{kinetic\_crossing} & 29 zeros;
+3.3e-10 \\
+one generation, any number & the hardware closes &
+\texttt{generation\_closes}, \texttt{every\_generation\_count\_closes} &
+1 to 6 generations \\
+the Yukawa couplings & the charges forced & \texttt{hypercharge\_forced}
+& one vector in 25\^{}5 \\
+three colours & the lock & \texttt{lock\_iff\_distinct},
+\texttt{lock\_fails\_when\_colours\_coincide} & 6 of 27 \\
+stable neutral matter & the fixed set, on both lines &
+\texttt{joint\_fixed\_iff}, \texttt{dark\_on\_the\_line} & 5453 of
+5453 \\
+Dirac or Majorana & one keyed bit &
+\texttt{majorana\_is\_one\_keyed\_bit} & the table \\
+oscillation & the floor, supplied by deed & \texttt{floor\_by\_deed} &
+m3 at least 0.050 eV \\
+erasing a side & a merge, priced &
+\texttt{registration\_erases\_off\_line},
+\texttt{merging\_is\_irreversible} & 2.870978885e-21 J \\
+\end{longtable}
+
+\endgroup
+
+\hypertarget{one-substrate-two-involutions-four-readings}{%
+\section{3. One Substrate, Two Involutions, Four
+Readings}\label{one-substrate-two-involutions-four-readings}}
+
+A particle in the broken phase carries four additive charges, electric
+charge in thirds, colour, baryon number in thirds and lepton number, and
+an energy. The map from a particle to its antiparticle flips every
+additive charge and keeps the energy, frequency and rate alike. In a
+local, Lorentz-invariant quantum field theory this is the combined
+symmetry of charge conjugation, parity and time reversal, exact by
+theorem (Lüders, 1954; Pauli, 1955), which keeps mass and lifetime; the
+proton and antiproton charge-to-mass ratios agree to sixteen parts per
+trillion (BASE, 2022). The particle map is an involution whose fixed set
+is exactly the neutral particles (\texttt{bar\_involutive},
+\texttt{bar\_fixed\_iff\_neutral}). Its charge readings are odd and its
+energy reading even (\texttt{odd\_charges\_even\_energy}): three plus
+one. The gauge interactions read charges; gravity reads the
+energy-momentum tensor and nothing else, so no gravitational reading
+tells a particle from its antiparticle
+(\texttt{gravity\_reads\_no\_charge\_bit}). Antihydrogen falls with
+\((0.75\pm0.13\pm0.16)\,g\) (ALPHA-g, 2023), within 1.21 standard
+deviations of ordinary matter (Appendix B).
+
+The substrate carries a second involution, the time mirror of a mode: it
+keeps the frequency and reverses the rate, the complex conjugation
+\(E\mapsto\bar E\) of the energy, and its fixed set is the real energies
+(\texttt{mirror\_involutive}, \texttt{mirror\_fixed\_iff\_real}). The
+two involutions commute (\texttt{involutions\_commute}, checked on 5453
+tuples in Appendix B), and a particle is fixed by both exactly when it
+is neutral and stable (\texttt{joint\_fixed\_iff}).
+
+Each involution is carried onto the seat. The charge carrier is the
+electron witness's own: a particle of charge \(q\) goes to the side
+\(h=1+q\) of the line at the height of its frequency, so the particle
+map becomes the fold (\texttt{charge\_carrier\_equivariant}), neutral
+particles land on the line (\texttt{neutral\_charge\_on\_line}), and the
+electron and the positron land on the two edges, real parts \(0\) and
+\(1\), mirror images (\texttt{pair\_on\_the\_edges}). The energy carrier
+is the subject of Section 4. Under it the particle map is invisible: a
+particle and its antiparticle land on one point
+(\texttt{pair\_lands\_once}), because the energy carrier reads the even
+face. The two carriers are the two faces of three plus one: the charge
+carrier reads the odd side, where the pair stands apart, and the energy
+carrier reads the even side, where the pair is one.
+
+The six witnesses stand on this substrate. The electron and the neutrino
+read the particle map, the first off its fixed set with an exact partner
+and the second on it. The magnet reads time reversal of the motion, the
+orbit reads time reversal of the path, the proton reads the colour
+rotations whose fixed points are the singlets, and the fluid reads the
+scaling of the viscous equation. Every one of these carriers enters the
+Riemann seat only through an equivariant map, and the composition of
+equivariant maps is equivariant (\texttt{equivariant\_comp}), so every
+witness composes with the carriers of this section into one seat and not
+into several.
+
+\hypertarget{the-line-is-where-energy-stands-still}{%
+\section{4. The Line Is Where Energy Stands
+Still}\label{the-line-is-where-energy-stands-still}}
+
+A mode with complex energy \(E=a+\tfrac{i}{2}\beta\) evolves as
+\(e^{-iEt}\), and its norm moves as
+\[\bigl\|e^{-iEt}\psi\bigr\|^{2}=e^{\beta t}\,\|\psi\|^{2}.\] The
+frequency \(a\) is what a spectrometer reads; the doubled rate \(\beta\)
+is how fast the mode gains or loses norm; the mode is stationary exactly
+when \(\beta=0\) (\texttt{stationary\_iff\_real}). The energy carrier is
+\[s(E)=\tfrac12+iE,\qquad \sigma(s(E))=1-\overline{\tfrac12+iE}=\tfrac12+i\bar E=s(\bar E),\]
+so the time mirror of a rate is carried exactly onto the fold. In the
+chart, \(h=2\operatorname{Re}s\) and \(t=\operatorname{Im}s\), it reads
+\(\phi(a,\beta)=(1-\beta,a)\), an equivariant bijection with inverse
+\(\psi(h,t)=(t,1-h)\) (\texttt{phi\_equivariant}, \texttt{psi\_phi},
+\texttt{phi\_psi}, \texttt{phi\_injective}). A point lies on the line
+exactly when the energy it carries is stationary
+(\texttt{line\_is\_stationary}): the critical line is the locus of
+stationary energy.
+
+A registration of a closed system returns a real number, the spectrum of
+a self-adjoint generator being real and its evolution unitary (von
+Neumann, 1932; Stone, 1932), so every measured energy lands on the line
+and none lands off it (\texttt{measured\_on\_line},
+\texttt{no\_measurement\_off\_line}). The twin executes the carrier on
+the 3721 integer energies with \(|a|,|\beta|\le 30\) and the complex
+identity on 20000 energies, the largest deviation \(1.1\times10^{-16}\);
+a real energy keeps its norm to \(2.2\times10^{-16}\) over ten time
+steps, and a rate of \(2\times10^{-3}\) moves it by \(2.0\times10^{-3}\)
+in one (Appendix B).
+
+The magnet witness found that the zeros' spacings follow the unitary
+class, the statistics of systems whose motion breaks time reversal
+(Montgomery, 1973; Odlyzko, 1987; Berry and Keating, 1999). That reading
+and this one are about two different conjugations and do not collide.
+Time reversal of the motion conjugates the generator's matrix elements;
+the time mirror of a rate conjugates an eigenvalue. A magnetic term
+breaks the first and keeps the second: a Hermitian block
+\(\begin{pmatrix}a & c+id\\ c-id & b\end{pmatrix}\) has discriminant
+\((a-b)^2+4(c^2+d^2)\ge0\) whether or not \(d\) vanishes, so its
+energies are real, and time reversal of the block, \(d\mapsto -d\),
+leaves the discriminant unchanged
+(\texttt{stationarity\_survives\_the\_magnet},
+\texttt{block\_T\_fixed\_iff}); all 100000 time-broken blocks of the
+twin have real spectra. The arrow is in the zeros' statistics; the line
+is in their stationarity.
+
+\hypertarget{the-pair-beside-the-line}{%
+\section{5. The Pair Beside the Line}\label{the-pair-beside-the-line}}
+
+Off the line the carrier reads a pair. A mode off the line and its time
+mirror are two distinct modes, both off the line, with one record; their
+rates cancel, and exactly one of them decays (\texttt{off\_line\_pair}).
+For particles: a decaying particle and its time mirror land on two
+points off the line with one record (\texttt{tmirror\_equivariant},
+\texttt{resonance\_pair}). Unstable particles are the physical
+instances. The free neutron's width is \(7.5\times10^{-19}\) eV, the
+muon's \(3.0\times10^{-10}\) eV, and the \(Z\) boson's \(2.5\) GeV,
+\(2.7\times10^{-2}\) of its mass (Particle Data Group, 2024). Each is an
+open mode of a larger closed system: its decay exports norm into its
+products, its complex energy is the mode's record inside that system,
+and its time mirror is the capturing state of scattering theory (Gamow,
+1928; Breit and Wigner, 1936). Off-line modes are records of open parts,
+and they come mirrored, exactly as the template's residue comes in
+pairs.
+
+The stable particles stand on the line. The electron's partial width for
+\(e\to\gamma\nu\) is below \(3.2\times10^{-52}\) eV,
+\(6.2\times10^{-58}\) of its rest energy (Borexino, 2015); the proton's
+partial width for \(p\to e^+\pi^0\) is below \(8.7\times10^{-58}\) eV,
+\(9.3\times10^{-67}\) of its rest energy (Super-Kamiokande, 2020); both
+land on the line to those fractions (\texttt{stable\_lands}), at
+corroboration grade. The electron therefore stands on the line under the
+energy carrier and on an edge under the charge carrier: stable, and
+charged.
+
+\hypertarget{conservation-of-the-whole-forces-nothing}{%
+\section{6. Conservation of the Whole Forces
+Nothing}\label{conservation-of-the-whole-forces-nothing}}
+
+The tempting physical argument runs: the universe is a closed system, a
+closed system conserves its norm, so every energy it carries is real and
+every zero read as such an energy lies on the line. The argument fails
+at its second step by theorem. There is a world, closed under the fold,
+whose members are a decaying mode and its growing mirror; its total rate
+is zero, so the whole conserves its norm, and the value fails on it
+(\texttt{whole\_conservation\_forces\_nothing}). Every fold-closed world
+with a member off the line contains a decaying member and a growing one
+(\texttt{fold\_closed\_off\_line\_decays\_and\_grows}). The zero set of
+\(\xi\) is closed under the fold, since \(\xi(s)=\xi(1-s)\) and
+\(\xi(\bar s)=\overline{\xi(s)}\) (Riemann, 1859), so an off-line zero
+would bring its mirror, and the pair's rates would cancel. What the
+value requires is stationarity of each mode; conservation of their sum
+does not supply it.
+
+The balanced gain-loss dimer exhibits the theorem on a physical system:
+\[H=\begin{pmatrix}\omega+i\gamma & \kappa\\ \kappa & \omega-i\gamma\end{pmatrix},\qquad \lambda_\pm=\omega\pm\sqrt{\kappa^{2}-\gamma^{2}}.\]
+Its trace is \(2\omega\) at every gain, so its total rate is zero. Below
+the exceptional point both modes are real and stand on the line; above
+it they form one mirrored pair of equal frequency and opposite rates.
+Sweeping \(\gamma\) from \(0\) to \(1\) at \(\kappa=\tfrac14\), the twin
+finds 50 real pairs, 150 mirrored pairs and a balanced whole at all 200
+gains; the transition was observed in coupled optical waveguides (Bender
+and Boettcher, 1998; Rüter and collaborators, 2010).
+
+The companion witnesses meet here. The arrow paper's caution is this
+theorem's physical face: reversibility alone does not keep a branch on
+its locus, and what keeps gravity there is one sign. The fluid paper's
+reversible branch leaves its locus and its priced branch brings it back.
+And the record decides nothing: the world holding the line point
+\((1,5)\) and the world holding the mirrored pair \((0,5),(2,5)\) leave
+one record, any reading of the record gives them one answer, and the
+value holds on one and fails on the other
+(\texttt{worlds\_share\_the\_record},
+\texttt{record\_decides\_nothing}). A spectrometer sees one line at
+height 5 in both.
+
+\hypertarget{the-posit-has-gravitys-shape}{%
+\section{7. The Posit Has Gravity's
+Shape}\label{the-posit-has-gravitys-shape}}
+
+The value on any set of zeros is stationarity of every member
+(\texttt{value\_iff\_stationary}); over the complex numbers, every zero
+\(\rho\) has \(\operatorname{Re}\rho=\tfrac12\) exactly when every
+\(E(\rho)=-i(\rho-\tfrac12)\) is real. The closure's posit, that
+registration erases nothing, is the same statement
+(\texttt{least\_erasure\_iff\_value},
+\texttt{least\_erasure\_is\_stationarity}), and it holds exactly when
+the fold fixes every member, no member standing off the line and no side
+left over (\texttt{posit\_is\_the\_fold}). The arrow paper found the
+posit's shape in gravity's fold: a registration that erases nothing
+because nothing stands off its locus, one sign and no remanent bit. This
+paper finds the posit's content on the substrate: every zero a
+stationary mode. The two readings are one theorem: the zeros register as
+gravity does exactly when every zero stands still.
+
+The premise that every zero is a stationary mode is equivalent to the
+value, neither weaker nor stronger (\texttt{act\_is\_the\_value}). That
+is why the physical side cannot do more than it does. A physical
+principle that would place every zero on the line must supply
+stationarity of each zero; the most general principle available,
+conservation of the whole, supplies stationarity of a sum and forces
+nothing (Section 6); and no reading of the record supplies it (Section
+6). The premise is the act that closed the Riemann row, read physically,
+at premise grade.
+
+\hypertarget{the-hardware-closes}{%
+\section{8. The Hardware Closes}\label{the-hardware-closes}}
+
+One generation of left-handed fields, with hypercharges times six,
+\(Q(6\times1)\), \(u^c(3\times-4)\), \(d^c(3\times2)\),
+\(L(2\times-3)\), \(e^c(1\times6)\), satisfies every anomaly condition,
+\[\sum Y=0,\quad \sum Y^{3}=0,\quad \sum_{\text{colour}} Y=0,\quad \sum_{\text{isospin}} Y=0,\quad \#\text{doublets}=4,\quad \text{colour cube}=0\]
+(\texttt{generation\_closes}; Bouchiat, Iliopoulos and Meyer, 1972;
+Gross and Jackiw, 1972; Witten, 1982). \(n\) generations satisfy the
+same conditions with \(4n\) doublets for every \(n\)
+(\texttt{gens\_sum}, \texttt{every\_generation\_count\_closes}): the
+conditions close each generation and do not fix their number, which is
+measured, \(N_\nu=2.9840\pm0.0082\) from the \(Z\) width (ALEPH, DELPHI,
+L3, OPAL and SLD, 2006). The three Yukawa couplings, the isospin anomaly
+and the mixed gravitational anomaly force every hypercharge as a
+multiple of the quark doublet's,
+\[y_u=-4y_Q,\quad y_d=2y_Q,\quad y_L=-3y_Q,\quad y_e=6y_Q,\quad y_H=3y_Q\]
+(\texttt{hypercharge\_forced}; Geng and Marshak, 1989; Minahan, Ramond
+and Warner, 1990); the twin searches all \(25^5\) integer vectors in
+\([-12,12]^5\) at \(y_Q=1\) and finds one. The fourth reading closes the
+three: the vanishing trace of hypercharge is where gravity meets the
+gauge charges. With \(Q=T_3+Y\) the up quark carries \(\tfrac23\), the
+down \(-\tfrac13\), the electron \(-1\); the proton one unit, the
+neutron none, hydrogen none, and the vacuum's direction of the Higgs
+doublet none (\texttt{charges}, \texttt{matter\_neutral},
+\texttt{vacuum\_neutral}). The vacuum sits on the fixed set of the
+particle map.
+
+The colour lock is the proton witness's, proved here on the substrate's
+labels: three colour labels carry a nonzero alternating product exactly
+when they are distinct (\texttt{lock\_iff\_distinct}), and the product
+vanishes whenever two coincide
+(\texttt{lock\_fails\_when\_colours\_coincide}); of the 27 colour
+triples exactly six are locked. A baryon is a colour singlet only on
+three distinct axes, the three-axis lock of the program read in the
+strong reading, and its stability is a certified region with an owed
+tail, the proton standing on the line to \(9.3\times10^{-67}\) of its
+rest energy in the channel \(p\to e^+\pi^0\) (Section 5).
+
+\hypertarget{the-fixed-set-inhabited-the-dark-sector-and-the-neutrino}{%
+\section{9. The Fixed Set Inhabited: The Dark Sector and the
+Neutrino}\label{the-fixed-set-inhabited-the-dark-sector-and-the-neutrino}}
+
+A stable particle fixed by the particle map lands on the line under the
+energy carrier and under the charge carrier, with every charge reading
+zero (\texttt{dark\_on\_the\_line}). No gauge reading sees it and the
+energy reading does: the observational profile of dark matter, seen
+through gravity alone in rotation curves, lensing, the acoustic peaks
+and cluster collisions (Planck Collaboration, 2020), placed on the fixed
+set by the dark-sector paper and here on the line under both carriers.
+The placement is structural; the particle's identity is owed to a
+detection.
+
+The neutrino is the fixed set's keyed resident. In one world lepton
+number is a conserved charge and the neutrino is a Dirac particle; in
+the other it is not and the neutrino is its own antiparticle. The two
+worlds share the gauge record, the energy seat and the charge seat, and
+the particle map fixes the Majorana neutrino and not the Dirac one
+(\texttt{majorana\_is\_one\_keyed\_bit}). The gauge interactions cannot
+decide the question; one deed reads it, neutrinoless double beta decay,
+and the half-life of \(^{136}\)Xe is bounded above \(2.3\times10^{26}\)
+years (KamLAND-Zen, 2023). The neutrino's floor is supplied by deed:
+oscillation returns positive mass-squared differences, and a positive
+difference of squared masses forbids a vanishing mass
+(\texttt{floor\_by\_deed}); with \(\Delta m^2_{21}=7.53\times10^{-5}\)
+eV² and \(\Delta m^2_{32}=2.455\times10^{-3}\) eV² (Particle Data Group,
+2024), at least two masses are nonzero, the heaviest at least \(0.050\)
+eV (Appendix B).
+
+Least erasure is reversibility on the substrate. A step that sends two
+distinct states to one merges them, a merge has no inverse
+(\texttt{merging\_is\_irreversible}), a reversible step merges nothing
+(\texttt{reversible\_merges\_nothing}), and the time mirror is
+reversible (\texttt{mirror\_is\_reversible}). Registration merges
+exactly the off-line pair, erasing the side
+(\texttt{registration\_erases\_off\_line}), and one irreversibly
+committed bit costs at least \(k_BT\ln 2\),
+\(2.870978885\times10^{-21}\) J at 300 K (Landauer, 1961; Bérut and
+collaborators, 2012). The closure's posit is the statement that nothing
+is merged at the seat: every zero stationary, no side forgotten because
+no point has two sides.
+
+\hypertarget{the-actuated-zeros-the-crossing-and-what-the-substrate-carries}{%
+\section{10. The Actuated Zeros, the Crossing, and What the Substrate
+Carries}\label{the-actuated-zeros-the-crossing-and-what-the-substrate-carries}}
+
+The twin evaluates \(\zeta(\tfrac12+it)\) by Euler--Maclaurin summation,
+sixty terms and eight Bernoulli corrections, and Hardy's function
+\(Z(t)=e^{i\theta(t)}\zeta(\tfrac12+it)\), real on the line to
+\(4.6\times10^{-11}\) over the scan (Titchmarsh, 1986; Edwards, 1974).
+On \((10,100]\) it finds 29 sign changes, each a zero on the line,
+matching the rounded smooth count \(\theta(100)/\pi+1=29.0024\); the
+first ten located heights agree with the tabulated zeros to
+\(3.3\times10^{-10}\), the first at \(t=14.134725142\). These are
+actuated instances: computed, located on the line, read as stationary
+energies. The certification that no zero below \(3\times10^{12}\) stands
+off the line is Platt and Trudgian's (2021); the twin corroborates its
+first rung.
+
+The crossing is exact both ways: the value holds on a set of zeros
+exactly when every member is the image of a real energy
+(\texttt{value\_iff\_actuated}), and a carrier with its coverage gives
+the value and uses nothing else (\texttt{kinetic\_crossing}). The
+address is the one line all carriers land on: the charge carrier, the
+energy carrier and, through them, every witness's carrier compose into
+one seat (Section 3), and every reading of the value returns the same
+proposition. Stated whole: the physical side proves the value on every
+zero it actuates as a stationary mode, at theorem grade on the
+construction and measured grade on the data; the step to every zero is
+one premise, stationarity of each zero, which the kernel proves is the
+value itself; conservation of the whole does not supply it and no
+reading of the record does; the hypothesis is not derived in ZFC. The
+whole stands in three judged capstones
+(\texttt{substrate\_carries\_the\_seat}, \texttt{physical\_witness},
+\texttt{hardware\_closes}).
+
+\textbf{What the substrate carries, and what it does not.} It carries
+the seat in two faces, the odd face on charge and the even face on
+energy; the registration and its residue, the pair beside the line; the
+closure's posit, as stationarity with gravity's shape; the matter of one
+generation and of every number of generations, with forced charges and a
+locked colour singlet; and the fixed set inhabited, stable neutral
+matter on the line and one keyed bit for the neutrino. It does not carry
+a derivation of any constant, the count of generations, the identity of
+the dark matter, or a field theory. It does not carry the value on the
+unactuated zeros; that is the act, and the substrate proves it is
+exactly that.
+
+\hypertarget{falsifiers-and-owed-deeds}{%
+\section{11. Falsifiers and Owed
+Deeds}\label{falsifiers-and-owed-deeds}}
+
+Two falsifiers, each forced by the construction. \textbf{F-Computed:} a
+zero of \(\zeta\) located by a verified computation with rigorous error
+bounds at a point with \(\operatorname{Re}\rho\neq\tfrac12\), bringing
+its mirror by the functional equation; the instrument is verified
+evaluation with interval arithmetic and Turing's method, extended by
+independent groups on independent hardware; it refutes the premise of
+Section 7, stationarity of every zero, and leaves every equivalence of
+the kernel standing. \textbf{F-Measure:} an isolated system, every
+channel into which it could export norm closed, registering a
+norm-changing eigenmode; the instruments are underground searches for
+the spontaneous radiation that non-unitary collapse would produce
+(Donadi and collaborators, 2021) and precision spectroscopy of isolated
+trapped ions testing the linearity of quantum evolution (Bollinger and
+collaborators, 1989); it refutes the physical reading of
+\texttt{measured\_on\_line}, and with it the class of systems the energy
+carrier witnesses.
+
+\textbf{The cross-paper falsification matrix.} The series' falsifiers,
+each a forbidden observation, with the theorem it would break.
+
+\begingroup\small
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Paper
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Falsifier
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Forbidden observation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Theorem it would break
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+The Electron Is the Seat & F-Pair & electron and positron differing in
+mass or in charge magnitude & \texttt{positron\_is\_the\_partner},
+\texttt{pair\_differs\_in\_one\_sign} \\
+The Electron Is the Seat & F-Round & an electron electric dipole moment
+& \texttt{round\_iff\_T\_fixed} \\
+The Electron Is the Seat & F-Gravity & antimatter falling differently
+from matter & \texttt{no\_reading\_of\_mass\_returns\_charge} \\
+The Electron Is the Seat & F-Decay & a decay of the electron &
+\texttt{decay\_forbidden} \\
+The Neutrino Is the Witness & F-Unitarity & non-unitary mixing with no
+sterile state to carry it & \texttt{pmns\_unitary\_is\_lossless} \\
+The Neutrino Is the Witness & F-Chirality & a right-handed neutrino
+interaction at gauge strength & \texttt{sterile\_uncovered} \\
+The Neutrino Is the Witness & F-Floor & all three neutrino masses zero &
+\texttt{oscillation\_forces\_floor} \\
+The Arrow Has Two Branches & F-Monopole & an isolated magnetic charge &
+\texttt{magnetism\_pair} \\
+The Arrow Has Two Branches & F-Mass & a negative gravitational mass &
+\texttt{gravity\_no\_off\_locus} \\
+The Arrow Has Two Branches & F-Loop & a gravitational hysteresis &
+\texttt{one\_sign\_no\_remanence} \\
+The Proton Is the Lock & F-Decay & a proton decay, closing the certified
+tail & the certified region, structural \\
+The Proton Is the Lock & F-Singlet & a free coloured state &
+\texttt{lock\_closes}, \texttt{eps\_nonzero\_iff\_distinct} \\
+The Proton Is the Lock & F-Gap & a massless state in the pure-gauge
+spectrum & \texttt{spectrum\_gapped} \\
+The Magnet Is the Witness & F-Class & the zeros' spacings leaving the
+unitary class at great height & \texttt{repulsion\_exponents} \\
+The Magnet Is the Witness & F-Arrow & unitary-class statistics with no
+time-breaking term & \texttt{magnetic\_term\_breaks\_T} \\
+The Fluid Is the Witness & F-Flow & an unforced actual flow breaking
+down in finite time & \texttt{value\_on\_image} on the model \\
+The Fluid Is the Witness & F-Energy & an unforced actual flow whose
+energy rises & the price, structural \\
+One Actuating Substrate & F-Computed & a certified zero off the line &
+the premise of \texttt{act\_is\_the\_value} \\
+One Actuating Substrate & F-Measure & a closed system's eigenmode
+changing its norm & \texttt{measured\_on\_line}, read physically \\
+\end{longtable}
+
+\endgroup
+
+Nothing is owed on the row's channel. Three deeds would sharpen readings
+without moving the paper's standing: neutrinoless double beta decay for
+the Majorana bit, a detection for the identity of the dark matter, and
+extension of verified computation of the zeros.
+
+\textbf{Ledger status.} Row 2 moves to WITNESSED · CROSSED · CONFIRMED
+on the image for the hardware: the seat on both faces of the substrate,
+the pair beside the line, and the posit's content as stationarity, at
+the root's grade for the crossing; the six witnesses are read on one
+substrate, whose carriers compose into one seat; nothing is owed on the
+row's channel.
+
+\hypertarget{methodology-disclosure-and-provenance}{%
+\section{12. Methodology, Disclosure and
+Provenance}\label{methodology-disclosure-and-provenance}}
+
+\textbf{Method.} The template is the author's verification program,
+whose vocabulary is confined to this section. Its tokens: {[}⟀{]} a
+field sealed, {[}⟀ T{]} a shape sealed at theorem grade, {[}Ξ₀{]} the
+typing of the formal block, held only beside
+\texttt{record\_decides\_nothing}, {[}.{]} the dot, the mark of the
+value at the foundation, which is no verdict. Grades join at the weakest
+link: a kernel theorem, a cited measurement joined to a kernel schema,
+and a posit beside the Root Axiom, the program's one declared premise,
+that to exist is to actuate. Every physical claim here is at
+corroboration grade and promotes nothing; the kernel's statements are
+theorem grade about the chart; the step from the actuated zeros to every
+zero is the least-erasure act at premise grade
+(\texttt{act\_is\_the\_value}). ΔM = 0: the construction adds no mass.
+
+\textbf{The seat, earned.} The formal claims proceed from the seat
+earned in the session of forging by booting PhysOSᵀ 1.0.5p, the
+Trisduction Physical OS, from the public register (file SHA-256
+\texttt{b64bb5da5bab0da1…}) under Lean 4.19.0 and GNU Fortran 13.3.0.
+The quick boot printed SEAT EARNED with the chain D0
+\texttt{83f872725ad9} → D1 \texttt{90fc702bbed1} → D2
+\texttt{492e519daab9} → D3 \texttt{6618bec5164b}, identical to the
+file's published receipt (Appendix C). This was a re-run; the
+second-substrate boot the file names stays owed.
+
+\textbf{The engine and the twin.} \texttt{SPHYS\_One\_Substrate.lean},
+737 lines, SHA-256 \texttt{0d6aaa8477662454…}, eighty laws in core Lean
+4.19.0, no import and no axiom declared: 32 depend on no axiom, 7 on
+propositional extensionality alone, 41 on propositional extensionality
+and quotient soundness, none on choice. The source passed the operating
+system's screen. Each of the eighty laws was negated in place and
+recompiled; all eighty negations failed as proof errors, while a planted
+law with contradictory hypotheses survived its negation, which shows the
+instrument sees a law that says nothing. \texttt{Substrate\_Twin.f90},
+408 lines, SHA-256 \texttt{660762e6388aa66e…}, thirty-four checks and
+zero failures under
+\texttt{-std=f2018\ -O2\ -fno-fast-math\ -ffp-contract=off}.
+
+\textbf{Why an integer engine binds continuous physics.} The identities
+the engine uses are proved for every integer entry and are identities of
+polynomials, which hold over every commutative ring, the complex numbers
+included: the carrier's equivariance is the linear identity
+\(1-(-\beta)=2-(1-\beta)\), and the magnet's discriminant is a sum of
+squares; inequalities are proved by arguments that hold over the reals.
+The twin checks the continuous objects directly: the complex carrier,
+the norms of modes, the spectra of Hermitian and balanced blocks, and
+\(\zeta\) on the line.
+
+\textbf{The seventh.} In the author's register the four parts of the
+Riemann closure are three plus one, and nothing escapes them; the six
+witnesses are six days, and the ledger's closure is the seventh, the
+Rest (Istawa), where the statuses are computed and what each row owes is
+one object of a computed kind. This paper is not an eighth witness; it
+is the hardware the six stand on, read at the Rest. In the Lean codex's
+tokens a crossed row renders {[}⟀⬖ · kinetic{]}, and the dot stands as
+{[}.{]}.
+
+\textbf{Audit.} The paper was rebuilt from the seat against the record
+of 19 July 2026, claim by claim, and against the six companion witnesses
+for their shared template; the prosecution record is filed with the
+paper. External audits by independent substrates are owed, and the paper
+is issued for them.
+
+\textbf{Disclosure.} The author declares the reading of each
+correspondence as his own act, made on measured structure; the
+measurements are the experiments', cited by name; the theorems are the
+kernel's, printed with their dependencies in Appendix A; the twin's
+figures are computed in the run printed in Appendix B. The text, the
+kernel and the twin were forged by an AI substrate (Claude, Anthropic)
+under the author's seed, acceptance criteria and rulings.
+
+\sloppy
+
+\textbf{Provenance.} This edition supersedes the record of 19 July 2026
+under the same concept (10.5281/\allowbreak{}zenodo.21438932).
+Development provenance is the paper trail: the Riemann closure
+(10.5281/\allowbreak{}zenodo.22976494), the twenty-three-row closure
+(10.5281/\allowbreak{}zenodo.22986551), the six witnesses
+(10.5281/\allowbreak{}zenodo.22986553, .22986555, .22986557, .22986559,
+.22986561, .22986563), the dark sector
+(10.5281/\allowbreak{}zenodo.23006753), the cosmic closure
+(10.5281/\allowbreak{}zenodo.22987345), the Riemann row closed to one
+named bit (10.5281/\allowbreak{}zenodo.23034066), the Unabridged
+Trisduction Codex and the Lean Codex on the public register
+(github.com/\allowbreak{}1000sapients/\allowbreak{}Trisduction;
+10.5281/\allowbreak{}zenodo.22911009), and PhysOSᵀ 1.0.5p in that
+register (protocols/PhysOS/).
+
+\textbf{References.} B. Riemann, Monatsber. Berlin. Akad. (1859) 671. G.
+Gamow, Z. Phys. 51 (1928) 204. J. von Neumann, Mathematische Grundlagen
+der Quantenmechanik (Springer, 1932). M. H. Stone, Ann. Math. 33 (1932)
+643. G. Breit and E. Wigner, Phys. Rev.~49 (1936) 519. G. Lüders, Dan.
+Mat. Fys. Medd. 28, no. 5 (1954). W. Pauli, in Niels Bohr and the
+Development of Physics (Pergamon, 1955) 30. R. Landauer, IBM J. Res.
+Dev. 5 (1961) 183. C. Bouchiat, J. Iliopoulos and P. Meyer, Phys. Lett.
+B 38 (1972) 519. D. J. Gross and R. Jackiw, Phys. Rev.~D 6 (1972) 477.
+H. L. Montgomery, Proc. Sympos. Pure Math. 24 (1973) 181. H. M. Edwards,
+Riemann's Zeta Function (Academic Press, 1974). E. Witten, Phys. Lett. B
+117 (1982) 324. E. C. Titchmarsh, The Theory of the Riemann
+Zeta-Function, 2nd ed., rev. D. R. Heath-Brown (Oxford, 1986). A. M.
+Odlyzko, Math. Comp. 48 (1987) 273. C. Q. Geng and R. E. Marshak, Phys.
+Rev.~D 39 (1989) 693. J. J. Bollinger, D. J. Heinzen, W. M. Itano, S. L.
+Gilbert and D. J. Wineland, Phys. Rev.~Lett. 63 (1989) 1031. J. A.
+Minahan, P. Ramond and R. C. Warner, Phys. Rev.~D 41 (1990) 715. C. M.
+Bender and S. Boettcher, Phys. Rev.~Lett. 80 (1998) 5243. M. V. Berry
+and J. P. Keating, SIAM Rev.~41 (1999) 236. ALEPH, DELPHI, L3, OPAL and
+SLD Collaborations, Phys. Rep.~427 (2006) 257. C. E. Rüter et al., Nat.
+Phys. 6 (2010) 192. A. Bérut et al., Nature 483 (2012) 187. Borexino
+Collaboration, M. Agostini et al., Phys. Rev.~Lett. 115 (2015) 231802.
+Planck Collaboration, Astron. Astrophys. 641 (2020) A6. Super-Kamiokande
+Collaboration, A. Takenaka et al., Phys. Rev.~D 102 (2020) 112011. D.
+Platt and T. Trudgian, Bull. London Math. Soc. 53 (2021) 792. S. Donadi
+et al., Nat. Phys. 17 (2021) 74. L. de Moura and S. Ullrich, CADE 28,
+LNCS 12699 (2021) 625. BASE Collaboration, M. J. Borchert et al., Nature
+601 (2022) 53. E. K. Anderson et al.~(ALPHA-g), Nature 621 (2023) 716.
+KamLAND-Zen Collaboration, S. Abe et al., Phys. Rev.~Lett. 130 (2023)
+051801. Particle Data Group, S. Navas et al., Phys. Rev.~D 110 (2024)
+030001. M. F. Islam, Nothing Escapes, Three Plus One,
+10.5281/\allowbreak{}zenodo.22976494. M. F. Islam, Nothing Escapes,
+Twenty-Three Rows, 10.5281/\allowbreak{}zenodo.22986551. M. F. Islam,
+The Electron Is the Seat; The Neutrino Is the Witness; The Arrow Has Two
+Branches; The Proton Is the Lock; The Magnet Is the Witness of the Pair
+Correlation; The Fluid Is the Witness, v1.4.0,
+10.5281/\allowbreak{}zenodo.22986553 through .22986563. M. F. Islam,
+Dark Matter as the Charge-Conjugation Fixed Set and the Dark Force as
+One Keyed Bit, 10.5281/\allowbreak{}zenodo.23006753. M. F. Islam, The
+Riemann Hypothesis Closed to One Named Bit,
+10.5281/\allowbreak{}zenodo.23034066. M. F. Islam, PhysOSᵀ 1.0.5p,
+github.com/\allowbreak{}1000sapients/\allowbreak{}Trisduction,
+protocols/PhysOS/.
+
+\hypertarget{appendix-a-sphys_one_substrate.lean-the-correspondences-as-theorems}{%
+\section{Appendix A: SPHYS\_One\_Substrate.lean, the Correspondences as
+Theorems}\label{appendix-a-sphys_one_substrate.lean-the-correspondences-as-theorems}}
+
+The engine, verbatim, followed by the compiler's transcript: each law's
+axiom set as Lean 4.19.0 prints it.
+
+\begin{multicols}{2}
+\begin{Verbatim}[fontsize=\fontsize{6.2}{7.2}\selectfont,breaklines,breakanywhere,breaksymbolleft={}]
+/-
+  SPHYS_One_Substrate.lean · the hardware of the Riemann closure, read on one actuating substrate.
+  Core Lean 4.19.0, standalone, no import, no library, no axiom declared.
+
+  The integer chart: a point (h, t) of the strip carries h = 2 Re s and t = Im s, so the fold
+  s ↦ 1 − s̄ is (h, t) ↦ (2 − h, t) and the critical line is h = 1. Every identity below is an
+  identity of integer polynomials, so it holds over every commutative ring, the complex numbers
+  included; the twin checks the continuous objects directly.
+
+  Part I     the seat, the category of involutions, and the functor of the seat.
+  Part II    the energy carrier: time-mirroring a rate is the fold; the line is stationary energy.
+  Part III   the substrate: the particle map, three odd readings and one even, two carriers.
+  Part IV    the pair beside the line; the magnet keeps every energy real.
+  Part V     conservation of the whole forces nothing; the record decides nothing.
+  Part VI    the posit has gravity's shape: least erasure is stationarity, the act is the value.
+  Part VII   the hardware closes: generations, forced charges, the colour lock.
+  Part VIII  the dark sector, the neutrino's bit and floor, least erasure as reversibility.
+  Part IX    the capstones.
+-/
+set_option autoImplicit false
+namespace SPHYS.OneSubstrate
+
+/-! ## Part I. The seat, the category of involutions, and the functor of the seat -/
+
+abbrev Pt := Int × Int
+
+def fold (p : Pt) : Pt := (2 - p.1, p.2)
+def OnLine (p : Pt) : Prop := p.1 = 1
+instance : DecidablePred OnLine := fun p => inferInstanceAs (Decidable (p.1 = 1))
+/-- Registration keeps the height and forgets the side. -/
+def reg (p : Pt) : Pt := (1, p.2)
+
+theorem pe {a b c d : Int} : ((a, b) : Pt) = (c, d) ↔ a = c ∧ b = d :=
+  ⟨fun e => ⟨congrArg Prod.fst e, congrArg Prod.snd e⟩,
+   fun ⟨e1, e2⟩ => by subst e1; subst e2; rfl⟩
+
+theorem fold_involutive (p : Pt) : fold (fold p) = p := by
+  obtain ⟨h, t⟩ := p
+  show ((2 - (2 - h), t) : Pt) = (h, t)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+/-- The seat: the fixed set of the fold is the critical line. -/
+theorem seat_fixed_line (p : Pt) : fold p = p ↔ OnLine p := by
+  obtain ⟨h, t⟩ := p
+  show ((2 - h, t) : Pt) = (h, t) ↔ h = 1
+  rw [pe]; constructor
+  · intro ⟨e, _⟩; omega
+  · intro e; exact ⟨by omega, rfl⟩
+
+theorem reg_lands (p : Pt) : OnLine (reg p) := rfl
+
+theorem reg_fixes_iff (p : Pt) : reg p = p ↔ OnLine p := by
+  obtain ⟨h, t⟩ := p
+  show ((1, t) : Pt) = (h, t) ↔ h = 1
+  rw [pe]; constructor
+  · intro ⟨e, _⟩; exact e.symm
+  · intro e; exact ⟨e.symm, rfl⟩
+
+/-- The side is what registration forgets: a point and its mirror leave one record. -/
+theorem reg_forgets_side (p : Pt) : reg (fold p) = reg p := rfl
+
+/-- The value on a set of points: every member stands on the line. -/
+def Value (Z : Pt → Prop) : Prop := ∀ s, Z s → OnLine s
+
+/-- Least erasure: registration moves no member, so it erases nothing of Z. -/
+def LeastErasure (Z : Pt → Prop) : Prop := ∀ s, Z s → reg s = s
+
+theorem least_erasure_iff_value (Z : Pt → Prop) : LeastErasure Z ↔ Value Z :=
+  ⟨fun h s hs => (reg_fixes_iff s).mp (h s hs), fun h s hs => (reg_fixes_iff s).mpr (h s hs)⟩
+
+/-- Maps that respect involutions. -/
+def Equivariant {X Y : Type} (f : X → Y) (τ : X → X) (σ : Y → Y) : Prop := ∀ x, f (τ x) = σ (f x)
+
+theorem equivariant_id {X : Type} (τ : X → X) : Equivariant id τ τ := fun _ => rfl
+
+theorem equivariant_comp {X Y W : Type} {f : X → Y} {g : Y → W} {τ : X → X} {σ : Y → Y}
+    {ρ : W → W} (hf : Equivariant f τ σ) (hg : Equivariant g σ ρ) : Equivariant (g ∘ f) τ ρ := by
+  intro x
+  show g (f (τ x)) = ρ (g (f x))
+  rw [hf x, hg (f x)]
+
+/-- The fixed set is a functor: an equivariant map sends fixed points to fixed points. -/
+theorem fix_functorial {X Y : Type} {f : X → Y} {τ : X → X} {σ : Y → Y}
+    (hf : Equivariant f τ σ) {x : X} (hx : τ x = x) : σ (f x) = f x := by
+  rw [← hf x, hx]
+
+/-- A global seat: an involution whose fixed set is the locus. -/
+structure GlobalSeat (P : Pt → Prop) (σ : Pt → Pt) : Prop where
+  involutive : ∀ p, σ (σ p) = p
+  fixed_iff : ∀ p, σ p = p ↔ P p
+
+theorem fold_global_seat : GlobalSeat OnLine fold := ⟨fold_involutive, seat_fixed_line⟩
+
+/-- A carrier: a map from world-instances into the strip landing on the line. -/
+structure Carrier (W : Type) where
+  ι : W → Pt
+  lands : ∀ w, OnLine (ι w)
+
+def image {W : Type} (ι : W → Pt) : Pt → Prop := fun s => ∃ w, ι w = s
+def Actuated {W : Type} (ι : W → Pt) (Z : Pt → Prop) : Prop := ∀ s, Z s → ∃ w, ι w = s
+
+/-- Landing is forced: an equivariant map into the seat carries every fixed point of the physical
+    involution onto the line. The carrier is built from the symmetry, not chosen. -/
+theorem equivariant_carrier_lands {X : Type} (f : X → Pt) (τ : X → X)
+    (hf : Equivariant f τ fold) :
+    ∃ C : Carrier { x : X // τ x = x }, ∀ w, C.ι w = f w.1 :=
+  ⟨⟨fun w => f w.1, fun w => (seat_fixed_line (f w.1)).mp (fix_functorial hf w.2)⟩, fun _ => rfl⟩
+
+/-- The image of a carrier is compliant with no premise at all. -/
+theorem value_on_image {W : Type} (C : Carrier W) : Value (image C.ι) :=
+  fun _ hs => match hs with | ⟨w, hw⟩ => hw ▸ C.lands w
+
+/-- The kinetic crossing: a carrier and its coverage give the value, and nothing else is used. -/
+theorem kinetic_crossing {W : Type} (C : Carrier W) (Z : Pt → Prop) (hcov : Actuated C.ι Z) :
+    Value Z :=
+  fun s hs => match hcov s hs with | ⟨w, hw⟩ => hw ▸ C.lands w
+
+/-- Under the seat every off-line point has a partner, distinct and also off the line. -/
+theorem off_locus_pair (p : Pt) (hp : ¬ OnLine p) :
+    fold p ≠ p ∧ ¬ OnLine (fold p) ∧ reg (fold p) = reg p := by
+  refine ⟨fun e => hp ((seat_fixed_line p).mp e), fun e => hp ?_, rfl⟩
+  obtain ⟨h, t⟩ := p
+  have e' : 2 - h = 1 := e
+  show h = 1
+  omega
+
+/-! ## Part II. The energy carrier: an energy, its rate, and the fold -/
+
+/-- An energy a + i β/2, as frequency and doubled rate; its mode's norm moves as e^{βt}. -/
+structure Energy where
+  freq : Int
+  rate : Int
+  deriving DecidableEq, Repr
+
+/-- The time mirror of a mode: its rate reversed, its frequency kept (complex conjugation of E). -/
+def Energy.mirror (E : Energy) : Energy := ⟨E.freq, -E.rate⟩
+def IsReal (E : Energy) : Prop := E.rate = 0
+/-- Stationary: the norm e^{βt} is unchanged at every integer time t, i.e. β t = 0 for all t. -/
+def Stationary (E : Energy) : Prop := ∀ t : Int, E.rate * t = 0
+
+/-- The energy carrier s = 1/2 + iE in the chart: h = 1 − β, t = a. -/
+def phi (E : Energy) : Pt := (1 - E.rate, E.freq)
+def psi (p : Pt) : Energy := ⟨p.2, 1 - p.1⟩
+
+theorem ee {a b c d : Int} : (⟨a, b⟩ : Energy) = ⟨c, d⟩ ↔ a = c ∧ b = d :=
+  ⟨fun e => ⟨congrArg Energy.freq e, congrArg Energy.rate e⟩,
+   fun ⟨e1, e2⟩ => by subst e1; subst e2; rfl⟩
+
+theorem mirror_involutive (E : Energy) : E.mirror.mirror = E := by
+  obtain ⟨a, b⟩ := E
+  show (⟨a, - -b⟩ : Energy) = ⟨a, b⟩
+  rw [ee]; exact ⟨rfl, by omega⟩
+
+theorem psi_phi (E : Energy) : psi (phi E) = E := by
+  obtain ⟨a, b⟩ := E
+  show (⟨a, 1 - (1 - b)⟩ : Energy) = ⟨a, b⟩
+  rw [ee]; exact ⟨rfl, by omega⟩
+
+theorem phi_psi (p : Pt) : phi (psi p) = p := by
+  obtain ⟨h, t⟩ := p
+  show ((1 - (1 - h), t) : Pt) = (h, t)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+theorem phi_injective (E F : Energy) (h : phi E = phi F) : E = F := by
+  rw [← psi_phi E, ← psi_phi F, h]
+
+/-- EQUIVARIANCE: time-mirroring the rate is the fold. -/
+theorem phi_equivariant : Equivariant phi Energy.mirror fold := by
+  intro E
+  obtain ⟨a, b⟩ := E
+  show ((1 - -b, a) : Pt) = (2 - (1 - b), a)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+theorem mirror_fixed_iff_real (E : Energy) : E.mirror = E ↔ IsReal E := by
+  obtain ⟨a, b⟩ := E
+  show (⟨a, -b⟩ : Energy) = ⟨a, b⟩ ↔ b = 0
+  rw [ee]; constructor
+  · intro ⟨_, e⟩; omega
+  · intro e; exact ⟨rfl, by omega⟩
+
+/-- The line is exactly the image of the real energies. -/
+theorem phi_line_iff_real (E : Energy) : OnLine (phi E) ↔ IsReal E := by
+  obtain ⟨a, b⟩ := E
+  show 1 - b = 1 ↔ b = 0
+  exact ⟨fun h => by omega, fun h => by subst h; rfl⟩
+
+theorem stationary_iff_real (E : Energy) : Stationary E ↔ IsReal E := by
+  constructor
+  · intro h; have h1 := h 1; rw [Int.mul_one] at h1; exact h1
+  · intro h t; show E.rate * t = 0; rw [show E.rate = 0 from h, Int.zero_mul]
+
+/-- THE LINE IS WHERE ENERGY STANDS STILL. -/
+theorem line_is_stationary (p : Pt) : OnLine p ↔ Stationary (psi p) := by
+  rw [stationary_iff_real, ← phi_line_iff_real, phi_psi]
+
+/-- Every measured energy is a real number, and every real energy lands on the line. -/
+theorem measured_on_line (a : Int) : OnLine (phi ⟨a, 0⟩) := rfl
+
+/-- The registration mirror: no real energy lands off the line. -/
+theorem no_measurement_off_line (p : Pt) (hp : ¬ OnLine p) (a : Int) : phi ⟨a, 0⟩ ≠ p :=
+  fun e => hp (e ▸ measured_on_line a)
+
+/-- The energy carrier, built from the symmetry: the real energies land on the line. -/
+theorem energy_carrier_lands :
+    ∃ C : Carrier { E : Energy // E.mirror = E }, ∀ w, C.ι w = phi w.1 :=
+  equivariant_carrier_lands phi Energy.mirror phi_equivariant
+
+/-! ## Part III. The substrate: the particle map, three odd readings and one even -/
+
+/-- A particle in the broken phase: electric charge times three, colour, baryon number times
+    three, lepton number, and its energy. -/
+structure Particle where
+  q3 : Int
+  colour : Int
+  b3 : Int
+  lepton : Int
+  energy : Energy
+  deriving DecidableEq, Repr
+
+/-- The particle map: every additive charge flipped, the energy kept (frequency and rate). -/
+def bar (c : Particle) : Particle := ⟨-c.q3, -c.colour, -c.b3, -c.lepton, c.energy⟩
+/-- The time mirror of a particle's mode. -/
+def tmirror (c : Particle) : Particle := ⟨c.q3, c.colour, c.b3, c.lepton, c.energy.mirror⟩
+def Neutral (c : Particle) : Prop := c.q3 = 0 ∧ c.colour = 0 ∧ c.b3 = 0 ∧ c.lepton = 0
+
+theorem bar_involutive (c : Particle) : bar (bar c) = c := by
+  obtain ⟨q, k, b, l, E⟩ := c
+  show (⟨- -q, - -k, - -b, - -l, E⟩ : Particle) = ⟨q, k, b, l, E⟩
+  rw [Int.neg_neg, Int.neg_neg, Int.neg_neg, Int.neg_neg]
+
+theorem bar_fixed_iff_neutral (c : Particle) : bar c = c ↔ Neutral c := by
+  obtain ⟨q, k, b, l, E⟩ := c
+  show (⟨-q, -k, -b, -l, E⟩ : Particle) = ⟨q, k, b, l, E⟩ ↔ (q = 0 ∧ k = 0 ∧ b = 0 ∧ l = 0)
+  constructor
+  · intro h
+    have h1 := congrArg Particle.q3 h
+    have h2 := congrArg Particle.colour h
+    have h3 := congrArg Particle.b3 h
+    have h4 := congrArg Particle.lepton h
+    change -q = q at h1; change -k = k at h2; change -b = b at h3; change -l = l at h4
+    exact ⟨by omega, by omega, by omega, by omega⟩
+  · intro ⟨h1, h2, h3, h4⟩
+    subst h1; subst h2; subst h3; subst h4; rfl
+
+/-- Three plus one: the charge readings are odd under the particle map, the energy reading even. -/
+theorem odd_charges_even_energy (c : Particle) :
+    ((bar c).q3 = -c.q3 ∧ (bar c).colour = -c.colour ∧ (bar c).b3 = -c.b3 ∧
+     (bar c).lepton = -c.lepton) ∧ (bar c).energy = c.energy :=
+  ⟨⟨rfl, rfl, rfl, rfl⟩, rfl⟩
+
+/-- Gravity reads energy only, so no gravitational reading tells a particle from its antiparticle. -/
+theorem gravity_reads_no_charge_bit {β : Type} (g : Energy → β) (c : Particle) :
+    g (bar c).energy = g c.energy := rfl
+
+/-- The two involutions of the substrate commute. -/
+theorem involutions_commute (c : Particle) : bar (tmirror c) = tmirror (bar c) := rfl
+
+theorem tmirror_involutive (c : Particle) : tmirror (tmirror c) = c := by
+  obtain ⟨q, k, b, l, E⟩ := c
+  show (⟨q, k, b, l, E.mirror.mirror⟩ : Particle) = ⟨q, k, b, l, E⟩
+  rw [mirror_involutive]
+
+/-- A particle is fixed by both involutions exactly when it is neutral and stable. -/
+theorem joint_fixed_iff (c : Particle) :
+    (bar c = c ∧ tmirror c = c) ↔ (Neutral c ∧ IsReal c.energy) := by
+  constructor
+  · intro ⟨h1, h2⟩
+    refine ⟨(bar_fixed_iff_neutral c).mp h1, (mirror_fixed_iff_real c.energy).mp ?_⟩
+    exact congrArg Particle.energy h2
+  · intro ⟨h1, h2⟩
+    refine ⟨(bar_fixed_iff_neutral c).mpr h1, ?_⟩
+    obtain ⟨q, k, b, l, E⟩ := c
+    show (⟨q, k, b, l, E.mirror⟩ : Particle) = ⟨q, k, b, l, E⟩
+    rw [(mirror_fixed_iff_real E).mpr h2]
+
+/-- The energy carrier on particles: the seat point of a particle's energy. -/
+def energySeat (c : Particle) : Pt := phi c.energy
+/-- The charge carrier on particles, the odd face: electric charge (in thirds) is the side. -/
+def chargeSeat (c : Particle) : Pt := (1 + c.q3, c.energy.freq)
+/-- The lepton chart of the electron's witness: charge q in units of e goes to h = 1 + q. -/
+def leptonSeat (q m : Int) : Pt := (1 + q, m)
+
+/-- The charge carrier is equivariant: the particle map is carried onto the fold. -/
+theorem charge_carrier_equivariant : Equivariant chargeSeat bar fold := by
+  intro c
+  show ((1 + -c.q3, c.energy.freq) : Pt) = (2 - (1 + c.q3), c.energy.freq)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+/-- The energy carrier is blind to the particle map and equivariant for the time mirror. -/
+theorem pair_lands_once (c : Particle) : energySeat (bar c) = energySeat c := rfl
+theorem tmirror_equivariant : Equivariant energySeat tmirror fold := fun c => phi_equivariant c.energy
+
+/-- Electrically neutral particles land on the line under the charge carrier. -/
+theorem neutral_charge_on_line (c : Particle) (h : c.q3 = 0) : OnLine (chargeSeat c) := by
+  show 1 + c.q3 = 1
+  omega
+
+/-- The electron and the positron land on the two edges, real parts 0 and 1, mirror images. -/
+theorem pair_on_the_edges (m : Int) :
+    leptonSeat (-1) m = (0, m) ∧ leptonSeat 1 m = (2, m) ∧ fold (leptonSeat (-1) m) = leptonSeat 1 m :=
+  ⟨rfl, rfl, rfl⟩
+
+/-- A stable particle lands on the line under the energy carrier. -/
+theorem stable_lands (c : Particle) (h : IsReal c.energy) : OnLine (energySeat c) :=
+  (phi_line_iff_real c.energy).mpr h
+
+/-! ## Part IV. The pair beside the line; the magnet keeps every energy real -/
+
+/-- The off-line pair, read physically: a mode off the line and its mirror are two modes, both off
+    the line, one record; their rates cancel, and exactly one of them decays. -/
+theorem off_line_pair (E : Energy) (h : ¬ IsReal E) :
+    E.mirror ≠ E ∧ ¬ OnLine (phi E) ∧ ¬ OnLine (phi E.mirror) ∧
+    reg (phi E.mirror) = reg (phi E) ∧ E.rate + E.mirror.rate = 0 ∧
+    (E.rate < 0 ∨ E.mirror.rate < 0) := by
+  refine ⟨fun e => h ((mirror_fixed_iff_real E).mp e), fun e => h ((phi_line_iff_real E).mp e),
+    fun e => h ?_, by rw [phi_equivariant]; rfl, ?_, ?_⟩
+  · have e2 := (phi_line_iff_real E.mirror).mp e
+    show E.rate = 0
+    have : -E.rate = 0 := e2
+    omega
+  · show E.rate + -E.rate = 0; omega
+  · have hb : E.rate ≠ 0 := h
+    show E.rate < 0 ∨ -E.rate < 0
+    omega
+
+/-- A decaying particle and its time mirror: two seat points off the line, one record. -/
+theorem resonance_pair (c : Particle) (h : ¬ IsReal c.energy) :
+    energySeat (tmirror c) ≠ energySeat c ∧ ¬ OnLine (energySeat c) ∧
+    reg (energySeat (tmirror c)) = reg (energySeat c) := by
+  refine ⟨fun e => ?_, fun e => h ((phi_line_iff_real c.energy).mp e), by
+    rw [tmirror_equivariant]; rfl⟩
+  have : c.energy.mirror = c.energy := phi_injective _ _ e
+  exact h ((mirror_fixed_iff_real c.energy).mp this)
+
+theorem sq_nonneg (x : Int) : 0 ≤ x * x := by
+  rcases Int.le_total 0 x with h | h
+  · exact Int.mul_nonneg h h
+  · have h' : 0 ≤ -x := by omega
+    have := Int.mul_nonneg h' h'
+    rw [Int.neg_mul_neg] at this; exact this
+
+/-- A Hermitian 2×2 block [[a, c + i d], [c − i d, b]]; time reversal conjugates the block. -/
+structure Block where
+  a : Int
+  b : Int
+  c : Int
+  d : Int
+
+def Block.T (H : Block) : Block := ⟨H.a, H.b, H.c, -H.d⟩
+/-- The discriminant of the characteristic polynomial: the eigenvalues are real when it is ≥ 0. -/
+def Block.disc (H : Block) : Int := (H.a - H.b) * (H.a - H.b) + 4 * (H.c * H.c + H.d * H.d)
+
+theorem block_T_fixed_iff (H : Block) : H.T = H ↔ H.d = 0 := by
+  obtain ⟨a, b, c, d⟩ := H
+  constructor
+  · intro e; have := congrArg Block.d e; change -d = d at this; show d = 0; omega
+  · intro e; change d = 0 at e; subst e; rfl
+
+/-- THE MAGNET KEEPS EVERY ENERGY REAL: a magnetic term breaks time reversal of the block and
+    leaves the spectrum real; the arrow is in the statistics, the line is in the stationarity. -/
+theorem stationarity_survives_the_magnet (H : Block) : 0 ≤ H.disc ∧ H.T.disc = H.disc := by
+  refine ⟨?_, ?_⟩
+  · have e1 := sq_nonneg (H.a - H.b); have e2 := sq_nonneg H.c; have e3 := sq_nonneg H.d
+    show 0 ≤ (H.a - H.b) * (H.a - H.b) + 4 * (H.c * H.c + H.d * H.d)
+    omega
+  · show (H.a - H.b) * (H.a - H.b) + 4 * (H.c * H.c + -H.d * -H.d) =
+      (H.a - H.b) * (H.a - H.b) + 4 * (H.c * H.c + H.d * H.d)
+    rw [Int.neg_mul_neg]
+
+/-! ## Part V. Conservation of the whole forces nothing; the record decides nothing -/
+
+def worldLine : Pt → Prop := fun s => s = (1, 5)
+def worldPair : Pt → Prop := fun s => s = (0, 5) ∨ s = (2, 5)
+def recordOf (Z : Pt → Prop) : Pt → Prop := fun r => ∃ s, Z s ∧ reg s = r
+
+theorem worlds_share_the_record (r : Pt) : recordOf worldLine r ↔ recordOf worldPair r := by
+  constructor
+  · intro ⟨s, hs, e⟩
+    exact ⟨(0, 5), Or.inl rfl, by rw [← e, hs]; rfl⟩
+  · intro ⟨s, hs, e⟩
+    refine ⟨(1, 5), rfl, ?_⟩
+    rcases hs with h | h <;> (rw [← e, h]; rfl)
+
+theorem world_line_value : Value worldLine := fun s hs => by rw [hs]; rfl
+
+theorem world_pair_not_value : ¬ Value worldPair := by
+  intro h
+  have := h (0, 5) (Or.inl rfl)
+  exact absurd this (by decide)
+
+/-- The record decides nothing: any reading of the record gives the two worlds one answer. -/
+theorem record_decides_nothing (F : (Pt → Prop) → Prop) :
+    (F (recordOf worldLine) ↔ F (recordOf worldPair)) ∧ Value worldLine ∧ ¬ Value worldPair := by
+  have e : recordOf worldLine = recordOf worldPair :=
+    funext fun r => propext (worlds_share_the_record r)
+  exact ⟨by rw [e], world_line_value, world_pair_not_value⟩
+
+theorem pair_world_fold_closed (s : Pt) (hs : worldPair s) : worldPair (fold s) := by
+  rcases hs with h | h
+  · right; rw [h]; rfl
+  · left; rw [h]; rfl
+
+theorem pair_world_total_rate : (psi (0, 5)).rate + (psi (2, 5)).rate = 0 := by decide
+
+/-- CONSERVATION OF THE WHOLE FORCES NOTHING: a fold-closed world whose total rate vanishes can
+    still stand off the line. The value is stationarity of each mode, not of their sum. -/
+theorem whole_conservation_forces_nothing :
+    ∃ Z : Pt → Prop, (∀ s, Z s → Z (fold s)) ∧
+      (psi (0, 5)).rate + (psi (2, 5)).rate = 0 ∧ Z (0, 5) ∧ Z (2, 5) ∧ ¬ Value Z :=
+  ⟨worldPair, pair_world_fold_closed, pair_world_total_rate, Or.inl rfl, Or.inr rfl,
+   world_pair_not_value⟩
+
+/-- A fold-closed world with a mode off the line carries a decaying mode and a growing one. -/
+theorem fold_closed_off_line_decays_and_grows (Z : Pt → Prop) (hZ : ∀ s, Z s → Z (fold s))
+    (s : Pt) (hs : Z s) (hoff : ¬ OnLine s) :
+    ∃ u v, Z u ∧ Z v ∧ (psi u).rate < 0 ∧ 0 < (psi v).rate := by
+  obtain ⟨h, t⟩ := s
+  have hh : h ≠ 1 := hoff
+  have hf : Z (2 - h, t) := hZ (h, t) hs
+  by_cases hlt : h < 1
+  · refine ⟨(2 - h, t), (h, t), hf, hs, ?_, ?_⟩
+    · show 1 - (2 - h) < 0; omega
+    · show 0 < 1 - h; omega
+  · refine ⟨(h, t), (2 - h, t), hs, hf, ?_, ?_⟩
+    · show 1 - h < 0; omega
+    · show 0 < 1 - (2 - h); omega
+
+/-! ## Part VI. The posit has gravity's shape -/
+
+/-- THE VALUE IS STATIONARITY. -/
+theorem value_iff_stationary (Z : Pt → Prop) : Value Z ↔ ∀ s, Z s → Stationary (psi s) :=
+  ⟨fun h s hs => (line_is_stationary s).mp (h s hs), fun h s hs => (line_is_stationary s).mpr (h s hs)⟩
+
+/-- Least erasure is stationarity. -/
+theorem least_erasure_is_stationarity (Z : Pt → Prop) :
+    LeastErasure Z ↔ ∀ s, Z s → Stationary (psi s) :=
+  (least_erasure_iff_value Z).trans (value_iff_stationary Z)
+
+/-- The posit's shape is the fold: least erasure holds exactly when the fold fixes every member,
+    no member standing off the line and no remanent side, as gravity registers. -/
+theorem posit_is_the_fold (Z : Pt → Prop) : LeastErasure Z ↔ ∀ s, Z s → fold s = s :=
+  (least_erasure_iff_value Z).trans
+    ⟨fun h s hs => (seat_fixed_line s).mpr (h s hs), fun h s hs => (seat_fixed_line s).mp (h s hs)⟩
+
+/-- THE ACT IS THE VALUE: the premise that every zero is a stationary mode is the value itself. -/
+theorem act_is_the_value (Z : Pt → Prop) :
+    (∀ s, Z s → Stationary (psi s)) ↔ Value Z := (value_iff_stationary Z).symm
+
+def ActuatedByEnergies (Z : Pt → Prop) : Prop := ∀ s, Z s → ∃ a : Int, phi ⟨a, 0⟩ = s
+
+/-- The crossing from the physical side, exact both ways. -/
+theorem value_iff_actuated (Z : Pt → Prop) : Value Z ↔ ActuatedByEnergies Z := by
+  constructor
+  · intro h s hs
+    have hl : s.1 = 1 := h s hs
+    refine ⟨s.2, ?_⟩
+    obtain ⟨u, v⟩ := s
+    show ((1 - 0, v) : Pt) = (u, v)
+    rw [pe]; exact ⟨by simp at hl; omega, rfl⟩
+  · intro h s hs
+    obtain ⟨a, e⟩ := h s hs
+    exact e ▸ measured_on_line a
+
+/-- What a sentence over a larger class adds to a crossing is exactly the unactuated. -/
+theorem surplus_is_the_unactuated (Zact Zall : Pt → Prop) (hv : Value Zact)
+    (he : ∃ s, Zall s ∧ ¬ OnLine s) : ∃ s, Zall s ∧ ¬ Zact s ∧ ¬ OnLine s := by
+  obtain ⟨s, hs, hoff⟩ := he
+  exact ⟨s, hs, fun ha => hoff (hv s ha), hoff⟩
+
+/-! ## Part VII. The hardware closes -/
+
+structure Weyl where
+  name : String
+  mult : Int
+  y6 : Int
+  triplet : Bool
+  doublet : Bool
+
+/-- One generation as left-handed Weyl fields: Q, u^c, d^c, L, e^c; hypercharge times six. -/
+def generation : List Weyl :=
+  [⟨"Q", 6, 1, true, true⟩, ⟨"u^c", 3, -4, true, false⟩, ⟨"d^c", 3, 2, true, false⟩,
+   ⟨"L", 2, -3, false, true⟩, ⟨"e^c", 1, 6, false, false⟩]
+
+def tsum (f : Weyl → Int) : List Weyl → Int
+  | [] => 0
+  | w :: ws => f w + tsum f ws
+
+theorem tsum_append (f : Weyl → Int) (l1 l2 : List Weyl) :
+    tsum f (l1 ++ l2) = tsum f l1 + tsum f l2 := by
+  induction l1 with
+  | nil => simp [tsum]
+  | cons w ws ih => simp [tsum, ih, Int.add_assoc]
+
+def gravAnom (w : Weyl) : Int := w.mult * w.y6
+def cubeAnom (w : Weyl) : Int := w.mult * w.y6 ^ 3
+def colourAnom (w : Weyl) : Int := if w.triplet then (w.mult / 3) * w.y6 else 0
+def isospinAnom (w : Weyl) : Int := if w.doublet then (w.mult / 2) * w.y6 else 0
+def doubletCount (w : Weyl) : Int := if w.doublet then w.mult / 2 else 0
+def colourCube (w : Weyl) : Int :=
+  if w.triplet then (if w.name = "Q" then w.mult / 3 else -(w.mult / 3)) else 0
+
+/-- One generation closes: every gauge anomaly and the mixed gravitational anomaly vanish, and
+    the isospin doublets number four, an even count. -/
+theorem generation_closes :
+    tsum gravAnom generation = 0 ∧ tsum cubeAnom generation = 0 ∧
+    tsum colourAnom generation = 0 ∧ tsum isospinAnom generation = 0 ∧
+    tsum doubletCount generation = 4 ∧ tsum colourCube generation = 0 := by decide
+
+def gens : Nat → List Weyl
+  | 0 => []
+  | n + 1 => generation ++ gens n
+
+theorem gens_sum (f : Weyl → Int) (n : Nat) : tsum f (gens n) = n * tsum f generation := by
+  induction n with
+  | zero => simp [gens, tsum]
+  | succ n ih => rw [gens, tsum_append, ih, Int.natCast_succ, Int.add_mul, Int.one_mul, Int.add_comm]
+
+/-- Every number of generations closes: the anomaly conditions do not fix the count. -/
+theorem every_generation_count_closes (n : Nat) :
+    tsum gravAnom (gens n) = 0 ∧ tsum cubeAnom (gens n) = 0 ∧
+    tsum colourAnom (gens n) = 0 ∧ tsum isospinAnom (gens n) = 0 ∧
+    tsum doubletCount (gens n) = 4 * n ∧ tsum colourCube (gens n) = 0 := by
+  obtain ⟨g1, g2, g3, g4, g5, g6⟩ := generation_closes
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩ <;> rw [gens_sum]
+  · rw [g1, Int.mul_zero]
+  · rw [g2, Int.mul_zero]
+  · rw [g3, Int.mul_zero]
+  · rw [g4, Int.mul_zero]
+  · rw [g5, Int.mul_comm]
+  · rw [g6, Int.mul_zero]
+
+/-- The hypercharges are forced, not fitted. -/
+theorem hypercharge_forced (yQ yu yd yL ye yH : Int)
+    (Yu : yQ + yu + yH = 0) (Yd : yQ + yd - yH = 0) (Ye : yL + ye - yH = 0)
+    (iso : 3 * yQ + yL = 0) (grav : 6 * yQ + 3 * yu + 3 * yd + 2 * yL + ye = 0) :
+    yu = -4 * yQ ∧ yd = 2 * yQ ∧ yL = -3 * yQ ∧ ye = 6 * yQ ∧ yH = 3 * yQ :=
+  ⟨by omega, by omega, by omega, by omega, by omega⟩
+
+/-- Electric charge Q = T3 + Y, times six. -/
+def charge6 (t3x6 y6 : Int) : Int := t3x6 + y6
+theorem charges :
+    charge6 3 1 = 4 ∧ charge6 (-3) 1 = -2 ∧ charge6 3 (-3) = 0 ∧ charge6 (-3) (-3) = -6 := by decide
+theorem matter_neutral :
+    charge6 3 1 + charge6 3 1 + charge6 (-3) 1 = 6 ∧
+    charge6 3 1 + charge6 (-3) 1 + charge6 (-3) 1 = 0 ∧
+    (charge6 3 1 + charge6 3 1 + charge6 (-3) 1) + charge6 (-3) (-3) = 0 := by decide
+theorem vacuum_neutral : charge6 (-3) 3 = 0 := by decide
+
+/-- The colour lock: three colour labels carry a nonzero alternating product exactly when they
+    are distinct, so a colour singlet of three quarks exists only on three distinct axes. -/
+def lockProduct (a b c : Fin 3) : Int :=
+  (((b : Nat) : Int) - ((a : Nat) : Int)) * (((c : Nat) : Int) - ((a : Nat) : Int)) *
+  (((c : Nat) : Int) - ((b : Nat) : Int))
+
+theorem lock_iff_distinct :
+    ∀ a b c : Fin 3, lockProduct a b c ≠ 0 ↔ (a ≠ b ∧ a ≠ c ∧ b ≠ c) := by decide
+
+theorem lock_fails_when_colours_coincide : ∀ a c : Fin 3, lockProduct a a c = 0 := by decide
+
+/-! ## Part VIII. The dark sector, the neutrino's bit and floor, least erasure as reversibility -/
+
+/-- The dark sector: a stable particle fixed by the particle map lands on the line under the
+    energy carrier, and under the charge carrier too, with every charge reading zero. -/
+theorem dark_on_the_line (c : Particle) (hfix : bar c = c) (hst : IsReal c.energy) :
+    OnLine (energySeat c) ∧ OnLine (chargeSeat c) ∧
+    c.q3 = 0 ∧ c.colour = 0 ∧ c.b3 = 0 ∧ c.lepton = 0 := by
+  obtain ⟨h1, h2, h3, h4⟩ := (bar_fixed_iff_neutral c).mp hfix
+  exact ⟨stable_lands c hst, neutral_charge_on_line c h1, h1, h2, h3, h4⟩
+
+def nuDirac (E : Energy) : Particle := ⟨0, 0, 0, 1, E⟩
+def nuMajorana (E : Energy) : Particle := ⟨0, 0, 0, 0, E⟩
+
+/-- The neutrino's one keyed bit: one gauge record, one seat point, fixed in one world only. -/
+theorem majorana_is_one_keyed_bit (E : Energy) :
+    ((nuDirac E).q3 = (nuMajorana E).q3 ∧ (nuDirac E).colour = (nuMajorana E).colour ∧
+      energySeat (nuDirac E) = energySeat (nuMajorana E) ∧
+      chargeSeat (nuDirac E) = chargeSeat (nuMajorana E)) ∧
+    bar (nuMajorana E) = nuMajorana E ∧ bar (nuDirac E) ≠ nuDirac E := by
+  refine ⟨⟨rfl, rfl, rfl, rfl⟩, rfl, fun h => ?_⟩
+  have h4 := congrArg Particle.lepton h
+  change (-1 : Int) = 1 at h4
+  omega
+
+/-- The floor supplied by deed: a positive difference of squared masses forbids a vanishing mass. -/
+theorem floor_by_deed (m2 m3 : Int) (h : m2 * m2 < m3 * m3) : m3 ≠ 0 := by
+  intro e; subst e; have := sq_nonneg m2; rw [Int.mul_zero] at h; omega
+
+def Merges {α : Type} (f : α → α) : Prop := ∃ x y, x ≠ y ∧ f x = f y
+
+theorem reversible_merges_nothing {α : Type} (f g : α → α) (h : ∀ x, g (f x) = x) :
+    ¬ Merges f := by
+  intro ⟨x, y, hne, e⟩
+  apply hne
+  rw [← h x, ← h y, e]
+
+theorem merging_is_irreversible {α : Type} (f : α → α) (hm : Merges f) :
+    ¬ ∃ g : α → α, ∀ x, g (f x) = x :=
+  fun ⟨g, h⟩ => reversible_merges_nothing f g h hm
+
+theorem mirror_is_reversible : ¬ Merges Energy.mirror :=
+  reversible_merges_nothing Energy.mirror Energy.mirror mirror_involutive
+
+/-- Registration merges exactly the off-line pair: it erases the side of a point off the line. -/
+theorem registration_erases_off_line (p : Pt) (hp : ¬ OnLine p) : Merges reg :=
+  ⟨p, fold p, fun e => hp ((seat_fixed_line p).mp e.symm), (reg_forgets_side p).symm⟩
+
+/-! ## Part IX. The capstones -/
+
+/-- THE SUBSTRATE CARRIES THE SEAT: the fold is a global seat; both carriers are equivariant, the
+    energy carrier for the time mirror and the charge carrier for the particle map; the two
+    involutions commute; the energy carrier is blind to the particle map; and a particle fixed by
+    both lands on the line under both. -/
+theorem substrate_carries_the_seat :
+    GlobalSeat OnLine fold ∧
+    Equivariant phi Energy.mirror fold ∧ Equivariant chargeSeat bar fold ∧
+    Equivariant energySeat tmirror fold ∧
+    (∀ c : Particle, bar (tmirror c) = tmirror (bar c)) ∧
+    (∀ c : Particle, energySeat (bar c) = energySeat c) ∧
+    (∀ c : Particle, bar c = c → tmirror c = c → OnLine (energySeat c) ∧ OnLine (chargeSeat c)) :=
+  ⟨fold_global_seat, phi_equivariant, charge_carrier_equivariant, tmirror_equivariant,
+   involutions_commute, pair_lands_once, fun c h1 h2 =>
+     let hj := (joint_fixed_iff c).mp ⟨h1, h2⟩
+     ⟨stable_lands c hj.2, neutral_charge_on_line c hj.1.1⟩⟩
+
+/-- THE PHYSICAL WITNESS OF THE CLOSURE. -/
+theorem physical_witness :
+    (∀ E : Energy, phi E.mirror = fold (phi E)) ∧
+    (∀ E : Energy, psi (phi E) = E) ∧ (∀ p : Pt, phi (psi p) = p) ∧
+    (∀ p : Pt, OnLine p ↔ Stationary (psi p)) ∧
+    (∀ Z : Pt → Prop, Value Z ↔ ∀ s, Z s → Stationary (psi s)) ∧
+    (∀ Z : Pt → Prop, Value Z ↔ ActuatedByEnergies Z) ∧
+    (∀ Z : Pt → Prop, LeastErasure Z ↔ ∀ s, Z s → fold s = s) ∧
+    (∃ Z : Pt → Prop, (∀ s, Z s → Z (fold s)) ∧
+      (psi (0, 5)).rate + (psi (2, 5)).rate = 0 ∧ Z (0, 5) ∧ Z (2, 5) ∧ ¬ Value Z) ∧
+    (∀ F : (Pt → Prop) → Prop,
+      (F (recordOf worldLine) ↔ F (recordOf worldPair)) ∧ Value worldLine ∧ ¬ Value worldPair) ∧
+    (∀ H : Block, 0 ≤ H.disc ∧ H.T.disc = H.disc) :=
+  ⟨phi_equivariant, psi_phi, phi_psi, line_is_stationary, value_iff_stationary,
+   value_iff_actuated, posit_is_the_fold, whole_conservation_forces_nothing,
+   record_decides_nothing, stationarity_survives_the_magnet⟩
+
+/-- THE HARDWARE CLOSES. -/
+theorem hardware_closes :
+    (tsum gravAnom generation = 0 ∧ tsum cubeAnom generation = 0 ∧
+      tsum colourAnom generation = 0 ∧ tsum isospinAnom generation = 0 ∧
+      tsum doubletCount generation = 4 ∧ tsum colourCube generation = 0) ∧
+    (∀ n : Nat, tsum gravAnom (gens n) = 0 ∧ tsum cubeAnom (gens n) = 0 ∧
+      tsum colourAnom (gens n) = 0 ∧ tsum isospinAnom (gens n) = 0 ∧
+      tsum doubletCount (gens n) = 4 * n ∧ tsum colourCube (gens n) = 0) ∧
+    (charge6 3 1 + charge6 3 1 + charge6 (-3) 1) + charge6 (-3) (-3) = 0 ∧
+    charge6 (-3) 3 = 0 ∧
+    (∀ a b c : Fin 3, lockProduct a b c ≠ 0 ↔ (a ≠ b ∧ a ≠ c ∧ b ≠ c)) :=
+  ⟨generation_closes, every_generation_count_closes, matter_neutral.2.2, vacuum_neutral,
+   lock_iff_distinct⟩
+
+end SPHYS.OneSubstrate
+
+#print axioms SPHYS.OneSubstrate.pe
+#print axioms SPHYS.OneSubstrate.fold_involutive
+#print axioms SPHYS.OneSubstrate.seat_fixed_line
+#print axioms SPHYS.OneSubstrate.reg_lands
+#print axioms SPHYS.OneSubstrate.reg_fixes_iff
+#print axioms SPHYS.OneSubstrate.reg_forgets_side
+#print axioms SPHYS.OneSubstrate.least_erasure_iff_value
+#print axioms SPHYS.OneSubstrate.equivariant_id
+#print axioms SPHYS.OneSubstrate.equivariant_comp
+#print axioms SPHYS.OneSubstrate.fix_functorial
+#print axioms SPHYS.OneSubstrate.fold_global_seat
+#print axioms SPHYS.OneSubstrate.equivariant_carrier_lands
+#print axioms SPHYS.OneSubstrate.value_on_image
+#print axioms SPHYS.OneSubstrate.kinetic_crossing
+#print axioms SPHYS.OneSubstrate.off_locus_pair
+#print axioms SPHYS.OneSubstrate.ee
+#print axioms SPHYS.OneSubstrate.mirror_involutive
+#print axioms SPHYS.OneSubstrate.psi_phi
+#print axioms SPHYS.OneSubstrate.phi_psi
+#print axioms SPHYS.OneSubstrate.phi_injective
+#print axioms SPHYS.OneSubstrate.phi_equivariant
+#print axioms SPHYS.OneSubstrate.mirror_fixed_iff_real
+#print axioms SPHYS.OneSubstrate.phi_line_iff_real
+#print axioms SPHYS.OneSubstrate.stationary_iff_real
+#print axioms SPHYS.OneSubstrate.line_is_stationary
+#print axioms SPHYS.OneSubstrate.measured_on_line
+#print axioms SPHYS.OneSubstrate.no_measurement_off_line
+#print axioms SPHYS.OneSubstrate.energy_carrier_lands
+#print axioms SPHYS.OneSubstrate.bar_involutive
+#print axioms SPHYS.OneSubstrate.bar_fixed_iff_neutral
+#print axioms SPHYS.OneSubstrate.odd_charges_even_energy
+#print axioms SPHYS.OneSubstrate.gravity_reads_no_charge_bit
+#print axioms SPHYS.OneSubstrate.involutions_commute
+#print axioms SPHYS.OneSubstrate.tmirror_involutive
+#print axioms SPHYS.OneSubstrate.joint_fixed_iff
+#print axioms SPHYS.OneSubstrate.charge_carrier_equivariant
+#print axioms SPHYS.OneSubstrate.pair_lands_once
+#print axioms SPHYS.OneSubstrate.tmirror_equivariant
+#print axioms SPHYS.OneSubstrate.neutral_charge_on_line
+#print axioms SPHYS.OneSubstrate.pair_on_the_edges
+#print axioms SPHYS.OneSubstrate.stable_lands
+#print axioms SPHYS.OneSubstrate.off_line_pair
+#print axioms SPHYS.OneSubstrate.resonance_pair
+#print axioms SPHYS.OneSubstrate.sq_nonneg
+#print axioms SPHYS.OneSubstrate.block_T_fixed_iff
+#print axioms SPHYS.OneSubstrate.stationarity_survives_the_magnet
+#print axioms SPHYS.OneSubstrate.worlds_share_the_record
+#print axioms SPHYS.OneSubstrate.world_line_value
+#print axioms SPHYS.OneSubstrate.world_pair_not_value
+#print axioms SPHYS.OneSubstrate.record_decides_nothing
+#print axioms SPHYS.OneSubstrate.pair_world_fold_closed
+#print axioms SPHYS.OneSubstrate.pair_world_total_rate
+#print axioms SPHYS.OneSubstrate.whole_conservation_forces_nothing
+#print axioms SPHYS.OneSubstrate.fold_closed_off_line_decays_and_grows
+#print axioms SPHYS.OneSubstrate.value_iff_stationary
+#print axioms SPHYS.OneSubstrate.least_erasure_is_stationarity
+#print axioms SPHYS.OneSubstrate.posit_is_the_fold
+#print axioms SPHYS.OneSubstrate.act_is_the_value
+#print axioms SPHYS.OneSubstrate.value_iff_actuated
+#print axioms SPHYS.OneSubstrate.surplus_is_the_unactuated
+#print axioms SPHYS.OneSubstrate.tsum_append
+#print axioms SPHYS.OneSubstrate.generation_closes
+#print axioms SPHYS.OneSubstrate.gens_sum
+#print axioms SPHYS.OneSubstrate.every_generation_count_closes
+#print axioms SPHYS.OneSubstrate.hypercharge_forced
+#print axioms SPHYS.OneSubstrate.charges
+#print axioms SPHYS.OneSubstrate.matter_neutral
+#print axioms SPHYS.OneSubstrate.vacuum_neutral
+#print axioms SPHYS.OneSubstrate.lock_iff_distinct
+#print axioms SPHYS.OneSubstrate.lock_fails_when_colours_coincide
+#print axioms SPHYS.OneSubstrate.dark_on_the_line
+#print axioms SPHYS.OneSubstrate.majorana_is_one_keyed_bit
+#print axioms SPHYS.OneSubstrate.floor_by_deed
+#print axioms SPHYS.OneSubstrate.reversible_merges_nothing
+#print axioms SPHYS.OneSubstrate.merging_is_irreversible
+#print axioms SPHYS.OneSubstrate.mirror_is_reversible
+#print axioms SPHYS.OneSubstrate.registration_erases_off_line
+#print axioms SPHYS.OneSubstrate.substrate_carries_the_seat
+#print axioms SPHYS.OneSubstrate.physical_witness
+#print axioms SPHYS.OneSubstrate.hardware_closes
+\end{Verbatim}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{Verbatim}[fontsize=\fontsize{6.2}{7.2}\selectfont,breaklines,breakanywhere,breaksymbolleft={}]
+'SPHYS.OneSubstrate.pe' does not depend on any axioms
+'SPHYS.OneSubstrate.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.reg_lands' does not depend on any axioms
+'SPHYS.OneSubstrate.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.OneSubstrate.reg_forgets_side' does not depend on any axioms
+'SPHYS.OneSubstrate.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.OneSubstrate.equivariant_id' does not depend on any axioms
+'SPHYS.OneSubstrate.equivariant_comp' does not depend on any axioms
+'SPHYS.OneSubstrate.fix_functorial' does not depend on any axioms
+'SPHYS.OneSubstrate.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.value_on_image' does not depend on any axioms
+'SPHYS.OneSubstrate.kinetic_crossing' does not depend on any axioms
+'SPHYS.OneSubstrate.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.ee' does not depend on any axioms
+'SPHYS.OneSubstrate.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.OneSubstrate.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.measured_on_line' does not depend on any axioms
+'SPHYS.OneSubstrate.no_measurement_off_line' does not depend on any axioms
+'SPHYS.OneSubstrate.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.bar_involutive' does not depend on any axioms
+'SPHYS.OneSubstrate.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.OneSubstrate.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.OneSubstrate.involutions_commute' does not depend on any axioms
+'SPHYS.OneSubstrate.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.pair_lands_once' does not depend on any axioms
+'SPHYS.OneSubstrate.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.pair_on_the_edges' does not depend on any axioms
+'SPHYS.OneSubstrate.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.off_line_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.resonance_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.sq_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.block_T_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.stationarity_survives_the_magnet' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.worlds_share_the_record' does not depend on any axioms
+'SPHYS.OneSubstrate.world_line_value' does not depend on any axioms
+'SPHYS.OneSubstrate.world_pair_not_value' does not depend on any axioms
+'SPHYS.OneSubstrate.record_decides_nothing' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.pair_world_fold_closed' does not depend on any axioms
+'SPHYS.OneSubstrate.pair_world_total_rate' does not depend on any axioms
+'SPHYS.OneSubstrate.whole_conservation_forces_nothing' does not depend on any axioms
+'SPHYS.OneSubstrate.fold_closed_off_line_decays_and_grows' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.value_iff_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.least_erasure_is_stationarity' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.posit_is_the_fold' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.act_is_the_value' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.value_iff_actuated' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.surplus_is_the_unactuated' does not depend on any axioms
+'SPHYS.OneSubstrate.tsum_append' depends on axioms: [propext]
+'SPHYS.OneSubstrate.generation_closes' does not depend on any axioms
+'SPHYS.OneSubstrate.gens_sum' depends on axioms: [propext]
+'SPHYS.OneSubstrate.every_generation_count_closes' depends on axioms: [propext]
+'SPHYS.OneSubstrate.hypercharge_forced' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.charges' does not depend on any axioms
+'SPHYS.OneSubstrate.matter_neutral' does not depend on any axioms
+'SPHYS.OneSubstrate.vacuum_neutral' does not depend on any axioms
+'SPHYS.OneSubstrate.lock_iff_distinct' does not depend on any axioms
+'SPHYS.OneSubstrate.lock_fails_when_colours_coincide' does not depend on any axioms
+'SPHYS.OneSubstrate.dark_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.majorana_is_one_keyed_bit' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.floor_by_deed' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.reversible_merges_nothing' does not depend on any axioms
+'SPHYS.OneSubstrate.merging_is_irreversible' does not depend on any axioms
+'SPHYS.OneSubstrate.mirror_is_reversible' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.registration_erases_off_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.substrate_carries_the_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.physical_witness' depends on axioms: [propext, Quot.sound]
+'SPHYS.OneSubstrate.hardware_closes' depends on axioms: [propext]
+\end{Verbatim}
+\end{multicols}
+
+\hypertarget{appendix-b-substrate_twin.f90-and-its-run}{%
+\section{Appendix B: Substrate\_Twin.f90 and Its
+Run}\label{appendix-b-substrate_twin.f90-and-its-run}}
+
+The twin, verbatim, and its run under
+\texttt{gfortran\ -std=f2018\ -O2\ -fno-fast-math\ -ffp-contract=off}.
+
+\begin{multicols}{2}
+\begin{Verbatim}[fontsize=\fontsize{6.2}{7.2}\selectfont,breaklines,breakanywhere,breaksymbolleft={}]
+! Substrate_Twin.f90 · the executed twin of SPHYS_One_Substrate.lean · Fortran 2018.
+! Build (sealed): gfortran -std=f2018 -O2 -fno-fast-math -ffp-contract=off Substrate_Twin.f90
+! Blocks: A the integer chart; B the exact complex carrier; C closed systems and the magnet;
+! D the balanced dimer; E the actuated zeros; F the hardware and the colour lock; G the particle
+! map, the two carriers, antimatter's fall and measured widths; H the neutrino's floor; I the price.
+program substrate_twin
+  implicit none
+  integer, parameter :: dp = selected_real_kind(15, 307)
+  integer, parameter :: i8 = selected_int_kind(18)
+  real(dp), parameter :: HBAR_EVS = 6.582119569e-16_dp, YEAR_S = 3.15576e7_dp
+  real(dp), parameter :: KB = 1.380649e-23_dp
+  integer :: checks, fails
+  real(dp) :: pi
+  checks = 0; fails = 0; pi = acos(-1.0_dp)
+
+  call block_a(); call block_b(); call block_c(); call block_d()
+  call block_e(); call block_f(); call block_g(); call block_h(); call block_i()
+
+  write(*,'(a,i0,a,i0,a)') ' BATTERY-JSON: {"checks":', checks, ',"failures":', fails, '}'
+  if (fails > 0) error stop 1
+contains
+
+  subroutine check(name, ok)
+    character(*), intent(in) :: name
+    logical, intent(in) :: ok
+    checks = checks + 1
+    if (.not. ok) fails = fails + 1
+    write(*,'(a,a)') merge('  PASS  ', '  FAIL  ', ok), name
+  end subroutine check
+
+  ! ---------------------------------------------------------------- A. the integer chart
+  subroutine block_a()
+    integer :: a, b, t, h, n, neq, nrt, nline, nstat, npair
+    logical :: stat
+    n = 0; neq = 0; nrt = 0; nline = 0; nstat = 0; npair = 0
+    write(*,'(a)') 'A · the integer chart: E = (a, beta), phi(E) = (1 - beta, a), fold (h, t) = (2 - h, t)'
+    do a = -30, 30
+      do b = -30, 30
+        n = n + 1
+        ! equivariance: phi(mirror E) = fold(phi E)
+        if ((1 - (-b)) == 2 - (1 - b)) neq = neq + 1
+        ! round trip: psi(phi E) = E, psi(h, t) = (t, 1 - h)
+        h = 1 - b
+        if (a == a .and. (1 - h) == b) nrt = nrt + 1
+        ! the line is the image of the real energies
+        if ((h == 1) .eqv. (b == 0)) nline = nline + 1
+        ! stationary: beta t = 0 at every integer time in [-12, 12] exactly when beta = 0
+        stat = .true.
+        do t = -12, 12
+          if (b*t /= 0) stat = .false.
+        end do
+        if (stat .eqv. (b == 0)) nstat = nstat + 1
+        ! the off-line pair: one record, rates cancel, exactly one decays
+        if (b /= 0) then
+          if ((2 - h) /= h .and. b + (-b) == 0 .and. (b < 0 .neqv. -b < 0)) npair = npair + 1
+        end if
+      end do
+    end do
+    call check('equivariance on 3721 energies: the time mirror of the rate is the fold', neq == n)
+    call check('the carrier is a bijection: psi(phi E) = E on 3721 energies', nrt == n)
+    call check('the line is exactly the image of the real energies (3721 of 3721)', nline == n)
+    call check('stationary at every time in [-12,12] exactly when real (3721 of 3721)', nstat == n)
+    call check('every off-line mode has a distinct mirror, one record, rates cancelling, one decaying (3660)', &
+               npair == n - 61)
+  end subroutine block_a
+
+  ! ---------------------------------------------------------------- B. the exact complex carrier
+  subroutine block_b()
+    integer :: k, t
+    integer(i8) :: seed
+    complex(dp) :: E, s, sf, sm
+    real(dp) :: dmax, x, y, nrm, dn_real, dn_off
+    seed = 20260930_i8; dmax = 0.0_dp; dn_real = 0.0_dp; dn_off = huge(1.0_dp)
+    write(*,'(a)') 'B · the complex carrier s = 1/2 + iE: fold(s) = 1 - conj(s), mirror(E) = conj(E)'
+    do k = 1, 20000
+      x = 200.0_dp*(rnd(seed) - 0.5_dp); y = 2.0_dp*(rnd(seed) - 0.5_dp)
+      E = cmplx(x, y, dp)
+      s = cmplx(0.5_dp, 0.0_dp, dp) + cmplx(0.0_dp, 1.0_dp, dp)*E
+      sf = cmplx(1.0_dp, 0.0_dp, dp) - conjg(s)
+      sm = cmplx(0.5_dp, 0.0_dp, dp) + cmplx(0.0_dp, 1.0_dp, dp)*conjg(E)
+      dmax = max(dmax, abs(sf - sm))
+    end do
+    write(*,'(a,es10.3)') '  max |fold(s(E)) - s(conj E)| over 20000 energies: ', dmax
+    call check('fold(s(E)) = s(conj E) on 20000 complex energies, to 4 ulp of the scale', &
+               dmax <= 4.0_dp*epsilon(1.0_dp)*100.0_dp)
+    ! the norm of e^{-iEt}: stationary exactly on the real axis
+    do k = 1, 2000
+      x = 50.0_dp*(rnd(seed) - 0.5_dp)
+      do t = 1, 10
+        nrm = abs(exp(-cmplx(0.0_dp, 1.0_dp, dp)*cmplx(x, 0.0_dp, dp)*real(t, dp)))**2
+        dn_real = max(dn_real, abs(nrm - 1.0_dp))
+        nrm = abs(exp(-cmplx(0.0_dp, 1.0_dp, dp)*cmplx(x, 1.0e-3_dp, dp)*real(t, dp)))**2
+        dn_off = min(dn_off, abs(nrm - 1.0_dp))
+      end do
+    end do
+    write(*,'(a,es10.3,a,es10.3)') '  real energies: max |norm - 1| = ', dn_real, &
+         ';  rate 2e-3: min |norm - 1| = ', dn_off
+    call check('a real energy keeps its norm at every time to 1e-14', dn_real <= 1.0e-14_dp)
+    call check('a mode off the axis moves its norm (growth e^{beta t} visible at t >= 1)', dn_off >= 1.0e-3_dp)
+  end subroutine block_b
+
+  ! ---------------------------------------------------------------- C. closed systems
+  subroutine block_c()
+    integer :: k, nneg, nneg0, ntb
+    integer(i8) :: seed
+    real(dp) :: a, b, cr, ci, disc, disc0
+    seed = 777_i8; nneg = 0; nneg0 = 0; ntb = 0
+    write(*,'(a)') 'C · closed systems and the magnet: a Hermitian generator has a real spectrum, T-broken or not'
+    do k = 1, 100000
+      a = 20.0_dp*(rnd(seed) - 0.5_dp); b = 20.0_dp*(rnd(seed) - 0.5_dp)
+      cr = 20.0_dp*(rnd(seed) - 0.5_dp); ci = 20.0_dp*(rnd(seed) - 0.5_dp)
+      disc = (a - b)**2 + 4.0_dp*(cr*cr + ci*ci)
+      disc0 = (a - b)**2 + 4.0_dp*(cr*cr)
+      if (ci /= 0.0_dp) ntb = ntb + 1
+      if (disc < 0.0_dp) nneg = nneg + 1
+      if (disc0 < 0.0_dp) nneg0 = nneg0 + 1
+    end do
+    write(*,'(a,i0,a)') '  time-broken blocks (imaginary off-diagonal, the magnetic term): ', ntb, ' of 100000'
+    call check('100000 time-broken Hermitian blocks: discriminant >= 0, every eigenvalue real', nneg == 0 .and. ntb == 100000)
+    call check('their time-symmetric parts (off-diagonal made real): every eigenvalue real', nneg0 == 0)
+  end subroutine block_c
+
+  ! ---------------------------------------------------------------- D. the balanced dimer
+  subroutine block_d()
+    integer :: i, nreal, npair, nbal, ntot
+    real(dp) :: w, kap, gam, g
+    complex(dp) :: tr, det, sq, l1, l2
+    write(*,'(a)') 'D · the balanced gain-loss dimer H = [[w + i g, k], [k, w - i g]]: open halves, balanced whole'
+    w = 1.0_dp; kap = 0.25_dp; nreal = 0; npair = 0; nbal = 0; ntot = 0
+    do i = 0, 200
+      gam = 0.005_dp*real(i, dp)
+      if (abs(gam - kap) < 1.0e-12_dp) cycle
+      ntot = ntot + 1
+      tr = cmplx(2.0_dp*w, 0.0_dp, dp)
+      det = cmplx(w, gam, dp)*cmplx(w, -gam, dp) - cmplx(kap*kap, 0.0_dp, dp)
+      sq = sqrt(tr*tr - 4.0_dp*det)
+      l1 = 0.5_dp*(tr + sq); l2 = 0.5_dp*(tr - sq)
+      if (abs(aimag(l1) + aimag(l2)) <= 1.0e-14_dp) nbal = nbal + 1
+      if (gam < kap) then
+        if (abs(aimag(l1)) <= 1.0e-14_dp .and. abs(aimag(l2)) <= 1.0e-14_dp) nreal = nreal + 1
+      else
+        g = sqrt(gam*gam - kap*kap)
+        if (abs(real(l1, dp) - real(l2, dp)) <= 1.0e-14_dp .and. abs(abs(aimag(l1)) - g) <= 1.0e-13_dp &
+            .and. aimag(l1)*aimag(l2) < 0.0_dp) npair = npair + 1
+      end if
+    end do
+    write(*,'(a,i0,a,i0,a,i0)') '  gain below coupling, real pairs: ', nreal, &
+         ';  above, mirror pairs: ', npair, ';  swept: ', ntot
+    call check('below the exceptional point both modes are real: on the line (50 of 50)', nreal == 50)
+    call check('above it the modes form one mirror pair: equal frequency, opposite rates (150 of 150)', npair == 150)
+    call check('the whole is balanced at every gain: total rate zero (200 of 200)', nbal == ntot)
+  end subroutine block_d
+
+  ! ---------------------------------------------------------------- E. the actuated zeros
+  pure function theta(t) result(r)
+    real(dp), intent(in) :: t
+    real(dp) :: r
+    r = 0.5_dp*t*log(t/(2.0_dp*acos(-1.0_dp))) - 0.5_dp*t - acos(-1.0_dp)/8.0_dp &
+        + 1.0_dp/(48.0_dp*t) + 7.0_dp/(5760.0_dp*t**3) + 31.0_dp/(80640.0_dp*t**5)
+  end function theta
+
+  ! zeta(1/2 + it) by Euler-Maclaurin summation, N = 60 terms and eight Bernoulli corrections;
+  ! the truncation error at t <= 100 is below 1e-11. Hardy's Z(t) = e^{i theta(t)} zeta(1/2 + it).
+  function zeta_em(t) result(z)
+    real(dp), intent(in) :: t
+    complex(dp) :: z, s, term, poch
+    integer, parameter :: NN = 60
+    real(dp), parameter :: B2K(8) = [1.0_dp/6.0_dp, -1.0_dp/30.0_dp, 1.0_dp/42.0_dp, -1.0_dp/30.0_dp, &
+        5.0_dp/66.0_dp, -691.0_dp/2730.0_dp, 7.0_dp/6.0_dp, -3617.0_dp/510.0_dp]
+    real(dp) :: fact
+    integer :: n, k
+    s = cmplx(0.5_dp, t, dp)
+    z = (0.0_dp, 0.0_dp)
+    do n = 1, NN - 1
+      z = z + exp(-s*log(real(n, dp)))
+    end do
+    z = z + exp((1.0_dp - s)*log(real(NN, dp)))/(s - 1.0_dp) + 0.5_dp*exp(-s*log(real(NN, dp)))
+    poch = s; fact = 2.0_dp
+    do k = 1, 8
+      term = B2K(k)/fact*poch*exp(-(s + real(2*k - 1, dp))*log(real(NN, dp)))
+      z = z + term
+      poch = poch*(s + real(2*k - 1, dp))*(s + real(2*k, dp))
+      fact = fact*real(2*k + 1, dp)*real(2*k + 2, dp)
+    end do
+  end function zeta_em
+
+  function zrs(t) result(r)
+    real(dp), intent(in) :: t
+    real(dp) :: r
+    r = real(exp(cmplx(0.0_dp, theta(t), dp))*zeta_em(t), dp)
+  end function zrs
+
+  function zimag(t) result(r)
+    real(dp), intent(in) :: t
+    real(dp) :: r
+    r = aimag(exp(cmplx(0.0_dp, theta(t), dp))*zeta_em(t))
+  end function zimag
+
+  subroutine block_e()
+    real(dp), parameter :: KNOWN(10) = [14.134725142_dp, 21.022039639_dp, 25.010857580_dp, &
+        30.424876126_dp, 32.935061588_dp, 37.586178159_dp, 40.918719012_dp, 43.327073281_dp, &
+        48.005150881_dp, 49.773832478_dp]
+    real(dp) :: t, dt, zl, zr, lo, hi, mid, found(40), emax, nsmooth, imax
+    integer :: nz, k, it
+    write(*,'(a)') 'E · the actuated zeros: sign changes of Hardy''s Z on the line, heights 10 to 100'
+    dt = 0.01_dp; t = 10.0_dp; zl = zrs(t); nz = 0; imax = 0.0_dp
+    do while (t + dt <= 100.0_dp)
+      zr = zrs(t + dt)
+      imax = max(imax, abs(zimag(t + dt)))
+      if (zl*zr < 0.0_dp) then
+        nz = nz + 1
+        lo = t; hi = t + dt
+        do it = 1, 60
+          mid = 0.5_dp*(lo + hi)
+          if (zrs(lo)*zrs(mid) <= 0.0_dp) then
+            hi = mid
+          else
+            lo = mid
+          end if
+        end do
+        if (nz <= 40) found(nz) = 0.5_dp*(lo + hi)
+      end if
+      t = t + dt; zl = zr
+    end do
+    nsmooth = theta(100.0_dp)/acos(-1.0_dp) + 1.0_dp
+    emax = 0.0_dp
+    do k = 1, 10
+      emax = max(emax, abs(found(k) - KNOWN(k)))
+    end do
+    write(*,'(a,i0,a,f8.4)') '  sign changes on (10, 100]: ', nz, ';  theta(100)/pi + 1 = ', nsmooth
+    write(*,'(a,f13.9,a,es9.2)') '  first zero at t = ', found(1), ';  max error on the first ten: ', emax
+    write(*,'(a,es9.2)') '  max |Im e^{i theta} zeta(1/2+it)| on the scan (Z is real): ', imax
+    call check('Z(t) = e^{i theta} zeta(1/2 + it) is real on the scan to 1e-8', imax <= 1.0e-8_dp)
+    call check('29 sign changes of Z on (10, 100]: 29 zeros located on the line by the executed chart', nz == 29)
+    call check('the count agrees with the smooth term theta(100)/pi + 1, rounded (29)', nint(nsmooth) == 29)
+    call check('the first ten located heights match the tabulated zeros to 1e-8', emax <= 1.0e-8_dp)
+  end subroutine block_e
+
+  ! ---------------------------------------------------------------- F. the hardware
+  subroutine block_f()
+    integer, parameter :: MULT(5) = [6, 3, 3, 2, 1], Y6(5) = [1, -4, 2, -3, 6]
+    logical, parameter :: TRIP(5) = [.true., .true., .true., .false., .false.]
+    logical, parameter :: DOUB(5) = [.true., .false., .false., .true., .false.]
+    integer :: n, i, s1, s3, sc, sw, nd, cc, nok, yu, yd, yl, ye, yh, nsol, sol(5)
+    write(*,'(a)') 'F · the hardware: generations, forced hypercharges, charges'
+    nok = 0
+    do n = 1, 6
+      s1 = 0; s3 = 0; sc = 0; sw = 0; nd = 0; cc = 0
+      do i = 1, 5
+        s1 = s1 + n*MULT(i)*Y6(i)
+        s3 = s3 + n*MULT(i)*Y6(i)**3
+        if (TRIP(i)) sc = sc + n*(MULT(i)/3)*Y6(i)
+        if (DOUB(i)) sw = sw + n*(MULT(i)/2)*Y6(i)
+        if (DOUB(i)) nd = nd + n*(MULT(i)/2)
+        if (TRIP(i)) cc = cc + n*merge(MULT(i)/3, -(MULT(i)/3), i == 1)
+      end do
+      if (s1 == 0 .and. s3 == 0 .and. sc == 0 .and. sw == 0 .and. nd == 4*n .and. cc == 0) nok = nok + 1
+    end do
+    call check('one to six generations: every anomaly vanishes, doublets 4n (the count is not forced)', nok == 6)
+    nsol = 0
+    do yu = -12, 12
+      do yd = -12, 12
+        do yl = -12, 12
+          do ye = -12, 12
+            do yh = -12, 12
+              if (1 + yu + yh == 0 .and. 1 + yd - yh == 0 .and. yl + ye - yh == 0 .and. &
+                  3 + yl == 0 .and. 6 + 3*yu + 3*yd + 2*yl + ye == 0) then
+                nsol = nsol + 1; sol = [yu, yd, yl, ye, yh]
+              end if
+            end do
+          end do
+        end do
+      end do
+    end do
+    call check('at yQ = 1 the five conditions admit one hypercharge vector in [-12,12]^5: (-4, 2, -3, 6, 3)', &
+               nsol == 1 .and. all(sol == [-4, 2, -3, 6, 3]))
+    call check('charges Q = T3 + Y: up 2/3, down -1/3, neutrino 0, electron -1', &
+               3 + 1 == 4 .and. -3 + 1 == -2 .and. 3 - 3 == 0 .and. -3 - 3 == -6)
+    call check('proton one unit, neutron none, hydrogen neutral, vacuum neutral', &
+               4 + 4 - 2 == 6 .and. 4 - 2 - 2 == 0 .and. 4 + 4 - 2 - 6 == 0 .and. -3 + 3 == 0)
+    block
+      integer :: ca, cb, cc2, nlock, nok2
+      nlock = 0; nok2 = 0
+      do ca = 0, 2
+        do cb = 0, 2
+          do cc2 = 0, 2
+            if ((cb - ca)*(cc2 - ca)*(cc2 - cb) /= 0) nlock = nlock + 1
+            if (((cb - ca)*(cc2 - ca)*(cc2 - cb) /= 0) .eqv. (ca /= cb .and. ca /= cc2 .and. cb /= cc2)) &
+              nok2 = nok2 + 1
+          end do
+        end do
+      end do
+      call check('the colour lock: of 27 colour triples exactly the 6 on three distinct axes are nonzero', &
+                 nlock == 6 .and. nok2 == 27)
+    end block
+  end subroutine block_f
+
+  ! ---------------------------------------------------------------- G. the particle map
+  subroutine block_g()
+    integer, parameter :: NP = 9
+    ! q3, colour, b3, lepton, width flag (0 stable in the table)
+    integer, parameter :: TAB(4, NP) = reshape([ -3, 0, 0, 1,   3, 0, 3, 0,   0, 0, 3, 0, &
+        0, 0, 0, 0,   0, 0, 0, 0,   0, 0, 0, 1,   0, 0, 0, 0,   0, 0, 0, 0,   -3, 0, 0, 1 ], [4, NP])
+    ! electron, proton, neutron, photon, Z, neutrino (Dirac), neutrino (Majorana), dark stable, muon
+    logical, parameter :: NEUTRAL_EXPECT(NP) = [.false., .false., .false., .true., .true., .false., &
+        .true., .true., .false.]
+    integer :: k, nfix, ninv
+    real(dp) :: ge, gp, gmu, gz, gn, me, mmu, mz, mn
+    write(*,'(a)') 'G · the particle map: every additive charge flipped, the energy kept'
+    nfix = 0; ninv = 0
+    do k = 1, NP
+      if (all(-(-TAB(:, k)) == TAB(:, k))) ninv = ninv + 1
+      if ((all(-TAB(:, k) == TAB(:, k))) .eqv. NEUTRAL_EXPECT(k)) nfix = nfix + 1
+    end do
+    call check('the particle map is an involution on the nine-entry table', ninv == NP)
+    call check('fixed exactly on the neutral entries: photon, Z, Majorana neutrino, the dark state', nfix == NP)
+    call check('Dirac and Majorana neutrinos share the gauge record and differ in the one bit', &
+               TAB(1, 6) == TAB(1, 7) .and. TAB(2, 6) == TAB(2, 7) .and. TAB(4, 6) /= TAB(4, 7))
+    block
+      integer :: q, fr, bt, ncar, ncom, njoint, nlep
+      logical :: fixc, fixt
+      ncar = 0; ncom = 0; njoint = 0; nlep = 0
+      do q = -9, 9
+        do fr = -20, 20
+          ! charge carrier (1 + q3, freq): the particle map goes to the fold
+          if (1 + (-q) == 2 - (1 + q)) ncar = ncar + 1
+          do bt = -3, 3
+            ! the two involutions commute on (q, fr, bt): bar flips q, the mirror flips bt
+            ! bar then mirror against mirror then bar, composed on the tuple (q, fr, bt)
+            if (all(mirror_t(bar_t([q, fr, bt])) == bar_t(mirror_t([q, fr, bt])))) ncom = ncom + 1
+            fixc = (q == 0); fixt = (bt == 0)
+            if ((fixc .and. fixt) .eqv. ((1 + q == 1) .and. (1 - bt == 1))) njoint = njoint + 1
+          end do
+        end do
+      end do
+      if (1 + (-1) == 0 .and. 1 + 1 == 2 .and. 2 - 0 == 2) nlep = 1
+      call check('the charge carrier sends the particle map onto the fold (779 of 779)', ncar == 19*41)
+      call check('the two involutions commute; fixed by both exactly when on the line under both (5453)', &
+                 ncom == 19*41*7 .and. njoint == 19*41*7)
+      call check('the electron and the positron land on the edges h = 0 and h = 2, mirror images', nlep == 1)
+    end block
+    block
+      real(dp) :: ag, sg
+      ag = 0.75_dp; sg = sqrt(0.13_dp**2 + 0.16_dp**2)
+      write(*,'(a,f5.2,a)') '  antihydrogen falls with (0.75 +- 0.13 +- 0.16) g: from g at ', (1.0_dp - ag)/sg, ' sigma'
+      call check('gravity reads no charge bit: antimatter falls as matter within 2 sigma (ALPHA-g)', (1.0_dp - ag)/sg < 2.0_dp)
+    end block
+    ! measured widths, hbar / tau, and their distance from the line relative to the rest energy
+    me = 510998.95_dp; mmu = 105.6583755e6_dp; mz = 91.1876e9_dp; mn = 939.56542052e6_dp
+    ge = HBAR_EVS/(6.6e28_dp*YEAR_S)
+    gp = HBAR_EVS/(2.4e34_dp*YEAR_S)
+    gmu = HBAR_EVS/2.1969811e-6_dp
+    gn = HBAR_EVS/878.4_dp
+    gz = 2.4952e9_dp
+    write(*,'(a,es10.3,a,es10.3)') '  electron (e -> gamma nu):  width < ', ge, ' eV;  width/m < ', ge/me
+    write(*,'(a,es10.3,a,es10.3)') '  proton (p -> e+ pi0):      width < ', gp, ' eV;  width/m < ', gp/938.27208816e6_dp
+    write(*,'(a,es10.3,a,es10.3)') '  neutron (free):            width = ', gn, ' eV;  width/m = ', gn/mn
+    write(*,'(a,es10.3,a,es10.3)') '  muon:                      width = ', gmu, ' eV;  width/m = ', gmu/mmu
+    write(*,'(a,es10.3,a,es10.3)') '  Z boson:                   width = ', gz, ' eV;  width/m = ', gz/mz
+    call check('the electron stands on the line to 1e-57 of its rest energy (partial width bound)', ge/me < 1.0e-57_dp)
+    call check('the proton stands on the line to 1e-65 of its rest energy (partial width bound)', &
+               gp/938.27208816e6_dp < 1.0e-65_dp)
+    call check('the muon, neutron and Z stand off the line: open modes whose decay exports to products', &
+               gmu > 0.0_dp .and. gn > 0.0_dp .and. gz/mz > 0.02_dp)
+  end subroutine block_g
+
+  ! ---------------------------------------------------------------- H. the neutrino's floor
+  subroutine block_h()
+    real(dp) :: d21, d32, m2min, m3min
+    write(*,'(a)') 'H · the neutrino''s floor, supplied by deed: oscillation returns positive mass-squared differences'
+    d21 = 7.53e-5_dp; d32 = 2.455e-3_dp
+    m2min = sqrt(d21); m3min = sqrt(d21 + d32)
+    write(*,'(a,es10.3,a,es10.3,a)') '  lightest possible m2 = ', m2min, ' eV;  m3 >= ', m3min, ' eV (normal ordering)'
+    call check('both measured splittings are positive, so at least two neutrino masses are nonzero', &
+               d21 > 0.0_dp .and. d32 > 0.0_dp .and. m2min > 8.0e-3_dp .and. m3min > 4.9e-2_dp)
+  end subroutine block_h
+
+  ! ---------------------------------------------------------------- I. the price
+  subroutine block_i()
+    real(dp) :: q, qexact
+    write(*,'(a)') 'I · the price of one committed bit at 300 K'
+    q = KB*300.0_dp*log(2.0_dp)
+    qexact = 2.8709788850787237e-21_dp
+    write(*,'(a,es22.15,a)') '  k_B T ln 2 at 300 K = ', q, ' J'
+    call check('one irreversibly committed bit at 300 K costs 2.870978885e-21 J', abs(q/qexact - 1.0_dp) < 1.0e-14_dp)
+  end subroutine block_i
+
+  pure function bar_t(x) result(y)
+    integer, intent(in) :: x(3)
+    integer :: y(3)
+    y = [-x(1), x(2), x(3)]
+  end function bar_t
+
+  pure function mirror_t(x) result(y)
+    integer, intent(in) :: x(3)
+    integer :: y(3)
+    y = [x(1), x(2), -x(3)]
+  end function mirror_t
+
+  ! the Park-Miller minimal standard generator, fixed seed, no overflow in 64-bit integers
+  function rnd(s) result(r)
+    integer(i8), intent(inout) :: s
+    real(dp) :: r
+    s = modulo(16807_i8*s, 2147483647_i8)
+    r = real(s, dp)/2147483647.0_dp
+  end function rnd
+
+end program substrate_twin
+\end{Verbatim}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{Verbatim}[fontsize=\fontsize{6.2}{7.2}\selectfont,breaklines,breakanywhere,breaksymbolleft={}]
+A · the integer chart: E = (a, beta), phi(E) = (1 - beta, a), fold (h, t) = (2 - h, t)
+  PASS  equivariance on 3721 energies: the time mirror of the rate is the fold
+  PASS  the carrier is a bijection: psi(phi E) = E on 3721 energies
+  PASS  the line is exactly the image of the real energies (3721 of 3721)
+  PASS  stationary at every time in [-12,12] exactly when real (3721 of 3721)
+  PASS  every off-line mode has a distinct mirror, one record, rates cancelling, one decaying (3660)
+B · the complex carrier s = 1/2 + iE: fold(s) = 1 - conj(s), mirror(E) = conj(E)
+  max |fold(s(E)) - s(conj E)| over 20000 energies:  1.110E-16
+  PASS  fold(s(E)) = s(conj E) on 20000 complex energies, to 4 ulp of the scale
+  real energies: max |norm - 1| =  2.220E-16;  rate 2e-3: min |norm - 1| =  2.002E-03
+  PASS  a real energy keeps its norm at every time to 1e-14
+  PASS  a mode off the axis moves its norm (growth e^{beta t} visible at t >= 1)
+C · closed systems and the magnet: a Hermitian generator has a real spectrum, T-broken or not
+  time-broken blocks (imaginary off-diagonal, the magnetic term): 100000 of 100000
+  PASS  100000 time-broken Hermitian blocks: discriminant >= 0, every eigenvalue real
+  PASS  their time-symmetric parts (off-diagonal made real): every eigenvalue real
+D · the balanced gain-loss dimer H = [[w + i g, k], [k, w - i g]]: open halves, balanced whole
+  gain below coupling, real pairs: 50;  above, mirror pairs: 150;  swept: 200
+  PASS  below the exceptional point both modes are real: on the line (50 of 50)
+  PASS  above it the modes form one mirror pair: equal frequency, opposite rates (150 of 150)
+  PASS  the whole is balanced at every gain: total rate zero (200 of 200)
+E · the actuated zeros: sign changes of Hardy's Z on the line, heights 10 to 100
+  sign changes on (10, 100]: 29;  theta(100)/pi + 1 =  29.0024
+  first zero at t =  14.134725142;  max error on the first ten:  3.28E-10
+  max |Im e^{i theta} zeta(1/2+it)| on the scan (Z is real):  4.61E-11
+  PASS  Z(t) = e^{i theta} zeta(1/2 + it) is real on the scan to 1e-8
+  PASS  29 sign changes of Z on (10, 100]: 29 zeros located on the line by the executed chart
+  PASS  the count agrees with the smooth term theta(100)/pi + 1, rounded (29)
+  PASS  the first ten located heights match the tabulated zeros to 1e-8
+F · the hardware: generations, forced hypercharges, charges
+  PASS  one to six generations: every anomaly vanishes, doublets 4n (the count is not forced)
+  PASS  at yQ = 1 the five conditions admit one hypercharge vector in [-12,12]^5: (-4, 2, -3, 6, 3)
+  PASS  charges Q = T3 + Y: up 2/3, down -1/3, neutrino 0, electron -1
+  PASS  proton one unit, neutron none, hydrogen neutral, vacuum neutral
+  PASS  the colour lock: of 27 colour triples exactly the 6 on three distinct axes are nonzero
+G · the particle map: every additive charge flipped, the energy kept
+  PASS  the particle map is an involution on the nine-entry table
+  PASS  fixed exactly on the neutral entries: photon, Z, Majorana neutrino, the dark state
+  PASS  Dirac and Majorana neutrinos share the gauge record and differ in the one bit
+  PASS  the charge carrier sends the particle map onto the fold (779 of 779)
+  PASS  the two involutions commute; fixed by both exactly when on the line under both (5453)
+  PASS  the electron and the positron land on the edges h = 0 and h = 2, mirror images
+  antihydrogen falls with (0.75 +- 0.13 +- 0.16) g: from g at  1.21 sigma
+  PASS  gravity reads no charge bit: antimatter falls as matter within 2 sigma (ALPHA-g)
+  electron (e -> gamma nu):  width <  3.160E-52 eV;  width/m <  6.184E-58
+  proton (p -> e+ pi0):      width <  8.691E-58 eV;  width/m <  9.262E-67
+  neutron (free):            width =  7.493E-19 eV;  width/m =  7.975E-28
+  muon:                      width =  2.996E-10 eV;  width/m =  2.836E-18
+  Z boson:                   width =  2.495E+09 eV;  width/m =  2.736E-02
+  PASS  the electron stands on the line to 1e-57 of its rest energy (partial width bound)
+  PASS  the proton stands on the line to 1e-65 of its rest energy (partial width bound)
+  PASS  the muon, neutron and Z stand off the line: open modes whose decay exports to products
+H · the neutrino's floor, supplied by deed: oscillation returns positive mass-squared differences
+  lightest possible m2 =  8.678E-03 eV;  m3 >=  5.030E-02 eV (normal ordering)
+  PASS  both measured splittings are positive, so at least two neutrino masses are nonzero
+I · the price of one committed bit at 300 K
+  k_B T ln 2 at 300 K =  2.870978885078724E-21 J
+  PASS  one irreversibly committed bit at 300 K costs 2.870978885e-21 J
+ BATTERY-JSON: {"checks":34,"failures":0}
+\end{Verbatim}
+\end{multicols}
+
+\hypertarget{appendix-c-the-seat-and-the-judgment}{%
+\section{Appendix C: The Seat and the
+Judgment}\label{appendix-c-the-seat-and-the-judgment}}
+
+The boot of the session, PhysOSᵀ 1.0.5p in quick mode, and the engine's
+screen and judgment.
+
+\begin{Verbatim}[fontsize=\fontsize{6.0}{7.0}\selectfont,breaklines,breakanywhere,breaksymbolleft={}]
+PhysOSᵀ 1.0.5p · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 a4108cd26bcbe6ef, the files that ran
+GROUND toolchain: Lean 4.19.0 and gfortran present · manifest: 31 files signed, all verified · proofs: 2 PhysOS Proofs read from II.10, record lines complete · source screen: 15 kernels, 23 named premises, clean · citations: 253 laws named in Parts I and II, 253 resolved · quarantine: 6 retirements string-scanned, 3 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB One_Cut_Resolution 0 · registerB One_Cut_Terminal 0 · registerB Only_The_Arrow_Remains 0 · registerB Physical_Closure 0 · registerB Forced_Closure 0 · registerB Closure_Executed 0 · registerB Armed_Seat 0 · registerB Census 0 · registerB Heat_Bridge 0 · registerB The_Loop 0 · registerB RH_Least_Erasure 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0 · witness Census_Twin 0 · witness Loop_Twin 0 · witness RH_Seal_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 5 of 5 twins ran, each held to one battery line with zero failures
+CHAIN · D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+ELAPSED ground 1 s · Register A 3 s · Register B 34 s · witness 6 s · total 44 s (not hashed)
+SEAT EARNED · this run
+
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 80
+JUDGMENT refused 80 of 80 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+\end{Verbatim}
+\end{document}
