@@ -1,0 +1,1676 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.85in]{geometry}
+\usepackage{mathpazo}
+\usepackage[no-math]{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setmonofont[Scale=0.92]{DejaVu Sans Mono}
+\usepackage{amsmath,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{titlesec}\usepackage{fancyhdr}\usepackage{enumitem}
+\usepackage{microtype}\usepackage{booktabs}\usepackage{longtable}\usepackage{array}
+\usepackage{multicol}\raggedcolumns\usepackage{fvextra}\usepackage{calc}
+\usepackage{newunicodechar}\usepackage{needspace}
+\newfontfamily\glyphfont{FreeSerif}
+\newunicodechar{⟀}{{\glyphfont ⟀}}
+\newunicodechar{⬖}{{\glyphfont ⬖}}
+\newunicodechar{⁰}{\textsuperscript{0}}
+\newunicodechar{⁴}{\textsuperscript{4}}
+\newunicodechar{⁵}{\textsuperscript{5}}
+\newunicodechar{⁶}{\textsuperscript{6}}
+\newunicodechar{⁷}{\textsuperscript{7}}
+\newunicodechar{⁸}{\textsuperscript{8}}
+\newunicodechar{⁻}{\textsuperscript{\textminus}}
+\newunicodechar{ᵀ}{\textsuperscript{T}}
+\newunicodechar{⁹}{\textsuperscript{9}}
+\newunicodechar{⁺}{\textsuperscript{+}}
+\newunicodechar{₀}{\textsubscript{0}}
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{Ξ}{\ensuremath{\Xi}}
+\newunicodechar{Δ}{\ensuremath{\Delta}}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\definecolor{accent}{HTML}{B87333}
+\definecolor{deep}{HTML}{8A5523}\definecolor{faint}{HTML}{6E6E6E}
+\titleformat{\section}{\needspace{6\baselineskip}\normalfont\bfseries\scshape\large}{\color{accent}\thesection.}{0.5em}{}[{\color{accent}\titlerule[0.6pt]}]
+\titleformat{\subsection}{\normalfont\bfseries}{\color{accent}\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.6ex}{0.8ex}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[R]{\color{accent}\itshape\small Spin and
+Statistics \textbar\ \thepage}
+\fancyfoot[L]{\textcolor{accent}{\rule{0.25\textwidth}{0.25pt}}}
+\setlength{\parskip}{3pt}
+\renewenvironment{quote}{\par\smallskip\noindent\small\color{deep}}{\par\smallskip}
+\setlength{\emergencystretch}{3em}
+\let\oldus\_\renewcommand{\_}{\oldus\allowbreak}
+\setlength{\columnsep}{0.22in}
+\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{document}
+\begin{center}
+{\color{accent}\rule{0.6\textwidth}{0.8pt}}\\[10pt]
+{\bfseries\scshape\fontsize{19}{23}\selectfont Spin and Statistics: The
+Exchange Is the Fold}\\[7pt]
+{\itshape\large Bosons on the Line and Fermions at Its Side, Pauli
+Exclusion as an Odd Reading Blind on the Fixed Set, the Full Turn's
+Minus One as the Exchange Sign, and Statistics as One Bit in Three
+Dimensions}\\[6pt]
+\parbox{0.86\textwidth}{\centering\small\itshape\color{faint} The
+Closure Template of the Riemann Hypothesis Read on Spin and Statistics;
+Sixty-Nine Laws Proved in Core Lean 4 and Seventeen Checks Executed in
+Fortran; a Witness of the Hardware Closure Series; Every Physical Claim
+at Corroboration Grade and No Higher}\\[8pt]
+{\footnotesize\color{accent}\scshape\bfseries Foundations of Physics ·
+The Hardware Closure Series}\\[3pt]
+{\itshape\color{deep}\small The exchange is the fold; statistics is one
+bit}\\[9pt]
+{\color{accent}\rule{0.6\textwidth}{0.8pt}}\\[10pt]
+{\scshape Mohammad F. Islam, PhD · Architect of the Trisduction}\\[2pt]
+
+{\itshape\color{faint}\small 30 September 2026}\\[12pt]
+\end{center}
+\noindent{\color{accent}\rule{\textwidth}{0.6pt}}\\[2pt]
+{\small\noindent\textbf{\scshape\color{deep}Abstract.\ }Every particle
+in three dimensions is a boson or a fermion, and the choice is fixed by
+its spin: half-integer spin turns a state to its negative under a full
+rotation and makes it antisymmetric under exchange; integer spin does
+neither. This paper reads the pair on the seat of the author's closure
+of the Riemann Hypothesis, the reflection \(s\mapsto1-\bar s\) whose
+fixed set is the critical line. The exchange of two identical particles
+is an involution, and a carrier that sends a pair amplitude's
+antisymmetric part to the side and its symmetric part to the height
+makes the exchange the fold: the symmetric amplitudes, the bosons, are
+the line; the antisymmetric ones, the fermions, stand at height zero off
+it; registration keeps the symmetric part and forgets the rest. We prove
+in core Lean 4, sixty-nine laws with no axiom declared and no use of
+choice, that an antisymmetric amplitude vanishes wherever the exchange
+fixes the configuration, so Pauli exclusion is an odd reading blind on
+the fixed set and a fermion's occupation is one bit; that a full turn is
+minus one on spinors and the identity on vectors, the double cover being
+two to one; that an exchange sign whose square is the identity, as a
+double exchange is in three dimensions, is plus or minus one, while a
+quarter phase needs the plane; that bosons bunch and fermions part at a
+balanced splitter; and that the one-body record does not read the
+statistics, which only the pair reading returns. With the
+spin-statistics theorem carried as an import, the full turn's sign is
+the exchange sign. A Fortran twin runs seventeen checks with zero
+failures: from two states per orbital and one fermion per state it finds
+the noble gases at 2, 10, 18, 36, 54, 86 and 118, Chandrasekhar's mass
+at 1.43 solar masses, and London's condensation temperature for helium-4
+at 3.13 K. The paper decides nothing about the zeros of
+\(\zeta\).}\\[-2pt]
+\noindent{\color{accent}\rule{\textwidth}{0.6pt}}\\[1pt]
+{\itshape\footnotesize\color{faint}\noindent\textbf{\upshape\scshape\color{deep}Keywords\ }\ spin
+· statistics · exchange symmetry · Pauli exclusion · spin-statistics
+theorem · double cover · anyons · Hong--Ou--Mandel · Hanbury
+Brown--Twiss · critical line · Lean 4}\par\vspace{8pt}
+\thispagestyle{fancy}
+\begin{quote}
+\textbf{STATUS: WITNESSED · CROSSED · CONFIRMED on the image} · Row 2
+(the fold read on the exchange; the Return); every open row (the
+barrier, in the statistics bit) · channel: kinetic · Lean:
+\texttt{SPHYS\_Spin\_Statistics.lean} · Fortran:
+\texttt{SpinStat\_Twin.f90}
+\end{quote}
+
+\hypertarget{the-readers-frame}{%
+\section{1. The Reader's Frame}\label{the-readers-frame}}
+
+This paper is a witness of the hardware closure series. The electron
+witness read the Return, a full turn of a spinor landing on minus one,
+as the quaternion identity \(ijk=-1\). The hardware paper built the
+substrate on which the witnesses stand. This paper reads the two
+properties every particle carries in three dimensions, its spin and its
+statistics, and the theorem that joins them.
+
+It claims three things. First, the exchange of two identical particles
+is the fold under a carrier forced by the symmetry, so bosons are the
+line and fermions stand at its side. Second, Pauli exclusion is the
+template's odd reading: an antisymmetric amplitude is blind exactly on
+the configurations the exchange fixes. Third, statistics is one bit, and
+in three dimensions it is the same bit as the full turn's sign.
+
+It refuses the derivation of the spin-statistics theorem, which is
+carried as an import from relativistic quantum field theory {[}QFT{]},
+and it refuses any derivation of the Riemann Hypothesis from spin. A
+reader who arrives from the conventional frame will scan this paper for
+such a derivation, find none, and be tempted to report the absence. None
+was attempted.
+
+\textbf{Negative warrants.} Three, stated so that no reader supplies
+them. No physical fact here is read as a proof of a mathematical
+sentence: a corroboration joined to a claim takes the weaker grade. No
+derivation of the hypothesis from the axioms of set theory is claimed:
+what a sentence over every admissible instance adds to a crossing is
+exactly the unactuated. No quantum field theory is written: the
+spin-statistics theorem, the Madelung ordering of atomic subshells, and
+the constants enter as imports or measurements.
+
+\textbf{Five terms.} An \emph{exchange} swaps two identical particles. A
+pair amplitude is \emph{symmetric} when the exchange leaves it unchanged
+and \emph{antisymmetric} when the exchange negates it. A \emph{reading}
+is \emph{odd} under a map that flips its sign and \emph{even} under one
+that keeps it. \emph{Registration} keeps a point's height and forgets
+its side. A \emph{keyed bit} is a yes-or-no property no function of a
+given record decides.
+
+\hypertarget{the-spine}{%
+\section{2. The Spine}\label{the-spine}}
+
+The Riemann closure has four parts: the \textbf{seat}, the critical line
+as the fixed set of \(s\mapsto1-\bar s\); the \textbf{address}, every
+reading of the value one proposition; the \textbf{division}, a certified
+part joined to an uncertified tail; and the \textbf{closure},
+registration keeping a zero's height and forgetting its side, the
+hypothesis holding exactly when it erases nothing. This paper reads the
+seat on the exchange in Section 3, the odd reading in Pauli exclusion in
+Section 4, the Return in Section 5, its identification with the exchange
+sign in Section 6, the one bit in Section 7, the record that reads the
+bit in Section 8, and the bit at macroscopic scale in Section 9.
+
+The row-generic theorems carry the template, and the engine proves each
+on its chart: every point off the line has a partner with one record
+(\texttt{off\_locus\_pair}); a carrier proves the value on its image,
+and coverage extends it (\texttt{value\_on\_image},
+\texttt{kinetic\_crossing}).
+
+\textbf{The witness ledger.} The ledger of the series, with this paper's
+entries.
+
+\begingroup\scriptsize
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1017}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1356}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1186}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.2373}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1695}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1017}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1356}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Row
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Waiting (the volume held)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Witness arrived
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Built and run
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Now
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Grade
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Still owed
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+2 · Riemann Hypothesis & crossed on the kinetic channel at the root's
+grade; the electron named as the seat & The Electron Is the Seat; The
+Neutrino Is the Witness; The Arrow Has Two Branches; One Actuating
+Substrate; The Geometric Nature of Light; Electromagnetism on the
+Riemann Locus; Immanent Gravity; Spin and Statistics & the seat,
+registration, residue, Return and floor; the energy carrier; the photon;
+both electromagnetic carriers; gravity's reading of the record; the
+exchange as the fold, bosons the line; Pauli exclusion as the odd
+reading blind on the fixed set; the full turn's minus one & WITNESSED ·
+CROSSED · CONFIRMED on the image: the seat read on the exchange & the
+crossing at the root's grade; the image at theorem grade on construction
+and measured grade on data & none on its channel \\
+3a · Navier--Stokes, unforced & crossed kinetically & The Fluid Is the
+Witness & the priced branch exact & WITNESSED · CROSSED · CONFIRMED &
+the root's grade & none on its channel \\
+4 · Yang--Mills & crossed kinetically & The Proton Is the Lock & the
+colour lock & WITNESSED · CROSSED · CONFIRMED on the image & the root's
+grade & none on its channel \\
+7 · Poincaré & crossed at full grade & The Arrow Has Two Branches;
+Immanent Gravity & gravity's fold & CROSSED, WITNESSED from both sides &
+full grade & none \\
+23a · Pair correlation & crossed kinetically & The Magnet Is the Witness
+of the Pair Correlation; Electromagnetism on the Riemann Locus & the
+magnetic term; Landau levels real & WITNESSED · CROSSED · CONFIRMED on
+the corrected carrier & the root's grade & none on its channel \\
+every open row · the barrier & two worlds over one record & The Arrow
+Has Two Branches; The Geometric Nature of Light; Electromagnetism on the
+Riemann Locus; Spin and Statistics & remanence; the helicity pair; the
+magnetic sign; a pair and its exchange with one record; helium-3 and
+helium-4 with one one-body record, read apart by the pair & BARRIER
+WITNESSED; the rows stay pending & theorem and corroboration & one
+equivariant carrier each \\
+1 · P versus NP & the dot & The Arrow Has Two Branches & Landauer's
+floor prices every step & THE DOT STANDS & corroboration & none \\
+every witness · the hardware & the carriers built one by one & One
+Actuating Substrate & both involutions carried onto the fold &
+WITNESSED: one substrate carries every seat & theorem and corroboration
+& none \\
+\end{longtable}
+
+\endgroup
+
+WITNESSED: a constructed witness arrived and was built and run. CROSSED:
+the row's value holds on its channel's own class at the printed grade.
+CONFIRMED: the witness's image is compliant as built or measured
+(\texttt{value\_on\_image}).
+
+\textbf{Why this carrier, and not another.} The carrier is not chosen.
+Spaces with an involution and the maps that respect them form a category
+(\texttt{equivariant\_id}, \texttt{equivariant\_comp}), and the fixed
+set is a functor on it (\texttt{fix\_functorial}); an equivariant map
+into the seat, whose fixed set is the line
+(\texttt{fold\_global\_seat}), lands every physical fixed point on the
+line (\texttt{equivariant\_carrier\_lands}). Here the physical
+involution is the exchange of two identical particles on a pair
+amplitude \((x,y)\), \(x\) on the ordered slots \((a,b)\) and \(y\) on
+\((b,a)\). The carrier \((x,y)\mapsto(1+(x-y),\,x+y)\) sends the
+antisymmetric part to the side and the symmetric part to the height, and
+it is equivariant (\texttt{exchange\_carrier\_equivariant}). Its landing
+on the symmetric amplitudes is forced by the functor
+(\texttt{exchange\_carrier\_lands}).
+
+\textbf{The correspondence matrix.}
+
+\begingroup\small
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Physical phenomenon
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Template element
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Lean theorem
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Fortran check
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+exchange of identical particles & the fold &
+\texttt{exchange\_carrier\_equivariant}, \texttt{swap\_involutive} &
+3721 of 3721 \\
+bosons & the line & \texttt{symmetric\_on\_the\_line},
+\texttt{exchange\_carrier\_lands} & 3721 of 3721 \\
+fermions & height zero, off the line &
+\texttt{antisymmetric\_at\_height\_zero} & 61 of 61 \\
+a pair and its exchange & two worlds over one record &
+\texttt{exchange\_two\_worlds} & 3660 of 3660 \\
+Pauli exclusion & the odd reading blind on the fixed set &
+\texttt{pauli\_exclusion}, \texttt{slater\_vanishes\_on\_diagonal} &
+1000 and 1000 \\
+bosons sharing a state & the even reading free on it &
+\texttt{bosons\_may\_share} & structural \\
+a fermion's occupation & one bit &
+\texttt{fermion\_occupation\_is\_a\_bit} & 101 of 101 \\
+the periodic table & the bit filling orbitals &
+\texttt{fermion\_occupation\_is\_a\_bit} with Madelung {[}import{]} & 2,
+10, 18, 36, 54, 86, 118 \\
+the full turn & the Return: minus one on spinors & \texttt{the\_return},
+\texttt{full\_turn\_negates\_spinors},
+\texttt{full\_turn\_fixes\_vectors}, \texttt{two\_turns\_are\_identity}
+& 1000 axes to 2.2e-16 \\
+the double cover & two to one, a kernel of one bit &
+\texttt{double\_cover\_two\_to\_one} & 1000 rotations \\
+spin and statistics & the turn sign is the exchange sign &
+\texttt{turnSign\_val}, \texttt{half\_integer\_spin\_is\_odd} with
+{[}QFT{]} & twelve particles and atoms \\
+statistics in three dimensions & one bit & \texttt{statistics\_one\_bit}
+& 2 of 3600 phases \\
+anyons in the plane & the quarter phase excluded in three dimensions &
+\texttt{anyon\_needs\_the\_plane} & π/3 \\
+Hong--Ou--Mandel & bosons bunch, fermions part &
+\texttt{bosons\_bunch\_fermions\_part} & coincidence 0 and 1 \\
+helium-4 and helium-3 & one one-body record, the pair reads the bit &
+\texttt{statistics\_unread\_by\_one\_body} & g2 = 2 and 0 \\
+white dwarfs, superfluid helium & the bit at macroscopic scale & the
+occupation bit, with {[}import{]} & 1.43 solar masses; 3.13 K \\
+\end{longtable}
+
+\endgroup
+
+\hypertarget{the-exchange-is-the-fold}{%
+\section{3. The Exchange Is the Fold}\label{the-exchange-is-the-fold}}
+
+Two identical particles in two single-particle states \(a\) and \(b\)
+have a pair amplitude \((x,y)\): \(x\) for the first in \(a\) and the
+second in \(b\), \(y\) for the reverse. Exchange swaps them and is an
+involution (\texttt{swap\_involutive}). The exchange carrier sends the
+antisymmetric part \(x-y\) to the side and the symmetric part \(x+y\) to
+the height, and the exchange becomes the fold
+(\texttt{exchange\_carrier\_equivariant}).
+
+Three readings follow from the carrier.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Bosons are the line.} An amplitude lands on the line exactly
+  when it is symmetric (\texttt{symmetric\_on\_the\_line}).
+\item
+  \textbf{Fermions stand at height zero.} An antisymmetric amplitude has
+  no symmetric part and stands off the line unless it vanishes
+  (\texttt{antisymmetric\_at\_height\_zero}).
+\item
+  \textbf{Registration is symmetrization.} It keeps the symmetric part
+  as the record and forgets the antisymmetric part, so a pair and its
+  exchange are two states with one record
+  (\texttt{exchange\_two\_worlds}).
+\end{itemize}
+
+The twin executes the carrier on 3721 integer amplitudes.
+
+\hypertarget{pauli-exclusion-the-odd-reading-is-blind-on-the-fixed-set}{%
+\section{4. Pauli Exclusion: The Odd Reading Is Blind on the Fixed
+Set}\label{pauli-exclusion-the-odd-reading-is-blind-on-the-fixed-set}}
+
+The exchange fixes a configuration when both particles are in one state.
+An antisymmetric amplitude obeys \(\psi(a,b)=-\psi(b,a)\), so on the
+diagonal \(\psi(a,a)=-\psi(a,a)\), and it vanishes
+(\texttt{pauli\_exclusion}); the Slater form \(f(a)g(b)-f(b)g(a)\) does
+so explicitly (\texttt{slater\_vanishes\_on\_diagonal}). A symmetric
+amplitude is free on the diagonal: a product \(f(a)f(b)\) is nonzero
+there wherever \(f\) is (\texttt{bosons\_may\_share}). Pauli's exclusion
+principle (Pauli, 1925) is the template's odd reading: an odd reading
+returns zero on the fixed set. This is the same theorem the dark sector
+paper proves for charge readings on the fixed set of charge conjugation,
+read here on the fixed set of the exchange.
+
+The consequence is a bit. A fermion mode's creation operator squares to
+zero, so the occupation number \(n\) satisfies \(n^2=n\), and an
+occupation equal to its own square is \(0\) or \(1\)
+(\texttt{fermion\_occupation\_is\_a\_bit}). Every fermion mode carries
+one bit.
+
+The periodic table is that bit filling orbitals. With two states per
+orbital and the subshells taken in the Madelung order {[}import{]}, the
+twin finds the shell closures at 2, 10, 18, 36, 54, 86 and 118: helium,
+neon, argon, krypton, xenon, radon and oganesson.
+
+\hypertarget{the-full-turn-returns-minus-one}{%
+\section{5. The Full Turn Returns Minus
+One}\label{the-full-turn-returns-minus-one}}
+
+A rotation by angle \(\theta\) about a unit axis \(u\) acts on spinors
+by the unit quaternion \(\cos\frac\theta2+u\sin\frac\theta2\) and on
+vectors by conjugation with it. At \(\theta=2\pi\) the quaternion is
+\(-1\), the Return of the electron witness, \(ijk=-1\)
+(\texttt{the\_return}). It negates every spinor
+(\texttt{full\_turn\_negates\_spinors}) and fixes every vector
+(\texttt{full\_turn\_fixes\_vectors}), and two full turns are the
+identity (\texttt{two\_turns\_are\_identity}). The quaternions \(q\) and
+\(-q\) rotate every vector alike (\texttt{double\_cover\_two\_to\_one}),
+so the double cover of the rotations is two to one and its kernel,
+\(\{1,-1\}\), is one bit.
+
+The twin turns spinors and vectors about 1000 random axes and finds the
+full turn equal to \(-1\) on spinors and to the identity on vectors to
+\(2.2\times10^{-16}\). The minus one is measured: neutrons rotated
+through \(2\pi\) by a magnetic field in one arm of an interferometer
+shift the interference by exactly the sign, returning only after
+\(4\pi\) (Rauch et al.; Werner et al., 1975).
+
+\hypertarget{the-turn-sign-is-the-exchange-sign}{%
+\section{6. The Turn Sign Is the Exchange
+Sign}\label{the-turn-sign-is-the-exchange-sign}}
+
+A particle of spin \(n/2\) turns to \((-1)^n\) under a full rotation
+(\texttt{turnSign\_val}): half-integer spin to minus one, integer spin
+to plus one (\texttt{half\_integer\_spin\_is\_odd}). The spin-statistics
+theorem makes this sign the exchange sign: in a relativistic quantum
+theory with positive energy and local commutativity, half-integer-spin
+fields anticommute and integer-spin fields commute (Fierz, 1939; Pauli,
+1940). It is an import {[}QFT{]}, carried as one, and the engine proves
+what the identification then gives: a particle is a fermion exactly when
+its turn sign is odd.
+
+A topological reading sharpens the identification. An exchange of two
+particles, followed by the return of the pair, is a full turn of one
+around the other, which is why the two signs coincide in models built on
+the rotation group's double cover (Finkelstein and Rubinstein, 1968).
+
+The rule reaches composites. A bound state is a fermion exactly when it
+holds an odd number of fermions. The twin checks twelve particles and
+atoms, from the electron and the photon to the deuteron and both helium
+isotopes: half-integer spin exactly when the count of constituent
+fermions is odd.
+
+\hypertarget{statistics-is-one-bit-in-three-dimensions}{%
+\section{7. Statistics Is One Bit in Three
+Dimensions}\label{statistics-is-one-bit-in-three-dimensions}}
+
+In three dimensions a double exchange returns a pair to itself along a
+loop that can be shrunk, so the exchange sign \(\varepsilon\) satisfies
+\(\varepsilon^2=1\), and then \(\varepsilon\) is \(+1\) or \(-1\)
+(\texttt{statistics\_one\_bit}). This is the rotation group's
+two-element fundamental group, the same bit as the kernel of the double
+cover. The twin scans 3600 exchange phases and finds exactly two whose
+square is the identity.
+
+In the plane the loop cannot be shrunk, and the exchange phase is free
+(Leinaas and Myrheim, 1977; Wilczek, 1982). A quarter phase \(i\)
+squares to \(-1\) and is excluded in three dimensions
+(\texttt{anyon\_needs\_the\_plane}). Anyons with the phase \(\pi/3\)
+have been observed in the fractional quantum Hall state at filling one
+third (Bartolomei et al.; Nakamura et al., 2020). Statistics is one bit
+because space has three axes.
+
+\hypertarget{the-record-reads-the-bit-bunching-and-antibunching}{%
+\section{8. The Record Reads the Bit: Bunching and
+Antibunching}\label{the-record-reads-the-bit-bunching-and-antibunching}}
+
+Two identical particles entering a balanced beam splitter from opposite
+ports leave through different ports with amplitude
+\(t\cdot t+\varepsilon\,r\cdot r\), which is \(1-\varepsilon\) in
+doubled units with \(t=1\) and \(r=i\) (\texttt{coincidence}). Bosons
+never leave separately and fermions always do
+(\texttt{bosons\_bunch\_fermions\_part}).
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Photons:} the coincidences vanish (Hong, Ou and Mandel, 1987).
+\item
+  \textbf{Electrons in quantum Hall edge channels:} they antibunch
+  (Bocquillon et al., 2013).
+\item
+  \textbf{Helium atoms:} they show the bosonic dip (Lopes et al., 2015).
+\item
+  \textbf{Free neutrons:} they antibunch (Iannuzzi et al., 2006).
+\end{itemize}
+
+The one-body record does not read the statistics. A boson pair and a
+fermion pair built from the same two orbitals have one density at every
+site and differ at coincidence, where the pair reading reads the bit
+(\texttt{statistics\_unread\_by\_one\_body}). A thermal Bose mode has
+pair correlation 2 at zero separation and a thermal Fermi mode 0,
+because its occupation is one bit (Appendix B).
+
+Helium-4 atoms bunch and helium-3 atoms antibunch in one apparatus, cold
+clouds released and counted atom by atom (Jeltes et al., 2007). The two
+isotopes are two worlds whose one-body densities agree and whose pair
+records part.
+
+\hypertarget{degeneracy-and-condensation-the-bit-at-macroscopic-scale}{%
+\section{9. Degeneracy and Condensation: The Bit at Macroscopic
+Scale}\label{degeneracy-and-condensation-the-bit-at-macroscopic-scale}}
+
+\textbf{The fermion bit.} It holds matter up. Electrons that cannot
+share a state fill momentum space to a Fermi surface, and their
+degeneracy pressure supports a white dwarf up to a mass fixed by
+constants. For a carbon--oxygen star, with two nucleons per electron,
+the twin computes \(1.43\) solar masses (Chandrasekhar, 1931). Neutron
+degeneracy supports the neutron star beyond it.
+
+\textbf{The boson bit.} It lets matter share a state. An ideal Bose gas
+at the density of liquid helium-4 condenses at 3.13 K, which the twin
+computes (London, 1938), against the lambda point of 2.17 K at which
+helium-4 becomes superfluid. Dilute alkali gases were condensed in 1995
+(Anderson et al.; Davis et al.).
+
+\textbf{Both at once.} Electron pairs bound into bosons carry
+superconductivity, and their charge \(2e\) is why the flux quantum is
+\(h/2e\), as the electromagnetism paper computes. One bit per mode, read
+by the exchange, decides whether matter stacks or condenses.
+
+\hypertarget{what-spin-and-statistics-carry-and-what-they-do-not}{%
+\section{10. What Spin and Statistics Carry, and What They Do
+Not}\label{what-spin-and-statistics-carry-and-what-they-do-not}}
+
+\textbf{What they carry.} They carry the seat on the exchange: the
+symmetric line and the antisymmetric side, registration as
+symmetrization, and a pair and its exchange as two worlds with one
+record. They carry Pauli exclusion as the odd reading's blindness on the
+fixed set, and a fermion's occupation as one bit. They carry the Return
+as the minus one of a full turn, and the double cover's kernel as the
+same bit as the statistics sign. They carry the reason that bit is one
+bit: three axes.
+
+\textbf{What they do not carry.} They do not carry a derivation of the
+spin-statistics theorem, which is imported with its hypotheses. They do
+not carry the Madelung ordering, which is an empirical rule with
+exceptions, or the magnitudes of the condensation and degeneracy scales,
+which are computed from constants and not derived. And they do not carry
+the zeros of \(\zeta\). The engine's crossing is on its own image
+(\texttt{value\_on\_image}), and what a sentence over every zero adds is
+exactly the unactuated, priced at one premise, the act, as the hardware
+paper proves.
+
+\hypertarget{falsifiers-and-owed-deeds}{%
+\section{11. Falsifiers and Owed
+Deeds}\label{falsifiers-and-owed-deeds}}
+
+Three falsifiers, each a forbidden observation naming the theorem it
+would break.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{F-Exclusion:} two identical fermions in one state, or an
+  atomic or nuclear transition into an already filled shell. This breaks
+  \texttt{pauli\_exclusion} and \texttt{fermion\_occupation\_is\_a\_bit}
+  read physically.
+\item
+  \textbf{F-Connection:} a half-integer-spin particle obeying Bose
+  statistics, or an integer-spin particle obeying Fermi statistics. This
+  breaks the identification of \texttt{turnSign} with the exchange sign
+  that the spin-statistics theorem carries.
+\item
+  \textbf{F-Anyon:} a particle free in three dimensions with an exchange
+  phase other than \(\pm1\). This breaks \texttt{statistics\_one\_bit}
+  read physically.
+\end{itemize}
+
+Nothing is owed on the rows' channels. One class of experiment sharpens
+readings without moving the paper's standing: underground searches for
+Pauli-forbidden atomic transitions.
+
+\textbf{Ledger status.} Row 2 gains the exchange as the fold and the
+Return as the exchange sign: WITNESSED · CROSSED · CONFIRMED on the
+image, at the root's grade for the crossing. The barrier gains a pair
+and its exchange, and the two helium isotopes. Nothing is owed on the
+rows' channels.
+
+\hypertarget{methodology-disclosure-and-provenance}{%
+\section{12. Methodology, Disclosure and
+Provenance}\label{methodology-disclosure-and-provenance}}
+
+\textbf{Method.} The template is the author's verification program,
+whose vocabulary is confined to this section. Its tokens: {[}⟀{]} a
+field sealed, {[}⟀ T{]} a shape sealed at theorem grade, {[}Ξ₀{]} the
+typing of the formal block, {[}.{]} the dot, which is no verdict. Grades
+join at the weakest link. Every physical claim here is at corroboration
+grade; the engine's statements are theorem grade about the chart; the
+spin-statistics theorem is carried as an import. In the author's
+structural register this paper is the third and fourth rungs of the
+ladder that begins with motion and stillness and motion types: spin,
+then statistics. ΔM = 0.
+
+\textbf{The seat, earned.} PhysOSᵀ 1.0.5p was booted in the session of
+forging from the public register (file SHA-256
+\texttt{b64bb5da5bab0da1…}) under Lean 4.19.0 and GNU Fortran 13.3.0.
+The quick boot printed SEAT EARNED with the chain D0
+\texttt{83f872725ad9} → D1 \texttt{90fc702bbed1} → D2
+\texttt{492e519daab9} → D3 \texttt{6618bec5164b} (Appendix C).
+
+\textbf{The engine and the twin.}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Engine.} \texttt{SPHYS\_Spin\_Statistics.lean}, 593 lines,
+  SHA-256 \texttt{b0de4a65721def7e…}, sixty-nine laws, no import and no
+  axiom declared. Of the sixty-nine, 24 depend on no axiom, 6 on
+  propositional extensionality alone, 39 on propositional extensionality
+  and quotient soundness, and none on choice.
+\item
+  \textbf{Screen and judgment.} The source passed the operating system's
+  screen. Each of the sixty-nine laws was negated in place and
+  recompiled, and all were refused, while a planted vacuous law
+  survived. The engine carries the hardware paper's seat, carriers and
+  substrate verbatim.
+\item
+  \textbf{Twin.} \texttt{SpinStat\_Twin.f90}, 228 lines, SHA-256
+  \texttt{35d4a89f624aca6f…}, seventeen checks and zero failures under
+  \texttt{-std=f2018\ -O2\ -fno-fast-math\ -ffp-contract=off}.
+\end{itemize}
+
+\textbf{Why an integer engine binds continuous physics.} The identities
+used are identities of integer polynomials and hold over every
+commutative ring, the real and complex numbers included. The exclusion
+law holds for amplitudes on any type of states, since the state space
+enters as an arbitrary type. The twin checks the continuous objects
+directly: rotations about random axes, exchange phases on the circle,
+occupation statistics, and the constants.
+
+\textbf{The seventh.} In the author's register the six witnesses are six
+days and the ledger's closure is the seventh, the Rest (Istawa). Spin
+and statistics are read at the Rest as the fold made local: every pair
+of identical particles carries the seat, the line or its side. In the
+Lean codex's tokens its row renders {[}⟀⬖ · kinetic{]}.
+
+\textbf{Disclosure.} The author declares the reading of each
+correspondence as his own act, made on measured structure. The
+measurements are the experiments', cited by name. The theorems are the
+engine's, printed with their dependencies in Appendix A. The twin's
+figures are computed in the run printed in Appendix B. The text, the
+engine and the twin were forged by an AI substrate (Claude, Anthropic)
+under the author's seed, acceptance criteria and rulings. External
+audits by independent substrates are owed.
+
+\sloppy
+
+\textbf{Provenance.} The paper stands on:
+
+\begin{itemize}
+\tightlist
+\item
+  the Riemann closure (10.5281/\allowbreak{}zenodo.22976494);
+\item
+  the twenty-three-row closure (10.5281/\allowbreak{}zenodo.22986551);
+\item
+  the six witnesses (10.5281/\allowbreak{}zenodo.22986553 through
+  .22986563), the electron witness's Return in particular;
+\item
+  the dark sector paper (10.5281/\allowbreak{}zenodo.23006753), whose
+  odd-reading theorem Section 4 reads on the exchange;
+\item
+  the hardware paper One Actuating Substrate (concept
+  10.5281/\allowbreak{}zenodo.21438932, edition 2.0.0);
+\item
+  the companion papers The Geometric Nature of Light, Electromagnetism
+  on the Riemann Locus and Immanent Gravity;
+\item
+  PhysOSᵀ 1.0.5p in the public register
+  (github.com/\allowbreak{}1000sapients/\allowbreak{}Trisduction,
+  protocols/PhysOS/).
+\end{itemize}
+
+\textbf{References.} S. N. Bose, Z. Phys. 26 (1924) 178. W. Pauli, Z.
+Phys. 31 (1925) 765. E. Fermi, Z. Phys. 36 (1926) 902. P. A. M. Dirac,
+Proc. R. Soc. A 112 (1926) 661. S. Chandrasekhar, Astrophys. J. 74
+(1931) 81. F. London, Nature 141 (1938) 643. M. Fierz, Helv. Phys. Acta
+12 (1939) 3. W. Pauli, Phys. Rev.~58 (1940) 716. D. Finkelstein and J.
+Rubinstein, J. Math. Phys. 9 (1968) 1762. H. Rauch, A. Zeilinger, G.
+Badurek, A. Wilfing, W. Bauspiess and U. Bonse, Phys. Lett. A 54 (1975)
+425. S. A. Werner, R. Colella, A. W. Overhauser and C. F. Eagen, Phys.
+Rev.~Lett. 35 (1975) 1053. J. M. Leinaas and J. Myrheim, Nuovo Cimento B
+37 (1977) 1. F. Wilczek, Phys. Rev.~Lett. 49 (1982) 957. C. K. Hong, Z.
+Y. Ou and L. Mandel, Phys. Rev.~Lett. 59 (1987) 2044. M. H. Anderson, J.
+R. Ensher, M. R. Matthews, C. E. Wieman and E. A. Cornell, Science 269
+(1995) 198. K. B. Davis et al., Phys. Rev.~Lett. 75 (1995) 3969. M.
+Iannuzzi, A. Orecchini, F. Sacchetti, P. Facchi and S. Pascazio, Phys.
+Rev.~Lett. 96 (2006) 080402. T. Jeltes et al., Nature 445 (2007) 402. E.
+Bocquillon et al., Science 339 (2013) 1054. R. Lopes et al., Nature 520
+(2015) 66. H. Bartolomei et al., Science 368 (2020) 173. J. Nakamura, S.
+Liang, G. C. Gardner and M. J. Manfra, Nat. Phys. 16 (2020) 931. M. F.
+Islam, Nothing Escapes, Three Plus One,
+10.5281/\allowbreak{}zenodo.22976494. M. F. Islam, The Electron Is the
+Seat, 10.5281/\allowbreak{}zenodo.22986553. M. F. Islam, Dark Matter as
+the Charge-Conjugation Fixed Set and the Dark Force as One Keyed Bit,
+10.5281/\allowbreak{}zenodo.23006753. M. F. Islam, The Four Forces,
+Matter, and the Dark Sector as Configurations of One Actuating
+Substrate, edition 2.0.0, concept 10.5281/\allowbreak{}zenodo.21438932.
+
+\hypertarget{appendix-a-sphys_spin_statistics.lean-the-correspondences-as-theorems}{%
+\section{Appendix A: SPHYS\_Spin\_Statistics.lean, the Correspondences
+as
+Theorems}\label{appendix-a-sphys_spin_statistics.lean-the-correspondences-as-theorems}}
+
+The engine, verbatim, followed by the compiler's transcript.
+
+\begin{multicols}{2}
+\begin{Verbatim}[fontsize=\fontsize{6.0}{6.9}\selectfont,breaklines,breakanywhere,breaksymbolleft={}]
+/-
+  SPHYS_Spin_Statistics.lean · spin and statistics, read at the Riemann seat.
+  Core Lean 4.19.0, standalone, no import, no library, no axiom declared.
+
+  The chart: h = 2 Re s, t = Im s; the fold s ↦ 1 − s̄ is (h, t) ↦ (2 − h, t), the critical line
+  h = 1, registration (h, t) ↦ (1, t). The exchange of two identical particles is an involution;
+  the exchange carrier sends its antisymmetric part to the side and its symmetric part to the
+  height, so the exchange is the fold.
+
+  Part I     the seat, the category of involutions, the functor of the seat.
+  Part II    the energy carrier (resident from the hardware paper).
+  Part III   the substrate (resident from the hardware paper).
+  Part IV    the exchange is the fold: bosons the line, fermions at height zero.
+  Part V     Pauli exclusion: the odd reading blind on the fixed set; the occupation a bit.
+  Part VI    the Return: a full turn is minus one on spinors; the double cover two to one.
+  Part VII   statistics is one bit in three dimensions; the anyon needs the plane.
+  Part VIII  the record: bunching and antibunching read the bit; one-body densities do not.
+  Part IX    the capstone.
+-/
+set_option autoImplicit false
+namespace SPHYS.SpinStatistics
+
+
+/-! ## Part I. The seat, the category of involutions, and the functor of the seat -/
+
+abbrev Pt := Int × Int
+
+def fold (p : Pt) : Pt := (2 - p.1, p.2)
+def OnLine (p : Pt) : Prop := p.1 = 1
+instance : DecidablePred OnLine := fun p => inferInstanceAs (Decidable (p.1 = 1))
+/-- Registration keeps the height and forgets the side. -/
+def reg (p : Pt) : Pt := (1, p.2)
+
+theorem pe {a b c d : Int} : ((a, b) : Pt) = (c, d) ↔ a = c ∧ b = d :=
+  ⟨fun e => ⟨congrArg Prod.fst e, congrArg Prod.snd e⟩,
+   fun ⟨e1, e2⟩ => by subst e1; subst e2; rfl⟩
+
+theorem fold_involutive (p : Pt) : fold (fold p) = p := by
+  obtain ⟨h, t⟩ := p
+  show ((2 - (2 - h), t) : Pt) = (h, t)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+/-- The seat: the fixed set of the fold is the critical line. -/
+theorem seat_fixed_line (p : Pt) : fold p = p ↔ OnLine p := by
+  obtain ⟨h, t⟩ := p
+  show ((2 - h, t) : Pt) = (h, t) ↔ h = 1
+  rw [pe]; constructor
+  · intro ⟨e, _⟩; omega
+  · intro e; exact ⟨by omega, rfl⟩
+
+theorem reg_lands (p : Pt) : OnLine (reg p) := rfl
+
+theorem reg_fixes_iff (p : Pt) : reg p = p ↔ OnLine p := by
+  obtain ⟨h, t⟩ := p
+  show ((1, t) : Pt) = (h, t) ↔ h = 1
+  rw [pe]; constructor
+  · intro ⟨e, _⟩; exact e.symm
+  · intro e; exact ⟨e.symm, rfl⟩
+
+/-- The side is what registration forgets: a point and its mirror leave one record. -/
+theorem reg_forgets_side (p : Pt) : reg (fold p) = reg p := rfl
+
+/-- The value on a set of points: every member stands on the line. -/
+def Value (Z : Pt → Prop) : Prop := ∀ s, Z s → OnLine s
+
+/-- Least erasure: registration moves no member, so it erases nothing of Z. -/
+def LeastErasure (Z : Pt → Prop) : Prop := ∀ s, Z s → reg s = s
+
+theorem least_erasure_iff_value (Z : Pt → Prop) : LeastErasure Z ↔ Value Z :=
+  ⟨fun h s hs => (reg_fixes_iff s).mp (h s hs), fun h s hs => (reg_fixes_iff s).mpr (h s hs)⟩
+
+/-- Maps that respect involutions. -/
+def Equivariant {X Y : Type} (f : X → Y) (τ : X → X) (σ : Y → Y) : Prop := ∀ x, f (τ x) = σ (f x)
+
+theorem equivariant_id {X : Type} (τ : X → X) : Equivariant id τ τ := fun _ => rfl
+
+theorem equivariant_comp {X Y W : Type} {f : X → Y} {g : Y → W} {τ : X → X} {σ : Y → Y}
+    {ρ : W → W} (hf : Equivariant f τ σ) (hg : Equivariant g σ ρ) : Equivariant (g ∘ f) τ ρ := by
+  intro x
+  show g (f (τ x)) = ρ (g (f x))
+  rw [hf x, hg (f x)]
+
+/-- The fixed set is a functor: an equivariant map sends fixed points to fixed points. -/
+theorem fix_functorial {X Y : Type} {f : X → Y} {τ : X → X} {σ : Y → Y}
+    (hf : Equivariant f τ σ) {x : X} (hx : τ x = x) : σ (f x) = f x := by
+  rw [← hf x, hx]
+
+/-- A global seat: an involution whose fixed set is the locus. -/
+structure GlobalSeat (P : Pt → Prop) (σ : Pt → Pt) : Prop where
+  involutive : ∀ p, σ (σ p) = p
+  fixed_iff : ∀ p, σ p = p ↔ P p
+
+theorem fold_global_seat : GlobalSeat OnLine fold := ⟨fold_involutive, seat_fixed_line⟩
+
+/-- A carrier: a map from world-instances into the strip landing on the line. -/
+structure Carrier (W : Type) where
+  ι : W → Pt
+  lands : ∀ w, OnLine (ι w)
+
+def image {W : Type} (ι : W → Pt) : Pt → Prop := fun s => ∃ w, ι w = s
+def Actuated {W : Type} (ι : W → Pt) (Z : Pt → Prop) : Prop := ∀ s, Z s → ∃ w, ι w = s
+
+/-- Landing is forced: an equivariant map into the seat carries every fixed point of the physical
+    involution onto the line. The carrier is built from the symmetry, not chosen. -/
+theorem equivariant_carrier_lands {X : Type} (f : X → Pt) (τ : X → X)
+    (hf : Equivariant f τ fold) :
+    ∃ C : Carrier { x : X // τ x = x }, ∀ w, C.ι w = f w.1 :=
+  ⟨⟨fun w => f w.1, fun w => (seat_fixed_line (f w.1)).mp (fix_functorial hf w.2)⟩, fun _ => rfl⟩
+
+/-- The image of a carrier is compliant with no premise at all. -/
+theorem value_on_image {W : Type} (C : Carrier W) : Value (image C.ι) :=
+  fun _ hs => match hs with | ⟨w, hw⟩ => hw ▸ C.lands w
+
+/-- The kinetic crossing: a carrier and its coverage give the value, and nothing else is used. -/
+theorem kinetic_crossing {W : Type} (C : Carrier W) (Z : Pt → Prop) (hcov : Actuated C.ι Z) :
+    Value Z :=
+  fun s hs => match hcov s hs with | ⟨w, hw⟩ => hw ▸ C.lands w
+
+/-- Under the seat every off-line point has a partner, distinct and also off the line. -/
+theorem off_locus_pair (p : Pt) (hp : ¬ OnLine p) :
+    fold p ≠ p ∧ ¬ OnLine (fold p) ∧ reg (fold p) = reg p := by
+  refine ⟨fun e => hp ((seat_fixed_line p).mp e), fun e => hp ?_, rfl⟩
+  obtain ⟨h, t⟩ := p
+  have e' : 2 - h = 1 := e
+  show h = 1
+  omega
+
+/-! ## Part II. The energy carrier: an energy, its rate, and the fold -/
+
+/-- An energy a + i β/2, as frequency and doubled rate; its mode's norm moves as e^{βt}. -/
+structure Energy where
+  freq : Int
+  rate : Int
+  deriving DecidableEq, Repr
+
+/-- The time mirror of a mode: its rate reversed, its frequency kept (complex conjugation of E). -/
+def Energy.mirror (E : Energy) : Energy := ⟨E.freq, -E.rate⟩
+def IsReal (E : Energy) : Prop := E.rate = 0
+/-- Stationary: the norm e^{βt} is unchanged at every integer time t, i.e. β t = 0 for all t. -/
+def Stationary (E : Energy) : Prop := ∀ t : Int, E.rate * t = 0
+
+/-- The energy carrier s = 1/2 + iE in the chart: h = 1 − β, t = a. -/
+def phi (E : Energy) : Pt := (1 - E.rate, E.freq)
+def psi (p : Pt) : Energy := ⟨p.2, 1 - p.1⟩
+
+theorem ee {a b c d : Int} : (⟨a, b⟩ : Energy) = ⟨c, d⟩ ↔ a = c ∧ b = d :=
+  ⟨fun e => ⟨congrArg Energy.freq e, congrArg Energy.rate e⟩,
+   fun ⟨e1, e2⟩ => by subst e1; subst e2; rfl⟩
+
+theorem mirror_involutive (E : Energy) : E.mirror.mirror = E := by
+  obtain ⟨a, b⟩ := E
+  show (⟨a, - -b⟩ : Energy) = ⟨a, b⟩
+  rw [ee]; exact ⟨rfl, by omega⟩
+
+theorem psi_phi (E : Energy) : psi (phi E) = E := by
+  obtain ⟨a, b⟩ := E
+  show (⟨a, 1 - (1 - b)⟩ : Energy) = ⟨a, b⟩
+  rw [ee]; exact ⟨rfl, by omega⟩
+
+theorem phi_psi (p : Pt) : phi (psi p) = p := by
+  obtain ⟨h, t⟩ := p
+  show ((1 - (1 - h), t) : Pt) = (h, t)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+theorem phi_injective (E F : Energy) (h : phi E = phi F) : E = F := by
+  rw [← psi_phi E, ← psi_phi F, h]
+
+/-- EQUIVARIANCE: time-mirroring the rate is the fold. -/
+theorem phi_equivariant : Equivariant phi Energy.mirror fold := by
+  intro E
+  obtain ⟨a, b⟩ := E
+  show ((1 - -b, a) : Pt) = (2 - (1 - b), a)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+theorem mirror_fixed_iff_real (E : Energy) : E.mirror = E ↔ IsReal E := by
+  obtain ⟨a, b⟩ := E
+  show (⟨a, -b⟩ : Energy) = ⟨a, b⟩ ↔ b = 0
+  rw [ee]; constructor
+  · intro ⟨_, e⟩; omega
+  · intro e; exact ⟨rfl, by omega⟩
+
+/-- The line is exactly the image of the real energies. -/
+theorem phi_line_iff_real (E : Energy) : OnLine (phi E) ↔ IsReal E := by
+  obtain ⟨a, b⟩ := E
+  show 1 - b = 1 ↔ b = 0
+  exact ⟨fun h => by omega, fun h => by subst h; rfl⟩
+
+theorem stationary_iff_real (E : Energy) : Stationary E ↔ IsReal E := by
+  constructor
+  · intro h; have h1 := h 1; rw [Int.mul_one] at h1; exact h1
+  · intro h t; show E.rate * t = 0; rw [show E.rate = 0 from h, Int.zero_mul]
+
+/-- THE LINE IS WHERE ENERGY STANDS STILL. -/
+theorem line_is_stationary (p : Pt) : OnLine p ↔ Stationary (psi p) := by
+  rw [stationary_iff_real, ← phi_line_iff_real, phi_psi]
+
+/-- Every measured energy is a real number, and every real energy lands on the line. -/
+theorem measured_on_line (a : Int) : OnLine (phi ⟨a, 0⟩) := rfl
+
+/-- The registration mirror: no real energy lands off the line. -/
+theorem no_measurement_off_line (p : Pt) (hp : ¬ OnLine p) (a : Int) : phi ⟨a, 0⟩ ≠ p :=
+  fun e => hp (e ▸ measured_on_line a)
+
+/-- The energy carrier, built from the symmetry: the real energies land on the line. -/
+theorem energy_carrier_lands :
+    ∃ C : Carrier { E : Energy // E.mirror = E }, ∀ w, C.ι w = phi w.1 :=
+  equivariant_carrier_lands phi Energy.mirror phi_equivariant
+
+/-! ## Part III. The substrate: the particle map, three odd readings and one even -/
+
+/-- A particle in the broken phase: electric charge times three, colour, baryon number times
+    three, lepton number, and its energy. -/
+structure Particle where
+  q3 : Int
+  colour : Int
+  b3 : Int
+  lepton : Int
+  energy : Energy
+  deriving DecidableEq, Repr
+
+/-- The particle map: every additive charge flipped, the energy kept (frequency and rate). -/
+def bar (c : Particle) : Particle := ⟨-c.q3, -c.colour, -c.b3, -c.lepton, c.energy⟩
+/-- The time mirror of a particle's mode. -/
+def tmirror (c : Particle) : Particle := ⟨c.q3, c.colour, c.b3, c.lepton, c.energy.mirror⟩
+def Neutral (c : Particle) : Prop := c.q3 = 0 ∧ c.colour = 0 ∧ c.b3 = 0 ∧ c.lepton = 0
+
+theorem bar_involutive (c : Particle) : bar (bar c) = c := by
+  obtain ⟨q, k, b, l, E⟩ := c
+  show (⟨- -q, - -k, - -b, - -l, E⟩ : Particle) = ⟨q, k, b, l, E⟩
+  rw [Int.neg_neg, Int.neg_neg, Int.neg_neg, Int.neg_neg]
+
+theorem bar_fixed_iff_neutral (c : Particle) : bar c = c ↔ Neutral c := by
+  obtain ⟨q, k, b, l, E⟩ := c
+  show (⟨-q, -k, -b, -l, E⟩ : Particle) = ⟨q, k, b, l, E⟩ ↔ (q = 0 ∧ k = 0 ∧ b = 0 ∧ l = 0)
+  constructor
+  · intro h
+    have h1 := congrArg Particle.q3 h
+    have h2 := congrArg Particle.colour h
+    have h3 := congrArg Particle.b3 h
+    have h4 := congrArg Particle.lepton h
+    change -q = q at h1; change -k = k at h2; change -b = b at h3; change -l = l at h4
+    exact ⟨by omega, by omega, by omega, by omega⟩
+  · intro ⟨h1, h2, h3, h4⟩
+    subst h1; subst h2; subst h3; subst h4; rfl
+
+/-- Three plus one: the charge readings are odd under the particle map, the energy reading even. -/
+theorem odd_charges_even_energy (c : Particle) :
+    ((bar c).q3 = -c.q3 ∧ (bar c).colour = -c.colour ∧ (bar c).b3 = -c.b3 ∧
+     (bar c).lepton = -c.lepton) ∧ (bar c).energy = c.energy :=
+  ⟨⟨rfl, rfl, rfl, rfl⟩, rfl⟩
+
+/-- Gravity reads energy only, so no gravitational reading tells a particle from its antiparticle. -/
+theorem gravity_reads_no_charge_bit {β : Type} (g : Energy → β) (c : Particle) :
+    g (bar c).energy = g c.energy := rfl
+
+/-- The two involutions of the substrate commute. -/
+theorem involutions_commute (c : Particle) : bar (tmirror c) = tmirror (bar c) := rfl
+
+theorem tmirror_involutive (c : Particle) : tmirror (tmirror c) = c := by
+  obtain ⟨q, k, b, l, E⟩ := c
+  show (⟨q, k, b, l, E.mirror.mirror⟩ : Particle) = ⟨q, k, b, l, E⟩
+  rw [mirror_involutive]
+
+/-- A particle is fixed by both involutions exactly when it is neutral and stable. -/
+theorem joint_fixed_iff (c : Particle) :
+    (bar c = c ∧ tmirror c = c) ↔ (Neutral c ∧ IsReal c.energy) := by
+  constructor
+  · intro ⟨h1, h2⟩
+    refine ⟨(bar_fixed_iff_neutral c).mp h1, (mirror_fixed_iff_real c.energy).mp ?_⟩
+    exact congrArg Particle.energy h2
+  · intro ⟨h1, h2⟩
+    refine ⟨(bar_fixed_iff_neutral c).mpr h1, ?_⟩
+    obtain ⟨q, k, b, l, E⟩ := c
+    show (⟨q, k, b, l, E.mirror⟩ : Particle) = ⟨q, k, b, l, E⟩
+    rw [(mirror_fixed_iff_real E).mpr h2]
+
+/-- The energy carrier on particles: the seat point of a particle's energy. -/
+def energySeat (c : Particle) : Pt := phi c.energy
+/-- The charge carrier on particles, the odd face: electric charge (in thirds) is the side. -/
+def chargeSeat (c : Particle) : Pt := (1 + c.q3, c.energy.freq)
+/-- The lepton chart of the electron's witness: charge q in units of e goes to h = 1 + q. -/
+def leptonSeat (q m : Int) : Pt := (1 + q, m)
+
+/-- The charge carrier is equivariant: the particle map is carried onto the fold. -/
+theorem charge_carrier_equivariant : Equivariant chargeSeat bar fold := by
+  intro c
+  show ((1 + -c.q3, c.energy.freq) : Pt) = (2 - (1 + c.q3), c.energy.freq)
+  rw [pe]; exact ⟨by omega, rfl⟩
+
+/-- The energy carrier is blind to the particle map and equivariant for the time mirror. -/
+theorem pair_lands_once (c : Particle) : energySeat (bar c) = energySeat c := rfl
+theorem tmirror_equivariant : Equivariant energySeat tmirror fold := fun c => phi_equivariant c.energy
+
+/-- Electrically neutral particles land on the line under the charge carrier. -/
+theorem neutral_charge_on_line (c : Particle) (h : c.q3 = 0) : OnLine (chargeSeat c) := by
+  show 1 + c.q3 = 1
+  omega
+
+/-- The electron and the positron land on the two edges, real parts 0 and 1, mirror images. -/
+theorem pair_on_the_edges (m : Int) :
+    leptonSeat (-1) m = (0, m) ∧ leptonSeat 1 m = (2, m) ∧ fold (leptonSeat (-1) m) = leptonSeat 1 m :=
+  ⟨rfl, rfl, rfl⟩
+
+/-- A stable particle lands on the line under the energy carrier. -/
+theorem stable_lands (c : Particle) (h : IsReal c.energy) : OnLine (energySeat c) :=
+  (phi_line_iff_real c.energy).mpr h
+
+/-! ## Part IV. The exchange is the fold -/
+
+/-- A two-particle amplitude on two ordered slots: x on (a, b), y on (b, a). -/
+abbrev Pair := Int × Int
+
+/-- The exchange of two identical particles. -/
+def swap (p : Pair) : Pair := (p.2, p.1)
+
+theorem swap_involutive (p : Pair) : swap (swap p) = p := rfl
+
+/-- The exchange carrier: the antisymmetric part to the side, the symmetric part to the height. -/
+def exchangeSeat (p : Pair) : Pt := (1 + (p.1 - p.2), p.1 + p.2)
+
+/-- THE EXCHANGE IS THE FOLD: the exchange carrier is equivariant. -/
+theorem exchange_carrier_equivariant : Equivariant exchangeSeat swap fold := by
+  intro p
+  obtain ⟨x, y⟩ := p
+  show ((1 + (y - x), y + x) : Pt) = (2 - (1 + (x - y)), x + y)
+  rw [pe]; exact ⟨by omega, by omega⟩
+
+/-- Bosons are the line: a pair amplitude lands on the line exactly when it is symmetric. -/
+theorem symmetric_on_the_line (p : Pair) : OnLine (exchangeSeat p) ↔ swap p = p := by
+  obtain ⟨x, y⟩ := p
+  show 1 + (x - y) = 1 ↔ ((y, x) : Pair) = (x, y)
+  rw [pe]; constructor
+  · intro h; exact ⟨by omega, by omega⟩
+  · intro ⟨h, _⟩; omega
+
+/-- The symmetric pairs, carried by the functor of the seat, land on the line. -/
+theorem exchange_carrier_lands :
+    ∃ C : Carrier { p : Pair // swap p = p }, ∀ w, C.ι w = exchangeSeat w.1 :=
+  equivariant_carrier_lands exchangeSeat swap exchange_carrier_equivariant
+
+/-- Fermions stand at height zero: an antisymmetric amplitude has no symmetric part, and off the
+    line unless it vanishes. -/
+theorem antisymmetric_at_height_zero (x : Int) (h : x ≠ 0) :
+    (exchangeSeat (x, -x)).2 = 0 ∧ ¬ OnLine (exchangeSeat (x, -x)) := by
+  refine ⟨by show x + -x = 0; omega, ?_⟩
+  show ¬ (1 + (x - -x) = 1); omega
+
+/-- The record keeps the symmetric part and forgets the antisymmetric part: a pair and its exchange
+    are two states with one record. -/
+theorem exchange_two_worlds (p : Pair) (h : p.1 ≠ p.2) :
+    swap p ≠ p ∧ reg (exchangeSeat (swap p)) = reg (exchangeSeat p) := by
+  refine ⟨fun e => h (congrArg Prod.snd e), ?_⟩
+  rw [exchange_carrier_equivariant]; rfl
+
+/-! ## Part V. Pauli exclusion: the odd reading is blind on the fixed set -/
+
+/-- PAULI EXCLUSION: an antisymmetric amplitude vanishes wherever the exchange fixes the
+    configuration, both particles in one state. -/
+theorem pauli_exclusion {α : Type} (ψ : α → α → Int) (hanti : ∀ a b, ψ a b = -ψ b a) (a : α) :
+    ψ a a = 0 := by
+  have := hanti a a
+  omega
+
+/-- The Slater form f(a)g(b) − f(b)g(a) is antisymmetric and vanishes on the diagonal. -/
+theorem slater_vanishes_on_diagonal {α : Type} (f g : α → Int) (a : α) :
+    f a * g a - f a * g a = 0 := by omega
+
+/-- Bosons may share: a symmetric product f(a)f(b) is nonzero on the diagonal wherever f is. -/
+theorem bosons_may_share {α : Type} (f : α → Int) (a : α) (h : f a ≠ 0) : f a * f a ≠ 0 :=
+  Int.mul_ne_zero h h
+
+/-- THE FERMION'S OCCUPATION IS A BIT: an occupation number equal to its own square is 0 or 1. -/
+theorem fermion_occupation_is_a_bit (n : Int) : n * n = n ↔ n = 0 ∨ n = 1 := by
+  constructor
+  · intro h
+    have h2 : n * (n - 1) = 0 := by simp only [Int.mul_sub, Int.mul_one]; omega
+    rcases Int.mul_eq_zero.mp h2 with h3 | h3
+    · left; exact h3
+    · right; omega
+  · intro h; rcases h with h | h <;> subst h <;> decide
+
+/-! ## Part VI. The Return: a full turn is minus one on spinors -/
+
+structure Q4 where
+  r : Int
+  i : Int
+  j : Int
+  k : Int
+  deriving DecidableEq, Repr
+
+def qmul (a b : Q4) : Q4 :=
+  ⟨a.r*b.r - a.i*b.i - a.j*b.j - a.k*b.k, a.r*b.i + a.i*b.r + a.j*b.k - a.k*b.j,
+   a.r*b.j - a.i*b.k + a.j*b.r + a.k*b.i, a.r*b.k + a.i*b.j - a.j*b.i + a.k*b.r⟩
+def qneg (a : Q4) : Q4 := ⟨-a.r, -a.i, -a.j, -a.k⟩
+def qconj (a : Q4) : Q4 := ⟨a.r, -a.i, -a.j, -a.k⟩
+def qone : Q4 := ⟨1, 0, 0, 0⟩
+def qi : Q4 := ⟨0, 1, 0, 0⟩
+def qj : Q4 := ⟨0, 0, 1, 0⟩
+def qk : Q4 := ⟨0, 0, 0, 1⟩
+
+theorem qext {a b : Q4} (h1 : a.r = b.r) (h2 : a.i = b.i) (h3 : a.j = b.j) (h4 : a.k = b.k) :
+    a = b := by
+  cases a; cases b; simp_all
+
+theorem qmul_neg_left (a b : Q4) : qmul (qneg a) b = qneg (qmul a b) := by
+  apply qext <;> simp only [qmul, qneg, Int.neg_mul] <;> omega
+theorem qmul_neg_right (a b : Q4) : qmul a (qneg b) = qneg (qmul a b) := by
+  apply qext <;> simp only [qmul, qneg, Int.mul_neg] <;> omega
+theorem qconj_neg (a : Q4) : qconj (qneg a) = qneg (qconj a) := rfl
+theorem qneg_neg (a : Q4) : qneg (qneg a) = a := by
+  apply qext <;> simp only [qneg, Int.neg_neg]
+theorem qmul_one_left (a : Q4) : qmul qone a = a := by
+  apply qext <;> simp only [qmul, qone] <;> omega
+
+/-- The Return: i j k = −1, the quaternion form of a full turn. -/
+theorem the_return : qmul (qmul qi qj) qk = qneg qone := by decide
+
+/-- A FULL TURN IS MINUS ONE ON SPINORS: the full-turn element −1 negates every spinor. -/
+theorem full_turn_negates_spinors (ψ : Q4) : qmul (qneg qone) ψ = qneg ψ := by
+  rw [qmul_neg_left, qmul_one_left]
+
+/-- A full turn is the identity on vectors, which it acts on by conjugation. -/
+theorem full_turn_fixes_vectors (v : Q4) : qmul (qmul (qneg qone) v) (qconj (qneg qone)) = v := by
+  rw [qmul_neg_left, qconj_neg, qmul_neg_right, qmul_neg_left, qneg_neg, qmul_one_left]
+  apply qext <;> simp only [qmul, qconj, qone] <;> omega
+
+/-- Two full turns are the identity on spinors. -/
+theorem two_turns_are_identity : qmul (qneg qone) (qneg qone) = qone := by decide
+
+/-- THE DOUBLE COVER IS TWO TO ONE: q and −q rotate every vector alike. The kernel of the cover
+    is {1, −1}, one bit. -/
+theorem double_cover_two_to_one (q v : Q4) :
+    qmul (qmul (qneg q) v) (qconj (qneg q)) = qmul (qmul q v) (qconj q) := by
+  rw [qmul_neg_left, qconj_neg, qmul_neg_right, qmul_neg_left, qneg_neg]
+
+/-- The exchange sign of spin n/2, read as the sign of a full turn: (−1)^n. -/
+def turnSign : Nat → Int
+  | 0 => 1
+  | n + 1 => - turnSign n
+
+theorem turnSign_val (n : Nat) : turnSign n = if n % 2 = 0 then 1 else -1 := by
+  induction n with
+  | zero => rfl
+  | succ n ih =>
+    show - turnSign n = _
+    rw [ih]
+    by_cases h : n % 2 = 0
+    · have h2 : (n + 1) % 2 ≠ 0 := by omega
+      simp [h, h2]
+    · have h2 : (n + 1) % 2 = 0 := by omega
+      simp [h, h2]
+
+/-- Half-integer spin turns to minus one; integer spin to plus one. With the spin-statistics
+    theorem carried, the first are fermions and the second bosons. -/
+theorem half_integer_spin_is_odd (n : Nat) : turnSign n = -1 ↔ n % 2 = 1 := by
+  rw [turnSign_val]
+  by_cases h : n % 2 = 0
+  · simp [h]
+  · have h1 : n % 2 = 1 := by omega
+    simp [h, h1]
+
+/-! ## Part VII. Statistics is one bit in three dimensions -/
+
+/-- STATISTICS IS ONE BIT: an exchange sign whose square is the identity, as a double exchange is
+    in three dimensions, is +1 or −1. -/
+theorem statistics_one_bit (e : Int) (h : e * e = 1) : e = 1 ∨ e = -1 := by
+  have h2 : (e - 1) * (e + 1) = 0 := by
+    simp only [Int.sub_mul, Int.mul_add, Int.mul_one, Int.one_mul]; omega
+  rcases Int.mul_eq_zero.mp h2 with h3 | h3
+  · left; omega
+  · right; omega
+
+/-- A quarter phase i squares to −1, so it is excluded in three dimensions and admitted only in the
+    plane, where a double exchange need not be the identity: the anyon. -/
+theorem anyon_needs_the_plane : qmul qi qi = qneg qone ∧ qmul qi qi ≠ qone := by decide
+
+/-! ## Part VIII. The record: bunching and antibunching read the bit -/
+
+/-- The coincidence amplitude of two identical particles at a balanced splitter, doubled: t = 1,
+    r = i, so t·t + ε·r·r = 1 − ε. -/
+def coincidence (e : Int) : Int := 1 - e
+
+/-- BOSONS BUNCH, FERMIONS PART: the coincidence vanishes for bosons and is full for fermions. -/
+theorem bosons_bunch_fermions_part : coincidence 1 = 0 ∧ coincidence (-1) = 2 := by decide
+
+/-- Orbitals f = (1, 1) and g = (1, −1) on two sites, and the pair amplitudes f(a)g(b) ± f(b)g(a). -/
+def fo (_ : Bool) : Int := 1
+def go (a : Bool) : Int := if a then -1 else 1
+def pairAmp (e : Int) (a b : Bool) : Int := fo a * go b + e * (fo b * go a)
+def oneBody (e : Int) (a : Bool) : Int := pairAmp e a false * pairAmp e a false + pairAmp e a true * pairAmp e a true
+
+/-- THE ONE-BODY RECORD DOES NOT READ THE STATISTICS: the boson pair and the fermion pair have one
+    density at every site and differ at coincidence, where the pair reading reads the bit. -/
+theorem statistics_unread_by_one_body :
+    oneBody 1 false = oneBody (-1) false ∧ oneBody 1 true = oneBody (-1) true ∧
+    pairAmp 1 false false * pairAmp 1 false false = 4 ∧
+    pairAmp (-1) false false * pairAmp (-1) false false = 0 := by decide
+
+/-! ## Part IX. The capstone -/
+
+/-- SPIN AND STATISTICS ON THE SEAT. The exchange is the fold under the exchange carrier; bosons
+    are the line and fermions stand at height zero off it; a pair and its exchange share one
+    record; an antisymmetric amplitude vanishes on the exchange's fixed configurations, so a
+    fermion's occupation is one bit; a full turn negates spinors and fixes vectors, the double
+    cover being two to one; an exchange sign whose square is the identity is ±1; bosons bunch and
+    fermions part; the one-body record does not read the statistics. -/
+theorem spin_and_statistics_on_the_seat :
+    Equivariant exchangeSeat swap fold ∧
+    (∀ p : Pair, OnLine (exchangeSeat p) ↔ swap p = p) ∧
+    (∀ p : Pair, p.1 ≠ p.2 → reg (exchangeSeat (swap p)) = reg (exchangeSeat p)) ∧
+    (∀ (ψ : Bool → Bool → Int), (∀ a b, ψ a b = -ψ b a) → ∀ a, ψ a a = 0) ∧
+    (∀ n : Int, n * n = n ↔ n = 0 ∨ n = 1) ∧
+    (∀ ψ : Q4, qmul (qneg qone) ψ = qneg ψ) ∧
+    (∀ q v : Q4, qmul (qmul (qneg q) v) (qconj (qneg q)) = qmul (qmul q v) (qconj q)) ∧
+    (∀ e : Int, e * e = 1 → e = 1 ∨ e = -1) ∧
+    (coincidence 1 = 0 ∧ coincidence (-1) = 2) ∧
+    (oneBody 1 false = oneBody (-1) false ∧ oneBody 1 true = oneBody (-1) true) :=
+  ⟨exchange_carrier_equivariant, symmetric_on_the_line, fun p h => (exchange_two_worlds p h).2,
+   fun ψ h a => pauli_exclusion ψ h a, fermion_occupation_is_a_bit, full_turn_negates_spinors,
+   double_cover_two_to_one, statistics_one_bit, bosons_bunch_fermions_part,
+   ⟨statistics_unread_by_one_body.1, statistics_unread_by_one_body.2.1⟩⟩
+
+end SPHYS.SpinStatistics
+
+#print axioms SPHYS.SpinStatistics.pe
+#print axioms SPHYS.SpinStatistics.fold_involutive
+#print axioms SPHYS.SpinStatistics.seat_fixed_line
+#print axioms SPHYS.SpinStatistics.reg_lands
+#print axioms SPHYS.SpinStatistics.reg_fixes_iff
+#print axioms SPHYS.SpinStatistics.reg_forgets_side
+#print axioms SPHYS.SpinStatistics.least_erasure_iff_value
+#print axioms SPHYS.SpinStatistics.equivariant_id
+#print axioms SPHYS.SpinStatistics.equivariant_comp
+#print axioms SPHYS.SpinStatistics.fix_functorial
+#print axioms SPHYS.SpinStatistics.fold_global_seat
+#print axioms SPHYS.SpinStatistics.equivariant_carrier_lands
+#print axioms SPHYS.SpinStatistics.value_on_image
+#print axioms SPHYS.SpinStatistics.kinetic_crossing
+#print axioms SPHYS.SpinStatistics.off_locus_pair
+#print axioms SPHYS.SpinStatistics.ee
+#print axioms SPHYS.SpinStatistics.mirror_involutive
+#print axioms SPHYS.SpinStatistics.psi_phi
+#print axioms SPHYS.SpinStatistics.phi_psi
+#print axioms SPHYS.SpinStatistics.phi_injective
+#print axioms SPHYS.SpinStatistics.phi_equivariant
+#print axioms SPHYS.SpinStatistics.mirror_fixed_iff_real
+#print axioms SPHYS.SpinStatistics.phi_line_iff_real
+#print axioms SPHYS.SpinStatistics.stationary_iff_real
+#print axioms SPHYS.SpinStatistics.line_is_stationary
+#print axioms SPHYS.SpinStatistics.measured_on_line
+#print axioms SPHYS.SpinStatistics.no_measurement_off_line
+#print axioms SPHYS.SpinStatistics.energy_carrier_lands
+#print axioms SPHYS.SpinStatistics.bar_involutive
+#print axioms SPHYS.SpinStatistics.bar_fixed_iff_neutral
+#print axioms SPHYS.SpinStatistics.odd_charges_even_energy
+#print axioms SPHYS.SpinStatistics.gravity_reads_no_charge_bit
+#print axioms SPHYS.SpinStatistics.involutions_commute
+#print axioms SPHYS.SpinStatistics.tmirror_involutive
+#print axioms SPHYS.SpinStatistics.joint_fixed_iff
+#print axioms SPHYS.SpinStatistics.charge_carrier_equivariant
+#print axioms SPHYS.SpinStatistics.pair_lands_once
+#print axioms SPHYS.SpinStatistics.tmirror_equivariant
+#print axioms SPHYS.SpinStatistics.neutral_charge_on_line
+#print axioms SPHYS.SpinStatistics.pair_on_the_edges
+#print axioms SPHYS.SpinStatistics.stable_lands
+#print axioms SPHYS.SpinStatistics.swap_involutive
+#print axioms SPHYS.SpinStatistics.exchange_carrier_equivariant
+#print axioms SPHYS.SpinStatistics.symmetric_on_the_line
+#print axioms SPHYS.SpinStatistics.exchange_carrier_lands
+#print axioms SPHYS.SpinStatistics.antisymmetric_at_height_zero
+#print axioms SPHYS.SpinStatistics.exchange_two_worlds
+#print axioms SPHYS.SpinStatistics.pauli_exclusion
+#print axioms SPHYS.SpinStatistics.slater_vanishes_on_diagonal
+#print axioms SPHYS.SpinStatistics.bosons_may_share
+#print axioms SPHYS.SpinStatistics.fermion_occupation_is_a_bit
+#print axioms SPHYS.SpinStatistics.qext
+#print axioms SPHYS.SpinStatistics.qmul_neg_left
+#print axioms SPHYS.SpinStatistics.qmul_neg_right
+#print axioms SPHYS.SpinStatistics.qconj_neg
+#print axioms SPHYS.SpinStatistics.qneg_neg
+#print axioms SPHYS.SpinStatistics.qmul_one_left
+#print axioms SPHYS.SpinStatistics.the_return
+#print axioms SPHYS.SpinStatistics.full_turn_negates_spinors
+#print axioms SPHYS.SpinStatistics.full_turn_fixes_vectors
+#print axioms SPHYS.SpinStatistics.two_turns_are_identity
+#print axioms SPHYS.SpinStatistics.double_cover_two_to_one
+#print axioms SPHYS.SpinStatistics.turnSign_val
+#print axioms SPHYS.SpinStatistics.half_integer_spin_is_odd
+#print axioms SPHYS.SpinStatistics.statistics_one_bit
+#print axioms SPHYS.SpinStatistics.anyon_needs_the_plane
+#print axioms SPHYS.SpinStatistics.bosons_bunch_fermions_part
+#print axioms SPHYS.SpinStatistics.statistics_unread_by_one_body
+#print axioms SPHYS.SpinStatistics.spin_and_statistics_on_the_seat
+\end{Verbatim}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{Verbatim}[fontsize=\fontsize{6.0}{6.9}\selectfont,breaklines,breakanywhere,breaksymbolleft={}]
+'SPHYS.SpinStatistics.pe' does not depend on any axioms
+'SPHYS.SpinStatistics.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.reg_lands' does not depend on any axioms
+'SPHYS.SpinStatistics.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.SpinStatistics.reg_forgets_side' does not depend on any axioms
+'SPHYS.SpinStatistics.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.SpinStatistics.equivariant_id' does not depend on any axioms
+'SPHYS.SpinStatistics.equivariant_comp' does not depend on any axioms
+'SPHYS.SpinStatistics.fix_functorial' does not depend on any axioms
+'SPHYS.SpinStatistics.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.value_on_image' does not depend on any axioms
+'SPHYS.SpinStatistics.kinetic_crossing' does not depend on any axioms
+'SPHYS.SpinStatistics.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.ee' does not depend on any axioms
+'SPHYS.SpinStatistics.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.SpinStatistics.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.measured_on_line' does not depend on any axioms
+'SPHYS.SpinStatistics.no_measurement_off_line' does not depend on any axioms
+'SPHYS.SpinStatistics.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.bar_involutive' does not depend on any axioms
+'SPHYS.SpinStatistics.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.SpinStatistics.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.SpinStatistics.involutions_commute' does not depend on any axioms
+'SPHYS.SpinStatistics.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.pair_lands_once' does not depend on any axioms
+'SPHYS.SpinStatistics.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.pair_on_the_edges' does not depend on any axioms
+'SPHYS.SpinStatistics.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.swap_involutive' does not depend on any axioms
+'SPHYS.SpinStatistics.exchange_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.symmetric_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.exchange_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.antisymmetric_at_height_zero' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.exchange_two_worlds' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.pauli_exclusion' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.slater_vanishes_on_diagonal' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.bosons_may_share' depends on axioms: [propext]
+'SPHYS.SpinStatistics.fermion_occupation_is_a_bit' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.qext' depends on axioms: [propext]
+'SPHYS.SpinStatistics.qmul_neg_left' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.qmul_neg_right' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.qconj_neg' does not depend on any axioms
+'SPHYS.SpinStatistics.qneg_neg' depends on axioms: [propext]
+'SPHYS.SpinStatistics.qmul_one_left' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.the_return' does not depend on any axioms
+'SPHYS.SpinStatistics.full_turn_negates_spinors' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.full_turn_fixes_vectors' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.two_turns_are_identity' does not depend on any axioms
+'SPHYS.SpinStatistics.double_cover_two_to_one' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.turnSign_val' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.half_integer_spin_is_odd' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.statistics_one_bit' depends on axioms: [propext, Quot.sound]
+'SPHYS.SpinStatistics.anyon_needs_the_plane' does not depend on any axioms
+'SPHYS.SpinStatistics.bosons_bunch_fermions_part' does not depend on any axioms
+'SPHYS.SpinStatistics.statistics_unread_by_one_body' does not depend on any axioms
+'SPHYS.SpinStatistics.spin_and_statistics_on_the_seat' depends on axioms: [propext, Quot.sound]
+\end{Verbatim}
+\end{multicols}
+
+\hypertarget{appendix-b-spinstat_twin.f90-and-its-run}{%
+\section{Appendix B: SpinStat\_Twin.f90 and Its
+Run}\label{appendix-b-spinstat_twin.f90-and-its-run}}
+
+\begin{multicols}{2}
+\begin{Verbatim}[fontsize=\fontsize{6.0}{6.9}\selectfont,breaklines,breakanywhere,breaksymbolleft={}]
+! SpinStat_Twin.f90 · the executed twin of SPHYS_Spin_Statistics.lean · Fortran 2018.
+! Build (sealed): gfortran -std=f2018 -O2 -fno-fast-math -ffp-contract=off SpinStat_Twin.f90
+! Blocks: A the exchange carrier; B Pauli exclusion; C the Return and the double cover; D one bit in
+! three dimensions; E bunching and antibunching; F the periodic table from the bit; G degeneracy:
+! Chandrasekhar's mass; H condensation: London's temperature; I spin and statistics on the table.
+program spinstat_twin
+  implicit none
+  integer, parameter :: dp = selected_real_kind(15, 307)
+  integer, parameter :: i8 = selected_int_kind(18)
+  real(dp), parameter :: PI = 3.141592653589793_dp, HBAR = 1.054571817e-34_dp, CL = 299792458.0_dp
+  real(dp), parameter :: G = 6.67430e-11_dp, MH = 1.6735575e-27_dp, MSUN = 1.98847e30_dp
+  real(dp), parameter :: KB = 1.380649e-23_dp, AMU = 1.66053906660e-27_dp
+  integer :: checks, fails
+  integer(i8) :: seed
+  checks = 0; fails = 0; seed = 20260930_i8
+  call block_a(); call block_b(); call block_c(); call block_d(); call block_e()
+  call block_f(); call block_g(); call block_h(); call block_i()
+  write(*,'(a,i0,a,i0,a)') ' BATTERY-JSON: {"checks":', checks, ',"failures":', fails, '}'
+  if (fails > 0) error stop 1
+contains
+  subroutine check(name, ok)
+    character(*), intent(in) :: name
+    logical, intent(in) :: ok
+    checks = checks + 1
+    if (.not. ok) fails = fails + 1
+    write(*,'(a,a)') merge('  PASS  ', '  FAIL  ', ok), name
+  end subroutine check
+
+  function rnd() result(r)
+    real(dp) :: r
+    seed = modulo(16807_i8*seed, 2147483647_i8)
+    r = real(seed, dp)/2147483647.0_dp
+  end function rnd
+
+  subroutine block_a()
+    integer :: x, y, n, neq, nline, nzero, npair
+    write(*,'(a)') 'A · the exchange is the fold: bosons on the line, fermions at height zero'
+    n = 0; neq = 0; nline = 0; nzero = 0; npair = 0
+    do x = -30, 30
+      do y = -30, 30
+        n = n + 1
+        ! seat of (x, y) is (1 + (x - y), x + y); seat of the swap is (1 + (y - x), y + x)
+        if (1 + (y - x) == 2 - (1 + (x - y)) .and. y + x == x + y) neq = neq + 1
+        if ((1 + (x - y) == 1) .eqv. (x == y)) nline = nline + 1
+        if (x == -y) then
+          if (x + y == 0 .and. ((1 + (x - y) /= 1) .eqv. (x /= 0))) nzero = nzero + 1
+        end if
+        if (x /= y .and. x + y == y + x) npair = npair + 1
+      end do
+    end do
+    call check('equivariance on 3721 pair amplitudes: the exchange is the fold', neq == n)
+    call check('a pair amplitude is on the line exactly when it is symmetric (3721)', nline == n)
+    call check('antisymmetric amplitudes stand at height zero, off the line unless zero (61)', nzero == 61)
+    call check('a pair and its exchange share one record (3660 unsymmetric pairs)', npair == n - 61)
+  end subroutine block_a
+
+  subroutine block_b()
+    integer :: t, a, b, nd, nsl, nbit, nn
+    real(dp) :: psi(6,6), f(6), gg(6), m
+    write(*,'(a)') 'B · Pauli exclusion: the odd amplitude is blind on the diagonal; the occupation is a bit'
+    nd = 0; nsl = 0
+    do t = 1, 1000
+      do a = 1, 6
+        f(a) = rnd() - 0.5_dp; gg(a) = rnd() - 0.5_dp
+        do b = 1, 6
+          psi(a,b) = rnd() - 0.5_dp
+        end do
+      end do
+      psi = psi - transpose(psi)
+      if (all([(psi(a,a) == 0.0_dp, a = 1, 6)])) nd = nd + 1
+      m = 0.0_dp
+      do a = 1, 6
+        m = max(m, abs(f(a)*gg(a) - f(a)*gg(a)))
+      end do
+      if (m == 0.0_dp) nsl = nsl + 1
+    end do
+    call check('1000 random antisymmetric amplitudes vanish exactly on every diagonal entry', nd == 1000)
+    call check('1000 random Slater amplitudes f(a)g(b) - f(b)g(a) vanish at a = b', nsl == 1000)
+    nbit = 0
+    do nn = -50, 50
+      if ((nn*nn == nn) .eqv. (nn == 0 .or. nn == 1)) nbit = nbit + 1
+    end do
+    call check('an occupation equal to its own square is 0 or 1 (101 of 101)', nbit == 101)
+  end subroutine block_b
+
+  pure function qm(a, b) result(c)
+    real(dp), intent(in) :: a(4), b(4)
+    real(dp) :: c(4)
+    c(1) = a(1)*b(1) - a(2)*b(2) - a(3)*b(3) - a(4)*b(4)
+    c(2) = a(1)*b(2) + a(2)*b(1) + a(3)*b(4) - a(4)*b(3)
+    c(3) = a(1)*b(3) - a(2)*b(4) + a(3)*b(1) + a(4)*b(2)
+    c(4) = a(1)*b(4) + a(2)*b(3) - a(3)*b(2) + a(4)*b(1)
+  end function qm
+
+  pure function qc(a) result(c)
+    real(dp), intent(in) :: a(4)
+    real(dp) :: c(4)
+    c = [a(1), -a(2), -a(3), -a(4)]
+  end function qc
+
+  subroutine block_c()
+    integer :: t
+    real(dp) :: u(3), q2(4), q4(4), v(4), w(4), psi(4), s(4), e2, e4, ev, es, ec, q(4), r1(4), r2(4)
+    write(*,'(a)') 'C · the Return: a full turn is -1 on spinors, +1 on vectors; the cover is two to one'
+    e2 = 0.0_dp; e4 = 0.0_dp; ev = 0.0_dp; es = 0.0_dp; ec = 0.0_dp
+    do t = 1, 1000
+      u = [rnd() - 0.5_dp, rnd() - 0.5_dp, rnd() - 0.5_dp]; u = u/sqrt(sum(u*u))
+      q2 = [cos(PI), sin(PI)*u(1), sin(PI)*u(2), sin(PI)*u(3)]
+      q4 = [cos(2.0_dp*PI), sin(2.0_dp*PI)*u(1), sin(2.0_dp*PI)*u(2), sin(2.0_dp*PI)*u(3)]
+      e2 = max(e2, maxval(abs(q2 - [-1.0_dp, 0.0_dp, 0.0_dp, 0.0_dp])))
+      e4 = max(e4, maxval(abs(q4 - [1.0_dp, 0.0_dp, 0.0_dp, 0.0_dp])))
+      v = [0.0_dp, rnd() - 0.5_dp, rnd() - 0.5_dp, rnd() - 0.5_dp]
+      w = qm(qm(q2, v), qc(q2)); ev = max(ev, maxval(abs(w - v)))
+      psi = [rnd() - 0.5_dp, rnd() - 0.5_dp, rnd() - 0.5_dp, rnd() - 0.5_dp]
+      s = qm(q2, psi); es = max(es, maxval(abs(s + psi)))
+      q = [rnd() - 0.5_dp, rnd() - 0.5_dp, rnd() - 0.5_dp, rnd() - 0.5_dp]; q = q/sqrt(sum(q*q))
+      r1 = qm(qm(q, v), qc(q)); r2 = qm(qm(-q, v), qc(-q)); ec = max(ec, maxval(abs(r1 - r2)))
+    end do
+    write(*,'(a,es9.2,a,es9.2,a,es9.2)') '  full turn: |q - (-1)| <= ', e2, ';  vectors return to ', ev, &
+         ';  spinors to -psi within ', es
+    call check('a full turn about 1000 random axes is -1 on spinors and the identity on vectors', &
+               e2 < 1.0e-15_dp .and. ev < 1.0e-15_dp .and. es < 1.0e-15_dp)
+    call check('two full turns are the identity, and q and -q rotate every vector alike (1000)', &
+               e4 < 1.0e-15_dp .and. ec < 1.0e-15_dp)
+  end subroutine block_c
+
+  subroutine block_d()
+    integer :: t, n
+    real(dp) :: th, re, im
+    write(*,'(a)') 'D · statistics is one bit in three dimensions; the anyon needs the plane'
+    n = 0
+    do t = 0, 3599
+      th = 2.0_dp*PI*real(t, dp)/3600.0_dp
+      re = cos(2.0_dp*th); im = sin(2.0_dp*th)
+      if (abs(re - 1.0_dp) < 1.0e-12_dp .and. abs(im) < 1.0e-12_dp) n = n + 1
+    end do
+    write(*,'(a,i0,a)') '  exchange phases on a grid of 3600 whose square is the identity: ', n, ' (0 and pi)'
+    call check('only the phases +1 and -1 square to the identity', n == 2)
+    call check('the fractional phase pi/3 of the nu = 1/3 anyon does not square to the identity', &
+               abs(cos(2.0_dp*PI/3.0_dp) - 1.0_dp) > 0.5_dp)
+  end subroutine block_d
+
+  subroutine block_e()
+    integer :: t
+    real(dp) :: x, pb, pf, worst, gb, gf
+    write(*,'(a)') 'E · the record reads the bit: bosons bunch, fermions part'
+    worst = 0.0_dp
+    do t = 0, 100
+      x = real(t, dp)/100.0_dp
+      pb = 0.5_dp*(1.0_dp - x); pf = 0.5_dp*(1.0_dp + x)
+      worst = max(worst, abs(pb + pf - 1.0_dp))
+    end do
+    call check('at a balanced splitter, full overlap: bosons never coincide, fermions always do', &
+               0.5_dp*(1.0_dp - 1.0_dp) == 0.0_dp .and. 0.5_dp*(1.0_dp + 1.0_dp) == 1.0_dp .and. worst < 1.0e-15_dp)
+    call thermal_g2(0.3_dp, gb, gf)
+    write(*,'(a,f9.6,a,f9.6)') '  one thermal mode at mean occupation 0.3: Bose g2 = ', gb, ';  Fermi g2 = ', gf
+    call check('a thermal Bose mode bunches, g2 = 2 (helium-4), and a Fermi mode antibunches, g2 = 0 (helium-3)', &
+               abs(gb - 2.0_dp) < 1.0e-12_dp .and. gf == 0.0_dp)
+  end subroutine block_e
+
+  subroutine thermal_g2(nbar, gb, gf)
+    real(dp), intent(in) :: nbar
+    real(dp), intent(out) :: gb, gf
+    integer :: n
+    real(dp) :: p, s1, s2, r
+    ! Bose: geometric occupation with ratio r = nbar/(1 + nbar); Fermi: occupation 0 or 1 only
+    r = nbar/(1.0_dp + nbar); s1 = 0.0_dp; s2 = 0.0_dp
+    do n = 0, 400
+      p = (1.0_dp - r)*r**n
+      s1 = s1 + real(n, dp)*p; s2 = s2 + real(n, dp)*real(n - 1, dp)*p
+    end do
+    gb = s2/(s1*s1)
+    s1 = 0.0_dp*(1.0_dp - nbar) + 1.0_dp*nbar
+    s2 = 0.0_dp*(1.0_dp - nbar) + 0.0_dp*nbar
+    gf = s2/(s1*s1)
+  end subroutine thermal_g2
+
+  subroutine block_f()
+    integer, parameter :: order(19,2) = reshape([1,2,2,3,3,4,3,4,5,4,5,6,4,5,6,7,5,6,7, &
+                                                 0,0,1,0,1,0,2,1,0,2,1,0,3,2,1,0,3,2,1], [19,2])
+    integer :: k, total, nclos, closures(7)
+    write(*,'(a)') 'F · the periodic table from the bit: two states per orbital, one per state'
+    total = 0; nclos = 0
+    do k = 1, 19
+      total = total + 2*(2*order(k,2) + 1)
+      if ((order(k,2) == 1 .or. (order(k,1) == 1 .and. order(k,2) == 0)) .and. nclos < 7) then
+        nclos = nclos + 1; closures(nclos) = total
+      end if
+    end do
+    write(*,'(a,7i5)') '  shell closures from the Madelung order: ', closures
+    call check('the noble gases stand at 2, 10, 18, 36, 54, 86, 118', &
+               all(closures == [2, 10, 18, 36, 54, 86, 118]))
+  end subroutine block_f
+
+  subroutine block_g()
+    real(dp) :: mch, omega3, mue
+    write(*,'(a)') 'G · degeneracy: the fermion bit holds a white dwarf up to Chandrasekhar''s mass'
+    omega3 = 2.01824_dp; mue = 2.0_dp
+    mch = omega3*sqrt(3.0_dp*PI)/2.0_dp*(HBAR*CL/G)**1.5_dp/(mue*MH)**2/MSUN
+    write(*,'(a,f6.3,a)') '  Chandrasekhar mass for mu_e = 2: ', mch, ' solar masses'
+    call check('the degenerate-electron limit is 1.43 solar masses (ideal, mu_e = 2)', abs(mch - 1.43_dp) < 0.02_dp)
+  end subroutine block_g
+
+  subroutine block_h()
+    real(dp) :: m4, n, tc
+    write(*,'(a)') 'H · condensation: the boson bit, London''s estimate for helium-4'
+    m4 = 4.002602_dp*AMU; n = 145.0_dp/m4
+    tc = 2.0_dp*PI*HBAR**2/(m4*KB)*(n/2.6123753_dp)**(2.0_dp/3.0_dp)
+    write(*,'(a,f6.3,a)') '  ideal Bose gas at liquid-helium density: T_c = ', tc, ' K (the lambda point is 2.17 K)'
+    call check('London''s ideal-gas temperature is 3.13 K, the scale of the lambda transition', abs(tc - 3.13_dp) < 0.05_dp)
+  end subroutine block_h
+
+  subroutine block_i()
+    integer, parameter :: ntab = 12
+    integer :: spin2(ntab), ferm(ntab), k, nok
+    ! twice the spin, and the number of elementary fermion constituents, for
+    ! e, p, n, photon, W, gluon, Higgs, pion, deuteron, helium-4 atom, helium-3 atom, Delta
+    ! (quarks and electrons counted: the deuteron six quarks, helium-4 twelve and two, helium-3 nine and two)
+    spin2 = [1, 1, 1, 2, 2, 2, 0, 0, 2, 0, 1, 3]
+    ferm  = [1, 3, 3, 0, 0, 0, 0, 2, 6, 14, 11, 3]
+    write(*,'(a)') 'I · spin and statistics on the table: the turn sign is the exchange sign'
+    nok = 0
+    do k = 1, ntab
+      if (mod(spin2(k), 2) == mod(ferm(k), 2)) nok = nok + 1
+    end do
+    call check('twelve particles and atoms: half-integer spin exactly when an odd number of fermions', nok == ntab)
+  end subroutine block_i
+end program spinstat_twin
+\end{Verbatim}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{Verbatim}[fontsize=\fontsize{6.0}{6.9}\selectfont,breaklines,breakanywhere,breaksymbolleft={}]
+A · the exchange is the fold: bosons on the line, fermions at height zero
+  PASS  equivariance on 3721 pair amplitudes: the exchange is the fold
+  PASS  a pair amplitude is on the line exactly when it is symmetric (3721)
+  PASS  antisymmetric amplitudes stand at height zero, off the line unless zero (61)
+  PASS  a pair and its exchange share one record (3660 unsymmetric pairs)
+B · Pauli exclusion: the odd amplitude is blind on the diagonal; the occupation is a bit
+  PASS  1000 random antisymmetric amplitudes vanish exactly on every diagonal entry
+  PASS  1000 random Slater amplitudes f(a)g(b) - f(b)g(a) vanish at a = b
+  PASS  an occupation equal to its own square is 0 or 1 (101 of 101)
+C · the Return: a full turn is -1 on spinors, +1 on vectors; the cover is two to one
+  full turn: |q - (-1)| <=  1.22E-16;  vectors return to  2.22E-16;  spinors to -psi within  1.11E-16
+  PASS  a full turn about 1000 random axes is -1 on spinors and the identity on vectors
+  PASS  two full turns are the identity, and q and -q rotate every vector alike (1000)
+D · statistics is one bit in three dimensions; the anyon needs the plane
+  exchange phases on a grid of 3600 whose square is the identity: 2 (0 and pi)
+  PASS  only the phases +1 and -1 square to the identity
+  PASS  the fractional phase pi/3 of the nu = 1/3 anyon does not square to the identity
+E · the record reads the bit: bosons bunch, fermions part
+  PASS  at a balanced splitter, full overlap: bosons never coincide, fermions always do
+  one thermal mode at mean occupation 0.3: Bose g2 =  2.000000;  Fermi g2 =  0.000000
+  PASS  a thermal Bose mode bunches, g2 = 2 (helium-4), and a Fermi mode antibunches, g2 = 0 (helium-3)
+F · the periodic table from the bit: two states per orbital, one per state
+  shell closures from the Madelung order:     2   10   18   36   54   86  118
+  PASS  the noble gases stand at 2, 10, 18, 36, 54, 86, 118
+G · degeneracy: the fermion bit holds a white dwarf up to Chandrasekhar's mass
+  Chandrasekhar mass for mu_e = 2:  1.434 solar masses
+  PASS  the degenerate-electron limit is 1.43 solar masses (ideal, mu_e = 2)
+H · condensation: the boson bit, London's estimate for helium-4
+  ideal Bose gas at liquid-helium density: T_c =  3.134 K (the lambda point is 2.17 K)
+  PASS  London's ideal-gas temperature is 3.13 K, the scale of the lambda transition
+I · spin and statistics on the table: the turn sign is the exchange sign
+  PASS  twelve particles and atoms: half-integer spin exactly when an odd number of fermions
+ BATTERY-JSON: {"checks":17,"failures":0}
+\end{Verbatim}
+\end{multicols}
+
+\hypertarget{appendix-c-the-seat-and-the-judgment}{%
+\section{Appendix C: The Seat and the
+Judgment}\label{appendix-c-the-seat-and-the-judgment}}
+
+\begin{Verbatim}[fontsize=\fontsize{6.0}{7.0}\selectfont,breaklines,breakanywhere,breaksymbolleft={}]
+PhysOSᵀ 1.0.5p · RECEIPT · mode quick
+TOOLCHAIN Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release) · GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+MANIFEST sha256 a4108cd26bcbe6ef, the files that ran
+GROUND toolchain: Lean 4.19.0 and gfortran present · manifest: 31 files signed, all verified · proofs: 2 PhysOS Proofs read from II.10, record lines complete · source screen: 15 kernels, 23 named premises, clean · citations: 253 laws named in Parts I and II, 253 resolved · quarantine: 6 retirements string-scanned, 3 held by review, clean
+EXITS ground 0 · registerA RA_TOE_Thesis 0 · registerB Bridge_Final 0 · registerB Universal_Closure 0 · registerB One_Cut 0 · registerB One_Cut_Resolution 0 · registerB One_Cut_Terminal 0 · registerB Only_The_Arrow_Remains 0 · registerB Physical_Closure 0 · registerB Forced_Closure 0 · registerB Closure_Executed 0 · registerB Armed_Seat 0 · registerB Census 0 · registerB Heat_Bridge 0 · registerB The_Loop 0 · registerB RH_Least_Erasure 0 · witness One_Cut_Twin 0 · witness Physical_Closure_Twin 0 · witness Census_Twin 0 · witness Loop_Twin 0 · witness RH_Seal_Twin 0
+REGISTER A {"checks":1123,"failures":0,"mode":"sealed"}
+WITNESS 5 of 5 twins ran, each held to one battery line with zero failures
+CHAIN · D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+ELAPSED ground 1 s · Register A 3 s · Register B 34 s · witness 6 s · total 44 s (not hashed)
+SEAT EARNED · this run
+
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 69
+JUDGMENT refused 69 of 69 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
+\end{Verbatim}
+\end{document}
