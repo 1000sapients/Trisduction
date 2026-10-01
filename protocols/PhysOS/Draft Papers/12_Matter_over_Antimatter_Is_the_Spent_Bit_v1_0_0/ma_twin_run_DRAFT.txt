@@ -1,0 +1,16 @@
+A · conjugation on the baryon register is the fold under (1 + B, E); zero net baryon number is the line
+  PASS  1891 states: the fold, the line, and one registration for each matter and antimatter pair
+B · the wall: an energy-only weight against baryon number over a conjugation-closed spectrum
+  PASS  1000 random spectra and weights: the net baryon number is exactly zero
+C · a weight that tells matter from antimatter: the net is its odd part, and only that
+  PASS  1000 asymmetric weights: the net equals the odd part, and it is nonzero
+D · the measured asymmetry: baryons per photon from the Planck budget and the FIRAS temperature
+  n_b =    0.2512 per m^3 ; n_gamma =  4.1073E+08 per m^3 ; eta =  6.1163E-10
+  PASS  eta = 6.1e-10: one excess baryon per 1.6 billion photons
+E · the visible CP phase, weighed at the electroweak temperature (100 GeV)
+  J times the mass-splitting product over T^12 =  1.1965E-19 ; eta / that =  5.1119E+09
+  PASS  the quark sector supplies 1e-19, short of the measured 6.1e-10 by more than eight orders
+F · the reading barely moves today: the proton outlives the universe
+  lifetime bound over the age:  1.7408E+24
+  PASS  tau(p -> e+ pi0) > 2.4e34 yr is 1.7e24 ages of the universe
+ BATTERY-JSON: {"checks":6,"failures":0}
