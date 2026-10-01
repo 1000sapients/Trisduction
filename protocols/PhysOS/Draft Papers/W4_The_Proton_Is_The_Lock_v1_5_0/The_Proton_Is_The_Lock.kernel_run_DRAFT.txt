@@ -1,0 +1,11 @@
+'SPHYS.Proton.eps_nonzero_iff_distinct' does not depend on any axioms
+'SPHYS.Proton.eps_antisymmetric' does not depend on any axioms
+'SPHYS.Proton.eps_cyclic' does not depend on any axioms
+'SPHYS.Proton.singlet_count' depends on axioms: [propext]
+'SPHYS.Proton.lock_closes' depends on axioms: [propext]
+'SPHYS.Proton.lock_fails_when_axes_coincide' depends on axioms: [propext]
+'SPHYS.Proton.quark_record_does_not_decide' does not depend on any axioms
+'SPHYS.Proton.field_carries_the_mass' does not depend on any axioms
+'SPHYS.Proton.spectrum_gapped' does not depend on any axioms
+'SPHYS.Proton.det_two_equal_columns' depends on axioms: [propext, Quot.sound]
+'SPHYS.Proton.det_swap_columns' depends on axioms: [propext, Quot.sound]
