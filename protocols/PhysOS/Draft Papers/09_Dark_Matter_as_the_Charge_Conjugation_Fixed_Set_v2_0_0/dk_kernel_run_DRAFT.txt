@@ -1,0 +1,125 @@
+'SPHYS.Dark.pe' does not depend on any axioms
+'SPHYS.Dark.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.reg_lands' does not depend on any axioms
+'SPHYS.Dark.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.Dark.reg_forgets_side' does not depend on any axioms
+'SPHYS.Dark.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.Dark.equivariant_id' does not depend on any axioms
+'SPHYS.Dark.equivariant_comp' does not depend on any axioms
+'SPHYS.Dark.fix_functorial' does not depend on any axioms
+'SPHYS.Dark.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.value_on_image' does not depend on any axioms
+'SPHYS.Dark.kinetic_crossing' does not depend on any axioms
+'SPHYS.Dark.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.ee' does not depend on any axioms
+'SPHYS.Dark.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.Dark.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.measured_on_line' does not depend on any axioms
+'SPHYS.Dark.no_measurement_off_line' does not depend on any axioms
+'SPHYS.Dark.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.bar_involutive' does not depend on any axioms
+'SPHYS.Dark.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.Dark.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.Dark.involutions_commute' does not depend on any axioms
+'SPHYS.Dark.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.pair_lands_once' does not depend on any axioms
+'SPHYS.Dark.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.pair_on_the_edges' does not depend on any axioms
+'SPHYS.Dark.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.conj_involution' does not depend on any axioms
+'SPHYS.Dark.fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.fixedSM_iff_neutralSM' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.fixed_sub_fixedSM' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.dark_charge_hidden_from_the_visible' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.odd_reading_blind' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.charge_linear_readings_odd' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.charge_reading_odd' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.gravity_reading_even' does not depend on any axioms
+'SPHYS.Dark.dark_state_fixed' does not depend on any axioms
+'SPHYS.Dark.only_gravity_reads_the_fixed_set' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.dark_iff_fixed' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.electric_neutrality_is_not_the_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.sq_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.sq_eq_zero' depends on axioms: [propext]
+'SPHYS.Dark.radiative_zero_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.no_charge_no_radiation' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.dark_charged_radiates_only_dark' does not depend on any axioms
+'SPHYS.Dark.a_neutral_member_is_not_a_dark_multiplet' does not depend on any axioms
+'SPHYS.Dark.identity_unread' does not depend on any axioms
+'SPHYS.Dark.two_species_one_record' does not depend on any axioms
+'SPHYS.Dark.energy_record_even' does not depend on any axioms
+'SPHYS.Dark.source_odd' does not depend on any axioms
+'SPHYS.Dark.fog_one_record' does not depend on any axioms
+'SPHYS.Dark.direction_separates' does not depend on any axioms
+'SPHYS.Dark.visible_generation_closes' does not depend on any axioms
+'SPHYS.Dark.closure_admits_both' does not depend on any axioms
+'SPHYS.Dark.closure_is_not_vacuous' does not depend on any axioms
+'SPHYS.Dark.one_record_two_worlds' does not depend on any axioms
+'SPHYS.Dark.fifth_differs' does not depend on any axioms
+'SPHYS.Dark.no_template_reading_decides_fifth' does not depend on any axioms
+'SPHYS.Dark.fifth_is_keyed' does not depend on any axioms
+'SPHYS.Dark.dust_attracts' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.radiation_attracts' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.vacuum_repels' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.repulsion_needs_tension' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.floor_forbids_phantom' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.vacuum_iff_frozen' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.phantom_needs_ghost' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.flat_budgets_admit_both_signs' does not depend on any axioms
+'SPHYS.Dark.dark_ledger_is_computed' does not depend on any axioms
+'SPHYS.Dark.dark_ledger_counts' does not depend on any axioms
+'SPHYS.Dark.fixed_state_is_its_mass' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.every_template_reading_of_the_fixed_set_reads_only_mass' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.z_reading_odd' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.z_reading_survives_neutrality' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.the_triplet_has_one_fixed_member' does not depend on any axioms
+'SPHYS.Dark.floor_bounds_w' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.floor_needs_positive_density' does not depend on any axioms
+'SPHYS.Dark.floor_is_additive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.w_floor_from_rho_plus_p' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.rhoPlusP_split' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.fields_bound_w' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.photon_and_z_force_electroweak_zero' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.visible_nulls_force_the_visible_fixed_set' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.below_one_quantum_is_zero' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.sub_quantum_bounds_force_the_visible_fixed_set' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.portals_are_derived' depends on axioms: [propext]
+'SPHYS.Dark.fifth_is_free' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.fixed_iff_visible_fixed_and_no_dark_charge' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.coloured_fields_are_charged' does not depend on any axioms
+'SPHYS.Dark.sumI_tri_zero_of_none' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.a_coloured_relic_brings_charged_partners' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.a_stable_singlet_keeps_one_door' depends on axioms: [propext]
+'SPHYS.Dark.one_le_sq_of_ne' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.zero_le_sq' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.measured_coupling_bound_forces_zero' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.free_coupling_bound_never_forces_zero' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.first_clause_is_forced' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.second_clause_is_keyed' depends on axioms: [propext]
+'SPHYS.Dark.no_reading_of_the_record_decides_the_bit' does not depend on any axioms
+'SPHYS.Dark.self_conjugacy_spends_the_bit' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.dark_closure_executed' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.majorana_mass_forbids_abelian_charge' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.the_dark_bit_is_the_majorana_bit' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.a_dark_charge_makes_a_dirac_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.dark_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.dark_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.the_dark_bit_is_the_line_property' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.a_dark_pair_is_an_off_line_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.dark_matter_on_the_line_twice' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.gravity_is_the_reading_left' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.the_phantom_is_negative_actuation' depends on axioms: [propext, Quot.sound]
+'SPHYS.Dark.dark_matter_is_the_fixed_set' depends on axioms: [propext, Quot.sound]
