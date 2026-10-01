@@ -1,0 +1,9 @@
+Dark Matter as the Charge-Conjugation Fixed Set and the Dark Force as One Keyed Bit v2.0.0 · receipts · 30 September 2026
+supersedes edition 1.0.0 (10.5281/zenodo.23006753), concept 10.5281/zenodo.23006752
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Dark.lean | 1356 lines | sha256 466a1ef21f0ccca711608e7ed1031fc24ede5cb97e7291a21afed1ba93f57da2
+  125 laws (81 carried from Dark_Closure.lean, 44 added) | 42 axiom-free | 7 propext | 76 propext+Quot.sound | 0 choice
+  judged 125/125 refused, planted vacuous survives
+twin: Dark_Twin.f90 | 381 lines | sha256 6e6d834fd9c6194e735b316400c6c71bf8d34042d98adade62673aa5edfdc088
+  38 checks, 0 failures (35 carried, S1-S3 added)
+paper: 22 pages MathJournal | pdf sha256 ca17064a585d985f08cae21224cee5d837a5d355b919b42ec93ea2d8b48a3997
