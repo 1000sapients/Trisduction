@@ -1,0 +1,7 @@
+The_Strong_Force_Reads_No_Orientation_v1_0_0 · receipts · 1 October 2026
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Strong_CP.lean | 431 lines | sha256 3dff4ca961a1ed9bc54f1b8b5faf7278e253a21d6ffc4943f5f4b39fc4664a3e
+  48 laws | 22 free, 3 propext, 23 propext+Quot.sound | 0 choice | JUDGMENT refused 48 of 48 as proof failures | survived none 
+twin: StrongCP_Twin.f90 | 91 lines | sha256 3184a053378e929b6350768d5ce88d62113cc644f4356800940429da80d7bd7c
+  5 checks, 0 failures
+paper: 10 pages MathJournal | pdf sha256 c01c53045f07e09842cb218663c0ed5c65d6aa886501d5804d8c0c0307726b52
