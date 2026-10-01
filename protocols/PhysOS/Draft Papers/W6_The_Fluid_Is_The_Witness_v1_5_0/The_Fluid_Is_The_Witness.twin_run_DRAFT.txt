@@ -1,0 +1,6 @@
+ reversible gradient at t = 0.999      =    -1000.000
+ priced branch max |u_x| on [0, 3]     =     3.722947
+ residual of the constructed solution  =   1.9991E-06
+ energy balance error at t = 1         =   2.5074E-10
+ energy at t = 1                       =     1.223718
+ BATTERY-JSON: {"checks":5,"failures":0}
