@@ -1,0 +1,9 @@
+Typed_Falsifiability_of_the_Hardware_Closure_Series_v2_0_0 · receipts · 1 October 2026
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Typed_Falsifiability.lean | 533 lines | sha256 c5aaebf94749095abb61f34623e7089f7ecc5709a873dcbb5674b665f77d8863
+  52 laws | 25 free, 3 propext, 24 propext+Quot.sound | 0 choice | JUDGMENT refused 52 of 52 as proof failures | survived none 
+twin: Ledger_Twin.f90 | 113 lines | sha256 c64508e938d392515227974fc08958c0134902caa23528e924d11de06552ca71
+  3 checks, 0 failures
+paper: 13 pages MathJournal | pdf sha256 7a74f3398d245795b8e11201a1c9e8dbde8cb1b219891cfa14f140f3facc852d
+ledger.dat and the six witnesses' printed engines filed beside the twin; the hardware-series engines are in their own folders
+alignment 1 October 2026: twin rerun against the witnesses' 1.5.0 engines, 58 of 58 declared (tf_twin_run_on_witness_1_5_0.txt); text patched; pdf sha256 321aeac0d34f47970fa7426341ac955ec3dd32add073f228e26f02e96a64ceee
