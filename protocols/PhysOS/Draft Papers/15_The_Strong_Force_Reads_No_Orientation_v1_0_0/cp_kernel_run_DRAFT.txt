@@ -1,0 +1,48 @@
+'SPHYS.StrongCP.pe' does not depend on any axioms
+'SPHYS.StrongCP.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.reg_lands' does not depend on any axioms
+'SPHYS.StrongCP.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.StrongCP.reg_forgets_side' does not depend on any axioms
+'SPHYS.StrongCP.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.StrongCP.equivariant_id' does not depend on any axioms
+'SPHYS.StrongCP.equivariant_comp' does not depend on any axioms
+'SPHYS.StrongCP.fix_functorial' does not depend on any axioms
+'SPHYS.StrongCP.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.value_on_image' does not depend on any axioms
+'SPHYS.StrongCP.kinetic_crossing' does not depend on any axioms
+'SPHYS.StrongCP.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.ee' does not depend on any axioms
+'SPHYS.StrongCP.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.StrongCP.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.measured_on_line' does not depend on any axioms
+'SPHYS.StrongCP.no_measurement_off_line' does not depend on any axioms
+'SPHYS.StrongCP.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.bar_involutive' does not depend on any axioms
+'SPHYS.StrongCP.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.StrongCP.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.StrongCP.involutions_commute' does not depend on any axioms
+'SPHYS.StrongCP.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.pair_lands_once' does not depend on any axioms
+'SPHYS.StrongCP.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.pair_on_the_edges' does not depend on any axioms
+'SPHYS.StrongCP.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.fixed_iff_multiple_of_half' depends on axioms: [propext, Quot.sound]
+'SPHYS.StrongCP.angle_carrier_equivariant_and_line' does not depend on any axioms
+'SPHYS.StrongCP.edm_odd_and_null_on_the_fixed_set' does not depend on any axioms
+'SPHYS.StrongCP.energy_even' does not depend on any axioms
+'SPHYS.StrongCP.positivity_selects_zero' does not depend on any axioms
+'SPHYS.StrongCP.the_sign_of_theta_is_keyed' does not depend on any axioms
+'SPHYS.StrongCP.the_strong_force_reads_no_orientation' depends on axioms: [propext, Quot.sound]
