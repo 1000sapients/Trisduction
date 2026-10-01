@@ -1,0 +1,64 @@
+F-Pair|fold|positron_is_the_partner|22986553.txt|The Electron Is the Seat
+F-Round|line|round_iff_T_fixed|22986553.txt|The Electron Is the Seat
+F-Gravity|wall|no_reading_of_mass_returns_charge|22986553.txt|The Electron Is the Seat
+F-Decay|line|decay_forbidden|22986553.txt|The Electron Is the Seat
+F-Unitarity|price|pmns_unitary_is_lossless|22986555.txt|The Neutrino Is the Witness
+F-Chirality|fold|sterile_uncovered|22986555.txt|The Neutrino Is the Witness
+F-Floor|positivity|oscillation_forces_floor|22986555.txt|The Neutrino Is the Witness
+F-Monopole|fold|magnetism_pair|22986557.txt|The Arrow Has Two Branches
+F-Mass|positivity|gravity_no_off_locus|22986557.txt|The Arrow Has Two Branches
+F-Loop|positivity|one_sign_no_remanence|22986557.txt|The Arrow Has Two Branches
+F-Decay|line|-|22986559.txt|The Proton Is the Lock
+F-Singlet|count|lock_closes|22986559.txt|The Proton Is the Lock
+F-Gap|line|spectrum_gapped|22986559.txt|The Proton Is the Lock
+F-Class|count|repulsion_exponents|22986561.txt|The Magnet Is the Witness
+F-Arrow|fold|magnetic_term_breaks_T|22986561.txt|The Magnet Is the Witness
+F-Flow|line|value_on_image|SPHYS_One_Substrate.lean|The Fluid Is the Witness
+F-Energy|price|-|22986563.txt|The Fluid Is the Witness
+F-Computed|line|act_is_the_value|SPHYS_One_Substrate.lean|One Actuating Substrate
+F-Measure|line|measured_on_line|SPHYS_One_Substrate.lean|One Actuating Substrate
+F-Dispersion|line|every_frequency_one_side|SPHYS_Light.lean|The Geometric Nature of Light
+F-Fringe|wall|fringe_iff_side_forgotten|SPHYS_Light.lean|The Geometric Nature of Light
+F-Helicity|count|helicity_is_one_bit|SPHYS_Light.lean|The Geometric Nature of Light
+F-Charge|fold|pair_creation_conserves_charge|SPHYS_Electromagnetism.lean|Electromagnetism on the Riemann Locus
+F-Thirds|count|charges_in_thirds|SPHYS_Electromagnetism.lean|Electromagnetism on the Riemann Locus
+F-Reality|line|stationarity_survives_the_magnet|SPHYS_Electromagnetism.lean|Electromagnetism on the Riemann Locus
+F-Composition|wall|composition_blind|SPHYS_Gravity.lean|Immanent Gravity
+F-Clock|wall|clocks_co_move|SPHYS_Gravity.lean|Immanent Gravity
+F-Polarization|count|polarization_count|SPHYS_Gravity.lean|Immanent Gravity
+F-Exclusion|wall|pauli_exclusion|SPHYS_Spin_Statistics.lean|Spin and Statistics
+F-Connection|fold|half_integer_spin_is_odd|SPHYS_Spin_Statistics.lean|Spin and Statistics
+F-Anyon|count|statistics_one_bit|SPHYS_Spin_Statistics.lean|Spin and Statistics
+F-Right|line|charged_current_off_the_line|SPHYS_Weak.lean|The Weak Force Reads the Orientation
+F-CPT|fold|cp_violation_is_t_violation|SPHYS_Weak.lean|The Weak Force Reads the Orientation
+F-Mirror|line|vector_on_the_line|SPHYS_Weak.lean|The Weak Force Reads the Orientation
+F-Growth|fold|decay_and_capture_one_record|SPHYS_Resonance.lean|Resonances: Off the Line
+F-Closed|line|closed_stays_on_the_line|SPHYS_Resonance.lean|Resonances: Off the Line
+F-Width|line|stable_iff_every_door_closed|SPHYS_Resonance.lean|Resonances: Off the Line
+F-Ferro|positivity|ring4_lee_yang|SPHYS_Lee_Yang.lean|The Ferromagnet Is the Witness of the Circle
+F-Palindrome|fold|walls_flip|SPHYS_Lee_Yang.lean|The Ferromagnet Is the Witness of the Circle
+F-Pinch|positivity|-|SPHYS_Lee_Yang.lean|The Ferromagnet Is the Witness of the Circle
+F1|positivity|the_phantom_is_negative_actuation|SPHYS_Dark.lean|Dark Matter as the Charge-Conjugation Fixed Set
+F2|line|dark_iff_fixed|SPHYS_Dark.lean|Dark Matter as the Charge-Conjugation Fixed Set
+F3|wall|the_dark_bit_is_the_line_property|SPHYS_Dark.lean|Dark Matter as the Charge-Conjugation Fixed Set
+F-Phase|wall|no_record_reading_returns_the_phase|SPHYS_Measurement.lean|The Measurement Is the Registration
+F-Duality|positivity|complementarity_iff_positive|SPHYS_Measurement.lean|The Measurement Is the Registration
+F-Outcome|wall|the_outcome_is_keyed|SPHYS_Measurement.lean|The Measurement Is the Registration
+F-Echo|fold|reversible_law_admits_both_arrows|SPHYS_Arrow_of_Time.lean|The Arrow of Time Is the Keyed Bit
+F-Balance|fold|detailed_balance|SPHYS_Arrow_of_Time.lean|The Arrow of Time Is the Keyed Bit
+F-Price|price|registration_has_no_left_inverse|SPHYS_Arrow_of_Time.lean|The Arrow of Time Is the Keyed Bit
+F-Wall|wall|even_weight_odd_reading_zero|SPHYS_Matter_Antimatter.lean|Matter over Antimatter Is the Spent Bit
+F-CPT|fold|equilibrium_weight_is_symmetric|SPHYS_Matter_Antimatter.lean|Matter over Antimatter Is the Spent Bit
+F-Domains|line|-|SPHYS_Matter_Antimatter.lean|Matter over Antimatter Is the Spent Bit
+F-Tie|fold|two_vacua_one_record|SPHYS_Symmetry_Breaking.lean|Symmetry Breaking Is the Spent Bit
+F-Curvature|positivity|mass_is_the_curvature_of_the_depth|SPHYS_Symmetry_Breaking.lean|Symmetry Breaking Is the Spent Bit
+F-Heat|line|heat_restores_the_line|SPHYS_Symmetry_Breaking.lean|Symmetry Breaking Is the Spent Bit
+F-Signal|wall|no_signal_from_a_local_choice|SPHYS_Entanglement.lean|The Correlation Lives in the Joint Registration
+F-Local|count|bell_bound|SPHYS_Entanglement.lean|The Correlation Lives in the Joint Registration
+F-Tsirelson|count|-|SPHYS_Entanglement.lean|The Correlation Lives in the Joint Registration
+F-Dipole|line|edm_odd_and_null_on_the_fixed_set|SPHYS_Strong_CP.lean|The Strong Force Reads No Orientation
+F-Antipode|positivity|positivity_selects_zero|SPHYS_Strong_CP.lean|The Strong Force Reads No Orientation
+F-Strong-CP|line|-|SPHYS_Strong_CP.lean|The Strong Force Reads No Orientation
+F-Hair|wall|no_hair_reading_returns_baryons|SPHYS_Horizon.lean|The Horizon Is the Registration
+F-Area|price|the_horizon_cannot_be_undone|SPHYS_Horizon.lean|The Horizon Is the Registration
+F-Radiate|price|merger_radiates_under_three_tenths|SPHYS_Horizon.lean|The Horizon Is the Registration
