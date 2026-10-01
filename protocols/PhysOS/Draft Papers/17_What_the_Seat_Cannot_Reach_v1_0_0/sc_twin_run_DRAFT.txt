@@ -1,0 +1,17 @@
+A · 100000 points and scales: the fold commutes and the line holds under every rescaling
+  PASS  height rescaling: fold and line unchanged at every point
+  PASS  offset rescaling by any nonzero factor: fold commutes, line preserved, at every point
+B · counts the seat reaches
+  CP phases of 1..6 generations:   0  0  1  3  6 10
+  PASS  three generations are the least with a CP phase
+  PASS  the strong angle's reflection fixes exactly two points on every circle up to 2000 points
+  PASS  the Hurwitz order has 24 units
+C · the dot ledger: dimensionless magnitudes, measured, no seat
+  log10 of the vacuum density over the Planck mass to the fourth:  -122.946
+  Higgs mass over Planck mass:                                     1.0255E-17
+  top mass over electron mass:                                     3.3771E+05
+  baryons per photon:                                              6.1163E-10
+  inverse fine-structure constant:                                 137.035999177
+  proton over electron mass:                                      1836.152673426
+  PASS  six magnitudes computed: 10^-122.9, 1.03e-17, 3.38e5, 6.12e-10, 137.036, 1836.15
+ BATTERY-JSON: {"checks":6,"failures":0}
