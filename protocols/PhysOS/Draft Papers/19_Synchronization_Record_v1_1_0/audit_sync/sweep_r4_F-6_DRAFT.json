@@ -1,0 +1,16 @@
+{
+ "banned": [
+  "- **C1.** Every engine of the programme compiles in core Lean 4.19.0 with no axiom declared, and no law of any engine depends on the axiom of choice.\n",
+  "- **C2.** Every law of every engine was negated in place and refused, and in every judgment a planted vacuous law survived its negation.\n",
+  "- **C3.** The six witness editions 1.5.0 change no theorem statement, no row status, no twin output and no grade of edition 1.4.0.\n",
+  "- **C4.** The census totals printed in Section 3 equal the sums of the census rows, and every row equals what the recompilation, the twin's rerun and the engine's own judgment record printed.\n",
+  "- **C5.** Every falsifier of the series that is bound to a theorem names a theorem declared in the engine the falsifier's paper carries.\n"
+ ],
+ "required": [
+  "*Falsifier:* an engine transcript showing Classical.choice for any law, or any axiom declaration in any engine source.",
+  "*Falsifier:* a judgment file whose refused count differs from the engine's law count, or a planted vacuous law refused.",
+  "*Falsifier:* a theorem statement differing between a 1.4.0 and a 1.5.0 witness engine, or a 1.5.0 twin run differing from its published run.",
+  "*Falsifier:* a census total differing from the sum of its rows, or a row differing from a fresh recompilation.",
+  "*Falsifier:* a bound falsifier whose theorem is not declared in the engine its paper carries."
+ ]
+}
