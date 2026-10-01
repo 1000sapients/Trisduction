@@ -1,0 +1,5 @@
+Nothing Escapes Least Erasure v1.0.0 · master single-source edition · receipts · 1 October 2026
+volume: 288 pages | xelatex exit 0 | missing glyphs 0 | unresolved references 0 | pdf sha256 7c41fed30a974a2ab222c4e51f8b8fca97074887f468e09bfa50e510f8a7bb8b
+source md sha256 117b69d01660ef34b855ba2dd716dfa9f48c1e94b4413aa775d171412fcb76d4 | full source (includes inlined) sha256 c3ae78ea12ee5b94d576ae27c7d8254441b4e2c7d2288668a3cf85532f98be84
+atom: SPHYS_Least_Erasure_Atom.lean sha256 a7a3543bb1765f763b2ce423048fc5ec8ddcc388e6686ecaa73c144dbc50d8ba | 11 laws, every one depending on no axiom | judged 11/11 refused, planted vacuous survives
+atom twin: Least_Erasure_Atom_Twin.f90 sha256 82cf834b9998250d7870c5675e3ec2634c2b5163a7e3c4c294cde8e3917088b3 | 5 checks, 0 failures, 0 warnings
