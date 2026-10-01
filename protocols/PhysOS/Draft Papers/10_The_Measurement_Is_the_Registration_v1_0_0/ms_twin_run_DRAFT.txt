@@ -1,0 +1,25 @@
+A · the phase flip is the fold under the pointer carrier (1 + c, p0)
+  PASS  3321 states: the flip is the fold and the classical states are the line
+B · dephasing, the average of a state and its phase-flipped partner
+  PASS  100000 random states: coherence exactly zero after dephasing, populations kept exactly
+C · complementarity: predictability^2 + visibility^2 <= 1, with equality for pure states
+  PASS  100000 pure states saturate P^2 + V^2 = 1 to 1e-14
+  PASS  100000 mixed states obey P^2 + V^2 <= 1
+D · the pointer record a|0> + b e^(i phi)|1> keeps |a|^2, |b|^2 and forgets phi
+  PASS  1000 phases: one record, populations 0.3 and 0.7
+E · repeated registration freezes the motion: a pi rotation split into N measured steps
+  N =   1  survival =   0.000000
+  N =   2  survival =   0.250000
+  N =   4  survival =   0.530790
+  N =   8  survival =   0.733133
+  N =  16  survival =   0.856877
+  N =  32  survival =   0.925763
+  N =  64  survival =   0.962177
+  PASS  survival rises from 0 at N = 1 toward 1: 0.9622 at N = 64
+F · one dephased state, both outcomes: the outcome is not a function of the state
+  frequency of the outcome with population 0.3:  0.300357
+  PASS  both outcomes registered from one state, and the frequency is the height within 4 sigma
+G · the price of a record: Landauer, k T ln 2 per registered bit
+  300 K:  2.87098E-21 J ;  4.2 K:  4.01937E-23 J
+  PASS  one bit at 300 K costs 2.871e-21 J; at 4.2 K 4.02e-23 J
+ BATTERY-JSON: {"checks":8,"failures":0}
