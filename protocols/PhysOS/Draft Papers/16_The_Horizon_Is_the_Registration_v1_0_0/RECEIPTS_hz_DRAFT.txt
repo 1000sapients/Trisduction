@@ -1,0 +1,7 @@
+The_Horizon_Is_the_Registration_v1_0_0 · receipts · 1 October 2026
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Horizon.lean | 504 lines | sha256 fb0a1306af373068f7284d45bab477a86ed272350e798259234fbd2a4a6ffe3f
+  56 laws | 22 free, 3 propext, 31 propext+Quot.sound | 0 choice | JUDGMENT refused 56 of 56 as proof failures | survived none 
+twin: Horizon_Twin.f90 | 103 lines | sha256 3432ffb16c46fb47d53651bdf97dbfd0a247962e0f0f6ff2c9798554f697b598
+  7 checks, 0 failures
+paper: 11 pages MathJournal | pdf sha256 aa1cecc6d977ce814e506fdb5140856598ddc35bdf88768fe290aa49965933e5
