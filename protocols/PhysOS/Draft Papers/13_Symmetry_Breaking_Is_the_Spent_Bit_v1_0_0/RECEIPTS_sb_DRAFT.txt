@@ -1,0 +1,7 @@
+Symmetry_Breaking_Is_the_Spent_Bit_v1_0_0 · receipts · 1 October 2026
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Symmetry_Breaking.lean | 503 lines | sha256 9b554dd7450011e6493109b80a8dbf311a8e7109e5fdf11d8170713388e9fd32
+  56 laws | 17 free, 4 propext, 35 propext+Quot.sound | 0 choice | JUDGMENT refused 56 of 56 as proof failures | survived none 
+twin: SymmetryBreaking_Twin.f90 | 101 lines | sha256 5d6da82fcdfa77d140c27e8e33289ae7d88e7f640566f906ac7c1284a3ca1785
+  6 checks, 0 failures
+paper: 11 pages MathJournal | pdf sha256 a96c1538d14d97283aa17c0759b9ae297674ba8a010d78a0a6c40e11a0713f94
