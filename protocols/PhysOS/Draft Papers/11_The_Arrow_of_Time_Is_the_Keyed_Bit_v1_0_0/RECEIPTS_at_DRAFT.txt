@@ -1,0 +1,7 @@
+The_Arrow_of_Time_Is_the_Keyed_Bit_v1_0_0 · receipts · 1 October 2026
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Arrow_of_Time.lean | 476 lines | sha256 ffadd0599b814013b94a99050393dbc92c04ac456ad30d702a33d6849aa435d0
+  54 laws | 21 free, 4 propext, 29 propext+Quot.sound | 0 choice | JUDGMENT refused 54 of 54 as proof failures | survived none 
+twin: Arrow_Twin.f90 | 132 lines | sha256 a921cecab4fe1cc7309380271031e061b717b7fbca326ab3582a9f18b384fe01
+  9 checks, 0 failures
+paper: 10 pages MathJournal | pdf sha256 a243c1625ca6a9b681ab2a28b63882cf95b7f12adef3ddcc8a2c54b4d9efe2c9
