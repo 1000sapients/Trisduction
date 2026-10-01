@@ -1,0 +1,23 @@
+A · the circle is the line: inversion z -> 1/conj(z) is the fold under s = 1/2 + (ln z)/2
+  PASS  3721 fugacities: inversion is the fold, and the unit circle is the line
+B · spin flip keeps every wall: the ring census is palindromic
+  PASS  the four-ring census: 1, 4, 4 + 2, 4, 1 by down spins
+  PASS  rings of 4, 6 and 8 spins: every census cell equals its spin-flipped cell
+C · random ferromagnets: every zero of the partition function on the unit circle
+  instances with all zeros on the circle: 300 of 300
+  PASS  300 random ferromagnets on 6, 8 and 10 spins: palindromic to 1e-12
+  PASS  300 random ferromagnets: every zero on the unit circle (Lee and Yang, 1952)
+D · antiferromagnets: two signs of coupling, zeros leave the circle
+  antiferromagnets with a zero off the circle: 300 of 300
+  PASS  the antiferromagnet leaves the circle in every one of 300 instances
+E · the four-spin ring in closed form: u = -2p +- sqrt(2)(1 - p)
+  p = 0.3: u =  0.38995, -1.58995
+  p = 1.5: u = -3.70711, -2.29289
+  PASS  ferromagnetic p = 0.3: both u in [-2, 2]; antiferromagnetic p = 1.5: a root below -2
+F · the pinch: on growing tori below the critical temperature the zeros close on z = 1
+  torus 2x4: 4 of 4 zero pairs on the circle; nearest angle  0.412413
+  torus 3x4: 6 of 6 zero pairs on the circle; nearest angle  0.269313
+  torus 4x4: 8 of 8 zero pairs on the circle; nearest angle  0.201690
+  PASS  every torus at beta J = 0.6 keeps all its zeros on the circle
+  PASS  the zero nearest the positive axis closes in as the torus grows (2x4, 3x4, 4x4)
+ BATTERY-JSON: {"checks":9,"failures":0}
