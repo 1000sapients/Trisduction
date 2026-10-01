@@ -1,0 +1,11 @@
+'SPHYS.Arrows.gravity_no_off_locus' does not depend on any axioms
+'SPHYS.Arrows.no_bit_without_off_locus' does not depend on any axioms
+'SPHYS.Arrows.magnetism_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Arrows.two_worlds_at_zero_field' does not depend on any axioms
+'SPHYS.Arrows.branches_differ' does not depend on any axioms
+'SPHYS.Arrows.magnetic_odd' does not depend on any axioms
+'SPHYS.Arrows.no_reading_of_E_returns_B' depends on axioms: [propext, Quot.sound]
+'SPHYS.Arrows.one_sign_no_remanence' does not depend on any axioms
+'SPHYS.Arrows.priced_pays' does not depend on any axioms
+'SPHYS.Arrows.reversible_free' does not depend on any axioms
+'SPHYS.Arrows.electric_even' does not depend on any axioms
