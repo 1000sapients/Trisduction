@@ -1,0 +1,6 @@
+ unitarity error               =  4.434E-16
+ singlet deviation under SU(3) =  4.446E-16
+ valence quark mass fraction   =   0.9581 percent
+ field-carried mass fraction   =  99.0419 percent
+ stability certificate / age   =  1.739E+24
+ BATTERY-JSON: {"checks":9,"failures":0}
