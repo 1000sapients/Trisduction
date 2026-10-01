@@ -1,0 +1,8 @@
+A · the ledger read: 64 falsifiers
+  theorems bound: 58 ; declared in their engines: 58
+  PASS  64 falsifiers; 58 bound to a theorem, every one declared in its engine
+B · census by target (line fold wall positivity count price):   18  13  11   9   8   5
+  PASS  the census matches the engine: 18, 13, 11, 9, 8, 5
+C · 22 papers
+  PASS  22 papers, each carrying two to four falsifiers
+ BATTERY-JSON: {"checks":3,"failures":0}
