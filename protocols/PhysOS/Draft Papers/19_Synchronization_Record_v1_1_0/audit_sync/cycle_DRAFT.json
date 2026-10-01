@@ -1,0 +1,18 @@
+{
+  "cycle": "sync",
+  "artifact": "sync_v1.md",
+  "prereg_claims": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5"
+  ],
+  "falsifiers": {
+    "C1": "an engine transcript showing Classical.choice for any law, or any axiom declaration in any engine source",
+    "C2": "a judgment file whose refused count differs from the engine's law count, or a planted vacuous law refused",
+    "C3": "a theorem statement differing between a 1.4.0 and a 1.5.0 witness engine, or a 1.5.0 twin run differing from its published run",
+    "C4": "a census total differing from the sum of its rows, or a row differing from a fresh recompilation",
+    "C5": "a bound falsifier whose theorem is not declared in the engine its paper carries"
+  }
+}
