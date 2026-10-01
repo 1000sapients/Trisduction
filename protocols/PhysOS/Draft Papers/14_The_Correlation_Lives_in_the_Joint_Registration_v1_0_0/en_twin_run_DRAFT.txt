@@ -1,0 +1,18 @@
+A · Alice relabels her outcome: her bias and the correlation flip, Bob's record does not move
+  PASS  2401 joint records: correlation odd, Bob's record even, the local carrier equivariant
+B · local strategies: sixteen deterministic, every one at +-2; random mixtures within the bound
+  PASS  16 of 16 strategies give |S| = 2; 100000 mixtures obey |S| <= 2
+C · the singlet, E = -cos(a - b): CHSH at most 2 sqrt 2, reached at the optimal settings
+  optimum  2.828427125 ; largest of 100000 random settings  2.825993932
+  PASS  the singlet reaches 2.828427 = 2 sqrt 2 and no random setting exceeds it
+D · the singlet's local records: P(a, b) = (1 - a b cos theta)/4; every marginal 1/2
+  PASS  100000 settings: both local records unbiased to 1e-16, whatever the far setting
+E · the PR box: outcomes agree unless both settings are 1
+  PASS  the PR box reaches CHSH 4 (scaled sum 8) and every marginal ignores the far setting
+F · measured CHSH values, each above the local bound 2 and below 2 sqrt 2
+  S =  2.6970 +-  0.0150 :   46.5 sigma above 2
+  S =  2.7300 +-  0.0200 :   36.5 sigma above 2
+  S =  2.4200 +-  0.2000 :    2.1 sigma above 2
+  S =  2.0747 +-  0.0033 :   22.6 sigma above 2
+  PASS  Aspect 1982, Weihs 1998, Hensen 2015, Storz 2023: all above 2, all below 2.8284
+ BATTERY-JSON: {"checks":6,"failures":0}
