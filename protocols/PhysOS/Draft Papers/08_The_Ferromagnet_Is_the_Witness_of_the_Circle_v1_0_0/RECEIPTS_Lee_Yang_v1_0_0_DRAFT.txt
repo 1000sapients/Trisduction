@@ -1,0 +1,7 @@
+The Ferromagnet Is the Witness of the Circle v1.0.0 · receipts · 30 September 2026
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Lee_Yang.lean | 536 lines | sha256 61af3fe7622be92bb58843def3eb815803145553ec2126ce65c1e8b80aad25d7
+  58 laws | 21 axiom-free | 4 propext | 33 propext+Quot.sound | 0 choice | judged 58/58 refused, planted vacuous survives
+twin: LeeYang_Twin.f90 | 225 lines | sha256 60e23292685523f7d4316d386ecac29a79e628f7efa3a72da2b3b3a748776ccd
+  9 checks, 0 failures | ferro 300/300 on circle | antiferro 300/300 off | pinch 0.412413 > 0.269313 > 0.201690
+paper: 14 pages MathJournal | pdf sha256 33111d4d138f5d31b9cb2911b93b298887030820a1a1daa9fd7f2652b135be2a
