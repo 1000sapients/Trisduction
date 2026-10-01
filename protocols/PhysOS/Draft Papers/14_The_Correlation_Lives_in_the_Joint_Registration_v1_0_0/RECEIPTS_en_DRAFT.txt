@@ -1,0 +1,7 @@
+The_Correlation_Lives_in_the_Joint_Registration_v1_0_0 · receipts · 1 October 2026
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Entanglement.lean | 493 lines | sha256 23f2e80448c2b2b734c4e17bb6af97b01c0e7eb40e2e74d88f9182f268d9c538
+  55 laws | 22 free, 5 propext, 28 propext+Quot.sound | 0 choice | JUDGMENT refused 55 of 55 as proof failures | survived none 
+twin: Entanglement_Twin.f90 | 134 lines | sha256 480a2006e769de5d4b1c393a54e1a42c5dcc4db8fc9ff07fb4dc21539b38a8f4
+  6 checks, 0 failures
+paper: 11 pages MathJournal | pdf sha256 4c2a4665d2efc22486ec1ca0103cc1eb5ee80ec56735bf7253e9ad81aa1df437
