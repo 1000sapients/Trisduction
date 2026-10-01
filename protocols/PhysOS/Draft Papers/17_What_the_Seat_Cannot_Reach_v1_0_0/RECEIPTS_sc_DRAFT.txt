@@ -1,0 +1,7 @@
+What_the_Seat_Cannot_Reach_v1_0_0 · receipts · 1 October 2026
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Seat_Reach.lean | 475 lines | sha256 5f54f7046d3b6be33291e598c95f67da6191df6795b20fb923c26c7e9eda5f5b
+  55 laws | 23 free, 3 propext, 29 propext+Quot.sound | 0 choice | JUDGMENT refused 55 of 55 as proof failures | survived none 
+twin: SeatReach_Twin.f90 | 99 lines | sha256 d7105aa794ab722ca7f4cf8b9219b00f822502d8e88088cae1f02f3b4982826f
+  6 checks, 0 failures
+paper: 10 pages MathJournal | pdf sha256 0005c44dbbb6463abe7035bb0c0cbd7f8becc41153a3e3ea5b4b380b0bd4af62
