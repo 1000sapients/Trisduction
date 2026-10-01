@@ -1,0 +1,14 @@
+ annihilation energy       =       1021.998 keV
+ Rydberg energy (computed) =   13.605693123 eV
+ ground state T, V         =   13.605693115 eV,  -27.211386238 eV
+ para-Ps lifetime          =    125.231 ps   (measured    125.140 ps)
+ ortho-Ps lifetime         =    142.068 ns   (measured    142.050 ns)
+ lifetime ratio ortho/para =     1134.5
+ spinor error at 2 pi      =  2.449E-16
+ a_e, universal five-loop  =  0.001159652175783
+ a_e, measured (Fan 2023)  =  0.001159652180590
+ difference                = -4.807E-12
+ EDM bound / lambda_C      =  1.062E-19
+ ALPHA-g deviation (sigma) =   1.21
+ alpha tension Rb-Cs (sig) =   5.49
+ BATTERY-JSON: {"checks":17,"failures":0}
