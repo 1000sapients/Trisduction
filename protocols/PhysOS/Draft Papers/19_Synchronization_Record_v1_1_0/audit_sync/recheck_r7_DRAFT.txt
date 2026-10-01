@@ -1,0 +1,15 @@
+PASS  25 census rows
+PASS  each row's cones sum to its laws
+PASS  column sums 1246 487 89 670 0 and 286 checks
+PASS  prose totals
+PASS  every row's hash, laws, cones, refusal and checks equal the corrected census run
+PASS  every judgment line shows the planted survivor
+PASS  witness papers: only the version line removed outside Appendix A
+PASS  witness engines: every theorem statement line identical
+PASS  witness twins rerun live: byte-identical to their published runs
+PASS  ledger twin on the 1.5.0 engines: 58 of 58, failures 0
+PASS  Section 7 typed counts sum to sixty-four
+PASS  Section 4 laws 27 12 11 11 9 7
+FAIL  Section 10 eight engines
+PASS  Section 2 every claim names its falsifier
+RECHECK 13 of 14
