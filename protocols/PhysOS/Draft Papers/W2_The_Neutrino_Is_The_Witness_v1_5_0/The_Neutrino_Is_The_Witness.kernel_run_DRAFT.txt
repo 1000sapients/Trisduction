@@ -1,0 +1,12 @@
+'SPHYS.Neutrino.conj_involution' depends on axioms: [propext]
+'SPHYS.Neutrino.majorana_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Neutrino.electron_pair' does not depend on any axioms
+'SPHYS.Neutrino.neutrino_on_the_locus' does not depend on any axioms
+'SPHYS.Neutrino.sterile_uncovered' does not depend on any axioms
+'SPHYS.Neutrino.one_bit_apart' does not depend on any axioms
+'SPHYS.Neutrino.lossless_iff_not_erases' does not depend on any axioms
+'SPHYS.Neutrino.pmns_unitary_is_lossless' does not depend on any axioms
+'SPHYS.Neutrino.sterile_admixture_erases' depends on axioms: [propext]
+'SPHYS.Neutrino.ordering_one_bit' does not depend on any axioms
+'SPHYS.Neutrino.oscillation_forces_floor' depends on axioms: [propext, Quot.sound]
+'SPHYS.Neutrino.active_registered' does not depend on any axioms
