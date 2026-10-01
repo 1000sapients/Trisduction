@@ -1,0 +1,54 @@
+'SPHYS.ArrowOfTime.pe' does not depend on any axioms
+'SPHYS.ArrowOfTime.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.reg_lands' does not depend on any axioms
+'SPHYS.ArrowOfTime.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.ArrowOfTime.reg_forgets_side' does not depend on any axioms
+'SPHYS.ArrowOfTime.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.ArrowOfTime.equivariant_id' does not depend on any axioms
+'SPHYS.ArrowOfTime.equivariant_comp' does not depend on any axioms
+'SPHYS.ArrowOfTime.fix_functorial' does not depend on any axioms
+'SPHYS.ArrowOfTime.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.value_on_image' does not depend on any axioms
+'SPHYS.ArrowOfTime.kinetic_crossing' does not depend on any axioms
+'SPHYS.ArrowOfTime.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.ee' does not depend on any axioms
+'SPHYS.ArrowOfTime.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.ArrowOfTime.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.measured_on_line' does not depend on any axioms
+'SPHYS.ArrowOfTime.no_measurement_off_line' does not depend on any axioms
+'SPHYS.ArrowOfTime.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.bar_involutive' does not depend on any axioms
+'SPHYS.ArrowOfTime.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.ArrowOfTime.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.ArrowOfTime.involutions_commute' does not depend on any axioms
+'SPHYS.ArrowOfTime.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.pair_lands_once' does not depend on any axioms
+'SPHYS.ArrowOfTime.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.pair_on_the_edges' does not depend on any axioms
+'SPHYS.ArrowOfTime.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.registration_has_no_left_inverse' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.rev_involutive' depends on axioms: [propext]
+'SPHYS.ArrowOfTime.gain_odd' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.reversible_law_admits_both_arrows' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.even_reading_misses_the_arrow' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.the_law_does_not_carry_the_arrow' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.urn_symmetric' does not depend on any axioms
+'SPHYS.ArrowOfTime.detailed_balance' does not depend on any axioms
+'SPHYS.ArrowOfTime.microstates_count' does not depend on any axioms
+'SPHYS.ArrowOfTime.equilibrium_is_the_mode' does not depend on any axioms
+'SPHYS.ArrowOfTime.urn_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.equilibrium_is_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.ArrowOfTime.the_arrow_is_the_keyed_bit' depends on axioms: [propext, Quot.sound]
