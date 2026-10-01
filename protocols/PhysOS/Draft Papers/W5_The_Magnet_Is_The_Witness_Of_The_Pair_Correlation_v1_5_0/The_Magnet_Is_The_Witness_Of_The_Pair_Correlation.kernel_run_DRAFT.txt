@@ -1,0 +1,9 @@
+'SPHYS.PairCorr.T_involution' does not depend on any axioms
+'SPHYS.PairCorr.T_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.PairCorr.magnetic_term_breaks_T' depends on axioms: [propext, Quot.sound]
+'SPHYS.PairCorr.degenerate_iff_three_conditions' does not depend on any axioms
+'SPHYS.PairCorr.degenerate_real_two_conditions' does not depend on any axioms
+'SPHYS.PairCorr.repulsion_exponents' does not depend on any axioms
+'SPHYS.PairCorr.perturbation_breaks_T' depends on axioms: [propext, Quot.sound]
+'SPHYS.PairCorr.sq_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.PairCorr.degenerate_iff' depends on axioms: [propext, Quot.sound]
