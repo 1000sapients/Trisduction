@@ -1,0 +1,63 @@
+'SPHYS.Measurement.pe' does not depend on any axioms
+'SPHYS.Measurement.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.reg_lands' does not depend on any axioms
+'SPHYS.Measurement.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.Measurement.reg_forgets_side' does not depend on any axioms
+'SPHYS.Measurement.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.Measurement.equivariant_id' does not depend on any axioms
+'SPHYS.Measurement.equivariant_comp' does not depend on any axioms
+'SPHYS.Measurement.fix_functorial' does not depend on any axioms
+'SPHYS.Measurement.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.value_on_image' does not depend on any axioms
+'SPHYS.Measurement.kinetic_crossing' does not depend on any axioms
+'SPHYS.Measurement.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.ee' does not depend on any axioms
+'SPHYS.Measurement.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.Measurement.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.measured_on_line' does not depend on any axioms
+'SPHYS.Measurement.no_measurement_off_line' does not depend on any axioms
+'SPHYS.Measurement.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.bar_involutive' does not depend on any axioms
+'SPHYS.Measurement.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.Measurement.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.Measurement.involutions_commute' does not depend on any axioms
+'SPHYS.Measurement.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.pair_lands_once' does not depend on any axioms
+'SPHYS.Measurement.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.pair_on_the_edges' does not depend on any axioms
+'SPHYS.Measurement.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.pflip_involutive' does not depend on any axioms
+'SPHYS.Measurement.pflip_fixed_iff_classical' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.pointer_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.classical_is_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.pointer_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.dephase_lands_classical' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.dephase_lands_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.dephase_flip_blind' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.dephase_keeps_populations' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.dephase_fixes_classical' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.record_forgets_phase' does not depend on any axioms
+'SPHYS.Measurement.measurement_is_the_registration' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.two_states_one_record' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.no_record_reading_returns_the_phase' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.sq_expand' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.complementarity_iff_positive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.pure_saturates' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.dephase_keeps_positivity' depends on axioms: [propext, Quot.sound]
+'SPHYS.Measurement.pflip_keeps_positivity' depends on axioms: [propext]
+'SPHYS.Measurement.outcome_odd_state_even' does not depend on any axioms
+'SPHYS.Measurement.the_outcome_is_keyed' does not depend on any axioms
+'SPHYS.Measurement.measurement_is_the_registration_capstone' depends on axioms: [propext, Quot.sound]
