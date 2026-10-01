@@ -1,0 +1,18 @@
+A · matter for antimatter of one mass, charge and spin is the fold under (1 + B, M)
+  PASS  1891 infalls: the fold, and baryon-free infall on the line
+B · 1000 histories of 50 infalls: the hole and its antimatter twin
+  PASS  every history and its exchange: one hair (M, Q, J), opposite baryon number
+C · the area law on GW150914: A ~ M^2 (1 + sqrt(1 - chi^2))
+  final area / initial area =   1.5573 ; radiated   3.10 solar masses, fraction  0.047
+  PASS  the horizon area grew by a factor 1.557; 3.1 solar masses radiated, 4.7 percent
+D · equal non-spinning holes: the area law caps the radiated fraction at 1 - 1/sqrt 2
+  cap =  0.29289
+  PASS  the cap is 0.29289, below the engine's three tenths, and GW150914's 4.7 percent sits under it
+E · the first law at the horizon: c^2 dM = T_H dS, the Landauer floor met with equality
+  T_H(1 Msun) =  6.170E-08 K ; S/k =  1.0489E+77 ; bits =  1.5132E+77
+  PASS  c^2 dM = T_H dS to 1e-9 from one to 6.5e9 solar masses
+  PASS  one solar mass: T_H = 6.17e-8 K, S = 1.05e77 k
+F · the shadow of Sgr A*: 2 sqrt(27) G M / (c^2 D), mass from stellar orbits
+  predicted   52.08 microarcseconds; measured ring 51.8 +- 2.3
+  PASS  the predicted 52.1 microarcseconds lies within one sigma of the measured ring
+ BATTERY-JSON: {"checks":7,"failures":0}
