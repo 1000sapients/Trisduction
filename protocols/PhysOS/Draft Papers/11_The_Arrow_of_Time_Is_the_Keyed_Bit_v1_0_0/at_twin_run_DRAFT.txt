@@ -1,0 +1,20 @@
+A · relabelling the urn, k -> N - k, is the fold under (1 + (2k - N), N); the even split is the line
+  PASS  1891 urn states: the relabelling is the fold and the even split is the line
+B · Kac ring, 2000 sites, a reversible deterministic law
+  entropy after 300 steps:  0.693115   of ln 2 =  0.693147
+  PASS  from order the entropy rises to within 1e-3 of ln 2
+  PASS  the reversed motion, 300 steps back, returns every ball to its first colour: entropy 0
+  PASS  forward 2N = 4000 steps the ring recurs exactly
+C · the urn of 60 balls in exact integers
+  mode k = 30 ; microstates there: 118264581564861424
+  PASS  detailed balance C(60,k)(60-k) = C(60,k+1)(k+1) exactly for every k
+  PASS  the counts are symmetric under relabelling and the mode is the even split, k = 30
+D · the urn of 100 balls relaxes from all on one side
+  mean occupancy over the last 2000 steps:   49.691
+  PASS  the occupancy settles at the even split within 5 balls, entropy near ln 2
+E · the mean return time to the ordered state is 2^N / C(N,0) steps (Kac)
+  N = 100:   1.2677E+30
+  PASS  return to order for 100 balls takes 1.27e30 steps on average
+F · the price of a record: k T ln 2 per bit
+  PASS  one bit at 300 K costs 2.871e-21 J
+ BATTERY-JSON: {"checks":9,"failures":0}
