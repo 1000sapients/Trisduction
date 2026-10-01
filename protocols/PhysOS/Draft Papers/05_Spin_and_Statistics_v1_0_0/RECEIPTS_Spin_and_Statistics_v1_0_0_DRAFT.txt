@@ -124,3 +124,4 @@ H · condensation: the boson bit, London's estimate for helium-4
 I · spin and statistics on the table: the turn sign is the exchange sign
   PASS  twelve particles and atoms: half-integer spin exactly when an odd number of fermions
  BATTERY-JSON: {"checks":17,"failures":0}
+patch: F-Connection rebound to half_integer_spin_is_odd (ledger catch, 1 October 2026); pdf sha256 85f746201b6dea57bcff9632d16d459244873098d1aaf3c9c9d56a36eee0479d
