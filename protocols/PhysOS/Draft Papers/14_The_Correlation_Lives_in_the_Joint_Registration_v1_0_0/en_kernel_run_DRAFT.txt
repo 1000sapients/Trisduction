@@ -1,0 +1,55 @@
+'SPHYS.Entanglement.pe' does not depend on any axioms
+'SPHYS.Entanglement.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.reg_lands' does not depend on any axioms
+'SPHYS.Entanglement.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.Entanglement.reg_forgets_side' does not depend on any axioms
+'SPHYS.Entanglement.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.Entanglement.equivariant_id' does not depend on any axioms
+'SPHYS.Entanglement.equivariant_comp' does not depend on any axioms
+'SPHYS.Entanglement.fix_functorial' does not depend on any axioms
+'SPHYS.Entanglement.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.value_on_image' does not depend on any axioms
+'SPHYS.Entanglement.kinetic_crossing' does not depend on any axioms
+'SPHYS.Entanglement.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.ee' does not depend on any axioms
+'SPHYS.Entanglement.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.Entanglement.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.measured_on_line' does not depend on any axioms
+'SPHYS.Entanglement.no_measurement_off_line' does not depend on any axioms
+'SPHYS.Entanglement.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.bar_involutive' does not depend on any axioms
+'SPHYS.Entanglement.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.Entanglement.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.Entanglement.involutions_commute' does not depend on any axioms
+'SPHYS.Entanglement.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.pair_lands_once' does not depend on any axioms
+'SPHYS.Entanglement.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.pair_on_the_edges' does not depend on any axioms
+'SPHYS.Entanglement.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.flipA_involutive' does not depend on any axioms
+'SPHYS.Entanglement.corr_odd' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.aliceBias_odd' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.bob_sees_no_flip' depends on axioms: [propext]
+'SPHYS.Entanglement.local_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.unbiased_is_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.correlation_is_not_in_the_local_records' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.no_signal_from_a_local_choice' depends on axioms: [propext]
+'SPHYS.Entanglement.local_strategies_give_two' does not depend on any axioms
+'SPHYS.Entanglement.chsh_values' does not depend on any axioms
+'SPHYS.Entanglement.bell_bound' depends on axioms: [propext, Quot.sound]
+'SPHYS.Entanglement.pr_box_reaches_four' does not depend on any axioms
+'SPHYS.Entanglement.pr_box_signals_nothing' does not depend on any axioms
+'SPHYS.Entanglement.correlation_lives_in_the_joint_registration' depends on axioms: [propext, Quot.sound]
