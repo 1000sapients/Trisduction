@@ -1,0 +1,6 @@
+ unitarity error          =  5.562E-17
+ P(mu->e, mu->mu, mu->tau)=   0.023237  0.511599  0.465164
+ flavour sum              =   1.000000
+ active block, sterile    =   0.980000
+ dm^2_31 = dm^2_32 + dm^2_21 =  2.528E-03
+ BATTERY-JSON: {"checks":11,"failures":0}
