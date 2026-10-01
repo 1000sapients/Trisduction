@@ -1,0 +1,7 @@
+Matter_over_Antimatter_Is_the_Spent_Bit_v1_0_0 · receipts · 1 October 2026
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Matter_Antimatter.lean | 494 lines | sha256 3b5c8e449748a09adefa7a62c15ccaf9312a65507a8af2f1eb8bc4653d30d3a5
+  54 laws | 19 free, 3 propext, 32 propext+Quot.sound | 0 choice | JUDGMENT refused 54 of 54 as proof failures | survived none 
+twin: MatterAntimatter_Twin.f90 | 103 lines | sha256 4cf5e6db3a65364f4a9ab462547659cca3f159fa6f04a8e4d7cd0f86e0507cdd
+  6 checks, 0 failures
+paper: 11 pages MathJournal | pdf sha256 eb5bdbd9436746a81bb7574b02d1d20e0a69c5146862564bbed21bd364fea2db
