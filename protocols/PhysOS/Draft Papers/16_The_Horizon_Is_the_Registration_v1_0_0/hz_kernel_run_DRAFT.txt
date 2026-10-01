@@ -1,0 +1,56 @@
+'SPHYS.Horizon.pe' does not depend on any axioms
+'SPHYS.Horizon.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.reg_lands' does not depend on any axioms
+'SPHYS.Horizon.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.Horizon.reg_forgets_side' does not depend on any axioms
+'SPHYS.Horizon.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.Horizon.equivariant_id' does not depend on any axioms
+'SPHYS.Horizon.equivariant_comp' does not depend on any axioms
+'SPHYS.Horizon.fix_functorial' does not depend on any axioms
+'SPHYS.Horizon.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.value_on_image' does not depend on any axioms
+'SPHYS.Horizon.kinetic_crossing' does not depend on any axioms
+'SPHYS.Horizon.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.ee' does not depend on any axioms
+'SPHYS.Horizon.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.Horizon.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.measured_on_line' does not depend on any axioms
+'SPHYS.Horizon.no_measurement_off_line' does not depend on any axioms
+'SPHYS.Horizon.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.bar_involutive' does not depend on any axioms
+'SPHYS.Horizon.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.Horizon.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.Horizon.involutions_commute' does not depend on any axioms
+'SPHYS.Horizon.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.pair_lands_once' does not depend on any axioms
+'SPHYS.Horizon.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.pair_on_the_edges' does not depend on any axioms
+'SPHYS.Horizon.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.bflip_involutive' does not depend on any axioms
+'SPHYS.Horizon.hair_forgets_baryons' does not depend on any axioms
+'SPHYS.Horizon.horizon_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.baryon_free_is_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.the_horizon_is_the_registration' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.no_hair_reading_returns_baryons' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.sum_m_flip' does not depend on any axioms
+'SPHYS.Horizon.sum_q_flip' does not depend on any axioms
+'SPHYS.Horizon.sum_j_flip' does not depend on any axioms
+'SPHYS.Horizon.sum_b_flip' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.matter_hole_antimatter_hole_one_record' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.the_horizon_cannot_be_undone' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.merger_can_radiate' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.merger_radiates_under_three_tenths' depends on axioms: [propext, Quot.sound]
+'SPHYS.Horizon.the_horizon_is_the_registration_capstone' depends on axioms: [propext, Quot.sound]
