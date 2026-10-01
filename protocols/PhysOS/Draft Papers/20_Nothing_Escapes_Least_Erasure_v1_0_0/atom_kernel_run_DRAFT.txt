@@ -1,0 +1,11 @@
+'SPHYS.Atom.fold_involutive' does not depend on any axioms
+'SPHYS.Atom.neg_self_zero' does not depend on any axioms
+'SPHYS.Atom.the_cut_is_the_line' does not depend on any axioms
+'SPHYS.Atom.reg_lands' does not depend on any axioms
+'SPHYS.Atom.reg_keeps_height' does not depend on any axioms
+'SPHYS.Atom.reg_forgets_side' does not depend on any axioms
+'SPHYS.Atom.reg_erases_nothing_iff' does not depend on any axioms
+'SPHYS.Atom.off_line_pair' does not depend on any axioms
+'SPHYS.Atom.one_bit_lost' does not depend on any axioms
+'SPHYS.Atom.least_erasure_iff_value' does not depend on any axioms
+'SPHYS.Atom.nothing_escapes_least_erasure' does not depend on any axioms
