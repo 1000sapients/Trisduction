@@ -1,0 +1,6 @@
+  PASS  A  the fold is an involution at all 101101 points
+  PASS  B  the fold fixes a point exactly when it is on the line, at all 101101 points
+  PASS  C  the registration lands, keeps the height, forgets the side, erases nothing exactly on the line
+  PASS  D  off the line, 101000 points each with a distinct partner of one record: one bit lost
+  PASS  E  least erasure equals value on all 4096 subsets of a twelve-point set
+ BATTERY-JSON: {"checks":5,"failures":0}
