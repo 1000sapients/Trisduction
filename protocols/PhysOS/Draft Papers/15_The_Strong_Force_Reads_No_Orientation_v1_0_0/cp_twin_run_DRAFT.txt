@@ -1,0 +1,15 @@
+A · circles of 2m points, m up to 500: the reflection is the fold; exactly 0 and pi are fixed
+  PASS  250500 points: the fold, and the line exactly at the two fixed points
+B · the vacuum energy of the angle, E(theta), at the measured quark mass ratio
+  least at theta =  0.00000 ; greatest at theta =  3.14159
+  PASS  E is even, least at 0, greatest at pi, stationary at both
+C · at equal quark masses the energy is |cos(theta/2)|: two branches meet at pi in a cusp
+  slope left of pi   7.721E+07 ; right of pi  -7.721E+07
+  PASS  the slopes at pi are opposite and nonzero: two vacua, one energy, CP broken there
+D · the curvature at 0: chi = m_pi^2 f_pi^2 z / (1 + z)^2
+  chi^(1/4) =   76.185 MeV
+  PASS  the energy curves up at 0; the second difference equals chi to 1e-5; computed chi^(1/4) = 76.19 MeV
+E · the dipole null puts the angle at the fixed point 0
+  |theta| <  7.500E-11 ; distance to pi  3.14159
+  PASS  |theta| < 7.5e-11: the angle stands at 0, not at pi
+ BATTERY-JSON: {"checks":5,"failures":0}
