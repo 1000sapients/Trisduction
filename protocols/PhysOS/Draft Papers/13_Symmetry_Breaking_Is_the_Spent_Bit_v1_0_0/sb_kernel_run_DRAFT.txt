@@ -1,0 +1,56 @@
+'SPHYS.SymmetryBreaking.pe' does not depend on any axioms
+'SPHYS.SymmetryBreaking.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.reg_lands' does not depend on any axioms
+'SPHYS.SymmetryBreaking.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.SymmetryBreaking.reg_forgets_side' does not depend on any axioms
+'SPHYS.SymmetryBreaking.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.SymmetryBreaking.equivariant_id' does not depend on any axioms
+'SPHYS.SymmetryBreaking.equivariant_comp' does not depend on any axioms
+'SPHYS.SymmetryBreaking.fix_functorial' does not depend on any axioms
+'SPHYS.SymmetryBreaking.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.value_on_image' does not depend on any axioms
+'SPHYS.SymmetryBreaking.kinetic_crossing' does not depend on any axioms
+'SPHYS.SymmetryBreaking.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.ee' does not depend on any axioms
+'SPHYS.SymmetryBreaking.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.SymmetryBreaking.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.measured_on_line' does not depend on any axioms
+'SPHYS.SymmetryBreaking.no_measurement_off_line' does not depend on any axioms
+'SPHYS.SymmetryBreaking.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.bar_involutive' does not depend on any axioms
+'SPHYS.SymmetryBreaking.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.SymmetryBreaking.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.SymmetryBreaking.involutions_commute' does not depend on any axioms
+'SPHYS.SymmetryBreaking.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.pair_lands_once' does not depend on any axioms
+'SPHYS.SymmetryBreaking.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.pair_on_the_edges' does not depend on any axioms
+'SPHYS.SymmetryBreaking.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.V_even' depends on axioms: [propext]
+'SPHYS.SymmetryBreaking.sq_nonneg'' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.V_nonneg' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.vacuum_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.symmetric_point_is_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.sq_pos_of_ne' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.ground_is_off_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.two_vacua_one_record' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.the_vacuum_is_keyed' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.curvature_at_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.curvature_at_vacuum' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.mass_is_the_curvature_of_the_depth' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.expand_V' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.heat_restores_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SymmetryBreaking.the_vacuum_spends_one_bit' depends on axioms: [propext, Quot.sound]
