@@ -1,0 +1,5 @@
+ orthogonal (beta 1): variance, P(s < 0.1) =    0.2868   0.0073
+ unitary    (beta 2): variance, P(s < 0.1) =    0.1773   0.0008
+ Poisson control    : variance, P(s < 0.1) =    0.9830   0.0939
+ Wigner surmise P(s < 0.1), beta 1 and 2   =    0.0078   0.0011
+ BATTERY-JSON: {"checks":6,"failures":0}
