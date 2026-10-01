@@ -1,0 +1,27 @@
+'SPHYS.Electron.conj_involution' does not depend on any axioms
+'SPHYS.Electron.self_conjugate_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electron.positron_is_the_partner' does not depend on any axioms
+'SPHYS.Electron.the_pair' does not depend on any axioms
+'SPHYS.Electron.pair_differs_in_one_sign' does not depend on any axioms
+'SPHYS.Electron.two_worlds_one_record' does not depend on any axioms
+'SPHYS.Electron.no_reading_of_mass_returns_charge' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electron.annihilation_lands_neutral' does not depend on any axioms
+'SPHYS.Electron.annihilation_keeps_energy' does not depend on any axioms
+'SPHYS.Electron.annihilation_forgets_side' depends on axioms: [propext]
+'SPHYS.Electron.line_of_response_symmetric' does not depend on any axioms
+'SPHYS.Electron.para_two_photons' does not depend on any axioms
+'SPHYS.Electron.ortho_three_photons' does not depend on any axioms
+'SPHYS.Electron.ortho_not_two' does not depend on any axioms
+'SPHYS.Electron.bound_never_rests' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electron.decay_forbidden' does not depend on any axioms
+'SPHYS.Electron.spin_two_pi' does not depend on any axioms
+'SPHYS.Electron.spin_four_pi' does not depend on any axioms
+'SPHYS.Electron.the_return' does not depend on any axioms
+'SPHYS.Electron.round_iff_T_fixed' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electron.fold_involution' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electron.fold_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electron.toStrip_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electron.neutral_lands_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electron.pair_on_the_edges' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electron.virial' depends on axioms: [propext, Quot.sound]
+'SPHYS.Electron.total_zero' does not depend on any axioms
