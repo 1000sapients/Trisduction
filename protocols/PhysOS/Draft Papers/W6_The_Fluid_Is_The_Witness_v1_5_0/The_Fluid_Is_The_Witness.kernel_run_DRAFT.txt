@@ -1,0 +1,7 @@
+'SPHYS.Fluid.characteristics_cross' depends on axioms: [propext, Quot.sound]
+'SPHYS.Fluid.max_principle' depends on axioms: [propext, Quot.sound]
+'SPHYS.Fluid.min_principle' depends on axioms: [propext, Quot.sound]
+'SPHYS.Fluid.jump_is_cut' does not depend on any axioms
+'SPHYS.Fluid.forced_erasure_confined' does not depend on any axioms
+'SPHYS.Fluid.step_bounds' depends on axioms: [propext, Quot.sound]
+'SPHYS.Fluid.max_principle_all_steps' depends on axioms: [propext, Quot.sound]
