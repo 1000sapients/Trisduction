@@ -1,0 +1,16 @@
+A · the field reflection is the fold under (1 + x, V(x)); the symmetric point is the line
+  PASS  2511 field values: the fold, an even energy, and the line at the symmetric point
+B · the double well V = -mu^2 x^2 + lam x^4: two vacua, one energy; down at the line, up at the vacuum
+  PASS  1000 wells: V(v) = V(-v) exactly, below V(0); curvature -2 mu^2 at the line, +4 mu^2 at the vacuum
+C · the electroweak vacuum: v from the Fermi constant, the masses as the depth read by the couplings
+  v =  246.2196 GeV ; lambda =  0.1293 ; m_W =   80.223 ; m_Z =   91.499
+  PASS  v = 246.22 GeV from muon decay
+  PASS  g v/2 gives m_W within 0.5 percent of 80.369 GeV, and e v/(2 s c) m_Z within 0.5 percent of 91.188
+D · each mass is a coupling to the depth: y = sqrt(2) m / v
+  top  0.99119 ; bottom  0.02403 ; tau  0.01021 ; electron  2.935E-06
+  PASS  the top couples at 0.991, the electron at 2.9e-6: 5.5 decades on one depth
+E · heat restores the line: V + c T^2 x^2 has its ground at x = 0 once c T^2 >= mu^2
+  T/Tc =  1.200 ; ground at x =   0.0000
+  T/Tc =  0.800 ; ground at x =  -0.8490
+  PASS  above Tc the ground is the line; below it the vacuum leaves the line
+ BATTERY-JSON: {"checks":6,"failures":0}
