@@ -1,0 +1,7 @@
+The_Measurement_Is_the_Registration_v1_0_0 · receipts · 1 October 2026
+seat: PhysOS 1.0.5p, chain D0 83f872725ad9 -> D1 90fc702bbed1 -> D2 492e519daab9 -> D3 6618bec5164b
+engine: SPHYS_Measurement.lean | 550 lines | sha256 428af3eb969a19d5f7e2e25f8aed09edd0dea6430a990187a6d9ed563fd71caf
+  63 laws | 21 free, 4 propext, 38 propext+Quot.sound | 0 choice | JUDGMENT refused 63 of 63 as proof failures | survived none 
+twin: Measurement_Twin.f90 | 117 lines | sha256 13768b0acf951eded6193e018cc31b80fd2974df118bd166f5c271e85cadefc6
+  8 checks, 0 failures
+paper: 11 pages MathJournal | pdf sha256 f10fb5bfacbc0c0c04dfb513e110d0a6ded6e9deb1dbbdb47f52c8128bff3f06
