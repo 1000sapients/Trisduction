@@ -1,0 +1,3 @@
+SCREEN forbidden: none | imports: 0 | axioms declared: 0
+laws: 63
+JUDGMENT refused 63 of 63 as proof failures | survived none | parse failures none | planted vacuous law survives its negation: True
