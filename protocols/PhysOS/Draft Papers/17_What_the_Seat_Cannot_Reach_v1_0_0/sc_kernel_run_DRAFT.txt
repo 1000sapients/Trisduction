@@ -1,0 +1,59 @@
+SPHYS_Seat_Reach.lean:415:7: warning: unused variable `k`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+SPHYS_Seat_Reach.lean:415:9: warning: unused variable `p`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'SPHYS.SeatReach.pe' does not depend on any axioms
+'SPHYS.SeatReach.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.reg_lands' does not depend on any axioms
+'SPHYS.SeatReach.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.SeatReach.reg_forgets_side' does not depend on any axioms
+'SPHYS.SeatReach.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.SeatReach.equivariant_id' does not depend on any axioms
+'SPHYS.SeatReach.equivariant_comp' does not depend on any axioms
+'SPHYS.SeatReach.fix_functorial' does not depend on any axioms
+'SPHYS.SeatReach.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.value_on_image' does not depend on any axioms
+'SPHYS.SeatReach.kinetic_crossing' does not depend on any axioms
+'SPHYS.SeatReach.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.ee' does not depend on any axioms
+'SPHYS.SeatReach.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.SeatReach.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.measured_on_line' does not depend on any axioms
+'SPHYS.SeatReach.no_measurement_off_line' does not depend on any axioms
+'SPHYS.SeatReach.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.bar_involutive' does not depend on any axioms
+'SPHYS.SeatReach.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.SeatReach.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.SeatReach.involutions_commute' does not depend on any axioms
+'SPHYS.SeatReach.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.pair_lands_once' does not depend on any axioms
+'SPHYS.SeatReach.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.pair_on_the_edges' does not depend on any axioms
+'SPHYS.SeatReach.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.fold_commutes_with_height_scale' does not depend on any axioms
+'SPHYS.SeatReach.line_blind_to_height_scale' does not depend on any axioms
+'SPHYS.SeatReach.reg_commutes_with_height_scale' does not depend on any axioms
+'SPHYS.SeatReach.height_scaled_carrier_equivariant' does not depend on any axioms
+'SPHYS.SeatReach.fold_commutes_with_offset_scale' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.line_blind_to_offset_scale' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.offset_scaled_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.two_magnitudes_one_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.no_seat_functional_returns_the_scale' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.no_seat_functional_returns_the_height_scale' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.counts_survive_scaling' depends on axioms: [propext, Quot.sound]
+'SPHYS.SeatReach.three_generations_least_for_a_phase' does not depend on any axioms
+'SPHYS.SeatReach.two_fixed_points_on_every_circle' does not depend on any axioms
+'SPHYS.SeatReach.what_the_seat_cannot_reach' depends on axioms: [propext, Quot.sound]
