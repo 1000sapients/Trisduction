@@ -1,0 +1,49 @@
+  PASS  A1 the fixed set of conjugation on the 13^4 grid is one point, the neutral state
+  PASS  A2 photon, Z, gluon and dark-photon readings are odd and vanish on the fixed set
+  PASS  A3 the radiative weight vanishes exactly on the fixed set
+  PASS  A4 neutrino-like state: charge 0, radiative weight 18, Z reading T3 - Q sin2(thW) = 1/2
+  PASS  A5 isospin triplet: one neutral member of three, so the multiplet is not dark
+  PASS  A6 the vector-like dark pair closes uncharged and charged +1, -1; one chiral charge fails
+  PASS  A7 portal census: 199 renormalizable monomials, four portals: S H+H, S2 H+H, L N H and its conjugate
+  PASS  A8 every vector-like dark charge q, -q closes all twelve conditions, q = -12..12
+  PASS  A9 a stable singlet keeps one door: under dark parity one portal survives, S2 H+H, none for the fermion
+  PASS  A10 C fixes a state exactly when C_SM fixes it and its dark charge is zero, on the 13^2 x 3^2 grid
+  PASS  A11 every coloured Standard Model field is charged in every component: u 2/3, d -1/3, u^c -2/3, d^c 1/3
+  PASS  A12 a bound fixes a charge only through a measured coupling; a free coupling 1/(q^2+1) meets every bound
+  PASS  A13 the record sorts the title: every admitted state is C_SM-fixed, admitted with and without dark charge
+  PASS  A14 a self-paired mass carries twice each abelian charge; on the visible fixed set it is the dark bit
+  PASS  A15 a dark-charged state takes its mass with a distinct partner of opposite dark charge
+  PASS  A16 the carrier (1 + dark, mass) is equivariant onto the fold; the line is the bit; a dark pair is off-line
+  PASS  B1 Omega_c = 0.2645, Omega_b = 0.0493, ratio 5.36
+  PASS  B2 cold dark matter, baryons and neutrinos reproduce Omega_m to 0.002
+  PASS  B3 q0 = -0.527 +- 0.011: the expansion accelerates
+  PASS  B4 acceleration begins at z = 0.631; vacuum and matter densities cross at z = 0.295
+  PASS  B5 critical density 8.52e-27 kg per cubic metre
+  PASS  B6 the vacuum energy density is (2.24 meV)^4
+  PASS  B7 rho_Lambda / M_P^4 = 10^-122.9, reduced 10^-120.1, electroweak scale 10^-56.2
+  PASS  B8 active density rho + 3p: dust +1, radiation +6, vacuum -2
+  PASS  C1 no canonical state (K >= 0, rho > 0) on the grid lies below w = -1
+  PASS  C2 w = -1 exactly when the kinetic term vanishes
+  PASS  C3 ghost control: K = -1, V = 10 gives w = -1.222, across the divide
+  PASS  C4 the fitted CPL curve crosses w = -1 at z = 0.405 and sits at -1.182 by z = 1
+  PASS  D1 the wind source (l = 90, b = 0) lies at alpha = 318.0, delta = +48.3, in Cygnus
+  PASS  D2 the Sun never comes nearer the wind source than 59.6 degrees, nor farther than 120.4
+  PASS  E1 self-interaction bounds: 1.25 cm2/g = 2.23 b/GeV (Bullet), 0.47 cm2/g = 0.84 b/GeV (72 clusters)
+  PASS  E2 a relic once in equilibrium above the electroweak scale: Delta N_eff >= 0.027 (scalar), 0.054 (dark photon)
+  PASS  E3 the dark-photon floor lies inside the ACT DR6 95% bound: still open
+  PASS  E4 the Landauer price of one spent bit at 300 K is 2.87e-21 J
+  PASS  F1 at 0.3 GeV/cm3 a 100 GeV particle and a 10 micro-eV field differ 1e16 in number, one rotation curve
+  PASS  S1 on 11025 substrate particles the charge carrier sends conjugation to the fold
+  PASS  S2 fixed by conjugation and the time mirror exactly when neutral and stable; then on the line twice
+  PASS  S3 every dark-charged pair is an off-line fold pair with one registration; zero dark charge is the line
+ Omega_c, Omega_b, Omega_c/Omega_b      =    0.2645   0.0493   5.3643
+ q0                                     =   -0.5271 +-  0.0109
+ z acceleration onset, z Lambda = matter =    0.6316   0.2950
+ critical density (kg/m3)               =  8.5227E-27
+ rho_Lambda^(1/4) (meV)                 =    2.2395
+ log10 rho_Lambda / (M_P, M_P red, v)^4 =   -122.95  -120.15   -56.16
+ CPL phantom crossing redshift          =    0.4052
+ wind source alpha, delta (deg)         =   318.004   48.330
+ ecliptic latitude, min and max Sun sep =    59.574   59.574  120.426
+ Delta N_eff floors, scalar and vector  =    0.0268   0.0535
+ BATTERY-JSON: {"checks":38,"failures":0}
