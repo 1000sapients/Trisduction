@@ -1,0 +1,54 @@
+'SPHYS.MatterAntimatter.pe' does not depend on any axioms
+'SPHYS.MatterAntimatter.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.reg_lands' does not depend on any axioms
+'SPHYS.MatterAntimatter.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.MatterAntimatter.reg_forgets_side' does not depend on any axioms
+'SPHYS.MatterAntimatter.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.MatterAntimatter.equivariant_id' does not depend on any axioms
+'SPHYS.MatterAntimatter.equivariant_comp' does not depend on any axioms
+'SPHYS.MatterAntimatter.fix_functorial' does not depend on any axioms
+'SPHYS.MatterAntimatter.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.value_on_image' does not depend on any axioms
+'SPHYS.MatterAntimatter.kinetic_crossing' does not depend on any axioms
+'SPHYS.MatterAntimatter.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.ee' does not depend on any axioms
+'SPHYS.MatterAntimatter.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.MatterAntimatter.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.measured_on_line' does not depend on any axioms
+'SPHYS.MatterAntimatter.no_measurement_off_line' does not depend on any axioms
+'SPHYS.MatterAntimatter.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.bar_involutive' does not depend on any axioms
+'SPHYS.MatterAntimatter.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.MatterAntimatter.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.MatterAntimatter.involutions_commute' does not depend on any axioms
+'SPHYS.MatterAntimatter.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.pair_lands_once' does not depend on any axioms
+'SPHYS.MatterAntimatter.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.pair_on_the_edges' does not depend on any axioms
+'SPHYS.MatterAntimatter.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.cb_involutive' does not depend on any axioms
+'SPHYS.MatterAntimatter.baryon_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.symmetric_is_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.matter_and_antimatter_one_record' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.isum_append' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.netB_conj' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.even_weight_odd_reading_zero' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.conserved_reading_stays' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.symmetric_weight_zero' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.net_is_the_odd_part' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.equilibrium_weight_is_symmetric' does not depend on any axioms
+'SPHYS.MatterAntimatter.equilibrium_has_no_asymmetry' depends on axioms: [propext, Quot.sound]
+'SPHYS.MatterAntimatter.matter_over_antimatter' depends on axioms: [propext, Quot.sound]
