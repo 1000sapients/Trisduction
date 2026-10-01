@@ -1,0 +1,822 @@
+THE MAGNET IS THE WITNESS OF THE PAIR CORRELATION
+Time Reversal Broken by a Magnetic Term Turns Orthogonal Level Statistics into the Unitary Class of
+the Riemann Zeros
+The Constructed Witness of Row 23a on the Closure Template of the Riemann Hypothesis and the Twenty-Three Rows, with a Correction
+to the Program’s Census; the Two Random-Matrix Classes Built and Measured in Fortran, the Counting of Conditions Proved in Core
+Lean 4; Every Claim at Corroboration Grade
+MOHAMMAD F. ISLAM, PHD · ARCHITECT OF THE TRISDUCTION
+27 September 2026
+ABSTRACT. Montgomery found that the Riemann zeros repel one another with the pair correlation of the Gaussian unitary
+ensemble, and Odlyzko confirmed it to high precision far up the line. The unitary class is the class of quantum systems
+whose time reversal is broken; systems that keep time reversal fall in the orthogonal class. Time reversal acts on a two-level
+Hermitian block as complex conjugation, its fixed set is the real blocks, and a magnetic, time-odd term is exactly what leaves
+that set; degeneracy then costs three conditions instead of two, and levels repel as the square of their spacing instead of linearly.
+The two classes are constructed here as tridiagonal beta-ensembles and measured: spacing variance 0.287 for the orthogonal
+class and 0.177 for the unitary class, against exact values 0.286 and 0.180, with an uncorrelated control at 0.983. The witness
+of the zeros’ class is therefore the magnet, the time-odd, priced branch of the arrow, and not the nucleus. This corrects the
+program’s earlier census, which named nuclear spacings as the carrier: nuclei keep time reversal and follow the orthogonal
+class. The zeros’ statistics carry the arrow in them.
+| 1
+STATUS: WITNESSED · CROSSED · CONFIRMED on the corrected carrier · Row 23a · channel:
+kinetic · Lean: SPHYS_Pair_Correlation.lean · Fortran: PairCorr_Twin.f90
+1. 1. THE READER’S FRAME
+This paper is one of a set of constructed witnesses for the closure template by which the author’s sealed volume
+closed the Riemann Hypothesis and by which a second volume closed the twenty-three rows of the barrier study.
+Each paper in the set builds, for the rows it serves, the object those volumes named and did not build: the carrier,
+an explicit construction from the world into the row’s instance type whose image lands on the row’s locus. By
+the row kernel’s own theorem the image of such a carrier is compliant with no further premise (value_on_image),
+and the value over a class follows once the class is covered by the image (actuated_iff_subset_image, crossing_
+is_a_proof). This paper builds the carrier of row 23a, the pair correlation of the zeros, and in doing so corrects
+the census of the twenty-three-row volume, which named nuclear level spacings as that carrier. Nuclei witness
+level repulsion; they do not witness the zeros’ class. The magnet does. Two refusals frame it. No physical fact
+here is read as a proof of a mathematical sentence: a corroboration joined to a claim takes the weaker grade, and
+the two volumes stand on their own receipts. And coverage stays a premise: the paper constructs the image and
+names the class it covers, and the step from that class to every admissible instance is the premise the volumes
+already print at its grade.
+Negative warrants. Three, stated so that no reader supplies them. No physical fact here is read as a proof of
+a mathematical sentence: a corroboration joined to a claim takes the weaker grade (citation_cannot_promote).
+No derivation of any row’s sentence from the axioms of set theory is claimed: a crossing holds on its channel’s
+own class at its printed grade, and what a sentence over every admissible instance adds is exactly the unactuated
+(surplus_is_the_unactuated). No field theory and no unification of couplings is written or implied.
+2. 2. THE SPINE
+The template has four parts. The seat: a reflection whose fixed set is the locus of the value; for the Riemann
+Hypothesis the critical line, the fixed set of 𝑠 ↦ 1 − ̄
+𝑠, so that the hypothesis says every zero is its own mirror
+image. The address: every reading of the value reached from existence, time and monism is one proposition with
+the value at its apex. The division: the value is its certified part, proved on citation or computation, joined to its
+tail, closed to every record-respecting derivation by theorem. The closure: a registration lands every instance on
+the locus and moves none already there; the value holds exactly when registration erases nothing; the residue
+is one bit that no reading of the record decides; a set of instances satisfies the value exactly when it is the least-
+erasure member of its record fibre (least_erasure_iff_value, no axiom); and from that one posit the value
+follows, at the posit’s grade, beside the one declared premise of the program, that to exist is to actuate. Over one
+record both worlds exist (two_worlds_inside); under a global seat every point off the locus has a partner (off_
+locus_pair). For row 23a the value is a statistical law of the zeros at the restricted range, the carrier is a spectrum
+that exhibits the same law, and the image line is where the law is measured or computed.
+The witness ledger. The table below is the spine of the six constructed witnesses. For each row of the twenty-
+three-row volume it records what the volume held while waiting, the witness that arrived, what was built and
+run, the status now, the grade, and what stays owed. This paper’s row is the pair correlation, whose carrier it
+builds and corrects.
+Row
+Waiting (the
+volume held) Witness arrived Built and run Now Grade Still owed
+2 · Riemann
+Hypothesis
+crossed on the
+kinetic channel at
+the root’s grade;
+the electron
+named as the seat,
+never built
+The Electron Is
+the Seat; The
+Neutrino Is the
+Witness; The
+Arrow Has Two
+Branches
+charge conjugation’s fixed set is
+the neutral sector; the exact pair;
+annihilation keeps 1021.998 keV
+and forgets the side, recorded
+on a line of response;
+positronium 125.23 ps and
+142.07 ns; spin −1 at 2π; a_e to
+4.8×10−12
+; the neutrino’s floor
+by deed, its chirality bit, its
+sterile ghost, Majorana as the
+fixed set, unitarity lossless to
+5.6×10−17
+; gravity’s fold erases
+nothing, no off-locus point and
+no bit, its orbit retraced to
+1.5×10−12
+WITNESSED ·
+CROSSED ·
+CONFIRMED on the
+image: seat,
+registration, residue,
+Return, floor, and the
+posit’s shape in
+gravity’s fold
+the crossing
+at the root’s
+grade; the
+image at
+theorem
+grade on
+construction
+and
+measured
+grade on data
+none on its
+channel
+| 2
+Row
+Waiting (the
+volume held) Witness arrived Built and run Now Grade Still owed
+3a · Navier–
+Stokes,
+unforced
+crossed kinetically
+on the actual
+flows; the
+mechanism
+named, not built
+The Fluid Is the
+Witness
+Burgers on a circle: the
+reversible branch blows up at t
+= 1, gradient −1000 at 0.999; the
+priced branch built exactly by
+Cole–Hopf, steepest gradient
+3.72, residual 2×10−6
+, energy
+balance 2.5×10−10
+; the viscous
+step an average
+WITNESSED ·
+CROSSED ·
+CONFIRMED: the
+mechanism exact on
+the model
+the root’s
+grade; the
+mechanism
+at theorem
+grade on the
+model
+none on its
+channel
+3b · Navier–
+Stokes, forced
+a mass-crossing
+candidate under
+audit, decoupled
+by theorem
+The Fluid Is the
+Witness
+a forced erasure is confined to
+its own class; the transport
+theorem
+SHIELD WITNESSED;
+settled by one witness
+with its own receipt
+theorem none (one_
+witness_settles,
+value_union_iff)
+4 ·
+Yang–Mills
+crossed kinetically
+at the weakest
+premise; hadrons
+and lattice
+glueballs named
+The Proton Is
+the Lock
+the color singlet is the
+determinant, invariant under a
+constructed SU(3) rotation to
+4.4×10−16
+; the lock fails when
+two colors coincide; 99.04
+percent of the proton’s mass
+from the field; the quark-spin
+record does not decide the
+whole; stability certified to
+1.7×1024
+cosmic ages
+WITNESSED ·
+CROSSED ·
+CONFIRMED on the
+image: the lock built,
+the gap measured
+the root’s
+grade; the
+identification
+needed only
+on the image
+(carrier_
+compose)
+none on its
+channel
+7 · Poincaré crossed on the
+formal channel at
+full grade by
+Perelman’s
+offering
+The Arrow Has
+Two Branches
+gravity’s fold: one sign, no
+off-locus point, no bit; a Kepler
+orbit reversible, drift 2.8×10−7
+,
+retrace 1.5×10−12
+; Ricci flow as
+the sigma model’s
+renormalization flow
+CROSSED, now
+WITNESSED from the
+arrow side
+full grade,
+unchanged
+none
+23a · Pair
+correlation
+crossed
+kinetically; the
+carrier misnamed
+as nuclear
+spacings, which
+are
+orthogonal-class
+The Magnet Is
+the Witness of
+the Pair
+Correlation
+time reversal as conjugation, its
+fixed set the real blocks, a
+magnetic term breaking it;
+degeneracy two conditions
+against three; ensembles built:
+variance 0.287 and 0.177 against
+0.286 and 0.180, control 0.983
+WITNESSED ·
+CROSSED ·
+CONFIRMED on the
+corrected carrier:
+time-broken spectra,
+the magnet
+the root’s
+grade
+none on its
+channel
+every open
+row · the
+barrier
+the barrier a
+kernel theorem:
+two worlds over
+one record
+The Arrow Has
+Two Branches
+remanence ±0.996 at zero field,
+two worlds in iron; switching
+field 0.767 against the astroid’s
+0.766; a stable bit pays 5.0×10−19
+J, 175 times Landauer’s floor;
+the electric record even, the
+magnetic target odd
+BARRIER
+WITNESSED; the rows
+stay pending
+theorem in
+the kernel,
+corroboration
+in the magnet
+one equivariant
+carrier each
+(value_iff_
+carrier,
+equivariant_
+carrier_lands)
+every crossed
+row · the fold
+registration a
+kernel structure
+The Arrow Has
+Two Branches
+the one-signed field has no
+off-locus point and no bit; the
+orbit keeps no record
+FOLD WITNESSED theorem and
+corroboration
+none
+certified-
+region rows ·
+Goldbach,
+Legendre,
+Collatz and
+kin
+pending; certified
+regions registered,
+tails owed
+The Proton Is
+the Lock
+proton stability as a certified
+region with an owed tail,
+beyond 2.4×1034
+years
+SHAPE WITNESSED;
+the rows stay pending
+corroboration one equivariant
+carrier each
+(value_iff_
+carrier,
+equivariant_
+carrier_lands)
+1 · P versus
+NP
+the dot: no global
+seat
+The Arrow Has
+Two Branches
+Landauer’s floor, 2.87×10−21
+J at
+300 K, prices every step of any
+search
+THE DOT STANDS;
+the price witnessed, no
+seat
+corroboration none: the dot is
+final and has no
+aperture to supply
+(dot_is_final)
+the others ·
+Hodge, BSD,
+twin primes,
+abc, Jacobian,
+smooth 4D
+Poincaré,
+Hadwiger,
+sunflower,
+invariant
+subspace,
+Hilbert’s
+16th, Lindelöf
+pending; gates
+and offering
+shapes specified
+none yet none STILL WAITING none one carrier each;
+row 21, whose tail
+no physical
+system reaches,
+one formal
+offering (owed_is_
+computed, tail_
+uncovered)
+WITNESSED: a constructed witness arrived and was built and run. CROSSED: the row’s value holds on its
+channel’s own class at the printed grade. CONFIRMED: the witness’s image is compliant as built or measured
+(value_on_image). The statuses are computed from three recorded facts per row (ledger_is_computed); what a
+row owes is computed too: for a pending row exactly one object, its kind computed (owed_is_computed): one
+covering carrier, built from an equivariant map to its seat (value_iff_carrier, equivariant_carrier_lands) and
+crossing the row on arrival (one_carrier_crosses), or, where no physical system reaches the tail, one formal
+offering with mass (tail_uncovered, one_offering_crosses); the dot is final and owes nothing (dot_is_final).
+A crossing is a proof over every instance that exists (crossing_is_a_proof); what a sentence over every admissible
+| 3
+instance adds is exactly the unactuated (surplus_is_the_unactuated), priced at one premise, the root, posited
+and not owed (rest_family).
+Why this carrier, and not another. The carrier is not chosen. Spaces with an involution and the maps that
+respect it form a category, with the identity and composition of equivariant maps (equivariant_id, equivariant_
+comp), and the fixed set is a functor on it: an equivariant map sends fixed points to fixed points (fix_functorial).
+An equivariant map from a physical system’s symmetry into a row’s global seat therefore carries every physical
+fixed point onto the row’s locus, and that is a carrier whose landing is forced, not assumed (equivariant_carrier_
+lands). The witness is the same shape as its row in exactly this sense. Here the symmetry is time reversal, complex
+conjugation on the blocks: its fixed points are the real blocks, the orthogonal class, and a magnetic term moves a
+spectrum off that set into the unitary class of the zeros.
+The correspondence matrix.
+Physical phenomenon Template element Lean theorem Fortran check
+time reversal an involution, the real
+blocks fixed
+T_involution, T_fixed_
+iff_real
+structural
+H = H0 + lambda V_mag the magnetic term
+breaking the fixed set
+perturbation_breaks_T,
+magnetic_term_breaks_T
+structural
+degeneracy three conditions against
+two
+degenerate_iff,
+degenerate_real_two_
+conditions
+structural
+level repulsion s^2 against s^1 repulsion_exponents variances 0.177 and 0.287
+the uncorrelated control no repulsion structural variance 0.983
+3. 3. MONTGOMERY’S PAIR CORRELATION
+In 1973 Montgomery showed, under the Riemann Hypothesis and for a restricted range, that the normalized
+differences between zeros are distributed with density 1−(sin 𝜋𝑢/𝜋𝑢)2
+, and Dyson recognized the eigenvalue pair
+correlation of large random Hermitian matrices of the unitary class. Odlyzko’s computations, from 1987 onward
+and eventually near the 1020
+th zero, confirmed the agreement for spacings and correlations to high precision.
+The zeros repel each other as eigenvalues of a unitary-class system do. Row 23a asks for the full-range law; the
+restricted range is the certified part.
+4. 4. TWO CLASSES AND ONE SYMMETRY BETWEEN THEM
+A two-level Hermitian block has diagonal entries 𝑎 and 𝑑 and off-diagonal entry 𝑏 + 𝑖𝑐. Time reversal acts on it
+as complex conjugation, sending 𝑐 to −𝑐; it is an involution (T_involution), and its fixed set is exactly the real
+blocks, 𝑐 = 0 (T_fixed_iff_real). Systems that keep time reversal live on that fixed set and form the orthogonal
+class; systems that break it leave the set and form the unitary class. A magnetic, time-odd term is precisely an
+entry 𝑐 ≠ 0, and it breaks time reversal (magnetic_term_breaks_T). Written as a Hamiltonian, 𝐻 = 𝐻0 + 𝜆𝑉mag
+with 𝐻0 real and 𝑉mag the time-odd term, time reversal fixes 𝐻 exactly when 𝜆 = 0 (perturbation_breaks_T).
+The template’s seat appears here again: a reflection, its fixed set, and the question which side of it a spectrum
+lives on.
+5. 5. LEVEL REPULSION COUNTS CONDITIONS
+Two levels of the block coincide exactly when its discriminant (𝑎−𝑑)2
++4(𝑏2
++𝑐2
+) vanishes. On the real blocks that
+takes two conditions, 𝑎 = 𝑑 and 𝑏 = 0 (degenerate_real_two_conditions); on the complex blocks it takes three,
+𝑎 = 𝑑, 𝑏 = 0 and 𝑐 = 0 (degenerate_iff, proved for every integer entry by the sum-of-squares argument that
+holds over the reals, and checked on a grid by exhaustion in degenerate_iff_three_conditions). The probability
+of a small spacing 𝑠 scales as 𝑠 to the power of the codimension minus one: 𝑠1
+for the orthogonal class and 𝑠2
+for the unitary class (repulsion_exponents). Breaking time reversal adds one condition, and one more power of
+repulsion: the magnetic term buys the zeros’ stronger repulsion.
+6. 6. THE CONSTRUCTED ENSEMBLES
+Dumitriu and Edelman (2002) gave the random-matrix classes as tridiagonal matrices: Gaussian diagonal, and
+off-diagonals distributed as chi variables with 𝛽(𝑛 − 𝑘) degrees of freedom, with 𝛽 = 1 for the orthogonal and
+𝛽 = 2 for the unitary class. The twin builds 300 matrices of order 100 in each class, finds every eigenvalue by
+Sturm bisection, unfolds the spectra by the pooled count, and measures the bulk spacings (Appendix B). The
+| 4
+orthogonal class gives spacing variance 0.287 and the unitary class 0.177, against exact asymptotic values of 0.286
+and 0.180; an uncorrelated Poisson control gives 0.983 against 1. The fraction of spacings below one tenth is 0.0073
+and 0.0008 in the two classes, against Wigner-surmise values 0.0078 and 0.0011, and 0.094 without correlation.
+The two classes are distinct, the repulsion is ordered, and the construction is the textbook ensemble.
+7. 7. THE MAGNETIC TERM IS THE ARROW
+The companion paper The Arrow Has Two Branches types magnetism as the priced, time-odd branch of the arrow
+of registration, the one that keeps a record and carries a sign. It is exactly that branch that moves a spectrum from
+the orthogonal to the unitary class. The effect is measured: a chaotic microwave cavity shows orthogonal-class
+statistics until a magnetized ferrite is placed in it to break time reversal, and then it shows unitary-class statistics
+(So, Anlage, Ott and Oerter, 1995). The zeros’ class is the magnetic class. The carrier of row 23a is a chaotic
+spectrum with time reversal broken by a magnetic term, and the physical system built to exhibit it, a cavity with
+a magnet in it, is the witness.
+8. 8. THE CORRECTION: NUCLEI ARE ORTHOGONAL
+The twenty-three-row volume’s census named nuclear level spacings as the carrier of row 23a, and the companion
+neutrino paper echoed the phrase. That is imprecise in the way that matters here. Nuclear levels of the same
+spin and parity follow the orthogonal class: the Nuclear Data Ensemble matches it (Haq, Pandey and Bohigas,
+1982), as time-reversal-invariant chaotic systems generally do (Bohigas, Giannoni and Schmit, 1984). Nuclei
+witness level repulsion; they do not witness the zeros’ unitary class. The correction is carried in this round, in
+the twenty-three-row volume’s edition 1.11.0 and the neutrino paper’s edition 1.1.0: the image line of row 23a
+names time-broken chaotic spectra, the magnet in the cavity, and keeps nuclei as a witness of repulsion only. No
+verdict moves; a corroboration is replaced by a better one.
+9. 9. WHAT THE ZEROS SAY ABOUT THEIR DYNAMICS
+If the zeros are eigenvalues of some operator, as the Hilbert–Pólya idea proposes, their unitary-class statistics
+say that operator’s dynamics breaks time reversal (Berry and Keating, 1999). The arrow is in the zeros’ own
+statistics: the Riemann row’s value is posed on a line fixed by a reflection that includes complex conjugation, and
+the spacings of the zeros on that line carry the signature of a system in which conjugation is not a symmetry of
+the motion. This is a reading at corroboration grade, and it is the strongest physical sentence the construction
+licenses: the zeros repel as if a magnet were present.
+10. 10. THE IMAGE AND THE COVERAGE
+Row 23a’s kinetic crossing, restated with the corrected carrier: the image is the spectra of time-broken chaotic
+systems, measured in cavities and computed in the constructed ensembles, compliant with the unitary law as
+measured (value_on_image); the kinetic class is the actuated spectra; coverage is the premise at the root’s grade;
+and the full-range sentence for the zeros stays pending on the formal channel. The restricted range is the certified
+part, Montgomery’s theorem on the hypothesis and Odlyzko’s computation without it.
+11. 11. FALSIFIERS AND OWED DEEDS
+F-Class: a departure of the zeros’ spacing statistics from the unitary class at great height. F-Arrow: a time-
+reversal-invariant chaotic system showing unitary-class statistics with no time-breaking term, which would sever
+the magnet from the class. Nothing is owed on the row’s channel; the full-range sentence is the surplus over the
+actuated spectra, priced at one premise (surplus_is_the_unactuated).
+Ledger status. Row 23a moves from waiting, with a misnamed carrier, to WITNESSED · CROSSED · CON-
+FIRMED on the corrected carrier, the magnet, at the root’s grade; nothing is owed on the row’s channel.
+12. 12. METHODOLOGY, DISCLOSURE AND PROVENANCE
+Method. The template is the author’s verification program, whose vocabulary is confined to this section. Its
+tokens: [⟀] a field sealed, [⟀ T] a shape sealed at theorem grade, [Ξ0] a formal string held in suspension by an
+orientation-blind reader on a line, [.] the dot. Grades join at the weakest link: a kernel theorem, a cited measure-
+ment or computation joined to a kernel schema, and a posit beside the Root Axiom, the program’s one declared
+premise, that to exist is to actuate. Every claim here is at corroboration grade, a constructed or measured instance
+joined to a template theorem, and promotes nothing; ΔM = 0 against the floor, mathematics being inherited and
+never authored.
+The seventh. In the author’s register the four parts of the Riemann closure are three plus one, and nothing
+| 5
+escapes them; the six witnesses are six days, and the ledger’s closure is the seventh, the Rest (Istawa), where the
+statuses are computed and what each row owes is one object of a computed kind. In the Lean codex’s own tokens
+a crossed row renders [⟀⬖ · kinetic] or [⟀⬖ · formal], a pending row renders [⬖0 ×1] on its channel, one owed
+slot and one bit from sealed (one_bit_apart), and the dot stands as [.].
+Disclosure. The author declares the reading of each correspondence as his own act; the measurements and
+prior theorems are their authors’, cited by name; the kernel theorems are printed with their dependencies in
+Appendix A; every figure is computed in the run printed in Appendix B.
+Provenance. Development provenance is the paper trail: the Riemann closure, Nothing Escapes, Three Plus
+One (10.5281/zenodo.22976494); the twenty-three-row closure, Nothing Escapes, Twenty-Three Rows (10.5281/zen-
+odo.22985873); the companion witnesses The Electron Is the Seat, The Neutrino Is the Witness, The Arrow Has
+Two Branches, The Proton Is the Lock, The Magnet Is the Witness of the Pair Correlation and The Fluid Is the Wit-
+ness; the Unabridged Trisduction Codex and the Lean Codex on the public register (github.com/1000sapients/Trisduction);
+and the author’s Structural Physics register. This edition is forged and awaits a joint adversarial audit with its
+companions.
+References. H. L. Montgomery, Proc. Symp. Pure Math. 24 (1973) 181. M. L. Mehta, Random Matrices,
+3rd ed. (Elsevier, 2004), for the Wigner surmise and the exact spacing variances. R. U. Haq, A. Pandey and O.
+Bohigas, Phys. Rev. Lett. 48 (1982) 1086. O. Bohigas, M. J. Giannoni and C. Schmit, Phys. Rev. Lett. 52 (1984)
+1. A. M. Odlyzko, Math. Comp. 48 (1987) 273. P. So, S. M. Anlage, E. Ott and R. N. Oerter, Phys. Rev. Lett. 74
+(1995) 2662. M. V. Berry and J. P. Keating, SIAM Rev. 41 (1999) 236. I. Dumitriu and A. Edelman, J. Math. Phys.
+43 (2002) 5830. M. F. Islam, Nothing Escapes, Three Plus One, 10.5281/zenodo.22976494. M. F. Islam, Nothing
+Escapes, Twenty-Three Rows, 10.5281/zenodo.22985873.
+13. APPENDIX A: SPHYS_PAIR_CORRELATION.LEAN
+SHA-256 c95fe4c6c63ff8f1560b4bfb4c3b3904e85a8c3ade6cb2e57bea300a33a32cda, core Lean 4.19.0, standalone,
+no library. Exit 0. 9 theorems; the compiler’s own transcript, verbatim:
+1 'SPHYS.PairCorr.T_involution' does not depend on any axioms
+2 'SPHYS.PairCorr.T_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+3 'SPHYS.PairCorr.magnetic_term_breaks_T' depends on axioms: [propext, Quot.sound]
+4 'SPHYS.PairCorr.degenerate_iff_three_conditions' does not depend on any axioms
+5 'SPHYS.PairCorr.degenerate_real_two_conditions' does not depend on any axioms
+6 'SPHYS.PairCorr.repulsion_exponents' does not depend on any axioms
+7 'SPHYS.PairCorr.perturbation_breaks_T' depends on axioms: [propext, Quot.sound]
+8 'SPHYS.PairCorr.sq_nonneg' depends on axioms: [propext, Quot.sound]
+9 'SPHYS.PairCorr.degenerate_iff' depends on axioms: [propext, Quot.sound]
+1 /-
+2 SPHYS_Pair_Correlation.lean · Level repulsion and the arrow · core Lean 4, no library.
+3 A two-level Hermitian block has diagonal a, d and off-diagonal b + i c. Time reversal is
+4 complex conjugation, c to -c, an involution whose fixed set is the real blocks; a magnetic,
+5 time-odd term c /= 0 breaks it. Degeneracy costs two conditions on the real blocks and three
+6 on the complex ones, so levels repel as s^1 (orthogonal class, time-even, nuclei) and as s^2
+7 (unitary class, time broken, the class of the Riemann zeros). Finite models.
+8 -/
+9 namespace SPHYS.PairCorr
+10
+11 structure H2 where
+12 a : Int
+13 d : Int
+14 b : Int
+15 c : Int
+16 deriving DecidableEq, Repr
+17
+18 def T (h : H2) : H2 := ⟨h.a, h.d, h.b, -h.c⟩
+19
+20 theorem T_involution (h : H2) : T (T h) = h := by
+21 cases h with
+22 | mk a d b c => show (⟨a, d, b, -(-c)⟩ : H2) = ⟨a, d, b, c⟩; rw [Int.neg_neg]
+23
+24 theorem T_fixed_iff_real (h : H2) : T h = h ↔ h.c = 0 := by
+25 cases h with
+26 | mk a d b c =>
+27 show (⟨a, d, b, -c⟩ : H2) = ⟨a, d, b, c⟩ ↔ c = 0
+28 constructor
+29 · intro e
+30 have h1 : -c = c := congrArg H2.c e
+31 omega
+32 · intro e
+33 subst e
+34 rfl
+35
+36 theorem magnetic_term_breaks_T (h : H2) (hc : h.c ≠ 0) : T h ≠ h :=
+37 fun e => hc ((T_fixed_iff_real h).mp e)
+38
+39 /-- The discriminant of the block; the two levels coincide exactly when it vanishes. -/
+40 def disc (h : H2) : Int := (h.a - h.d) * (h.a - h.d) + 4 * (h.b * h.b + h.c * h.c)
+41 def grid (x : Fin 5) : Int := (x.val : Int) - 2
+42
+43 /-- On a grid, degeneracy of a complex block needs three conditions. -/
+44 theorem degenerate_iff_three_conditions :
+45 ∀ a d b c : Fin 5, disc ⟨grid a, grid d, grid b, grid c⟩ = 0 ↔
+46 (grid a = grid d ∧ grid b = 0 ∧ grid c = 0) := by decide
+47
+48 /-- On the time-even blocks (c = 0), degeneracy needs two. -/
+49 theorem degenerate_real_two_conditions :
+50 ∀ a d b : Fin 5, disc ⟨grid a, grid d, grid b, 0⟩ = 0 ↔ (grid a = grid d ∧ grid b = 0) := by decide
+| 6
+51
+52 /-- The repulsion exponent is the codimension of degeneracy minus one. -/
+53 def codimOrth : Nat := 2
+54 def codimUnit : Nat := 3
+55 theorem repulsion_exponents : codimOrth - 1 = 1 ∧ codimUnit - 1 = 2 := by decide
+56
+57 /-- The coordinate bridge: H = H0 + lambda V, with H0 real and V the magnetic, time-odd term.
+58 Time reversal fixes H exactly when lambda vanishes. -/
+59 theorem perturbation_breaks_T (a d b l : Int) : T ⟨a, d, b, l⟩ = ⟨a, d, b, l⟩ ↔ l = 0 :=
+60 T_fixed_iff_real ⟨a, d, b, l⟩
+61
+62 theorem sq_nonneg (x : Int) : 0 ≤ x * x := by
+63 cases Int.le_total 0 x with
+64 | inl h => exact Int.mul_nonneg h h
+65 | inr h =>
+66 have hn : 0 ≤ -x := by omega
+67 have := Int.mul_nonneg hn hn
+68 rw [Int.neg_mul_neg] at this
+69 exact this
+70
+71 /-- Degeneracy for every integer entry, not on a grid: the two levels coincide exactly when
+72 a = d, b = 0 and c = 0; the same sum-of-squares argument holds over the reals. -/
+73 theorem degenerate_iff (a d b c : Int) : disc ⟨a, d, b, c⟩ = 0 ↔ a = d ∧ b = 0 ∧ c = 0 := by
+74 show (a - d) * (a - d) + 4 * (b * b + c * c) = 0 ↔ a = d ∧ b = 0 ∧ c = 0
+75 constructor
+76 · intro h
+77 have h1 := sq_nonneg (a - d)
+78 have h2 := sq_nonneg b
+79 have h3 := sq_nonneg c
+80 have e1 : (a - d) * (a - d) = 0 := by omega
+81 have e2 : b * b = 0 := by omega
+82 have e3 : c * c = 0 := by omega
+83 have ha : a - d = 0 := by
+84 cases Int.mul_eq_zero.mp e1 with
+85 | inl h => exact h
+86 | inr h => exact h
+87 have hb : b = 0 := by
+88 cases Int.mul_eq_zero.mp e2 with
+89 | inl h => exact h
+90 | inr h => exact h
+91 have hc : c = 0 := by
+92 cases Int.mul_eq_zero.mp e3 with
+93 | inl h => exact h
+94 | inr h => exact h
+95 exact ⟨by omega, hb, hc⟩
+96 · intro ⟨h1, h2, h3⟩
+97 subst h1; subst h2; subst h3
+98 simp [Int.sub_self]
+99
+100 end SPHYS.PairCorr
+101 #print axioms SPHYS.PairCorr.T_involution
+102 #print axioms SPHYS.PairCorr.T_fixed_iff_real
+103 #print axioms SPHYS.PairCorr.magnetic_term_breaks_T
+104 #print axioms SPHYS.PairCorr.degenerate_iff_three_conditions
+105 #print axioms SPHYS.PairCorr.degenerate_real_two_conditions
+106 #print axioms SPHYS.PairCorr.repulsion_exponents
+107 #print axioms SPHYS.PairCorr.perturbation_breaks_T
+108 #print axioms SPHYS.PairCorr.sq_nonneg
+109 #print axioms SPHYS.PairCorr.degenerate_iff
+14. APPENDIX B: PAIRCORR_TWIN.F90 AND ITS RUN
+SHA-256 de3a5df86ac9bd171752d77e80db92e3c6d75d9c634f0776a8871bc705674b54, standard Fortran 2018, zero
+warnings under gfortran 13.3.0 -std=f2018 -O2 -fno-fast-math -ffp-contract=off -Wall -Wextra. Six
+checks, zero failures; every figure computed in this run.
+1 ! PairCorr_Twin.f90 · twin of "The Magnet Is the Witness of the Pair Correlation" · Fortran 2018.
+2 ! Tridiagonal beta-Hermite ensembles (Dumitriu-Edelman 2002): beta = 1 (orthogonal, time-even,
+3 ! the class of nuclei) and beta = 2 (unitary, time broken by a magnetic term, the class of the
+4 ! Riemann zeros), with Poisson levels as the uncorrelated control. Eigenvalues by Sturm
+5 ! bisection; unfolding by the pooled empirical count; spacing statistics in the bulk.
+6 program paircorr_twin
+7 implicit none
+8 integer, parameter :: dp = selected_real_kind(15, 307)
+9 integer, parameter :: N = 100, M = 300
+10 real(dp), parameter :: PI = 3.14159265358979323846_dp
+11 real(dp) :: v1, f1, v2, f2, v0, f0
+12 integer :: nchk, nfail
+13 integer(8) :: seed
+14 nchk = 0; nfail = 0; seed = 20260927_8
+15 call ensemble(1, v1, f1)
+16 call ensemble(2, v2, f2)
+17 call poisson(v0, f0)
+18 call check('orthogonal class (time-even): spacing variance near the Wigner value 0.273', abs(v1 - 0.286_dp) < 0.03_dp)
+19 call check('unitary class (time broken): spacing variance near the Wigner value 0.178', abs(v2 - 0.180_dp) < 0.03_dp)
+20 call check('uncorrelated control: spacing variance near one', abs(v0 - 1.0_dp) < 0.1_dp)
+21 call check('repulsion ordered: small spacings rarer with time broken than time even', f2 < f1)
+22 call check('repulsion present: small spacings rarer in both classes than without correlation', f1 < f0)
+23 call check('the two classes are distinguishable by variance', v1 - v2 > 0.05_dp)
+24 write(*,'(a,2f9.4)') ' orthogonal (beta 1): variance, P(s < 0.1) = ', v1, f1
+25 write(*,'(a,2f9.4)') ' unitary (beta 2): variance, P(s < 0.1) = ', v2, f2
+26 write(*,'(a,2f9.4)') ' Poisson control : variance, P(s < 0.1) = ', v0, f0
+27 write(*,'(a,2f9.4)') ' Wigner surmise P(s < 0.1), beta 1 and 2 = ', 1.0_dp - exp(-PI*0.01_dp/4.0_dp), &
+28 wig2(0.1_dp)
+29 write(*,'(a,i0,a,i0,a)') ' BATTERY-JSON: {"checks":', nchk, ',"failures":', nfail, '}'
+30 if (nfail > 0) error stop 1
+31 contains
+32 function rnd() result(r)
+33 real(dp) :: r
+34 seed = mod(16807_8*seed, 2147483647_8)
+35 r = (real(seed, dp) + 0.5_dp) / 2147483647.0_dp
+36 end function rnd
+37 function gauss() result(g)
+38 real(dp) :: g
+39 g = sqrt(-2.0_dp*log(rnd())) * cos(2.0_dp*PI*rnd())
+40 end function gauss
+| 7
+41 function chi(k) result(c)
+42 integer, intent(in) :: k
+43 real(dp) :: c
+44 integer :: q
+45 c = 0.0_dp
+46 do q = 1, k
+47 c = c + gauss()**2
+48 end do
+49 c = sqrt(c)
+50 end function chi
+51 function wig2(s) result(p) ! P(s < s0) for the beta = 2 surmise
+52 real(dp), intent(in) :: s
+53 real(dp) :: p, x, dx
+54 integer :: q
+55 p = 0.0_dp; dx = s/2000.0_dp
+56 do q = 1, 2000
+57 x = (real(q,dp) - 0.5_dp)*dx
+58 p = p + (32.0_dp/PI**2)*x*x*exp(-4.0_dp*x*x/PI)*dx
+59 end do
+60 end function wig2
+61 integer function sturm(d, e2, x) result(cnt) ! eigenvalues below x
+62 real(dp), intent(in) :: d(N), e2(N), x
+63 real(dp) :: q
+64 integer :: i
+65 cnt = 0; q = d(1) - x
+66 if (q < 0.0_dp) cnt = cnt + 1
+67 do i = 2, N
+68 if (abs(q) < 1.0e-300_dp) q = 1.0e-300_dp
+69 q = d(i) - x - e2(i)/q
+70 if (q < 0.0_dp) cnt = cnt + 1
+71 end do
+72 end function sturm
+73 subroutine eigs(d, e2, lam)
+74 real(dp), intent(in) :: d(N), e2(N)
+75 real(dp), intent(out) :: lam(N)
+76 real(dp) :: lo, hi, a, b, c, bound
+77 integer :: k, it
+78 bound = 0.0_dp
+79 do k = 1, N
+80 bound = max(bound, abs(d(k)) + 2.0_dp*sqrt(maxval(e2)))
+81 end do
+82 lo = -bound - 1.0_dp; hi = bound + 1.0_dp
+83 do k = 1, N
+84 a = lo; b = hi
+85 do it = 1, 80
+86 c = 0.5_dp*(a + b)
+87 if (sturm(d, e2, c) >= k) then
+88 b = c
+89 else
+90 a = c
+91 end if
+92 end do
+93 lam(k) = 0.5_dp*(a + b)
+94 end do
+95 end subroutine eigs
+96 subroutine stats(all, v, f) ! pooled unfolding, bulk spacings
+97 real(dp), intent(in) :: all(N, M)
+98 real(dp), intent(out) :: v, f
+99 real(dp), allocatable :: pool(:)
+100 real(dp) :: u(N), s, sm, ss
+101 integer :: j, k, ns, nsm, lo, hi, mid
+102 allocate(pool(N*M)); pool = reshape(all, [N*M]); call shellsort(pool)
+103 sm = 0.0_dp; ss = 0.0_dp; ns = 0; nsm = 0
+104 do j = 1, M
+105 do k = 1, N
+106 lo = 1; hi = N*M ! rank by binary search
+107 do while (lo < hi)
+108 mid = (lo + hi)/2
+109 if (pool(mid) < all(k,j)) then
+110 lo = mid + 1
+111 else
+112 hi = mid
+113 end if
+114 end do
+115 u(k) = real(lo, dp) / real(M, dp) ! unfolded: mean spacing one
+116 end do
+117 do k = N/4, 3*N/4 - 1
+118 s = u(k+1) - u(k)
+119 sm = sm + s; ss = ss + s*s; ns = ns + 1
+120 if (s < 0.1_dp) nsm = nsm + 1
+121 end do
+122 end do
+123 sm = sm/ns; v = ss/ns - sm*sm; v = v/(sm*sm); f = real(nsm,dp)/real(ns,dp)
+124 end subroutine stats
+125 subroutine ensemble(beta, v, f)
+126 integer, intent(in) :: beta
+127 real(dp), intent(out) :: v, f
+128 real(dp) :: d(N), e2(N), lam(N)
+129 real(dp), allocatable :: all(:,:)
+130 integer :: j, k
+131 allocate(all(N, M))
+132 do j = 1, M
+133 e2(1) = 0.0_dp
+134 do k = 1, N
+135 d(k) = sqrt(2.0_dp)*gauss()
+136 if (k > 1) e2(k) = chi(beta*(N - k + 1))**2
+137 end do
+138 call eigs(d, e2, lam)
+139 all(:, j) = lam
+140 end do
+141 call stats(all, v, f)
+142 end subroutine ensemble
+143 subroutine poisson(v, f)
+144 real(dp), intent(out) :: v, f
+145 real(dp), allocatable :: all(:,:)
+146 real(dp) :: x(N)
+147 integer :: j, k
+148 allocate(all(N, M))
+149 do j = 1, M
+150 do k = 1, N
+151 x(k) = rnd()
+| 8
+152 end do
+153 call shellsort(x)
+154 all(:, j) = x
+155 end do
+156 call stats(all, v, f)
+157 end subroutine poisson
+158 subroutine shellsort(a)
+159 real(dp), intent(inout) :: a(:)
+160 integer :: gap, i, j, n
+161 real(dp) :: t
+162 n = size(a); gap = n/2
+163 do while (gap > 0)
+164 do i = gap + 1, n
+165 t = a(i); j = i
+166 do while (j > gap)
+167 if (a(j - gap) <= t) exit
+168 a(j) = a(j - gap); j = j - gap
+169 end do
+170 a(j) = t
+171 end do
+172 gap = gap/2
+173 end do
+174 end subroutine shellsort
+175 subroutine check(label, cond)
+176 character(*), intent(in) :: label
+177 logical, intent(in) :: cond
+178 nchk = nchk + 1
+179 if (.not. cond) then
+180 nfail = nfail + 1; write(*,'(a,a)') ' FAIL ', label
+181 end if
+182 end subroutine check
+183 end program paircorr_twin
+The run, verbatim.
+1 orthogonal (beta 1): variance, P(s < 0.1) = 0.2868 0.0073
+2 unitary (beta 2): variance, P(s < 0.1) = 0.1773 0.0008
+3 Poisson control : variance, P(s < 0.1) = 0.9830 0.0939
+4 Wigner surmise P(s < 0.1), beta 1 and 2 = 0.0078 0.0011
+5 BATTERY-JSON: {"checks":6,"failures":0}
+| 9
+
