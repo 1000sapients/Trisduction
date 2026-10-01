@@ -1,0 +1,58 @@
+'SPHYS.LeeYang.pe' does not depend on any axioms
+'SPHYS.LeeYang.fold_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.seat_fixed_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.reg_lands' does not depend on any axioms
+'SPHYS.LeeYang.reg_fixes_iff' depends on axioms: [propext]
+'SPHYS.LeeYang.reg_forgets_side' does not depend on any axioms
+'SPHYS.LeeYang.least_erasure_iff_value' depends on axioms: [propext]
+'SPHYS.LeeYang.equivariant_id' does not depend on any axioms
+'SPHYS.LeeYang.equivariant_comp' does not depend on any axioms
+'SPHYS.LeeYang.fix_functorial' does not depend on any axioms
+'SPHYS.LeeYang.fold_global_seat' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.equivariant_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.value_on_image' does not depend on any axioms
+'SPHYS.LeeYang.kinetic_crossing' does not depend on any axioms
+'SPHYS.LeeYang.off_locus_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.ee' does not depend on any axioms
+'SPHYS.LeeYang.mirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.psi_phi' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.phi_psi' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.phi_injective' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.phi_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.mirror_fixed_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.phi_line_iff_real' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.stationary_iff_real' depends on axioms: [propext]
+'SPHYS.LeeYang.line_is_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.measured_on_line' does not depend on any axioms
+'SPHYS.LeeYang.no_measurement_off_line' does not depend on any axioms
+'SPHYS.LeeYang.energy_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.bar_involutive' does not depend on any axioms
+'SPHYS.LeeYang.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.odd_charges_even_energy' does not depend on any axioms
+'SPHYS.LeeYang.gravity_reads_no_charge_bit' does not depend on any axioms
+'SPHYS.LeeYang.involutions_commute' does not depend on any axioms
+'SPHYS.LeeYang.tmirror_involutive' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.joint_fixed_iff' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.charge_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.pair_lands_once' does not depend on any axioms
+'SPHYS.LeeYang.tmirror_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.neutral_charge_on_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.pair_on_the_edges' does not depend on any axioms
+'SPHYS.LeeYang.stable_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.invert_involutive' does not depend on any axioms
+'SPHYS.LeeYang.circle_carrier_equivariant' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.unit_circle_is_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.circle_carrier_lands' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.walls_flip' depends on axioms: [propext]
+'SPHYS.LeeYang.ring4_census' does not depend on any axioms
+'SPHYS.LeeYang.ring4_palindrome' does not depend on any axioms
+'SPHYS.LeeYang.ring6_palindrome' does not depend on any axioms
+'SPHYS.LeeYang.quartic_reduction' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.sq_nonneg'' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.qAtMinus2_square' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.quarterDisc_square' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.ring4_lee_yang' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.ring4_antiferro_leaves' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.two_spin_lee_yang' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.conjugate_zeros_on_circle' depends on axioms: [propext, Quot.sound]
+'SPHYS.LeeYang.ferromagnet_witnesses_the_circle' depends on axioms: [propext, Quot.sound]
