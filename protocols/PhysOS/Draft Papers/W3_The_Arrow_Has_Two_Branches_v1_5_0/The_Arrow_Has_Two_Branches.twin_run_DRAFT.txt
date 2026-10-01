@@ -1,0 +1,8 @@
+ remanent m at h = 0 (desc, asc)   =    0.99619  -0.99619
+ switching field (computed, SW)    =    0.76700   0.76643
+ loop area (units mu0 Ms HK)       =    3.03593
+ Landauer floor kT ln 2 at 300 K   =  2.8710E-21 J
+ dissipation per switch, KV = 40kT =  5.0299E-19 J
+ Kepler energy drift (max, rel)    =  2.8215E-07
+ Kepler return error after reversal=  1.5120E-12
+ BATTERY-JSON: {"checks":9,"failures":0}
