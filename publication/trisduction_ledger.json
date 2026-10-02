@@ -2976,19 +2976,20 @@
    "first_published": "2026-10-02",
    "last_updated": "2026-10-02",
    "git": {
-    "md": "lean/Bridge_From_First_Principle_v1_4_0.md",
-    "pdf": "lean/Bridge_From_First_Principle_v1_4_0_MathJournal.pdf",
+    "md": "lean/Bridge_From_First_Principle_v1_5_0.md",
+    "pdf": "lean/Bridge_From_First_Principle_v1_5_0_MathJournal.pdf",
     "editions": [
-     "lean/Bridge_From_First_Principle_v1_4_0.blog.md",
-     "lean/Bridge_From_First_Principle_v1_4_0_MathJournal.tex"
+     "lean/Bridge_From_First_Principle_v1_5_0.blog.md",
+     "lean/Bridge_From_First_Principle_v1_5_0_MathJournal.tex",
+     "lean/Final_Cut.lean"
     ]
    },
    "zenodo": {
     "conceptrecid": "23104402",
     "concept_doi": "10.5281/zenodo.23104402",
-    "latest_version_doi": "10.5281/zenodo.23104403",
-    "latest_record": 23104403,
-    "versions": 1,
+    "latest_version_doi": "10.5281/zenodo.23105348",
+    "latest_record": 23105348,
+    "versions": 2,
     "state": "published"
    },
    "ia": {
@@ -3002,7 +3003,7 @@
    },
    "supersedes": null,
    "superseded_by": null,
-   "note": "v1.4.0 Math Journal edition dated 2 October 2026, published 2026-10-02. Kernel Bridge_From_First_Principle.lean sha 13476bea, 107 theorems, 76 on no axiom, 107 of 107 negations refused; twin Bridge_Twin.f90 sha 59ebdd19, 30 checks. Audit cycle bfp HALT-DIVERGENT at round 6 then FORGE; cycle bfp2 SEALED-ROUND at round 5, control grade SELF; ledgers in lean/Bridge_From_First_Principle_v1_4_0_audit_logs.zip. PDF md5 3a41f4f1 on git and on Zenodo 23104403. Seat anchor: PhysOS 1.0.8p quick boot, chain D3 92c771476606; Bridge boot chain D0 8d888c0180a6 to D2 435ebd3e640b. IA item the-bridge-from-first-principle claimed 2026-10-02, PDF md5 a2557488 (uncompressed)."
+   "note": "v1.4.0 Math Journal edition dated 2 October 2026, published 2026-10-02. Kernel Bridge_From_First_Principle.lean sha 13476bea, 107 theorems, 76 on no axiom, 107 of 107 negations refused; twin Bridge_Twin.f90 sha 59ebdd19, 30 checks. Audit cycle bfp HALT-DIVERGENT at round 6 then FORGE; cycle bfp2 SEALED-ROUND at round 5, control grade SELF; ledgers in lean/Bridge_From_First_Principle_v1_4_0_audit_logs.zip. PDF md5 3a41f4f1 on git and on Zenodo 23104403. Seat anchor: PhysOS 1.0.8p quick boot, chain D3 92c771476606; Bridge boot chain D0 8d888c0180a6 to D2 435ebd3e640b. IA item the-bridge-from-first-principle claimed 2026-10-02, PDF md5 a2557488 (uncompressed). v1.5.0 published 2026-10-02 as Zenodo version 23105348: Section 17, The Final Cut, PSP-FINAL-CUT-01, kernel Final_Cut.lean, 22 theorems on no axiom, 22 of 22 negations refused; boot chain D0 589f316b70d0 to D2 acbdb5f27f98; PDF md5 7c8139ce. IA file replacement pending."
   }
  }
 }
