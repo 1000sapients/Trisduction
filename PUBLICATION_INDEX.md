@@ -9,7 +9,7 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**84 works · 109 Zenodo deposits.**
+**84 works · 110 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
@@ -134,7 +134,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
-| `bridge-from-first-principle` | The Bridge From First Principle: One Fold, One Registration, One Bit: The Trisduction Bridge Un | Foundations of Mathematics | live | [pdf](lean/Bridge_From_First_Principle_v1_4_0_MathJournal.pdf) | `10.5281/zenodo.23104402` | 1 | [ia](https://archive.org/details/the-bridge-from-first-principle) | — | 2026-10-02 |
+| `bridge-from-first-principle` | The Bridge From First Principle: One Fold, One Registration, One Bit: The Trisduction Bridge Un | Foundations of Mathematics | live | [pdf](lean/Bridge_From_First_Principle_v1_5_0_MathJournal.pdf) | `10.5281/zenodo.23104402` | 2 | [ia](https://archive.org/details/the-bridge-from-first-principle) | — | 2026-10-02 |
 | `dark-matter-charge-conjugation-fixed-set` | Dark Matter as the Charge-Conjugation Fixed Set and the Dark Force as One Keyed Bit: A Trisduct | Physics | live | [pdf](Publication%20Library/Science/Physics/Dark%20Sector/Dark_Matter_as_the_Charge_Conjugation_Fixed_Set_v1_0_0_Journal.pdf) | `10.5281/zenodo.23006752` | 1 | [ia](https://archive.org/details/dark-matter-as-the-charge-conjugation-fixed-set) | — | 2026-09-28 |
 | `nothing-escapes-fourth-cosmic-closure` | Nothing Escapes: The Fourth as Cosmic Closure: The Ghost and the Unicorn Close in One Cut | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20The%20Fourth%20As%20Cosmic%20Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_2_0_MathJournal_1col.pdf) | `10.5281/zenodo.22987345` | 2 | [ia](https://archive.org/details/nothing-escapes-the-fourth-as-cosmic-closure) | — | 2026-09-27 |
 | `rows-from-existence-alone` | The Cut-Agnostic Division Theorem: Why Every Open Problem Is Exactly Its Proved Part and Its Un | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/The_Cut_Agnostic_Division_Theorem_v2_1_0.pdf) | `10.5281/zenodo.22913634` | 3 | [ia](https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone) | — | 2026-09-25 |
@@ -333,12 +333,13 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `closure-and-the-limits-of-forced-results` | Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When | `10.5281/zenodo.22683805` | 1 | [ia](https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026) | — |
 | `anchoring-axioms-navier-stokes` | Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for  | `10.5281/zenodo.22670331` | 1 | [ia](https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026) | — |
 
-## Zenodo version chains (19)
+## Zenodo version chains (20)
 
 Works carrying more than one deposit. Full per-version DOIs and checksums are in `Zenodo Snapshot [2026-09-01]/MANIFEST.md`.
 
 | Work key | Versions | Concept DOI | Latest version DOI | First | Latest |
 |---|---|---|---|---|---|
+| `bridge-from-first-principle` | 2 | `10.5281/zenodo.23104402` | `10.5281/zenodo.23105348` | 2026-10-02 | 2026-10-02 |
 | `nothing-escapes-fourth-cosmic-closure` | 2 | `10.5281/zenodo.22987345` | `10.5281/zenodo.22992403` | — | 2026-09-27 |
 | `rows-from-existence-alone` | 3 | `10.5281/zenodo.22913634` | `10.5281/zenodo.22954862` | 2026-09-23 | 2026-09-25 |
 | `rh-from-existence-alone` | 4 | `10.5281/zenodo.22912937` | `10.5281/zenodo.22954865` | 2026-09-23 | 2026-09-25 |
