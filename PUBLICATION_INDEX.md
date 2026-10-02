@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**83 works · 108 Zenodo deposits.**
+**84 works · 109 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 77 / 83 | 92% |
-| Git PDF | 50 / 83 | 60% |
-| Internet Archive | 37 / 83 | 44% |
-| PhilArchive | 4 / 83 | 4% |
+| Zenodo | 78 / 84 | 92% |
+| Git PDF | 51 / 84 | 60% |
+| Internet Archive | 38 / 84 | 45% |
+| PhilArchive | 4 / 84 | 4% |
 
-Status: 76 live, 7 unknown.
+Status: 77 live, 7 unknown.
 
 ## Coverage gaps
 
@@ -134,6 +134,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `bridge-from-first-principle` | The Bridge From First Principle: One Fold, One Registration, One Bit: The Trisduction Bridge Un | Foundations of Mathematics | live | [pdf](lean/Bridge_From_First_Principle_v1_4_0_MathJournal.pdf) | `10.5281/zenodo.23104402` | 1 | [ia](https://archive.org/details/the-bridge-from-first-principle) | — | 2026-10-02 |
 | `dark-matter-charge-conjugation-fixed-set` | Dark Matter as the Charge-Conjugation Fixed Set and the Dark Force as One Keyed Bit: A Trisduct | Physics | live | [pdf](Publication%20Library/Science/Physics/Dark%20Sector/Dark_Matter_as_the_Charge_Conjugation_Fixed_Set_v1_0_0_Journal.pdf) | `10.5281/zenodo.23006752` | 1 | [ia](https://archive.org/details/dark-matter-as-the-charge-conjugation-fixed-set) | — | 2026-09-28 |
 | `nothing-escapes-fourth-cosmic-closure` | Nothing Escapes: The Fourth as Cosmic Closure: The Ghost and the Unicorn Close in One Cut | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20The%20Fourth%20As%20Cosmic%20Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_2_0_MathJournal_1col.pdf) | `10.5281/zenodo.22987345` | 2 | [ia](https://archive.org/details/nothing-escapes-the-fourth-as-cosmic-closure) | — | 2026-09-27 |
 | `rows-from-existence-alone` | The Cut-Agnostic Division Theorem: Why Every Open Problem Is Exactly Its Proved Part and Its Un | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/The_Cut_Agnostic_Division_Theorem_v2_1_0.pdf) | `10.5281/zenodo.22913634` | 3 | [ia](https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone) | — | 2026-09-25 |
