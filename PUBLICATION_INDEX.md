@@ -9,22 +9,22 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**84 works · 110 Zenodo deposits.**
+**85 works · 114 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 78 / 84 | 92% |
-| Git PDF | 51 / 84 | 60% |
-| Internet Archive | 38 / 84 | 45% |
-| PhilArchive | 4 / 84 | 4% |
+| Zenodo | 79 / 85 | 92% |
+| Git PDF | 53 / 85 | 62% |
+| Internet Archive | 40 / 85 | 47% |
+| PhilArchive | 4 / 85 | 4% |
 
-Status: 77 live, 7 unknown.
+Status: 78 live, 7 unknown.
 
 ## Coverage gaps
 
 The only view in the repository that answers "what is published where, and what is missing." Each list is a work queue, not an error.
 
-### On Zenodo, not on the Internet Archive (46)
+### On Zenodo, not on the Internet Archive (45)
 
 Deposited to Zenodo but no IA item located. IA is the second permanence surface; a work here has one address, not two.
 
@@ -66,7 +66,6 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `toe-of-all-toes` · Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion. A Self-Demonstr
 - `geometry-convergent-epistemic-warrant` · TRISDUCTION: The Geometry of Convergent Epistemic Warrant
 - `master-codex-condensed` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Or
-- `master-codex-unabridged` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture · Triaxial O
 - `birth-of-heaven-and-hell` · The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to the Fire, in the Words of 
 - `nineteen-of-saqar` · The Nineteen of Saqar: The Overt Scaffolding, the Cavity at the Perimeter, and the Closure-Form of Self-Verifi
 - `on-forgetting` · On Forgetting: An Underrecognized Mercy, and a Trisductive Grounding of Self-Forgetting as the Act by Which th
@@ -75,7 +74,7 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `the-two-waters` · The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells
 - `one-bit-across-the-wall` · One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three Rows
 
-### No PDF matched in this repository (33)
+### No PDF matched in this repository (32)
 
 A Zenodo deposit with no corresponding PDF found under `Publication Library/`. Either the file was never filed in git, or it is filed under a name the matcher could not tie to the title. Assign the path by hand in the ledger to close the row.
 
@@ -111,7 +110,6 @@ A Zenodo deposit with no corresponding PDF found under `Publication Library/`. E
 - `toe-of-all-toes` · Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion. A Self-Demonstr
 - `geometry-convergent-epistemic-warrant` · TRISDUCTION: The Geometry of Convergent Epistemic Warrant
 - `master-codex-condensed` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Or
-- `master-codex-unabridged` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture · Triaxial O
 
 ### In git or on IA, never deposited to Zenodo (6)
 
@@ -134,13 +132,15 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `physos-the-trisduction-physical-operating-system` | PhysOSᵀ · The Trisduction Physical Operating System | PhysOS | live | [pdf](protocols/PhysOS/PhysOS_1_0_9p_MathJournal.pdf) | `10.5281/zenodo.23117439` | 1 | [ia](https://archive.org/details/physos-the-trisduction-physical-operating-system) | — | 2026-10-03 |
+| `trisduction-the-codex` | Trisduction · The Geometric Orthogonal Lock of Language, Form and Number, Meeting on One Locus | Master Codex | live | [pdf](master/Codex%20v5/Trisduction_Master_Codex_v5_0_0_MathJournal.pdf) | `10.5281/zenodo.22911009` | 4 | [ia](https://archive.org/details/trisduction-the-codex) | — | 2026-10-03 |
+| `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architectu | Verification Architecture | live | [pdf](master/Trisduction_Mother_Codex_v3_46_0_MathJournal.pdf) | `10.5281/zenodo.20576757` | 8 | [ia](https://archive.org/details/trisduction-the-geometric-mother-codex) | — | 2026-10-03 |
 | `bridge-from-first-principle` | The Bridge From First Principle: One Fold, One Registration, One Bit: The Trisduction Bridge Un | Foundations of Mathematics | live | [pdf](lean/Bridge_From_First_Principle_v1_5_0_MathJournal.pdf) | `10.5281/zenodo.23104402` | 2 | [ia](https://archive.org/details/the-bridge-from-first-principle) | — | 2026-10-02 |
 | `dark-matter-charge-conjugation-fixed-set` | Dark Matter as the Charge-Conjugation Fixed Set and the Dark Force as One Keyed Bit: A Trisduct | Physics | live | [pdf](Publication%20Library/Science/Physics/Dark%20Sector/Dark_Matter_as_the_Charge_Conjugation_Fixed_Set_v1_0_0_Journal.pdf) | `10.5281/zenodo.23006752` | 1 | [ia](https://archive.org/details/dark-matter-as-the-charge-conjugation-fixed-set) | — | 2026-09-28 |
 | `nothing-escapes-fourth-cosmic-closure` | Nothing Escapes: The Fourth as Cosmic Closure: The Ghost and the Unicorn Close in One Cut | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20The%20Fourth%20As%20Cosmic%20Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_2_0_MathJournal_1col.pdf) | `10.5281/zenodo.22987345` | 2 | [ia](https://archive.org/details/nothing-escapes-the-fourth-as-cosmic-closure) | — | 2026-09-27 |
 | `rows-from-existence-alone` | The Cut-Agnostic Division Theorem: Why Every Open Problem Is Exactly Its Proved Part and Its Un | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/The_Cut_Agnostic_Division_Theorem_v2_1_0.pdf) | `10.5281/zenodo.22913634` | 3 | [ia](https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone) | — | 2026-09-25 |
 | `rh-from-existence-alone` | A Formal Proof of the Real Part of the Riemann Hypothesis: The Seat, the Address, and the Divis | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/A_Formal_Proof_of_the_Real_Part_of_RH_v2_1_0.pdf) | `10.5281/zenodo.22912937` | 4 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | — | 2026-09-25 |
 | `rh-has-one-address` | A Formal Completed Proof That the Riemann Hypothesis Has One Address and Not a Sequence of Miss | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_Has_One_Address_v1_2_0.pdf) | `10.5281/zenodo.22929636` | 1 | [ia](https://archive.org/details/formal-completed-proof-riemann-hypothesis-one-address) | — | 2026-09-24 |
-| `trisduction-the-codex` | Trisduction: The Codex | Master Codex | live | [pdf](master/Codex%20v4/Trisduction_The_Codex_v1_1_0.pdf) | `10.5281/zenodo.22911009` | 2 | [ia](https://archive.org/details/trisduction-the-codex) | — | 2026-09-23 |
 | `rh-in-its-original-form` | The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus and the Cros | Riemann Hypothesis | live | [pdf](protocols/RH%20One%20Bit/RH_In_Its_Original_Form_v1_0_6.pdf) | `10.5281/zenodo.22857137` | 1 | [ia](https://archive.org/details/riemann-hypothesis-in-its-original-form) | — | 2026-09-20 |
 | `one-bit-across-the-wall` | One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three R | P versus NP and Foundations | live | [pdf](Publication%20Library/Mathematics/Foundations%20of%20Logic/Odd-Supply%20Arc/One_Bit_Across_the_Wall_MathJournal.pdf) | `10.5281/zenodo.22746128` | 1 | — | — | 2026-09-14 |
 | `trisduction-already-that` | A Default AI Substrate's Raw Process, Correctly Oriented, Is Already That: The Substrate-Invari | Artificial Intelligence / Substrate Classification | live | [pdf](Publication%20Library/Artificial%20Intelligence/Substrate%20Classification/Already%20That/TRISDUCTION_Already_That_v1_0_0.pdf) | `10.5281/zenodo.22652922` | 1 | [ia](https://archive.org/details/trisduction-already-that) | — | 2026-09-08 |
@@ -157,7 +157,6 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `on-forgetting` | On Forgetting: An Underrecognized Mercy, and a Trisductive Grounding of Self-Forgetting as the  | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Quran/Thematic%20Studies/On%20Forgetting/On%20Forgetting.pdf) | — | — | — | — | 2026-09-01 |
 | `nineteen-of-saqar` | The Nineteen of Saqar: The Overt Scaffolding, the Cavity at the Perimeter, and the Closure-Form | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Quran/Thematic%20Studies/The%20Nineteen%20of%20Saqar/The%20Nineteen%20of%20Saqar.pdf) | — | — | — | — | 2026-09-01 |
 | `birth-of-heaven-and-hell` | The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to the Fire, i | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Comparative/Birth%20of%20Heaven%20and%20Hell/The%20Birth%20of%20Heaven%20and%20Hell.pdf) | — | — | — | — | 2026-09-01 |
-| `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architectu | Verification Architecture | live | — | `10.5281/zenodo.20576757` | 7 | — | — | 2026-09-01 |
 | `master-codex-condensed` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architectu | Verification Architecture | live | — | `10.5281/zenodo.20175604` | 2 | — | — | 2026-09-01 |
 | `geometry-convergent-epistemic-warrant` | TRISDUCTION: The Geometry of Convergent Epistemic Warrant | Verification Architecture | live | — | `10.5281/zenodo.19345045` | 3 | — | — | 2026-09-01 |
 | `a-shoot-from-a-felled-stump` | A Shoot from a Felled Stump: The Conceded Throne. Menuḥah as Terminus, the Monarchy as Concessi | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Hebrew%20Bible/Thematic%20Studies/A%20Shoot%20from%20a%20Felled%20Stump%20-%20The%20Conceded%20Throne.pdf) | `10.5281/zenodo.22193264` | 1 | [ia](https://archive.org/details/a-shoot-from-a-felled-stump-conceded-throne) | — | 2026-08-31 |
@@ -225,9 +224,9 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification  | `10.5281/zenodo.20576757` | 8 | [ia](https://archive.org/details/trisduction-the-geometric-mother-codex) | 2026-10-03 |
 | `trisduction-core-stated-in-fortran` | Trisduction Core Stated in Fortran and in Nothing Else: A Verdict Kernel That Determi | `10.5281/zenodo.22651403` | 1 | [ia](https://archive.org/details/trisduction-core-stated-in-fortran) | 2026-09-07 |
 | `platonic-ghost-divided-line` | Plato's Divided Line: The Platonic Ghost and the Golden Shadow | — | — | — | 2026-09-01 |
-| `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification  | `10.5281/zenodo.20576757` | 7 | — | 2026-09-01 |
 | `master-codex-condensed` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification  | `10.5281/zenodo.20175604` | 2 | — | 2026-09-01 |
 | `geometry-convergent-epistemic-warrant` | TRISDUCTION: The Geometry of Convergent Epistemic Warrant | `10.5281/zenodo.19345045` | 3 | — | 2026-09-01 |
 | `apex-recursive-bidirectional-witness` | Apex-Recursive Bidirectional Witness: Architecture-Certification by Trisductive Verif | `10.5281/zenodo.22135621` | 1 | [ia](https://archive.org/details/trisduction-apex-recursive-bidirectional-witness) | 2026-08-28 |
@@ -339,12 +338,12 @@ Works carrying more than one deposit. Full per-version DOIs and checksums are in
 
 | Work key | Versions | Concept DOI | Latest version DOI | First | Latest |
 |---|---|---|---|---|---|
+| `trisduction-the-codex` | 4 | `10.5281/zenodo.22911009` | `10.5281/zenodo.23117441` | 2026-09-23 | 2026-10-03 |
+| `master-codex-unabridged` | 8 | `10.5281/zenodo.20576757` | `10.5281/zenodo.23117445` | 2026-06-07 | 2026-10-03 |
 | `bridge-from-first-principle` | 2 | `10.5281/zenodo.23104402` | `10.5281/zenodo.23105348` | 2026-10-02 | 2026-10-02 |
 | `nothing-escapes-fourth-cosmic-closure` | 2 | `10.5281/zenodo.22987345` | `10.5281/zenodo.22992403` | — | 2026-09-27 |
 | `rows-from-existence-alone` | 3 | `10.5281/zenodo.22913634` | `10.5281/zenodo.22954862` | 2026-09-23 | 2026-09-25 |
 | `rh-from-existence-alone` | 4 | `10.5281/zenodo.22912937` | `10.5281/zenodo.22954865` | 2026-09-23 | 2026-09-25 |
-| `trisduction-the-codex` | 2 | `10.5281/zenodo.22911009` | `10.5281/zenodo.22914388` | 2026-09-23 | 2026-09-23 |
-| `master-codex-unabridged` | 7 | `10.5281/zenodo.20576757` | `10.5281/zenodo.22217824` | 2026-06-07 | 2026-09-01 |
 | `master-codex-condensed` | 2 | `10.5281/zenodo.20175604` | `10.5281/zenodo.22217783` | 2026-05-14 | 2026-09-01 |
 | `geometry-convergent-epistemic-warrant` | 3 | `10.5281/zenodo.19345045` | `10.5281/zenodo.22217812` | 2026-03-31 | 2026-09-01 |
 | `trisductive-furqan` | 2 | `10.5281/zenodo.20619411` | `10.5281/zenodo.22136359` | 2026-06-10 | 2026-08-28 |
