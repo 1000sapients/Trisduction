@@ -1,0 +1,27 @@
+{
+ "coordinate": "APEX-PSP-PNP-SEED-01",
+ "status": "LOCKED",
+ "lock_version": 2,
+ "locked_at": "2026-10-04T08:04:10Z",
+ "file": "APEX-PSP-PNP-SEED-01.md",
+ "bytes": 27890,
+ "sha256": "b48bbdff5221480c562108d9dcca09d400ca9fd8b93750c0d6be5b1b3bc6d2f4",
+ "kernels": {
+  "PNP_Seed.lean": "befea4712cd62cbe16e6b791026bf7df44907f21e5683f34ad43634f5bd00ffc",
+  "PNP_Frontier.lean": "11735601d218d3bb7622f464617bcd3e930e6859b1655bf6d5edfd75ce7c4293"
+ },
+ "theorems": {
+  "PNP_Seed.lean": 11,
+  "PNP_Frontier.lean": 29
+ },
+ "toolchain": "Lean 4.19.0",
+ "verified": "extracted into an empty directory by its own line; manifest OK; both kernels exit 0, no error",
+ "grade": "chain at theorem grade; P != NP at premise grade on the one posit, the bridge",
+ "supersedes": {
+  "lock_version": 1,
+  "sha256": "cd9afdae3f6f3adeb23b4c1b20d00453aae0de5ce70ea50b9fc7d10216c35dc0",
+  "locked_at": "2026-10-04T06:55:36Z"
+ },
+ "erratum": "the card stated twelve theorems for PNP_Seed.lean in its STATUS and RECEIPT lines; the kernel carries eleven. The two prose lines are corrected; both kernels are unchanged and their digests are identical to lock version 1.",
+ "rule": "any change to this file is a new lock version recorded here, never a silent edit"
+}
