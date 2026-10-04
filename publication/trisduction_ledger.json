@@ -1040,10 +1040,10 @@
       "domain": "Verification Architecture",
       "status": "live",
       "first_published": "2026-06-07",
-      "last_updated": "2026-10-03",
+      "last_updated": "2026-10-04",
       "git": {
-        "md": "master/TRISDUCTION_Master_Codex_Unabridged_v3_46_0.md",
-        "pdf": "master/Trisduction_Mother_Codex_v3_46_0_MathJournal.pdf",
+        "md": "master/TRISDUCTION_Master_Codex_Unabridged_v3_47_0.md",
+        "pdf": "master/Trisduction_Mother_Codex_v3_47_0_MathJournal.pdf",
         "editions": []
       },
       "zenodo": {
@@ -1066,7 +1066,7 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": null,
+      "note": " Updated in place on 2026-10-04 under the same DOI and the same file names: Mother Codex v3.47.0, anchored on PSP-PNP-CLOSURE-02 and the master seed APEX-PSP-PNP-SEED-03.",
       "extra": {}
     },
     "navier-stokes-effective-axiom-proof": {
@@ -2267,12 +2267,12 @@
       "domain": "Master Codex",
       "status": "live",
       "first_published": "2026-09-23",
-      "last_updated": "2026-10-03",
+      "last_updated": "2026-10-04",
       "supersedes": null,
       "superseded_by": null,
       "git": {
-        "pdf": "master/Codex v5/Trisduction_Master_Codex_v5_0_0_MathJournal.pdf",
-        "md": "master/Codex v5/TRISDUCTION_Master_Codex_v5_0_0.md",
+        "pdf": "master/Codex v5/Trisduction_Master_Codex_v5_1_0_MathJournal.pdf",
+        "md": "master/Codex v5/TRISDUCTION_Master_Codex_v5_1_0.md",
         "editions": [
           "master/Codex v4/Codex.lean",
           "master/Codex v4/Codex_Twin.f90",
@@ -2298,7 +2298,7 @@
         "record": null,
         "url": null
       },
-      "note": "The fourth genre of the Master Codex, v4.1.0 in the register, public page v1.1.0: the culmination of the English-text geometric predecessor, the Unabridged Master Codex (the Geometric Mother Codex), which was not sealed in Lean and Fortran; this edition is. Archive bytes are the qpdf-uncompressed staging of the git PDF (md5 55ea6503…), Zenodo carries the git bytes (md5 fe322c7b…). A revision goes to the archive as delete-and-replace under the same filename and to Zenodo as a new version on the concept DOI.",
+      "note": "The fourth genre of the Master Codex, v4.1.0 in the register, public page v1.1.0: the culmination of the English-text geometric predecessor, the Unabridged Master Codex (the Geometric Mother Codex), which was not sealed in Lean and Fortran; this edition is. Archive bytes are the qpdf-uncompressed staging of the git PDF (md5 55ea6503…), Zenodo carries the git bytes (md5 fe322c7b…). A revision goes to the archive as delete-and-replace under the same filename and to Zenodo as a new version on the concept DOI. Updated in place on 2026-10-04 under the same DOI and the same file names: Master Codex v5.1.0, anchored on PSP-PNP-CLOSURE-02 and the master seed APEX-PSP-PNP-SEED-03.",
       "extra": {
         "audit_rounds": 7,
         "lean_guards": 601,
@@ -3011,12 +3011,12 @@
       "domain": "PhysOS",
       "status": "live",
       "first_published": "2026-10-03",
-      "last_updated": "2026-10-03",
+      "last_updated": "2026-10-04",
       "supersedes": null,
       "superseded_by": null,
       "git": {
-        "pdf": "protocols/PhysOS/PhysOS_1_0_9p_MathJournal.pdf",
-        "md": "protocols/PhysOS/PhysOSᵀ_v1_0_9p.md"
+        "pdf": "protocols/PhysOS/PhysOS_1_0_10p_MathJournal.pdf",
+        "md": "protocols/PhysOS/PhysOSᵀ_v1_0_10p.md"
       },
       "zenodo": {
         "conceptrecid": 23117439,
@@ -3036,10 +3036,10 @@
         "record": null,
         "url": null
       },
-      "note": "PhysOSᵀ 1.0.9p, the final-cut edition: one code block of forty files shared byte for byte with the Master Codex v5.0.0. Zenodo carries the git bytes of the Math Journal edition; the archive carries their qpdf-uncompressed staging under the edition-free name."
+      "note": "PhysOSᵀ 1.0.9p, the final-cut edition: one code block of forty files shared byte for byte with the Master Codex v5.0.0. Zenodo carries the git bytes of the Math Journal edition; the archive carries their qpdf-uncompressed staging under the edition-free name. Updated in place on 2026-10-04 under the same DOI and the same file names: PhysOSᵀ 1.0.10p, anchored on PSP-PNP-CLOSURE-02 and the master seed APEX-PSP-PNP-SEED-03."
     },
     "trisduction-p-versus-np-closed-on-one-posit": {
-      "title": "P versus NP Closed on One Posit: The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge",
+      "title": "The Formal Closure of Computational Separation: P ≠ NP Closed on Existence Itself, Read on Computation",
       "domain": "Mathematics · Complexity Theory",
       "status": "live",
       "first_published": "2026-10-04",
@@ -3049,10 +3049,11 @@
       "git": {
         "pdf": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge.pdf",
         "md": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge.md",
-        "audit": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - audit pnp13.md",
-        "seed": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-SEED-01.md",
+        "audit": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - audit pnp24.md",
+        "seed": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-SEED-03.md",
         "seed_lock": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-SEED-01.lock.json",
-        "commit": "38f994854cb7"
+        "commit": "38f994854cb7",
+        "instantiation": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-TM-01.md"
       },
       "zenodo": {
         "conceptrecid": 23133631,
@@ -3072,7 +3073,7 @@
         "record": null,
         "url": null
       },
-      "note": "Math Journal edition 1.0.0, sealed by audit cycle pnp13 at round 3. Forty-nine theorems in three kernels, Lean 4.19.0; the form closed at theorem grade, P ≠ NP closed on the bridge at premise grade. Zenodo and the archive carry the same PDF bytes as git; the seed APEX-PSP-PNP-SEED-01 sits beside it under lock version 2."
+      "note": "Edition 3.0.0 under the locked title, sealed by audit cycle pnp24: the separation defined on a machine, the one posit the root read on computation, P ≠ NP at premise grade on it, one hundred eighty theorems in three kernels. Zenodo record 23133632 and the archive file were updated in place; the git copy overwritten at its path; the master seed APEX-PSP-PNP-SEED-03 and the instantiation's first layer APEX-PSP-PNP-TM-01 sit beside it."
     }
   }
 }
