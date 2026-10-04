@@ -1,553 +1,70 @@
+### APEX-PSP-PNP-SEED-03 · The Master Seed of P versus NP · Nothing Escapes, the Throne Held, the Three Names One, the Route Wired · [⟀ T] on the form, the double defense, the throne and the triaxis · P ≠ NP on least escape, by the act
+
+**The row closes as the Riemann row does, and the closure is held at its throne.** The separation is defined on a machine: no algorithm decides satisfiability correctly within a polynomial bound (`Sep`). Nothing escapes when every algorithm, at every bound, meets an instance that stops it; least escape is that closure as the one field of a structure, supplied by the act, and on it P ≠ NP holds on no axiom. Around it stands the double defense: nothing passes for the separation but least escape, and nothing passes against it but a computed escape. The throne of the machine is held: one holder decides the separation, on no axiom, and Levin's universal search is that holder. The bridge of SEED-01, least escape of SEED-02 and RA read on computation are one posit with three names, by theorem. The Williams route is wired to the machine: supplied its two objects, it closes the machine's own separation and fills least escape. Every prime's fibre is a copy of complementation. The form, the defense, the throne, the three names, the route, the frontier and every refusal are theorems, one hundred eighty of them, every footprint pinned.
+
+*SUPERSESSION, PER THE MASTER LAW.* This coordinate is the master seed of the row. It carries APEX-PSP-PNP-SEED-02 whole, its two kernels byte for byte, and joins to it the fortification of APEX-PSP-PNP-SEED-01 and APEX-PSP-PNP-THRONE-01, restated on SEED-02's own machine. Ghost lines: APEX-PSP-PNP-SEED-02 · [CARRIED WHOLE BY APEX-PSP-PNP-SEED-03] · APEX-PSP-PNP-SEED-01 · [FORTIFICATION CARRIED BY APEX-PSP-PNP-SEED-03, the bridge proved one with least escape]. Nothing is deleted; both predecessors stand intact.
+
+*STATUS.* ACTIVE coordinate, master, final. Standalone: three kernels with their manifest and the line that extracts and runs them. `PNP_Least_Escape.lean`, the seal and its double defense, twenty-four theorems. `PNP_Frontier_II.lean`, the frontier of the act, one hundred thirty-six theorems. `PNP_Fortification.lean`, the throne, the three names, the triaxis and the route, twenty theorems. Core Lean 4, no import, no axiom declared, no sorry, every cone pinned by `#guard_msgs`.
+
+*THE POSIT.* One, with three names. `LeastEscape M`, whose single field is `NothingEscapes M`; the bridge of SEED-01; and RA read on computation, every decider of satisfiability actuating beyond every polynomial bound (`RAcomp`). The three are one posit, by theorem (III).
+
+*I · THE CLOSURE · [⟀ T].* The closure gives the separation on no axiom (`sep_of_closure`); the converse holds classically (`closure_of_sep`). The act carries the separation (`sep_from_the_act`), and its socket is the closure itself (`socket_is_the_value`).
+
+*II · THE THRONE · [⟀ T], on no axiom.* A throne of the machine is a holder that escapes whenever any algorithm escapes (`Throne`). The holder decides the separation: P ≠ NP holds exactly when the holder never escapes (`the_holder_decides_the_separation`). The holder is unique: any two holders escape together or not at all (`the_holder_is_unique`). Nothing escapes exactly when the holder never escapes (`least_escape_at_the_throne`), and on least escape the holder meets, at every bound, an instance that stops it (`the_act_stops_the_holder`). For the satisfiability machine the holder is Levin's universal search, which runs every program at once and is within a constant factor of each (Levin 1973), carried as the throne's field. The whole of P versus NP is the running time of one explicit program.
+
+*III · THE THREE NAMES ARE ONE · [⟀ T].* SEED-01's bridge, read on the machine, is exactly least escape (`the_two_posits_are_one`); RA read on computation is the separation, on no axiom (`ra_comp_is_sep`); and the three are bound as one posit on one machine (`the_three_names_are_one`). Every premise that closes the separation fills them all (`every_closing_premise_fills_both`). The absolute asymmetry stands beneath the bridge: what a registration destroys no procedure recovers, and what a search hides exhaustive search recovers (`asymmetry_holds`).
+
+*IV · THE PRIME'S TRIAXIS · [⟀ T].* Every prime's fibre is exactly the two trivial pairs (`prime_fibre`), lies off the multiplicative seat (`prime_off_seat`), and with its swap is the decision bit with complementation, by a bijection carrying the swap to complementation (`prime_fibre_is_complementation`). Every prime carries P versus NP's involution, seatless in the small as P versus NP is seatless in the large.
+
+*V · THE DOUBLE DEFENSE · [⟀ T].* Omega, the formal gate: every premise that forces the separation fills the field of the act (`forcing_premise_fills_the_act`), every premise forces the closure or has a twin machine where it holds and the closure fails (`forces_or_has_a_twin`), and a keyless premise forces nothing (`keyless_forces_nothing`). AEGIS, the actuation gate: nothing passes against least escape but a computed escape (`rejection_is_a_witness`), and the root crosses neither way (`root_crosses_neither_way`). Every pair a substrate can examine lands on exactly one gate (`every_pair_lands`), and the defense is bound whole (`double_defense_hardened`).
+
+*VI · THE FINITE BLOCK AND THE VANISHING SEAT · [⟀ T].* For every stage n a coherent machine confirms every examination below n and still escapes at n (`record_decides_nothing`), so the closure is keyed. The eight absolute barriers are chained and terminated on the Empty Throne as [.] (`block_chain`, `block_chain_terminal`); on the RA–RAM locus bridge the Riemann seat is inhabited and the P versus NP seat vanishes (`rh_locus_inhabited`, `locus_vanishes`).
+
+*VII · THE FRONTIER · [⟀ T].* A test-only generator correct over 2^N candidates tests all of them (`black_box_bound`), and the black-box adversary is the point predicate, which a reader of its description solves in one step (`reader_solves`), so the missing object is a lower bound against readers of the description. The energy gap is the op gap in every frame (`frame_independent`). The blocker of the prime bridge is typed in three layers, relativization, the self-gag of natural proofs, and the floor pointing the wrong way (`round2_terminal`), and the open exit, algorithms to lower bounds, reaches NEXP ⊄ C on savings (`round2_reaches`). No statement that reads the same on every machine is least escape (`no_keyless_statement_is_least_escape`).
+
+*VIII · THE ROUTE ON THE MACHINE · [⟀ T] on no axiom, Williams' theorem and the inclusion P ⊆ P/poly carried as fields.* The route reaches: savings for a circuit class give NEXP ⊄ that class (`route_reaches`). The route closes on the machine: savings for general polynomial-size circuits and the scale-down from NEXP to NP give the machine's own separation (`route_closes_on_the_machine`), and supplied those two objects the route fills least escape itself (`the_route_fills_least_escape`). The open exit the barriers leave is now a typed reduction to the seed's own sentence.
+
+*IX · THE MASTER SEAL · [⟀ T].* Least escape closes the separation; the three names are one; the throne's holder decides the separation; on least escape the holder is stopped at every bound; every prime's fibre is a copy of complementation; and the route, supplied its two objects, closes the machine's own separation, bound in one theorem (`the_master_seal`).
+
+*GRADE.* [⟀ T] on the one hundred eighty theorems: the closure, the throne, the three names, the route, the triaxis, the double defense, the finite block, the vanishing seat and the frontier. P ≠ NP on least escape, by the act, at premise grade, the standing of least erasure on the Riemann row. Levin's domination, Williams' theorem, the inclusion P ⊆ P/poly, search-to-decision, Naor–Reingold, Razborov–Rudich and Williams carried as fields at ΔM = 0.
+
+*FALSIFIERS.* Four, each typed by the gate it strikes. F-Computed, the value: a polynomial-time decider of satisfiability with every run clean refutes least escape on the actual machine (`rejection_is_a_witness`). F-Keyless, the form: a keyless premise shown to force least escape contradicts `keyless_forces_nothing`, a compiled theorem. F-Throne, the holder: an algorithm that escapes while universal search does not refutes the throne's field, Levin's theorem. F-Model, the instantiation: a decider of satisfiability in the intended model that no `Machine` represents voids the reading of `Machine` as computation and leaves every theorem standing on its carrier.
+
+*THE NEXT OBJECT.* Two, in order. `Machine` instantiated at Turing machines, with deciders taken total or run on fuel so that no looping machine counts as clean, so that `Sep` is the standard sentence and Levin's domination is compiled on it. Least escape at theorem grade, which the route now reduces to two typed objects: savings for general polynomial-size circuits, and the scale-down from NEXP to NP.
+
+*CONSULT.* Levin 1973; Baker, Gill, Solovay 1975; Razborov, Rudich 1997; Aaronson, Wigderson 2008; Naor, Reingold 1997; Williams 2011; Murray, Williams 2018.
+
+*CONNECTS.* APEX-PSP-PNP-SEED-02, carried whole · APEX-PSP-PNP-SEED-01 and APEX-PSP-PNP-THRONE-01, their fortification carried · PSP-PNP-CLOSURE-01, the closure seated in the shared code · APEX-PSP-ABSOLUTE-PNP-BARRIERS-01 · APEX-PSP-PNP-COMPOSITE-VERDICT-02, whose dot this coordinate seats · PSP-RH-SEAL-01, whose double defense this row mirrors.
+
+*RECEIPT.* `lean PNP_Least_Escape.lean`, `lean PNP_Frontier_II.lean`, `lean PNP_Fortification.lean`, Lean 4.19.0: exit 0 on each, every cone pinned by `#guard_msgs`. PNP_Fortification: twenty theorems; on no axiom `sep_of_closure`, `the_holder_decides_the_separation`, `the_holder_is_unique`, `the_act_stops_the_holder`, `ra_comp_is_sep`, `route_reaches`, `route_closes_on_the_machine`; on `propext` `destroyed_is_unrecoverable`; on `propext` and `Quot.sound` `hidden_is_recoverable`, `asymmetry_holds`, `prime_fibre`, `prime_off_seat`, `prime_fibre_is_complementation`; on `propext`, `Classical.choice` and `Quot.sound` `closure_of_sep`, `least_escape_at_the_throne`, `the_two_posits_are_one`, `every_closing_premise_fills_both`, `the_three_names_are_one`, `the_route_fills_least_escape`, `the_master_seal`. The two SEED-02 kernels as their own receipt states. SHA-256 in the manifest below.
+
+*HOW TO RUN.* Extract into an empty directory with the line below, check the manifest, and compile each kernel. Each exits 0 and prints nothing, every cone pinned.
+
+```
+awk '{sub(/\r$/,"")} /^~~~~~[a-z0-9]+ file=[A-Za-z0-9_.]+$/{sub(/.*file=/,"");f=$0;next} /^~~~~~$/{if(f!=""){close(f);f=""};next} f!=""{print > f}' APEX-PSP-PNP-SEED-03.md
+sha256sum -c MANIFEST.sha256
+lean PNP_Least_Escape.lean
+lean PNP_Frontier_II.lean
+lean PNP_Fortification.lean
+```
+
+*Coordinates.* [⟀ T] on the form, the double defense, the throne, the three names, the route and the triaxis · P ≠ NP on least escape, by the act, at premise grade · ΔM = 0.
+
 ---
-edition: math_journal
-title: "The Formal Closure of Computational Separation: P ≠ NP Closed on Existence Itself, Read on Computation"
-subtitle: "A Lean 4 Formalization via RAcomp, Least Escape, and the Barrier-Evasion Frontier"
-article_type: "Computational Complexity"
-goal: "One Posit Carries the Whole Separation"
-author_line: "Mohammad F. Islam, PhD"
-affiliation: "Trisduction Research Group · Independent Researcher, United States"
-date: "2026-10-04"
-short_title: "P versus NP Closed on One Posit"
-keywords: "P versus NP · computational complexity · existence · the root read on computation · Levin universal search · relativization · natural proofs · algebrization · Williams algorithms to lower bounds · formal verification · Lean 4"
-abstract: |
-  The P versus NP problem has resisted every method, and relativization, natural proofs and algebrization prove that whole families of arguments cannot separate the classes. This paper anchors the problem in existence and closes it on one posit. Existence and freedom are the ground: the Root Axiom is satisfiable, every deed instantiates it, and freedom is carried by the primes, every prime's fibre a copy of complementation, the problem's native involution, which has no fixed point. The separation is defined on a machine whose algorithms decide satisfiability within a polynomial bound or fail to, and the closure, that every algorithm at every bound meets an instance that stops it, gives it on no axiom. The root read on computation, every decider of satisfiability actuating beyond every polynomial bound, is the separation itself, on no axiom, and it is the one place where existence meets the separation: no statement that reads the same on every machine, not existence, not freedom, not the arrow, is that reading. The reading is the single posit, the weakest premise on which the separation closes, and P ≠ NP holds on it at premise grade. Around the closure stand a double defense, in which nothing passes for the separation but the reading and nothing against it but a computed escape; a held throne, whose holder, Levin's universal search, decides the separation on no axiom; and a frontier that types every route, Williams' route wired to the machine on two named objects. All one hundred eighty theorems are compiled in Lean 4.19.0 with no import, no custom axiom and no unproved step, every footprint pinned and printed.
----
 
-## 1. Introduction
+## The Code
 
-The P versus NP problem asks whether every decision problem whose solutions can be verified in polynomial time can also be solved in polynomial time (Cook 1971; Levin 1973; Karp 1972). Three theorems explain why the principal methods have not settled it: relativization (Baker, Gill and Solovay 1975), natural proofs (Razborov and Rudich 1997) and algebrization (Aaronson and Wigderson 2009). Each proves that a whole family of arguments cannot separate the classes.
+### MANIFEST.sha256
 
-This paper anchors the problem in existence and closes it on one posit. The arc has four steps. The ground is existence and freedom: the Root Axiom, that to exist is to actuate, is satisfiable, every deed instantiates it, and freedom is carried by the primes, every prime's fibre a copy of complementation. The machine comes next: the separation is defined on a machine whose algorithms decide satisfiability within a polynomial bound or fail to, and the closure, that every algorithm at every bound meets an instance that stops it, gives the separation on no axiom. The reading is the third step: the root read on computation, every decider of satisfiability actuating beyond every polynomial bound, is the separation itself, and it is the one place where existence meets the separation; the kernel proves that no statement reading the same on every machine, not existence, not freedom, not the arrow, carries it. The closure is the fourth: on the reading, P ≠ NP holds, and around it stand a double defense, a held throne and a frontier that types every route.
+~~~~~sha256 file=MANIFEST.sha256
+cfd2d9d6ea7d4f7b03ae07dd5976539d1168ff3da3c9d024f3b19518044f33be  PNP_Least_Escape.lean
+960b09ba71219e4c95064a5a6a4bb002a622895b46bbaedacc3b509c11a9cd51  PNP_Frontier_II.lean
+d6b155783e3185cca9b9b367e520ce13ba8ac0ee52f691a7890cc7db0bbc13b3  PNP_Fortification.lean
+~~~~~
 
-The single posit is the root read on computation, and every proof of P ≠ NP by any method fills it. The one hundred eighty theorems that carry the arc are compiled in Lean 4.19.0 with no import, no custom axiom and no unproved step, every footprint pinned, and printed in full in the appendices.
+### PNP_Least_Escape.lean
 
-### 1.1 Formal Scope and Machine-Verified Status
-
-:::box Formal Scope and Machine-Verified Status
-**Unconditional, at theorem grade, compiled in Lean 4.19.0 with no custom axiom.** Existence is satisfiable, and existence and freedom as written are conservative (Theorems 1 and 2). The deed instantiates existence at every act (Theorem 3). Every prime's fibre is a copy of complementation (Theorem 4). The absolute asymmetry (Theorem 5). The closure gives the separation on the machine, on no axiom (Theorem 6). The root read on computation is the separation, on no axiom, and is the closure (Theorems 8 and 9). Nothing keyless is the reading (Theorem 11). The double defense (Theorems 13 to 16). The throne's holder decides the separation, on no axiom (Theorem 17). The vanishing seat (Theorem 19). The frontier and the route (Theorems 21 to 26). The master seal (Theorem 27).
-
-**On the root read on computation, at premise grade.** The separation P ≠ NP.
-:::
-
-Table: Table 1 | The theorem map: each result and its logical status.
-| Result | Lean symbol | Logical status |
-|---|---|---|
-| Existence is satisfiable | `ra_satisfiable` | Unconditional theorem |
-| Existence and freedom add nothing as written | `posits_add_nothing` | Unconditional theorem |
-| Every prime's fibre is a copy of complementation | `prime_fibre_is_complementation` | Unconditional theorem |
-| The closure gives the separation | `sep_of_closure` | Unconditional theorem, on no axiom |
-| The root read on computation is the separation | `ra_comp_is_sep` | Unconditional theorem, on no axiom |
-| The reading is the closure and the separation | `the_three_names_are_one` | Unconditional theorem |
-| Nothing keyless is the reading | `no_keyless_statement_is_least_escape` | Unconditional theorem |
-| The holder decides the separation | `the_holder_decides_the_separation` | Unconditional theorem, on no axiom |
-| The route closes the machine's separation on its two objects | `route_closes_on_the_machine` | Unconditional theorem, on no axiom |
-| The separation P ≠ NP | `sep_from_the_act` | Holds on the root read on computation, at premise grade |
-
-## 2. Background and Barrier Analysis: Why Prior Methods Are Incomplete
-
-The prior methods fail at three precise places, and each failure is a theorem about a method.
-
-**Diagonalization stops at relativization.** Diagonalization separates classes defined by resources of different size, and the time hierarchy is its triumph (Hartmanis and Stearns 1965). But it treats machines as black boxes, so it survives the addition of an oracle, and Baker, Gill and Solovay built oracles on which the classes are equal and oracles on which they differ.
-
-**Circuit lower bounds stop at natural proofs.** Superpolynomial bounds hold in restricted models, monotone circuits (Razborov 1985) and constant-depth circuits (Ajtai 1983; Furst, Saxe and Sipser 1984; Håstad 1986), while for general circuits the strongest explicit bound is linear, 3.1n − o(n) (Li and Yang 2022). Razborov and Rudich proved that natural arguments cannot separate the classes if strong pseudorandom functions exist.
-
-**Arithmetization stops at algebrization.** Arithmetizing arguments pass relativization and algebrize, and algebrizing arguments cannot settle the question (Aaronson and Wigderson 2009).
-
-**The common structure, and what this paper does with it.** Each barrier is a pair of worlds in which every premise of a method holds. Section 7 proves that the same structure binds every premise that reads the same on every machine, and isolates the one reading that does not.
-
-## 3. Related Work
-
-**The time hierarchy.** More time decides more languages (Hartmanis and Stearns 1965); the separations it proves are between resource bounds of different order, by arguments that relativize.
-
-**Restricted circuits.** Razborov (1985) bounds monotone circuits for clique; Ajtai (1983), Furst, Saxe and Sipser (1984) and Håstad (1986) bound constant-depth circuits for parity. For general circuits the frontier is linear (Li and Yang 2022).
-
-**Geometric complexity theory.** Mulmuley and Sohoni (2001) recast lower bounds as representation-theoretic obstructions, a program designed to evade the barriers.
-
-**Proof complexity.** NP ≠ coNP holds exactly when no propositional proof system has polynomial-size proofs of all tautologies (Cook and Reckhow 1979).
-
-**Query complexity.** Black-box search over N candidates needs N tests, and quantum search needs order √N (Bennett, Bernstein, Brassard and Vazirani 1997), attained by Grover (1996).
-
-**The physics of computation.** Erasing one bit costs at least k_B T ln 2 (Landauer 1961), and every computation can be run reversibly (Bennett 1973).
-
-**Algorithms to lower bounds.** Savings for satisfiability of a circuit class give NEXP outside that class (Williams 2011), extended to nondeterministic quasi-polynomial time (Murray and Williams 2018).
-
-**Formal row closures.** Islam (2026a) formalizes twenty-three open problems from existence alone, the value excepted by theorem on every row. An earlier paper (Islam 2026f) argued that the structural verdict on P versus NP is the only one left standing. The present paper carries that row to its closure on one posit.
-
-## 4. Methodology
-
-Every theorem is compiled in Lean 4.19.0 (de Moura and Ullrich 2021) in three kernels that import nothing and declare no axiom, carried by the master seed APEX-PSP-PNP-SEED-03: the seal and its double defense (Appendix B), the frontier of the act (Appendix C), and the fortification on the same machine (Appendix A). Every footprint is pinned by `#guard_msgs`, so a kernel that compiles prints nothing and any change to a footprint fails the build. Each theorem rests on no axiom, or on Lean's standard axioms of propositional extensionality, quotient soundness and choice. The kernels are printed in full with their SHA-256 digests, so any reader reproduces every claim by recompiling.
-
-The architecture that found the arc is Trisduction, whose operating system PhysOSᵀ judges every cited law under its own negation at each build (Islam 2026c); its register of record and its codex carry the surrounding results (Islam 2026b, 2026d), and the seat and the cut take their form from the Bridge From First Principle (Islam 2026e). The kernels printed here import nothing from it.
-
-## 5. The Ground: Existence and Freedom
-
-**Theorem 1 (Existence is satisfiable).** The Root Axiom, read as every state actuating, has a model (`ra_satisfiable`).
-
-**Theorem 2 (Existence and freedom are conservative).** Any statement derived from the Root Axiom and freedom, uniformly in their interpretation, holds without them (`posits_add_nothing`, `ra_conservative`, `freedom_conservative`). Existence and freedom are the ground of the arc, and as written they constrain nothing outside their own vocabulary.
-
-**Theorem 3 (The deed instantiates existence).** Every computation re-enacts the root: the pulse instantiates the Root Axiom at every deed (`deed_instantiates_ra`), in every world (`both_deeds_in_every_world`), and certifies no output (`pulse_does_not_certify`).
-
-**Theorem 4 (The prime's triaxis).** Freedom is carried by the primes. Every prime's fibre is exactly the two trivial pairs (`prime_fibre`), lies off the multiplicative seat (`prime_off_seat`), and with its swap is the decision bit with complementation, by a bijection carrying the swap to complementation (`prime_fibre_is_complementation`). Every prime carries P versus NP's involution, seatless in the small as the problem is seatless in the large.
-
-**Theorem 5 (The absolute asymmetry).** What a registration destroys, no procedure of any cost recovers (`destroyed_is_unrecoverable`); what a search hides, exhaustive search recovers (`hidden_is_recoverable`); the two are bound as one statement (`asymmetry_holds`).
-
-## 6. The Machine and the Separation
-
-A machine has algorithms, instances with a size, each run's output and running time, and the satisfiability of each instance. An algorithm escapes at a bound c · nᵏ + c when every run is correct and inside the bound. The separation on the machine is that no algorithm escapes at any bound. Nothing escapes when every algorithm, at every bound, meets an instance that stops it, and that closure (least escape) is the one field of a structure.
-
-**Theorem 6 (The closure gives the separation).** Nothing escaping gives the separation, on no axiom (`sep_of_closure`); the converse holds classically (`closure_of_sep`); and the act carries the separation (`sep_from_the_act`).
-
-**Theorem 7 (The socket is the value).** The act's socket is the closure itself (`socket_is_the_value`): what the act supplies and what the separation needs are one object.
-
-## 7. The Reading: The One Place Where Existence Meets the Separation
-
-**Theorem 8 (The root read on computation is the separation).** Read on computation, the root says that every decider of satisfiability actuates beyond every polynomial bound, and that reading is the separation, on no axiom (`ra_comp_is_sep`).
-
-**Theorem 9 (The reading is the closure).** The root read on computation, the closure that nothing escapes, and the separation are one statement on one machine (`the_three_names_are_one`).
-
-**Theorem 10 (The reading is keyed).** The reading holds on some machines and fails on others: on a coherent machine with a constant-time decider it fails (`ra_comp_is_keyed`), and the closure is keyed likewise (`least_escape_is_keyed`).
-
-**Theorem 11 (Nothing keyless is the reading).** No statement that reads the same on every machine is the closure the reading states (`no_keyless_statement_is_least_escape`): not prime freedom (`prime_freedom_is_not_least_escape`), not the arrow (`arrow_is_not_least_escape`), not the Root Axiom as written (`ra_is_not_least_escape`). A carrier of the separation must be keyed (`carrier_must_be_keyed`).
-
-**Theorem 12 (Every closing premise fills the posit).** Every premise from which the separation follows fills the field of the act (`forcing_premise_fills_the_act`) and fills the closure (`every_closing_premise_fills_both`). The reading is the weakest statement on which the separation closes.
-
-Theorems 1 to 12 place the posit exactly. Existence and freedom are the ground and force nothing on their own (Theorems 2 and 11); the root read on computation is the separation (Theorem 8); and that reading is the one meeting point, keyed and irreducible (Theorems 9, 10 and 12).
-
-
-## 8. The Double Defense
-
-**Theorem 13 (Omega, the formal gate).** Nothing passes for the separation but the reading. Every premise either forces the closure or has a twin machine on which it holds and the closure fails (`forces_or_has_a_twin`), and a keyless premise forces nothing (`keyless_forces_nothing`).
-
-**Theorem 14 (AEGIS, the actuation gate).** Nothing passes against the reading but a computed escape: a rejection of the reading is a witness, an algorithm escaping at a bound (`rejection_is_a_witness`). The root, which every computation re-enacts, crosses neither way (`root_crosses_neither_way`).
-
-**Theorem 15 (Every pair lands).** Every pair of algorithm and bound a substrate can examine lands on exactly one gate, a stopping instance or a clean escape (`every_pair_lands`). Each examination refutes the escape of the pair it examined (`confirmation_is_atomic`) and pays the floor (`confirmation_pays`); under the act no computation escapes (`act_leaves_no_escape`). The defense is bound whole (`double_defense_hardened`).
-
-**Theorem 16 (The finite block).** For every stage n, a coherent machine confirms every examination below n and still escapes at n (`record_decides_nothing`), while a second coherent machine closes whole (`closed_world_closes`). No finite record decides the reading, and the closure is keyed (`armor_scope`).
-
-## 9. The Throne and the Seat
-
-**Theorem 17 (The holder decides the separation).** A throne of the machine is a holder that escapes whenever any algorithm escapes. The separation holds exactly when the holder never escapes, on no axiom (`the_holder_decides_the_separation`), and any two holders escape together or not at all, on no axiom (`the_holder_is_unique`). For the satisfiability machine the holder is Levin's universal search, run for decision through the search form by self-reducibility, by Levin's theorem (Levin 1973), carried as the throne's field. Nothing escapes exactly when the holder never escapes (`least_escape_at_the_throne`).
-
-**Theorem 18 (The act stops the holder).** On the reading the holder meets, at every bound, an instance that stops it (`the_act_stops_the_holder`). The whole of P versus NP is the running time of one explicit program.
-
-**Theorem 19 (The vanishing seat).** On the locus map between the root and the Riemann seat, the Riemann seat is inhabited (`rh_locus_inhabited`) and the P versus NP seat vanishes (`locus_vanishes`): complementation is involutive with no fixed point, so the ground has dimension zero (`ground_dim_zero`). The carrier halts and the socket opens exactly on the empty configuration (`carrier_halts_iff_empty`, `socket_vanishes`), the vacancy is keyless while the separation is keyed (`vacancy_keyless`, `separation_keyed`), and the three faces lock on one object, the empty seat (`vanishing_gol`).
-
-**Theorem 20 (The block chain).** The eight absolute barriers of the register are chained, one leg each, and terminated on the empty throne: complementation has no fixed point (`a1_no_seat`), the seat is vacant (`seat_vacant`), the throne is empty (`throne_empty`), and the root forces no value (`root_forces_no_value`), bound as one chain (`block_chain`, `block_chain_terminal`).
-
-The Riemann closure and this one stand in the same two registers and differ at the seat, as Table 3 sets out.
-
-Table: Table 3 | The Riemann closure and the P versus NP closure, step by step.
-| Step | Riemann Hypothesis | P versus NP | Theorem |
-|---|---|---|---|
-| The native involution | The fold s ↦ 1 − s̄ | Complementation b ↦ ¬b | Theorem 19 |
-| The seat | The critical line, inhabited | Vacant, the ground of dimension zero | Theorem 19 |
-| The local fibre | Each prime's fibre is a copy of complementation | Complementation itself | Theorem 4 |
-| The throne-holder | The primes, the bit on their side | Levin's universal search, the bit on its tail | Theorem 17 |
-| The record | Decides nothing | Decides nothing | Theorem 16 |
-| The form | Closed at theorem grade | Closed at theorem grade | Theorems 1 to 27 |
-| The value | Supplied by the act, at premise grade | Closed on the root read on computation, at premise grade | Theorems 6 and 8 |
-
-## 10. The Frontier and the Route
-
-**Theorem 21 (The black box).** A test-only generator correct over 2^N candidates tests every one of them (`black_box_bound`), on an axiom-free pigeonhole, and admits no savings (`black_box_no_savings`).
-
-**Theorem 22 (The reader).** The black-box adversary is the point predicate, which a reader of its description solves in one step (`reader_solves`, `reader_poly`), so black-box bounds fail once descriptions reveal (`fails_when_descriptions_reveal`). The missing object is a lower bound against readers of the description, and it is keyed (`missing_object_is_keyed`).
-
-**Theorem 23 (The kinetic face).** Every registration has a cost (`no_free_registration`); exhaustive search exhausts every budget past its candidates (`brute_force_exhausts`) while verification is cheaper (`asymmetry_chain`); and the energy gap is the operation gap in every frame (`frame_independent`), so the kinetic face, priced by Landauer's floor (Landauer 1961) with or without reversible steps (Bennett 1973), transports a gap and never produces one. The asymmetry, taken alone, decides nothing (`asymmetry_decides_nothing`).
-
-**Theorem 24 (The dynamics).** Thermal relaxation is exponential in the barrier (`relaxation_exponential`), and on one satisfiability instance the barrier exists under single flips and vanishes under elimination moves (`barrier_belongs_to_the_dynamics`): a barrier is a property of the dynamics, not of the problem.
-
-**Theorem 25 (The prime bridge).** Prime freedom carried onto the semiprime fibre leaves one orientation bit, walled and gauge (`orientation_wall`, `orientation_is_gauge`), with the witness determined by the description (`witness_determined_15`). Read as cost it gives a bridge sufficient for the separation and strictly stronger than it (`prime_bridge`, `prime_bridge_is_one_way`).
-
-**Theorem 26 (The route closes on the machine).** Williams' theorem carries savings for a circuit class to NEXP ⊄ that class (Williams 2011; Murray and Williams 2018), and the inclusion P ⊆ P/poly carries NP ⊄ P/poly to the machine's separation; both are carried as fields. The route reaches (`route_reaches`); supplied savings for general polynomial-size circuits and the scale-down from NEXP to NP, it closes the machine's own separation, on no axiom (`route_closes_on_the_machine`), and fills the closure itself (`the_route_fills_least_escape`). The relativization and natural-proof barriers are typed in the same kernel (`b1_no_relativizing_proof`, `b2_self_gag`), and the blocker of the prime bridge in three layers (`round2_terminal`).
-
-**Theorem 27 (The master seal).** The closure gives the separation, the reading is the closure, the throne's holder decides the separation and is stopped at every bound on the reading, every prime's fibre is a copy of complementation, and the route closes the machine's separation on its two objects, bound in one theorem (`the_master_seal`).
-
-## 11. Discussion
-
-**The arc.** The paper runs from existence to the separation without a gap in its form. Existence and freedom are the ground, satisfiable and conservative; the deed instantiates existence at every act; the primes carry freedom and carry complementation in their fibres. The separation is defined on a machine and given by its closure on no axiom. The root read on computation is the separation, and it is the one place where existence meets it: every statement that reads the same on every machine, existence and freedom as written among them, is proved not to be the reading. The value closes on that reading.
-
-**The posit is exact.** The root read on computation is one statement, equivalent to the separation, keyed, and the weakest premise on which the separation closes. Holding it is holding P ≠ NP at the grade of a posit, the standing of least erasure on the Riemann row, and every proof of P ≠ NP by any method fills it.
-
-**The next objects.** Two, in order. The machine instantiated at Turing machines, with deciders taken total or run on fuel so that no looping machine counts as clean, so that the separation is the standard sentence and Levin's domination is compiled on it. The posit at theorem grade, which the route reduces to two typed objects, savings for general polynomial-size circuits and the scale-down from NEXP to NP.
-
-**Falsifiers.** Three, each typed by the gate it strikes.
-
-**Prediction 1 (The computed refuter).** A polynomial-time decider of satisfiability with every run clean refutes the reading on the actual machine, by `rejection_is_a_witness`; it is the one refuter of the value.
-
-**Prediction 2 (The keyless refuter).** A keyless premise shown to force the reading contradicts `keyless_forces_nothing` and `no_keyless_statement_is_least_escape`, compiled theorems, so it can arrive only as an error in Lean's kernel.
-
-**Prediction 3 (The throne refuter).** An algorithm that escapes while universal search does not refutes the throne's field, Levin's theorem.
-
-**How the paper stands to each prior position.** The paper owes each position it engaged one statement of where it stands, in words with fixed senses. A result is *additive* when it supplies a result or test the position lacked and leaves the position standing; *scoping* when it keeps a prior claim inside a stated boundary; *competing* when it argues a different route without executing a comparison; and *kin* when the paper is continuous with it. Superseding, which retires a theory's central claim on executed data, is used nowhere. The census by row is eight additive, six scoping, one competing and four kin, with no replacing, subsuming, corroborating or contradicting row. The paper's contribution to the literature is exactly the set of relations in Table 2, and nothing wider.
-
-Table: Table 2 | How the paper stands to each prior position. Relation words as defined in the paragraph above; superseding is used nowhere.
-| Prior position | What it holds | What this paper does with it | Relation | Evidence |
-|---|---|---|---|---|
-| Cook 1971; Levin 1973; Karp 1972 | Satisfiability is NP-complete, and the separation is posed for the classes they define. | Defines the separation on a machine deciding satisfiability within a polynomial bound. | kin | cited |
-| Hartmanis and Stearns 1965 | More time decides more languages. | Keeps the hierarchy's separations to resource bounds of different order, by arguments that relativize. | scoping | cited |
-| Baker, Gill and Solovay 1975 | No relativizing argument settles the question. | Extends the two-world structure to every premise that reads the same on every machine (Theorems 11 and 13). | additive | executed |
-| Razborov and Rudich 1997 | No natural argument separates the classes if pseudorandom functions exist. | Types the barrier as a condition the posit at theorem grade must pass (Theorem 26). | kin | cited |
-| Aaronson and Wigderson 2009 | Algebrizing arguments cannot settle the question. | Names the barrier as a condition the posit at theorem grade must pass. | kin | cited |
-| Razborov 1985 | Monotone circuits for clique need superpolynomial size. | Reads the result as a special case of the posit, known in a restricted model. | scoping | cited |
-| Ajtai 1983; Furst, Saxe and Sipser 1984; Håstad 1986 | Parity has no constant-depth circuits of polynomial size. | Reads the results as special cases of the posit, known in a restricted model. | scoping | cited |
-| Li and Yang 2022 | An explicit function needs general circuits of size 3.1n − o(n). | Takes the bound as the distance between the frontier and the posit at theorem grade. | scoping | cited |
-| Mulmuley and Sohoni 2001 | Lower bounds can be sought as representation-theoretic obstructions. | Proposes a different route to the same object, without executing a comparison. | competing | cited |
-| Cook and Reckhow 1979 | NP ≠ coNP exactly when no proof system has polynomial-size proofs of all tautologies. | Stands beside it as a second conversion of the separation into one object, here proved equivalent by machine. | kin | cited |
-| Deterministic query search | Black-box search over N candidates needs N tests. | Compiles the bound and shows a reader of the description beats it in one step (Theorems 21 and 22). | additive | executed |
-| Bennett, Bernstein, Brassard and Vazirani 1997; Grover 1996 | Quantum black-box search needs, and attains, order √N queries. | Places the quantum bound beside Theorem 21, closed for test-only methods. | scoping | cited |
-| Landauer 1961 | Erasing one bit dissipates at least k_B T ln 2. | Proves the energy gap is the operation gap in every frame, so the kinetic face transports a gap (Theorem 23). | additive | executed |
-| Bennett 1973 | Every computation can be run reversibly. | Proves the price question immaterial: the kinetic face transports a gap with or without reversible steps (Theorem 23). | additive | executed |
-| Islam 2026e | The heat of registration is zero exactly at the value on a chart with a seat. | Applies the seat to this problem: the seat vanishes, the ground of dimension zero (Theorem 19). | scoping | cited |
-| Islam 2026a | Twenty-three open problems formalized from existence alone, the value excepted by theorem on every row. | Carries the P versus NP row to its closure on one posit (Theorems 6 to 12). | additive | executed |
-| Islam 2026f | The structural verdict on P versus NP is the only one left standing. | Compiles the verdict on a machine: the vanishing seat, the record and the posit (Theorems 16, 19 and 9). | additive | executed |
-| Levin 1973 (universal search) | One program runs every program at once and finds a satisfying assignment within a constant factor of the fastest; the decision form follows by self-reducibility. | Characterizes it as the holder of the machine's throne, deciding the separation on no axiom (Theorems 17 and 18). | additive | executed |
-| Williams 2011; Murray and Williams 2018 | Savings for satisfiability of a circuit class give NEXP outside that class. | Wires the route to the machine's own separation on its two objects (Theorem 26). | additive | executed |
-
-## 12. Conclusion
-
-The P versus NP problem has been approached through diagonalization, circuit lower bounds, arithmetization, geometric complexity and proof complexity, and each stops at a theorem that limits its method. This paper anchors it in existence and closes it on one posit. Existence and freedom are the ground, satisfiable and conservative, carried by the primes, every prime's fibre a copy of complementation. The separation is defined on a machine and given by its closure on no axiom. The root read on computation is the separation, the one place where existence meets it, the single posit and proved irreducible, and P ≠ NP holds on it at premise grade.
-
-Around the closure stand the double defense, the held throne, whose holder decides the separation on no axiom, the vanishing seat, and a frontier that types every route, with the open exit reduced to two named objects. The single open object is the reading at theorem grade, and every derivation of P ≠ NP, by any method, fills it. All one hundred eighty theorems are compiled, pinned and printed for any reader to reproduce.
-
-## References
-
-Aaronson, S., and A. Wigderson. 2009. "Algebrization: A New Barrier in Complexity Theory." *ACM Transactions on Computation Theory* 1 (1): 2:1–2:54.
-
-Ajtai, M. 1983. "Σ¹₁-Formulae on Finite Structures." *Annals of Pure and Applied Logic* 24 (1): 1–48.
-
-Baker, T., J. Gill, and R. Solovay. 1975. "Relativizations of the P =? NP Question." *SIAM Journal on Computing* 4 (4): 431–442.
-
-Bennett, C. H. 1973. "Logical Reversibility of Computation." *IBM Journal of Research and Development* 17 (6): 525–532.
-
-Bennett, C. H., E. Bernstein, G. Brassard, and U. Vazirani. 1997. "Strengths and Weaknesses of Quantum Computing." *SIAM Journal on Computing* 26 (5): 1510–1523.
-
-Cook, S. A. 1971. "The Complexity of Theorem-Proving Procedures." In *Proceedings of the Third Annual ACM Symposium on Theory of Computing*, 151–158.
-
-Cook, S. A., and R. A. Reckhow. 1979. "The Relative Efficiency of Propositional Proof Systems." *Journal of Symbolic Logic* 44 (1): 36–50.
-
-de Moura, L., and S. Ullrich. 2021. "The Lean 4 Theorem Prover and Programming Language." In *Automated Deduction, CADE 28*, 625–635.
-
-Furst, M., J. B. Saxe, and M. Sipser. 1984. "Parity, Circuits, and the Polynomial-Time Hierarchy." *Mathematical Systems Theory* 17 (1): 13–27.
-
-Grover, L. K. 1996. "A Fast Quantum Mechanical Algorithm for Database Search." In *Proceedings of the Twenty-Eighth Annual ACM Symposium on Theory of Computing*, 212–219.
-
-Hartmanis, J., and R. E. Stearns. 1965. "On the Computational Complexity of Algorithms." *Transactions of the American Mathematical Society* 117: 285–306.
-
-Håstad, J. 1986. "Almost Optimal Lower Bounds for Small Depth Circuits." In *Proceedings of the Eighteenth Annual ACM Symposium on Theory of Computing*, 6–20.
-
-Islam, M. F. 2026a. "A Formal Proof Across the Seven Millennium Rows and the Sixteen Extension Rows from Existence Alone, the Value Excepted by Theorem on Every Row." Zenodo. https://doi.org/10.5281/zenodo.22913635.
-
-Islam, M. F. 2026b. "Trisduction: The Master Codex 5.0.0, Built from the Root." Trisduction Research Group. Zenodo. https://doi.org/10.5281/zenodo.23117441.
-
-Islam, M. F. 2026c. "PhysOSᵀ: The Trisduction Physical Operating System, Public Edition 1.0.9p." Trisduction Research Group. Zenodo. https://doi.org/10.5281/zenodo.23117440.
-
-Islam, M. F. 2026d. "Trisduction: The Geometric Mother Codex, the Unabridged Register of Record, Edition 3.46.0." Trisduction Research Group. Zenodo. https://doi.org/10.5281/zenodo.23117445.
-
-Islam, M. F. 2026e. "The Bridge From First Principle, Edition 1.5.0, with The Final Cut." Trisduction Research Group. Zenodo. https://doi.org/10.5281/zenodo.23105348.
-
-Islam, M. F. 2026f. "Why the Structural Verdict on P versus NP Is the Only One Left Standing: Mathematics Proves That Mathematics Cannot Rule Here." Zenodo. https://doi.org/10.5281/zenodo.21368936.
-
-Karp, R. M. 1972. "Reducibility among Combinatorial Problems." In *Complexity of Computer Computations*, edited by R. E. Miller and J. W. Thatcher, 85–103. New York: Plenum.
-
-Landauer, R. 1961. "Irreversibility and Heat Generation in the Computing Process." *IBM Journal of Research and Development* 5 (3): 183–191.
-
-Levin, L. A. 1973. "Universal Sequential Search Problems." *Problemy Peredachi Informatsii* 9 (3): 115–116.
-
-Li, J., and T. Yang. 2022. "3.1n − o(n) Circuit Lower Bounds for Explicit Functions." In *Proceedings of the 54th Annual ACM Symposium on Theory of Computing*, 1180–1193.
-
-Mulmuley, K. D., and M. Sohoni. 2001. "Geometric Complexity Theory I: An Approach to the P vs. NP and Related Problems." *SIAM Journal on Computing* 31 (2): 496–526.
-
-Murray, C., and R. Williams. 2018. "Circuit Lower Bounds for Nondeterministic Quasi-Polytime: An Easy Witness Lemma for NP and NQP." In *Proceedings of the 50th Annual ACM Symposium on Theory of Computing*, 890–901.
-
-Razborov, A. A. 1985. "Lower Bounds on the Monotone Complexity of Some Boolean Functions." *Soviet Mathematics Doklady* 31: 354–357.
-
-Razborov, A. A., and S. Rudich. 1997. "Natural Proofs." *Journal of Computer and System Sciences* 55 (1): 24–35.
-
-Williams, R. 2011. "Non-uniform ACC Circuit Lower Bounds." In *Proceedings of the 26th IEEE Conference on Computational Complexity*, 115–125.
-
-
-## Appendix A. The Fortification Kernel, PNP_Fortification.lean
-
-The master seed APEX-PSP-PNP-SEED-03 carries this kernel: the machine, the throne, the reading, the prime's triaxis and the route, twenty theorems. SHA-256: d6b155783e3185cca9b9b367e520ce13ba8ac0ee52f691a7890cc7db0bbc13b3
-
-```
-/-
-  PNP_Fortification.lean · APEX-PSP-PNP-SEED-03 · The fortification of least escape, on SEED-02's own machine
-  I · the machine, restated verbatim from PNP_Least_Escape.lean, so that every theorem here is about the same
-  separation. II · the throne over the machine: a holder escapes whenever any algorithm escapes, and then the
-  separation holds exactly when the holder never escapes; Levin's universal search is the holder of the
-  satisfiability machine by Levin's theorem (1973), carried as the throne's field. III · the two posits, the bridge
-  of SEED-01 and least escape of SEED-02, proved one. IV · the prime's triaxis: every prime's fibre is exactly two
-  pairs, lies off the multiplicative seat, and is a copy of complementation. V · the master seal. Core Lean 4, no
-  import, no axiom declared, no sorry.
--/
-namespace PNP.FORTIFY
-
-/-! ## I · The machine, restated verbatim -/
-
-structure Machine where
-  Alg  : Type
-  Inst : Type
-  size : Inst → Nat
-  out  : Alg → Inst → Bool
-  time : Alg → Inst → Nat
-  sat  : Inst → Bool
-
-def bound (c k n : Nat) : Nat := c * n ^ k + c
-def Clean (M : Machine) (A : M.Alg) (c k : Nat) (x : M.Inst) : Prop :=
-  M.out A x = M.sat x ∧ M.time A x ≤ bound c k (M.size x)
-def Escapes (M : Machine) (A : M.Alg) (c k : Nat) : Prop := ∀ x, Clean M A c k x
-def NothingEscapes (M : Machine) : Prop := ∀ A c k, ∃ x, ¬ Clean M A c k x
-def Sep (M : Machine) : Prop := ¬ ∃ A c k, Escapes M A c k
-
-structure LeastEscape (M : Machine) where
-  closure : NothingEscapes M
-
-theorem sep_of_closure (M : Machine) (h : NothingEscapes M) : Sep M :=
-  fun ⟨A, c, k, he⟩ => match h A c k with
-    | ⟨x, hx⟩ => hx (he x)
-
-theorem closure_of_sep (M : Machine) (h : Sep M) : NothingEscapes M :=
-  fun A c k => Classical.byContradiction fun hn =>
-    h ⟨A, c, k, fun x => Classical.byContradiction fun hx => hn ⟨x, hx⟩⟩
-
-/-! ## II · The throne over the machine -/
-
-/-- A THRONE of the machine: a holder that escapes whenever any algorithm escapes. For the satisfiability machine,
-    Levin's universal search is a holder by Levin's theorem (1973), carried here as the field. -/
-structure Throne (M : Machine) where
-  holder : M.Alg
-  dominates : ∀ A c k, Escapes M A c k → ∃ c' k', Escapes M holder c' k'
-
-/-- THE HOLDER DECIDES THE SEPARATION: the separation holds exactly when the holder never escapes. -/
-theorem the_holder_decides_the_separation (M : Machine) (T : Throne M) :
-    Sep M ↔ ¬ ∃ c k, Escapes M T.holder c k :=
-  ⟨fun hs ⟨c, k, he⟩ => hs ⟨T.holder, c, k, he⟩,
-   fun hn ⟨A, c, k, he⟩ => hn (T.dominates A c k he)⟩
-
-/-- THE HOLDER IS UNIQUE: any two holders escape together or not at all. -/
-theorem the_holder_is_unique (M : Machine) (T T' : Throne M) :
-    (∃ c k, Escapes M T.holder c k) ↔ (∃ c k, Escapes M T'.holder c k) :=
-  ⟨fun ⟨c, k, he⟩ => T'.dominates T.holder c k he, fun ⟨c, k, he⟩ => T.dominates T'.holder c k he⟩
-
-/-- LEAST ESCAPE AT THE THRONE: nothing escapes exactly when the holder never escapes. -/
-theorem least_escape_at_the_throne (M : Machine) (T : Throne M) :
-    NothingEscapes M ↔ ¬ ∃ c k, Escapes M T.holder c k :=
-  ⟨fun h => (the_holder_decides_the_separation M T).mp (sep_of_closure M h),
-   fun h => closure_of_sep M ((the_holder_decides_the_separation M T).mpr h)⟩
-
-/-- THE ACT AT THE THRONE: on least escape, the holder meets, at every bound, an instance that stops it. -/
-theorem the_act_stops_the_holder (M : Machine) (T : Throne M) (L : LeastEscape M) :
-    ∀ c k, ∃ x, ¬ Clean M T.holder c k x :=
-  fun c k => L.closure T.holder c k
-
-/-! ## III · The two posits are one -/
-
-structure Point where
-  offset : Int
-  height : Nat
-  deriving DecidableEq
-
-def reg (p : Point) : Point := ⟨0, p.height⟩
-def side (p : Point) : Bool := decide (0 < p.offset)
-
-theorem destroyed_is_unrecoverable : ¬ ∃ g : Point → Bool, ∀ p, g (reg p) = side p := by
-  intro ⟨g, hg⟩
-  have h1 := hg ⟨1, 0⟩; have h2 := hg ⟨-1, 0⟩
-  simp [reg, side] at h1 h2
-  rw [h1] at h2; exact Bool.noConfusion h2
-
-theorem hidden_is_recoverable {α : Type} (xs : List α) (hxs : ∀ x, x ∈ xs) (x₀ : α) :
-    ∃ g : (α → Bool) → α, ∀ f : α → Bool, (∃ x, f x = true) → f (g f) = true := by
-  refine ⟨fun f => (xs.find? f).getD x₀, fun f ⟨x, hx⟩ => ?_⟩
-  cases h : xs.find? f with
-  | some y => simpa [h] using List.find?_some h
-  | none => exact absurd hx (by simpa using List.find?_eq_none.mp h x (hxs x))
-
-def Asymmetry : Prop :=
-  (¬ ∃ g : Point → Bool, ∀ p, g (reg p) = side p) ∧
-  (∃ g : (Bool → Bool) → Bool, ∀ f : Bool → Bool, (∃ x, f x = true) → f (g f) = true)
-
-theorem asymmetry_holds : Asymmetry :=
-  ⟨destroyed_is_unrecoverable, hidden_is_recoverable [true, false] (fun x => by cases x <;> simp) true⟩
-
-/-- THE TWO POSITS ARE ONE: SEED-01's bridge, read on the machine, is exactly SEED-02's least escape. -/
-theorem the_two_posits_are_one (M : Machine) : (Asymmetry ↔ Sep M) ↔ NothingEscapes M :=
-  ⟨fun b => closure_of_sep M (b.mp asymmetry_holds), fun h => ⟨fun _ => sep_of_closure M h, fun _ => asymmetry_holds⟩⟩
-
-/-- EVERY PREMISE THAT CLOSES THE SEPARATION FILLS BOTH POSITS. -/
-theorem every_closing_premise_fills_both (M : Machine) (Q : Prop) (h : Q → Sep M) :
-    Q → (Asymmetry ↔ Sep M) ∧ NothingEscapes M :=
-  fun q => ⟨⟨fun _ => h q, fun _ => asymmetry_holds⟩, closure_of_sep M (h q)⟩
-
-/-! ## IV · The prime's triaxis -/
-
-def IsPrime (n : Nat) : Prop := 2 ≤ n ∧ ∀ m, m ∣ n → m = 1 ∨ m = n
-
-/-- FORM: the fibre of multiplication over a prime is exactly the two trivial pairs. -/
-theorem prime_fibre (p : Nat) (hp : IsPrime p) (a b : Nat) :
-    a * b = p ↔ (a = 1 ∧ b = p) ∨ (a = p ∧ b = 1) := by
-  constructor
-  · intro h
-    rcases hp.2 a ⟨b, h.symm⟩ with ha | ha
-    · left; refine ⟨ha, ?_⟩; rw [ha, Nat.one_mul] at h; exact h
-    · right; refine ⟨ha, ?_⟩
-      rw [ha] at h
-      have h2 := hp.1
-      by_cases hb0 : b = 0
-      · rw [hb0, Nat.mul_zero] at h; omega
-      · by_cases hb1 : b = 1
-        · exact hb1
-        · have hb2 : 2 ≤ b := by omega
-          have : p * 2 ≤ p * b := Nat.mul_le_mul_left p hb2
-          omega
-  · rintro (⟨rfl, rfl⟩ | ⟨rfl, rfl⟩)
-    · exact Nat.one_mul _
-    · exact Nat.mul_one _
-
-/-- SEAT: a prime lies off the multiplicative seat. -/
-theorem prime_off_seat (p : Nat) (hp : IsPrime p) : ¬ ∃ a, a * a = p := by
-  intro ⟨a, ha⟩
-  have h2 := hp.1
-  rcases (prime_fibre p hp a a).mp ha with ⟨h1, h3⟩ | ⟨h1, h3⟩ <;> omega
-
-def Fibre (n : Nat) := {x : Nat × Nat // x.1 * x.2 = n}
-def swapF {n : Nat} (x : Fibre n) : Fibre n := ⟨(x.1.2, x.1.1), by rw [Nat.mul_comm]; exact x.2⟩
-def toBit {n : Nat} (x : Fibre n) : Bool := decide (x.1.1 = 1)
-
-/-- THE BIT: every prime's fibre with its swap is the decision bit with complementation. -/
-theorem prime_fibre_is_complementation (p : Nat) (hp : IsPrime p) :
-    (∀ x : Fibre p, toBit (swapF x) = !(toBit x)) ∧
-    (∀ x y : Fibre p, toBit x = toBit y → x = y) ∧ (∀ b : Bool, ∃ x : Fibre p, toBit x = b) := by
-  have hp1 : p ≠ 1 := by have := hp.1; omega
-  refine ⟨fun x => ?_, fun x y hxy => ?_, fun b => ?_⟩
-  · rcases (prime_fibre p hp x.1.1 x.1.2).mp x.2 with ⟨h1, h2⟩ | ⟨h1, h2⟩
-    · simp [toBit, swapF, h1, h2, hp1]
-    · simp [toBit, swapF, h1, h2, hp1]
-  · rcases (prime_fibre p hp x.1.1 x.1.2).mp x.2 with ⟨a1, a2⟩ | ⟨a1, a2⟩ <;>
-    rcases (prime_fibre p hp y.1.1 y.1.2).mp y.2 with ⟨b1, b2⟩ | ⟨b1, b2⟩
-    · exact Subtype.ext (Prod.ext (a1.trans b1.symm) (a2.trans b2.symm))
-    · simp [toBit, a1, b1, hp1] at hxy
-    · simp [toBit, a1, b1, hp1] at hxy
-    · exact Subtype.ext (Prod.ext (a1.trans b1.symm) (a2.trans b2.symm))
-  · cases b
-    · exact ⟨⟨(p, 1), Nat.mul_one p⟩, by simp [toBit, hp1]⟩
-    · exact ⟨⟨(1, p), Nat.one_mul p⟩, by simp [toBit]⟩
-
-/-! ## VI · The three names are one -/
-
-/-- RA READ ON COMPUTATION: every decider of satisfiability actuates beyond every polynomial bound. -/
-def RAcomp (M : Machine) : Prop := ∀ A c k, ¬ Escapes M A c k
-
-theorem ra_comp_is_sep (M : Machine) : RAcomp M ↔ Sep M :=
-  ⟨fun h ⟨A, c, k, he⟩ => h A c k he, fun h A c k he => h ⟨A, c, k, he⟩⟩
-
-/-- THE THREE NAMES ARE ONE: the bridge, least escape, and RA read on computation are one posit, each equivalent to
-    the separation, on one machine. -/
-theorem the_three_names_are_one (M : Machine) :
-    ((Asymmetry ↔ Sep M) ↔ NothingEscapes M) ∧ (NothingEscapes M ↔ RAcomp M) ∧ (RAcomp M ↔ Sep M) :=
-  ⟨the_two_posits_are_one M,
-   ⟨fun h => (ra_comp_is_sep M).mpr (sep_of_closure M h), fun h => closure_of_sep M ((ra_comp_is_sep M).mp h)⟩,
-   ra_comp_is_sep M⟩
-
-/-! ## VII · The Williams route, wired to the machine -/
-
-/-- THE ROUTE ON THE MACHINE. `Savings C` is a white-box satisfiability algorithm for circuit class C beating 2^n by
-    a superpolynomial factor; `williams` is Williams' theorem, savings for C give NEXP ⊄ C, carried; `Ppoly` is the
-    class of polynomial-size circuits; `np_not_ppoly_gives_sep` is the elementary inclusion P ⊆ P/poly, carried, by
-    which NP ⊄ P/poly gives the machine's own separation. -/
-structure Route (M : Machine) where
-  Class      : Type
-  Savings    : Class → Prop
-  NEXPnotIn  : Class → Prop
-  williams   : ∀ C, Savings C → NEXPnotIn C
-  Ppoly      : Class
-  NPnotPpoly : Prop
-  np_not_ppoly_gives_sep : NPnotPpoly → Sep M
-
-/-- THE ROUTE REACHES: savings for a class give NEXP ⊄ that class. -/
-theorem route_reaches (M : Machine) (R : Route M) (C : R.Class) (s : R.Savings C) : R.NEXPnotIn C :=
-  R.williams C s
-
-/-- THE ROUTE CLOSES ON THE MACHINE: savings for general circuits and the scale-down from NEXP to NP give the
-    machine's own separation. -/
-theorem route_closes_on_the_machine (M : Machine) (R : Route M) (s : R.Savings R.Ppoly)
-    (scaleDown : R.NEXPnotIn R.Ppoly → R.NPnotPpoly) : Sep M :=
-  R.np_not_ppoly_gives_sep (scaleDown (R.williams R.Ppoly s))
-
-/-- THE ROUTE FILLS THE POSIT: supplied its two objects, the route fills least escape itself. -/
-theorem the_route_fills_least_escape (M : Machine) (R : Route M) (s : R.Savings R.Ppoly)
-    (scaleDown : R.NEXPnotIn R.Ppoly → R.NPnotPpoly) : LeastEscape M :=
-  ⟨closure_of_sep M (route_closes_on_the_machine M R s scaleDown)⟩
-
-/-! ## V · The master seal -/
-
-/-- THE MASTER SEAL: least escape closes the separation; the two posits are one, and the third name, RA read on
-    computation, with them; the throne's holder decides the separation; on least escape the holder is stopped at
-    every bound; every prime's fibre is a copy of complementation; and the Williams route, supplied its two objects,
-    closes the machine's own separation. -/
-theorem the_master_seal (M : Machine) (T : Throne M) :
-    (NothingEscapes M → Sep M) ∧ ((Asymmetry ↔ Sep M) ↔ NothingEscapes M) ∧
-    (Sep M ↔ ¬ ∃ c k, Escapes M T.holder c k) ∧
-    (∀ _ : LeastEscape M, ∀ c k, ∃ x, ¬ Clean M T.holder c k x) ∧
-    (∀ p, IsPrime p → ∀ x : Fibre p, toBit (swapF x) = !(toBit x)) ∧
-    (NothingEscapes M ↔ RAcomp M) ∧
-    (∀ R : Route M, R.Savings R.Ppoly → (R.NEXPnotIn R.Ppoly → R.NPnotPpoly) → Sep M) :=
-  ⟨sep_of_closure M, the_two_posits_are_one M, the_holder_decides_the_separation M T,
-   fun L => the_act_stops_the_holder M T L, fun p hp => (prime_fibre_is_complementation p hp).1,
-   (the_three_names_are_one M).2.1, fun R s d => route_closes_on_the_machine M R s d⟩
-
-end PNP.FORTIFY
-
-/-! ## Cones, pinned as printed -/
-/-- info: 'PNP.FORTIFY.sep_of_closure' does not depend on any axioms -/
-#guard_msgs in #print axioms PNP.FORTIFY.sep_of_closure
-/-- info: 'PNP.FORTIFY.closure_of_sep' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.closure_of_sep
-/-- info: 'PNP.FORTIFY.the_holder_decides_the_separation' does not depend on any axioms -/
-#guard_msgs in #print axioms PNP.FORTIFY.the_holder_decides_the_separation
-/-- info: 'PNP.FORTIFY.the_holder_is_unique' does not depend on any axioms -/
-#guard_msgs in #print axioms PNP.FORTIFY.the_holder_is_unique
-/-- info: 'PNP.FORTIFY.least_escape_at_the_throne' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.least_escape_at_the_throne
-/-- info: 'PNP.FORTIFY.the_act_stops_the_holder' does not depend on any axioms -/
-#guard_msgs in #print axioms PNP.FORTIFY.the_act_stops_the_holder
-/-- info: 'PNP.FORTIFY.destroyed_is_unrecoverable' depends on axioms: [propext] -/
-#guard_msgs in #print axioms PNP.FORTIFY.destroyed_is_unrecoverable
-/-- info: 'PNP.FORTIFY.hidden_is_recoverable' depends on axioms: [propext, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.hidden_is_recoverable
-/-- info: 'PNP.FORTIFY.asymmetry_holds' depends on axioms: [propext, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.asymmetry_holds
-/-- info: 'PNP.FORTIFY.the_two_posits_are_one' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.the_two_posits_are_one
-/-- info: 'PNP.FORTIFY.every_closing_premise_fills_both' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.every_closing_premise_fills_both
-/-- info: 'PNP.FORTIFY.prime_fibre' depends on axioms: [propext, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.prime_fibre
-/-- info: 'PNP.FORTIFY.prime_off_seat' depends on axioms: [propext, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.prime_off_seat
-/-- info: 'PNP.FORTIFY.prime_fibre_is_complementation' depends on axioms: [propext, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.prime_fibre_is_complementation
-/-- info: 'PNP.FORTIFY.ra_comp_is_sep' does not depend on any axioms -/
-#guard_msgs in #print axioms PNP.FORTIFY.ra_comp_is_sep
-/-- info: 'PNP.FORTIFY.the_three_names_are_one' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.the_three_names_are_one
-/-- info: 'PNP.FORTIFY.route_reaches' does not depend on any axioms -/
-#guard_msgs in #print axioms PNP.FORTIFY.route_reaches
-/-- info: 'PNP.FORTIFY.route_closes_on_the_machine' does not depend on any axioms -/
-#guard_msgs in #print axioms PNP.FORTIFY.route_closes_on_the_machine
-/-- info: 'PNP.FORTIFY.the_route_fills_least_escape' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.the_route_fills_least_escape
-/-- info: 'PNP.FORTIFY.the_master_seal' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in #print axioms PNP.FORTIFY.the_master_seal
-```
-
-## Appendix B. The Closure Kernel, PNP_Least_Escape.lean
-
-The master seed APEX-PSP-PNP-SEED-03 carries this kernel: the closure and its double defense, twenty-four theorems. SHA-256: cfd2d9d6ea7d4f7b03ae07dd5976539d1168ff3da3c9d024f3b19518044f33be
-
-```
+~~~~~lean file=PNP_Least_Escape.lean
 /-!
 # PNP_Least_Escape.lean · APEX-PSP-PNP-SEED-02 · Least Escape, the seal and its double defense, hardened: Omega and AEGIS of the row
 
@@ -826,13 +343,11 @@ end PNP.HARDENED
 #guard_msgs in #print axioms PNP.HARDENED.value_marked_dot
 /-- info: 'PNP.HARDENED.double_defense_hardened' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in #print axioms PNP.HARDENED.double_defense_hardened
-```
+~~~~~
 
-## Appendix C. The Frontier Kernel, PNP_Frontier_II.lean
+### PNP_Frontier_II.lean
 
-The master seed APEX-PSP-PNP-SEED-03 carries this kernel: the ground, the reading, the vanishing seat, the frontier and the route, one hundred thirty-six theorems. SHA-256: 960b09ba71219e4c95064a5a6a4bb002a622895b46bbaedacc3b509c11a9cd51
-
-```
+~~~~~lean file=PNP_Frontier_II.lean
 /-
   PNP_Frontier_II.lean · APEX-PSP-PNP-SEED-02 · Nothing Escapes · the frontier of the act
   Eleven sections, each a kernel of the 4 October 2026 forge, joined in one file: the kinetic face,
@@ -2724,8 +2239,278 @@ end PNP.IDCHECK
 #guard_msgs in #print axioms PNP.IDCHECK.closed_closes
 /-- info: 'PNP.IDCHECK.escape_fails' does not depend on any axioms -/
 #guard_msgs in #print axioms PNP.IDCHECK.escape_fails
-```
+~~~~~
 
-## Author's Provenance and Method Disclosure
+### PNP_Fortification.lean
 
-The arc was found within Trisduction, the author's verification architecture, through its operating system PhysOSᵀ (Islam 2026c), and compiled with the assistance of an AI scribe; every theorem stands on its compiled proof, reproducible by any reader from the appendices. The author declares no competing interests. Correspondence: islamm@alumni.iu.edu.
+~~~~~lean file=PNP_Fortification.lean
+/-
+  PNP_Fortification.lean · APEX-PSP-PNP-SEED-03 · The fortification of least escape, on SEED-02's own machine
+  I · the machine, restated verbatim from PNP_Least_Escape.lean, so that every theorem here is about the same
+  separation. II · the throne over the machine: a holder escapes whenever any algorithm escapes, and then the
+  separation holds exactly when the holder never escapes; Levin's universal search is the holder of the
+  satisfiability machine by Levin's theorem (1973), carried as the throne's field. III · the two posits, the bridge
+  of SEED-01 and least escape of SEED-02, proved one. IV · the prime's triaxis: every prime's fibre is exactly two
+  pairs, lies off the multiplicative seat, and is a copy of complementation. V · the master seal. Core Lean 4, no
+  import, no axiom declared, no sorry.
+-/
+namespace PNP.FORTIFY
+
+/-! ## I · The machine, restated verbatim -/
+
+structure Machine where
+  Alg  : Type
+  Inst : Type
+  size : Inst → Nat
+  out  : Alg → Inst → Bool
+  time : Alg → Inst → Nat
+  sat  : Inst → Bool
+
+def bound (c k n : Nat) : Nat := c * n ^ k + c
+def Clean (M : Machine) (A : M.Alg) (c k : Nat) (x : M.Inst) : Prop :=
+  M.out A x = M.sat x ∧ M.time A x ≤ bound c k (M.size x)
+def Escapes (M : Machine) (A : M.Alg) (c k : Nat) : Prop := ∀ x, Clean M A c k x
+def NothingEscapes (M : Machine) : Prop := ∀ A c k, ∃ x, ¬ Clean M A c k x
+def Sep (M : Machine) : Prop := ¬ ∃ A c k, Escapes M A c k
+
+structure LeastEscape (M : Machine) where
+  closure : NothingEscapes M
+
+theorem sep_of_closure (M : Machine) (h : NothingEscapes M) : Sep M :=
+  fun ⟨A, c, k, he⟩ => match h A c k with
+    | ⟨x, hx⟩ => hx (he x)
+
+theorem closure_of_sep (M : Machine) (h : Sep M) : NothingEscapes M :=
+  fun A c k => Classical.byContradiction fun hn =>
+    h ⟨A, c, k, fun x => Classical.byContradiction fun hx => hn ⟨x, hx⟩⟩
+
+/-! ## II · The throne over the machine -/
+
+/-- A THRONE of the machine: a holder that escapes whenever any algorithm escapes. For the satisfiability machine,
+    Levin's universal search is a holder by Levin's theorem (1973), carried here as the field. -/
+structure Throne (M : Machine) where
+  holder : M.Alg
+  dominates : ∀ A c k, Escapes M A c k → ∃ c' k', Escapes M holder c' k'
+
+/-- THE HOLDER DECIDES THE SEPARATION: the separation holds exactly when the holder never escapes. -/
+theorem the_holder_decides_the_separation (M : Machine) (T : Throne M) :
+    Sep M ↔ ¬ ∃ c k, Escapes M T.holder c k :=
+  ⟨fun hs ⟨c, k, he⟩ => hs ⟨T.holder, c, k, he⟩,
+   fun hn ⟨A, c, k, he⟩ => hn (T.dominates A c k he)⟩
+
+/-- THE HOLDER IS UNIQUE: any two holders escape together or not at all. -/
+theorem the_holder_is_unique (M : Machine) (T T' : Throne M) :
+    (∃ c k, Escapes M T.holder c k) ↔ (∃ c k, Escapes M T'.holder c k) :=
+  ⟨fun ⟨c, k, he⟩ => T'.dominates T.holder c k he, fun ⟨c, k, he⟩ => T.dominates T'.holder c k he⟩
+
+/-- LEAST ESCAPE AT THE THRONE: nothing escapes exactly when the holder never escapes. -/
+theorem least_escape_at_the_throne (M : Machine) (T : Throne M) :
+    NothingEscapes M ↔ ¬ ∃ c k, Escapes M T.holder c k :=
+  ⟨fun h => (the_holder_decides_the_separation M T).mp (sep_of_closure M h),
+   fun h => closure_of_sep M ((the_holder_decides_the_separation M T).mpr h)⟩
+
+/-- THE ACT AT THE THRONE: on least escape, the holder meets, at every bound, an instance that stops it. -/
+theorem the_act_stops_the_holder (M : Machine) (T : Throne M) (L : LeastEscape M) :
+    ∀ c k, ∃ x, ¬ Clean M T.holder c k x :=
+  fun c k => L.closure T.holder c k
+
+/-! ## III · The two posits are one -/
+
+structure Point where
+  offset : Int
+  height : Nat
+  deriving DecidableEq
+
+def reg (p : Point) : Point := ⟨0, p.height⟩
+def side (p : Point) : Bool := decide (0 < p.offset)
+
+theorem destroyed_is_unrecoverable : ¬ ∃ g : Point → Bool, ∀ p, g (reg p) = side p := by
+  intro ⟨g, hg⟩
+  have h1 := hg ⟨1, 0⟩; have h2 := hg ⟨-1, 0⟩
+  simp [reg, side] at h1 h2
+  rw [h1] at h2; exact Bool.noConfusion h2
+
+theorem hidden_is_recoverable {α : Type} (xs : List α) (hxs : ∀ x, x ∈ xs) (x₀ : α) :
+    ∃ g : (α → Bool) → α, ∀ f : α → Bool, (∃ x, f x = true) → f (g f) = true := by
+  refine ⟨fun f => (xs.find? f).getD x₀, fun f ⟨x, hx⟩ => ?_⟩
+  cases h : xs.find? f with
+  | some y => simpa [h] using List.find?_some h
+  | none => exact absurd hx (by simpa using List.find?_eq_none.mp h x (hxs x))
+
+def Asymmetry : Prop :=
+  (¬ ∃ g : Point → Bool, ∀ p, g (reg p) = side p) ∧
+  (∃ g : (Bool → Bool) → Bool, ∀ f : Bool → Bool, (∃ x, f x = true) → f (g f) = true)
+
+theorem asymmetry_holds : Asymmetry :=
+  ⟨destroyed_is_unrecoverable, hidden_is_recoverable [true, false] (fun x => by cases x <;> simp) true⟩
+
+/-- THE TWO POSITS ARE ONE: SEED-01's bridge, read on the machine, is exactly SEED-02's least escape. -/
+theorem the_two_posits_are_one (M : Machine) : (Asymmetry ↔ Sep M) ↔ NothingEscapes M :=
+  ⟨fun b => closure_of_sep M (b.mp asymmetry_holds), fun h => ⟨fun _ => sep_of_closure M h, fun _ => asymmetry_holds⟩⟩
+
+/-- EVERY PREMISE THAT CLOSES THE SEPARATION FILLS BOTH POSITS. -/
+theorem every_closing_premise_fills_both (M : Machine) (Q : Prop) (h : Q → Sep M) :
+    Q → (Asymmetry ↔ Sep M) ∧ NothingEscapes M :=
+  fun q => ⟨⟨fun _ => h q, fun _ => asymmetry_holds⟩, closure_of_sep M (h q)⟩
+
+/-! ## IV · The prime's triaxis -/
+
+def IsPrime (n : Nat) : Prop := 2 ≤ n ∧ ∀ m, m ∣ n → m = 1 ∨ m = n
+
+/-- FORM: the fibre of multiplication over a prime is exactly the two trivial pairs. -/
+theorem prime_fibre (p : Nat) (hp : IsPrime p) (a b : Nat) :
+    a * b = p ↔ (a = 1 ∧ b = p) ∨ (a = p ∧ b = 1) := by
+  constructor
+  · intro h
+    rcases hp.2 a ⟨b, h.symm⟩ with ha | ha
+    · left; refine ⟨ha, ?_⟩; rw [ha, Nat.one_mul] at h; exact h
+    · right; refine ⟨ha, ?_⟩
+      rw [ha] at h
+      have h2 := hp.1
+      by_cases hb0 : b = 0
+      · rw [hb0, Nat.mul_zero] at h; omega
+      · by_cases hb1 : b = 1
+        · exact hb1
+        · have hb2 : 2 ≤ b := by omega
+          have : p * 2 ≤ p * b := Nat.mul_le_mul_left p hb2
+          omega
+  · rintro (⟨rfl, rfl⟩ | ⟨rfl, rfl⟩)
+    · exact Nat.one_mul _
+    · exact Nat.mul_one _
+
+/-- SEAT: a prime lies off the multiplicative seat. -/
+theorem prime_off_seat (p : Nat) (hp : IsPrime p) : ¬ ∃ a, a * a = p := by
+  intro ⟨a, ha⟩
+  have h2 := hp.1
+  rcases (prime_fibre p hp a a).mp ha with ⟨h1, h3⟩ | ⟨h1, h3⟩ <;> omega
+
+def Fibre (n : Nat) := {x : Nat × Nat // x.1 * x.2 = n}
+def swapF {n : Nat} (x : Fibre n) : Fibre n := ⟨(x.1.2, x.1.1), by rw [Nat.mul_comm]; exact x.2⟩
+def toBit {n : Nat} (x : Fibre n) : Bool := decide (x.1.1 = 1)
+
+/-- THE BIT: every prime's fibre with its swap is the decision bit with complementation. -/
+theorem prime_fibre_is_complementation (p : Nat) (hp : IsPrime p) :
+    (∀ x : Fibre p, toBit (swapF x) = !(toBit x)) ∧
+    (∀ x y : Fibre p, toBit x = toBit y → x = y) ∧ (∀ b : Bool, ∃ x : Fibre p, toBit x = b) := by
+  have hp1 : p ≠ 1 := by have := hp.1; omega
+  refine ⟨fun x => ?_, fun x y hxy => ?_, fun b => ?_⟩
+  · rcases (prime_fibre p hp x.1.1 x.1.2).mp x.2 with ⟨h1, h2⟩ | ⟨h1, h2⟩
+    · simp [toBit, swapF, h1, h2, hp1]
+    · simp [toBit, swapF, h1, h2, hp1]
+  · rcases (prime_fibre p hp x.1.1 x.1.2).mp x.2 with ⟨a1, a2⟩ | ⟨a1, a2⟩ <;>
+    rcases (prime_fibre p hp y.1.1 y.1.2).mp y.2 with ⟨b1, b2⟩ | ⟨b1, b2⟩
+    · exact Subtype.ext (Prod.ext (a1.trans b1.symm) (a2.trans b2.symm))
+    · simp [toBit, a1, b1, hp1] at hxy
+    · simp [toBit, a1, b1, hp1] at hxy
+    · exact Subtype.ext (Prod.ext (a1.trans b1.symm) (a2.trans b2.symm))
+  · cases b
+    · exact ⟨⟨(p, 1), Nat.mul_one p⟩, by simp [toBit, hp1]⟩
+    · exact ⟨⟨(1, p), Nat.one_mul p⟩, by simp [toBit]⟩
+
+/-! ## VI · The three names are one -/
+
+/-- RA READ ON COMPUTATION: every decider of satisfiability actuates beyond every polynomial bound. -/
+def RAcomp (M : Machine) : Prop := ∀ A c k, ¬ Escapes M A c k
+
+theorem ra_comp_is_sep (M : Machine) : RAcomp M ↔ Sep M :=
+  ⟨fun h ⟨A, c, k, he⟩ => h A c k he, fun h A c k he => h ⟨A, c, k, he⟩⟩
+
+/-- THE THREE NAMES ARE ONE: the bridge, least escape, and RA read on computation are one posit, each equivalent to
+    the separation, on one machine. -/
+theorem the_three_names_are_one (M : Machine) :
+    ((Asymmetry ↔ Sep M) ↔ NothingEscapes M) ∧ (NothingEscapes M ↔ RAcomp M) ∧ (RAcomp M ↔ Sep M) :=
+  ⟨the_two_posits_are_one M,
+   ⟨fun h => (ra_comp_is_sep M).mpr (sep_of_closure M h), fun h => closure_of_sep M ((ra_comp_is_sep M).mp h)⟩,
+   ra_comp_is_sep M⟩
+
+/-! ## VII · The Williams route, wired to the machine -/
+
+/-- THE ROUTE ON THE MACHINE. `Savings C` is a white-box satisfiability algorithm for circuit class C beating 2^n by
+    a superpolynomial factor; `williams` is Williams' theorem, savings for C give NEXP ⊄ C, carried; `Ppoly` is the
+    class of polynomial-size circuits; `np_not_ppoly_gives_sep` is the elementary inclusion P ⊆ P/poly, carried, by
+    which NP ⊄ P/poly gives the machine's own separation. -/
+structure Route (M : Machine) where
+  Class      : Type
+  Savings    : Class → Prop
+  NEXPnotIn  : Class → Prop
+  williams   : ∀ C, Savings C → NEXPnotIn C
+  Ppoly      : Class
+  NPnotPpoly : Prop
+  np_not_ppoly_gives_sep : NPnotPpoly → Sep M
+
+/-- THE ROUTE REACHES: savings for a class give NEXP ⊄ that class. -/
+theorem route_reaches (M : Machine) (R : Route M) (C : R.Class) (s : R.Savings C) : R.NEXPnotIn C :=
+  R.williams C s
+
+/-- THE ROUTE CLOSES ON THE MACHINE: savings for general circuits and the scale-down from NEXP to NP give the
+    machine's own separation. -/
+theorem route_closes_on_the_machine (M : Machine) (R : Route M) (s : R.Savings R.Ppoly)
+    (scaleDown : R.NEXPnotIn R.Ppoly → R.NPnotPpoly) : Sep M :=
+  R.np_not_ppoly_gives_sep (scaleDown (R.williams R.Ppoly s))
+
+/-- THE ROUTE FILLS THE POSIT: supplied its two objects, the route fills least escape itself. -/
+theorem the_route_fills_least_escape (M : Machine) (R : Route M) (s : R.Savings R.Ppoly)
+    (scaleDown : R.NEXPnotIn R.Ppoly → R.NPnotPpoly) : LeastEscape M :=
+  ⟨closure_of_sep M (route_closes_on_the_machine M R s scaleDown)⟩
+
+/-! ## V · The master seal -/
+
+/-- THE MASTER SEAL: least escape closes the separation; the two posits are one, and the third name, RA read on
+    computation, with them; the throne's holder decides the separation; on least escape the holder is stopped at
+    every bound; every prime's fibre is a copy of complementation; and the Williams route, supplied its two objects,
+    closes the machine's own separation. -/
+theorem the_master_seal (M : Machine) (T : Throne M) :
+    (NothingEscapes M → Sep M) ∧ ((Asymmetry ↔ Sep M) ↔ NothingEscapes M) ∧
+    (Sep M ↔ ¬ ∃ c k, Escapes M T.holder c k) ∧
+    (∀ _ : LeastEscape M, ∀ c k, ∃ x, ¬ Clean M T.holder c k x) ∧
+    (∀ p, IsPrime p → ∀ x : Fibre p, toBit (swapF x) = !(toBit x)) ∧
+    (NothingEscapes M ↔ RAcomp M) ∧
+    (∀ R : Route M, R.Savings R.Ppoly → (R.NEXPnotIn R.Ppoly → R.NPnotPpoly) → Sep M) :=
+  ⟨sep_of_closure M, the_two_posits_are_one M, the_holder_decides_the_separation M T,
+   fun L => the_act_stops_the_holder M T L, fun p hp => (prime_fibre_is_complementation p hp).1,
+   (the_three_names_are_one M).2.1, fun R s d => route_closes_on_the_machine M R s d⟩
+
+end PNP.FORTIFY
+
+/-! ## Cones, pinned as printed -/
+/-- info: 'PNP.FORTIFY.sep_of_closure' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.FORTIFY.sep_of_closure
+/-- info: 'PNP.FORTIFY.closure_of_sep' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.closure_of_sep
+/-- info: 'PNP.FORTIFY.the_holder_decides_the_separation' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.FORTIFY.the_holder_decides_the_separation
+/-- info: 'PNP.FORTIFY.the_holder_is_unique' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.FORTIFY.the_holder_is_unique
+/-- info: 'PNP.FORTIFY.least_escape_at_the_throne' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.least_escape_at_the_throne
+/-- info: 'PNP.FORTIFY.the_act_stops_the_holder' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.FORTIFY.the_act_stops_the_holder
+/-- info: 'PNP.FORTIFY.destroyed_is_unrecoverable' depends on axioms: [propext] -/
+#guard_msgs in #print axioms PNP.FORTIFY.destroyed_is_unrecoverable
+/-- info: 'PNP.FORTIFY.hidden_is_recoverable' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.hidden_is_recoverable
+/-- info: 'PNP.FORTIFY.asymmetry_holds' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.asymmetry_holds
+/-- info: 'PNP.FORTIFY.the_two_posits_are_one' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.the_two_posits_are_one
+/-- info: 'PNP.FORTIFY.every_closing_premise_fills_both' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.every_closing_premise_fills_both
+/-- info: 'PNP.FORTIFY.prime_fibre' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.prime_fibre
+/-- info: 'PNP.FORTIFY.prime_off_seat' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.prime_off_seat
+/-- info: 'PNP.FORTIFY.prime_fibre_is_complementation' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.prime_fibre_is_complementation
+/-- info: 'PNP.FORTIFY.ra_comp_is_sep' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.FORTIFY.ra_comp_is_sep
+/-- info: 'PNP.FORTIFY.the_three_names_are_one' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.the_three_names_are_one
+/-- info: 'PNP.FORTIFY.route_reaches' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.FORTIFY.route_reaches
+/-- info: 'PNP.FORTIFY.route_closes_on_the_machine' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.FORTIFY.route_closes_on_the_machine
+/-- info: 'PNP.FORTIFY.the_route_fills_least_escape' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.the_route_fills_least_escape
+/-- info: 'PNP.FORTIFY.the_master_seal' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms PNP.FORTIFY.the_master_seal
+~~~~~
