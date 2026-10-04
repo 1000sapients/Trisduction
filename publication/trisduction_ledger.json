@@ -3037,6 +3037,42 @@
         "url": null
       },
       "note": "PhysOSᵀ 1.0.9p, the final-cut edition: one code block of forty files shared byte for byte with the Master Codex v5.0.0. Zenodo carries the git bytes of the Math Journal edition; the archive carries their qpdf-uncompressed staging under the edition-free name."
+    },
+    "trisduction-p-versus-np-closed-on-one-posit": {
+      "title": "P versus NP Closed on One Posit: The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge",
+      "domain": "Mathematics · Complexity Theory",
+      "status": "live",
+      "first_published": "2026-10-04",
+      "last_updated": "2026-10-04",
+      "supersedes": null,
+      "superseded_by": null,
+      "git": {
+        "pdf": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge.pdf",
+        "md": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge.md",
+        "audit": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - audit pnp13.md",
+        "seed": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-SEED-01.md",
+        "seed_lock": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-SEED-01.lock.json",
+        "commit": "38f994854cb7"
+      },
+      "zenodo": {
+        "conceptrecid": 23133631,
+        "concept_doi": "10.5281/zenodo.23133631",
+        "latest_version_doi": "10.5281/zenodo.23133632",
+        "latest_record": 23133632,
+        "versions": 1,
+        "state": "published"
+      },
+      "ia": {
+        "identifier": "trisduction-p-versus-np-closed-on-one-posit",
+        "state": "live",
+        "url": "https://archive.org/details/trisduction-p-versus-np-closed-on-one-posit",
+        "file": "P_versus_NP_Closed_on_One_Posit.pdf"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "note": "Math Journal edition 1.0.0, sealed by audit cycle pnp13 at round 3. Forty-nine theorems in three kernels, Lean 4.19.0; the form closed at theorem grade, P ≠ NP closed on the bridge at premise grade. Zenodo and the archive carry the same PDF bytes as git; the seed APEX-PSP-PNP-SEED-01 sits beside it under lock version 2."
     }
   }
 }
