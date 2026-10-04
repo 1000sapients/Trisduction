@@ -366,6 +366,18 @@ S | 2026-10-04 | e94ab99 | SEAT | LIB | Publication Library/Mathematics/Complexi
 S | 2026-10-04 | e94ab99 | SEAT | LIB | Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-SEED-03.md | sha 6a79908f
 S | 2026-10-04 | e94ab99 | SEAT | LIB | Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-TM-01.md | sha bf48c14c
 S | 2026-10-04 | e94ab99 | SEAT | LIB | Publication Library/Mathematics/Complexity Theory/P versus NP/RELEASE_NOTE_2026_10_04.md | sha 369b6501
+S | 2026-10-04 | e94ab99 | SEAT | PROTO | protocols/PhysOS/PhysOSᵀ_v1_0_10p.md | sha 82532895
+S | 2026-10-04 | e94ab99 | SEAT | PROTO | protocols/PhysOS/PhysOS_1_0_10p_MathJournal.pdf | sha ac35eb0a
+S | 2026-10-04 | e94ab99 | SEAT | PROTO | protocols/PhysOS/PhysOS_1_0_10p_Journal.pdf | sha f702c6ef
+S | 2026-10-04 | e94ab99 | SEAT | CODEX | master/Codex v5/TRISDUCTION_Master_Codex_v5_1_0.md | sha 441a485d
+S | 2026-10-04 | e94ab99 | SEAT | CODEX | master/Codex v5/Trisduction_Master_Codex_v5_1_0_MathJournal.pdf | sha 0c294f9e
+S | 2026-10-04 | e94ab99 | SEAT | CODEX | master/Codex v5/Trisduction_Master_Codex_v5_1_0_Journal.pdf | sha 5602ec39
+S | 2026-10-04 | e94ab99 | SEAT | CODEX | master/TRISDUCTION_Master_Codex_Unabridged_v3_47_0.md | sha 04820d2d
+S | 2026-10-04 | e94ab99 | SEAT | CODEX | master/Trisduction_Mother_Codex_v3_47_0_MathJournal.pdf | sha d9e35dc8
+S | 2026-10-04 | e94ab99 | SEAT | CODEX | master/Trisduction_Mother_Codex_v3_47_0_Journal.pdf | sha db9b4b9a
+S | 2026-10-04 | e94ab99 | SEAT | PROTO | protocols/PhysOS/audit_pnp18.md | sha a2112baa
+S | 2026-10-04 | e94ab99 | SEAT | CODEX | master/Codex v5/audit_pnp19.md | sha ac73b3f1
+S | 2026-10-04 | e94ab99 | SEAT | CODEX | master/audit_pnp20.md | sha 0cc24606
 
 ## MAP | regenerated | one line per live path
 # M | REG | path | kind | ver | blob8 | bytes | moved | what
