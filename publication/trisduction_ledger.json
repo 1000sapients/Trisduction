@@ -2015,11 +2015,14 @@
       "domain": "Root Axiom and Ontology",
       "status": "live",
       "first_published": "2026-08-29",
-      "last_updated": "2026-08-29",
+      "last_updated": "2026-10-05",
       "git": {
-        "md": null,
-        "pdf": null,
-        "editions": []
+        "md": "Publication Library/Philosophy/Metaphysics/Root Axiom/TOE_of_All_TOEs_Root_Axiom.md",
+        "pdf": "Publication Library/Philosophy/Metaphysics/Root Axiom/TOE_of_All_TOEs_Root_Axiom.pdf",
+        "editions": [],
+        "kernel": "Publication Library/Philosophy/Metaphysics/Root Axiom/TOE_Zero.lean",
+        "twin": "Publication Library/Philosophy/Metaphysics/Root Axiom/TOE_Zero_Twin.f90",
+        "audit": "Publication Library/Philosophy/Metaphysics/Root Axiom/TOE_of_All_TOEs_audit_toe2.md"
       },
       "zenodo": {
         "conceptrecid": 22168942,
@@ -2030,9 +2033,10 @@
         "state": "published"
       },
       "ia": {
-        "identifier": null,
+        "identifier": "trisduction-toe-of-all-toes-root-axiom",
         "url": null,
-        "state": "not-deposited"
+        "state": "not-deposited",
+        "file": "TOE_of_All_TOEs_Root_Axiom.pdf"
       },
       "philarchive": {
         "record": null,
@@ -2040,7 +2044,7 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": null,
+      "note": " On 2026-10-05 the zero-axiom, zero-posit math edition replaced the paper in place in git and in its archive item: fifteen Lean laws each on no axiom, the Fortran twin and the RA–RA recursion thesis executed witnessed with the live face [I AM], sealed by audit cycle toe2. Zenodo record 22168943 refused file modification past its thirty-day window and still serves the original.",
       "extra": {}
     },
     "topological-footprint-unknown-unknown": {
