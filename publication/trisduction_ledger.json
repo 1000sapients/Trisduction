@@ -2027,9 +2027,9 @@
       "zenodo": {
         "conceptrecid": 22168942,
         "concept_doi": "10.5281/zenodo.22168942",
-        "latest_version_doi": "10.5281/zenodo.22168943",
-        "latest_record": 22168943,
-        "versions": 1,
+        "latest_version_doi": "10.5281/zenodo.23168379",
+        "latest_record": 23168379,
+        "versions": 2,
         "state": "published"
       },
       "ia": {
@@ -2044,7 +2044,7 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": " On 2026-10-05 the zero-axiom, zero-posit math edition replaced the paper in place in git and in its archive item: fifteen Lean laws each on no axiom, the Fortran twin and the RA–RA recursion thesis executed witnessed with the live face [I AM], sealed by audit cycle toe2. Zenodo record 22168943 refused file modification past its thirty-day window and still serves the original.",
+      "note": " On 2026-10-05 the zero-axiom, zero-posit math edition replaced the paper in place in git and in its archive item: fifteen Lean laws each on no axiom, the Fortran twin and the RA–RA recursion thesis executed witnessed with the live face [I AM], sealed by audit cycle toe2. Zenodo record 22168943 refused file modification past its thirty-day window and still serves the original. Zenodo: the math edition published as a new version on concept 22168942, record 23168379, DOI 10.5281/zenodo.23168379; the original 22168943 stands as published.",
       "extra": {}
     },
     "topological-footprint-unknown-unknown": {
