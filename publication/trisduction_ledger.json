@@ -3053,7 +3053,7 @@
       "git": {
         "pdf": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge.pdf",
         "md": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge.md",
-        "audit": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - audit pnp26.md",
+        "audit": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - audit pnp27.md",
         "seed": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-SEED-03.md",
         "seed_lock": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-SEED-01.lock.json",
         "commit": "38f994854cb7",
@@ -3077,7 +3077,7 @@
         "record": null,
         "url": null
       },
-      "note": "Edition 3.0.0 under the locked title, sealed by audit cycle pnp24: the separation defined on a machine, the one posit the root read on computation, P ≠ NP at premise grade on it, one hundred eighty theorems in three kernels. Zenodo record 23133632 and the archive file were updated in place; the git copy overwritten at its path; the master seed APEX-PSP-PNP-SEED-03 and the instantiation's first layer APEX-PSP-PNP-TM-01 sit beside it. Edition 3.1.0 replaced it in place on 2026-10-05 under the same DOI, file name and path, sealed by audit cycle pnp26: the root stated universal and undeniable, Theorem 1 on the root kernel of Appendix D, one hundred eighty-seven theorems in four kernels."
+      "note": "Edition 3.0.0 under the locked title, sealed by audit cycle pnp24: the separation defined on a machine, the one posit the root read on computation, P ≠ NP at premise grade on it, one hundred eighty theorems in three kernels. Zenodo record 23133632 and the archive file were updated in place; the git copy overwritten at its path; the master seed APEX-PSP-PNP-SEED-03 and the instantiation's first layer APEX-PSP-PNP-TM-01 sit beside it. Edition 3.1.0 replaced it in place on 2026-10-05 under the same DOI, file name and path, sealed by audit cycle pnp26: the root stated universal and undeniable, Theorem 1 on the root kernel of Appendix D, one hundred eighty-seven theorems in four kernels. Edition 3.2.0 replaced it in place on 2026-10-05, sealed by audit cycle pnp27: the root kernel is the zero-axiom root of the TOE edition, seven laws each on no axiom, the floor universal for every root that grounds itself and no level above it."
     }
   }
 }
