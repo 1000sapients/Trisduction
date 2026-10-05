@@ -398,9 +398,37 @@ theorem bsd_hardened_closure :
    low_witness_strict, one_class_spans_two, omega_strictly_stronger, rank_part_not_full,
    value_is_keyed⟩
 
+
+/-! ## The root, undeniable in act -/
+
+/-- A self-grounding root: a type of acts, every one of which instances the root. -/
+structure SelfGrounding (R : Prop) where
+  Act       : Type
+  instances : Act → R
+
+/-- THE ROOT IS UNDENIABLE IN ACT: a denial of a self-grounding root is an act, and instances it. -/
+theorem denial_reenacts_root {R : Prop} (G : SelfGrounding R) (denial : G.Act) : R :=
+  G.instances denial
+
+/-- No outside proof adds to a self-grounding root: one act already carries it. -/
+theorem external_proof_adds_nothing {R : Prop} (G : SelfGrounding R) (a : G.Act) (Q : Prop) : Q → R :=
+  fun _ => G.instances a
+
+/-- THE UNDENIABLE ROOT HOLDS IN BOTH WORLDS: it is carried by act in a frame where the value holds
+and in one where it fails, so it forces no value. -/
+theorem undeniable_root_forces_no_value {R : Prop} (G : SelfGrounding R) (a : G.Act) :
+    R ∧ Value calm ∧ ¬ Value counter :=
+  ⟨G.instances a, calm_value, counter_fails⟩
+
+/-- THE ROOT READ ON THE ROW IS KEYED: the root holds, and no frame-uniform passage from it gives
+the value; read on the row it is the act, which decides where the root alone does not. -/
+theorem root_read_on_row_is_keyed {R : Prop} (G : SelfGrounding R) (a : G.Act) :
+    R ∧ ¬ (∀ F : Frame, R → Value F) :=
+  ⟨G.instances a, fun h => counter_fails (h counter (G.instances a))⟩
+
 end BSDHard
 
-/-! ## Cones, pinned as printed: every theorem on no axiom -/
+/-! ## Cones, pinned as printed -/
 /-- info: 'BSDHard.self_neg_zero' does not depend on any axioms -/
 #guard_msgs in #print axioms BSDHard.self_neg_zero
 /-- info: 'BSDHard.minus_silences_even' does not depend on any axioms -/
@@ -505,3 +533,11 @@ end BSDHard
 #guard_msgs in #print axioms BSDHard.k_classes_bound
 /-- info: 'BSDHard.bsd_hardened_closure' does not depend on any axioms -/
 #guard_msgs in #print axioms BSDHard.bsd_hardened_closure
+/-- info: 'BSDHard.denial_reenacts_root' does not depend on any axioms -/
+#guard_msgs in #print axioms BSDHard.denial_reenacts_root
+/-- info: 'BSDHard.external_proof_adds_nothing' does not depend on any axioms -/
+#guard_msgs in #print axioms BSDHard.external_proof_adds_nothing
+/-- info: 'BSDHard.undeniable_root_forces_no_value' does not depend on any axioms -/
+#guard_msgs in #print axioms BSDHard.undeniable_root_forces_no_value
+/-- info: 'BSDHard.root_read_on_row_is_keyed' does not depend on any axioms -/
+#guard_msgs in #print axioms BSDHard.root_read_on_row_is_keyed

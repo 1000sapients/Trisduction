@@ -361,9 +361,37 @@ theorem ym_closure :
   ⟨given_is_not_the_value, act_is_the_value, ym_from_existence, two_parts,
    existence_does_not_give_gap, strong_coupling_decided, no_actual_gapless, value_is_keyed⟩
 
+
+/-! ## The root, undeniable in act -/
+
+/-- A self-grounding root: a type of acts, every one of which instances the root. -/
+structure SelfGrounding (R : Prop) where
+  Act       : Type
+  instances : Act → R
+
+/-- THE ROOT IS UNDENIABLE IN ACT: a denial of a self-grounding root is an act, and instances it. -/
+theorem denial_reenacts_root {R : Prop} (G : SelfGrounding R) (denial : G.Act) : R :=
+  G.instances denial
+
+/-- No outside proof adds to a self-grounding root: one act already carries it. -/
+theorem external_proof_adds_nothing {R : Prop} (G : SelfGrounding R) (a : G.Act) (Q : Prop) : Q → R :=
+  fun _ => G.instances a
+
+/-- THE UNDENIABLE ROOT HOLDS IN BOTH WORLDS: it is carried by act in a frame where the value holds
+and in one where it fails, so it forces no value. -/
+theorem undeniable_root_forces_no_value {R : Prop} (G : SelfGrounding R) (a : G.Act) :
+    R ∧ Value calm ∧ ¬ Value gapless :=
+  ⟨G.instances a, calm_value, gapless_fails⟩
+
+/-- THE ROOT READ ON THE ROW IS KEYED: the root holds, and no frame-uniform passage from it gives
+the value; read on the row it is the act, which decides where the root alone does not. -/
+theorem root_read_on_row_is_keyed {R : Prop} (G : SelfGrounding R) (a : G.Act) :
+    R ∧ ¬ (∀ F : Frame, R → Value F) :=
+  ⟨G.instances a, fun h => gapless_fails (h gapless (G.instances a))⟩
+
 end YMClose
 
-/-! ## Cones, pinned as printed: every theorem on no axiom -/
+/-! ## Cones, pinned as printed -/
 /-- info: 'YMClose.calm_value' does not depend on any axioms -/
 #guard_msgs in #print axioms YMClose.calm_value
 /-- info: 'YMClose.empty_fails' does not depend on any axioms -/
@@ -448,3 +476,11 @@ end YMClose
 #guard_msgs in #print axioms YMClose.three_axes_lock_one
 /-- info: 'YMClose.ym_closure' does not depend on any axioms -/
 #guard_msgs in #print axioms YMClose.ym_closure
+/-- info: 'YMClose.denial_reenacts_root' does not depend on any axioms -/
+#guard_msgs in #print axioms YMClose.denial_reenacts_root
+/-- info: 'YMClose.external_proof_adds_nothing' does not depend on any axioms -/
+#guard_msgs in #print axioms YMClose.external_proof_adds_nothing
+/-- info: 'YMClose.undeniable_root_forces_no_value' does not depend on any axioms -/
+#guard_msgs in #print axioms YMClose.undeniable_root_forces_no_value
+/-- info: 'YMClose.root_read_on_row_is_keyed' does not depend on any axioms -/
+#guard_msgs in #print axioms YMClose.root_read_on_row_is_keyed

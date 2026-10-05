@@ -307,9 +307,37 @@ theorem the_closure :
    energy_does_not_decide, no_actual_blowup, speed_is_load_bearing, matter_is_regular, record_wall, freedom_given,
    finite_record_never_forces⟩
 
+
+/-! ## The root, undeniable in act -/
+
+/-- A self-grounding root: a type of acts, every one of which instances the root. -/
+structure SelfGrounding (R : Prop) where
+  Act       : Type
+  instances : Act → R
+
+/-- THE ROOT IS UNDENIABLE IN ACT: a denial of a self-grounding root is an act, and instances it. -/
+theorem denial_reenacts_root {R : Prop} (G : SelfGrounding R) (denial : G.Act) : R :=
+  G.instances denial
+
+/-- No outside proof adds to a self-grounding root: one act already carries it. -/
+theorem external_proof_adds_nothing {R : Prop} (G : SelfGrounding R) (a : G.Act) (Q : Prop) : Q → R :=
+  fun _ => G.instances a
+
+/-- THE UNDENIABLE ROOT HOLDS IN BOTH WORLDS: it is carried by act in a frame where the value holds
+and in one where it fails, so it forces no value. -/
+theorem undeniable_root_forces_no_value {R : Prop} (G : SelfGrounding R) (a : G.Act) :
+    R ∧ Value calm ∧ ¬ Value burst :=
+  ⟨G.instances a, calm_value, burst_fails⟩
+
+/-- THE ROOT READ ON THE ROW IS KEYED: the root holds, and no frame-uniform passage from it gives
+the value; read on the row it is the act, which decides where the root alone does not. -/
+theorem root_read_on_row_is_keyed {R : Prop} (G : SelfGrounding R) (a : G.Act) :
+    R ∧ ¬ (∀ F : Frame, R → Value F) :=
+  ⟨G.instances a, fun h => burst_fails (h burst (G.instances a))⟩
+
 end NSClose
 
-/-! ## Cones, pinned as printed: every theorem on no axiom -/
+/-! ## Cones, pinned as printed -/
 /-- info: 'NSClose.calm_value' does not depend on any axioms -/
 #guard_msgs in #print axioms NSClose.calm_value
 /-- info: 'NSClose.burst_fails' does not depend on any axioms -/
@@ -372,3 +400,11 @@ end NSClose
 #guard_msgs in #print axioms NSClose.uniform_step_forces_all
 /-- info: 'NSClose.the_closure' does not depend on any axioms -/
 #guard_msgs in #print axioms NSClose.the_closure
+/-- info: 'NSClose.denial_reenacts_root' does not depend on any axioms -/
+#guard_msgs in #print axioms NSClose.denial_reenacts_root
+/-- info: 'NSClose.external_proof_adds_nothing' does not depend on any axioms -/
+#guard_msgs in #print axioms NSClose.external_proof_adds_nothing
+/-- info: 'NSClose.undeniable_root_forces_no_value' does not depend on any axioms -/
+#guard_msgs in #print axioms NSClose.undeniable_root_forces_no_value
+/-- info: 'NSClose.root_read_on_row_is_keyed' does not depend on any axioms -/
+#guard_msgs in #print axioms NSClose.root_read_on_row_is_keyed

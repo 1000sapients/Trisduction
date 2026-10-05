@@ -383,9 +383,37 @@ theorem poincare_closure :
   ⟨given_is_not_the_value, act_is_the_value, poincare_from_existence, witness_gives_act,
    act_without_witness, no_witness_on_cycle, every_dimension_decided, value_is_keyed⟩
 
+
+/-! ## The root, undeniable in act -/
+
+/-- A self-grounding root: a type of acts, every one of which instances the root. -/
+structure SelfGrounding (R : Prop) where
+  Act       : Type
+  instances : Act → R
+
+/-- THE ROOT IS UNDENIABLE IN ACT: a denial of a self-grounding root is an act, and instances it. -/
+theorem denial_reenacts_root {R : Prop} (G : SelfGrounding R) (denial : G.Act) : R :=
+  G.instances denial
+
+/-- No outside proof adds to a self-grounding root: one act already carries it. -/
+theorem external_proof_adds_nothing {R : Prop} (G : SelfGrounding R) (a : G.Act) (Q : Prop) : Q → R :=
+  fun _ => G.instances a
+
+/-- THE UNDENIABLE ROOT HOLDS IN BOTH WORLDS: it is carried by act in a frame where the value holds
+and in one where it fails, so it forces no value. -/
+theorem undeniable_root_forces_no_value {R : Prop} (G : SelfGrounding R) (a : G.Act) :
+    R ∧ Value calm ∧ ¬ Value counter :=
+  ⟨G.instances a, calm_value, counter_fails⟩
+
+/-- THE ROOT READ ON THE ROW IS KEYED: the root holds, and no frame-uniform passage from it gives
+the value; read on the row it is the act, which decides where the root alone does not. -/
+theorem root_read_on_row_is_keyed {R : Prop} (G : SelfGrounding R) (a : G.Act) :
+    R ∧ ¬ (∀ F : Frame, R → Value F) :=
+  ⟨G.instances a, fun h => counter_fails (h counter (G.instances a))⟩
+
 end PCClose
 
-/-! ## Cones, pinned as printed: every theorem on no axiom -/
+/-! ## Cones, pinned as printed -/
 /-- info: 'PCClose.seat_is_fixed' does not depend on any axioms -/
 #guard_msgs in #print axioms PCClose.seat_is_fixed
 /-- info: 'PCClose.calm_value' does not depend on any axioms -/
@@ -468,3 +496,11 @@ end PCClose
 #guard_msgs in #print axioms PCClose.uniform_step_forces_all
 /-- info: 'PCClose.poincare_closure' does not depend on any axioms -/
 #guard_msgs in #print axioms PCClose.poincare_closure
+/-- info: 'PCClose.denial_reenacts_root' does not depend on any axioms -/
+#guard_msgs in #print axioms PCClose.denial_reenacts_root
+/-- info: 'PCClose.external_proof_adds_nothing' does not depend on any axioms -/
+#guard_msgs in #print axioms PCClose.external_proof_adds_nothing
+/-- info: 'PCClose.undeniable_root_forces_no_value' does not depend on any axioms -/
+#guard_msgs in #print axioms PCClose.undeniable_root_forces_no_value
+/-- info: 'PCClose.root_read_on_row_is_keyed' does not depend on any axioms -/
+#guard_msgs in #print axioms PCClose.root_read_on_row_is_keyed

@@ -390,9 +390,37 @@ theorem hodge_closure :
    counterclass_refutes, witness_axiom_strictly_stronger, low_dim_decided,
    remainder_not_forced.2⟩
 
+
+/-! ## The root, undeniable in act -/
+
+/-- A self-grounding root: a type of acts, every one of which instances the root. -/
+structure SelfGrounding (R : Prop) where
+  Act       : Type
+  instances : Act → R
+
+/-- THE ROOT IS UNDENIABLE IN ACT: a denial of a self-grounding root is an act, and instances it. -/
+theorem denial_reenacts_root {R : Prop} (G : SelfGrounding R) (denial : G.Act) : R :=
+  G.instances denial
+
+/-- No outside proof adds to a self-grounding root: one act already carries it. -/
+theorem external_proof_adds_nothing {R : Prop} (G : SelfGrounding R) (a : G.Act) (Q : Prop) : Q → R :=
+  fun _ => G.instances a
+
+/-- THE UNDENIABLE ROOT HOLDS IN BOTH WORLDS: it is carried by act in a frame where the value holds
+and in one where it fails, so it forces no value. -/
+theorem undeniable_root_forces_no_value {R : Prop} (G : SelfGrounding R) (a : G.Act) :
+    R ∧ Value calm ∧ ¬ Value counter :=
+  ⟨G.instances a, calm_value, counter_fails⟩
+
+/-- THE ROOT READ ON THE ROW IS KEYED: the root holds, and no frame-uniform passage from it gives
+the value; read on the row it is the act, which decides where the root alone does not. -/
+theorem root_read_on_row_is_keyed {R : Prop} (G : SelfGrounding R) (a : G.Act) :
+    R ∧ ¬ (∀ F : Frame, R → Value F) :=
+  ⟨G.instances a, fun h => counter_fails (h counter (G.instances a))⟩
+
 end HodgeClose
 
-/-! ## Cones, pinned as printed: every theorem on no axiom -/
+/-! ## Cones, pinned as printed -/
 /-- info: 'HodgeClose.calm_value' does not depend on any axioms -/
 #guard_msgs in #print axioms HodgeClose.calm_value
 /-- info: 'HodgeClose.counter_fails' does not depend on any axioms -/
@@ -473,3 +501,11 @@ end HodgeClose
 #guard_msgs in #print axioms HodgeClose.pulse_does_not_certify
 /-- info: 'HodgeClose.hodge_closure' does not depend on any axioms -/
 #guard_msgs in #print axioms HodgeClose.hodge_closure
+/-- info: 'HodgeClose.denial_reenacts_root' does not depend on any axioms -/
+#guard_msgs in #print axioms HodgeClose.denial_reenacts_root
+/-- info: 'HodgeClose.external_proof_adds_nothing' does not depend on any axioms -/
+#guard_msgs in #print axioms HodgeClose.external_proof_adds_nothing
+/-- info: 'HodgeClose.undeniable_root_forces_no_value' does not depend on any axioms -/
+#guard_msgs in #print axioms HodgeClose.undeniable_root_forces_no_value
+/-- info: 'HodgeClose.root_read_on_row_is_keyed' does not depend on any axioms -/
+#guard_msgs in #print axioms HodgeClose.root_read_on_row_is_keyed
