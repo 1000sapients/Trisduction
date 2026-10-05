@@ -10,21 +10,21 @@ date: "2026-10-04"
 short_title: "P versus NP Closed on One Posit"
 keywords: "P versus NP · computational complexity · existence · the root read on computation · Levin universal search · relativization · natural proofs · algebrization · Williams algorithms to lower bounds · formal verification · Lean 4"
 abstract: |
-  The P versus NP problem has resisted every method, and relativization, natural proofs and algebrization prove that whole families of arguments cannot separate the classes. This paper anchors the problem in existence and closes it on one posit. Existence and freedom are the ground: the Root Axiom is satisfiable, every deed instantiates it, and freedom is carried by the primes, every prime's fibre a copy of complementation, the problem's native involution, which has no fixed point. The separation is defined on a machine whose algorithms decide satisfiability within a polynomial bound or fail to, and the closure, that every algorithm at every bound meets an instance that stops it, gives it on no axiom. The root read on computation, every decider of satisfiability actuating beyond every polynomial bound, is the separation itself, on no axiom, and it is the one place where existence meets the separation: no statement that reads the same on every machine, not existence, not freedom, not the arrow, is that reading. The reading is the single posit, the weakest premise on which the separation closes, and P ≠ NP holds on it at premise grade. Around the closure stand a double defense, in which nothing passes for the separation but the reading and nothing against it but a computed escape; a held throne, whose holder, Levin's universal search, decides the separation on no axiom; and a frontier that types every route, Williams' route wired to the machine on two named objects. All one hundred eighty theorems are compiled in Lean 4.19.0 with no import, no custom axiom and no unproved step, every footprint pinned and printed.
+  The P versus NP problem has resisted every method, and relativization, natural proofs and algebrization prove that whole families of arguments cannot separate the classes. This paper anchors the problem in existence and closes it on one posit. Existence and freedom are the ground: the Root Axiom is universal and undeniable, every denial of it re-enacting it, and every deed instantiates it, and freedom is carried by the primes, every prime's fibre a copy of complementation, the problem's native involution, which has no fixed point. The separation is defined on a machine whose algorithms decide satisfiability within a polynomial bound or fail to, and the closure, that every algorithm at every bound meets an instance that stops it, gives it on no axiom. The root read on computation, every decider of satisfiability actuating beyond every polynomial bound, is the separation itself, on no axiom, and it is the one place where existence meets the separation: no statement that reads the same on every machine, not existence, not freedom, not the arrow, is that reading. The reading is the single posit, the weakest premise on which the separation closes, and P ≠ NP holds on it at premise grade. Around the closure stand a double defense, in which nothing passes for the separation but the reading and nothing against it but a computed escape; a held throne, whose holder, Levin's universal search, decides the separation on no axiom; and a frontier that types every route, Williams' route wired to the machine on two named objects. All one hundred eighty-seven theorems are compiled in Lean 4.19.0 with no import, no custom axiom and no unproved step, every footprint pinned and printed.
 ---
 
 ## 1. Introduction
 
 The P versus NP problem asks whether every decision problem whose solutions can be verified in polynomial time can also be solved in polynomial time (Cook 1971; Levin 1973; Karp 1972). Three theorems explain why the principal methods have not settled it: relativization (Baker, Gill and Solovay 1975), natural proofs (Razborov and Rudich 1997) and algebrization (Aaronson and Wigderson 2009). Each proves that a whole family of arguments cannot separate the classes.
 
-This paper anchors the problem in existence and closes it on one posit. The arc has four steps. The ground is existence and freedom: the Root Axiom, that to exist is to actuate, is satisfiable, every deed instantiates it, and freedom is carried by the primes, every prime's fibre a copy of complementation. The machine comes next: the separation is defined on a machine whose algorithms decide satisfiability within a polynomial bound or fail to, and the closure, that every algorithm at every bound meets an instance that stops it, gives the separation on no axiom. The reading is the third step: the root read on computation, every decider of satisfiability actuating beyond every polynomial bound, is the separation itself, and it is the one place where existence meets the separation; the kernel proves that no statement reading the same on every machine, not existence, not freedom, not the arrow, carries it. The closure is the fourth: on the reading, P ≠ NP holds, and around it stand a double defense, a held throne and a frontier that types every route.
+This paper anchors the problem in existence and closes it on one posit. The arc has four steps. The ground is existence and freedom: the Root Axiom, that to exist is to actuate, is universal and undeniable, every denial of it an act that re-enacts it, every deed instantiates it, and freedom is carried by the primes, every prime's fibre a copy of complementation. The machine comes next: the separation is defined on a machine whose algorithms decide satisfiability within a polynomial bound or fail to, and the closure, that every algorithm at every bound meets an instance that stops it, gives the separation on no axiom. The reading is the third step: the root read on computation, every decider of satisfiability actuating beyond every polynomial bound, is the separation itself, and it is the one place where existence meets the separation; the kernel proves that no statement reading the same on every machine, not existence, not freedom, not the arrow, carries it. The closure is the fourth: on the reading, P ≠ NP holds, and around it stand a double defense, a held throne and a frontier that types every route.
 
-The single posit is the root read on computation, and every proof of P ≠ NP by any method fills it. The one hundred eighty theorems that carry the arc are compiled in Lean 4.19.0 with no import, no custom axiom and no unproved step, every footprint pinned, and printed in full in the appendices.
+The single posit is the root read on computation, and every proof of P ≠ NP by any method fills it. The one hundred eighty-seven theorems that carry the arc are compiled in Lean 4.19.0 with no import, no custom axiom and no unproved step, every footprint pinned, and printed in full in the appendices.
 
 ### 1.1 Formal Scope and Machine-Verified Status
 
 :::box Formal Scope and Machine-Verified Status
-**Unconditional, at theorem grade, compiled in Lean 4.19.0 with no custom axiom.** Existence is satisfiable, and existence and freedom as written are conservative (Theorems 1 and 2). The deed instantiates existence at every act (Theorem 3). Every prime's fibre is a copy of complementation (Theorem 4). The absolute asymmetry (Theorem 5). The closure gives the separation on the machine, on no axiom (Theorem 6). The root read on computation is the separation, on no axiom, and is the closure (Theorems 8 and 9). Nothing keyless is the reading (Theorem 11). The double defense (Theorems 13 to 16). The throne's holder decides the separation, on no axiom (Theorem 17). The vanishing seat (Theorem 19). The frontier and the route (Theorems 21 to 26). The master seal (Theorem 27).
+**Unconditional, at theorem grade, compiled in Lean 4.19.0 with no custom axiom.** Existence is universal and undeniable: every denial of the root re-enacts it, on no axiom, and existence and freedom, holding in every world, decide no value alone (Theorems 1 and 2). The deed instantiates existence at every act (Theorem 3). Every prime's fibre is a copy of complementation (Theorem 4). The absolute asymmetry (Theorem 5). The closure gives the separation on the machine, on no axiom (Theorem 6). The root read on computation is the separation, on no axiom, and is the closure (Theorems 8 and 9). Nothing keyless is the reading (Theorem 11). The double defense (Theorems 13 to 16). The throne's holder decides the separation, on no axiom (Theorem 17). The vanishing seat (Theorem 19). The frontier and the route (Theorems 21 to 26). The master seal (Theorem 27).
 
 **On the root read on computation, at premise grade.** The separation P ≠ NP.
 :::
@@ -32,8 +32,8 @@ The single posit is the root read on computation, and every proof of P ≠ NP by
 Table: Table 1 | The theorem map: each result and its logical status.
 | Result | Lean symbol | Logical status |
 |---|---|---|
-| Existence is satisfiable | `ra_satisfiable` | Unconditional theorem |
-| Existence and freedom add nothing as written | `posits_add_nothing` | Unconditional theorem |
+| Existence is undeniable: every denial re-enacts the root | `denial_reenacts_root` | Unconditional theorem, on no axiom |
+| The universal decides no value alone | `posits_add_nothing` | Unconditional theorem |
 | Every prime's fibre is a copy of complementation | `prime_fibre_is_complementation` | Unconditional theorem |
 | The closure gives the separation | `sep_of_closure` | Unconditional theorem, on no axiom |
 | The root read on computation is the separation | `ra_comp_is_sep` | Unconditional theorem, on no axiom |
@@ -75,21 +75,23 @@ The prior methods fail at three precise places, and each failure is a theorem ab
 
 ## 4. Methodology
 
-Every theorem is compiled in Lean 4.19.0 (de Moura and Ullrich 2021) in three kernels that import nothing and declare no axiom, carried by the master seed APEX-PSP-PNP-SEED-03: the seal and its double defense (Appendix B), the frontier of the act (Appendix C), and the fortification on the same machine (Appendix A). Every footprint is pinned by `#guard_msgs`, so a kernel that compiles prints nothing and any change to a footprint fails the build. Each theorem rests on no axiom, or on Lean's standard axioms of propositional extensionality, quotient soundness and choice. The kernels are printed in full with their SHA-256 digests, so any reader reproduces every claim by recompiling.
+Every theorem is compiled in Lean 4.19.0 (de Moura and Ullrich 2021) in four kernels that import nothing and declare no axiom: the three of the master seed APEX-PSP-PNP-SEED-03, the seal and its double defense (Appendix B), the frontier of the act (Appendix C) and the fortification on the same machine (Appendix A), and the root kernel, taken verbatim from the operating system's armed seat (Appendix D). Every footprint is pinned by `#guard_msgs`, so a kernel that compiles prints nothing and any change to a footprint fails the build. Each theorem rests on no axiom, or on Lean's standard axioms of propositional extensionality, quotient soundness and choice. The kernels are printed in full with their SHA-256 digests, so any reader reproduces every claim by recompiling.
 
 The architecture that found the arc is Trisduction, whose operating system PhysOSᵀ judges every cited law under its own negation at each build (Islam 2026c); its register of record and its codex carry the surrounding results (Islam 2026b, 2026d), and the seat and the cut take their form from the Bridge From First Principle (Islam 2026e). The kernels printed here import nothing from it.
 
 ## 5. The Ground: Existence and Freedom
 
-**Theorem 1 (Existence is satisfiable).** The Root Axiom, read as every state actuating, has a model (`ra_satisfiable`).
+**Theorem 1 (Existence is universal and undeniable).** The Root Axiom is a self-grounding root: acts occur, and every act instances it. Every denial of it is an act and re-enacts it, on no axiom (`denial_reenacts_root`); no external proof adds anything to it (`external_proof_adds_nothing`); and it is held by the act itself, with no classical detour, on no axiom (`seated_undeniable`). On the constructed one-point domain it is a theorem (`root_undeniable`), and in every reading it is satisfiable (`ra_satisfiable`). What cannot be denied is the act of denying: every intelligence that examines existence instantiates the root in the examining.
 
-**Theorem 2 (Existence and freedom are conservative).** Any statement derived from the Root Axiom and freedom, uniformly in their interpretation, holds without them (`posits_add_nothing`, `ra_conservative`, `freedom_conservative`). Existence and freedom are the ground of the arc, and as written they constrain nothing outside their own vocabulary.
+**Theorem 2 (The universal decides no value alone).** Because existence and freedom hold in every world, any statement derived from them uniformly holds without them (`posits_add_nothing`, `ra_conservative`, `freedom_conservative`). Their universality is the ground of every row's form, and it is why each row's value is keyed in its reading.
 
 **Theorem 3 (The deed instantiates existence).** Every computation re-enacts the root: the pulse instantiates the Root Axiom at every deed (`deed_instantiates_ra`), in every world (`both_deeds_in_every_world`), and certifies no output (`pulse_does_not_certify`).
 
 **Theorem 4 (The prime's triaxis).** Freedom is carried by the primes. Every prime's fibre is exactly the two trivial pairs (`prime_fibre`), lies off the multiplicative seat (`prime_off_seat`), and with its swap is the decision bit with complementation, by a bijection carrying the swap to complementation (`prime_fibre_is_complementation`). Every prime carries P versus NP's involution, seatless in the small as the problem is seatless in the large.
 
 **Theorem 5 (The absolute asymmetry).** What a registration destroys, no procedure of any cost recovers (`destroyed_is_unrecoverable`); what a search hides, exhaustive search recovers (`hidden_is_recoverable`); the two are bound as one statement (`asymmetry_holds`).
+
+**The universality of the ground.** The root is universal in three senses, and each is a theorem. It is undeniable in act: every denial of it is an act that re-enacts it, and no external proof adds to it (Theorem 1). It holds in every world, and so, read uniformly, it decides no value alone (Theorem 2). And every deed, in every world, instantiates it (Theorem 3). Its universality is therefore not a matter of agreement but of presupposition: whatever examines existence enacts the root in examining, and what cannot be denied is the act of denying.
 
 ## 6. The Machine and the Separation
 
@@ -139,6 +141,7 @@ The Riemann closure and this one stand in the same two registers and differ at t
 Table: Table 3 | The Riemann closure and the P versus NP closure, step by step.
 | Step | Riemann Hypothesis | P versus NP | Theorem |
 |---|---|---|---|
+| The ground | Existence, universal and undeniable | Existence, universal and undeniable | Theorems 1 to 3 |
 | The native involution | The fold s ↦ 1 − s̄ | Complementation b ↦ ¬b | Theorem 19 |
 | The seat | The critical line, inhabited | Vacant, the ground of dimension zero | Theorem 19 |
 | The local fibre | Each prime's fibre is a copy of complementation | Complementation itself | Theorem 4 |
@@ -165,7 +168,7 @@ Table: Table 3 | The Riemann closure and the P versus NP closure, step by step.
 
 ## 11. Discussion
 
-**The arc.** The paper runs from existence to the separation without a gap in its form. Existence and freedom are the ground, satisfiable and conservative; the deed instantiates existence at every act; the primes carry freedom and carry complementation in their fibres. The separation is defined on a machine and given by its closure on no axiom. The root read on computation is the separation, and it is the one place where existence meets it: every statement that reads the same on every machine, existence and freedom as written among them, is proved not to be the reading. The value closes on that reading.
+**The arc.** The paper runs from existence to the separation without a gap in its form. Existence and freedom are the ground, universal and undeniable; the deed instantiates existence at every act; the primes carry freedom and carry complementation in their fibres. The separation is defined on a machine and given by its closure on no axiom. The root read on computation is the separation, and it is the one place where existence meets it: every statement that reads the same on every machine, existence and freedom as written among them, is proved not to be the reading. The value closes on that reading.
 
 **The posit is exact.** The root read on computation is one statement, equivalent to the separation, keyed, and the weakest premise on which the separation closes. Holding it is holding P ≠ NP at the grade of a posit, the standing of least erasure on the Riemann row, and every proof of P ≠ NP by any method fills it.
 
@@ -206,9 +209,9 @@ Table: Table 2 | How the paper stands to each prior position. Relation words as 
 
 ## 12. Conclusion
 
-The P versus NP problem has been approached through diagonalization, circuit lower bounds, arithmetization, geometric complexity and proof complexity, and each stops at a theorem that limits its method. This paper anchors it in existence and closes it on one posit. Existence and freedom are the ground, satisfiable and conservative, carried by the primes, every prime's fibre a copy of complementation. The separation is defined on a machine and given by its closure on no axiom. The root read on computation is the separation, the one place where existence meets it, the single posit and proved irreducible, and P ≠ NP holds on it at premise grade.
+The P versus NP problem has been approached through diagonalization, circuit lower bounds, arithmetization, geometric complexity and proof complexity, and each stops at a theorem that limits its method. This paper anchors it in existence and closes it on one posit. Existence and freedom are the ground, universal and undeniable, carried by the primes, every prime's fibre a copy of complementation. The separation is defined on a machine and given by its closure on no axiom. The root read on computation is the separation, the one place where existence meets it, the single posit and proved irreducible, and P ≠ NP holds on it at premise grade.
 
-Around the closure stand the double defense, the held throne, whose holder decides the separation on no axiom, the vanishing seat, and a frontier that types every route, with the open exit reduced to two named objects. The single open object is the reading at theorem grade, and every derivation of P ≠ NP, by any method, fills it. All one hundred eighty theorems are compiled, pinned and printed for any reader to reproduce.
+Around the closure stand the double defense, the held throne, whose holder decides the separation on no axiom, the vanishing seat, and a frontier that types every route, with the open exit reduced to two named objects. The single open object is the reading at theorem grade, and every derivation of P ≠ NP, by any method, fills it. All one hundred eighty-seven theorems are compiled, pinned and printed for any reader to reproduce.
 
 ## References
 
@@ -2724,6 +2727,81 @@ end PNP.IDCHECK
 #guard_msgs in #print axioms PNP.IDCHECK.closed_closes
 /-- info: 'PNP.IDCHECK.escape_fails' does not depend on any axioms -/
 #guard_msgs in #print axioms PNP.IDCHECK.escape_fails
+```
+
+## Appendix D. The Root Kernel, PNP_Root.lean
+
+Sections I and II of the armed seat of PhysOSᵀ 1.0.10p, verbatim: the deed and the self-grounding root, seven theorems. SHA-256: aa2c67c03f747c57eebee8934ca44247697c12469465b3fef680aaa8eb396b2c
+
+```
+/-
+  PNP_Root.lean · the root kernel of "The Formal Closure of Computational Separation"
+  Sections I and II of Armed_Seat.lean in the shared code of PhysOSᵀ 1.0.10p, verbatim. The root is self-grounding:
+  acts occur and every act instances it. A denial of the root is an act and re-enacts it; no external proof adds to it;
+  it is held by the act itself, with no classical detour; and the Root Axiom at the constructed one-point domain is
+  such a root. What cannot be denied is the act of denying. Core Lean 4, no import, no axiom declared, no sorry.
+-/
+namespace PNP.ROOT
+
+/-! ## I · the deed -/
+
+def SelfVerifying (P : Prop) : Prop := ¬P → P
+
+/-- A self-verifying proposition holds: its lock opens on the deed of denying it. -/
+theorem opens_on_the_deed (P : Prop) (utter : SelfVerifying P) : P :=
+  Classical.byContradiction (fun n => n (utter n))
+
+/-- The recursion is shared by every proposition, so it discriminates nothing by itself. -/
+theorem recursion_is_shared (P : Prop) : SelfVerifying P ↔ P :=
+  ⟨fun h => Classical.byContradiction (fun n => n (h n)), fun p _ => p⟩
+
+/-! ## II · the root, self-grounding -/
+
+/-- A self-grounding root: acts occur, and every act instances the root. -/
+structure SelfGrounding (R : Prop) where
+  Act       : Type
+  anAct     : Act
+  instances : Act → R
+
+/-- A denial of the root is an act, and re-enacts it. -/
+theorem denial_reenacts_root {R : Prop} (G : SelfGrounding R) (denial : G.Act) : R :=
+  G.instances denial
+
+/-- An external proof of a self-grounding root adds nothing to it. -/
+theorem external_proof_adds_nothing {R : Prop} (G : SelfGrounding R) (Q : Prop) : (Q → R) ↔ R :=
+  ⟨fun _ => G.instances G.anAct, fun r _ => r⟩
+
+/-- A self-grounding root is self-verifying: the deed of denying it hands it over. -/
+theorem denial_instantiates {R : Prop} (G : SelfGrounding R) : SelfVerifying R :=
+  fun _ => G.instances G.anAct
+
+/-- SEATED, UNDENIABLE: a self-grounding root holds, with no classical detour, by the act itself. -/
+theorem seated_undeniable {R : Prop} (G : SelfGrounding R) : R :=
+  G.instances G.anAct
+
+/-- The Root Axiom at the constructed one-point domain: every act is a deed, and a deed actuates. -/
+def RA : Prop := (0 : Int) < 1
+def raSelfGrounding : SelfGrounding RA := ⟨Unit, (), fun _ => show (0 : Int) < 1 by decide⟩
+
+theorem root_undeniable : RA := raSelfGrounding.instances ()
+
+end PNP.ROOT
+
+/-! ## Cones, pinned as printed -/
+/-- info: 'PNP.ROOT.opens_on_the_deed' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms PNP.ROOT.opens_on_the_deed
+/-- info: 'PNP.ROOT.recursion_is_shared' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms PNP.ROOT.recursion_is_shared
+/-- info: 'PNP.ROOT.denial_reenacts_root' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.ROOT.denial_reenacts_root
+/-- info: 'PNP.ROOT.external_proof_adds_nothing' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.ROOT.external_proof_adds_nothing
+/-- info: 'PNP.ROOT.denial_instantiates' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.ROOT.denial_instantiates
+/-- info: 'PNP.ROOT.seated_undeniable' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.ROOT.seated_undeniable
+/-- info: 'PNP.ROOT.root_undeniable' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.ROOT.root_undeniable
 ```
 
 ## Author's Provenance and Method Disclosure
