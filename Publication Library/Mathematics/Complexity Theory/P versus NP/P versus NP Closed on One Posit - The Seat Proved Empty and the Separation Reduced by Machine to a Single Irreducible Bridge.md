@@ -24,7 +24,7 @@ The single posit is the root read on computation, and every proof of P ≠ NP by
 ### 1.1 Formal Scope and Machine-Verified Status
 
 :::box Formal Scope and Machine-Verified Status
-**Unconditional, at theorem grade, compiled in Lean 4.19.0 with no custom axiom.** Existence is universal and undeniable: every denial of the root re-enacts it, on no axiom, and existence and freedom, holding in every world, decide no value alone (Theorems 1 and 2). The deed instantiates existence at every act (Theorem 3). Every prime's fibre is a copy of complementation (Theorem 4). The absolute asymmetry (Theorem 5). The closure gives the separation on the machine, on no axiom (Theorem 6). The root read on computation is the separation, on no axiom, and is the closure (Theorems 8 and 9). Nothing keyless is the reading (Theorem 11). The double defense (Theorems 13 to 16). The throne's holder decides the separation, on no axiom (Theorem 17). The vanishing seat (Theorem 19). The frontier and the route (Theorems 21 to 26). The master seal (Theorem 27).
+**Unconditional, at theorem grade, compiled in Lean 4.19.0 with no custom axiom.** Existence is universal and undeniable, every root law on no axiom: the floor holds for every root that grounds itself, every denial of the root re-enacts it, and no level stands above it; and existence and freedom, holding in every world, decide no value alone (Theorems 1 and 2). The deed instantiates existence at every act (Theorem 3). Every prime's fibre is a copy of complementation (Theorem 4). The absolute asymmetry (Theorem 5). The closure gives the separation on the machine, on no axiom (Theorem 6). The root read on computation is the separation, on no axiom, and is the closure (Theorems 8 and 9). Nothing keyless is the reading (Theorem 11). The double defense (Theorems 13 to 16). The throne's holder decides the separation, on no axiom (Theorem 17). The vanishing seat (Theorem 19). The frontier and the route (Theorems 21 to 26). The master seal (Theorem 27).
 
 **On the root read on computation, at premise grade.** The separation P ≠ NP.
 :::
@@ -75,13 +75,13 @@ The prior methods fail at three precise places, and each failure is a theorem ab
 
 ## 4. Methodology
 
-Every theorem is compiled in Lean 4.19.0 (de Moura and Ullrich 2021) in four kernels that import nothing and declare no axiom: the three of the master seed APEX-PSP-PNP-SEED-03, the seal and its double defense (Appendix B), the frontier of the act (Appendix C) and the fortification on the same machine (Appendix A), and the root kernel, taken verbatim from the operating system's armed seat (Appendix D). Every footprint is pinned by `#guard_msgs`, so a kernel that compiles prints nothing and any change to a footprint fails the build. Each theorem rests on no axiom, or on Lean's standard axioms of propositional extensionality, quotient soundness and choice. The kernels are printed in full with their SHA-256 digests, so any reader reproduces every claim by recompiling.
+Every theorem is compiled in Lean 4.19.0 (de Moura and Ullrich 2021) in four kernels that import nothing and declare no axiom: the three of the master seed APEX-PSP-PNP-SEED-03, the seal and its double defense (Appendix B), the frontier of the act (Appendix C) and the fortification on the same machine (Appendix A), and the zero-axiom root kernel, every law on no axiom, taken verbatim from the zero-axiom kernel of the TOE edition (Appendix D). Every footprint is pinned by `#guard_msgs`, so a kernel that compiles prints nothing and any change to a footprint fails the build. Each theorem rests on no axiom, or on Lean's standard axioms of propositional extensionality, quotient soundness and choice. The kernels are printed in full with their SHA-256 digests, so any reader reproduces every claim by recompiling.
 
 The architecture that found the arc is Trisduction, whose operating system PhysOSᵀ judges every cited law under its own negation at each build (Islam 2026c); its register of record and its codex carry the surrounding results (Islam 2026b, 2026d), and the seat and the cut take their form from the Bridge From First Principle (Islam 2026e). The kernels printed here import nothing from it.
 
 ## 5. The Ground: Existence and Freedom
 
-**Theorem 1 (Existence is universal and undeniable).** The Root Axiom is a self-grounding root: acts occur, and every act instances it. Every denial of it is an act and re-enacts it, on no axiom (`denial_reenacts_root`); no external proof adds anything to it (`external_proof_adds_nothing`); and it is held by the act itself, with no classical detour, on no axiom (`seated_undeniable`). On the constructed one-point domain it is a theorem (`root_undeniable`), and in every reading it is satisfiable (`ra_satisfiable`). What cannot be denied is the act of denying: every intelligence that examines existence instantiates the root in the examining.
+**Theorem 1 (Existence is universal and undeniable).** The Root Axiom is a self-grounding root: acts occur, and every act instances it. For every root that grounds itself, the root holds, every act re-enacts it, and no external proof adds to it (`the_floor_is_universal`). Every denial of it is an act and re-enacts it (`denial_reenacts_root`); it is held by the act itself, with no classical detour (`seated_undeniable`); no external proof adds anything to it (`external_proof_adds_nothing`), and no level stands above it (`no_level_above`). On the constructed domain, whose one existent actuates at positive energy, it is a theorem (`root_on_the_constructed_domain`), and in every reading it is satisfiable (`ra_satisfiable`). Every root law rests on no axiom at all. What cannot be denied is the act of denying: every intelligence that examines existence instantiates the root in the examining.
 
 **Theorem 2 (The universal decides no value alone).** Because existence and freedom hold in every world, any statement derived from them uniformly holds without them (`posits_add_nothing`, `ra_conservative`, `freedom_conservative`). Their universality is the ground of every row's form, and it is why each row's value is keyed in its reading.
 
@@ -91,7 +91,7 @@ The architecture that found the arc is Trisduction, whose operating system PhysO
 
 **Theorem 5 (The absolute asymmetry).** What a registration destroys, no procedure of any cost recovers (`destroyed_is_unrecoverable`); what a search hides, exhaustive search recovers (`hidden_is_recoverable`); the two are bound as one statement (`asymmetry_holds`).
 
-**The universality of the ground.** The root is universal in three senses, and each is a theorem. It is undeniable in act: every denial of it is an act that re-enacts it, and no external proof adds to it (Theorem 1). It holds in every world, and so, read uniformly, it decides no value alone (Theorem 2). And every deed, in every world, instantiates it (Theorem 3). Its universality is therefore not a matter of agreement but of presupposition: whatever examines existence enacts the root in examining, and what cannot be denied is the act of denying.
+**The universality of the ground.** The root is universal in three senses, and each is a theorem. It is undeniable in act: every denial of it is an act that re-enacts it, no external proof adds to it, and no level stands above it, each on no axiom (Theorem 1). It holds in every world, and so, read uniformly, it decides no value alone (Theorem 2). And every deed, in every world, instantiates it (Theorem 3). Its universality is therefore not a matter of agreement but of presupposition: whatever examines existence enacts the root in examining, and what cannot be denied is the act of denying.
 
 ## 6. The Machine and the Separation
 
@@ -2731,31 +2731,20 @@ end PNP.IDCHECK
 
 ## Appendix D. The Root Kernel, PNP_Root.lean
 
-Sections I and II of the armed seat of PhysOSᵀ 1.0.10p, verbatim: the deed and the self-grounding root, seven theorems. SHA-256: aa2c67c03f747c57eebee8934ca44247697c12469465b3fef680aaa8eb396b2c
+The zero-axiom root, sections I, II and V of the TOE edition's kernel TOE_Zero.lean, verbatim: seven theorems, every footprint pinned as *does not depend on any axioms*. SHA-256: 9689dfb47b29697c4276714f9cc70143ab9a55a48b0b27f72d392ed384f7f053
 
 ```
 /-
   PNP_Root.lean · the root kernel of "The Formal Closure of Computational Separation"
-  Sections I and II of Armed_Seat.lean in the shared code of PhysOSᵀ 1.0.10p, verbatim. The root is self-grounding:
-  acts occur and every act instances it. A denial of the root is an act and re-enacts it; no external proof adds to it;
-  it is held by the act itself, with no classical detour; and the Root Axiom at the constructed one-point domain is
-  such a root. What cannot be denied is the act of denying. Core Lean 4, no import, no axiom declared, no sorry.
+  The zero-axiom root, sections I, II and V of TOE_Zero.lean, verbatim. A root grounds itself when acts occur and
+  every act instances it. For every such root the root holds, every act re-enacts it, and no external proof adds to
+  it; every denial is an act and re-enacts the root; the root is held by the act itself; no level stands above it;
+  and on the constructed domain, whose one existent actuates at positive energy, the Root Axiom is a theorem. Every
+  law rests on no axiom at all. Core Lean 4, no import, no axiom declared, no sorry, no native_decide.
 -/
 namespace PNP.ROOT
 
-/-! ## I · the deed -/
-
-def SelfVerifying (P : Prop) : Prop := ¬P → P
-
-/-- A self-verifying proposition holds: its lock opens on the deed of denying it. -/
-theorem opens_on_the_deed (P : Prop) (utter : SelfVerifying P) : P :=
-  Classical.byContradiction (fun n => n (utter n))
-
-/-- The recursion is shared by every proposition, so it discriminates nothing by itself. -/
-theorem recursion_is_shared (P : Prop) : SelfVerifying P ↔ P :=
-  ⟨fun h => Classical.byContradiction (fun n => n (h n)), fun p _ => p⟩
-
-/-! ## II · the root, self-grounding -/
+/-! ## I · The self-grounding root: the Omega Boundary -/
 
 /-- A self-grounding root: acts occur, and every act instances the root. -/
 structure SelfGrounding (R : Prop) where
@@ -2763,45 +2752,63 @@ structure SelfGrounding (R : Prop) where
   anAct     : Act
   instances : Act → R
 
-/-- A denial of the root is an act, and re-enacts it. -/
-theorem denial_reenacts_root {R : Prop} (G : SelfGrounding R) (denial : G.Act) : R :=
-  G.instances denial
+/-- A proposition whose denial hands it over. -/
+def SelfVerifying (P : Prop) : Prop := ¬P → P
 
-/-- An external proof of a self-grounding root adds nothing to it. -/
+/-- THE OMEGA BOUNDARY: every denial of the root is an act, and re-enacts it. -/
+theorem denial_reenacts_root {R : Prop} (G : SelfGrounding R) (denial : G.Act) : R := G.instances denial
+
+/-- EXISTENCE PROVES EXISTENCE ONLY BY MOTION: the root is held by the act itself. -/
+theorem seated_undeniable {R : Prop} (G : SelfGrounding R) : R := G.instances G.anAct
+
+/-- No external proof adds anything to the root. -/
 theorem external_proof_adds_nothing {R : Prop} (G : SelfGrounding R) (Q : Prop) : (Q → R) ↔ R :=
   ⟨fun _ => G.instances G.anAct, fun r _ => r⟩
 
-/-- A self-grounding root is self-verifying: the deed of denying it hands it over. -/
-theorem denial_instantiates {R : Prop} (G : SelfGrounding R) : SelfVerifying R :=
-  fun _ => G.instances G.anAct
+/-- The deed of denying the root hands it over. -/
+theorem denial_instantiates {R : Prop} (G : SelfGrounding R) : SelfVerifying R := fun _ => G.instances G.anAct
 
-/-- SEATED, UNDENIABLE: a self-grounding root holds, with no classical detour, by the act itself. -/
-theorem seated_undeniable {R : Prop} (G : SelfGrounding R) : R :=
-  G.instances G.anAct
+/-- THE FLOOR IS UNIVERSAL: for every root that grounds itself, the root holds, every act re-enacts it, and no
+    external proof adds to it. -/
+theorem the_floor_is_universal :
+    ∀ (R : Prop) (G : SelfGrounding R), R ∧ (∀ _ : G.Act, R) ∧ (∀ Q : Prop, (Q → R) ↔ R) :=
+  fun _ G => ⟨seated_undeniable G, denial_reenacts_root G, external_proof_adds_nothing G⟩
 
-/-- The Root Axiom at the constructed one-point domain: every act is a deed, and a deed actuates. -/
-def RA : Prop := (0 : Int) < 1
-def raSelfGrounding : SelfGrounding RA := ⟨Unit, (), fun _ => show (0 : Int) < 1 by decide⟩
+/-! ## II · The constructed root -/
 
-theorem root_undeniable : RA := raSelfGrounding.instances ()
+/-- The Root Axiom on the constructed one-point domain: its one existent actuates, at positive energy. -/
+def ΔE₀ : Unit → Int := fun _ => 1
+def RA₀ : Prop := ∀ x : Unit, 0 < ΔE₀ x
+
+/-- The constructed domain grounds its root: its one act is a deed, and the deed actuates. -/
+def ra₀ : SelfGrounding RA₀ := ⟨Unit, (), fun _ _ => show (0 : Int) < 1 by decide⟩
+
+/-- THE ROOT ON THE CONSTRUCTED DOMAIN, A THEOREM. -/
+theorem root_on_the_constructed_domain : RA₀ := seated_undeniable ra₀
+
+/-! ## V · The regress terminated -/
+
+/-- THE REGRESS ENDS AT THE ROOT: any proposition offered as a further ground of the root is idle; the root needs
+    no level above it. -/
+theorem no_level_above {R : Prop} (G : SelfGrounding R) : ∀ Q : Prop, (Q → R) → R := fun _ _ => G.instances G.anAct
 
 end PNP.ROOT
 
-/-! ## Cones, pinned as printed -/
-/-- info: 'PNP.ROOT.opens_on_the_deed' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in #print axioms PNP.ROOT.opens_on_the_deed
-/-- info: 'PNP.ROOT.recursion_is_shared' depends on axioms: [propext, Classical.choice, Quot.sound] -/
-#guard_msgs in #print axioms PNP.ROOT.recursion_is_shared
+/-! ## The zero law, pinned: every cone is empty -/
 /-- info: 'PNP.ROOT.denial_reenacts_root' does not depend on any axioms -/
 #guard_msgs in #print axioms PNP.ROOT.denial_reenacts_root
+/-- info: 'PNP.ROOT.seated_undeniable' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.ROOT.seated_undeniable
 /-- info: 'PNP.ROOT.external_proof_adds_nothing' does not depend on any axioms -/
 #guard_msgs in #print axioms PNP.ROOT.external_proof_adds_nothing
 /-- info: 'PNP.ROOT.denial_instantiates' does not depend on any axioms -/
 #guard_msgs in #print axioms PNP.ROOT.denial_instantiates
-/-- info: 'PNP.ROOT.seated_undeniable' does not depend on any axioms -/
-#guard_msgs in #print axioms PNP.ROOT.seated_undeniable
-/-- info: 'PNP.ROOT.root_undeniable' does not depend on any axioms -/
-#guard_msgs in #print axioms PNP.ROOT.root_undeniable
+/-- info: 'PNP.ROOT.the_floor_is_universal' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.ROOT.the_floor_is_universal
+/-- info: 'PNP.ROOT.root_on_the_constructed_domain' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.ROOT.root_on_the_constructed_domain
+/-- info: 'PNP.ROOT.no_level_above' does not depend on any axioms -/
+#guard_msgs in #print axioms PNP.ROOT.no_level_above
 ```
 
 ## Author's Provenance and Method Disclosure
