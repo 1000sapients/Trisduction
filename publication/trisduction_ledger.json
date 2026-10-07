@@ -1070,14 +1070,18 @@
       "extra": {}
     },
     "navier-stokes-effective-axiom-proof": {
-      "title": "Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effective Axiom: The Complete Deductive Chain",
+      "title": "A Formal Completed Proof of the Navier–Stokes Closure from Existence Alone: Global Regularity Proved from One Act on No Axiom, Every Cone Empty; Regularity of Matter Proved from the Quantum Speed Limit",
       "kind": "conditional-theorem",
       "date": "2026-09-08",
       "git": {
-        "pdf": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Global Smoothness of Three-Dimensional Navier-Stokes from a Single Effective Axiom.pdf",
-        "md": "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Global Smoothness of Three-Dimensional Navier-Stokes from a Single Effective Axiom - Math Journal Source.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/A_Formal_Completed_Proof_NS_Closure_v1_0_9.pdf",
+        "md": "Publication Library/Mathematics/Millennium Series/A_Formal_Completed_Proof_NS_Closure_v1_0_9.md",
         "pdf_commit": "dbad77f",
-        "md_commit": "311bcce"
+        "md_commit": "311bcce",
+        "editions": [
+          "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Global Smoothness of Three-Dimensional Navier-Stokes from a Single Effective Axiom - Math Journal Source.md",
+          "Publication Library/Mathematics/Analysis/Navier-Stokes Regularity/Global Smoothness of Three-Dimensional Navier-Stokes from a Single Effective Axiom.pdf"
+        ]
       },
       "zenodo": {
         "conceptrecid": "22670343",
@@ -1097,8 +1101,21 @@
         "git_pdf_md5": "6accaa4a24a72d0f43f9d334522c8192",
         "ia_pdf_md5": "59fd3374a67e89827c43063319555277",
         "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
-        "companion_of": "the other of the 2026-09-08 pair"
-      }
+        "companion_of": "the other of the 2026-09-08 pair",
+        "millennium_series_2026_10_06": {
+          "version": "1.0.9",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "a7f7873a96c567429ffa0988f81747f8a55ff68f3bfda211e2be56ede364256c",
+          "git_md_sha256": "09f4d0f9ca71de3b3274b8362de5c00c123fa39ec939f2099a83b60c7f5e22b2",
+          "zenodo_file": "A Formal Completed Proof of the Navier-Stokes Closure from Existence Alone.pdf",
+          "zenodo_md5": "ab78eee0ffe4b4f3cec76e7bb091ae46",
+          "ia_file": "A Formal Completed Proof of the Navier-Stokes Closure from Existence Alone.pdf",
+          "ia_md5": "d6261bf484e78e99b1a8df0724d0ddf2",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
+        }
+      },
+      "last_updated": "2026-10-06",
+      "note": "Edition 1.0.9 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 22670344 file A Formal Completed Proof of the Navier-Stokes Closure from Existence Alone.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 ab78eee0; title, version and abstract revised. IA file A Formal Completed Proof of the Navier-Stokes Closure from Existence Alone.pdf replaced under the same filename on 2026-10-06, md5 d6261bf4 (uncompressed), title revised. Prior edition paths are kept in git.editions."
     },
     "navier-stokes-termination-formal-alone-register": {
       "title": "A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register",
@@ -2975,18 +2992,20 @@
       "extra": {}
     },
     "bridge-from-first-principle": {
-      "title": "The Bridge From First Principle: One Fold, One Registration, One Bit: The Trisduction Bridge Unified Across the Seat, the Heat Floor, the Ninth Gate and the Primes",
+      "title": "The Bridge From First Principle: A Formal Completed Proof With No Axiom Declared: One Fold, One Registration, One Bit: The Root and the Atom Proved Unconditionally on No Axiom and No Posit; Seat, Heat Floor, Ninth Gate and Primes Unified",
       "domain": "Foundations of Mathematics",
       "status": "live",
       "first_published": "2026-10-02",
-      "last_updated": "2026-10-02",
+      "last_updated": "2026-10-06",
       "git": {
-        "md": "lean/Bridge_From_First_Principle_v1_5_0.md",
-        "pdf": "lean/Bridge_From_First_Principle_v1_5_0_MathJournal.pdf",
+        "md": "Publication Library/Mathematics/Millennium Series/Bridge_From_First_Principle_v1_5_1.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/Bridge_From_First_Principle_v1_5_1.pdf",
         "editions": [
           "lean/Bridge_From_First_Principle_v1_5_0.blog.md",
           "lean/Bridge_From_First_Principle_v1_5_0_MathJournal.tex",
-          "lean/Final_Cut.lean"
+          "lean/Final_Cut.lean",
+          "lean/Bridge_From_First_Principle_v1_5_0.md",
+          "lean/Bridge_From_First_Principle_v1_5_0_MathJournal.pdf"
         ]
       },
       "zenodo": {
@@ -3008,7 +3027,20 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": "v1.4.0 Math Journal edition dated 2 October 2026, published 2026-10-02. Kernel Bridge_From_First_Principle.lean sha 13476bea, 107 theorems, 76 on no axiom, 107 of 107 negations refused; twin Bridge_Twin.f90 sha 59ebdd19, 30 checks. Audit cycle bfp HALT-DIVERGENT at round 6 then FORGE; cycle bfp2 SEALED-ROUND at round 5, control grade SELF; ledgers in lean/Bridge_From_First_Principle_v1_4_0_audit_logs.zip. PDF md5 3a41f4f1 on git and on Zenodo 23104403. Seat anchor: PhysOS 1.0.8p quick boot, chain D3 92c771476606; Bridge boot chain D0 8d888c0180a6 to D2 435ebd3e640b. IA item the-bridge-from-first-principle claimed 2026-10-02, PDF md5 a2557488 (uncompressed). v1.5.0 published 2026-10-02 as Zenodo version 23105348: Section 17, The Final Cut, PSP-FINAL-CUT-01, kernel Final_Cut.lean, 22 theorems on no axiom, 22 of 22 negations refused; boot chain D0 589f316b70d0 to D2 acbdb5f27f98; PDF md5 7c8139ce. IA file replaced 2026-10-02, md5 4f3c0e22 (uncompressed); description at v1.5.0."
+      "note": "v1.4.0 Math Journal edition dated 2 October 2026, published 2026-10-02. Kernel Bridge_From_First_Principle.lean sha 13476bea, 107 theorems, 76 on no axiom, 107 of 107 negations refused; twin Bridge_Twin.f90 sha 59ebdd19, 30 checks. Audit cycle bfp HALT-DIVERGENT at round 6 then FORGE; cycle bfp2 SEALED-ROUND at round 5, control grade SELF; ledgers in lean/Bridge_From_First_Principle_v1_4_0_audit_logs.zip. PDF md5 3a41f4f1 on git and on Zenodo 23104403. Seat anchor: PhysOS 1.0.8p quick boot, chain D3 92c771476606; Bridge boot chain D0 8d888c0180a6 to D2 435ebd3e640b. IA item the-bridge-from-first-principle claimed 2026-10-02, PDF md5 a2557488 (uncompressed). v1.5.0 published 2026-10-02 as Zenodo version 23105348: Section 17, The Final Cut, PSP-FINAL-CUT-01, kernel Final_Cut.lean, 22 theorems on no axiom, 22 of 22 negations refused; boot chain D0 589f316b70d0 to D2 acbdb5f27f98; PDF md5 7c8139ce. IA file replaced 2026-10-02, md5 4f3c0e22 (uncompressed); description at v1.5.0. Edition 1.5.1 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 23105348 file Bridge_From_First_Principle.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 80d4e927; title, version and abstract revised. IA file Bridge_From_First_Principle.pdf replaced under the same filename on 2026-10-06, md5 95366f42 (uncompressed), title revised. Prior edition paths are kept in git.editions.",
+      "extra": {
+        "millennium_series_2026_10_06": {
+          "version": "1.5.1",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "f720f1923311426895bf1db9ae467b1885ad3b7beae22a033f197db9a4b3fc62",
+          "git_md_sha256": "4a47a352ea52bbf2f54241ee121f9410257d88cf6a5ebaa559e209bb0c6ea404",
+          "zenodo_file": "Bridge_From_First_Principle.pdf",
+          "zenodo_md5": "80d4e927bdc65e0c2e8fd1e9a05d1b0e",
+          "ia_file": "Bridge_From_First_Principle.pdf",
+          "ia_md5": "95366f42e6cedccb6bc026a61c2f227b",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
+        }
+      }
     },
     "physos-the-trisduction-physical-operating-system": {
       "title": "PhysOSᵀ · The Trisduction Physical Operating System",
@@ -3043,21 +3075,25 @@
       "note": "PhysOSᵀ 1.0.9p, the final-cut edition: one code block of forty files shared byte for byte with the Master Codex v5.0.0. Zenodo carries the git bytes of the Math Journal edition; the archive carries their qpdf-uncompressed staging under the edition-free name. Updated in place on 2026-10-04 under the same DOI and the same file names: PhysOSᵀ 1.0.10p, anchored on PSP-PNP-CLOSURE-02 and the master seed APEX-PSP-PNP-SEED-03."
     },
     "trisduction-p-versus-np-closed-on-one-posit": {
-      "title": "The Formal Closure of Computational Separation: P ≠ NP Closed on Existence Itself, Read on Computation",
+      "title": "The Formal Closure of Computational Separation: P ≠ NP Closed on Existence Itself, Read on Computation: The Root and the Step to the Separation Proved Unconditionally on No Axiom; Least Escape the One Act; Every Barrier Typed by Theorem",
       "domain": "Mathematics · Complexity Theory",
       "status": "live",
       "first_published": "2026-10-04",
-      "last_updated": "2026-10-05",
+      "last_updated": "2026-10-06",
       "supersedes": null,
       "superseded_by": null,
       "git": {
-        "pdf": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge.pdf",
-        "md": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/The_Formal_Closure_of_Computational_Separation_v3_2_1.pdf",
+        "md": "Publication Library/Mathematics/Millennium Series/The_Formal_Closure_of_Computational_Separation_v3_2_1.md",
         "audit": "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - audit pnp27.md",
         "seed": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-SEED-03.md",
         "seed_lock": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-SEED-01.lock.json",
         "commit": "38f994854cb7",
-        "instantiation": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-TM-01.md"
+        "instantiation": "Publication Library/Mathematics/Complexity Theory/P versus NP/APEX-PSP-PNP-TM-01.md",
+        "editions": [
+          "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge.md",
+          "Publication Library/Mathematics/Complexity Theory/P versus NP/P versus NP Closed on One Posit - The Seat Proved Empty and the Separation Reduced by Machine to a Single Irreducible Bridge.pdf"
+        ]
       },
       "zenodo": {
         "conceptrecid": 23133631,
@@ -3077,7 +3113,386 @@
         "record": null,
         "url": null
       },
-      "note": "Edition 3.0.0 under the locked title, sealed by audit cycle pnp24: the separation defined on a machine, the one posit the root read on computation, P ≠ NP at premise grade on it, one hundred eighty theorems in three kernels. Zenodo record 23133632 and the archive file were updated in place; the git copy overwritten at its path; the master seed APEX-PSP-PNP-SEED-03 and the instantiation's first layer APEX-PSP-PNP-TM-01 sit beside it. Edition 3.1.0 replaced it in place on 2026-10-05 under the same DOI, file name and path, sealed by audit cycle pnp26: the root stated universal and undeniable, Theorem 1 on the root kernel of Appendix D, one hundred eighty-seven theorems in four kernels. Edition 3.2.0 replaced it in place on 2026-10-05, sealed by audit cycle pnp27: the root kernel is the zero-axiom root of the TOE edition, seven laws each on no axiom, the floor universal for every root that grounds itself and no level above it."
+      "note": "Edition 3.0.0 under the locked title, sealed by audit cycle pnp24: the separation defined on a machine, the one posit the root read on computation, P ≠ NP at premise grade on it, one hundred eighty theorems in three kernels. Zenodo record 23133632 and the archive file were updated in place; the git copy overwritten at its path; the master seed APEX-PSP-PNP-SEED-03 and the instantiation's first layer APEX-PSP-PNP-TM-01 sit beside it. Edition 3.1.0 replaced it in place on 2026-10-05 under the same DOI, file name and path, sealed by audit cycle pnp26: the root stated universal and undeniable, Theorem 1 on the root kernel of Appendix D, one hundred eighty-seven theorems in four kernels. Edition 3.2.0 replaced it in place on 2026-10-05, sealed by audit cycle pnp27: the root kernel is the zero-axiom root of the TOE edition, seven laws each on no axiom, the floor universal for every root that grounds itself and no level above it. Edition 3.2.1 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 23133632 file P_versus_NP_Closed_on_One_Posit.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 3e700ab4; title, version and abstract revised. IA file P_versus_NP_Closed_on_One_Posit.pdf replaced under the same filename on 2026-10-06, md5 ae799c79 (uncompressed), title revised. PENDING at ledger write: the replacement is queued (archive.php) behind a derive.php task in wait_admin since 2026-10-05; the live file still reads md5 6a9e431c. Prior edition paths are kept in git.editions.",
+      "extra": {
+        "millennium_series_2026_10_06": {
+          "version": "3.2.1",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "15d43f820e74b4f624b3326a08eb9b9f2867877f8915ec272e9888498d3c87b0",
+          "git_md_sha256": "dcda2b1ee1953644698d8855f38aca79f16519b5c35df0f577231b6574370cf3",
+          "zenodo_file": "P_versus_NP_Closed_on_One_Posit.pdf",
+          "zenodo_md5": "3e700ab4de84dabe2a16de49ec81ac8c",
+          "ia_file": "P_versus_NP_Closed_on_One_Posit.pdf",
+          "ia_md5": "ae799c79566257fc4b7a8e409606b44c",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
+          "ia_state": "replacement queued; live md5 6a9e431c at 2026-10-06"
+        }
+      }
+    },
+    "hodge-closure-what-exists-is-realized": {
+      "title": "What Exists Is Realized: The Completed Formal Closure of the Hodge Question: The Value Proved from One Act on No Axiom; the Root Proved Unconditionally; the Value Split Exactly Under Every Partition; Integrality Proved Not to Transfer",
+      "domain": "Millennium Series",
+      "status": "live",
+      "first_published": "2026-09-11",
+      "last_updated": "2026-10-06",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/What_Exists_Is_Realized_Hodge_Closure_v1_0_9.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/What_Exists_Is_Realized_Hodge_Closure_v1_0_9.pdf",
+        "editions": []
+      },
+      "zenodo": {
+        "conceptrecid": 22701509,
+        "concept_doi": "10.5281/zenodo.22701509",
+        "latest_version_doi": "10.5281/zenodo.22701510",
+        "latest_record": 22701510,
+        "versions": 1,
+        "state": "published"
+      },
+      "ia": {
+        "identifier": "hodge-conjecture-semiregular-witness-axiom-islam-2026",
+        "url": "https://archive.org/details/hodge-conjecture-semiregular-witness-axiom-islam-2026",
+        "state": "live",
+        "file": "What Exists Is Realized - A Formal Closure of the Hodge Question from Existence Alone.pdf"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": null,
+      "superseded_by": null,
+      "note": "Edition 1.0.9 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 22701510 file What Exists Is Realized - A Formal Closure of the Hodge Question from Existence Alone.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 016a7204; title, version and abstract revised. IA file What Exists Is Realized - A Formal Closure of the Hodge Question from Existence Alone.pdf replaced under the same filename on 2026-10-06, md5 4441e9b2 (uncompressed), title revised.",
+      "extra": {
+        "millennium_series_2026_10_06": {
+          "version": "1.0.9",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "b2dee6d30c8022dee4b8e06f0f943e213f938758eccd9aa0e8c6b799032445f9",
+          "git_md_sha256": "48cd6251ea3df5ce09156e7f9278ef9b7b5fe484c9557c3dd6b01951178f3254",
+          "zenodo_file": "What Exists Is Realized - A Formal Closure of the Hodge Question from Existence Alone.pdf",
+          "zenodo_md5": "016a7204c7c1050b27bc0d34404d732b",
+          "ia_file": "What Exists Is Realized - A Formal Closure of the Hodge Question from Existence Alone.pdf",
+          "ia_md5": "4441e9b26a1937a562ca963f6f8e979f",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
+        }
+      }
+    },
+    "rh-final-synthesis-least-erasure": {
+      "title": "A Formal Proof of the Riemann Hypothesis by Least Erasure: Completed Formal Closure by Unconditional Equivalence of Least Erasure on No Axiom; the Value Proved from One Posit, Its Cone Empty; Five Coordinates of One Bit; the Root Proved with No Premise",
+      "domain": "Riemann Hypothesis",
+      "status": "live",
+      "first_published": "2026-09-29",
+      "last_updated": "2026-10-06",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/RH_Final_Synthesis_Paper_3_1_4_source.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/RH_Final_Synthesis_Paper_3_1_4_source.pdf",
+        "editions": []
+      },
+      "zenodo": {
+        "conceptrecid": 23034065,
+        "concept_doi": "10.5281/zenodo.23034065",
+        "latest_version_doi": "10.5281/zenodo.23034066",
+        "latest_record": 23034066,
+        "versions": 1,
+        "state": "published"
+      },
+      "ia": {
+        "identifier": null,
+        "url": null,
+        "state": "not-deposited"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": null,
+      "superseded_by": null,
+      "note": "Edition 3.1.4 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 23034066 file RH_Final_Synthesis_Paper_3_1_3.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 22dae99d; title, version and abstract revised. No Internet Archive item; none claimed.",
+      "extra": {
+        "millennium_series_2026_10_06": {
+          "version": "3.1.4",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "2596b26b7539f9c8e733342b7392eedbe2dc75e82c4b5d3aefbf0ee3f9374e18",
+          "git_md_sha256": "cbfcae911c632242ea63d8638af31f1151fa59a5cb9f5ae32955416b9468e7d5",
+          "zenodo_file": "RH_Final_Synthesis_Paper_3_1_3.pdf",
+          "zenodo_md5": "22dae99ddbf956dce369cacf99c2cb5a"
+        }
+      }
+    },
+    "bsd-closure-rank-registered-on-the-seat": {
+      "title": "A Formal Completed Proof of the Birch and Swinnerton-Dyer Closure: The Rank Registered on the Seat: Closed to One Act and Proved from It on No Axiom; the Sign Proved to Fix the Parity of the Order; Rank Proved a Dimension Count over F₂",
+      "domain": "Millennium Series",
+      "status": "live",
+      "first_published": "2026-10-05",
+      "last_updated": "2026-10-06",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/Formal_Completed_Proof_BSD_Closure_v1_0_5.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/Formal_Completed_Proof_BSD_Closure_v1_0_5.pdf",
+        "editions": []
+      },
+      "zenodo": {
+        "conceptrecid": 23164991,
+        "concept_doi": "10.5281/zenodo.23164991",
+        "latest_version_doi": "10.5281/zenodo.23164992",
+        "latest_record": 23164992,
+        "versions": 1,
+        "state": "published"
+      },
+      "ia": {
+        "identifier": "formal-completed-proof-bsd-closure-islam-2026",
+        "url": "https://archive.org/details/formal-completed-proof-bsd-closure-islam-2026",
+        "state": "live",
+        "file": "A Formal Completed Proof of the Birch and Swinnerton-Dyer Closure.pdf"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": null,
+      "superseded_by": null,
+      "note": "Edition 1.0.5 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 23164992 file A Formal Completed Proof of the Birch and Swinnerton-Dyer Closure.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 7e906f26; title, version and abstract revised. IA file A Formal Completed Proof of the Birch and Swinnerton-Dyer Closure.pdf replaced under the same filename on 2026-10-06, md5 16f57db6 (uncompressed), title revised.",
+      "extra": {
+        "millennium_series_2026_10_06": {
+          "version": "1.0.5",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "16e0f72fab9532197cff6bc7498f2b2996a6217bbdab3cc57c302ef913b3645e",
+          "git_md_sha256": "25961f548dc5352f1a73b85f262b54ea992f58988e456e214bff5dea9b026b98",
+          "zenodo_file": "A Formal Completed Proof of the Birch and Swinnerton-Dyer Closure.pdf",
+          "zenodo_md5": "7e906f267d7b2951e217b4a3e910d96b",
+          "ia_file": "A Formal Completed Proof of the Birch and Swinnerton-Dyer Closure.pdf",
+          "ia_md5": "16f57db614187dae424cbc2af2b0a663",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
+        }
+      }
+    },
+    "poincare-closure-sphere-where-existence-rests": {
+      "title": "The Sphere Is Where Existence Rests: A Formal Completed Closure of the Poincaré Row from Existence Alone: Closed to One Act and Proved from It on No Axiom; the Perelman Witness Typed as a Downstream Strict Subtype of the Bridge; Every Dimension Sealed by Its Cited Theorem",
+      "domain": "Millennium Series",
+      "status": "live",
+      "first_published": "2026-10-04",
+      "last_updated": "2026-10-06",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/The_Sphere_Is_Where_Existence_Rests_Poincare_Closure_v1_0_4.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/The_Sphere_Is_Where_Existence_Rests_Poincare_Closure_v1_0_4.pdf",
+        "editions": []
+      },
+      "zenodo": {
+        "conceptrecid": 23162239,
+        "concept_doi": "10.5281/zenodo.23162239",
+        "latest_version_doi": "10.5281/zenodo.23162240",
+        "latest_record": 23162240,
+        "versions": 1,
+        "state": "published"
+      },
+      "ia": {
+        "identifier": "sphere-where-existence-rests-poincare-islam-2026",
+        "url": "https://archive.org/details/sphere-where-existence-rests-poincare-islam-2026",
+        "state": "live",
+        "file": "The Sphere Is Where Existence Rests.pdf"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": null,
+      "superseded_by": null,
+      "note": "Edition 1.0.4 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 23162240 file The Sphere Is Where Existence Rests.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 ea86c517; title, version and abstract revised. IA file The Sphere Is Where Existence Rests.pdf replaced under the same filename on 2026-10-06, md5 f36a3ee8 (uncompressed), title revised.",
+      "extra": {
+        "millennium_series_2026_10_06": {
+          "version": "1.0.4",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "f16bf12d45f2265e8da3cc4677d545233ab6bd1bc130619994d58abd00f2ec95",
+          "git_md_sha256": "3cc06e8000999a3bf7862fcc9967075a95870efda2a496859f5d4ef50fe620a4",
+          "zenodo_file": "The Sphere Is Where Existence Rests.pdf",
+          "zenodo_md5": "ea86c5178958e353ed0bddb032f9c26d",
+          "ia_file": "The Sphere Is Where Existence Rests.pdf",
+          "ia_md5": "f36a3ee891bc7b65dbd8d4e3f57f464e",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
+        }
+      }
+    },
+    "goldbach-closure-mirror-has-one-seat": {
+      "title": "The Mirror Has One Seat: A Formal Completed Closure of the Goldbach Conjecture from Existence Alone: Closed to One Act and Proved from It on No Axiom; Every Even Number to 2000 Decided by the Kernel; the Certified Region to 4×10¹⁸ Carried",
+      "domain": "Millennium Series",
+      "status": "live",
+      "first_published": "2026-10-04",
+      "last_updated": "2026-10-06",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/The_Mirror_Has_One_Seat_Goldbach_Closure_v1_0_6.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/The_Mirror_Has_One_Seat_Goldbach_Closure_v1_0_6.pdf",
+        "editions": []
+      },
+      "zenodo": {
+        "conceptrecid": 23162237,
+        "concept_doi": "10.5281/zenodo.23162237",
+        "latest_version_doi": "10.5281/zenodo.23162238",
+        "latest_record": 23162238,
+        "versions": 1,
+        "state": "published"
+      },
+      "ia": {
+        "identifier": "mirror-has-one-seat-goldbach-islam-2026",
+        "url": "https://archive.org/details/mirror-has-one-seat-goldbach-islam-2026",
+        "state": "live",
+        "file": "The Mirror Has One Seat.pdf"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": null,
+      "superseded_by": null,
+      "note": "Edition 1.0.6 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 23162238 file The Mirror Has One Seat.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 d84f417d; title, version and abstract revised. IA file The Mirror Has One Seat.pdf replaced under the same filename on 2026-10-06, md5 25cb9ed3 (uncompressed), title revised.",
+      "extra": {
+        "millennium_series_2026_10_06": {
+          "version": "1.0.6",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "978dd28efb9e33b88be5d0a10d84dac0d3bf67279e6d5904c0d18c7c6d6f994c",
+          "git_md_sha256": "861b11dcee561f5fa7e08af03e88de9b5cd8599b675871047cd544cf1caffde4",
+          "zenodo_file": "The Mirror Has One Seat.pdf",
+          "zenodo_md5": "d84f417d81378c53f94833812547ee7b",
+          "ia_file": "The Mirror Has One Seat.pdf",
+          "ia_md5": "25cb9ed3bac4f8adc1162b575f09726f",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
+        }
+      }
+    },
+    "yang-mills-closure-floor-under-every-confined-field": {
+      "title": "The Floor Under Every Confined Field: A Formal Completed Closure of Yang–Mills Existence and the Mass Gap from Existence Alone: Both Parts Closed to One Act and Proved from It on No Axiom; the Strong-Coupling Lattice Gap Sealed; No Gapless Confined Field on the Record of Confinement and the Colour Premise",
+      "domain": "Millennium Series",
+      "status": "live",
+      "first_published": "2026-10-04",
+      "last_updated": "2026-10-06",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/The_Floor_Under_Every_Confined_Field_YM_Closure_v1_0_7.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/The_Floor_Under_Every_Confined_Field_YM_Closure_v1_0_7.pdf",
+        "editions": []
+      },
+      "zenodo": {
+        "conceptrecid": 23162230,
+        "concept_doi": "10.5281/zenodo.23162230",
+        "latest_version_doi": "10.5281/zenodo.23162231",
+        "latest_record": 23162231,
+        "versions": 1,
+        "state": "published"
+      },
+      "ia": {
+        "identifier": "floor-under-every-confined-field-islam-2026",
+        "url": "https://archive.org/details/floor-under-every-confined-field-islam-2026",
+        "state": "live",
+        "file": "The Floor Under Every Confined Field.pdf"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": null,
+      "superseded_by": null,
+      "note": "Edition 1.0.7 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 23162231 file The Floor Under Every Confined Field.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 f0a17732; title, version and abstract revised. IA file The Floor Under Every Confined Field.pdf replaced under the same filename on 2026-10-06, md5 151e7143 (uncompressed), title revised.",
+      "extra": {
+        "millennium_series_2026_10_06": {
+          "version": "1.0.7",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "733834d7a03a6180e7cee4141898a0878f3d6ea439ca1696d72cdd1866b46fba",
+          "git_md_sha256": "d2f7d2c448b29efe8b3e503020ee03979da75c9c3d3a0e067658be0475548731",
+          "zenodo_file": "The Floor Under Every Confined Field.pdf",
+          "zenodo_md5": "f0a17732fd0b16cf9721098be026d207",
+          "ia_file": "The Floor Under Every Confined Field.pdf",
+          "ia_md5": "151e71436719582edc93c378b9d0bc4a",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
+        }
+      }
+    },
+    "nothing-escapes-least-erasure": {
+      "title": "Nothing Escapes Least Erasure: The Formal Closure and the Twenty-Three Rows: The Root Proved Unconditionally on No Axiom and No Posit; One Cut Types Every Row; the Physical World Witnesses It in Hardware",
+      "domain": "Millennium Series",
+      "status": "live",
+      "first_published": "2026-10-01",
+      "last_updated": "2026-10-06",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/Nothing_Escapes_Least_Erasure_v1_4_1.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/Nothing_Escapes_Least_Erasure_v1_4_1.pdf",
+        "editions": []
+      },
+      "zenodo": {
+        "conceptrecid": 23080219,
+        "concept_doi": "10.5281/zenodo.23080219",
+        "latest_version_doi": "10.5281/zenodo.23080221",
+        "latest_record": 23080221,
+        "versions": 1,
+        "state": "published"
+      },
+      "ia": {
+        "identifier": "nothing-escapes-least-erasure",
+        "url": "https://archive.org/details/nothing-escapes-least-erasure",
+        "state": "live",
+        "file": "Nothing_Escapes_Least_Erasure_v1_4_0_MathJournal.pdf"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": null,
+      "superseded_by": null,
+      "note": "Edition 1.4.1 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 23080221 file Nothing_Escapes_Least_Erasure_v1_4_0_MathJournal.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 c72ca918; title, version and abstract revised. IA file Nothing_Escapes_Least_Erasure_v1_4_0_MathJournal.pdf replaced under the same filename on 2026-10-06, md5 2f6275c9 (uncompressed), title revised.",
+      "extra": {
+        "millennium_series_2026_10_06": {
+          "version": "1.4.1",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "16087bdf8a17a4d5a4ccab347b8a6829e1a6be053a9326ce5a8dbd903b3b653a",
+          "git_md_sha256": "d064627f4f5537e90b508f1e869314b076736a1f0574f92f38ccdef116a6be1d",
+          "zenodo_file": "Nothing_Escapes_Least_Erasure_v1_4_0_MathJournal.pdf",
+          "zenodo_md5": "c72ca91883fd858f6d4340eaeef7037a",
+          "ia_file": "Nothing_Escapes_Least_Erasure_v1_4_0_MathJournal.pdf",
+          "ia_md5": "2f6275c90c769f1d5b59661b6ed928a0",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
+        }
+      }
+    },
+    "three-bits-walked": {
+      "title": "Three Bits Walked: The Completed Formal Closure of the Seven Millennium Rows: The Root Proved Unconditionally on No Axiom and No Posit; Block, Hypothesis and Resolution Recorded Row by Row; Each Row Closed to One Act",
+      "domain": "Millennium Series",
+      "status": "live",
+      "first_published": "2026-10-05",
+      "last_updated": "2026-10-06",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/Three_Bits_Walked_v1_2_5.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/Three_Bits_Walked_v1_2_5.pdf",
+        "editions": []
+      },
+      "zenodo": {
+        "conceptrecid": 23167728,
+        "concept_doi": "10.5281/zenodo.23167728",
+        "latest_version_doi": "10.5281/zenodo.23167729",
+        "latest_record": 23167729,
+        "versions": 1,
+        "state": "published"
+      },
+      "ia": {
+        "identifier": "three-bits-walked-islam-2026",
+        "url": "https://archive.org/details/three-bits-walked-islam-2026",
+        "state": "live",
+        "file": "Three Bits Walked.pdf"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": null,
+      "superseded_by": null,
+      "note": "Edition 1.2.5 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 23167729 file Three Bits Walked.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 c0750885; title, version and abstract revised. IA file Three Bits Walked.pdf replaced under the same filename on 2026-10-06, md5 3af6bfe8 (uncompressed), title revised. PENDING at ledger write: the replacement is queued (archive.php) behind a derive.php task in wait_admin since 2026-10-05; the live file still reads md5 17029899.",
+      "extra": {
+        "millennium_series_2026_10_06": {
+          "version": "1.2.5",
+          "edition_date": "2026-10-06",
+          "git_pdf_sha256": "01ec4eb4ef852b61acdcaa1b4317d097faf560b8b7a0ae4351895331f27fa928",
+          "git_md_sha256": "6514b6de47b71b65609f7566460f9ab32b08524d5c86e2c0a33d736b9ecdd723",
+          "zenodo_file": "Three Bits Walked.pdf",
+          "zenodo_md5": "c0750885a797ebbe76183a6dd3cf7404",
+          "ia_file": "Three Bits Walked.pdf",
+          "ia_md5": "3af6bfe8e0f1d31e2c73f4f9fa30a8a5",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress",
+          "ia_state": "replacement queued; live md5 17029899 at 2026-10-06"
+        }
+      }
     }
   }
 }

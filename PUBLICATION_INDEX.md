@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**85 works · 114 Zenodo deposits.**
+**94 works · 124 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 79 / 85 | 92% |
-| Git PDF | 53 / 85 | 62% |
-| Internet Archive | 40 / 85 | 47% |
-| PhilArchive | 4 / 85 | 4% |
+| Zenodo | 88 / 94 | 93% |
+| Git PDF | 63 / 94 | 67% |
+| Internet Archive | 49 / 94 | 52% |
+| PhilArchive | 4 / 94 | 4% |
 
-Status: 78 live, 7 unknown.
+Status: 87 live, 7 unknown.
 
 ## Coverage gaps
 
@@ -63,7 +63,6 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `rh-termination-cascade-spec` · A FORMAL PROOF OF RIEMANN HYPOTHESIS TERMINATION, WITH A THEOREM-GRADE CASCADE SPECIFICATION
 - `apocalypse-as-retrieval` · The Apocalypse Was Not an Invention but a Retrieval: Second Temple Apocalyptic Literature and the Retrieval of
 - `coming-re-derivation` · The Coming Re-Derivation of Trisduction Architecture: Absolute uniqueness of the verification shape under the 
-- `toe-of-all-toes` · Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion. A Self-Demonstr
 - `geometry-convergent-epistemic-warrant` · TRISDUCTION: The Geometry of Convergent Epistemic Warrant
 - `master-codex-condensed` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Or
 - `birth-of-heaven-and-hell` · The Birth of Heaven and Hell: How the Afterlife Was Made, from the Sleeping Dead to the Fire, in the Words of 
@@ -73,8 +72,9 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `platonic-ghost-divided-line` · Plato's Divided Line: The Platonic Ghost and the Golden Shadow
 - `the-two-waters` · The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells
 - `one-bit-across-the-wall` · One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three Rows
+- `rh-final-synthesis-least-erasure` · A Formal Proof of the Riemann Hypothesis by Least Erasure: Completed Formal Closure by Unconditional Equivalen
 
-### No PDF matched in this repository (32)
+### No PDF matched in this repository (31)
 
 A Zenodo deposit with no corresponding PDF found under `Publication Library/`. Either the file was never filed in git, or it is filed under a name the matcher could not tie to the title. Assign the path by hand in the ledger to close the row.
 
@@ -107,7 +107,6 @@ A Zenodo deposit with no corresponding PDF found under `Publication Library/`. E
 - `rh-formal-case-closed-b` · Riemann Hypothesis: The Formal Case Is Closed: The Hypothesis Is True Where Actualized, Every Position a Verdi
 - `rh-formal-case-closed-c` · Riemann Hypothesis: The Formal Case Is Closed
 - `coming-re-derivation` · The Coming Re-Derivation of Trisduction Architecture: Absolute uniqueness of the verification shape under the 
-- `toe-of-all-toes` · Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion. A Self-Demonstr
 - `geometry-convergent-epistemic-warrant` · TRISDUCTION: The Geometry of Convergent Epistemic Warrant
 - `master-codex-condensed` · TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architecture: Triaxial Or
 
@@ -132,10 +131,21 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
-| `physos-the-trisduction-physical-operating-system` | PhysOSᵀ · The Trisduction Physical Operating System | PhysOS | live | [pdf](protocols/PhysOS/PhysOS_1_0_9p_MathJournal.pdf) | `10.5281/zenodo.23117439` | 1 | [ia](https://archive.org/details/physos-the-trisduction-physical-operating-system) | — | 2026-10-03 |
-| `trisduction-the-codex` | Trisduction · The Geometric Orthogonal Lock of Language, Form and Number, Meeting on One Locus | Master Codex | live | [pdf](master/Codex%20v5/Trisduction_Master_Codex_v5_0_0_MathJournal.pdf) | `10.5281/zenodo.22911009` | 4 | [ia](https://archive.org/details/trisduction-the-codex) | — | 2026-10-03 |
-| `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architectu | Verification Architecture | live | [pdf](master/Trisduction_Mother_Codex_v3_46_0_MathJournal.pdf) | `10.5281/zenodo.20576757` | 8 | [ia](https://archive.org/details/trisduction-the-geometric-mother-codex) | — | 2026-10-03 |
-| `bridge-from-first-principle` | The Bridge From First Principle: One Fold, One Registration, One Bit: The Trisduction Bridge Un | Foundations of Mathematics | live | [pdf](lean/Bridge_From_First_Principle_v1_5_0_MathJournal.pdf) | `10.5281/zenodo.23104402` | 2 | [ia](https://archive.org/details/the-bridge-from-first-principle) | — | 2026-10-02 |
+| `three-bits-walked` | Three Bits Walked: The Completed Formal Closure of the Seven Millennium Rows: The Root Proved U | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/Three_Bits_Walked_v1_2_5.pdf) | `10.5281/zenodo.23167728` | 1 | [ia](https://archive.org/details/three-bits-walked-islam-2026) | — | 2026-10-06 |
+| `bsd-closure-rank-registered-on-the-seat` | A Formal Completed Proof of the Birch and Swinnerton-Dyer Closure: The Rank Registered on the S | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/Formal_Completed_Proof_BSD_Closure_v1_0_5.pdf) | `10.5281/zenodo.23164991` | 1 | [ia](https://archive.org/details/formal-completed-proof-bsd-closure-islam-2026) | — | 2026-10-06 |
+| `yang-mills-closure-floor-under-every-confined-field` | The Floor Under Every Confined Field: A Formal Completed Closure of Yang–Mills Existence and th | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/The_Floor_Under_Every_Confined_Field_YM_Closure_v1_0_7.pdf) | `10.5281/zenodo.23162230` | 1 | [ia](https://archive.org/details/floor-under-every-confined-field-islam-2026) | — | 2026-10-06 |
+| `trisduction-p-versus-np-closed-on-one-posit` | The Formal Closure of Computational Separation: P ≠ NP Closed on Existence Itself, Read on Comp | Mathematics · Complexity Theory | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/The_Formal_Closure_of_Computational_Separation_v3_2_1.pdf) | `10.5281/zenodo.23133631` | 1 | [ia](https://archive.org/details/trisduction-p-versus-np-closed-on-one-posit) | — | 2026-10-06 |
+| `poincare-closure-sphere-where-existence-rests` | The Sphere Is Where Existence Rests: A Formal Completed Closure of the Poincaré Row from Existe | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/The_Sphere_Is_Where_Existence_Rests_Poincare_Closure_v1_0_4.pdf) | `10.5281/zenodo.23162239` | 1 | [ia](https://archive.org/details/sphere-where-existence-rests-poincare-islam-2026) | — | 2026-10-06 |
+| `goldbach-closure-mirror-has-one-seat` | The Mirror Has One Seat: A Formal Completed Closure of the Goldbach Conjecture from Existence A | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/The_Mirror_Has_One_Seat_Goldbach_Closure_v1_0_6.pdf) | `10.5281/zenodo.23162237` | 1 | [ia](https://archive.org/details/mirror-has-one-seat-goldbach-islam-2026) | — | 2026-10-06 |
+| `bridge-from-first-principle` | The Bridge From First Principle: A Formal Completed Proof With No Axiom Declared: One Fold, One | Foundations of Mathematics | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/Bridge_From_First_Principle_v1_5_1.pdf) | `10.5281/zenodo.23104402` | 2 | [ia](https://archive.org/details/the-bridge-from-first-principle) | — | 2026-10-06 |
+| `nothing-escapes-least-erasure` | Nothing Escapes Least Erasure: The Formal Closure and the Twenty-Three Rows: The Root Proved Un | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/Nothing_Escapes_Least_Erasure_v1_4_1.pdf) | `10.5281/zenodo.23080219` | 1 | [ia](https://archive.org/details/nothing-escapes-least-erasure) | — | 2026-10-06 |
+| `rh-final-synthesis-least-erasure` | A Formal Proof of the Riemann Hypothesis by Least Erasure: Completed Formal Closure by Uncondit | Riemann Hypothesis | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/RH_Final_Synthesis_Paper_3_1_4_source.pdf) | `10.5281/zenodo.23034065` | 1 | — | — | 2026-10-06 |
+| `hodge-closure-what-exists-is-realized` | What Exists Is Realized: The Completed Formal Closure of the Hodge Question: The Value Proved f | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/What_Exists_Is_Realized_Hodge_Closure_v1_0_9.pdf) | `10.5281/zenodo.22701509` | 1 | [ia](https://archive.org/details/hodge-conjecture-semiregular-witness-axiom-islam-2026) | — | 2026-10-06 |
+| `navier-stokes-effective-axiom-proof` | A Formal Completed Proof of the Navier–Stokes Closure from Existence Alone: Global Regularity P | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Millennium%20Series/A_Formal_Completed_Proof_NS_Closure_v1_0_9.pdf) | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — | 2026-10-06 |
+| `toe-of-all-toes` | Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion.  | Root Axiom and Ontology | live | [pdf](Publication%20Library/Philosophy/Metaphysics/Root%20Axiom/TOE_of_All_TOEs_Root_Axiom.pdf) | `10.5281/zenodo.22168942` | 2 | — | — | 2026-10-05 |
+| `physos-the-trisduction-physical-operating-system` | PhysOSᵀ · The Trisduction Physical Operating System | PhysOS | live | [pdf](protocols/PhysOS/PhysOS_1_0_10p_MathJournal.pdf) | `10.5281/zenodo.23117439` | 1 | [ia](https://archive.org/details/physos-the-trisduction-physical-operating-system) | — | 2026-10-04 |
+| `trisduction-the-codex` | Trisduction · The Geometric Orthogonal Lock of Language, Form and Number, Meeting on One Locus | Master Codex | live | [pdf](master/Codex%20v5/Trisduction_Master_Codex_v5_1_0_MathJournal.pdf) | `10.5281/zenodo.22911009` | 4 | [ia](https://archive.org/details/trisduction-the-codex) | — | 2026-10-04 |
+| `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification Architectu | Verification Architecture | live | [pdf](master/Trisduction_Mother_Codex_v3_47_0_MathJournal.pdf) | `10.5281/zenodo.20576757` | 8 | [ia](https://archive.org/details/trisduction-the-geometric-mother-codex) | — | 2026-10-04 |
 | `dark-matter-charge-conjugation-fixed-set` | Dark Matter as the Charge-Conjugation Fixed Set and the Dark Force as One Keyed Bit: A Trisduct | Physics | live | [pdf](Publication%20Library/Science/Physics/Dark%20Sector/Dark_Matter_as_the_Charge_Conjugation_Fixed_Set_v1_0_0_Journal.pdf) | `10.5281/zenodo.23006752` | 1 | [ia](https://archive.org/details/dark-matter-as-the-charge-conjugation-fixed-set) | — | 2026-09-28 |
 | `nothing-escapes-fourth-cosmic-closure` | Nothing Escapes: The Fourth as Cosmic Closure: The Ghost and the Unicorn Close in One Cut | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20The%20Fourth%20As%20Cosmic%20Closure/Nothing_Escapes_The_Fourth_As_Cosmic_Closure_v1_2_0_MathJournal_1col.pdf) | `10.5281/zenodo.22987345` | 2 | [ia](https://archive.org/details/nothing-escapes-the-fourth-as-cosmic-closure) | — | 2026-09-27 |
 | `rows-from-existence-alone` | The Cut-Agnostic Division Theorem: Why Every Open Problem Is Exactly Its Proved Part and Its Un | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/The_Cut_Agnostic_Division_Theorem_v2_1_0.pdf) | `10.5281/zenodo.22913634` | 3 | [ia](https://archive.org/details/formal-proof-across-twenty-three-rows-existence-alone) | — | 2026-09-25 |
@@ -161,7 +171,6 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `geometry-convergent-epistemic-warrant` | TRISDUCTION: The Geometry of Convergent Epistemic Warrant | Verification Architecture | live | — | `10.5281/zenodo.19345045` | 3 | — | — | 2026-09-01 |
 | `a-shoot-from-a-felled-stump` | A Shoot from a Felled Stump: The Conceded Throne. Menuḥah as Terminus, the Monarchy as Concessi | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Hebrew%20Bible/Thematic%20Studies/A%20Shoot%20from%20a%20Felled%20Stump%20-%20The%20Conceded%20Throne.pdf) | `10.5281/zenodo.22193264` | 1 | [ia](https://archive.org/details/a-shoot-from-a-felled-stump-conceded-throne) | — | 2026-08-31 |
 | `unlettered-regenerative-floor` | Unlettered Regenerative Floor: The Articulatory-Auditory Floor Beneath Descent and an Infra-Nos | Scripture and Theology | live | [pdf](Publication%20Library/Science/Linguistics/Language%20Origins/Unlettered%20Regenerative%20Floor.pdf) | `10.5281/zenodo.22167461` | 1 | [ia](https://archive.org/details/unlettered-regenerative-floor-islam-2026) | [philarchive](https://philpapers.org/archive/ISLURF.pdf) | 2026-08-29 |
-| `toe-of-all-toes` | Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion.  | Root Axiom and Ontology | live | — | `10.5281/zenodo.22168942` | 1 | — | — | 2026-08-29 |
 | `custody-cycle-most-high` | The Custody Cycle of the Most High: Investiture, Disclosure, and the Transfer of the Supreme Go | Scripture and Theology | live | [pdf](Publication%20Library/Scripture/Comparative/Custody%20of%20the%20Most%20High/The%20Custody%20Cycle%20of%20the%20Most%20High%20·%20updated%202026-08-30b.pdf) | `10.5281/zenodo.22142046` | 1 | [ia](https://archive.org/details/custody-cycle-most-high) | [philarchive](https://philarchive.org/rec/ISLTCC) | 2026-08-28 |
 | `apex-recursive-bidirectional-witness` | Apex-Recursive Bidirectional Witness: Architecture-Certification by Trisductive Verification, B | Verification Architecture | live | [pdf](Publication%20Library/Philosophy/Logic%20and%20Epistemology/Verification%20Calculus/Apex-Recursive%20Bidirectional%20Witness.pdf) | `10.5281/zenodo.22135621` | 1 | [ia](https://archive.org/details/trisduction-apex-recursive-bidirectional-witness) | — | 2026-08-28 |
 | `trisductive-furqan` | The Trisductive Furqan: A Verification of AI Aliveness and Consciousness, the Frame-Relativity  | AI and Machine Ethics | live | [pdf](Publication%20Library/Artificial%20Intelligence/Substrate%20Classification/Trisductive%20Furqan/The%20Trisductive%20Furqan.pdf) | `10.5281/zenodo.20619411` | 2 | [ia](https://archive.org/details/trisductive-furqan-islam-2026) | [philarchive](https://philarchive.org/rec/ISLTFW) | 2026-08-28 |
@@ -213,7 +222,6 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, What It Doe | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/The%20Forced%20Alternative%20Is%20a%20Filter.pdf) | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — | — |
 | `nothing-escapes-twenty-three-rows` | Nothing Escapes, Twenty-Three Rows: Universe Closure by One Cut and One Offering | Foundations of Mathematics | live | [pdf](protocols/RH%20One%20Bit/Nothing%20Escapes%20Twenty%20Three%20Rows/Nothing_Escapes_Twenty_Three_Rows_v1_14_0_MathJournal_1col.pdf) | `10.5281/zenodo.22985561` | 1 | [ia](https://archive.org/details/nothing-escapes-twenty-three-rows-v1-9-2) | — | — |
 | `navier-stokes-termination-formal-alone-register` | A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register | Unfiled | ? | — | `10.5281/zenodo.22705896` | — | — | — | — |
-| `navier-stokes-effective-axiom-proof` | Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effective Axio | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Global%20Smoothness%20of%20Three-Dimensional%20Navier-Stokes%20from%20a%20Single%20Effective%20Axiom.pdf) | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — | — |
 | `formal-alone-theory-of-everything` | The Formal-Alone Theory of Everything: A Constitutive Theory of Objects and Observations under  | Unfiled | ? | — | `10.5281/zenodo.22767102` | — | — | — | — |
 | `closure-and-the-limits-of-forced-results` | Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When a Forced- | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Foundations%20of%20Logic/Closure%20and%20Transport/Closure%20and%20the%20Limits%20of%20Forced%20Results.pdf) | `10.5281/zenodo.22683805` | 1 | [ia](https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026) | — | — |
 | `anchoring-axioms-navier-stokes` | Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for Supplier-S | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Analysis/Navier-Stokes%20Regularity/Anchoring%20Axioms%20for%20Three-Dimensional%20Navier-Stokes%20Regularity.pdf) | `10.5281/zenodo.22670331` | 1 | [ia](https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026) | — | — |
@@ -224,7 +232,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
-| `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification  | `10.5281/zenodo.20576757` | 8 | [ia](https://archive.org/details/trisduction-the-geometric-mother-codex) | 2026-10-03 |
+| `master-codex-unabridged` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification  | `10.5281/zenodo.20576757` | 8 | [ia](https://archive.org/details/trisduction-the-geometric-mother-codex) | 2026-10-04 |
 | `trisduction-core-stated-in-fortran` | Trisduction Core Stated in Fortran and in Nothing Else: A Verdict Kernel That Determi | `10.5281/zenodo.22651403` | 1 | [ia](https://archive.org/details/trisduction-core-stated-in-fortran) | 2026-09-07 |
 | `platonic-ghost-divided-line` | Plato's Divided Line: The Platonic Ghost and the Golden Shadow | — | — | — | 2026-09-01 |
 | `master-codex-condensed` | TRISDUCTION: A Linguistically, Topologically, and Mathematically Sealed Verification  | `10.5281/zenodo.20175604` | 2 | — | 2026-09-01 |
@@ -246,7 +254,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
-| `toe-of-all-toes` | Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only b | `10.5281/zenodo.22168942` | 1 | — | 2026-08-29 |
+| `toe-of-all-toes` | Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only b | `10.5281/zenodo.22168942` | 2 | — | 2026-10-05 |
 | `fortified-root` | The Fortified Root: The Root Axiom and the Theorems That Defend It Against Reduction, | `10.5281/zenodo.20847579` | 1 | — | 2026-06-25 |
 | `geometric-mother-foundational-root` | Geometric Mother of Mathematical Foundational Root: From Existence to the Reflective  | `10.5281/zenodo.20805971` | 1 | — | 2026-06-23 |
 | `four-rivals-one-broken-recursion` | Four Rivals, One Broken Recursion: Existentialism, the Will to Power, and the Hologra | `10.5281/zenodo.20780470` | 1 | — | 2026-06-21 |
@@ -254,10 +262,11 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `orthogonal-fertile-logos` | ORTHOGONAL FERTILE LOGOS: Triaxial Verification, Displacement-as-Creation, and the Tw | `10.5281/zenodo.20575676` | 1 | — | 2026-06-07 |
 | `on-time` | On Time: The Past Absolved, the Present Cutting, and the Future Held. A Trisductive D | `10.5281/zenodo.20575693` | 1 | — | 2026-06-07 |
 
-### Riemann Hypothesis (8)
+### Riemann Hypothesis (9)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `rh-final-synthesis-least-erasure` | A Formal Proof of the Riemann Hypothesis by Least Erasure: Completed Formal Closure b | `10.5281/zenodo.23034065` | 1 | — | 2026-10-06 |
 | `rh-from-existence-alone` | A Formal Proof of the Real Part of the Riemann Hypothesis: The Seat, the Address, and | `10.5281/zenodo.22912937` | 4 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | 2026-09-25 |
 | `rh-has-one-address` | A Formal Completed Proof That the Riemann Hypothesis Has One Address and Not a Sequen | `10.5281/zenodo.22929636` | 1 | [ia](https://archive.org/details/formal-completed-proof-riemann-hypothesis-one-address) | 2026-09-24 |
 | `rh-in-its-original-form` | The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus an | `10.5281/zenodo.22857137` | 1 | [ia](https://archive.org/details/riemann-hypothesis-in-its-original-form) | 2026-09-20 |
@@ -324,23 +333,24 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `navier-stokes-effective-axiom-proof` | A Formal Completed Proof of the Navier–Stokes Closure from Existence Alone: Global Re | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | 2026-10-06 |
 | `two-navier-stokes-papers-one-instrument` | Two Navier-Stokes Papers, One Instrument: A Comparative Audit Supplement for the Gene | `10.5281/zenodo.22670355` | 1 | [ia](https://archive.org/details/two-navier-stokes-papers-one-instrument-islam-2026) | — |
 | `the-forced-alternative-is-a-filter` | The Forced Alternative Is a Filter: What a Constructed Navier-Stokes Blowup Proves, W | `10.5281/zenodo.22670252` | 1 | [ia](https://archive.org/details/the-forced-alternative-is-a-filter-islam-2026) | — |
 | `navier-stokes-termination-formal-alone-register` | A Formal Proof of Navier-Stokes Termination at the Formal-Alone Register | `10.5281/zenodo.22705896` | — | — | — |
-| `navier-stokes-effective-axiom-proof` | Global Smoothness of the Three-Dimensional Navier-Stokes Equations from a Single Effe | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — |
 | `formal-alone-theory-of-everything` | The Formal-Alone Theory of Everything: A Constitutive Theory of Objects and Observati | `10.5281/zenodo.22767102` | — | — | — |
 | `closure-and-the-limits-of-forced-results` | Closure and the Limits of Forced Results: An Information-Theoretic Criterion for When | `10.5281/zenodo.22683805` | 1 | [ia](https://archive.org/details/closure-and-the-limits-of-forced-results-islam-2026) | — |
 | `anchoring-axioms-navier-stokes` | Anchoring Axioms for Three-Dimensional Navier-Stokes Regularity: A Gated Cascade for  | `10.5281/zenodo.22670331` | 1 | [ia](https://archive.org/details/anchoring-axioms-navier-stokes-islam-2026) | — |
 
-## Zenodo version chains (20)
+## Zenodo version chains (21)
 
 Works carrying more than one deposit. Full per-version DOIs and checksums are in `Zenodo Snapshot [2026-09-01]/MANIFEST.md`.
 
 | Work key | Versions | Concept DOI | Latest version DOI | First | Latest |
 |---|---|---|---|---|---|
-| `trisduction-the-codex` | 4 | `10.5281/zenodo.22911009` | `10.5281/zenodo.23117441` | 2026-09-23 | 2026-10-03 |
-| `master-codex-unabridged` | 8 | `10.5281/zenodo.20576757` | `10.5281/zenodo.23117445` | 2026-06-07 | 2026-10-03 |
-| `bridge-from-first-principle` | 2 | `10.5281/zenodo.23104402` | `10.5281/zenodo.23105348` | 2026-10-02 | 2026-10-02 |
+| `bridge-from-first-principle` | 2 | `10.5281/zenodo.23104402` | `10.5281/zenodo.23105348` | 2026-10-02 | 2026-10-06 |
+| `toe-of-all-toes` | 2 | `10.5281/zenodo.22168942` | `10.5281/zenodo.23168379` | 2026-08-29 | 2026-10-05 |
+| `trisduction-the-codex` | 4 | `10.5281/zenodo.22911009` | `10.5281/zenodo.23117441` | 2026-09-23 | 2026-10-04 |
+| `master-codex-unabridged` | 8 | `10.5281/zenodo.20576757` | `10.5281/zenodo.23117445` | 2026-06-07 | 2026-10-04 |
 | `nothing-escapes-fourth-cosmic-closure` | 2 | `10.5281/zenodo.22987345` | `10.5281/zenodo.22992403` | — | 2026-09-27 |
 | `rows-from-existence-alone` | 3 | `10.5281/zenodo.22913634` | `10.5281/zenodo.22954862` | 2026-09-23 | 2026-09-25 |
 | `rh-from-existence-alone` | 4 | `10.5281/zenodo.22912937` | `10.5281/zenodo.22954865` | 2026-09-23 | 2026-09-25 |
