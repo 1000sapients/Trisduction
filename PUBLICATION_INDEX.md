@@ -15,7 +15,7 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 |---|---|---|
 | Zenodo | 88 / 94 | 93% |
 | Git PDF | 63 / 94 | 67% |
-| Internet Archive | 49 / 94 | 52% |
+| Internet Archive | 50 / 94 | 53% |
 | PhilArchive | 4 / 94 | 4% |
 
 Status: 87 live, 7 unknown.
@@ -24,7 +24,7 @@ Status: 87 live, 7 unknown.
 
 The only view in the repository that answers "what is published where, and what is missing." Each list is a work queue, not an error.
 
-### On Zenodo, not on the Internet Archive (45)
+### On Zenodo, not on the Internet Archive (44)
 
 Deposited to Zenodo but no IA item located. IA is the second permanence surface; a work here has one address, not two.
 
@@ -72,7 +72,6 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `platonic-ghost-divided-line` · Plato's Divided Line: The Platonic Ghost and the Golden Shadow
 - `the-two-waters` · The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells
 - `one-bit-across-the-wall` · One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three Rows
-- `rh-final-synthesis-least-erasure` · A Formal Proof of the Riemann Hypothesis by Least Erasure: Completed Formal Closure by Unconditional Equivalen
 
 ### No PDF matched in this repository (31)
 
@@ -131,6 +130,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `rh-final-synthesis-least-erasure` | A Formal Proof of the Riemann Hypothesis from a One-Bit Premise, Least Erasure: The Hypothesis  | Riemann Hypothesis | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/RH_3_2_0_Least_Erasure.pdf) | `10.5281/zenodo.23034065` | 1 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-least-erasure) | — | 2026-10-07 |
 | `three-bits-walked` | Three Bits Walked: The Completed Formal Closure of the Seven Millennium Rows: The Root Proved U | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/Three_Bits_Walked_v1_2_5.pdf) | `10.5281/zenodo.23167728` | 1 | [ia](https://archive.org/details/three-bits-walked-islam-2026) | — | 2026-10-06 |
 | `bsd-closure-rank-registered-on-the-seat` | A Formal Completed Proof of the Birch and Swinnerton-Dyer Closure: The Rank Registered on the S | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/Formal_Completed_Proof_BSD_Closure_v1_0_5.pdf) | `10.5281/zenodo.23164991` | 1 | [ia](https://archive.org/details/formal-completed-proof-bsd-closure-islam-2026) | — | 2026-10-06 |
 | `yang-mills-closure-floor-under-every-confined-field` | The Floor Under Every Confined Field: A Formal Completed Closure of Yang–Mills Existence and th | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/The_Floor_Under_Every_Confined_Field_YM_Closure_v1_0_7.pdf) | `10.5281/zenodo.23162230` | 1 | [ia](https://archive.org/details/floor-under-every-confined-field-islam-2026) | — | 2026-10-06 |
@@ -139,7 +139,6 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `goldbach-closure-mirror-has-one-seat` | The Mirror Has One Seat: A Formal Completed Closure of the Goldbach Conjecture from Existence A | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/The_Mirror_Has_One_Seat_Goldbach_Closure_v1_0_6.pdf) | `10.5281/zenodo.23162237` | 1 | [ia](https://archive.org/details/mirror-has-one-seat-goldbach-islam-2026) | — | 2026-10-06 |
 | `bridge-from-first-principle` | The Bridge From First Principle: A Formal Completed Proof With No Axiom Declared: One Fold, One | Foundations of Mathematics | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/Bridge_From_First_Principle_v1_5_1.pdf) | `10.5281/zenodo.23104402` | 2 | [ia](https://archive.org/details/the-bridge-from-first-principle) | — | 2026-10-06 |
 | `nothing-escapes-least-erasure` | Nothing Escapes Least Erasure: The Formal Closure and the Twenty-Three Rows: The Root Proved Un | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/Nothing_Escapes_Least_Erasure_v1_4_1.pdf) | `10.5281/zenodo.23080219` | 1 | [ia](https://archive.org/details/nothing-escapes-least-erasure) | — | 2026-10-06 |
-| `rh-final-synthesis-least-erasure` | A Formal Proof of the Riemann Hypothesis by Least Erasure: Completed Formal Closure by Uncondit | Riemann Hypothesis | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/RH_Final_Synthesis_Paper_3_1_4_source.pdf) | `10.5281/zenodo.23034065` | 1 | — | — | 2026-10-06 |
 | `hodge-closure-what-exists-is-realized` | What Exists Is Realized: The Completed Formal Closure of the Hodge Question: The Value Proved f | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/What_Exists_Is_Realized_Hodge_Closure_v1_0_9.pdf) | `10.5281/zenodo.22701509` | 1 | [ia](https://archive.org/details/hodge-conjecture-semiregular-witness-axiom-islam-2026) | — | 2026-10-06 |
 | `navier-stokes-effective-axiom-proof` | A Formal Completed Proof of the Navier–Stokes Closure from Existence Alone: Global Regularity P | Unfiled | ? | [pdf](Publication%20Library/Mathematics/Millennium%20Series/A_Formal_Completed_Proof_NS_Closure_v1_0_9.pdf) | `10.5281/zenodo.22670343` | 1 | [ia](https://archive.org/details/global-smoothness-single-effective-axiom-islam-2026) | — | 2026-10-06 |
 | `toe-of-all-toes` | Theory of Theories of Everything (TOE of All TOEs): Existence Proves Existence Only by Motion.  | Root Axiom and Ontology | live | [pdf](Publication%20Library/Philosophy/Metaphysics/Root%20Axiom/TOE_of_All_TOEs_Root_Axiom.pdf) | `10.5281/zenodo.22168942` | 2 | — | — | 2026-10-05 |
@@ -266,7 +265,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
-| `rh-final-synthesis-least-erasure` | A Formal Proof of the Riemann Hypothesis by Least Erasure: Completed Formal Closure b | `10.5281/zenodo.23034065` | 1 | — | 2026-10-06 |
+| `rh-final-synthesis-least-erasure` | A Formal Proof of the Riemann Hypothesis from a One-Bit Premise, Least Erasure: The H | `10.5281/zenodo.23034065` | 1 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-least-erasure) | 2026-10-07 |
 | `rh-from-existence-alone` | A Formal Proof of the Real Part of the Riemann Hypothesis: The Seat, the Address, and | `10.5281/zenodo.22912937` | 4 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | 2026-09-25 |
 | `rh-has-one-address` | A Formal Completed Proof That the Riemann Hypothesis Has One Address and Not a Sequen | `10.5281/zenodo.22929636` | 1 | [ia](https://archive.org/details/formal-completed-proof-riemann-hypothesis-one-address) | 2026-09-24 |
 | `rh-in-its-original-form` | The Riemann Hypothesis in Its Original Form: A Completed Formal Proof of the Locus an | `10.5281/zenodo.22857137` | 1 | [ia](https://archive.org/details/riemann-hypothesis-in-its-original-form) | 2026-09-20 |

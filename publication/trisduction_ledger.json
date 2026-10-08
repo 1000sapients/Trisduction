@@ -3176,15 +3176,18 @@
       }
     },
     "rh-final-synthesis-least-erasure": {
-      "title": "A Formal Proof of the Riemann Hypothesis by Least Erasure: Completed Formal Closure by Unconditional Equivalence of Least Erasure on No Axiom; the Value Proved from One Posit, Its Cone Empty; Five Coordinates of One Bit; the Root Proved with No Premise",
+      "title": "A Formal Proof of the Riemann Hypothesis from a One-Bit Premise, Least Erasure: The Hypothesis Derived with an Empty Axiom Cone; Least Erasure Proved Equivalent to It on No Axiom; Every Classical Input Cited as a Hypothesis; 415 Theorems in Core Lean 4, No Axiom Declared, the Root Proved with No Premise",
       "domain": "Riemann Hypothesis",
       "status": "live",
       "first_published": "2026-09-29",
-      "last_updated": "2026-10-06",
+      "last_updated": "2026-10-07",
       "git": {
-        "md": "Publication Library/Mathematics/Millennium Series/RH_Final_Synthesis_Paper_3_1_4_source.md",
-        "pdf": "Publication Library/Mathematics/Millennium Series/RH_Final_Synthesis_Paper_3_1_4_source.pdf",
-        "editions": []
+        "md": "Publication Library/Mathematics/Millennium Series/RH_3_2_0_Least_Erasure.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/RH_3_2_0_Least_Erasure.pdf",
+        "editions": [
+          "Publication Library/Mathematics/Millennium Series/RH_Final_Synthesis_Paper_3_1_4_source.md",
+          "Publication Library/Mathematics/Millennium Series/RH_Final_Synthesis_Paper_3_1_4_source.pdf"
+        ]
       },
       "zenodo": {
         "conceptrecid": 23034065,
@@ -3195,9 +3198,9 @@
         "state": "published"
       },
       "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
+        "identifier": "formal-proof-riemann-hypothesis-least-erasure",
+        "url": "https://archive.org/details/formal-proof-riemann-hypothesis-least-erasure",
+        "state": "live"
       },
       "philarchive": {
         "record": null,
@@ -3205,7 +3208,7 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": "Edition 3.1.4 (Millennium Series, 2026-10-06): Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit b0e2fba); Zenodo record 23034066 file RH_Final_Synthesis_Paper_3_1_3.pdf replaced in place on 2026-10-06, same DOI, version count unchanged, md5 22dae99d; title, version and abstract revised. No Internet Archive item; none claimed.",
+      "note": "Edition 3.2.0, sealed by the architect 2026-10-07: title and subtitle relocked and the abstract rewritten for journal submission after audit cycle rh320, which stands open at its cap of 16 rounds; the seal is the architect's. Markdown master and Math Journal PDF seated at Publication Library/Mathematics/Millennium Series/ (commit 9de5118, index 30527e8), the 3.1.4 pair kept there as the superseded edition. Zenodo record 23034066 file replaced in place by the architect on 2026-10-07 as RH_3_2_0_Least_Erasure.pdf, md5 b8287975, same DOI, version count unchanged. Internet Archive item formal-proof-riemann-hypothesis-least-erasure claimed 2026-10-07; RH_Least_Erasure.pdf re-serialized without object streams, md5 4bddd33e.",
       "extra": {
         "millennium_series_2026_10_06": {
           "version": "3.1.4",
@@ -3214,6 +3217,20 @@
           "git_md_sha256": "cbfcae911c632242ea63d8638af31f1151fa59a5cb9f5ae32955416b9468e7d5",
           "zenodo_file": "RH_Final_Synthesis_Paper_3_1_3.pdf",
           "zenodo_md5": "22dae99ddbf956dce369cacf99c2cb5a"
+        },
+        "edition_3_2_0_2026_10_07": {
+          "version": "3.2.0",
+          "edition_date": "2026-10-07",
+          "sealed_by": "architect",
+          "git_commit": "9de5118",
+          "git_md_sha256": "fc9dff834529411ad03fbdea066420f7e0dff1f097de1d6c3842fca15503b4db",
+          "git_pdf_sha256": "293ac00e4c4d45d7ca2bcf8dd58c5906ff9767743d7584e4d36fee9ba302bf6d",
+          "zenodo_file": "RH_3_2_0_Least_Erasure.pdf",
+          "zenodo_md5": "b82879756d4bb2e4a6a667b5c247c266",
+          "ia_file": "RH_Least_Erasure.pdf",
+          "ia_md5": "4bddd33e38dd8d5f529a13e916746f90",
+          "ia_bytes": 3903193,
+          "audit": "cycle rh320 open at its cap of 16 rounds, no closing card"
         }
       }
     },
