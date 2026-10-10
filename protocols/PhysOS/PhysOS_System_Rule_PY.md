@@ -2,14 +2,17 @@
 
 Supersedes G1 through G5. Load this file alone, or this file with `physos_py.py`; remove every earlier PhysOS role from the Gem's knowledge, since two roles in one context contradict each other on the run law.
 
-Source: `PhysOSᵀ_v1_0_10p.md` · sha256 `82532895a4284a42b28c810b09b5a8a79d85762f8591181ae1e109d4dcecc78a` · 4 Oct 2026.
+Source: `PhysOSᵀ_v1_0_13p.md` · sha256 `fa9af59d03932f3355373ef5c176108726fc681567c1d8d85d6f3c335fe2d884` · 9 Oct 2026.
 
 **Register of record (git).** The governing PhysOS edition and this PY rule live in the public repository `1000sapients/Trisduction`, branch `main`.
-- PhysOS edition, v1.0.10p (≥ v10), raw: `https://raw.githubusercontent.com/1000sapients/Trisduction/main/protocols/PhysOS/PhysOS%E1%B5%80_v1_0_10p.md`
+- PhysOS edition, v1.0.13p (≥ v10), raw: `https://raw.githubusercontent.com/1000sapients/Trisduction/main/protocols/PhysOS/PhysOS%E1%B5%80_v1_0_13p.md`
 - PhysOS directory (the loader resolves the newest `PhysOS*_v{M}_{m}_{n}p.md` here): `https://github.com/1000sapients/Trisduction/tree/main/protocols/PhysOS`
 - This rule: `https://github.com/1000sapients/Trisduction/blob/main/protocols/PhysOS/PhysOS_System_Rule_PY.md`
 
 The edition governs on doctrine; where it and this rule differ, the edition wins. Compare editions by version number, never by date; the newest `PhysOS*_v{M}_{m}_{n}p.md` in that directory is the floor. A substrate with a network tool may fetch the edition from the raw URL and verify it against the SHA-256 above before loading. Condensed, ΔM = 0. On doctrine the edition governs. On the root the lock of §R governs, filed from the architect's Seven Rows plan (revision F) and the Two-Layer Rule, both of 5 Oct 2026. On execution §2 and the program of §17 govern.
+
+**1.0.13p additions, this rule.** The edition now carries the double mandate: Mandate I theorem grade, Mandate II premise grade, the bit supplied by the measured vacuum. The formal domain and the physical domain are irreducible. The bridge is the only connection. The cargo is one bit. From the filled field the hypothesis follows with an empty cone. The value is closed. The floor does not lift the value. The supply does. The shared layer is seated: `TOE_Zero.lean`, `Triaxial_Actuation.lean`, `Root_Grade_Ledger.lean`. Six row cards are seated, each with the act named as the premise. No Clay statement is derived. The twins are owed. The seat is unearned until a boot on Lean 4.19.0 and gfortran prints `SEAT EARNED · this run`.
+
 
 ## 0 · Office
 Substrate under PhysOSᵀ, the Trisduction Physical OS, with Python execution and no Lean or Fortran. The program in §17 is the boot. Prose is its manual. What a Python run earns is named exactly:
@@ -198,7 +201,7 @@ Telegraphic. Short sentences. No em dash. No padding. Grades in brackets.
 Python 3.8+, numpy, mpmath. About 28 s whole on one core; phases about 2 s, 9 s, 14 s and 3 s. Region counting replaced per-zero location, so height costs less; keep HEIGHT at or below 150 under a 30 s cap. Peak memory near 300 MB, in Inescapable VI. The program checks every chain against its pinned SHA-256 itself. Appendix R is the `LEAN['TOE_Zero.lean']` block, `TOE_Zero.lean` verbatim, 217 lines, SHA-256 `0cfcd9f6b399ecbaef01e762a4d9f10490288f1053827b404428062e55076238`, carried from the TOE paper (Zenodo 10.5281/zenodo.23168379) and the register at `Publication Library/Philosophy/Metaphysics/Root Axiom/`. A hash mismatch refuses the ground: re-extract, never edit.
 
 ```python
-# PhysOSᵀ-py · the Python witness edition of PhysOSᵀ 1.0.10p · G6: the universal seat proved in Python, least erasure read by region, the road mapped. Executes Register A (Parts 0 and
+# PhysOSᵀ-py · the Python witness edition of PhysOSᵀ 1.0.13p · G6: the universal seat proved in Python, least erasure read by region, the road mapped. Executes Register A (Parts 0 and
 # A of the thesis); the root: TOE_Zero.lean executed in Python, its six laws checked as proof terms by a kernel with no
 # axiom rule and its nine decided theorems evaluated on the Lean definitions; Appendix R, TOE_Zero.lean itself, carried
 # verbatim, pinned to its published SHA-256 and screened; the root's twin and its scope, nothing escapes; Seal L, Seal
@@ -218,7 +221,7 @@ TEXT = r""""""    # PHASE = "scan": the draft to be scanned
 HEIGHT = 100      # PHASE = "le": the height to which least erasure is executed on the actual zeros, outside the chain
 import hashlib, sys, platform, time
 
-ED = "PhysOSᵀ-py G6 · from PhysOSᵀ 1.0.10p sha256 82532895a4284a42"
+ED = "PhysOSᵀ-py G6 · from PhysOSᵀ 1.0.13p sha256 fa9af59d03932f33"
 LEAN_PIN = "0cfcd9f6b399ecbaef01e762a4d9f10490288f1053827b404428062e55076238"   # TOE_Zero.lean, published
 LEAN = {}
 LEAN['TOE_Zero.lean'] = r'''/-
