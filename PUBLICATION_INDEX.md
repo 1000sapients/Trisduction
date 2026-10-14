@@ -9,22 +9,22 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**95 works · 124 Zenodo deposits.**
+**96 works · 125 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 88 / 95 | 92% |
-| Git PDF | 64 / 95 | 67% |
-| Internet Archive | 50 / 95 | 52% |
-| PhilArchive | 4 / 95 | 4% |
+| Zenodo | 89 / 96 | 92% |
+| Git PDF | 65 / 96 | 67% |
+| Internet Archive | 50 / 96 | 52% |
+| PhilArchive | 4 / 96 | 4% |
 
-Status: 88 live, 7 unknown.
+Status: 89 live, 7 unknown.
 
 ## Coverage gaps
 
 The only view in the repository that answers "what is published where, and what is missing." Each list is a work queue, not an error.
 
-### On Zenodo, not on the Internet Archive (45)
+### On Zenodo, not on the Internet Archive (46)
 
 Deposited to Zenodo but no IA item located. IA is the second permanence surface; a work here has one address, not two.
 
@@ -72,6 +72,7 @@ Deposited to Zenodo but no IA item located. IA is the second permanence surface;
 - `platonic-ghost-divided-line` · Plato's Divided Line: The Platonic Ghost and the Golden Shadow
 - `the-two-waters` · The Two Waters: A Geometric Reading of Jannat, Where Mercy That Descends Becomes Mercy That Dwells
 - `one-bit-across-the-wall` · One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twenty-Three Rows
+- `rh-ten-level-binding-chain` · The Ten-Level Binding Chain of the Atomic Proof of the Riemann Hypothesis: From the Ground Floor to the Cargo:
 - `rh-twin-binder-one-locus` · A Formal Proof of the Riemann Hypothesis: The Twin Binder, One Locus: Physical and Formal Closures on a Single
 
 ### No PDF matched in this repository (31)
@@ -133,6 +134,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
 | `rh-twin-binder-one-locus` | A Formal Proof of the Riemann Hypothesis: The Twin Binder, One Locus: Physical and Formal Closu | Riemann Hypothesis | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/RH_Twin_Binder_One_Locus_v1_0_0.pdf) | — | — | — | — | 2026-10-14 |
+| `rh-ten-level-binding-chain` | The Ten-Level Binding Chain of the Atomic Proof of the Riemann Hypothesis: From the Ground Floo | Riemann Hypothesis | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/RH_Binding_Chain_v1_3_0_Formal_MathJournal.pdf) | `10.5281/zenodo.23308380` | 1 | — | — | 2026-10-14 |
 | `rh-final-synthesis-least-erasure` | A Formal Proof of the Riemann Hypothesis from a One-Bit Premise, Least Erasure: The Hypothesis  | Riemann Hypothesis | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/RH_3_2_0_Least_Erasure.pdf) | `10.5281/zenodo.23034065` | 1 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-least-erasure) | — | 2026-10-07 |
 | `three-bits-walked` | Three Bits Walked: The Completed Formal Closure of the Seven Millennium Rows: The Root Proved U | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/Three_Bits_Walked_v1_2_5.pdf) | `10.5281/zenodo.23167728` | 1 | [ia](https://archive.org/details/three-bits-walked-islam-2026) | — | 2026-10-06 |
 | `bsd-closure-rank-registered-on-the-seat` | A Formal Completed Proof of the Birch and Swinnerton-Dyer Closure: The Rank Registered on the S | Millennium Series | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/Formal_Completed_Proof_BSD_Closure_v1_0_5.pdf) | `10.5281/zenodo.23164991` | 1 | [ia](https://archive.org/details/formal-completed-proof-bsd-closure-islam-2026) | — | 2026-10-06 |
@@ -264,11 +266,12 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `orthogonal-fertile-logos` | ORTHOGONAL FERTILE LOGOS: Triaxial Verification, Displacement-as-Creation, and the Tw | `10.5281/zenodo.20575676` | 1 | — | 2026-06-07 |
 | `on-time` | On Time: The Past Absolved, the Present Cutting, and the Future Held. A Trisductive D | `10.5281/zenodo.20575693` | 1 | — | 2026-06-07 |
 
-### Riemann Hypothesis (10)
+### Riemann Hypothesis (11)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
 | `rh-twin-binder-one-locus` | A Formal Proof of the Riemann Hypothesis: The Twin Binder, One Locus: Physical and Fo | — | — | — | 2026-10-14 |
+| `rh-ten-level-binding-chain` | The Ten-Level Binding Chain of the Atomic Proof of the Riemann Hypothesis: From the G | `10.5281/zenodo.23308380` | 1 | — | 2026-10-14 |
 | `rh-final-synthesis-least-erasure` | A Formal Proof of the Riemann Hypothesis from a One-Bit Premise, Least Erasure: The H | `10.5281/zenodo.23034065` | 1 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-least-erasure) | 2026-10-07 |
 | `rh-from-existence-alone` | A Formal Proof of the Real Part of the Riemann Hypothesis: The Seat, the Address, and | `10.5281/zenodo.22912937` | 4 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-existence-alone) | 2026-09-25 |
 | `rh-has-one-address` | A Formal Completed Proof That the Riemann Hypothesis Has One Address and Not a Sequen | `10.5281/zenodo.22929636` | 1 | [ia](https://archive.org/details/formal-completed-proof-riemann-hypothesis-one-address) | 2026-09-24 |
