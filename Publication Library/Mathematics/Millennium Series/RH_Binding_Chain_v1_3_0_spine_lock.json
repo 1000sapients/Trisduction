@@ -1,0 +1,223 @@
+{
+  "schema": "spine_lock/2",
+  "created": "2026-10-13T12:03:46Z",
+  "artifact": "old_body.txt",
+  "artifact_sha256": "ba4807721e41e81e",
+  "thesis": "The parent paper carries the Riemann Hypothesis to one proposition from both of its sides, proves that proposition irreducible within its formalized interface, and closes it at a capstone whose every input is printed; this companion states that architecture as one chain of ten levels and nothing else.",
+  "title": {
+    "original": "The Ten-Level Binding Chain of the Atomic Proof of the Riemann Hypothesis",
+    "target": "The Ten-Level Binding Chain of the Atomic Proof of the Riemann Hypothesis",
+    "status": "VERBATIM",
+    "retitled": null
+  },
+  "subtitle": {
+    "original": "From the Ground Floor to the Cargo: the Mathematical Perimeter Exhausted by Theorem, the Empirical Closure on Eight Printed Inputs",
+    "target": "From the Ground Floor to the Cargo: the Mathematical Perimeter Exhausted by Theorem, the Cargo Delivered by Compute",
+    "status": "ARCHITECT_RULING",
+    "retitled": {
+      "from": "From the Ground Floor to the Cargo: the Mathematical Perimeter Exhausted by Theorem, the Empirical Closure on Eight Printed Inputs",
+      "to": "From the Ground Floor to the Cargo: the Mathematical Perimeter Exhausted by Theorem, the Cargo Delivered by Compute",
+      "mechanism": "ARCHITECT_RULING",
+      "cut_claim": null,
+      "evidence": "Architect instruction 2026-10-13 07:52: replace the clause 'the Empirical Closure on Eight Printed Inputs' with 'the Cargo Delivered by Compute'. Not a Concession-Gate move; no claim cut. The eight-input closure is carried whole as fenced optional corroboration.",
+      "t": "2026-10-13T11:52:00Z"
+    }
+  },
+  "lingo_tier": "1",
+  "original_edition": "math_journal",
+  "target_edition": "math_journal",
+  "detection": {
+    "tier": "1",
+    "tier_evidence": "1 distinct framework terms, none strict",
+    "strict_tokens": {},
+    "framework_terms": {
+      "Trisduction": 3
+    },
+    "edition": "journal",
+    "edition_signals_matched": 3,
+    "edition_confidence": "high"
+  },
+  "claims": {
+    "C1": {
+      "text": "Level 1 is the ground floor, the theorem-grade block of the unconditional route: no premise shared by every reflection-closed configuration, the root included, and no reading of the record forces the value, and every premise that does force it is the value or strictly stronger.",
+      "tier": "T",
+      "status": "FORTIFIED",
+      "fortified": {
+        "kind": "precision",
+        "evidence": "rhc3 round 4 (I-10): the record clause now reads 'no reading of the record decides it', the statement of the_unconditional_route_is_blocked conjunct 4 [propext, Classical.choice, Quot.sound]; 'forces' failed vacuously at the empty configuration under the seed's Forces",
+        "from_tier": "T",
+        "to_tier": null,
+        "t": "2026-10-13T18:41:04Z"
+      }
+    },
+    "C2": {
+      "text": "Levels 2 to 9 exhaust the mathematical perimeter by theorem: the form, the open leg, the blind record, the premise forced, the refuter barred, terminal saturation, the timeless closure, and the formal terminal, one dot and no third value.",
+      "tier": "T",
+      "status": "HELD"
+    },
+    "C3": {
+      "text": "Before the cargo the chain has already proved that the demand for an unconditional proof from what the interface shares is blocked at theorem grade.",
+      "tier": "T",
+      "status": "HELD"
+    },
+    "C4": {
+      "text": "Level 10 is the cargo, closed at a capstone whose every input is printed, with an empty cone.",
+      "tier": "T",
+      "status": "FORTIFIED",
+      "fortified": {
+        "kind": "fortification",
+        "evidence": "Level 10 rebuilt on the compute cargo: seed 2.0.5 compiled whole under core Lean 4.19.0 (commit 6caaee842e94), exit 0, 43 s; Part VIII-b compiles standalone exit 0; local_computation_is_forgetting, event_witnesses_floor, stage1_closes, computation_enacts_stage1 cones none; Part IV-b the_run_witnesses_a_run, the_run_does_not_force_the_value, force_witness_closure surfaced at cone none; composed conditional classical_rh_from_the_act compiled against the seed, cone none. Supply stays premise grade.",
+        "from_tier": "T",
+        "to_tier": "T",
+        "t": "2026-10-13T12:17:08Z"
+      }
+    },
+    "C5": {
+      "text": "Every name is a theorem of the seed printed whole in the Appendix, and every cone is the compiler's.",
+      "tier": "T",
+      "status": "HELD"
+    },
+    "C6": {
+      "text": "The three exits are the only ones: rejecting the conclusion requires naming one of them, and there is no fourth.",
+      "tier": "T",
+      "status": "HELD"
+    },
+    "C7": {
+      "text": "Every proof of the value at a closed zero set, from any premise whatever, is a supply of the one field (accepting_rh_forces_the_atomic_proof).",
+      "tier": "T",
+      "status": "HELD"
+    },
+    "C8": {
+      "text": "A theorem is stated as proved and a premise is stated as a premise at full force; the bit is premise grade.",
+      "tier": "P",
+      "status": "HELD"
+    }
+  },
+  "concessions": [],
+  "fortifications": [
+    {
+      "id": "C4",
+      "kind": "fortification",
+      "to": "T",
+      "t": "2026-10-13T12:17:08Z"
+    },
+    {
+      "id": "C1",
+      "kind": "precision",
+      "to": null,
+      "t": "2026-10-13T18:41:04Z"
+    }
+  ],
+  "log": [
+    {
+      "t": "2026-10-13T12:03:46Z",
+      "e": "init"
+    },
+    {
+      "t": "2026-10-13T11:52:00Z",
+      "e": "architect_subtitle_ruling"
+    },
+    {
+      "t": "2026-10-13T12:16:51Z",
+      "e": "falsifier",
+      "id": "F1",
+      "kind": "FORCED"
+    },
+    {
+      "t": "2026-10-13T12:16:51Z",
+      "e": "falsifier",
+      "id": "F2",
+      "kind": "IMPORT"
+    },
+    {
+      "t": "2026-10-13T12:17:08Z",
+      "e": "fortify",
+      "id": "C4"
+    },
+    {
+      "t": "2026-10-13T18:41:04Z",
+      "e": "fortify",
+      "id": "C1"
+    }
+  ],
+  "updated": "2026-10-13T18:41:04Z",
+  "edition_note": "Original Math Journal (xelatex, mathjournal_1col). Hard default Journal satisfied by the Math Journal renderer (the Journal page through LaTeX, equation and code dense).",
+  "twin": "Architect 2026-10-13 08:02: v1.2.0 is the physical edition and stays untouched; this rewrite is the formal edition, its twin.",
+  "surfaces": {
+    "scanned": "2026-10-13T12:04:00Z",
+    "disposition": "TWIN",
+    "keys": [
+      [
+        2,
+        "the ten level binding chain of the atomic proof of the riemann hypothesis"
+      ],
+      [
+        2,
+        "the ten level binding chain of the atomic proof of the riemann hypothesis from the ground floor to the cargo the mathematical perimeter exhausted by theorem the cargo delivered by compute"
+      ],
+      [
+        2,
+        "the ten level binding chain of the atomic proof of the riemann hypothesis from the ground floor to the cargo the mathematical perimeter exhausted by theorem the empirical closure on eight printed inputs"
+      ],
+      [
+        4,
+        "the ten level binding chain of the atomic proof of the riemann hypothesis"
+      ]
+    ],
+    "pdf_md5": "3c97cda06fe3a82c8e3c45d643bd16ae",
+    "git": {
+      "state": "ABSENT",
+      "hits": []
+    },
+    "archive": {
+      "state": "ABSENT",
+      "identifier": "trisduction-the-ten-level-binding-chain-of-the-atomic-proof-of-the-riemann-hypothesis"
+    },
+    "zenodo": {
+      "state": "UNREADABLE",
+      "why": "ZENODO_TOKEN unset; the public search is not a substitute for the owner-scoped channel and a search zero is not evidence of absence",
+      "hits": []
+    },
+    "ambiguity": [],
+    "zenodo_public_read": {
+      "channel": "public API GET /api/records/23308381 (not owner-scoped)",
+      "record": "23308381",
+      "doi": "10.5281/zenodo.23308381",
+      "concept": "10.5281/zenodo.23308380",
+      "files": {
+        "RH_Binding_Chain_v1_2_0_MathJournal.pdf": "md5 3c97cda06fe3a82c8e3c45d643bd16ae (key 5: byte-identical to the incoming original)",
+        "RH_Both_Sides_Seed_v2.0.5.lean": "md5 2c06e8e94fe38404e919bdae8ecf49f7",
+        "RH_Both_Sides_Formal_Master_v3.0.2.lean": "md5 0bdb060d34bd4d82ea7fb601606b58b8"
+      }
+    },
+    "note": "The physical edition v1.2.0 is resident on Zenodo 23308381 (key 5). Architect ruling 08:02: it stays as the physical twin; the rewrite is the formal twin under a distinct subtitle. Push verb (new record, or added beside v1.2.0 on 23308381) is decided at the Confirmation Gate. Git: no Publication Library copy under any key. Archive: identifier free."
+  },
+  "falsifiers": [
+    {
+      "id": "F1",
+      "kind": "FORCED",
+      "event": "a non-trivial zero of zeta certified off the critical line by interval arithmetic, 0 < Re s < 1 and |Re s - 1/2| > eps > 0 for a rational eps (F-Computed)",
+      "conditions": "the certificate is machine-checkable and the zero lies in the open strip at a rational margin; binds on the reading h_read",
+      "compromises": "C4: the supply posited at Level 10, the act at the configuration where the zeros of zeta are read",
+      "tripwire": false,
+      "imports": [],
+      "claim": "C6",
+      "t": "2026-10-13T12:16:51Z"
+    },
+    {
+      "id": "F2",
+      "kind": "IMPORT",
+      "event": "an unaccounted residual heat flux of the vacuum detected above the bound eps within the dataset, window and background model the bound was read from (F-Flux)",
+      "conditions": "binds only on the optional corroboration of Section 5, with Landauer's law entered as a definition and the carrier realized",
+      "compromises": "the optional corroboration route of Section 5 only; the cargo of Level 10 is untouched",
+      "tripwire": true,
+      "imports": [
+        "Landauer bound as a physical law",
+        "CMB temperature floor",
+        "certified observational bound"
+      ],
+      "claim": null,
+      "t": "2026-10-13T12:16:51Z"
+    }
+  ]
+}
