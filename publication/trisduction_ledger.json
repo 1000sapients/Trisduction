@@ -3595,9 +3595,10 @@
         "state": "published"
       },
       "ia": {
-        "identifier": null,
-        "url": null,
-        "state": "not-deposited"
+        "identifier": "ten-level-binding-chain-riemann-hypothesis",
+        "url": "https://archive.org/details/ten-level-binding-chain-riemann-hypothesis",
+        "state": "live",
+        "file": "The Ten-Level Binding Chain.pdf"
       },
       "philarchive": {
         "record": null,
@@ -3605,7 +3606,7 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": "Edition 1.3.0, the formal edition, 14 October 2026, Math Journal edition, 67 pages, twin of the physical edition 1.2.0 (11 October 2026; Zenodo record 23308381 as first published on 2026-10-12), kept beside it in git as RH_Binding_Chain_v1_2_0_Physical_MathJournal.pdf. Forged under the automated paper upgrade from 1.2.0 and closed under audit cycle rhc3 (21 rounds, 14 valid, 109 findings, 0 FATAL, 10 LOAD-BEARING repaired, SELF controls) at round 21 by the architect's ruling of 2026-10-14, not by a computed terminal verdict; closing card, Pre-Forge Digest and ledger bundle beside the paper. Box 1's eight compositions recompiled from the final text against seed 2.0.5 (sha256 a82ef4f0), cones matched. Zenodo: the architect ruled on 2026-10-14 that the formal edition replaces the physical edition's PDF at record 23308381 in place, same DOI; the replacement is recorded in extra when it lands.",
+      "note": "Edition 1.3.0, the formal edition, 14 October 2026, Math Journal edition, 67 pages, twin of the physical edition 1.2.0 (11 October 2026), kept beside it in git as RH_Binding_Chain_v1_2_0_Physical_MathJournal.pdf. Forged under the automated paper upgrade from 1.2.0 and closed under audit cycle rhc3 (21 rounds, 14 valid, 109 findings, 0 FATAL, 10 LOAD-BEARING repaired, SELF controls) at round 21 by the architect's ruling of 2026-10-14, not by a computed terminal verdict; closing card, Pre-Forge Digest and ledger bundle beside the paper. Zenodo record 23308381 replaced in place on 2026-10-14 by the architect's ruling, same DOI, version count on concept 23308380 unchanged at 1: files RH_Binding_Chain_v1_3_0_Formal_MathJournal.pdf (md5 0fd9b25a), RH_Both_Sides_Seed.lean (seed 2.0.5, md5 2c06e8e9) and RH_Both_Sides_Formal_Master_v3.0.8.lean (MathOS copy, md5 07ccff3c); v3.0.5 removed; metadata revised (title, version 1.3.0, preprint, ORCID, keywords, related identifiers, notes). The seed travels as RH_Both_Sides_Seed.lean, the paper's own name for it, because Zenodo returns HTTP 500 on publish when a filename removed from a record is added back; RH_Both_Sides_Seed_v2.0.5.lean was on this record until 2026-10-13 23:55 UTC, and the failure was isolated by single-change publishes. IA item ten-level-binding-chain-riemann-hypothesis created 2026-10-14, file The Ten-Level Binding Chain.pdf, md5 7db602a2 (uncompressed, qpdf).",
       "extra": {
         "edition_1_3_0_2026_10_14": {
           "version": "1.3.0",
@@ -3616,7 +3617,15 @@
           "git_physical_1_2_0_pdf_sha256": "1a17812de883993c38779b34dc830dcb462c24c2995bcddfd3c2c71e847d9b69",
           "seed": "RH_Both_Sides_Seed_v2.0.5.lean sha256 a82ef4f0ad6ceb43a2d3cc964b110943dbb02f050ab88ff2845df1226a321a57",
           "formal_master_cited": "FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_8.lean sha256 fe45b3c1eb69d8ef716fb2b2bc5e2470d1ebf66270e533cbbf776894e3359409",
-          "audit": "rhc3 rounds 1-21, closed by the architect's ruling at round 21; last valid verdict CONTINUE-DEBT (round 20); 109 findings: 85 EARNED, 23 SCOPED, 1 REFUSED-STRUCTURAL; controls SELF"
+          "audit": "rhc3 rounds 1-21, closed by the architect's ruling at round 21; last valid verdict CONTINUE-DEBT (round 20); 109 findings: 85 EARNED, 23 SCOPED, 1 REFUSED-STRUCTURAL; controls SELF",
+          "zenodo_record": 23308381,
+          "zenodo_file": "RH_Binding_Chain_v1_3_0_Formal_MathJournal.pdf",
+          "zenodo_md5": "0fd9b25abcc4133aedf60adabd64c591",
+          "zenodo_seed_file": "RH_Both_Sides_Seed.lean",
+          "zenodo_master_file": "RH_Both_Sides_Formal_Master_v3.0.8.lean",
+          "ia_file": "The Ten-Level Binding Chain.pdf",
+          "ia_md5": "7db602a214e68220159ed694184bdc44",
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
         }
       }
     }
