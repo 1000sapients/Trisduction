@@ -3510,6 +3510,54 @@
           "ia_state": "replacement queued; live md5 17029899 at 2026-10-06"
         }
       }
+    },
+    "rh-twin-binder-one-locus": {
+      "title": "A Formal Proof of the Riemann Hypothesis: The Twin Binder, One Locus: Physical and Formal Closures on a Single Locus, Sealed in One Lean 4 File",
+      "domain": "Riemann Hypothesis",
+      "status": "live",
+      "first_published": "2026-10-14",
+      "last_updated": "2026-10-14",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0.pdf",
+        "editions": [
+          "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0_source.zip",
+          "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0_audit_round_1.md",
+          "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0_audit_round_1.zip"
+        ]
+      },
+      "zenodo": {
+        "conceptrecid": null,
+        "concept_doi": null,
+        "latest_version_doi": null,
+        "latest_record": null,
+        "versions": 0,
+        "state": "not-deposited"
+      },
+      "ia": {
+        "identifier": null,
+        "url": null,
+        "state": "not-deposited"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": null,
+      "superseded_by": null,
+      "note": "Version 1.0.0, 14 October 2026, Math Journal edition, 148 pages, Appendix D carrying the deposited Lean file verbatim and Appendix E the paper as one theorem. Deposited file RH_Both_Sides_Formal_Master_v3.0.8.lean, sha256 fe45b3c1, seated in git at FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_8.lean (commit 5bcfcdd). One round of the adversarial audit cycle (twinbinder r1, kinematic+definitional, SEAT M1-M8 beside it) closed at CONTINUE-PREREG-BLOCK with 25 repairs landed before deposit; the round block and ledger travel beside the paper. Seated at commit a8ef7e0.",
+      "extra": {
+        "edition_1_0_0_2026_10_14": {
+          "version": "1.0.0",
+          "edition_date": "2026-10-14",
+          "git_commit": "a8ef7e0",
+          "git_pdf_sha256": "59d5c8d8bbf0c549da47775da3bfed1f88987b0400f59a1c53a1b95255b898e7",
+          "git_md_sha256": "683094b00de1ba989077320029d6488615907a1442c475ef2eda726f70031b5a",
+          "lean_file": "FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_8.lean",
+          "lean_sha256": "fe45b3c1eb69d8ef716fb2b2bc5e2470d1ebf66270e533cbbf776894e3359409",
+          "audit": "twinbinder r1 CONTINUE-PREREG-BLOCK, 28 findings, 25 EARNED, 3 REFUSED-STRUCTURAL, controls 3/3 SELF"
+        }
+      }
     }
   }
 }
