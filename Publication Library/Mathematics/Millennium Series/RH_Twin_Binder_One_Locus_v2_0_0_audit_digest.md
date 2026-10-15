@@ -45,10 +45,14 @@ Mechanical receipts:
 
 The paper reports each point as the file stands.
 
-## 5. Build
+## 5. Appendix B and PSP-TRIAXIAL-NEC-SUFF-01
+
+Appendix B's account of the triaxial method now states the triad's irreducibility at its type: the PhysOS mother codex, v1.0.16p, proves by `decide` that two linear equations in three unknowns over GF(2) never have exactly one solution (`two_axes_never_lock`), so on every locked system each pair of equations leaves the point open (`triad_irreducible`); that the triad suffices to map its domain stands as a premise, as PSP-TRIAXIAL-NEC-SUFF-01 carries it. PSP-ONE-BIT-NEC-SUFF-01 is not cited: what it states abstractly the paper already states at concrete types (Theorems 7.18, 7.19 and 7.27).
+
+## 6. Build
 
 - **Engine:** XeLaTeX, two passes.
 - **Output:** 180 pages, no overfull line. The abstract fits page 1, the end-of-manuscript probe passes and the margin scan is clean.
-- **PDF SHA-256:** `d9c08358d12d89baab1095a5fe389c827d7d007b778a19b493d4c5bbcc985839`.
-- **Markdown SHA-256:** `68024308e12bc35391104ae73e3922c47401533c7f364951700d79883fee505d`.
-- **Source:** the LaTeX source stands beside the paper as `RH_Twin_Binder_One_Locus_v2_0_0_source.zip`, SHA-256 `1a1a500cac62f4007c3d7081d27e5346ed022244d1da0941c41da7e22c08cc62`.
+- **PDF SHA-256:** `f6e2cdeae5e99ee614bdc05561725dbedd910cd75875edeebb3cda008a5a4ad9`.
+- **Markdown SHA-256:** `3c65a96bda453cfb2f0a152fef8cb9f8884c3205e8417b7cdf5051319676e120`.
+- **Source:** the LaTeX source stands beside the paper as `RH_Twin_Binder_One_Locus_v2_0_0_source.zip`, SHA-256 `e8df52eb3be29d4bf4bb9e56c15dea674a58fc3fd44aea06e71656caf0c05ced`.
