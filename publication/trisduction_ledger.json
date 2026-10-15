@@ -3608,6 +3608,26 @@
             "ia_bytes": 9702016,
             "appendix_b_commit": "1d5d391",
             "appendix_b_index": "706b41a"
+          },
+          "repinned_v3_0_22_CC": {
+            "git_commit": "c5af110",
+            "index_commit": "7bb57ae",
+            "pages": 186,
+            "git_pdf_sha256": "e17c6008bf5471c9fb19029b7194b6fd2f5a03fd61789e1e4e671f79867fb1eb",
+            "git_md_sha256": "648cf7d0b3e8c8f61e17a52ad29bb76f6db4af990934e0a377433362419ec84a",
+            "source_sha256": "3daa196c3e6554b0c09169513012629b49f5e4a7f998841f89b64a739c37d95b",
+            "lean_file": "FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_22_CC.lean",
+            "lean_commit": "16d3f1b",
+            "lean_sha256": "75b3066493a89a0c814e7aed1151eb0dfe01efc1769ee7e30728cba81f4f4f05",
+            "audit": "pass 6 against v3.0.22_CC: 9 findings (1 load-bearing, 5 structural, 3 cosmetic) repaired; the header's decoupling clause omits the_terminal_certification, reported in the paper and the digest",
+            "zenodo_files": [
+              "RH_Twin_Binder_One_Locus_v2_0_0.pdf md5 15c2c31f56bef1bd84378186942492b5",
+              "RH_Both_Sides_Formal_Master_v3_0_22_CC.lean md5 f647e225c8090be1a7fb3cdb5abe5a9c"
+            ],
+            "zenodo_replaced": "pdf replaced under its name, v3_0_19.lean replaced by v3_0_22_CC.lean; edit 201, unlock 200, publish 202; version count 1 -> 1",
+            "ia_md5": "6a427967b2d803e92a128f081a171879",
+            "ia_bytes": 10014512,
+            "ia_meta": "item description and file description patched"
           }
         }
       }
