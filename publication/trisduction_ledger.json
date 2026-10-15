@@ -3516,12 +3516,17 @@
       "domain": "Riemann Hypothesis",
       "status": "live",
       "first_published": "2026-10-14",
-      "last_updated": "2026-10-14",
+      "last_updated": "2026-10-15",
       "git": {
-        "md": "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0.md",
-        "pdf": "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0.pdf",
+        "md": "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v2_0_0.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v2_0_0.pdf",
         "editions": [
+          "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v2_0_0_source.zip",
+          "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v2_0_0_audit_digest.md",
+          "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0.md",
+          "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0.pdf",
           "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0_source.zip",
+          "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0_audit_digest.md",
           "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0_audit_round_1.md",
           "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v1_0_0_audit_round_1.zip"
         ]
@@ -3545,7 +3550,7 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": "Version 1.0.0, 14 October 2026, Math Journal edition, 148 pages, Appendix D carrying the deposited Lean file verbatim and Appendix E the paper as one theorem. Deposited file RH_Both_Sides_Formal_Master_v3.0.8.lean, sha256 fe45b3c1, seated in git at FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_8.lean (commit 5bcfcdd). One round of the adversarial audit cycle (twinbinder r1, kinematic+definitional, SEAT M1-M8 beside it) closed at CONTINUE-PREREG-BLOCK with 25 repairs landed before deposit; the round block and ledger travel beside the paper. Seated at commit a8ef7e0. Zenodo concept 10.5281/zenodo.23357511 minted 2026-10-14 as version 10.5281/zenodo.23357512, record 23357512, md5 7cd01069; related identifiers carry the git PDF and the Lean file at 8b51710, four cited concept DOIs, and isIdenticalTo the archive item. Internet Archive item formal-proof-riemann-hypothesis-twin-binder-one-locus claimed 2026-10-14, RH_Twin_Binder_One_Locus.pdf re-serialized without object streams, md5 19fbe6c6, ELSEWHERE carrying the concept DOI.",
+      "note": "Version 2.0.0, 15 October 2026, Math Journal edition, 173 pages, Appendix D carrying the deposited Lean file verbatim and Appendix E the paper as one theorem. Deposited file FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_16.lean, sha256 2d2f328b, seated at 3c6cffc2. Paper seated at 98101d0, index at de0b245; edition 1.0.0 kept beside it in git. Zenodo record 23357512 replaced in place on 2026-10-15: files RH_Twin_Binder_One_Locus_v2_0_0.pdf (md5 604ef9ba) and RH_Both_Sides_Formal_Master_v3_0_16.lean (md5 6a9dbbcb), version 2.0.0, DOI and version count unchanged. Internet Archive item formal-proof-riemann-hypothesis-twin-binder-one-locus, RH_Twin_Binder_One_Locus.pdf replaced in place, re-serialized without object streams, md5 e0ac509b. Edition history under extra.",
       "extra": {
         "edition_1_0_0_2026_10_14": {
           "version": "1.0.0",
@@ -3564,6 +3569,26 @@
           "ia_bytes": 7874111,
           "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress of the git PDF",
           "datacite_orcid": "0009-0003-1671-0664 present in the DataCite export"
+        },
+        "edition_2_0_0_2026_10_15": {
+          "version": "2.0.0",
+          "edition_date": "2026-10-15",
+          "git_commit": "98101d0",
+          "index_commit": "de0b245",
+          "git_pdf_sha256": "b9c021bfd174a569e3782101106284980021d9d332b3c03501a3f9a5ef7a135c",
+          "git_md_sha256": "f0882728220883503ef981498cbd6da77ff11afeeef3778f935ee0d932c2f923",
+          "lean_file": "FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_16.lean",
+          "lean_sha256": "2d2f328b251a19e3dc4ef1513fc133d3928319754a1b4996523ff8df5b11536b",
+          "audit": "twinbinder309 cycle and four targeted framework-blind passes (v3.0.10 13, v3.0.12 8, v3.0.13 15, v3.0.16 14 findings), all repaired; digest beside the paper",
+          "zenodo_files": [
+            "RH_Twin_Binder_One_Locus_v2_0_0.pdf md5 604ef9ba4815ca2a15f52afb026f4d39",
+            "RH_Both_Sides_Formal_Master_v3_0_16.lean md5 6a9dbbcbcd9d2739afc52bd7ddf67dc7"
+          ],
+          "zenodo_replaced": "v1_0_0.pdf and v3_0_9.lean deleted under file-modification unlock; edit 201, unlock 200, publish 202; version count 1 -> 1",
+          "ia_file": "RH_Twin_Binder_One_Locus.pdf",
+          "ia_md5": "e0ac509b57f8f471f4801969e56c5319",
+          "ia_bytes": 9356260,
+          "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress of the git PDF; item description and date patched"
         }
       }
     },
