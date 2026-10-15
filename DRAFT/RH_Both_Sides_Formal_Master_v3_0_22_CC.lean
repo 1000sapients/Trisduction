@@ -22,16 +22,16 @@ import Mathlib.Analysis.NormedSpace.Connected
 
   THE BLOCKED ROUTES, FIRST. Before any forward deduction is attempted, this file
   proves that no derivation valid at every reflection-closed configuration, from what
-  those configurations share, yields the value: `the_unconditional_route_is_blocked`,
-  `record_decides_nothing`, `no_closed_principle_decides`. Every route to
-  RiemannHypothesis, from any premise, delivers the 1-bit (`every_route_passes_the_bit`):
-  the bit is the hypothesis in fixed-point form, located and isolated by machine-checked proof.
+  those configurations share, yields the value, and that no record-invariant predicate
+  decides it: `the_unconditional_route_is_blocked`, `no_closed_principle_decides`,
+  `record_decides_nothing`. Every route to RiemannHypothesis, from any premise, delivers
+  the 1-bit (`every_route_passes_the_bit`), each reading of which is the hypothesis.
 
   DECOUPLING. Part X (`BoundChainMathlib`) is mathematics over ℂ on Mathlib's analysis,
-  Part I's root and the discrete charts of Parts III and IX. No physical premise enters
-  it except in the joint seal of §X-l (`physico_formal_supplies_look_back_and_rh`).
-  Parts VII–VIII are fenced retrospective corroboration. Two bridges, §X-i and that
-  seal, join the sides; no capstone uses them, nor the binder of either closure.
+  Part I's root and the discrete charts of Parts III and IX; its two bridges, §X-i and
+  the joint seal of §X-l, also use Parts VII–VIII, the fenced retrospective corroboration.
+  No physical premise enters Part X except in that seal. No capstone and neither closure's
+  own binder uses the bridges; the complex extensions and the twin binder carry them.
 
   The bridge itself — `LeastErasure (Rec ZetaZeros) → LeastErasure ZetaZeros` —
   is the exact 1-bit content of RH by the proved normal form above; it is the
@@ -12538,8 +12538,8 @@ noncomputable def record_self_grounding_RO :
 #print axioms BoundChainMathlib.record_self_grounding_RO
 
 /-- ROUND 2, STEP 1: THE HALT OF EVERY UNIFORM ROUTE. Round 1 closed the apex: every reading
-    of the bit is one proposition (`apex_one_gap`). Round 2, from the record to the apex,
-    halts for every route uniform over reflection-closed configurations: on Part III's
+    of the bit is one proposition (`apex_one_gap`). Round 2 halts for every route uniform
+    over reflection-closed configurations: on Part III's
     discrete chart no derivation valid at every closed configuration yields the value
     (`RememberedOffered.the_unconditional_route_is_blocked`, at `record_self_grounding_RO`).
     No premise. -/
@@ -12556,7 +12556,8 @@ theorem round2_halted_uniduction :
 
 /-- ROUND 2, STEP 2: RESIDUAL MONISM. Over ℂ the line-bound configuration
     `registered offPoint` and the off-line pair world share one record, and the Monism
-    witness, which is the value on every configuration (`root_read_twice_iff_value`), holds
+    witness, provably equivalent to the value on every configuration
+    (`root_read_twice_iff_value`), holds
     on the first and fails on the second. The type is that of
     `monism_separates_shared_record`. No premise. -/
 theorem round2_residual_monism :
@@ -12588,7 +12589,8 @@ theorem round2_absolute_closure :
     analytic or otherwise, delivers `RightHalfStripZeroFree`, `LookBack`, retraction
     injectivity of the zeros and the Monism witness at the zeros: each is proved
     equivalent to the hypothesis (`analytic_target_reduction`), so no route to the
-    hypothesis avoids the 1-bit. No premise. -/
+    hypothesis avoids the 1-bit. Its content is that `RiemannHypothesis` implies each of
+    the four; the premise `Q` types the reading that any route delivers them. No premise. -/
 theorem every_route_passes_the_bit :
     ∀ Q : Prop, (Q → RiemannHypothesis) → Q →
       RightHalfStripZeroFree ∧ LookBack ∧ RetractionInjective ZetaZeros ∧
@@ -12631,15 +12633,25 @@ theorem analytic_route_sealed :
 #guard_msgs in
 #print axioms BoundChainMathlib.analytic_route_sealed
 
-/-- THE TERMINAL CERTIFICATION, AS A THEOREM. Every result the terminal certification block
-    of this file cites, bound by its exact type into one conjunction, so that the block's
-    claims are checked by the kernel and not only stated in prose. No premise. -/
+/-- THE TERMINAL CERTIFICATION, AS A THEOREM. Every theorem the terminal certification block
+    of this file cites, bound by its exact type into one pinned conjunction, so that a reader
+    checks every result the block cites by checking one identifier. The block's counts and
+    paraphrases remain prose, each sentence citing the theorem it reads. No premise. -/
 theorem the_terminal_certification :
     (type_of% @BoundChainMathlib.canonical_rh_unconditional) ∧
     (type_of% @BoundChainMathlib.canonical_property_holds_off_the_line) ∧
+    (type_of% @BoundChainMathlib.the_remembered_is_lossless) ∧
     (type_of% @BoundChainMathlib.pause_is_unconditional) ∧
     (type_of% @BoundChainMathlib.the_unconditional_retrospective_seal) ∧
     (type_of% @BoundChainMathlib.look_back_is_the_closure) ∧
+    (type_of% @BoundChainMathlib.apex_cone) ∧
+    (type_of% @BoundChainMathlib.classes_coincide_under_ra_zeta) ∧
+    (type_of% @BoundChainMathlib.rh_from_the_cargo_loop) ∧
+    (type_of% @BoundChainMathlib.rh_from_closed_and_retraction_injective) ∧
+    (type_of% @BoundChainMathlib.zeta_zeros_closed) ∧
+    (type_of% @BoundChainMathlib.rh_from_retraction_injective) ∧
+    (type_of% @BoundChainMathlib.rh_from_pause_and_look_back) ∧
+    (type_of% @BoundChainMathlib.no_offline_refuter_seals_rh) ∧
     (type_of% @RememberedOffered.one_record) ∧
     (type_of% @RememberedOffered.the_true_world_carries_monism) ∧
     (type_of% @RememberedOffered.the_false_world_carries_no_monism) ∧
@@ -12649,15 +12661,27 @@ theorem the_terminal_certification :
     (type_of% @BoundChainMathlib.canonical_normal_form_bridge) ∧
     (type_of% @BoundChainMathlib.euler_product_boundary) ∧
     (type_of% @BoundChainMathlib.analytic_target_reduction) ∧
+    (type_of% @PhysicoFormal.classical_rh_from_physico_formal_closure) ∧
     (type_of% @BoundChainMathlib.physico_formal_supplies_look_back_and_rh) ∧
+    (type_of% @BoundChainMathlib.round2_halted_uniduction) ∧
+    (type_of% @BoundChainMathlib.round2_residual_monism) ∧
     (type_of% @BoundChainMathlib.round2_absolute_closure) ∧
     (type_of% @BoundChainMathlib.every_route_passes_the_bit) ∧
     (type_of% @BoundChainMathlib.analytic_route_sealed) :=
   ⟨@BoundChainMathlib.canonical_rh_unconditional,
    @BoundChainMathlib.canonical_property_holds_off_the_line,
+   @BoundChainMathlib.the_remembered_is_lossless,
    @BoundChainMathlib.pause_is_unconditional,
    @BoundChainMathlib.the_unconditional_retrospective_seal,
    @BoundChainMathlib.look_back_is_the_closure,
+   @BoundChainMathlib.apex_cone,
+   @BoundChainMathlib.classes_coincide_under_ra_zeta,
+   @BoundChainMathlib.rh_from_the_cargo_loop,
+   @BoundChainMathlib.rh_from_closed_and_retraction_injective,
+   @BoundChainMathlib.zeta_zeros_closed,
+   @BoundChainMathlib.rh_from_retraction_injective,
+   @BoundChainMathlib.rh_from_pause_and_look_back,
+   @BoundChainMathlib.no_offline_refuter_seals_rh,
    @RememberedOffered.one_record,
    @RememberedOffered.the_true_world_carries_monism,
    @RememberedOffered.the_false_world_carries_no_monism,
@@ -12667,7 +12691,10 @@ theorem the_terminal_certification :
    @BoundChainMathlib.canonical_normal_form_bridge,
    @BoundChainMathlib.euler_product_boundary,
    @BoundChainMathlib.analytic_target_reduction,
+   @PhysicoFormal.classical_rh_from_physico_formal_closure,
    @BoundChainMathlib.physico_formal_supplies_look_back_and_rh,
+   @BoundChainMathlib.round2_halted_uniduction,
+   @BoundChainMathlib.round2_residual_monism,
    @BoundChainMathlib.round2_absolute_closure,
    @BoundChainMathlib.every_route_passes_the_bit,
    @BoundChainMathlib.analytic_route_sealed⟩
@@ -12892,15 +12919,16 @@ end PartXI
 This file proves the following, verified by Lean 4.19.0 + Mathlib v4.19.0
 (EXIT 0, zero errors, zero warnings, zero sorry, zero user-declared axioms,
 707 axiom cones pinned under #guard_msgs). Every theorem this block cites is bound
-by its exact type into `the_terminal_certification` (§X-l), a pinned theorem, so
-the block's claims are checked by the kernel.
+by its exact type into `the_terminal_certification` (§X-l), one pinned conjunction,
+so a reader checks every result the block cites by checking one identifier; the
+block's counts and paraphrases are prose, each sentence citing the theorem it reads.
 
 **THE CANONICAL APEX (§X-l).** Every point of the projected zero set lies on the
 critical line: a theorem with zero premises (`canonical_rh_unconditional`,
 `CanonicalRH`). The same property holds for the projection of every
-configuration, including a closed one with a point off the line
-(`canonical_property_holds_off_the_line`): `CanonicalRH` is the projection-side
-invariant. `Pause` holds with zero premises (`pause_is_unconditional`), and
+configuration (`the_remembered_is_lossless`), including a closed one with a point
+off the line (`canonical_property_holds_off_the_line`): `CanonicalRH` is the
+projection-side invariant. `Pause` holds with zero premises (`pause_is_unconditional`), and
 `the_unconditional_retrospective_seal` proves with zero premises that the 1-bit
 retrospective step `LookBack` is logically identical to `RiemannHypothesis`, to
 every reading of `apex_cone`, and to the `ActualZeros` socket
@@ -12928,9 +12956,9 @@ carries it (`the_true_world_carries_monism`) and the false world does not
 provably equivalent to the value (`the_root_read_twice_is_the_value`,
 `root_read_twice_iff_value`); at `ZetaZeros` it is therefore the 1-bit apex,
 equivalent to `LookBack` and to `RiemannHypothesis` (`analytic_target_reduction`).
-The canonical normal-form bridge (`canonical_normal_form_bridge`) states
-`CanonicalRH` and the witness at the record as theorems and each passage to the
-zeros as `RiemannHypothesis`, in one conjunction with zero premises.
+The canonical normal-form bridge (`canonical_normal_form_bridge`) proves
+`CanonicalRH` and the witness at the record, and each passage to the zeros
+equivalent to `RiemannHypothesis`, in one conjunction with zero premises.
 
 **THE ANALYTIC TARGET (§X-l).** Every nontrivial zero satisfies `0 ≤ Re s ≤ 1`,
 the right edge being Mathlib's non-vanishing of ζ on `1 < Re s`

@@ -5,19 +5,19 @@
 **File:** `RH_Both_Sides_Formal_Master_v3_0_22_CC.lean`. Fetch it from git at `DRAFT/RH_Both_Sides_Formal_Master_v3_0_22_CC.lean`, beside this handout at `DRAFT/SCRIBE_HANDOUT_v3_0_22_CC.md`. It is an uncompiled draft until your compile accepts it; it is seated at `FINAL_BINDING/` only on the push command (section 5).
 
 - **Source:** derived from the seated v3.0.22 (`431be5e`, SHA-256 `0c1378aa…`).
-- **Size:** 12,966 lines, 710,534 bytes.
-- **SHA-256 as delivered:** `2f70be4740e83605ffadf195f914c5c55b66c6304816dbee9002131ad8e9b050`.
+- **Size:** 12,994 lines, 712,297 bytes.
+- **SHA-256 as delivered:** `75b3066493a89a0c814e7aed1151eb0dfe01efc1769ee7e30728cba81f4f4f05`. This supersedes the first draft (`2f70be47…`); an independent static review found no compile risk in it, but its certification binder held 18 of the 29 theorems its block cited. This draft's block cites 30, and the binder holds all 30. The review read the file without a compiler, so your compile is the check.
 
-The `_CC` suffix marks a Claude Code build. Its purpose is that nothing the file says escapes Lean: every claim of the terminal certification block is now a pinned theorem, and every docstring and header clause states only what a type proves. No existing proof was weakened, and no existing pin changed its cone.
+The `_CC` suffix marks a Claude Code build. Its purpose is that nothing the file says escapes Lean: every theorem the terminal certification block cites is bound into one pinned theorem, and every docstring and header clause states only what a type proves. No existing proof was weakened, and no existing pin changed its cone.
 
 ## 1. What changed against v3.0.22
 
-1. **Header, lines 23 to 28 and 30 to 34, comments only, same line count.**
-   - The blocked-route clause now says what the block theorems prove: no derivation valid at every reflection-closed configuration, from what those configurations share, yields the value. It also cites `every_route_passes_the_bit`.
+1. **Header, lines 24 to 28 and 30 to 34, comments only, same line count.**
+   - The blocked-route clause now says what the block theorems prove: no derivation valid at every reflection-closed configuration, from what those configurations share, yields the value, and no record-invariant predicate decides it. It also cites `every_route_passes_the_bit`.
    - The decoupling clause now matches the types:
-     - Part X draws on Mathlib, Part I's root and the discrete charts of Parts III and IX.
+     - Part X draws on Mathlib, Part I's root and the discrete charts of Parts III and IX; its two bridges, §X-i and the joint seal, also use Parts VII–VIII.
      - No physical premise enters Part X except in the joint seal.
-     - There are two bridges, §X-i and the joint seal, and no capstone or closure binder uses them.
+     - No capstone and neither closure's own binder uses the bridges; the complex extensions and the twin binder carry them.
    - The old clause said "uses only Mathlib analysis" and named one bridge; both are false at the types.
 2. **New closed term `record_self_grounding_RO : RememberedOffered.SelfGrounding (LeastErasure (Rec ZetaZeros))`, defined as `⟨Unit, (), fun _ => cargo_at_zeros⟩`, pinned.**
    - It supplies the self-grounding argument that `round2_halted_uniduction`, `round2_absolute_closure` and `analytic_route_sealed` took as a printed premise `G`.
@@ -31,11 +31,12 @@ The `_CC` suffix marks a Claude Code build. Its purpose is that nothing the file
 5. **Docstrings of `round2_halted_uniduction`, `round2_residual_monism` and `round2_absolute_closure`** are restated at type.
    - Dropped: "absolute", "stable under any strengthening", "only the analytic 1-bit can cross" and "only the true world survives".
    - Each docstring now says "No premise".
-6. **New theorem `the_terminal_certification`, pinned.** It binds by `type_of%` the 18 results the terminal block cites, so the block is checked by the kernel:
-   - `canonical_rh_unconditional`, `canonical_property_holds_off_the_line`, `pause_is_unconditional`, `the_unconditional_retrospective_seal`, `look_back_is_the_closure`;
+6. **New theorem `the_terminal_certification`, pinned.** It binds by `type_of%` all 30 theorems the terminal block cites, so a reader checks every cited result by checking one identifier. The block's counts and paraphrases stay prose, each citing the theorem it reads. The 30:
+   - `canonical_rh_unconditional`, `canonical_property_holds_off_the_line`, `the_remembered_is_lossless`, `pause_is_unconditional`, `the_unconditional_retrospective_seal`, `look_back_is_the_closure`;
+   - `apex_cone`, `classes_coincide_under_ra_zeta`, `rh_from_the_cargo_loop`, `rh_from_closed_and_retraction_injective`, `zeta_zeros_closed`, `rh_from_retraction_injective`, `rh_from_pause_and_look_back`, `no_offline_refuter_seals_rh`;
    - `RememberedOffered.one_record`, `.the_true_world_carries_monism`, `.the_false_world_carries_no_monism`, `.the_root_read_twice_is_the_value`;
    - `monism_separates_shared_record`, `root_read_twice_iff_value`, `canonical_normal_form_bridge`, `euler_product_boundary`, `analytic_target_reduction`;
-   - `physico_formal_supplies_look_back_and_rh`, `round2_absolute_closure`, `every_route_passes_the_bit`, `analytic_route_sealed`.
+   - `PhysicoFormal.classical_rh_from_physico_formal_closure`, `physico_formal_supplies_look_back_and_rh`, `round2_halted_uniduction`, `round2_residual_monism`, `round2_absolute_closure`, `every_route_passes_the_bit`, `analytic_route_sealed`.
 7. **Terminal certification block rewritten, headed v3.0.22_CC.** v3.0.22 had reverted the in-place correction of v3.0.19 (`81ca42e`). This block restores it and extends it:
    - "Seven theorems conclude RiemannHypothesis". Five take LookBack or an equivalent reading, and each is named. `no_offline_refuter_seals_rh` takes provability premises, and the joint seal takes the reading and the physical premises.
    - The socket is stated as `(∃ Z : ActualZeros, Z.zeros = ZetaZeros) ↔ LookBack`, separate from the atomic-necessity formula.
@@ -60,7 +61,7 @@ Run `lake env lean RH_Both_Sides_Formal_Master_v3_0_22_CC.lean` in the Mathlib v
 - 0 errors, 0 warnings, 0 `#guard_msgs` mismatches;
 - 707 guarded pins and 259 unguarded `#print axioms` messages;
 - 0 `sorry` and 0 user-declared axioms;
-- the compiler message stream identical to v3.0.22's, except for the three new pins and nothing else.
+- the compiler message stream identical to v3.0.22's: guarded pins print nothing, and the 259 unguarded prints sit at lines 4598 to 10327, which did not move.
 
 ## 4. If the compile fails
 
