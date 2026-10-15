@@ -3550,7 +3550,7 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": "Version 2.0.0, 15 October 2026, Math Journal edition, 180 pages, Appendix D carrying the deposited Lean file verbatim and Appendix E the paper as one theorem. Deposited file FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_19.lean as corrected in place, sha256 a835a319, at 81ca42e. First pinned to v3.0.16 (98101d0) and carried in place to v3.0.19 the same day, paper at 154a8f1, index at d282b36; edition 1.0.0 kept beside it in git. Zenodo record 23357512 replaced in place: files RH_Twin_Binder_One_Locus_v2_0_0.pdf (md5 53e7e271) and RH_Both_Sides_Formal_Master_v3_0_19.lean (md5 27dd8071), version 2.0.0, DOI and version count unchanged. Internet Archive item formal-proof-riemann-hypothesis-twin-binder-one-locus, RH_Twin_Binder_One_Locus.pdf replaced in place, re-serialized without object streams, md5 791d982d. Edition history under extra.",
+      "note": "Version 2.0.0, 15 October 2026, Math Journal edition, 180 pages, Appendix D carrying the deposited Lean file verbatim and Appendix E the paper as one theorem. Deposited file FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_19.lean as corrected in place, sha256 a835a319, at 81ca42e. First pinned to v3.0.16 (98101d0) and carried in place to v3.0.19 the same day, paper at 154a8f1, Appendix B sentence on the triad (PSP-TRIAXIAL-NEC-SUFF-01) at 1d5d391, index at 706b41a; edition 1.0.0 kept beside it in git. Zenodo record 23357512 replaced in place: files RH_Twin_Binder_One_Locus_v2_0_0.pdf (md5 8e4cf5cb) and RH_Both_Sides_Formal_Master_v3_0_19.lean (md5 27dd8071), version 2.0.0, DOI and version count unchanged. Internet Archive item formal-proof-riemann-hypothesis-twin-binder-one-locus, RH_Twin_Binder_One_Locus.pdf replaced in place, re-serialized without object streams, md5 c2fccb22. Edition history under extra.",
       "extra": {
         "edition_1_0_0_2026_10_14": {
           "version": "1.0.0",
@@ -3593,19 +3593,21 @@
             "git_commit": "154a8f1",
             "index_commit": "d282b36",
             "pages": 180,
-            "git_pdf_sha256": "d9c08358d12d89baab1095a5fe389c827d7d007b778a19b493d4c5bbcc985839",
-            "git_md_sha256": "68024308e12bc35391104ae73e3922c47401533c7f364951700d79883fee505d",
+            "git_pdf_sha256": "f6e2cdeae5e99ee614bdc05561725dbedd910cd75875edeebb3cda008a5a4ad9",
+            "git_md_sha256": "3c65a96bda453cfb2f0a152fef8cb9f8884c3205e8417b7cdf5051319676e120",
             "lean_file": "FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_19.lean",
             "lean_commit": "81ca42e",
             "lean_sha256": "a835a3193e21dadf711dd887c39c4f719c411f3173612cac1e963a3de82d9988",
             "audit": "pass 5 against v3.0.19: 15 findings (1 load-bearing, 8 structural, 6 cosmetic) repaired; verification read: 11 resolved, 4 partial, 7 new (1 load-bearing), all repaired",
             "zenodo_files": [
-              "RH_Twin_Binder_One_Locus_v2_0_0.pdf md5 53e7e271bb9ada63e66e73cc92ba6753",
+              "RH_Twin_Binder_One_Locus_v2_0_0.pdf md5 8e4cf5cb40e66d943022d2ca4c8d8c05",
               "RH_Both_Sides_Formal_Master_v3_0_19.lean md5 27dd807173f8922685429d214b4a1d44"
             ],
             "zenodo_replaced": "pdf replaced under its name, v3_0_16.lean replaced by v3_0_19.lean; edit 201, unlock 200, publish 202; version count 1 -> 1",
-            "ia_md5": "791d982d469f1929799730d8b34fe79f",
-            "ia_bytes": 9699065
+            "ia_md5": "c2fccb22bc231f9644e7f36140bb84c3",
+            "ia_bytes": 9702016,
+            "appendix_b_commit": "1d5d391",
+            "appendix_b_index": "706b41a"
           }
         }
       }
