@@ -12743,11 +12743,16 @@ and `Pause` hold unconditionally with zero premises on the canonical retracted
 record, and `the_unconditional_retrospective_seal` proves with zero premises that
 the 1-bit retrospective step `LookBack` is logically identical to
 `RiemannHypothesis`, to every reading of `apex_cone`, and to the `ActualZeros`
-socket (`∀ Q : Prop, (Q → RiemannHypothesis) → Q → LookBack`). LookBack carries
+socket (`(∃ Z : ActualZeros, Z.zeros = ZetaZeros) ↔ LookBack`), and that every
+proof of `RiemannHypothesis` from any premise `Q` supplies it
+(`∀ Q : Prop, (Q → RiemannHypothesis) → Q → LookBack`). LookBack carries
 the invariant from the projection back to the unprojected zeros. LookBack is proved
-equivalent to RiemannHypothesis (`look_back_is_the_closure`). The five theorems that conclude
-`RiemannHypothesis` each take LookBack, or a reading proved equivalent to it, as
-their premise; no declaration in the file is of bare type `RiemannHypothesis`.
+equivalent to RiemannHypothesis (`look_back_is_the_closure`). Seven theorems conclude
+`RiemannHypothesis`. Six take LookBack, or a reading proved equivalent to it, as
+their premise; the seventh, `physico_formal_supplies_look_back_and_rh`, takes the
+discrete-to-complex reading `LookBack ↔ RememberedOffered.Value Zζ` with the
+physical carrier premises of Part VIII. No declaration in the file is of bare
+type `RiemannHypothesis`.
 
 **THE MONISM WITNESS.** While a false off-line configuration
 (`pairWorld offPoint`) and a true line-bound configuration share the exact same
@@ -12756,7 +12761,7 @@ the Monism witness (`RootReadTwice`): the true configuration carries monism
 (`the_true_world_carries_monism`), and the false world carries no monism
 (`the_false_world_carries_no_monism`), now lifted to ℂ
 (`monism_separates_shared_record`, `root_read_twice_iff_value`). By
-`the_root_read_twice_is_the_value`, the witness is definitionally equivalent to
+`the_root_read_twice_is_the_value`, the witness is provably equivalent to
 the value itself (`RootReadTwice S ↔ Value S`); for `ZetaZeros` it is therefore
 the 1-bit apex, not a route around it. The canonical normal-form bridge
 (`canonical_normal_form_bridge`) binds `CanonicalRH` and the witness to
@@ -12770,6 +12775,13 @@ theorem `analytic_target_reduction` proves with zero premises that
 `RetractionInjective ZetaZeros`, `LookBack`, `RootReadTwice ZetaZeros`, and
 `RiemannHypothesis` are logically identical to `RightHalfStripZeroFree`,
 placing the 1-bit retraction bridge directly against the Euler product boundary.
+
+**THE JOINT PHYSICO-FORMAL SEAL (§X-l).** `physico_formal_supplies_look_back_and_rh`
+joins the carrier closure of Part VIII (`classical_rh_from_physico_formal_closure`)
+to the complex normal form of Part X: under the discrete-to-complex reading
+`LookBack ↔ RememberedOffered.Value Zζ`, the carrier floors, the certified
+observational bound and the detection gap supply `LookBack` and Mathlib's
+`RiemannHypothesis` in one theorem.
 
 **TERMINAL SILENCE.** Where formal deduction halts at the 1-bit apex, the
 register is silent.
