@@ -3516,7 +3516,7 @@
       "domain": "Riemann Hypothesis",
       "status": "live",
       "first_published": "2026-10-14",
-      "last_updated": "2026-10-15",
+      "last_updated": "2026-10-16",
       "git": {
         "md": "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v2_0_0.md",
         "pdf": "Publication Library/Mathematics/Millennium Series/RH_Twin_Binder_One_Locus_v2_0_0.pdf",
@@ -3550,7 +3550,7 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": "Version 2.0.0, 15 October 2026, Math Journal edition, 180 pages, Appendix D carrying the deposited Lean file verbatim and Appendix E the paper as one theorem. Deposited file FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_19.lean as corrected in place, sha256 a835a319, at 81ca42e. First pinned to v3.0.16 (98101d0) and carried in place to v3.0.19 the same day, paper at 154a8f1, Appendix B sentence on the triad (PSP-TRIAXIAL-NEC-SUFF-01) at 1d5d391, index at 706b41a; edition 1.0.0 kept beside it in git. Zenodo record 23357512 replaced in place: files RH_Twin_Binder_One_Locus_v2_0_0.pdf (md5 8e4cf5cb) and RH_Both_Sides_Formal_Master_v3_0_19.lean (md5 27dd8071), version 2.0.0, DOI and version count unchanged. Internet Archive item formal-proof-riemann-hypothesis-twin-binder-one-locus, RH_Twin_Binder_One_Locus.pdf replaced in place, re-serialized without object streams, md5 c2fccb22. Edition history under extra.",
+      "note": "Version 2.0.0, 15 October 2026, Math Journal edition, 195 pages, Appendix D carrying the deposited Lean file verbatim and Appendix E the paper as one theorem. Deposited file FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_24_CC.lean (seated b272c46, sha256 8345ede8, 13366 lines, 718 pins); re-pinned in place on 16 October 2026, paper at d634bf1, index at 513ee00, with the formal closure's referee and proofread repairs carried (32 edits). First pinned to v3.0.16 and carried in place through v3.0.19 and v3.0.22_CC. Zenodo record 23357512 replaced in place: RH_Twin_Binder_One_Locus_v2_0_0.pdf (md5 2d442345) and RH_Both_Sides_Formal_Master_v3_0_24_CC.lean (md5 8e960680), release note added, version 2.0.0, DOI and version count unchanged. Internet Archive item formal-proof-riemann-hypothesis-twin-binder-one-locus, RH_Twin_Binder_One_Locus.pdf replaced in place, re-serialized without object streams, md5 47b12b71; the upload was accepted on 16 October 2026 and its s3-put queued behind a derive task running since 15 October, so the item lists the earlier file until the queue clears. The formal side stands as its own work, rh-completed-formal-closure. Edition history under extra.",
       "extra": {
         "edition_1_0_0_2026_10_14": {
           "version": "1.0.0",
@@ -3629,6 +3629,28 @@
             "ia_bytes": 10014512,
             "ia_meta": "item description and file description patched"
           }
+        },
+        "repinned_v3_0_24_CC_2026_10_16": {
+          "version": "2.0.0",
+          "repin_date": "2026-10-16",
+          "git_commit": "d634bf1",
+          "index_commit": "513ee00",
+          "git_pdf_sha256": "15b8a7483f6c996a32b235c55d1ab339c3524951bdf19ef9ddefdd93260e0b93",
+          "git_md_sha256": "e58126e470e5a2eacb8277837cb58c79fba99d21043d485aedd71f403d3f8bfc",
+          "lean_file": "FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_24_CC.lean",
+          "lean_sha256": "8345ede86c0814a902c94f318be799c0adafaa3996e4536cb6a8dff06c30c8fc",
+          "audit": "Pass 7 against v3.0.24_CC, 10 findings (0/2/8), all repaired; Pass 8, 32 edits carried from the formal closure referee (0/3/9) and proofread (12) passes; digest beside the paper",
+          "zenodo_files": [
+            "RH_Twin_Binder_One_Locus_v2_0_0.pdf md5 2d442345bdae77ccf2da72e8c2ab0560",
+            "RH_Both_Sides_Formal_Master_v3_0_24_CC.lean md5 8e960680869206a573c6873369d87775"
+          ],
+          "zenodo_replaced": [
+            "RH_Twin_Binder_One_Locus_v2_0_0.pdf md5 15c2c31f (git c5af110)",
+            "RH_Both_Sides_Formal_Master_v3_0_22_CC.lean md5 f647e225 (git FINAL_BINDING/RH Binding)"
+          ],
+          "zenodo_publish_http": "0 on the first publish call (connection), the edit staged and verified; publish re-issued from state inprogress, 202, state done, versions 1 -> 1",
+          "ia_md5": "47b12b7105d00a971cc815dba1fe8abb",
+          "ia_state": "upload accepted 2026-10-16 15:09 UTC; s3-delete, s3-put and modify_xml queued behind derive.php running since 2026-10-15 20:32"
         }
       }
     },
