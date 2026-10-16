@@ -1,6 +1,7 @@
 import Mathlib.NumberTheory.LSeries.RiemannZeta
 import Mathlib.NumberTheory.LSeries.Dirichlet
 import Mathlib.Analysis.NormedSpace.Connected
+import Mathlib.NumberTheory.LSeries.Nonvanishing
 
 /-!
   RH_Formal_Closure_v1_0_0_CC.lean · THE COMPLETED FORMAL CLOSURE OF THE RIEMANN HYPOTHESIS.
@@ -10,8 +11,8 @@ import Mathlib.Analysis.NormedSpace.Connected
   its statement and proof byte-identical: the declarations of Part X (`BoundChainMathlib`) but three,
   and the declarations of Parts I, III and IX that they use, and nothing else. The three left out are
   the master's two bridges to its other closure (§X-i and the joint seal of §X-l) and its terminal
-  certification, which binds the joint seal. One docstring is trimmed of a clause that named a
-  declaration not carried. Part X carries the master's module comments, its
+  certification, which binds the joint seal. Four docstrings are trimmed, each of a clause that
+  named something this file does not carry. Part X carries the master's module comments, its
   translation dictionary and its section headings, but for the heading of §X-i. The part numbers are
   the master's; the part headings, this header and the terminal block are new comments.
 
