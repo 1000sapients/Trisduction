@@ -24,8 +24,8 @@ Both are uncompiled drafts until your compile accepts them. Seat them only on th
 
 The mathematical closure of the master as its own file, for the paper *The Completed Formal Closure of the Riemann Hypothesis*.
 
-- **Size:** 1,894 lines, 91,008 bytes.
-- **SHA-256 as delivered:** `a0b25bf7a0d14caa5d38190ba847486eadcab2f03cfa30b4c5ac3140a84fa113`.
+- **Size:** 1,857 lines, 90,436 bytes.
+- **SHA-256 as delivered:** `e027f0297d0666a9febd3e7798fee833f1504d59ca1192d6db1c0611c33067e5`. This replaces the first push of this draft (`a0b25bf7…`), whose only differences were empty `namespace … end` pairs left where declarations were dropped; no declaration changed.
 - **Imports:** lines 1 to 3, the same three as the master.
 
 **What it is:**
@@ -38,7 +38,7 @@ The mathematical closure of the master as its own file, for the paper *The Compl
 
 **Expected census:**
 
-- 111 theorems, 45 `def`s, 5 `abbrev`s, 7 structures, 1 inductive type, in 5 namespaces (`TOE0`, `RememberedOffered`, `RHUnicorn`, `BoundChain`, `BoundChainMathlib`).
+- 111 theorems, 45 `def`s, 5 `abbrev`s, 7 structures, 1 inductive type, in 4 namespaces (`TOE0`, `RememberedOffered`, `BoundChain`, `BoundChainMathlib`).
 - 115 pins under `#guard_msgs`: 17 empty, 98 at [propext, Classical.choice, Quot.sound]. Every pin text is the master's.
 - No unguarded `#print axioms`, so a clean compile prints nothing.
 

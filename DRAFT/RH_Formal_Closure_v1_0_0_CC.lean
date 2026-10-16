@@ -237,45 +237,8 @@ theorem no_closed_principle_decides (D : Config → Prop) (hD : ∀ S, Closed S 
 
 end RememberedOffered
 
-namespace RHUnicorn
-
-variable {α β : Type}
-
-end RHUnicorn
-
-namespace RememberedOffered
-
-end RememberedOffered
-
 /-- info: 'RememberedOffered.no_closed_principle_decides' does not depend on any axioms -/
 #guard_msgs in #print axioms RememberedOffered.no_closed_principle_decides
-
-namespace RememberedOffered
-end RememberedOffered
-
-namespace RememberedOffered
-end RememberedOffered
-
-namespace RememberedOffered
-end RememberedOffered
-
-namespace RememberedOffered
-end RememberedOffered
-
-namespace RememberedOffered
-end RememberedOffered
-
-namespace RememberedOffered
-end RememberedOffered
-
-namespace RememberedOffered
-end RememberedOffered
-
-namespace RememberedOffered
-end RememberedOffered
-
-namespace RememberedOffered
-end RememberedOffered
 
 namespace RememberedOffered
 /-- EVERY PREMISE SORTED: a premise on configurations either fails to force the value at some closed configuration,
