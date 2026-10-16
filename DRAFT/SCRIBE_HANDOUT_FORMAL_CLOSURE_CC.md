@@ -24,8 +24,8 @@ Both are uncompiled drafts until your compile accepts them. Seat them only on th
 
 The mathematical closure of the master as its own file, for the paper *The Completed Formal Closure of the Riemann Hypothesis*.
 
-- **Size:** 1,900 lines, 92,532 bytes.
-- **SHA-256 as delivered:** `a4841cb3634977b496eb1aa7babbd591be8cd2ce6077896a1692530e90ba5a0e`. This is the third push of this draft. Against the second (`e027f029…`) it drops `TOE0.Q`, which a name collision in the dependency scan had carried and nothing uses, and it carries Part X's module comments (the translation dictionary and the headings X-a to X-l, without §X-i). Against the first (`a0b25bf7…`) it also drops the empty `namespace … end` pairs. No carried declaration changed.
+- **Size:** 1,900 lines, 92,561 bytes.
+- **SHA-256 as delivered:** `818c5ad543b9fb8d7cb12b32dd5559fd4145d0563493637b023a28db3d66f058`. This is the fourth push of this draft; against the third (`a4841cb3…`) only the terminal comment changed, to say "statement and proof byte-identical". Against the second (`e027f029…`) it drops `TOE0.Q`, which a name collision in the dependency scan had carried and nothing uses, and it carries Part X's module comments (the translation dictionary and the headings X-a to X-l, without §X-i). Against the first (`a0b25bf7…`) it also drops the empty `namespace … end` pairs. No carried declaration changed.
 - **Imports:** lines 1 to 3, the same three as the master.
 
 **What it is:**

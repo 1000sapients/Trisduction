@@ -1884,9 +1884,9 @@ end PartX
 /-! ## TERMINAL CERTIFICATION (RH_Formal_Closure v1.0.0_CC)
 
 This file is the mathematical closure of RH_Both_Sides_Formal_Master_v3_0_22_CC.lean. Every
-declaration in it is carried byte-identical from that file, so every cone pinned here is the cone
-the master pins. It declares no axiom and contains no sorry, and it carries no declaration of the
-master's Parts II and IV to VIII or XI.
+declaration in it is carried from that file with its statement and proof byte-identical, so every
+cone pinned here is the cone the master pins. It declares no axiom and contains no sorry, and it
+carries no declaration of the master's Parts II and IV to VIII or XI.
 
 With no premise: the forward pass to the pause (`forward_pass_unconditional`), the retrospective seal
 (`the_unconditional_retrospective_seal`), the analytic target (`analytic_target_reduction`), Round 2
