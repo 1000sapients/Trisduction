@@ -3693,6 +3693,42 @@
           "ia_byte_form": "qpdf --object-streams=disable --stream-data=uncompress"
         }
       }
+    },
+    "rh-completed-formal-closure": {
+      "title": "The Completed Formal Closure of the Riemann Hypothesis: A Formal Proof in Lean 4 from Its One Bit, Every Other Step Proved, Zero Physics",
+      "domain": "Riemann Hypothesis",
+      "status": "live",
+      "first_published": "2026-10-16",
+      "last_updated": "2026-10-16",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/RH_Completed_Formal_Closure_v1_0_0.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/RH_Completed_Formal_Closure_v1_0_0.pdf",
+        "editions": [
+          "Publication Library/Mathematics/Millennium Series/RH_Completed_Formal_Closure_v1_0_0_source.zip",
+          "Publication Library/Mathematics/Millennium Series/RH_Completed_Formal_Closure_v1_0_0_audit_digest.md",
+          "FINAL_BINDING/RH Binding/RH_Formal_Closure_v1_0_0_CC.lean"
+        ]
+      },
+      "zenodo": {
+        "conceptrecid": 23334981,
+        "concept_doi": "10.5281/zenodo.23334981",
+        "latest_version_doi": "10.5281/zenodo.23334982",
+        "latest_record": 23334982,
+        "versions": 1,
+        "state": "published"
+      },
+      "ia": {
+        "identifier": "completed-formal-closure-riemann-hypothesis",
+        "url": "https://archive.org/details/completed-formal-closure-riemann-hypothesis",
+        "state": "live"
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": "A Formal Proof of the Riemann Hypothesis: The Formal Domain as a Self-Verifying Fixed Point (13 October 2026), at the same Zenodo record",
+      "superseded_by": null,
+      "note": "Version 1.0.0, 16 October 2026, Math Journal edition, 64 pages; paper at 844339f, index at 1e9c4f1. Reads FINAL_BINDING/RH Binding/RH_Formal_Closure_v1_0_0_CC.lean (seated 823ac22, sha256 4af02e33, 2189 lines), the standalone formal closure extracted from RH_Both_Sides_Formal_Master_v3_0_24_CC.lean. Zenodo record 23334982 replaced in place under the architect's permission (edit, unlock, delete, upload, publish; versions 1 -> 1): formal_fixed_point_v3_0_5.pdf -> RH_Completed_Formal_Closure_v1_0_0.pdf (md5 8a296fa5) and RH_Both_Sides_Formal_Master_v3_0_9.lean -> RH_Formal_Closure_v1_0_0_CC.lean (md5 c64840ab); title, description, version 1.0.0, date 2026-10-16 and ORCID set. The two removed files are kept byte-identical in git at FINAL_BINDING/RH Binding/Formal_Fixed_Point_v1_0_1.pdf (md5 71f96c3e) and RH_Both_Sides_Formal_Master_v3_0_9.lean (md5 e9e363c9). IA item completed-formal-closure-riemann-hypothesis claimed and live: RH_Completed_Formal_Closure.pdf, re-serialized without object streams (md5 17a7bea2)."
     }
   }
 }
