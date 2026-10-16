@@ -3550,7 +3550,7 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": "Version 2.0.0, 15 October 2026, Math Journal edition, 195 pages, Appendix D carrying the deposited Lean file verbatim and Appendix E the paper as one theorem. Deposited file FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_24_CC.lean (seated b272c46, sha256 8345ede8, 13366 lines, 718 pins); re-pinned in place on 16 October 2026, paper at d634bf1, index at 513ee00, with the formal closure's referee and proofread repairs carried (32 edits). First pinned to v3.0.16 and carried in place through v3.0.19 and v3.0.22_CC. Zenodo record 23357512 replaced in place: RH_Twin_Binder_One_Locus_v2_0_0.pdf (md5 2d442345) and RH_Both_Sides_Formal_Master_v3_0_24_CC.lean (md5 8e960680), release note added, version 2.0.0, DOI and version count unchanged. Internet Archive item formal-proof-riemann-hypothesis-twin-binder-one-locus, RH_Twin_Binder_One_Locus.pdf replaced in place, re-serialized without object streams, md5 47b12b71; the upload was accepted on 16 October 2026 and its s3-put queued behind a derive task running since 15 October, so the item lists the earlier file until the queue clears. The formal side stands as its own work, rh-completed-formal-closure. Edition history under extra.",
+      "note": "Version 2.0.0, 15 October 2026, Math Journal edition, 195 pages, Appendix D carrying the deposited Lean file verbatim and Appendix E the paper as one theorem. Deposited file FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_24_CC.lean (seated b272c46, sha256 8345ede8, 13366 lines, 718 pins); re-pinned in place on 16 October 2026, paper at d634bf1, index at 513ee00, with the formal closure's referee and proofread repairs carried (32 edits). First pinned to v3.0.16 and carried in place through v3.0.19 and v3.0.22_CC. Zenodo record 23357512 replaced in place: RH_Twin_Binder_One_Locus_v2_0_0.pdf (md5 2d442345) and RH_Both_Sides_Formal_Master_v3_0_24_CC.lean (md5 8e960680), release note added, version 2.0.0, DOI and version count unchanged. Internet Archive item formal-proof-riemann-hypothesis-twin-binder-one-locus, RH_Twin_Binder_One_Locus.pdf replaced in place, re-serialized without object streams, md5 47b12b71. The formal side stands as its own work, rh-completed-formal-closure. Edition history under extra.",
       "extra": {
         "edition_1_0_0_2026_10_14": {
           "version": "1.0.0",
@@ -3650,7 +3650,7 @@
           ],
           "zenodo_publish_http": "0 on the first publish call (connection), the edit staged and verified; publish re-issued from state inprogress, 202, state done, versions 1 -> 1",
           "ia_md5": "47b12b7105d00a971cc815dba1fe8abb",
-          "ia_state": "upload accepted 2026-10-16 15:09 UTC; s3-delete, s3-put and modify_xml queued behind derive.php running since 2026-10-15 20:32"
+          "ia_state": "landed; upload accepted 2026-10-16 15:09 UTC, held behind a derive task running since 2026-10-15, confirmed by md5 at 2026-10-16 19:25 UTC"
         }
       }
     },
