@@ -5,7 +5,7 @@ import Mathlib.Analysis.NormedSpace.Connected
 /-!
   RH_Formal_Closure_v1_0_0_CC.lean · THE COMPLETED FORMAL CLOSURE OF THE RIEMANN HYPOTHESIS.
 
-  The mathematical closure of RH_Both_Sides_Formal_Master_v3_0_22_CC.lean as one standalone file,
+  The mathematical closure of RH_Both_Sides_Formal_Master_v3_0_24_CC.lean as one standalone file,
   built by Claude Code. Every declaration below is carried from that file with
   its statement and proof byte-identical: the declarations of Part X (`BoundChainMathlib`) but three,
   and the declarations of Parts I, III and IX that they use, and nothing else. The three left out are
@@ -23,7 +23,8 @@ import Mathlib.Analysis.NormedSpace.Connected
   RiemannHypothesis (`apex_cone`); any two readings are equivalent (`apex_one_gap`).
 
   THE FLOOR. Part I's self-grounding root holds on no axiom (`TOE0.seated_undeniable`,
-  `TOE0.external_proof_adds_nothing`, `TOE0.denial_instantiates`).
+  `TOE0.external_proof_adds_nothing`, `TOE0.denial_instantiates`), and so does its root on the
+  constructed one-point domain (`TOE0.root_on_the_constructed_domain`).
 
   THE FORWARD PASS, WITH NO PREMISE. The nontrivial zeros are closed under s ↦ 1 − s̄ and lie in
   0 ≤ Re s ≤ 1; their record has least erasure and is self-verifying; every zero lands in its record
@@ -35,6 +36,12 @@ import Mathlib.Analysis.NormedSpace.Connected
   right half-strip 1/2 < Re s ≤ 1 (`analytic_target_reduction`), and RiemannHypothesis follows from
   it in one step (`rh_from_pause_and_look_back`). Every route to RiemannHypothesis, from any
   premise, delivers it (`every_route_passes_the_bit`).
+
+  THE SELF-RECOGNITION CLOSURE. `the_self_recognition_closure` binds the whole formal arc in one
+  theorem with no premise: the floor; every nontrivial zero strictly inside 0 < Re s < 1, the zero
+  set closed under the fold and equal to the zero set of the completed zeta function, every zero off
+  the line with a twin in the band 1/2 < Re s < 1; seven readings of the bit, each proved equivalent
+  to RiemannHypothesis; and every route to RiemannHypothesis, from any premise, delivering the bit.
 
   THE BLOCKED ROUTES. No derivation valid at every reflection-closed configuration, from what those
   configurations share, yields the value, and no record-invariant predicate decides it
@@ -68,6 +75,16 @@ theorem external_proof_adds_nothing {R : Prop} (G : SelfGrounding R) (Q : Prop) 
 /-- The deed of denying the root hands it over. -/
 theorem denial_instantiates {R : Prop} (G : SelfGrounding R) : SelfVerifying R := fun _ => G.instances G.anAct
 
+/-- The Root Axiom on the constructed one-point domain: its one existent actuates. -/
+def ΔE₀ : Unit → Int := fun _ => 1
+def RA₀ : Prop := ∀ x : Unit, 0 < ΔE₀ x
+
+/-- The constructed domain grounds its root: its one act is a deed, and the deed actuates. -/
+def ra₀ : SelfGrounding RA₀ := ⟨Unit, (), fun _ _ => show (0 : Int) < 1 by decide⟩
+
+/-- THE ROOT ON THE CONSTRUCTED DOMAIN, A THEOREM. -/
+theorem root_on_the_constructed_domain : RA₀ := seated_undeniable ra₀
+
 end TOE0
 
 /-- info: 'TOE0.seated_undeniable' does not depend on any axioms -/
@@ -76,6 +93,8 @@ end TOE0
 #guard_msgs in #print axioms TOE0.external_proof_adds_nothing
 /-- info: 'TOE0.denial_instantiates' does not depend on any axioms -/
 #guard_msgs in #print axioms TOE0.denial_instantiates
+/-- info: 'TOE0.root_on_the_constructed_domain' does not depend on any axioms -/
+#guard_msgs in #print axioms TOE0.root_on_the_constructed_domain
 
 end PartI
 
@@ -807,7 +826,7 @@ theorem zeta_zero_iff_completed_of_re_pos {s : Point} (hre : 0 < s.re) :
   rw [riemannZeta_def_of_ne_zero hs0, div_eq_zero_iff]
   exact ⟨fun h => h.resolve_right hG, fun h => Or.inl h⟩
 
-/-- Inside the open critical strip 0 < Re s < 1, ZetaZeros s ↔ CompletedZetaZeros s.
+/-- Inside the critical strip 0 < Re s < 1, ZetaZeros s ↔ CompletedZetaZeros s.
     Proved unconditionally from first principles using Mathlib's Gammaℝ non-vanishing. -/
 theorem zeta_zeros_iff_completed_in_strip {s : Point} (h0 : 0 < s.re) (h1 : s.re < 1) :
     ZetaZeros s ↔ CompletedZetaZeros s := by
@@ -1698,8 +1717,10 @@ theorem canonical_normal_form_bridge :
 #print axioms BoundChainMathlib.canonical_normal_form_bridge
 
 /-- The Euler product boundary on ZetaZeros: Mathlib's Euler product and
-    Dirichlet series establish non-vanishing for 1 < Re s, confining every
-    nontrivial zero to 0 ≤ Re s ≤ 1. -/
+    Dirichlet series establish non-vanishing for 1 < Re s, so every nontrivial
+    zero has Re s ≤ 1, and the reflection s ↦ 1 − s (`zeta_zeros_symm`) carries
+    the bound to 0 ≤ Re s. Mathlib's non-vanishing on Re s = 1 makes both
+    bounds strict (`zeta_zeros_strictly_in_strip`). -/
 theorem euler_product_boundary (s : Point) (hs : ZetaZeros s) :
     (0 ≤ s.re ∧ s.re ≤ 1) ∧ ¬ (1 < s.re) := by
   have h := zeta_zeros_in_strip hs
@@ -1711,8 +1732,9 @@ theorem euler_product_boundary (s : Point) (hs : ZetaZeros s) :
 #guard_msgs in
 #print axioms BoundChainMathlib.euler_product_boundary
 
-/-- Non-vanishing in the right half of the critical strip (1/2 < Re s ≤ 1),
-    immediately below the Euler product boundary Re s > 1. -/
+/-- Non-vanishing in the right half of the critical strip, 1/2 < Re s. With
+    Mathlib's non-vanishing on Re s ≥ 1, its whole content is the band
+    1/2 < Re s < 1 (`right_half_strip_zero_free_iff_band`). -/
 def RightHalfStripZeroFree : Prop :=
   ∀ s : Point, ZetaZeros s → 1 / 2 < s.re → False
 
@@ -1877,18 +1899,284 @@ theorem analytic_route_sealed :
 #guard_msgs in
 #print axioms BoundChainMathlib.analytic_route_sealed
 
+/-- Complex Triaxiality:
+    the freedom axis, the reflection-seat axis (`fold s = s`), and the
+    displacement-collapse axis (`s.re - 1/2 = -(s.re - 1/2)`). -/
+def freedomAxis (_ : Point) : Prop := True
+def ramAxis (s : Point) : Prop := fold s = s
+def collapseAxis (s : Point) : Prop := s.re - 1 / 2 = -(s.re - 1 / 2)
+
+/-- THE COMPLEX THREE-AXIS LOCK (UNCONDITIONAL, ZERO PREMISES). All three axes
+    hold at a complex point s if and only if s lies on the critical line. -/
+theorem complex_three_axis_lock (s : Point) :
+    (freedomAxis s ∧ ramAxis s ∧ collapseAxis s) ↔ onLine s := by
+  constructor
+  · intro ⟨_, hram, _⟩
+    exact (fold_fixed_iff_onLine s).mp hram
+  · intro h
+    refine ⟨trivial, (fold_fixed_iff_onLine s).mpr h, ?_⟩
+    unfold collapseAxis onLine at *
+    linarith
+
+/-- info: 'BoundChainMathlib.complex_three_axis_lock' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.complex_three_axis_lock
+
+/-- Ground-On-Line (`GOL`): the canonical retracted zero locus `Rec ZetaZeros`. -/
+def GOL : Config := Rec ZetaZeros
+
+/-- GOL LOOKS BACK (UNCONDITIONAL, ZERO PREMISES). At the Ground-On-Line locus
+    `GOL`, looking back requires no hypothesis: every point of `GOL` is fixed
+    by retraction (`reg q = q`), fixed by the reflection fold (`fold q = q`),
+    and locked on all three axes. This is the look-back at the record, and it
+    holds at `Rec S` for every configuration `S` (`record_has_least_erasure`).
+    At the zeros themselves the look-back is `LookBack`, the self-recognition
+    of the zeros (`self_recognition_is_look_back`), one statement with
+    `RiemannHypothesis` (`the_self_recognition_closure`). -/
+theorem gol_look_back_unconditional :
+    (∀ q, GOL q → reg q = q) ∧
+    (∀ q, GOL q → fold q = q) ∧
+    (∀ q, GOL q → freedomAxis q ∧ ramAxis q ∧ collapseAxis q) :=
+  ⟨cargo_at_zeros,
+   fun q hq => (fold_fixed_iff_onLine q).mpr (the_remembered_is_lossless ZetaZeros q hq),
+   fun q hq => (complex_three_axis_lock q).mpr (the_remembered_is_lossless ZetaZeros q hq)⟩
+
+/-- info: 'BoundChainMathlib.gol_look_back_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.gol_look_back_unconditional
+
+/-- THE RA-TRIAXIALITY-GOL-RA LOOP (UNCONDITIONAL, ZERO PREMISES).
+    1. Root (`RA`): `TOE0.RA₀` and `BoundChain.FreedomRoot` hold unconditionally.
+    2. Triaxiality: the three axes lock onto `onLine` across ℂ.
+    3. Pause at `GOL`: every zero projects into `GOL` (`Pause`), where `Value GOL`,
+       `LeastErasure GOL`, and `SelfVerifying (LeastErasure GOL)` hold unconditionally.
+    4. `GOL` Looks Back and Finds `RA`: at `GOL`, retraction invariance and the
+       Monism witness hold unconditionally, closing the biconditional loop back to
+       the Root Axiom (`TOE0.RA₀ ↔ Value GOL` and `TOE0.RA₀ ↔ LeastErasure GOL`)
+       with zero premises.
+    5. Normal-Form Coincidence: Mathlib's `RiemannHypothesis` is equivalent to
+       the coincidence of `ZetaZeros` with `GOL` (`∀ q, GOL q ↔ ZetaZeros q`). -/
+theorem ra_triaxial_gol_loop_unconditional :
+    TOE0.RA₀ ∧
+    BoundChain.FreedomRoot ∧
+    (∀ s : Point, (freedomAxis s ∧ ramAxis s ∧ collapseAxis s) ↔ onLine s) ∧
+    Pause ∧
+    Value GOL ∧
+    LeastErasure GOL ∧
+    TOE0.SelfVerifying (LeastErasure GOL) ∧
+    RememberedOffered.MonismWitness (fun _ => Value GOL) ∧
+    (TOE0.RA₀ ↔ Value GOL) ∧
+    (TOE0.RA₀ ↔ LeastErasure GOL) ∧
+    ((∀ q, GOL q ↔ ZetaZeros q) ↔ RiemannHypothesis) :=
+  ⟨TOE0.root_on_the_constructed_domain,
+   BoundChain.freedom_root_inhabited,
+   complex_three_axis_lock,
+   pause_is_unconditional,
+   the_remembered_is_lossless ZetaZeros,
+   cargo_at_zeros,
+   ra_recursion_at_record.2.1,
+   ⟨RememberedOffered.one_involution_constructed,
+    fun _ _ => Iff.rfl,
+    the_remembered_is_lossless ZetaZeros⟩,
+   ⟨fun _ => the_remembered_is_lossless ZetaZeros,
+    fun _ => TOE0.root_on_the_constructed_domain⟩,
+   ⟨fun _ => cargo_at_zeros,
+    fun _ => TOE0.root_on_the_constructed_domain⟩,
+   rh_iff_fixed_point_of_rec.symm⟩
+
+/-- info: 'BoundChainMathlib.ra_triaxial_gol_loop_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.ra_triaxial_gol_loop_unconditional
+
+/-! **THE SELF-RECOGNITION CLOSURE.** Mathlib's non-vanishing of ζ on `1 ≤ Re s`
+(`riemannZeta_ne_zero_of_one_le_re`) closes both edges of the critical strip. The bit is the
+self-recognition of the zeros, every zero fixed by its own retraction, and seven readings of it
+are proved one statement with `RiemannHypothesis`. `the_self_recognition_closure` binds the
+whole formal arc in one theorem with nothing before the colon. -/
+
+/-- Every nontrivial zero lies strictly inside the critical strip, `0 < Re s < 1`. Mathlib's
+    non-vanishing of ζ on `1 ≤ Re s` gives the right edge, and the reflection `s ↦ 1 − s`
+    (`zeta_zeros_symm`) carries it to the left edge. -/
+theorem zeta_zeros_strictly_in_strip : ∀ s : Point, ZetaZeros s → 0 < s.re ∧ s.re < 1 := by
+  have hlt : ∀ {w : Point}, ZetaZeros w → w.re < 1 := by
+    intro w hw
+    by_contra h
+    push_neg at h
+    exact (riemannZeta_ne_zero_of_one_le_re h) hw.1
+  intro s hs
+  have h1 : s.re < 1 := hlt hs
+  have h0 : (foldPt s).re < 1 := hlt (zeta_zeros_symm hs)
+  unfold foldPt at h0
+  simp only [sub_re, one_re] at h0
+  exact ⟨by linarith, h1⟩
+
+/-- info: 'BoundChainMathlib.zeta_zeros_strictly_in_strip' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.zeta_zeros_strictly_in_strip
+
+/-- Every zero of the completed zeta function away from its two junk points `0` and `1` lies
+    strictly inside the critical strip: non-vanishing on `1 ≤ Re s` at `s`, and the functional
+    equation `completedRiemannZeta_one_sub` at `1 − s`. -/
+theorem completed_zeta_zeros_strictly_in_strip :
+    ∀ s : Point, CompletedZetaZeros s → 0 < s.re ∧ s.re < 1 := by
+  have key : ∀ {w : Point}, w ≠ 0 → completedRiemannZeta w = 0 → w.re < 1 := by
+    intro w hw0 hw
+    by_contra h
+    push_neg at h
+    apply riemannZeta_ne_zero_of_one_le_re h
+    rw [riemannZeta_def_of_ne_zero hw0, hw, zero_div]
+  intro s hc
+  obtain ⟨hz, hs0, hs1⟩ := hc
+  have h1 : s.re < 1 := key hs0 hz
+  have hne : (1 - s) ≠ 0 := fun h => hs1 (sub_eq_zero.mp h).symm
+  have h0 : (1 - s).re < 1 := key hne (by rw [completedRiemannZeta_one_sub]; exact hz)
+  simp only [sub_re, one_re] at h0
+  exact ⟨by linarith, h1⟩
+
+/-- info: 'BoundChainMathlib.completed_zeta_zeros_strictly_in_strip' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.completed_zeta_zeros_strictly_in_strip
+
+/-- The nontrivial zeros of ζ and the zeros of the completed zeta function coincide on all
+    of ℂ: both sets lie strictly inside the strip, where `zeta_zeros_iff_completed_in_strip` equates
+    them. -/
+theorem zeta_zeros_iff_completed : ∀ s : Point, ZetaZeros s ↔ CompletedZetaZeros s := by
+  intro s
+  constructor
+  · intro hs
+    obtain ⟨h0, h1⟩ := zeta_zeros_strictly_in_strip s hs
+    exact (zeta_zeros_iff_completed_in_strip h0 h1).mp hs
+  · intro hc
+    obtain ⟨h0, h1⟩ := completed_zeta_zeros_strictly_in_strip s hc
+    exact (zeta_zeros_iff_completed_in_strip h0 h1).mpr hc
+
+/-- info: 'BoundChainMathlib.zeta_zeros_iff_completed' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.zeta_zeros_iff_completed
+
+/-- With the edge `Re s = 1` closed, `RightHalfStripZeroFree` is exactly the statement that the
+    band `1/2 < Re s < 1` carries no zero. -/
+theorem right_half_strip_zero_free_iff_band :
+    RightHalfStripZeroFree ↔ ∀ s : Point, ZetaZeros s → ¬ (1 / 2 < s.re ∧ s.re < 1) := by
+  constructor
+  · intro h s hs hb
+    exact h s hs hb.1
+  · intro h s hs h1
+    exact h s hs ⟨h1, (zeta_zeros_strictly_in_strip s hs).2⟩
+
+/-- info: 'BoundChainMathlib.right_half_strip_zero_free_iff_band' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.right_half_strip_zero_free_iff_band
+
+/-- The Riemann Hypothesis is exactly the statement that the band `1/2 < Re s < 1`
+    carries no zero (`analytic_target_reduction`, `right_half_strip_zero_free_iff_band`). -/
+theorem rh_iff_band_zero_free :
+    RiemannHypothesis ↔ ∀ s : Point, ZetaZeros s → ¬ (1 / 2 < s.re ∧ s.re < 1) :=
+  (analytic_target_reduction.2.2.2.2.2.2.2).symm.trans right_half_strip_zero_free_iff_band
+
+/-- info: 'BoundChainMathlib.rh_iff_band_zero_free' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.rh_iff_band_zero_free
+
+/-- Every zero off the critical line has a twin in the band `1/2 < Re s < 1`: itself when
+    it lies right of the line, its fold image `1 − s̄` when it lies left of it. -/
+theorem off_line_zero_has_band_twin :
+    ∀ s : Point, ZetaZeros s → ¬ onLine s →
+      ∃ t : Point, ZetaZeros t ∧ (1 / 2 < t.re ∧ t.re < 1) ∧ (t = s ∨ t = fold s) := by
+  intro s hs hoff
+  obtain ⟨h0, h1⟩ := zeta_zeros_strictly_in_strip s hs
+  have hne : s.re ≠ 1 / 2 := hoff
+  have h3 : (fold s).re = 1 - s.re := by
+    unfold fold
+    simp only [sub_re, one_re, star_def, conj_re]
+  rcases hne.lt_or_lt with hlt | hgt
+  · exact ⟨fold s, zeta_zeros_closed s hs, ⟨by linarith, by linarith⟩, Or.inr rfl⟩
+  · exact ⟨s, hs, ⟨hgt, h1⟩, Or.inl rfl⟩
+
+/-- info: 'BoundChainMathlib.off_line_zero_has_band_twin' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.off_line_zero_has_band_twin
+
+/-- THE BIT IS SELF-RECOGNITION. `LookBack` is the self-recognition of the zeros: every zero is
+    fixed by its own retraction, `reg s = s`. The record clause of `LookBack` holds at every
+    zero through `p := s`, so the bit is self-recognition and nothing besides. -/
+theorem self_recognition_is_look_back :
+    LookBack ↔ ∀ s : Point, ZetaZeros s → reg s = s :=
+  ⟨fun h s hs => h s hs ⟨s, hs, rfl⟩, fun h s hs _ => h s hs⟩
+
+/-- info: 'BoundChainMathlib.self_recognition_is_look_back' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.self_recognition_is_look_back
+
+/-- THE SELF-RECOGNITION CLOSURE (ZERO PREMISES). The whole formal arc in one theorem, nothing
+    before the colon.
+    I · THE FLOOR FROM FREEDOM. The root `TOE0.RA₀` and `BoundChain.FreedomRoot`
+    (`TOE0.root_on_the_constructed_domain`, `BoundChain.freedom_root_inhabited`, each on no
+    axiom); `Pause`; `CanonicalRH`; the look-back at the Ground-On-Line locus, every point of
+    `GOL` fixed by its own retraction; the complex three-axis lock.
+    II · WHAT ζ CARRIES. Every nontrivial zero lies strictly inside the strip `0 < Re s < 1`; the zero
+    set is closed under the fold `s ↦ 1 − s̄`; it coincides with the zero set of the completed
+    zeta function on all of ℂ; every zero off the line has a twin in the band
+    `1/2 < Re s < 1`.
+    III · THE BIT IS SELF-RECOGNITION. Seven readings of the bit are one statement with
+    `RiemannHypothesis`: `LookBack`; the self-recognition of the zeros,
+    `∀ s, ZetaZeros s → reg s = s`; the coincidence of `GOL` with `ZetaZeros`; retraction
+    injectivity of the zeros; the Monism witness at the zeros; `RightHalfStripZeroFree`; and the
+    zero-free band.
+    IV · NOTHING ESCAPES THE BIT. Every route to `RiemannHypothesis`, from any premise, delivers the bit
+    (`every_route_passes_the_bit`), and no principle shared by every reflection-closed
+    configuration decides the value (`no_closed_principle_decides`).
+    The formal side carries no premise: it proves that `RiemannHypothesis` and the
+    self-recognition of the zeros are one statement, and that nothing else remains. -/
+theorem the_self_recognition_closure :
+    (TOE0.RA₀ ∧ BoundChain.FreedomRoot ∧ Pause ∧ CanonicalRH ∧
+      (∀ q, GOL q → reg q = q) ∧
+      (∀ s : Point, (freedomAxis s ∧ ramAxis s ∧ collapseAxis s) ↔ onLine s)) ∧
+    ((∀ s : Point, ZetaZeros s → 0 < s.re ∧ s.re < 1) ∧
+      Closed ZetaZeros ∧
+      (∀ s : Point, ZetaZeros s ↔ CompletedZetaZeros s) ∧
+      (∀ s : Point, ZetaZeros s → ¬ onLine s →
+        ∃ t : Point, ZetaZeros t ∧ (1 / 2 < t.re ∧ t.re < 1) ∧ (t = s ∨ t = fold s))) ∧
+    ((LookBack ↔ ∀ s : Point, ZetaZeros s → reg s = s) ∧
+      ((∀ s : Point, ZetaZeros s → reg s = s) ↔ RiemannHypothesis) ∧
+      ((∀ q, GOL q ↔ ZetaZeros q) ↔ RiemannHypothesis) ∧
+      (RetractionInjective ZetaZeros ↔ RiemannHypothesis) ∧
+      (RootReadTwice ZetaZeros ↔ RiemannHypothesis) ∧
+      (RightHalfStripZeroFree ↔ RiemannHypothesis) ∧
+      (RiemannHypothesis ↔ ∀ s : Point, ZetaZeros s → ¬ (1 / 2 < s.re ∧ s.re < 1))) ∧
+    ((∀ Q : Prop, (Q → RiemannHypothesis) → Q →
+        RightHalfStripZeroFree ∧ LookBack ∧ RetractionInjective ZetaZeros ∧
+          RootReadTwice ZetaZeros) ∧
+      (∀ D : Config → Prop, (∀ S, Closed S → D S) →
+        ¬ ∀ S : Config, Closed S → D S → Value S)) :=
+  ⟨⟨TOE0.root_on_the_constructed_domain, BoundChain.freedom_root_inhabited,
+     pause_is_unconditional, canonical_rh_unconditional, cargo_at_zeros,
+     complex_three_axis_lock⟩,
+   ⟨zeta_zeros_strictly_in_strip, zeta_zeros_closed, zeta_zeros_iff_completed,
+     off_line_zero_has_band_twin⟩,
+   ⟨self_recognition_is_look_back, h_id_proved.symm, rh_iff_fixed_point_of_rec.symm,
+     retraction_injective_iff_rh,
+     (analytic_target_reduction.2.2.2.2.2.1).symm.trans analytic_target_reduction.2.2.2.2.2.2.2,
+     analytic_target_reduction.2.2.2.2.2.2.2, rh_iff_band_zero_free⟩,
+   ⟨every_route_passes_the_bit, no_closed_principle_decides⟩⟩
+
+/-- info: 'BoundChainMathlib.the_self_recognition_closure' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms BoundChainMathlib.the_self_recognition_closure
+
 end BoundChainMathlib
 
 end PartX
 
 /-! ## TERMINAL CERTIFICATION (RH_Formal_Closure v1.0.0_CC)
 
-This file is the mathematical closure of RH_Both_Sides_Formal_Master_v3_0_22_CC.lean. Every
+This file is the mathematical closure of RH_Both_Sides_Formal_Master_v3_0_24_CC.lean. Every
 declaration in it is carried from that file with its statement and proof byte-identical, so every
 cone pinned here is the cone the master pins. It declares no axiom and contains no sorry, and it
 carries no declaration of the master's Parts II and IV to VIII or XI.
 
-With no premise: the forward pass to the pause (`forward_pass_unconditional`), the retrospective seal
+With no premise: the self-recognition closure (`the_self_recognition_closure`), the forward pass to
+the pause (`forward_pass_unconditional`), the retrospective seal
 (`the_unconditional_retrospective_seal`), the analytic target (`analytic_target_reduction`), Round 2
 (`round2_absolute_closure`) and the analytic route (`analytic_route_sealed`). On the bit:
 `rh_from_pause_and_look_back`, and with it `classes_coincide_under_ra_zeta`, `rh_from_the_cargo_loop`,

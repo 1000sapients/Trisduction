@@ -1,71 +1,73 @@
-# Scribal handout · two Lean files · compile, verify, hold for the push command
+# Scribal handout · RH_Formal_Closure_v1_0_0_CC · compile, verify, hold for the push command
 
 **From:** the Claude Code session that keeps the RH papers.
 **To:** the scribe holding Lean 4.19.0 and Mathlib v4.19.0.
-**Fetch from git, `DRAFT/`:**
+**File:** fetch `DRAFT/RH_Formal_Closure_v1_0_0_CC.lean` from git, beside this handout. It stays an uncompiled draft until your compile accepts it, and it is seated only on the push command (section 4).
 
-- `RH_Both_Sides_Formal_Master_v3_0_22_CC.lean` (file A)
-- `RH_Formal_Closure_v1_0_0_CC.lean` (file B)
-- this handout
+This draft replaces every earlier draft of the same file. It is re-extracted from the seated **v3.0.24_CC** (`b272c46`, SHA-256 `8345ede8…`), so it carries `the_self_recognition_closure`. The earlier file A, the corrected v3.0.22_CC header still in `DRAFT/`, needs no action: v3.0.24_CC already carries that correction.
 
-Both are uncompiled drafts until your compile accepts them. Seat them only on the push command (section 4).
+## 1. The file
 
-## 1. File A · the master, corrected in place, comments only
+- **Size:** 2,188 lines, 108,338 bytes.
+- **SHA-256 as delivered:** `8d95ccc1eeb614e3a339f3db4fb28f0beb3b3ba063a0c4d550333b1b447c7f68`.
+- **Imports:** lines 1 to 4, the same four as v3.0.24_CC, including `Mathlib.NumberTheory.LSeries.Nonvanishing`.
 
-- **Source:** the seated v3.0.22_CC (`16d3f1b`, SHA-256 `75b30664…`).
-- **Size:** 12,994 lines (unchanged), 712,305 bytes.
-- **SHA-256 as delivered:** `fcba11c82b3619d785540bf763f3518839735f49d0d63916c974d20f70bcf3a0`.
-- **What changed:** header lines 28 and 31 to 34, inside the opening comment. No declaration, proof, pin or line number moves.
-  - Line 28: "each reading of which is the hypothesis" becomes "each reading of which is proved equivalent to it".
-  - Lines 31–34, the decoupling clause, now names `the_terminal_certification` as a third Part X declaration that uses Parts VII–VIII. It binds the joint seal with Part VIII's carrier closure. The old clause named only the two bridges, which is false at the types.
-- **Accept on:** exit 0; 0 errors, 0 warnings, 0 `#guard_msgs` mismatches; 707 pins (391 / 34 / 133 / 149); 259 unguarded prints at the same lines; a compiler message stream identical to the seated v3.0.22_CC's.
+**What it carries:**
 
-## 2. File B · the formal closure, standalone, new
-
-The mathematical closure of the master as its own file, for the paper *The Completed Formal Closure of the Riemann Hypothesis*.
-
-- **Size:** 1,900 lines, 92,561 bytes.
-- **SHA-256 as delivered:** `818c5ad543b9fb8d7cb12b32dd5559fd4145d0563493637b023a28db3d66f058`. This is the fourth push of this draft; against the third (`a4841cb3…`) only the terminal comment changed, to say "statement and proof byte-identical". Against the second (`e027f029…`) it drops `TOE0.Q`, which a name collision in the dependency scan had carried and nothing uses, and it carries Part X's module comments (the translation dictionary and the headings X-a to X-l, without §X-i). Against the first (`a0b25bf7…`) it also drops the empty `namespace … end` pairs. No carried declaration changed.
-- **Imports:** lines 1 to 3, the same three as the master.
-
-**What it is:**
-
-- Every declaration is carried from the master with its statement and proof byte-identical. That is 168 declarations: all of Part X except three, plus the declarations of Parts I, III and IX that Part X uses, found by a namespace-aware dependency closure.
+- 187 declarations from v3.0.24_CC, each with its statement and proof byte-identical. They are:
+  - all of Part X except three, which is 140 declarations;
+  - the declarations of Parts I (9), III (32) and IX (6) that Part X uses, found by a namespace-aware dependency closure.
 - The three left out are `carrier_embeds_in_complex` (§X-i), `physico_formal_supplies_look_back_and_rh` (the joint seal) and `the_terminal_certification`.
-- Nothing from Parts II, IV–VIII, VIII-b or XI is carried. The Part III heat section and the Part IX `PhysicalCarrier` are not carried either, since the closure does not use them.
-- One docstring, that of `discrete_chart_embeds_in_complex`, loses its last clause, which named `carrier_embeds_in_complex`.
-- Part X carries the master's module comments (the translation dictionary and the headings X-a to X-l) but for the heading of §X-i. The part headings, the header and the terminal block are new comments.
+- Nothing from Parts II, IV–VIII, VIII-b or XI is carried. The file contains no physics vocabulary, comments included.
+
+**What differs from the master's text:**
+
+- Four docstrings are trimmed:
+  - `discrete_chart_embeds_in_complex` loses a clause naming `carrier_embeds_in_complex`;
+  - `TOE0.ΔE₀` loses "at positive energy";
+  - `the_self_recognition_closure` loses its last sentence, which named the joint seal;
+  - the Complex Triaxiality docstring loses "(lifted from Part II `PrimeFreedom.three_axis_lock` to ℂ)".
+- Part X carries the master's module comments, except the heading of §X-i.
+- The header, the part headings and the terminal block are new comments.
 
 **Expected census:**
 
-- 111 theorems, 45 `def`s, 5 `abbrev`s, 6 structures, 1 inductive type, in 4 namespaces (`TOE0`, `RememberedOffered`, `BoundChain`, `BoundChainMathlib`).
-- 115 pins under `#guard_msgs`: 17 empty, 98 at [propext, Classical.choice, Quot.sound]. Every pin text is the master's.
+- 123 theorems, 52 `def`s, 5 `abbrev`s, 6 structures and 1 inductive type, in 4 namespaces (`TOE0`, `RememberedOffered`, `BoundChain`, `BoundChainMathlib`).
+- 127 pins under `#guard_msgs`: 18 empty and 109 at [propext, Classical.choice, Quot.sound]. Every pin text is the master's.
 - No unguarded `#print axioms`, so a clean compile prints nothing.
 
-**Accept on:** exit 0; 0 errors, 0 warnings, 0 mismatches, 0 `sorry`, 0 user-declared axioms; the 115 pins; an empty message stream.
+## 2. Compile and accept
 
-## 3. If a compile fails
+Run `lake env lean RH_Formal_Closure_v1_0_0_CC.lean` in the Mathlib v4.19.0 project used for v3.0.24_CC. Accept only on all of the following:
+
+- exit code 0;
+- 0 errors, 0 warnings, 0 `#guard_msgs` mismatches;
+- 0 `sorry` and 0 user-declared axioms;
+- 127 pins;
+- an empty message stream.
+
+## 3. If the compile fails
 
 Make no change of meaning. Report the exact message with its line number. These local fixes are permitted, each logged in your receipt:
 
-- **(a) File B, `unknown identifier` or `unknown constant`:** the dependency closure missed a declaration. Copy it verbatim from the master into the same part, above its first use, with its master pin if it has one. Repeat until the file compiles, and list every declaration you added.
-- **(b) File B, a `#guard_msgs` mismatch:** report it, and do not edit the pin. Cones of byte-identical declarations cannot differ unless (a) brought in a different dependency.
-- **(c) File A:** any message at all is a stop, because only comments changed.
+- **(a) `unknown identifier` or `unknown constant`:** the dependency closure missed a declaration. Copy it verbatim from v3.0.24_CC into the same part, above its first use, with its master pin if it has one. List every declaration you add.
+- **(b) A `#guard_msgs` mismatch:** report it, and do not edit the pin.
 
 Anything else: stop and report.
 
 ## 4. Seat on the push command only
 
-- **File A:** overwrite `FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_22_CC.lean` in place, same filename, as v3.0.19 was corrected at `81ca42e`.
-- **File B:** add `FINAL_BINDING/RH Binding/RH_Formal_Closure_v1_0_0_CC.lean`.
-- **Commits:** the artifact commit (both files, and the removal of the three `DRAFT/` files with the L6 manifest), then the INDEX commit. Use seal `rh_v3022cc` with verb PATCH for A, and seal `rh_formal_closure_v100cc` with verb SEAT for B.
-- **INDEX layout:** S lines go inside SNAPSHOT above `## MAP`, never after `## DECODER`.
-- **Verification:** re-GET both files and confirm their SHAs.
+- **Path:** add `FINAL_BINDING/RH Binding/RH_Formal_Closure_v1_0_0_CC.lean`.
+- **Commits:** the artifact commit, which also removes the `DRAFT/` files of this handout and of the superseded file A with the L6 manifest, then the INDEX commit.
+- **Seal:** `rh_formal_closure_v100cc`, verb SEAT.
+- **INDEX layout:** S lines go inside SNAPSHOT above `## MAP`.
+- **Verification:** re-GET the file and confirm its SHA.
 
 ## 5. Receipt to report back
 
-- For each file: exit code; error, warning and mismatch counts; lines, bytes and SHA-256, noting any byte that differs from the delivered SHA and why.
-- For B: the census, and every declaration added under 3(a).
-- After the push command: the artifact commit, the INDEX commit and the re-GET match.
+- exit code; error, warning and mismatch counts;
+- lines, bytes and SHA-256 of the compiled file, noting any byte that differs from the delivered SHA and why;
+- the census, and any declaration added under 3(a);
+- after the push command: the artifact commit, the INDEX commit and the re-GET match.
 
-This handout covers the Lean files only. After you push, the twin binder paper is re-pinned in place to the corrected master. The new paper is built on file B's seated bytes, and if those differ from the delivered SHA, the seated bytes govern.
+The paper *The Completed Formal Closure of the Riemann Hypothesis* is pinned to the seated bytes of this file.
