@@ -24,21 +24,21 @@ Both are uncompiled drafts until your compile accepts them. Seat them only on th
 
 The mathematical closure of the master as its own file, for the paper *The Completed Formal Closure of the Riemann Hypothesis*.
 
-- **Size:** 1,857 lines, 90,436 bytes.
-- **SHA-256 as delivered:** `e027f0297d0666a9febd3e7798fee833f1504d59ca1192d6db1c0611c33067e5`. This replaces the first push of this draft (`a0b25bf7…`), whose only differences were empty `namespace … end` pairs left where declarations were dropped; no declaration changed.
+- **Size:** 1,900 lines, 92,532 bytes.
+- **SHA-256 as delivered:** `a4841cb3634977b496eb1aa7babbd591be8cd2ce6077896a1692530e90ba5a0e`. This is the third push of this draft. Against the second (`e027f029…`) it drops `TOE0.Q`, which a name collision in the dependency scan had carried and nothing uses, and it carries Part X's module comments (the translation dictionary and the headings X-a to X-l, without §X-i). Against the first (`a0b25bf7…`) it also drops the empty `namespace … end` pairs. No carried declaration changed.
 - **Imports:** lines 1 to 3, the same three as the master.
 
 **What it is:**
 
-- Every declaration is carried from the master with its statement and proof byte-identical. That is 169 declarations: all of Part X except three, plus the declarations of Parts I, III and IX that Part X uses, found by a namespace-aware dependency closure.
+- Every declaration is carried from the master with its statement and proof byte-identical. That is 168 declarations: all of Part X except three, plus the declarations of Parts I, III and IX that Part X uses, found by a namespace-aware dependency closure.
 - The three left out are `carrier_embeds_in_complex` (§X-i), `physico_formal_supplies_look_back_and_rh` (the joint seal) and `the_terminal_certification`.
 - Nothing from Parts II, IV–VIII, VIII-b or XI is carried. The Part III heat section and the Part IX `PhysicalCarrier` are not carried either, since the closure does not use them.
 - One docstring, that of `discrete_chart_embeds_in_complex`, loses its last clause, which named `carrier_embeds_in_complex`.
-- The header and the terminal block are new comments.
+- Part X carries the master's module comments (the translation dictionary and the headings X-a to X-l) but for the heading of §X-i. The part headings, the header and the terminal block are new comments.
 
 **Expected census:**
 
-- 111 theorems, 45 `def`s, 5 `abbrev`s, 7 structures, 1 inductive type, in 4 namespaces (`TOE0`, `RememberedOffered`, `BoundChain`, `BoundChainMathlib`).
+- 111 theorems, 45 `def`s, 5 `abbrev`s, 6 structures, 1 inductive type, in 4 namespaces (`TOE0`, `RememberedOffered`, `BoundChain`, `BoundChainMathlib`).
 - 115 pins under `#guard_msgs`: 17 empty, 98 at [propext, Classical.choice, Quot.sound]. Every pin text is the master's.
 - No unguarded `#print axioms`, so a clean compile prints nothing.
 

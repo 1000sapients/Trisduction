@@ -5,13 +5,15 @@ import Mathlib.Analysis.NormedSpace.Connected
 /-!
   RH_Formal_Closure_v1_0_0_CC.lean · THE COMPLETED FORMAL CLOSURE OF THE RIEMANN HYPOTHESIS.
 
-  The mathematical closure of RH_Both_Sides_Formal_Master_v3_0_22_CC.lean (sha256 75b3066493a89a0c…)
-  as one standalone file, built by Claude Code. Every declaration below is carried from that file with
+  The mathematical closure of RH_Both_Sides_Formal_Master_v3_0_22_CC.lean as one standalone file,
+  built by Claude Code. Every declaration below is carried from that file with
   its statement and proof byte-identical: the declarations of Part X (`BoundChainMathlib`) but three,
   and the declarations of Parts I, III and IX that they use, and nothing else. The three left out are
   the master's two bridges to its other closure (§X-i and the joint seal of §X-l) and its terminal
   certification, which binds the joint seal. One docstring is trimmed of a clause that named a
-  declaration not carried. The part numbers are the master's.
+  declaration not carried. Part X carries the master's module comments, its
+  translation dictionary and its section headings, but for the heading of §X-i. The part numbers are
+  the master's; the part headings, this header and the terminal block are new comments.
 
   THE NORMAL FORM (`zeta_ra_loop`, first leg):
     (LeastErasure (Rec ZetaZeros) → LeastErasure ZetaZeros) ↔ RiemannHypothesis,
@@ -65,10 +67,6 @@ theorem external_proof_adds_nothing {R : Prop} (G : SelfGrounding R) (Q : Prop) 
 
 /-- The deed of denying the root hands it over. -/
 theorem denial_instantiates {R : Prop} (G : SelfGrounding R) : SelfVerifying R := fun _ => G.instances G.anAct
-
-structure Q where
-  (a b c d : Int)
-  deriving DecidableEq
 
 end TOE0
 
@@ -329,6 +327,32 @@ open Complex
 
 namespace BoundChainMathlib
 
+/-! ### TRANSLATION DICTIONARY for analytic number theorists -/
+
+/-!
+  Dirichlet series and the Euler product → `riemannZeta_ne_zero_of_one_lt_re`
+  (Mathlib.NumberTheory.LSeries.Dirichlet): non-vanishing for Re s > 1, the right
+  edge of `zeta_zeros_in_strip`.
+
+  The completed functional equation → `completedRiemannZeta_one_sub`: the analytic
+  symmetry s ↦ 1 − s is the retraction operator `foldPt`; its Schwarz reflection
+  form is `zeta_schwarz_reflection`.
+
+  Zero-free regions and strip confinement → `zeta_zeros_in_strip`: every nontrivial
+  zero satisfies 0 ≤ Re s ≤ 1, unconditionally.
+
+  Explicit-formula / Weil-positivity criteria → `analytic_face_vocabulary_law`:
+  every analytic face equivalent to RH is identical to the fixed-point identity
+  `LeastErasure ZetaZeros`.
+
+  The classical statement → `h_id_proved`: Mathlib's `RiemannHypothesis` is
+  logically identical to `LeastErasure ZetaZeros`.
+
+  The normal form → `zeta_ra_loop` (first leg) and `apex_cone`: RH is the apex of
+  a cone of equivalent readings — retraction injectivity, the ActualZeros socket,
+  record coincidence — any two the same proposition (`apex_one_gap`).
+-/
+
 /-- Points of the complex plane. -/
 abbrev Point := ℂ
 
@@ -491,6 +515,8 @@ theorem transport_zeta (M : Config) :
 theorem cargo_at_zeros : LeastErasure (Rec ZetaZeros) :=
   record_has_least_erasure ZetaZeros
 
+/-! ### X-a . Set-Level Idempotence and Fixed-Point Characterization over ℂ -/
+
 /-- Set-level idempotence of the retraction image: Rec (Rec S) = Rec S pointwise. -/
 theorem remembering_is_stable (S : Config) (q : Point) : Rec (Rec S) q ↔ Rec S q := by
   constructor
@@ -518,6 +544,8 @@ theorem rh_iff_fixed_point_of_rec :
     RiemannHypothesis ↔ (∀ q, Rec ZetaZeros q ↔ ZetaZeros q) :=
   h_read_proved.trans (offered_is_remembered_iff_value ZetaZeros).symm
 
+/-! ### X-b . Complex-Analytic Vocabulary Isomorphism -/
+
 /-- Any complex-analytic proposition proved equivalent to Mathlib's RiemannHypothesis. -/
 structure AnalyticFace where
   sentence : Prop
@@ -540,6 +568,8 @@ theorem analytic_face_vocabulary_law (F : AnalyticFace) (P : Prop) :
   have h := analytic_face_is_least_erasure F
   exact ⟨⟨fun hf hl => hf (h.mpr hl), fun hl hf => hl (h.mp hf)⟩,
          ⟨fun hp p => h.mp (hp p), fun hp p => h.mpr (hp p)⟩⟩
+
+/-! ### X-c . Retraction Fiber Invariance and Counterexample Exclusion over ℂ -/
 
 /-- The retraction reg is invariant under conjugate reflection across the critical line. -/
 theorem reg_fold (s : Point) : reg (fold s) = reg s := by
@@ -632,6 +662,8 @@ theorem no_offline_refuter_seals_rh
   apply Classical.byContradiction
   intro hnot
   exact h_no_refute (sigma1 (offline_zero_iff_not_rh.mpr hnot))
+
+/-! ### X-d . The Self-Grounding Retraction Recursion and Fiber Section Loop over ℂ -/
 
 /-- The retracted zero set Rec ZetaZeros forms a self-grounding fixed-point root (Part I, TOE0).
     The retracted image is inhabited by the closed term `formal_act ZetaZeros` — the canonical
@@ -749,6 +781,8 @@ theorem mathlib_transfer_status :
   refine ⟨h_id_proved, cargo_at_zeros, ?_⟩
   exact (transport_zeta ZetaZeros).trans h_read_proved.symm
 
+/-! ### X-e . Step 4 from First Principles: Strip Equivalence and Functional-Equation Closure -/
+
 /-- Point reflection s ↦ 1 - s is an involution on ℂ. -/
 theorem foldPt_involutive (s : Point) : foldPt (foldPt s) = s := by
   unfold foldPt
@@ -817,6 +851,8 @@ theorem strip_zeta_zeros_closed_pt : ClosedPt StripZetaZeros := by
   refine ⟨zeta_zeros_symm_in_strip h0 h1 hz, ?_, ?_⟩
   · unfold foldPt; simp only [sub_re, one_re]; linarith
   · unfold foldPt; simp only [sub_re, one_re]; linarith
+
+/-! ### X-f . First-Principles Retraction Injectivity and Orbit Collapse over ℂ -/
 
 /-- Conjugate reflection fold (s ↦ 1 - star s) fixes a complex point iff Re s = 1/2. -/
 theorem fold_fixed_iff_onLine (s : Point) : fold s = s ↔ onLine s := by
@@ -890,6 +926,8 @@ theorem rh_from_closed_and_retraction_injective
   have hv : Value ZetaZeros := closed_retraction_injective_forces_value h_closed h_inj
   exact ⟨(twins_zeta ZetaZeros).mpr hv, h_read_proved.mpr hv⟩
 
+/-! ### X-g . Step 5 from First Principles: Discrete-to-Complex Chart Homomorphism -/
+
 /-- Exact embedding of the discrete offset chart (BoundChain.Point = Int × Int) into ℂ:
     offset d and height t map to (1/2 + d/8) + i t. -/
 noncomputable def φC (p : BoundChain.Point) : Point :=
@@ -919,6 +957,7 @@ theorem discrete_chart_embeds_in_complex (p : BoundChain.Point) :
       exact h.resolve_right (by norm_num)
     · intro h
       exact Or.inl h
+/-! ### X-h . Schwarz Reflection Chain: ZetaZeros is Reflection-Closed -/
 
 /-- Auxiliary: conjugation reflects differentiability. -/
 theorem differentiableAt_star_comp {f : Point → Point} {x : Point}
@@ -1398,6 +1437,8 @@ theorem socket_at_zeta_zeros :
 /-- info: 'BoundChainMathlib.socket_at_zeta_zeros' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in #print axioms BoundChainMathlib.socket_at_zeta_zeros
 
+/-! ### X-k . The Cone: One Apex, Every Reading, No Category Gap -/
+
 /-- The readings of the apex: the four registers' readings of the one bit. -/
 inductive ApexReading where
   | leastErasure
@@ -1455,6 +1496,8 @@ theorem bit_read_twice :
 /-- info: 'BoundChainMathlib.bit_read_twice' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
 #print axioms BoundChainMathlib.bit_read_twice
+
+/-! ### X-l . Pause and Look Back: The Unconditional Retrospective Seal -/
 
 /-- No principle shared by all conjugate-reflection-closed subsets of ℂ forces
     critical-line inclusion. -/
