@@ -3751,6 +3751,66 @@
       "supersedes": "A Formal Proof of the Riemann Hypothesis: The Formal Domain as a Self-Verifying Fixed Point (13 October 2026), at the same Zenodo record",
       "superseded_by": null,
       "note": "Version 1.0.0, 16 October 2026, Math Journal edition, 64 pages; paper at 844339f, index at 1e9c4f1. Reads FINAL_BINDING/RH Binding/RH_Formal_Closure_v1_0_0_CC.lean (seated 823ac22, sha256 4af02e33, 2189 lines), the standalone formal closure extracted from RH_Both_Sides_Formal_Master_v3_0_24_CC.lean. Zenodo record 23334982 replaced in place under the architect's permission (edit, unlock, delete, upload, publish; versions 1 -> 1): formal_fixed_point_v3_0_5.pdf -> RH_Completed_Formal_Closure_v1_0_0.pdf (md5 8a296fa5) and RH_Both_Sides_Formal_Master_v3_0_9.lean -> RH_Formal_Closure_v1_0_0_CC.lean (md5 c64840ab); title, description, version 1.0.0, date 2026-10-16 and ORCID set. The two removed files are kept byte-identical in git at FINAL_BINDING/RH Binding/Formal_Fixed_Point_v1_0_1.pdf (md5 71f96c3e) and RH_Both_Sides_Formal_Master_v3_0_9.lean (md5 e9e363c9). IA item completed-formal-closure-riemann-hypothesis claimed and live: RH_Completed_Formal_Closure.pdf, re-serialized without object streams (md5 17a7bea2)."
+    },
+    "rh-real-part-and-one-bit": {
+      "title": "An Unconditional Proof of the Real Part of the Riemann Hypothesis, the Probable Remainder Closed to Symmetry and Computation at Theorem Grade, and the Whole Proved from One Bit Supplied by the Act of Computation or by Physics Itself: Riemann's 1859 Division Made Exact, Its Remainder Located as One Bit, and the Bit Supplied Twice, Every Warrant Checked in Lean 4",
+      "domain": "Riemann Hypothesis",
+      "status": "live",
+      "first_published": "2026-10-17",
+      "last_updated": "2026-10-17",
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_2_1_CC.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_2_1_CC_MathJournal_SingleColumn.pdf",
+        "editions": [
+          "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_2_1_CC_Journal_SingleColumn.pdf",
+          "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_2_1_CC_MathJournal_SingleColumn.tex",
+          "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_2_1_CC.blog.md"
+        ]
+      },
+      "zenodo": {
+        "conceptrecid": 23440382,
+        "concept_doi": "10.5281/zenodo.23440382",
+        "latest_version_doi": "10.5281/zenodo.23440383",
+        "latest_record": 23440383,
+        "versions": 1,
+        "state": "published",
+        "files": [
+          {
+            "name": "RH_Real_Part_and_One_Bit_v1_2_1_CC_MathJournal_SingleColumn.pdf",
+            "md5": "132b0993f2b77243c70fa6d7ff8c8a1b",
+            "size": 731394
+          },
+          {
+            "name": "RH_Real_Part_and_One_Bit_v1_2_1_CC_Journal_SingleColumn.pdf",
+            "md5": "f811dda35aba4efb68a94662056944de",
+            "size": 764060
+          }
+        ]
+      },
+      "ia": {
+        "identifier": "unconditional-proof-real-part-riemann-hypothesis-one-bit",
+        "url": "https://archive.org/details/unconditional-proof-real-part-riemann-hypothesis-one-bit",
+        "state": "live",
+        "files": [
+          {
+            "name": "RH_Real_Part_and_One_Bit_MathJournal.pdf",
+            "md5": "4b9a0994ee22c6b883c141c3c6b4f3ad",
+            "size": 5773820
+          },
+          {
+            "name": "RH_Real_Part_and_One_Bit_Journal.pdf",
+            "md5": "37cb67ee0ce4cc267c3a03d13ace7014",
+            "size": 6967166
+          }
+        ]
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "supersedes": null,
+      "superseded_by": null,
+      "note": "Version 1.2.1, 16 October 2026: the Math Journal edition (106 pages) and the Journal edition (118 pages), both single column, each printing in Appendix C the master FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_24_CC.lean (seated b272c46, sha256 8345ede8, 13366 lines) whole, in two columns with line numbers; the Blog edition and the Math Journal LaTeX source beside them. Fresh deposit on three surfaces on 17 October 2026: paper at 32193e4, index at 2375e44. Zenodo record 23440383 minted NEW on concept 23440382 with both PDFs (md5 132b0993, f811dda3). Internet Archive item unconditional-proof-real-part-riemann-hypothesis-one-bit claimed: RH_Real_Part_and_One_Bit_MathJournal.pdf and RH_Real_Part_and_One_Bit_Journal.pdf, re-serialized without object streams (md5 4b9a0994, 37cb67ee)."
     }
   }
 }
