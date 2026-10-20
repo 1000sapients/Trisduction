@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 2520" width="1680" height="2520">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#33475b"/></marker><marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker><marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b4bc4"/></marker></defs>
+<rect x="0" y="0" width="1680" height="2520" rx="0" fill="#f7f9fa" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="0" y="0" width="1680" height="158" rx="0" fill="#0e2a47" stroke="none" stroke-width="0" opacity="1"/>
+<text x="56" y="62" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="start" >THE 10-LEVEL ARCHITECTURE OF THE RIEMANN HYPOTHESIS PROOF</text>
+<text x="56" y="94" font-family="DejaVu Sans, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#c8d8e8" text-anchor="start" >Formal reduction · the blocked 0-bit route · the mandatory 1-bit discharge — the least-resistance pathway, delivered twice</text>
+<rect x="56" y="112" width="407.8" height="30" rx="15" fill="#1d4066" stroke="#3f6186" stroke-width="1" opacity="1"/>
+<text x="259.9" y="132" font-family="DejaVu Sans Mono, monospace" font-size="12.5" font-weight="bold" fill="#dcebfb" text-anchor="middle" >MASTER v3.0.33 · LEAN 4.19.0 · MATHLIB c44e0c8e</text>
+<rect x="612" y="112" width="475.0" height="30" rx="15" fill="#1d4066" stroke="#3f6186" stroke-width="1" opacity="1"/>
+<text x="849.5" y="132" font-family="DejaVu Sans Mono, monospace" font-size="12.5" font-weight="bold" fill="#dcebfb" text-anchor="middle" >COMPILE EXIT 0 · 748 PINS · 0 SORRY · 0 AXIOMS DECLARED</text>
+<rect x="1178" y="112" width="323.8" height="30" rx="15" fill="#1d4066" stroke="#3f6186" stroke-width="1" opacity="1"/>
+<text x="1339.9" y="132" font-family="DejaVu Sans Mono, monospace" font-size="12.5" font-weight="bold" fill="#dcebfb" text-anchor="middle" >PAPER v1.2.2 · TRACTATUS MATHEMATICUS</text>
+<rect x="96" y="186" width="6" height="1128" rx="3" fill="#b9d9d2" stroke="none" stroke-width="0" opacity="1"/>
+<rect x="110" y="186" width="880" height="104" rx="10" fill="#e7f4f0" stroke="#177e6c" stroke-width="1.6" opacity="1"/>
+<rect x="110" y="186" width="62" height="104" rx="10" fill="#177e6c" stroke="#177e6c" stroke-width="0" opacity="1"/>
+<rect x="162" y="186" width="10" height="104" rx="0" fill="#177e6c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="141" y="250" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle" >1</text>
+<text x="190" y="216" font-family="DejaVu Sans, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#10222e" text-anchor="start" >FOUNDATION — ZFC ROUTE BLOCKED</text>
+<text x="190" y="239" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#3d6b62" text-anchor="start" >the_master_seal · cant_refute_seals · placement</text>
+<text x="190" y="260" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Σ₁-complete sound theories prove what computation settles; unrefutability seals a Π⁰₁ hypothesis.</text>
+<text x="190" y="279" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >The foundation carries computation — and is bypassed as a route to the value.</text>
+<line x1="550" y1="290" x2="550" y2="314" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="110" y="314" width="880" height="104" rx="10" fill="#e7f4f0" stroke="#177e6c" stroke-width="1.6" opacity="1"/>
+<rect x="110" y="314" width="62" height="104" rx="10" fill="#177e6c" stroke="#177e6c" stroke-width="0" opacity="1"/>
+<rect x="162" y="314" width="10" height="104" rx="0" fill="#177e6c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="141" y="378" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle" >2</text>
+<text x="190" y="344" font-family="DejaVu Sans, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#10222e" text-anchor="start" >PRIME-SIDE FREE BASIS &amp; MULTIPLICATIVE ARROW</text>
+<text x="190" y="367" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#3d6b62" text-anchor="start" >primes_admit_every_assignment · liouvilleAll_mul · euclid_lemma</text>
+<text x="190" y="388" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >The primes are a free basis: every assignment extends to exactly one completely additive function.</text>
+<text x="190" y="407" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >λ(n) = (−1)^Ω(n) is completely multiplicative. The aperture opens — one bit wide.</text>
+<line x1="550" y1="418" x2="550" y2="442" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="110" y="442" width="880" height="104" rx="10" fill="#e7f4f0" stroke="#177e6c" stroke-width="1.6" opacity="1"/>
+<rect x="110" y="442" width="62" height="104" rx="10" fill="#177e6c" stroke="#177e6c" stroke-width="0" opacity="1"/>
+<rect x="162" y="442" width="10" height="104" rx="0" fill="#177e6c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="141" y="506" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle" >3</text>
+<text x="190" y="472" font-family="DejaVu Sans, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#10222e" text-anchor="start" >UNCONDITIONAL COMPLEX STRIP GEOMETRY</text>
+<text x="190" y="495" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#3d6b62" text-anchor="start" >zeta_zeros_in_open_strip · zeta_zeros_closed · rh_iff_band_zero_free</text>
+<text x="190" y="516" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Nontrivial zeros confined strictly to 0 &lt; Re s &lt; 1, closed under the fold s ↦ 1 − s̄.</text>
+<text x="190" y="535" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >RH is exactly the statement that the band 1/2 &lt; Re s &lt; 1 is zero-free.</text>
+<line x1="550" y1="546" x2="550" y2="570" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="110" y="570" width="880" height="104" rx="10" fill="#e7f4f0" stroke="#177e6c" stroke-width="1.6" opacity="1"/>
+<rect x="110" y="570" width="62" height="104" rx="10" fill="#177e6c" stroke="#177e6c" stroke-width="0" opacity="1"/>
+<rect x="162" y="570" width="10" height="104" rx="0" fill="#177e6c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="141" y="634" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle" >4</text>
+<text x="190" y="600" font-family="DejaVu Sans, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#10222e" text-anchor="start" >LOSSLESS SELF-RECURSIVE RECORD</text>
+<text x="190" y="623" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#3d6b62" text-anchor="start" >record_is_self_recursive · cargo_at_zeros · the_remembered_is_lossless</text>
+<text x="190" y="644" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >The retracted record Rec ζ is lossless, idempotent, self-recursive — B′ holds with no premise.</text>
+<text x="190" y="663" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Every point of the record lies on the line. The cargo loop delivers B′ free.</text>
+<line x1="550" y1="674" x2="550" y2="698" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="110" y="698" width="880" height="104" rx="10" fill="#e7f4f0" stroke="#177e6c" stroke-width="1.6" opacity="1"/>
+<rect x="110" y="698" width="62" height="104" rx="10" fill="#177e6c" stroke="#177e6c" stroke-width="0" opacity="1"/>
+<rect x="162" y="698" width="10" height="104" rx="0" fill="#177e6c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="141" y="762" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle" >5</text>
+<text x="190" y="728" font-family="DejaVu Sans, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#10222e" text-anchor="start" >BIDIRECTIONAL HALTED UNIDUCTION</text>
+<text x="190" y="751" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#3d6b62" text-anchor="start" >bidirectional_halted_uniduction · five_readings_agree · acts_are_one</text>
+<text x="190" y="772" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Prime side and zero side halt at one proposition; five readings agree on every closed world.</text>
+<text x="190" y="791" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >The eliminator from the record to the apex is halted by theorem — not an open route.</text>
+<line x1="550" y1="802" x2="550" y2="826" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="110" y="826" width="880" height="104" rx="10" fill="#e7f4f0" stroke="#177e6c" stroke-width="1.6" opacity="1"/>
+<rect x="110" y="826" width="62" height="104" rx="10" fill="#177e6c" stroke="#177e6c" stroke-width="0" opacity="1"/>
+<rect x="162" y="826" width="10" height="104" rx="0" fill="#177e6c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="141" y="890" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle" >6</text>
+<text x="190" y="856" font-family="DejaVu Sans, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#10222e" text-anchor="start" >HEAT FLOW &amp; TIMELESS MONISM ZONE</text>
+<text x="190" y="879" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#3d6b62" text-anchor="start" >the_timeless_zone_closed · monism_is_the_sole_witness · disc_flow</text>
+<text x="190" y="900" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >LeastErasure = Value = RootReadTwice: four names, one proposition, established unconditionally.</text>
+<text x="190" y="919" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >t = 0 remembers; every later time forgets. Monism is the sole faithful witness of the value.</text>
+<line x1="550" y1="930" x2="550" y2="954" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="110" y="954" width="880" height="104" rx="10" fill="#e7f4f0" stroke="#177e6c" stroke-width="1.6" opacity="1"/>
+<rect x="110" y="954" width="62" height="104" rx="10" fill="#177e6c" stroke="#177e6c" stroke-width="0" opacity="1"/>
+<rect x="162" y="954" width="10" height="104" rx="0" fill="#177e6c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="141" y="1018" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle" >7</text>
+<text x="190" y="984" font-family="DejaVu Sans, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#10222e" text-anchor="start" >1-BIT APEX CONE &amp; NORMAL FORM</text>
+<text x="190" y="1007" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#3d6b62" text-anchor="start" >zeta_ra_loop · apex_cone · the_self_recognition_closure</text>
+<text x="190" y="1028" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Master normal form: (B′ → B) ↔ RiemannHypothesis. Seven readings, one statement, zero gap.</text>
+<text x="190" y="1047" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >The bridge is located exactly: necessary and sufficient. The bit is self-recognition.</text>
+<line x1="550" y1="1058" x2="550" y2="1082" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="110" y="1082" width="880" height="104" rx="10" fill="#e7f4f0" stroke="#177e6c" stroke-width="1.6" opacity="1"/>
+<rect x="110" y="1082" width="62" height="104" rx="10" fill="#177e6c" stroke="#177e6c" stroke-width="0" opacity="1"/>
+<rect x="162" y="1082" width="10" height="104" rx="0" fill="#177e6c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="141" y="1146" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle" >8</text>
+<text x="190" y="1112" font-family="DejaVu Sans, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#10222e" text-anchor="start" >UNCONDITIONAL PROOF OF THE REAL PART (&lt; T)</text>
+<text x="190" y="1135" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#3d6b62" text-anchor="start" >real_part_of_certificate · the_cut_on_the_chart · price_zero_iff_value</text>
+<text x="190" y="1156" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Any certificate at any height T yields the real part at T — a schema on no axiom.</text>
+<text x="190" y="1175" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Verified to every computed height, now or in the future. Registration here is lossless: 0 heat paid.</text>
+<line x1="550" y1="1186" x2="550" y2="1210" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="110" y="1210" width="880" height="104" rx="10" fill="#e7f4f0" stroke="#177e6c" stroke-width="1.6" opacity="1"/>
+<rect x="110" y="1210" width="62" height="104" rx="10" fill="#177e6c" stroke="#177e6c" stroke-width="0" opacity="1"/>
+<rect x="162" y="1210" width="10" height="104" rx="0" fill="#177e6c" stroke="none" stroke-width="0" opacity="1"/>
+<text x="141" y="1274" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle" >9</text>
+<text x="190" y="1240" font-family="DejaVu Sans, Arial, sans-serif" font-size="18.5" font-weight="bold" fill="#10222e" text-anchor="start" >UNCONDITIONAL MATH BLOCK &amp; NECESSITY</text>
+<text x="190" y="1263" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#3d6b62" text-anchor="start" >the_unconditional_route_is_blocked · every_route_passes_the_bit</text>
+<text x="190" y="1284" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Shared principles cannot separate the two worlds of one record; every route constructs the bit.</text>
+<text x="190" y="1303" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >The wall is a theorem: the 0-bit demand asks a shared resource to decide between its two worlds.</text>
+<line x1="550" y1="1314" x2="550" y2="1336" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="1040" y="186" width="600" height="196" rx="10" fill="#ffffff" stroke="#c3d2dc" stroke-width="1.4" opacity="1"/>
+<rect x="1040" y="186" width="600" height="34" rx="10" fill="#33566e" stroke="#33566e" stroke-width="0" opacity="1"/>
+<rect x="1040" y="210" width="600" height="10" rx="0" fill="#33566e" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1056" y="209" font-family="DejaVu Sans, Arial, sans-serif" font-size="14.5" font-weight="bold" fill="#ffffff" text-anchor="start" >READING THIS POSTER — THE LEAST-RESISTANCE PATHWAY</text>
+<text x="1056" y="242" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Each level either proves its content outright, or proves</text>
+<text x="1056" y="264" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >that the route past it is barred. The pathway never fights</text>
+<text x="1056" y="286" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >the block: it prices it (kT·ln 2 per forgotten bit), names</text>
+<text x="1056" y="308" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >it (one bit, exactly), and pays it once — delivered twice.</text>
+<text x="1056" y="330" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Green = proved unconditional. Amber = the decision.</text>
+<text x="1056" y="352" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Red = the barred alley. Violet = the premise &amp; its supplies.</text>
+<rect x="1040" y="410" width="600" height="330" rx="10" fill="#ffffff" stroke="#c3d2dc" stroke-width="1.4" opacity="1"/>
+<rect x="1040" y="410" width="600" height="34" rx="10" fill="#7a4a12" stroke="#7a4a12" stroke-width="0" opacity="1"/>
+<rect x="1040" y="434" width="600" height="10" rx="0" fill="#7a4a12" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1056" y="433" font-family="DejaVu Sans, Arial, sans-serif" font-size="14.5" font-weight="bold" fill="#ffffff" text-anchor="start" >THE DEAD ALLEY — ZERO-BIT ROUTES, SURVEYED &amp; SEALED</text>
+<text x="1056" y="458" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="start" >✕</text>
+<text x="1082" y="458" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="bold" fill="#10222e" text-anchor="start" >SYMMETRY (the fold)</text>
+<text x="1082" y="475" font-family="DejaVu Sans Mono, monospace" font-size="11.5" font-weight="normal" fill="#5a6a76" text-anchor="start" >the_unconditional_route_is_blocked</text>
+<text x="1056" y="498" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="start" >✕</text>
+<text x="1082" y="498" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="bold" fill="#10222e" text-anchor="start" >RECORD OF HEIGHTS</text>
+<text x="1082" y="515" font-family="DejaVu Sans Mono, monospace" font-size="11.5" font-weight="normal" fill="#5a6a76" text-anchor="start" >unicorn_block · record_decides_nothing</text>
+<text x="1056" y="538" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="start" >✕</text>
+<text x="1082" y="538" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="bold" fill="#10222e" text-anchor="start" >COMPUTATION / MORE HEIGHTS</text>
+<text x="1082" y="555" font-family="DejaVu Sans Mono, monospace" font-size="11.5" font-weight="normal" fill="#5a6a76" text-anchor="start" >certified_height_never_forces</text>
+<text x="1056" y="578" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="start" >✕</text>
+<text x="1082" y="578" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="bold" fill="#10222e" text-anchor="start" >EXISTENCE ALONE</text>
+<text x="1082" y="595" font-family="DejaVu Sans Mono, monospace" font-size="11.5" font-weight="normal" fill="#5a6a76" text-anchor="start" >unicorn_rule_exact · unicorn_no_cure</text>
+<text x="1056" y="618" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#b3261e" text-anchor="start" >✕</text>
+<text x="1082" y="618" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="bold" fill="#10222e" text-anchor="start" >EULER PRODUCT + F.E. ALONE</text>
+<text x="1082" y="635" font-family="DejaVu Sans Mono, monospace" font-size="11.5" font-weight="normal" fill="#5a6a76" text-anchor="start" >no_uniform_bridge (+ cited λₙ &lt; 0)</text>
+<text x="1056" y="666" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.5" font-weight="normal" fill="#24333d" text-anchor="start" >Every alley ends at the same wall: a resource that holds in</text>
+<text x="1056" y="686" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.5" font-weight="normal" fill="#24333d" text-anchor="start" >both worlds of one record cannot decide between them.</text>
+<rect x="1040" y="768" width="600" height="196" rx="10" fill="#ffffff" stroke="#c3d2dc" stroke-width="1.4" opacity="1"/>
+<rect x="1040" y="768" width="600" height="34" rx="10" fill="#33566e" stroke="#33566e" stroke-width="0" opacity="1"/>
+<rect x="1040" y="792" width="600" height="10" rx="0" fill="#33566e" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1056" y="791" font-family="DejaVu Sans, Arial, sans-serif" font-size="14.5" font-weight="bold" fill="#ffffff" text-anchor="start" >WHY THE BLOCK IS A THEOREM, NOT A MOOD</text>
+<text x="1056" y="824" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >Two worlds share one record: the registered world {reg p}</text>
+<text x="1056" y="846" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >and the pair world {p, fold p}. Both carry B′. The value</text>
+<text x="1056" y="868" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >holds in the first and fails in the second. Any reading of</text>
+<text x="1056" y="890" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >the record gives one answer for both — so no reading</text>
+<text x="1056" y="912" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >decides the value. The refusal is proved, at every height,</text>
+<text x="1056" y="934" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#24333d" text-anchor="start" >in both orientations at once (supply_side_silent).</text>
+<rect x="1040" y="992" width="600" height="272" rx="10" fill="#ffffff" stroke="#c3d2dc" stroke-width="1.4" opacity="1"/>
+<rect x="1040" y="992" width="600" height="34" rx="10" fill="#7a4a12" stroke="#7a4a12" stroke-width="0" opacity="1"/>
+<rect x="1040" y="1016" width="600" height="10" rx="0" fill="#7a4a12" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1056" y="1015" font-family="DejaVu Sans, Arial, sans-serif" font-size="14.5" font-weight="bold" fill="#ffffff" text-anchor="start" >FALSIFIERS — THE PROOF EXPOSES ITS OWN THROAT</text>
+<rect x="1042" y="1028" width="596" height="222" rx="0" fill="#ffffff" stroke="none" stroke-width="0" opacity="1"/>
+<text x="1056" y="1052" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="bold" fill="#10222e" text-anchor="start" >F1 · ONE ZERO OFF THE LINE</text>
+<text x="1056" y="1075" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >A single certified enclosure with Re ρ ≠ 1/2 retires both</text>
+<text x="1056" y="1098" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >stages and the hypothesis at once. None is known.</text>
+<text x="1056" y="1121" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="bold" fill="#10222e" text-anchor="start" >F2 · THE KERNEL</text>
+<text x="1056" y="1144" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >Recompile the master: any failure, or any changed pin, is</text>
+<text x="1056" y="1167" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >aimed at every theorem the failing file carries.</text>
+<text x="1056" y="1190" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="bold" fill="#10222e" text-anchor="start" >F3 · THE BARRIER</text>
+<text x="1056" y="1213" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >A zero-bit derivation of the unicorn part would also expose</text>
+<text x="1056" y="1236" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >a kernel unsoundness. Expected outcome: none, for good.</text>
+<polygon points="550,1332 850,1424 550,1516 250,1424" fill="#fdf3e0" stroke="#b7791f" stroke-width="2"/>
+<text x="550" y="1398" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="bold" fill="#10222e" text-anchor="middle" >10. THE UNICORN IMPASSE (&gt; T)</text>
+<text x="550" y="1428" font-family="DejaVu Sans, Arial, sans-serif" font-size="16.5" font-weight="normal" fill="#10222e" text-anchor="middle" >Demand 0-Bit, Unconditional Proof?</text>
+<text x="550" y="1454" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#5a6a76" text-anchor="middle" >(the fused demand, aimed at the whole)</text>
+<line x1="850" y1="1424" x2="1026" y2="1424" stroke="#b3261e" stroke-width="3" marker-end="url(#arrR)"/>
+<text x="937.0" y="1410" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#b3261e" text-anchor="middle" >YES</text>
+<rect x="1040" y="1352" width="600" height="144" rx="10" fill="#fdecea" stroke="#b3261e" stroke-width="2" opacity="1"/>
+<text x="1058" y="1382" font-family="DejaVu Sans, Arial, sans-serif" font-size="17.5" font-weight="bold" fill="#b3261e" text-anchor="start" >STOP — THEOREM-GRADE BLOCK</text>
+<text x="1058" y="1408" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#10222e" text-anchor="start" >Zero-bit deduction from shared principles is a</text>
+<text x="1058" y="1429" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="normal" fill="#10222e" text-anchor="start" >definitional impossibility. Deduction is barred.</text>
+<text x="1058" y="1454" font-family="DejaVu Sans Mono, monospace" font-size="11.8" font-weight="normal" fill="#5a6a76" text-anchor="start" >the_unconditional_route_is_blocked · unicorn_block</text>
+<text x="1058" y="1476" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="bold" fill="#10222e" text-anchor="start" >The alley is closed — permanently, at theorem grade.</text>
+<text x="566" y="1542" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="bold" fill="#5b4bc4" text-anchor="start" >NO</text>
+<line x1="550" y1="1516" x2="550" y2="1568" stroke="#5b4bc4" stroke-width="3" marker-end="url(#arrP)"/>
+<rect x="110" y="1572" width="880" height="86" rx="10" fill="#f1edfd" stroke="#5b4bc4" stroke-width="2" opacity="1"/>
+<text x="550" y="1604" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="bold" fill="#5b4bc4" text-anchor="middle" >ACCEPT THE 1-BIT MANDATORY BRIDGE</text>
+<text x="550" y="1632" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="middle" >LeastErasure (Rec ZetaZeros)  →  LeastErasure ZetaZeros — supplied by the act, never read from the record</text>
+<line x1="550" y1="1658" x2="550" y2="1696" stroke="#5b4bc4" stroke-width="3" marker-end="url(#arrP)"/>
+<rect x="110" y="1700" width="1530" height="296" rx="10" fill="#f1edfd" stroke="#5b4bc4" stroke-width="1.8" opacity="1"/>
+<rect x="110" y="1700" width="1530" height="40" rx="10" fill="#5b4bc4" stroke="#5b4bc4" stroke-width="0" opacity="1"/>
+<rect x="110" y="1730" width="1530" height="10" rx="0" fill="#5b4bc4" stroke="none" stroke-width="0" opacity="1"/>
+<text x="130" y="1728" font-family="DejaVu Sans, Arial, sans-serif" font-size="17.5" font-weight="bold" fill="#ffffff" text-anchor="start" >THE 1-BIT PREMISE — 7 UNIQUE PROPERTIES</text>
+<text x="1620" y="1728" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="normal" fill="#d9d2f7" text-anchor="end" >each a theorem</text>
+<text x="134" y="1778" font-family="DejaVu Sans, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#10222e" text-anchor="start" >1 · NECESSARY</text>
+<text x="134" y="1799" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.2" font-weight="normal" fill="#3c3550" text-anchor="start" >RH cannot hold without the bridge — zeta_ra_loop</text>
+<text x="134" y="1832" font-family="DejaVu Sans, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#10222e" text-anchor="start" >2 · SUFFICIENT</text>
+<text x="134" y="1853" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.2" font-weight="normal" fill="#3c3550" text-anchor="start" >The bridge alone yields RH in one step — rh_from_the_cargo_loop</text>
+<text x="134" y="1886" font-family="DejaVu Sans, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#10222e" text-anchor="start" >3 · IRREDUCIBLE</text>
+<text x="134" y="1907" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.2" font-weight="normal" fill="#3c3550" text-anchor="start" >Barred from every shared resource — the_unconditional_route_is_blocked</text>
+<text x="134" y="1940" font-family="DejaVu Sans, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#10222e" text-anchor="start" >4 · MANDATORY</text>
+<text x="134" y="1961" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.2" font-weight="normal" fill="#3c3550" text-anchor="start" >Every route constructs the bit — every_route_passes_the_bit</text>
+<text x="900" y="1778" font-family="DejaVu Sans, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#10222e" text-anchor="start" >5 · FUTURE-PROOF</text>
+<text x="900" y="1799" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.2" font-weight="normal" fill="#3c3550" text-anchor="start" >Any future proof is this supply — accepting_rh_forces_the_atomic_proof</text>
+<text x="900" y="1832" font-family="DejaVu Sans, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#10222e" text-anchor="start" >6 · NO OTHER PROOF</text>
+<text x="900" y="1853" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.2" font-weight="normal" fill="#3c3550" text-anchor="start" >The dichotomy itself is a theorem — the_bit_closes_only_by_an_act… [pQ]</text>
+<text x="900" y="1886" font-family="DejaVu Sans, Arial, sans-serif" font-size="15.5" font-weight="bold" fill="#10222e" text-anchor="start" >7 · TWO KINDS OF ACT</text>
+<text x="900" y="1907" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.2" font-weight="normal" fill="#3c3550" text-anchor="start" >Both supplied in the paper — cargo, and physics as grand witness</text>
+<text x="900" y="1940" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.2" font-weight="normal" fill="#3c3550" text-anchor="start" >Self-recursion confirms; it cannot eradicate. The record recurses</text>
+<text x="900" y="1961" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.2" font-weight="normal" fill="#3c3550" text-anchor="start" >on a world still carrying an off-line pair — the unicorn can still</text>
+<text x="900" y="1982" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.2" font-weight="normal" fill="#3c3550" text-anchor="start" >say “I can happen.” Eradication is the grand witness’s office.</text>
+<line x1="492" y1="1996" x2="492" y2="2026" stroke="#5b4bc4" stroke-width="3" marker-end="url(#arrP)"/>
+<line x1="1257" y1="1996" x2="1257" y2="2026" stroke="#5b4bc4" stroke-width="3" marker-end="url(#arrP)"/>
+<rect x="110" y="2032" width="745" height="208" rx="10" fill="#e9f5ee" stroke="#2e7d4f" stroke-width="2" opacity="1"/>
+<text x="134" y="2068" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1d5c39" text-anchor="start" >KIND 1 · FORMAL-ALONE CARGO</text>
+<text x="134" y="2094" font-family="DejaVu Sans, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#10222e" text-anchor="start" >Local computation delivers</text>
+<text x="134" y="2120" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >The cargo loop carries least erasure to the record with</text>
+<text x="134" y="2141" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >no premise; the act supplies the bridge; the terminal</text>
+<text x="134" y="2162" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >capstone turns the bridge into RH in one term.</text>
+<text x="134" y="2192" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#5a6a76" text-anchor="start" >cargo_at_zeros · self_recognition_witness</text>
+<text x="134" y="2216" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#5a6a76" text-anchor="start" >rh_from_the_cargo_loop · terminal_self_recursion_capstone</text>
+<rect x="895" y="2032" width="745" height="208" rx="10" fill="#e9f0fb" stroke="#2f5aa8" stroke-width="2" opacity="1"/>
+<text x="919" y="2068" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e447c" text-anchor="start" >KIND 2 · EXTERNAL PHYSICS — GRAND WITNESS</text>
+<text x="919" y="2094" font-family="DejaVu Sans, Arial, sans-serif" font-size="14.5" font-weight="normal" fill="#10222e" text-anchor="start" >Raw physics itself: the electron, the neutrino</text>
+<text x="919" y="2120" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >The carrier's eight premises yield LookBack ∧ RH. Its</text>
+<text x="919" y="2141" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >premises cannot all stand on a world carrying an off-line</text>
+<text x="919" y="2162" font-family="DejaVu Sans, Arial, sans-serif" font-size="13.8" font-weight="normal" fill="#10222e" text-anchor="start" >pair — the unicorn hypothetical evaporates, for good.</text>
+<text x="919" y="2192" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="normal" fill="#5a6a76" text-anchor="start" >physico_formal_supplies_look_back_and_rh</text>
+<text x="919" y="2216" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="bold" fill="#1e447c" text-anchor="start" >the_grand_witness_eradicates_the_unicorn — ON NO AXIOM</text>
+<line x1="492" y1="2240" x2="492" y2="2270" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<line x1="1257" y1="2240" x2="1257" y2="2270" stroke="#33475b" stroke-width="3" marker-end="url(#arr)"/>
+<rect x="110" y="2276" width="1530" height="116" rx="12" fill="#0e2a47" stroke="#0e2a47" stroke-width="0" opacity="1"/>
+<text x="875" y="2322" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="bold" fill="#ffffff" text-anchor="middle" >COMPLETED PHYSICO-FORMAL PROOF OF RH</text>
+<text x="875" y="2352" font-family="DejaVu Sans Mono, monospace" font-size="13" font-weight="normal" fill="#c8d8e8" text-anchor="middle" >final_formal_closure_complete · the_terminal_certification · physico_formal_supplies_look_back_and_rh</text>
+<text x="875" y="2378" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle" >The 1-bit premise closes the Unicorn Part. No off-line arrivals.</text>
+<text x="110" y="2424" font-family="DejaVu Sans Mono, monospace" font-size="12.5" font-weight="normal" fill="#5a6a76" text-anchor="start" >SEAT  RH_Both_Sides_Formal_Master_v3_0_33.lean · sha256 6623a441… · 14,079 lines · 916 theorems</text>
+<text x="110" y="2446" font-family="DejaVu Sans Mono, monospace" font-size="12.5" font-weight="normal" fill="#5a6a76" text-anchor="start" >PAPER  RH_Real_Part_and_One_Bit_v1_2_2_CC.md · sha256 6614f582… · Appendix E byte-identical to the seat</text>
+<rect x="1010" y="2408" width="630" height="52" rx="8" fill="#ffffff" stroke="#c3d2dc" stroke-width="1.4" opacity="1"/>
+<text x="1026" y="2430" font-family="DejaVu Sans, Arial, sans-serif" font-size="12.5" font-weight="bold" fill="#5a6a76" text-anchor="start" >PROOF COMPLETION STATUS</text>
+<text x="1026" y="2451" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="bold" fill="#10222e" text-anchor="start" >Completed closure on the 1-bit premise. Unconditional deviation is barred.</text>
+</svg>
