@@ -3823,8 +3823,8 @@
       "git": {
         "md": "Publication Library/Mathematics/Millennium Series/P_ne_NP_Closed_to_One_Bit.md",
         "pdf": "Publication Library/Mathematics/Millennium Series/P_ne_NP_Closed_to_One_Bit.pdf",
-        "kernel": "FINAL_BINDING/PNP Binding/PNP_Normal_Form_Paper_v1_3_0_CC.lean",
-        "commit": "67e477c",
+        "kernel": "FINAL_BINDING/PNP Binding/PNP_Normal_Form_Paper_v1_4_0_CC.lean",
+        "commit": "0c5679d",
         "editions": []
       },
       "zenodo": {
@@ -3836,14 +3836,19 @@
         "state": "published",
         "files": [
           {
-            "name": "P_ne_NP_Closed_to_One_Bit.pdf",
-            "md5": "d3968cfc857db1428b2450d88b4cedff",
-            "size": 406301
+            "name": "PNP_Part_G_Closure_CC.lean",
+            "md5": "871aad5ecd4387223369744de2f533f3",
+            "size": 5937
           },
           {
-            "name": "PNP_Normal_Form_Paper_v1_3_0_CC.lean",
-            "md5": "6763cfbe42bb7b66506687e91be91f1b",
-            "size": 87892
+            "name": "P_ne_NP_Closed_to_One_Bit.pdf",
+            "md5": "173550a0a4af329b8c08e719a8a2574c",
+            "size": 424397
+          },
+          {
+            "name": "PNP_Normal_Form_Paper_v1_4_0_CC.lean",
+            "md5": "26aa179b69a62106089496b13e596c75",
+            "size": 94207
           }
         ]
       },
@@ -3863,7 +3868,7 @@
         "record": null,
         "url": null
       },
-      "note": "Math Journal edition, 21 October 2026, 31 pages, no version tag printed. Kernel PNP_Normal_Form_Paper_v1_3_0_CC.lean (core Lean 4.19.0, no import, 1,691 lines, 151 theorems, 93 pinned cones, 72 on no axiom and 21 classical, silent build with warnings fatal, sha256 97af8025, the bytes printed in Appendix A). A fresh work beside trisduction-p-versus-np-closed-on-one-posit (record 23133632), which it cites. Zenodo carries the PDF and the kernel; the archive carries the PDF alone, re-serialized without object streams.",
+      "note": "Math Journal edition, 21 October 2026, 33 pages, no version tag printed; text v1.4.0, updated in place on git and on Zenodo (record 23528399, one version). Kernel PNP_Normal_Form_Paper_v1_4_0_CC.lean (core Lean 4.19.0, no import, 1,774 lines, 156 theorems, 98 pinned cones, 74 on no axiom and 24 classical, silent build with warnings fatal, sha256 76ebf60a, the bytes printed in Appendix A); Part G, the closure of the question (PNP_Part_G_Closure_CC.lean, sha256 8a6c1878), seated beside it; the v1.3.0 kernel (sha256 97af8025) stays at its path. A fresh work beside trisduction-p-versus-np-closed-on-one-posit (record 23133632), which it cites. Zenodo carries the PDF, the kernel and Part G; the archive still carries the v1.3.0 PDF alone, re-serialized without object streams.",
       "extra": {}
     }
   }
