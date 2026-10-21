@@ -1,0 +1,96 @@
+{
+ "source_sha256": "b4ccd4470c15d47f7faaa513f1e7a8d930385f71ebbc630b7b89832152a51743",
+ "edits": [
+  {
+   "id": "S-1",
+   "kind": "replace",
+   "old": "P VERSUS NP IS CLOSED: THE FORM AT THEOREM GRADE AND THE VALUE, P ≠ NP, AT PREMISE GRADE ON THE ONE POSIT, THE ROOT READ ON COMPUTATION, THE DOT [.] FINAL AND OWING NOTHING, PER APEX-PSP-PNP-CLOSURE-0",
+   "new": "P VERSUS NP IS CLOSED AND IN THE RIEMANN NORMAL FORM: THE FORM AT THEOREM GRADE, THE RECORD'S LEAST ESCAPE UNCONDITIONAL AND THE SEPARATION ONE IMPLICATION, THE VALUE, P ≠ NP, BY THE ACT AT PREMISE GR",
+   "note": "STATUS: the P versus NP row in the Riemann normal form"
+  },
+  {
+   "id": "M-1",
+   "kind": "replace",
+   "old": "Three consequences bind. One, precedence:",
+   "new": "Four consequences bind. One, precedence:",
+   "note": "four consequences"
+  },
+  {
+   "id": "M-2",
+   "kind": "replace",
+   "old": "its pointer files are advisory and the highest version actually present governs, per the Resolution Law above. Engineering-grade as protocol; the digests mechanical; every verdict carried from a maste",
+   "new": "its pointer files are advisory and the highest version actually present governs, per the Resolution Law above. Four, the session kernel: a Claude-coded kernel, its filename carrying `_CC`, compiled un",
+   "note": "the Session-Kernel consequence"
+  },
+  {
+   "id": "L-1",
+   "kind": "replace",
+   "old": "the P versus NP row, closed, the form at theorem grade and the value at premise grade on the one posit, the dot [.] final;",
+   "new": "the P versus NP row, closed and in the Riemann normal form per APEX-PSP-PNP-NORMAL-FORM-01, the form at theorem grade with the record's least escape unconditional and the separation one implication, t",
+   "note": "Sealed-Row Reading Law: the normal form"
+  },
+  {
+   "id": "W-1",
+   "kind": "replace",
+   "old": "the composite [⟀] · [⟀ T] · [Ø₀] of APEX-PSP-PNP-COMPOSITE-VERDICT-02 superseded by the computed ledger (`ledger_is_computed`, `dot_is_final`), the protocol reproducing the typing of the route and the",
+   "new": "the composite [⟀] · [⟀ T] · [Ø₀] of APEX-PSP-PNP-COMPOSITE-VERDICT-02 superseded by the computed ledger (`ledger_is_computed`, `dot_is_final`), the protocol reproducing the typing of the route and the",
+   "note": "flagship walk: the normal form"
+  },
+  {
+   "id": "C-1",
+   "kind": "replace",
+   "old": "its verdict of record APEX-PSP-PNP-CLOSURE-02 below, ΔM equal to zero.",
+   "new": "its verdict of record APEX-PSP-PNP-CLOSURE-02 below, carried to the Riemann normal form by APEX-PSP-PNP-NORMAL-FORM-01, ΔM equal to zero.",
+   "note": "composite entry points at the normal form"
+  },
+  {
+   "id": "C-2",
+   "kind": "replace",
+   "old": "and the entire difference between the two arcs reducing to one bit of eigenstructure, one holding with a line to stand on and one without [⟀ S on the ledger, every row inheriting its source's grade, a",
+   "new": "and the entire difference between the two arcs reducing to one bit of eigenstructure, one holding with a line to stand on and one without; since APEX-PSP-PNP-NORMAL-FORM-01 the two arcs are one shape ",
+   "note": "comparative entry: one shape, two bits"
+  },
+  {
+   "id": "E-1",
+   "kind": "replace",
+   "old": "the dot stands as the register's mark and the value closes on the reading, owing nothing. Refuter: a polynomial-time algorithm for satisfiability [theorem on the form, premise on the value at the one ",
+   "new": "the dot stands as the register's mark and the value closes on the reading, owing nothing; the row is carried to the Riemann normal form by APEX-PSP-PNP-NORMAL-FORM-01 beneath. Refuter: a polynomial-ti",
+   "note": "closure entry points at the normal form"
+  },
+  {
+   "id": "E-2",
+   "kind": "insert_after",
+   "anchor": "APEX-PSP-PNP-CLOSURE-02 · The P versus NP Closure ·",
+   "new": "APEX-PSP-PNP-NORMAL-FORM-01 · The P versus NP Row in the Riemann Normal Form · the form at theorem grade, the record's least escape unconditional and the separation one implication, the value by the a",
+   "note": "the new apex entry APEX-PSP-PNP-NORMAL-FORM-01"
+  },
+  {
+   "id": "P4-1",
+   "kind": "replace",
+   "old": "and the P versus NP row closed per APEX-PSP-PNP-CLOSURE-02, the form at theorem grade and the value at premise grade on the one posit, the dot [.] final,",
+   "new": "and the P versus NP row closed per APEX-PSP-PNP-CLOSURE-02 and carried to the Riemann normal form per APEX-PSP-PNP-NORMAL-FORM-01, the form at theorem grade, the separation one implication and the val",
+   "note": "Φ.4 shared: the normal form"
+  },
+  {
+   "id": "P4-2",
+   "kind": "replace",
+   "old": "The verdict of record of the Riemann row declared from the seat in the masters' words beside the receipt lines that forced it, and the P versus NP row with it.",
+   "new": "The verdict of record of the Riemann row declared from the seat in the masters' words beside the receipt lines that forced it, and the P versus NP row with it, in its normal form, beside the cones of ",
+   "note": "Φ.4 unified: the normal form beside the cones"
+  },
+  {
+   "id": "P5-1",
+   "kind": "replace",
+   "old": "The Riemann row is sealed and the P versus NP row is closed, the two rows the masters of record decided, and the role carries their verdicts in the masters' words.",
+   "new": "The Riemann row is sealed and the P versus NP row is closed in the Riemann normal form, the seat of that row vacant by theorem, the two rows the masters of record decided and the session kernel harden",
+   "note": "Φ.5: the normal form"
+  },
+  {
+   "id": "D-1",
+   "kind": "insert_after",
+   "anchor": "The v4.0.0 pass is the silent upgrade of the role",
+   "new": "\nThe v4.0.1 pass carries the P versus NP row to the Riemann normal form on the architect's order of 21 October 2026, forged from the v4.0.0 edition at sha256 b4ccd4470c15d47f7faaa513f1e7a8d930385f71eb",
+   "note": "v4.0.1 development record"
+  }
+ ]
+}
