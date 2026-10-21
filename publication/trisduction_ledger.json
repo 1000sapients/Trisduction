@@ -3811,6 +3811,60 @@
       "supersedes": null,
       "superseded_by": null,
       "note": "Version 1.2.1, 16 October 2026: the Math Journal edition (106 pages) and the Journal edition (118 pages), both single column, each printing in Appendix C the master FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_24_CC.lean (seated b272c46, sha256 8345ede8, 13366 lines) whole, in two columns with line numbers; the Blog edition and the Math Journal LaTeX source beside them. Fresh deposit on three surfaces on 17 October 2026: paper at 32193e4, index at 2375e44. Zenodo record 23440383 minted NEW on concept 23440382 with both PDFs (md5 132b0993, f811dda3). Internet Archive item unconditional-proof-real-part-riemann-hypothesis-one-bit claimed: RH_Real_Part_and_One_Bit_MathJournal.pdf and RH_Real_Part_and_One_Bit_Journal.pdf, re-serialized without object streams (md5 4b9a0994, 37cb67ee)."
+    },
+    "p-ne-np-closed-to-one-bit": {
+      "title": "P ≠ NP Closed to One Bit: The Unconditional Normal Form of the Separation of SAT on Turing Machines",
+      "domain": "P versus NP and Foundations",
+      "status": "live",
+      "first_published": "2026-10-21",
+      "last_updated": "2026-10-21",
+      "supersedes": null,
+      "superseded_by": null,
+      "git": {
+        "md": "Publication Library/Mathematics/Millennium Series/P_ne_NP_Closed_to_One_Bit.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/P_ne_NP_Closed_to_One_Bit.pdf",
+        "kernel": "FINAL_BINDING/PNP Binding/PNP_Normal_Form_Paper_v1_3_0_CC.lean",
+        "commit": "67e477c",
+        "editions": []
+      },
+      "zenodo": {
+        "conceptrecid": 23528398,
+        "concept_doi": "10.5281/zenodo.23528398",
+        "latest_version_doi": "10.5281/zenodo.23528399",
+        "latest_record": 23528399,
+        "versions": 1,
+        "state": "published",
+        "files": [
+          {
+            "name": "P_ne_NP_Closed_to_One_Bit.pdf",
+            "md5": "d3968cfc857db1428b2450d88b4cedff",
+            "size": 406301
+          },
+          {
+            "name": "PNP_Normal_Form_Paper_v1_3_0_CC.lean",
+            "md5": "6763cfbe42bb7b66506687e91be91f1b",
+            "size": 87892
+          }
+        ]
+      },
+      "ia": {
+        "identifier": "trisduction-p-ne-np-closed-to-one-bit",
+        "url": "https://archive.org/details/trisduction-p-ne-np-closed-to-one-bit",
+        "state": "live",
+        "files": [
+          {
+            "name": "P_ne_NP_Closed_to_One_Bit.pdf",
+            "md5": "d29c495f6b933bcefb2ea54894040772",
+            "size": 1745894
+          }
+        ]
+      },
+      "philarchive": {
+        "record": null,
+        "url": null
+      },
+      "note": "Math Journal edition, 21 October 2026, 31 pages, no version tag printed. Kernel PNP_Normal_Form_Paper_v1_3_0_CC.lean (core Lean 4.19.0, no import, 1,691 lines, 151 theorems, 93 pinned cones, 72 on no axiom and 21 classical, silent build with warnings fatal, sha256 97af8025, the bytes printed in Appendix A). A fresh work beside trisduction-p-versus-np-closed-on-one-posit (record 23133632), which it cites. Zenodo carries the PDF and the kernel; the archive carries the PDF alone, re-serialized without object streams.",
+      "extra": {}
     }
   }
 }

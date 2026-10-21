@@ -9,16 +9,16 @@ The ledger is the source of record for surface addresses. The live surfaces are 
 
 ## Corpus at a glance
 
-**98 works · 128 Zenodo deposits.**
+**99 works · 129 Zenodo deposits.**
 
 | Surface | Works carrying an address | Coverage |
 |---|---|---|
-| Zenodo | 92 / 98 | 93% |
-| Git PDF | 67 / 98 | 68% |
-| Internet Archive | 54 / 98 | 55% |
-| PhilArchive | 4 / 98 | 4% |
+| Zenodo | 93 / 99 | 93% |
+| Git PDF | 68 / 99 | 68% |
+| Internet Archive | 55 / 99 | 55% |
+| PhilArchive | 4 / 99 | 4% |
 
-Status: 91 live, 7 unknown.
+Status: 92 live, 7 unknown.
 
 ## Coverage gaps
 
@@ -130,6 +130,7 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 
 | Work key | Title | Domain | Status | Git | Zenodo concept | v | IA | PhilArchive | Updated |
 |---|---|---|---|---|---|---|---|---|---|
+| `p-ne-np-closed-to-one-bit` | P ≠ NP Closed to One Bit: The Unconditional Normal Form of the Separation of SAT on Turing Mach | P versus NP and Foundations | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/P_ne_NP_Closed_to_One_Bit.pdf) | `10.5281/zenodo.23528398` | 1 | [ia](https://archive.org/details/trisduction-p-ne-np-closed-to-one-bit) | — | 2026-10-21 |
 | `rh-real-part-and-one-bit` | An Unconditional Proof of the Real Part of the Riemann Hypothesis, the Probable Remainder Close | Riemann Hypothesis | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/RH_Real_Part_and_One_Bit_v1_2_1_CC_MathJournal_SingleColumn.pdf) | `10.5281/zenodo.23440382` | 1 | [ia](https://archive.org/details/unconditional-proof-real-part-riemann-hypothesis-one-bit) | — | 2026-10-17 |
 | `rh-completed-formal-closure` | The Completed Formal Closure of the Riemann Hypothesis: A Formal Proof in Lean 4 from Its One B | Riemann Hypothesis | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/RH_Completed_Formal_Closure_v1_0_0.pdf) | `10.5281/zenodo.23334981` | 1 | [ia](https://archive.org/details/completed-formal-closure-riemann-hypothesis) | — | 2026-10-16 |
 | `rh-twin-binder-one-locus` | A Formal Proof of the Riemann Hypothesis: The Twin Binder, One Locus: Physical and Formal Closu | Riemann Hypothesis | live | [pdf](Publication%20Library/Mathematics/Millennium%20Series/RH_Twin_Binder_One_Locus_v2_0_0.pdf) | `10.5281/zenodo.23357511` | 1 | [ia](https://archive.org/details/formal-proof-riemann-hypothesis-twin-binder-one-locus) | — | 2026-10-16 |
@@ -283,10 +284,11 @@ Work key leads each row; it is the stable identity and the grep target. The Zeno
 | `rh-formal-case-closed-b` | Riemann Hypothesis: The Formal Case Is Closed: The Hypothesis Is True Where Actualize | `10.5281/zenodo.20679749` | 3 | — | 2026-08-11 |
 | `rh-formal-case-closed-a` | Riemann Hypothesis: The Formal Case Is Closed: The Hypothesis Is True Where Actualize | `10.5281/zenodo.20604103` | 3 | — | 2026-08-11 |
 
-### P versus NP and Foundations (7)
+### P versus NP and Foundations (8)
 
 | Work key | Title | Zenodo concept | v | IA | Updated |
 |---|---|---|---|---|---|
+| `p-ne-np-closed-to-one-bit` | P ≠ NP Closed to One Bit: The Unconditional Normal Form of the Separation of SAT on T | `10.5281/zenodo.23528398` | 1 | [ia](https://archive.org/details/trisduction-p-ne-np-closed-to-one-bit) | 2026-10-21 |
 | `one-bit-across-the-wall` | One Bit Across the Wall: Odd-Supply Separation and the One-Cut Hypothesis Across Twen | `10.5281/zenodo.22746128` | 1 | — | 2026-09-14 |
 | `veil-and-the-wall` | THE VEIL AND THE WALL: Theological Interpretation of Riemann Hypothesis and P versus  | `10.5281/zenodo.21389757` | 1 | — | 2026-07-16 |
 | `incompleteness-before-arithmetic` | Incompleteness Before Arithmetic: Total Foundational Incompleteness of Every Formal S | `10.5281/zenodo.21371991` | 1 | — | 2026-07-15 |
