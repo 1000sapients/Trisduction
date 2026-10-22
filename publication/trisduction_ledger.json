@@ -3813,18 +3813,18 @@
       "note": "Version 1.2.1, 16 October 2026: the Math Journal edition (106 pages) and the Journal edition (118 pages), both single column, each printing in Appendix C the master FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_24_CC.lean (seated b272c46, sha256 8345ede8, 13366 lines) whole, in two columns with line numbers; the Blog edition and the Math Journal LaTeX source beside them. Fresh deposit on three surfaces on 17 October 2026: paper at 32193e4, index at 2375e44. Zenodo record 23440383 minted NEW on concept 23440382 with both PDFs (md5 132b0993, f811dda3). Internet Archive item unconditional-proof-real-part-riemann-hypothesis-one-bit claimed: RH_Real_Part_and_One_Bit_MathJournal.pdf and RH_Real_Part_and_One_Bit_Journal.pdf, re-serialized without object streams (md5 4b9a0994, 37cb67ee)."
     },
     "p-ne-np-closed-to-one-bit": {
-      "title": "P ≠ NP Closed to One Bit: The Unconditional Normal Form of the Separation of SAT on Turing Machines",
+      "title": "P ≠ NP: Unconditional Proof of the Form by Theorem, the Value by the Act",
       "domain": "P versus NP and Foundations",
       "status": "live",
       "first_published": "2026-10-21",
-      "last_updated": "2026-10-21",
+      "last_updated": "2026-10-22",
       "supersedes": null,
       "superseded_by": null,
       "git": {
         "md": "Publication Library/Mathematics/Millennium Series/P_ne_NP_Closed_to_One_Bit.md",
         "pdf": "Publication Library/Mathematics/Millennium Series/P_ne_NP_Closed_to_One_Bit.pdf",
-        "kernel": "FINAL_BINDING/PNP Binding/PNP_Normal_Form_Paper_v1_4_0_CC.lean",
-        "commit": "0c5679d",
+        "kernel": "FINAL_BINDING/PNP Binding/PNP_Normal_Form_Paper_v1_13_0_CC.lean",
+        "commit": "6627eeb",
         "editions": []
       },
       "zenodo": {
@@ -3868,8 +3868,25 @@
         "record": null,
         "url": null
       },
-      "note": "Math Journal edition, 21 October 2026, 33 pages, no version tag printed; text v1.4.0, updated in place on git and on Zenodo (record 23528399, one version). Kernel PNP_Normal_Form_Paper_v1_4_0_CC.lean (core Lean 4.19.0, no import, 1,774 lines, 156 theorems, 98 pinned cones, 74 on no axiom and 24 classical, silent build with warnings fatal, sha256 76ebf60a, the bytes printed in Appendix A); Part G, the closure of the question (PNP_Part_G_Closure_CC.lean, sha256 8a6c1878), seated beside it; the v1.3.0 kernel (sha256 97af8025) stays at its path. A fresh work beside trisduction-p-versus-np-closed-on-one-posit (record 23133632), which it cites. Zenodo carries the PDF, the kernel and Part G; the archive still carries the v1.3.0 PDF alone, re-serialized without object streams.",
-      "extra": {}
+      "note": "Math Journal edition, 22 October 2026, 90 pages, retitled P ≠ NP: Unconditional Proof of the Form by Theorem, the Value by the Act; text on the v1.13.0 kernel PNP_Normal_Form_Paper_v1_13_0_CC.lean (core Lean 4.19.0, no import, 10,358 lines, 687 theorems, 610 pinned cones, 258 on no axiom, silent build with warnings fatal, sha256 98329a52), eight figures placed with their sections, the kernel in two numbered columns as Appendix A, the compile receipt and seven refused controls as Appendix B. Updated in place on git (6627eeb, index 02bca3f) with the figures folder and the source bundle beside it. Zenodo record 23528399 (one version) and the archive item still carry the earlier PDFs, v1.4.0 and v1.3.0; their in-place replacement is staged under extra.staged. A fresh work beside trisduction-p-versus-np-closed-on-one-posit (record 23133632), which it cites.",
+      "extra": {
+        "figures": "Publication Library/Mathematics/Millennium Series/P_ne_NP_Closed_to_One_Bit_Figures/",
+        "source_bundle": "Publication Library/Mathematics/Millennium Series/P_ne_NP_Closed_to_One_Bit_v1_13_0_CC_source.zip",
+        "staged": {
+          "date": "2026-10-22",
+          "zenodo": {
+            "replace": "P_ne_NP_Closed_to_One_Bit.pdf",
+            "md5": "d82d33edf5b015fd6b019dc2149319af",
+            "add": "PNP_Normal_Form_Paper_v1_13_0_CC.lean",
+            "add_md5": "3519fb8f5b3401c7c50b2939a33028bc"
+          },
+          "ia": {
+            "replace": "P_ne_NP_Closed_to_One_Bit.pdf",
+            "md5": "6d9b03f806988a728950cec4a827fb6c",
+            "size": 6916132
+          }
+        }
+      }
     }
   }
 }
