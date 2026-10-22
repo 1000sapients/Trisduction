@@ -3757,14 +3757,14 @@
       "domain": "Riemann Hypothesis",
       "status": "live",
       "first_published": "2026-10-17",
-      "last_updated": "2026-10-17",
+      "last_updated": "2026-10-22",
       "git": {
-        "md": "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_2_1_CC.md",
-        "pdf": "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_2_1_CC_MathJournal_SingleColumn.pdf",
+        "md": "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_3_0_CC.md",
+        "pdf": "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_3_0_CC_MathJournal_SingleColumn.pdf",
+        "kernel": "FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_39_CC.lean",
+        "commit": "61cfdc4",
         "editions": [
-          "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_2_1_CC_Journal_SingleColumn.pdf",
-          "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_2_1_CC_MathJournal_SingleColumn.tex",
-          "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_2_1_CC.blog.md"
+          "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_3_0_CC_Journal_SingleColumn.pdf"
         ]
       },
       "zenodo": {
@@ -3776,14 +3776,14 @@
         "state": "published",
         "files": [
           {
-            "name": "RH_Real_Part_and_One_Bit_v1_2_1_CC_MathJournal_SingleColumn.pdf",
-            "md5": "132b0993f2b77243c70fa6d7ff8c8a1b",
-            "size": 731394
+            "name": "RH_Both_Sides_Formal_Master_v3_0_34_CC.lean",
+            "md5": "2ef1e702d62aebfad45b1abb85aa51eb",
+            "size": 804023
           },
           {
-            "name": "RH_Real_Part_and_One_Bit_v1_2_1_CC_Journal_SingleColumn.pdf",
-            "md5": "f811dda35aba4efb68a94662056944de",
-            "size": 764060
+            "name": "RH_Real_Part_and_One_Bit_v1_2_3_CC_Journal_SingleColumn.pdf",
+            "md5": "87b57d029cad9f2bf323b096a9c699ce",
+            "size": 986196
           }
         ]
       },
@@ -3793,14 +3793,14 @@
         "state": "live",
         "files": [
           {
-            "name": "RH_Real_Part_and_One_Bit_MathJournal.pdf",
-            "md5": "4b9a0994ee22c6b883c141c3c6b4f3ad",
-            "size": 5773820
+            "name": "RH_Real_Part_and_One_Bit_Journal.pdf",
+            "md5": "51df1091ceefc93b83894dc335b07baf",
+            "size": 8590500
           },
           {
-            "name": "RH_Real_Part_and_One_Bit_Journal.pdf",
-            "md5": "37cb67ee0ce4cc267c3a03d13ace7014",
-            "size": 6967166
+            "name": "RH_Real_Part_and_One_Bit_MathJournal.pdf",
+            "md5": "8b49a5dfa30be0bf07061f8c442f688a",
+            "size": 7139020
           }
         ]
       },
@@ -3810,7 +3810,39 @@
       },
       "supersedes": null,
       "superseded_by": null,
-      "note": "Version 1.2.1, 16 October 2026: the Math Journal edition (106 pages) and the Journal edition (118 pages), both single column, each printing in Appendix C the master FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_24_CC.lean (seated b272c46, sha256 8345ede8, 13366 lines) whole, in two columns with line numbers; the Blog edition and the Math Journal LaTeX source beside them. Fresh deposit on three surfaces on 17 October 2026: paper at 32193e4, index at 2375e44. Zenodo record 23440383 minted NEW on concept 23440382 with both PDFs (md5 132b0993, f811dda3). Internet Archive item unconditional-proof-real-part-riemann-hypothesis-one-bit claimed: RH_Real_Part_and_One_Bit_MathJournal.pdf and RH_Real_Part_and_One_Bit_Journal.pdf, re-serialized without object streams (md5 4b9a0994, 37cb67ee)."
+      "note": "Version 1.3.0_CC, 22 October 2026, on the master FINAL_BINDING/RH Binding/RH_Both_Sides_Formal_Master_v3_0_39_CC.lean (15,563 lines, 995 theorems, 826 pinned cones, exit 0 silent in 452 s, sha256 d72ef02a), the union of v3.0.38_CC_u and Part XII of v3.0.38_CC with Final Part V, the_final_form, appended. Title and subtitle kept; the barrier theorem (4.14) and the finite form at the true zeros (4.8) added; eight figures placed with their sections; the Journal edition and the Math Journal edition, single column, each printing the master in Appendix E. Seated on git as new files beside v1.2.3 (61cfdc4). Zenodo record 23440383 (version 1.2.3, one version) and the archive item still carry the v1.2.3 editions; their in-place replacement is staged under extra.staged.",
+      "extra": {
+        "figures": "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_Figures/",
+        "source_bundle": "Publication Library/Mathematics/Millennium Series/RH_Real_Part_and_One_Bit_v1_3_0_CC_source.zip",
+        "poster": "FINAL_BINDING/RH Binding/RH_10_Level_Architecture_Poster_v3_0_39_CC.svg",
+        "staged": {
+          "date": "2026-10-22",
+          "zenodo": {
+            "record": 23440383,
+            "replace": "RH_Real_Part_and_One_Bit_v1_2_3_CC_Journal_SingleColumn.pdf",
+            "md5": "5d49cd67e4a4dfa787839f34c3a50575",
+            "add": "RH_Both_Sides_Formal_Master_v3_0_39_CC.lean",
+            "add_md5": "0018d35c2f4bac735f053dd6c59dba6a",
+            "keep": "RH_Both_Sides_Formal_Master_v3_0_34_CC.lean",
+            "version": "1.3.0"
+          },
+          "ia": {
+            "identifier": "unconditional-proof-real-part-riemann-hypothesis-one-bit",
+            "replace": [
+              {
+                "name": "RH_Real_Part_and_One_Bit_Journal.pdf",
+                "md5": "3a3578d54e90fefcd9aeb26d8aa72588",
+                "size": 10607592
+              },
+              {
+                "name": "RH_Real_Part_and_One_Bit_MathJournal.pdf",
+                "md5": "3959dc0f5675413915b0d80d21fa76c7",
+                "size": 9735829
+              }
+            ]
+          }
+        }
+      }
     },
     "p-ne-np-closed-to-one-bit": {
       "title": "P ≠ NP: Unconditional Proof of the Form by Theorem, the Value by the Act",
