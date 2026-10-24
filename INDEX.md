@@ -400,7 +400,7 @@ S | 2026-10-23 | 00ef166 | SEAT | LIB | Publication Library/Mathematics/Millenni
 S | 2026-10-23 | 00ef166 | SEAT | LIB | Publication Library/Mathematics/Millennium Series/Poincare_Precedent_v1_0_0_CC.md | sha 68641ab8 | seal poincare_precedent
 S | 2026-10-23 | 00ef166 | SEAT | LIB | Publication Library/Mathematics/Millennium Series/Poincare_Precedent_v1_0_0_CC.pdf | sha b3e9e0b6 | seal poincare_precedent
 S | 2026-10-23 | 00ef166 | SEAT | LIB | Publication Library/Mathematics/Millennium Series/Poincare_Precedent_v1_0_0_CC_source.zip | sha 8f1c6d34 | seal poincare_precedent
-S | 2026-10-23 | 00ef166 | LEDGER | LEDG | publication/trisduction_ledger.json | sha 860278df | two new works: poincare_precedent (Zenodo 23609234), one_bit_method (Zenodo 23609342) | seal poincare_precedent
+S | 2026-10-23 | 00ef166 | LEDGER | LEDG | publication/trisduction_ledger.json | sha 860278df | new work: poincare_precedent (Zenodo 23609695) | seal poincare_precedent
 
 
 ## MAP | regenerated | one line per live path
