@@ -4026,6 +4026,40 @@
    "supersedes": null,
    "superseded_by": null,
    "note": "The One-Bit Method v1.0.0_CC (2026-10-23): the drill of the Millennium series stated as a method and proved as one theorem (29 theorems, core Lean, no import, compiles silent). Zenodo new record 23609342 (PDF + MD + Lean), part of the Millennium Synthesis record 23609234."
+  },
+  "poincare_precedent": {
+   "title": "The Poincaré Precedent and the Stronger Case: Why All Seven Qualify",
+   "domain": "Millennium Series",
+   "status": "live",
+   "first_published": "2026-10-23",
+   "last_updated": "2026-10-23",
+   "git": {
+    "md": "Publication Library/Mathematics/Millennium Series/Poincare_Precedent_v1_0_0_CC.md",
+    "pdf": "Publication Library/Mathematics/Millennium Series/Poincare_Precedent_v1_0_0_CC.pdf",
+    "editions": [],
+    "lean": [
+     "FINAL_BINDING/Grand Master/Poincare_Precedent_v1_0_0_CC.lean"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 23609694,
+    "concept_doi": "10.5281/zenodo.23609694",
+    "latest_version_doi": "10.5281/zenodo.23609695",
+    "latest_record": 23609695,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "The Poincaré Precedent v1.0.0_CC (2026-10-24): companion note to the Millennium Synthesis (Zenodo 23609234); the precedent stated exactly, the stronger case on four counts; mini case Poincare_Precedent_v1_0_0_CC.lean (21 theorems, 21 pins, core Lean, compiles silent) at FINAL_BINDING/Grand Master. Zenodo new record 23609695 (PDF + MD + Lean)."
   }
  }
 }
