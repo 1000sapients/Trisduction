@@ -1,0 +1,154 @@
+{
+ "rows": [
+  {
+   "file": "Millennium/BSD.lean",
+   "bytes": 148166,
+   "sha256": "66dff84e8bc25f950b48bf39909ccf9d0be4cabd9f1c3ee9721ac136e83a7112",
+   "theorems": 214,
+   "pins": 214
+  },
+  {
+   "file": "Millennium/BSDBind.lean",
+   "bytes": 12464,
+   "sha256": "c9e2c78d0644cd687f1332364375571009424d64a5d74da299db53388fd4dbf8",
+   "theorems": 18,
+   "pins": 18
+  },
+  {
+   "file": "Millennium/FTOE_Shared.lean",
+   "bytes": 13445,
+   "sha256": "87d0b25d1ff2008ff362510cfa639bae3e54e724163bef6893cdf95fbdfe9b63",
+   "theorems": 28,
+   "pins": 0
+  },
+  {
+   "file": "Millennium/GB.lean",
+   "bytes": 151409,
+   "sha256": "cfca06f3df9cdb1f745d4f540dc182c8ab6445022da600f5090f3afdeb44854e",
+   "theorems": 209,
+   "pins": 209
+  },
+  {
+   "file": "Millennium/GBBind.lean",
+   "bytes": 7068,
+   "sha256": "74bc6a2e61d4cd2d4cb11119419d67f2bd3c05a7da051d82a21913aea8050416",
+   "theorems": 7,
+   "pins": 7
+  },
+  {
+   "file": "Millennium/Hodge.lean",
+   "bytes": 140883,
+   "sha256": "6d95f48b179fdff1d36b94215ec483b799ec23daef0321bcfa315ca9dcf316f2",
+   "theorems": 183,
+   "pins": 183
+  },
+  {
+   "file": "Millennium/Hunt.lean",
+   "bytes": 26051,
+   "sha256": "b1b04bdef6951c15d2d34d730df9f119b13a01bbfcc04e7431cd5b3f91fdf5d2",
+   "theorems": 27,
+   "pins": 27
+  },
+  {
+   "file": "Millennium/NS.lean",
+   "bytes": 128228,
+   "sha256": "b00f536a5e23d8071a328da198b7607c16a4f680366343d8a17e8b6cc883cf66",
+   "theorems": 169,
+   "pins": 169
+  },
+  {
+   "file": "Millennium/NSBind.lean",
+   "bytes": 12120,
+   "sha256": "ca610e8b9b437f85e3362f4c72d4886dd9302f174ecfdc61c88f6a0127bf9e80",
+   "theorems": 10,
+   "pins": 10
+  },
+  {
+   "file": "Millennium/PC.lean",
+   "bytes": 147723,
+   "sha256": "9add542a2a8a6a9d5f953dac534ff19a6eb6d0a170c9e6263adfd4f32391fc37",
+   "theorems": 197,
+   "pins": 197
+  },
+  {
+   "file": "Millennium/PCBind.lean",
+   "bytes": 14201,
+   "sha256": "2791375324111e660b3ea835a3c733b3d37b01db252472639bc9ca3f36f528e7",
+   "theorems": 16,
+   "pins": 16
+  },
+  {
+   "file": "Millennium/PNP.lean",
+   "bytes": 544634,
+   "sha256": "829d3db422cd1bbe3544ef2430af6c47d91d8b1dfe0beffeb149f222b80cfa4e",
+   "theorems": 659,
+   "pins": 610
+  },
+  {
+   "file": "Millennium/RH.lean",
+   "bytes": 838875,
+   "sha256": "a3f043a8143c8de2eeda345b194139c41b9c5225347339e2ce1f8bb3535f6dd9",
+   "theorems": 952,
+   "pins": 826
+  },
+  {
+   "file": "Millennium/Root_Grade_Ledger.lean",
+   "bytes": 11962,
+   "sha256": "c18b68b29d2b6be5058d56d3a7f9e966bcde6ce099217e0f5945db4c829c42b8",
+   "theorems": 18,
+   "pins": 18
+  },
+  {
+   "file": "Millennium/TOE_Zero.lean",
+   "bytes": 11422,
+   "sha256": "0cfcd9f6b399ecbaef01e762a4d9f10490288f1053827b404428062e55076238",
+   "theorems": 15,
+   "pins": 15
+  },
+  {
+   "file": "Millennium/Triaxial_Actuation.lean",
+   "bytes": 21947,
+   "sha256": "566615a6b9610fc981e03eb42e07af9e03849f20704729880f2bfe6434f2ea0b",
+   "theorems": 32,
+   "pins": 32
+  },
+  {
+   "file": "Millennium/YM.lean",
+   "bytes": 129415,
+   "sha256": "150dc58f223ecac94a3aa08cda1d1b8dc99d1536c5190c8431b6041925667b55",
+   "theorems": 174,
+   "pins": 174
+  },
+  {
+   "file": "Millennium_Grand_Master_v1_0_0_CC.lean",
+   "bytes": 39937,
+   "sha256": "5cbcfc2c49cd4614475a2a5f9aeab46935241517c2c51141a426dd13e625194d",
+   "theorems": 39,
+   "pins": 53
+  }
+ ],
+ "total_theorems": 2967,
+ "total_pins": 2778,
+ "certificates": [
+  "PASS  Millennium.NS is NS_Normal_Form_Paper_v1_1_0_CC.lean byte for byte, sha256 b00f536a5e23d8071a328da198b7607c16a4f680366343d8a17e8b6cc883cf66",
+  "PASS  Millennium.YM is YM_Normal_Form_Paper_v1_1_0_CC.lean byte for byte, sha256 150dc58f223ecac94a3aa08cda1d1b8dc99d1536c5190c8431b6041925667b55",
+  "PASS  Millennium.Hodge is Hodge_Normal_Form_Paper_v1_1_0_CC.lean byte for byte, sha256 6d95f48b179fdff1d36b94215ec483b799ec23daef0321bcfa315ca9dcf316f2",
+  "PASS  Millennium.BSD is BSD_Normal_Form_Paper_v1_1_0_CC.lean byte for byte, sha256 66dff84e8bc25f950b48bf39909ccf9d0be4cabd9f1c3ee9721ac136e83a7112",
+  "PASS  Millennium.PC is PC_Normal_Form_Paper_v1_1_0_CC.lean byte for byte, sha256 9add542a2a8a6a9d5f953dac534ff19a6eb6d0a170c9e6263adfd4f32391fc37",
+  "PASS  Millennium.GB is GB_Normal_Form_Paper_v1_1_0_CC.lean byte for byte, sha256 cfca06f3df9cdb1f745d4f540dc182c8ab6445022da600f5090f3afdeb44854e",
+  "PASS  Millennium.NSBind is NS_Mathlib_Binding_v1_1_0_CC.lean byte for byte, sha256 ca610e8b9b437f85e3362f4c72d4886dd9302f174ecfdc61c88f6a0127bf9e80",
+  "PASS  Millennium.BSDBind is BSD_Mathlib_Binding_v1_1_0_CC.lean byte for byte, sha256 c9e2c78d0644cd687f1332364375571009424d64a5d74da299db53388fd4dbf8",
+  "PASS  Millennium.PCBind is PC_Mathlib_Binding_v1_1_0_CC.lean byte for byte, sha256 2791375324111e660b3ea835a3c733b3d37b01db252472639bc9ca3f36f528e7",
+  "PASS  Millennium.GBBind is GB_Mathlib_Binding_v1_1_0_CC.lean byte for byte, sha256 74bc6a2e61d4cd2d4cb11119419d67f2bd3c05a7da051d82a21913aea8050416",
+  "PASS  Millennium.TOE_Zero is TOE_Zero.lean byte for byte, sha256 0cfcd9f6b399ecbaef01e762a4d9f10490288f1053827b404428062e55076238",
+  "PASS  Millennium.Triaxial_Actuation is Triaxial_Actuation.lean byte for byte, sha256 566615a6b9610fc981e03eb42e07af9e03849f20704729880f2bfe6434f2ea0b",
+  "PASS  Millennium.Root_Grade_Ledger is Root_Grade_Ledger.lean byte for byte, sha256 c18b68b29d2b6be5058d56d3a7f9e966bcde6ce099217e0f5945db4c829c42b8",
+  "PASS  Millennium.FTOE_Shared carries lines 14560-14843 of RH_Both_Sides_Formal_Master_v3_0_39_CC.lean verbatim after its header (block sha256 161ca934b69acebbc34483ad5162afb78357e037b078903251a9a47d0eb4ae21)",
+  "PASS  Millennium.RH is RH_Both_Sides_Formal_Master_v3_0_39_CC.lean (sha256 d72ef02af72432c7da312eabd6d61c7667f4e7b8bb444c164d00e37b826897cf) with lines 125-293 and 14560-14843 removed and two import lines inserted after line 4, byte for byte",
+  "PASS  Millennium.PNP is PNP_Normal_Form_Paper_v1_13_0_CC.lean (sha256 98329a52b0e225f17488ad5f2710b7fd284269582877f03730da94509cf8c415) with the import of FTOE_Shared as its first line and 62 shared declarations removed, byte for byte",
+  "PASS  each of the 62 removed P ≠ NP declarations is text-identical to its copy in FTOE_Shared (62 of 62)",
+  "PASS  Millennium.Hunt is One_Bit_Perelmanification_Hunt_v1_0_0_CC.lean (sha256 ac9c99e12bcc56e177646180fb7325f1d894436fd2b4d70071440c2c1cac57a1) with its import lines re-pointed to the tree, every other byte verbatim",
+  "PASS  the root's Part S.8 carries Part M of One_Bit_Method_v1_0_0_CC.lean (sha256 770e21c80f57df9f9f076e9b1d03decd426ded66f8281cbd0113e6966d981bcb) verbatim, 91 lines"
+ ],
+ "all_pass": true
+}

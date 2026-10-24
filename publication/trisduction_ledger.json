@@ -3941,6 +3941,91 @@
      }
     }
    }
+  },
+  "millennium_synthesis": {
+   "title": "The Millennium Problems: Unconditional Proof of the Form by Theorem, the Value by the Act",
+   "domain": "Millennium Series",
+   "status": "live",
+   "first_published": "2026-10-23",
+   "last_updated": "2026-10-23",
+   "git": {
+    "md": "Publication Library/Mathematics/Millennium Series/Millennium_Synthesis_v1_0_0_CC.md",
+    "pdf": "Publication Library/Mathematics/Millennium Series/Millennium_Synthesis_v1_0_0_CC.pdf",
+    "editions": [],
+    "lean": [
+     "FINAL_BINDING/Grand Master/Millennium_Grand_Master_v1_0_0_CC.lean",
+     "FINAL_BINDING/Grand Master/Millennium/BSD.lean",
+     "FINAL_BINDING/Grand Master/Millennium/BSDBind.lean",
+     "FINAL_BINDING/Grand Master/Millennium/FTOE_Shared.lean",
+     "FINAL_BINDING/Grand Master/Millennium/GB.lean",
+     "FINAL_BINDING/Grand Master/Millennium/GBBind.lean",
+     "FINAL_BINDING/Grand Master/Millennium/Hodge.lean",
+     "FINAL_BINDING/Grand Master/Millennium/Hunt.lean",
+     "FINAL_BINDING/Grand Master/Millennium/NS.lean",
+     "FINAL_BINDING/Grand Master/Millennium/NSBind.lean",
+     "FINAL_BINDING/Grand Master/Millennium/PC.lean",
+     "FINAL_BINDING/Grand Master/Millennium/PCBind.lean",
+     "FINAL_BINDING/Grand Master/Millennium/PNP.lean",
+     "FINAL_BINDING/Grand Master/Millennium/RH.lean",
+     "FINAL_BINDING/Grand Master/Millennium/Root_Grade_Ledger.lean",
+     "FINAL_BINDING/Grand Master/Millennium/TOE_Zero.lean",
+     "FINAL_BINDING/Grand Master/Millennium/Triaxial_Actuation.lean",
+     "FINAL_BINDING/Grand Master/Millennium/YM.lean"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 23609233,
+    "concept_doi": "10.5281/zenodo.23609233",
+    "latest_version_doi": "10.5281/zenodo.23609234",
+    "latest_record": 23609234,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "Millennium Synthesis v1.0.0_CC (2026-10-23): the seven rows bound in one Grand Master (18 modules, 2,967 theorems, 2,778 pins; local build PASS, certify 19/19). Paper PDF + MD + 24 figure files + source zip at Millennium Series; Grand Master tree at FINAL_BINDING/Grand Master (originals not duplicated, already in repo). Zenodo new record 23609234 (PDF + MD + source zip), related: the eight series records."
+  },
+  "one_bit_method": {
+   "title": "The One-Bit Method",
+   "domain": "Millennium Series",
+   "status": "live",
+   "first_published": "2026-10-23",
+   "last_updated": "2026-10-23",
+   "git": {
+    "md": "Publication Library/Mathematics/Millennium Series/One_Bit_Method_v1_0_0_CC.md",
+    "pdf": "Publication Library/Mathematics/Millennium Series/One_Bit_Method_v1_0_0_CC.pdf",
+    "editions": [],
+    "lean": [
+     "Publication Library/Mathematics/Millennium Series/One_Bit_Method_v1_0_0_CC.lean"
+    ]
+   },
+   "zenodo": {
+    "conceptrecid": 23609341,
+    "concept_doi": "10.5281/zenodo.23609341",
+    "latest_version_doi": "10.5281/zenodo.23609342",
+    "latest_record": 23609342,
+    "versions": 1,
+    "state": "published"
+   },
+   "ia": {
+    "identifier": null,
+    "url": null
+   },
+   "philarchive": {
+    "record": null,
+    "url": null
+   },
+   "supersedes": null,
+   "superseded_by": null,
+   "note": "The One-Bit Method v1.0.0_CC (2026-10-23): the drill of the Millennium series stated as a method and proved as one theorem (29 theorems, core Lean, no import, compiles silent). Zenodo new record 23609342 (PDF + MD + Lean), part of the Millennium Synthesis record 23609234."
   }
  }
 }

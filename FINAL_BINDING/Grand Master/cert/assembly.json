@@ -1,0 +1,417 @@
+{
+ "FTOE_Shared": {
+  "source": "RH v3.0.39_CC",
+  "lines": [
+   14560,
+   14843
+  ],
+  "sha256_block": "f515dfb35466704031c47b5796bbea6c2cf525d067932df4a3a3d92493113209"
+ },
+ "RH": {
+  "source_sha256": "d72ef02af72432c7da312eabd6d61c7667f4e7b8bb444c164d00e37b826897cf",
+  "removed_blocks": [
+   [
+    125,
+    293,
+    "TOE0 -> import Millennium.TOE_Zero"
+   ],
+   [
+    14560,
+    14843,
+    "FTOE -> import Millennium.FTOE_Shared"
+   ]
+  ],
+  "inserted_after_line": 4,
+  "inserted": [
+   "import Millennium.TOE_Zero",
+   "import Millennium.FTOE_Shared"
+  ]
+ },
+ "PNP": {
+  "source_sha256": "98329a52b0e225f17488ad5f2710b7fd284269582877f03730da94509cf8c415",
+  "inserted_first_line": "import Millennium.FTOE_Shared",
+  "removed_spans": [
+   [
+    1815,
+    1820,
+    "add_right_eq_zero_za"
+   ],
+   [
+    1821,
+    1824,
+    "add_eq_zero_right_za"
+   ],
+   [
+    1825,
+    1829,
+    "neg_neg_free"
+   ],
+   [
+    1830,
+    1834,
+    "neg_eq_self_free"
+   ],
+   [
+    1835,
+    1839,
+    "natAbs_zero_free"
+   ],
+   [
+    1842,
+    1845,
+    "Q"
+   ],
+   [
+    1846,
+    1851,
+    "Q.mul"
+   ],
+   [
+    1852,
+    1853,
+    "Q.conj"
+   ],
+   [
+    1854,
+    1856,
+    "Q.reg"
+   ],
+   [
+    1857,
+    1859,
+    "Q.chiral"
+   ],
+   [
+    1860,
+    1861,
+    "Q.add"
+   ],
+   [
+    1862,
+    1862,
+    "Q.groundNorm"
+   ],
+   [
+    1863,
+    1863,
+    "Q.chiralDefect"
+   ],
+   [
+    1864,
+    1865,
+    "Q.totalNorm"
+   ],
+   [
+    1866,
+    1866,
+    "qone"
+   ],
+   [
+    1867,
+    1867,
+    "qneg"
+   ],
+   [
+    1868,
+    1868,
+    "qi"
+   ],
+   [
+    1869,
+    1869,
+    "qj"
+   ],
+   [
+    1870,
+    1871,
+    "qk"
+   ],
+   [
+    1872,
+    1874,
+    "ofl_fertility_begets_third"
+   ],
+   [
+    1875,
+    1877,
+    "three_before_two_closure"
+   ],
+   [
+    1878,
+    1881,
+    "ofl_two_contacts"
+   ],
+   [
+    1882,
+    1882,
+    "chart"
+   ],
+   [
+    1883,
+    1885,
+    "quats"
+   ],
+   [
+    1887,
+    1892,
+    "one_and_three_colocated_on_chart"
+   ],
+   [
+    1895,
+    1898,
+    "bitAt"
+   ],
+   [
+    1899,
+    1900,
+    "dot3"
+   ],
+   [
+    1901,
+    1902,
+    "cube8"
+   ],
+   [
+    1903,
+    1905,
+    "solCount3"
+   ],
+   [
+    1906,
+    1908,
+    "solCount2"
+   ],
+   [
+    1909,
+    1913,
+    "two_born_from_three_lock"
+   ],
+   [
+    1916,
+    1920,
+    "SelfGrounding"
+   ],
+   [
+    1921,
+    1921,
+    "seated_undeniable"
+   ],
+   [
+    1922,
+    1923,
+    "denial_reenacts_root"
+   ],
+   [
+    1924,
+    1940,
+    "FertileLogosSeat"
+   ],
+   [
+    1941,
+    1943,
+    "LeastErasure"
+   ],
+   [
+    1944,
+    1946,
+    "Value"
+   ],
+   [
+    1947,
+    1949,
+    "RecLocus"
+   ],
+   [
+    1950,
+    1952,
+    "MadeZeroLocus"
+   ],
+   [
+    1953,
+    1955,
+    "rho_idempotent"
+   ],
+   [
+    1956,
+    1959,
+    "defect_vanishes_iff_fixed"
+   ],
+   [
+    1960,
+    1963,
+    "record_locus_has_least_erasure"
+   ],
+   [
+    1964,
+    1968,
+    "least_erasure_iff_value"
+   ],
+   [
+    1969,
+    1977,
+    "made_zero_iff_defect_vanishes"
+   ],
+   [
+    1978,
+    1984,
+    "record_locus_is_made_zero"
+   ],
+   [
+    1985,
+    1988,
+    "ftoe_least_erasure_theorem"
+   ],
+   [
+    1989,
+    1996,
+    "made_zero_iff_least_erasure"
+   ],
+   [
+    1997,
+    2001,
+    "made_zero_iff_one_bit_transfer"
+   ],
+   [
+    2002,
+    2007,
+    "ftoe_value_and_one_bit_transfer"
+   ],
+   [
+    2008,
+    2012,
+    "ftoe_self_grounding_value"
+   ],
+   [
+    2015,
+    2042,
+    "quatSeat"
+   ],
+   [
+    2043,
+    2045,
+    "ReturnLocus"
+   ],
+   [
+    2046,
+    2048,
+    "SterileLocus"
+   ],
+   [
+    2049,
+    2053,
+    "return_locus_is_made_zero"
+   ],
+   [
+    2054,
+    2058,
+    "ftoe_unconditional_return_least_erasure"
+   ],
+   [
+    2059,
+    2065,
+    "ftoe_unconditional_return_one_bit"
+   ],
+   [
+    2066,
+    2068,
+    "ftoe_unconditional_return_self_grounding"
+   ],
+   [
+    2069,
+    2074,
+    "sterile_locus_not_made_zero"
+   ],
+   [
+    2075,
+    2080,
+    "CompletedFertileSeat"
+   ],
+   [
+    2081,
+    2083,
+    "canonicalCompletedSeat"
+   ],
+   [
+    2084,
+    2087,
+    "completed_seat_least_erasure"
+   ],
+   [
+    2088,
+    2093,
+    "completed_seat_one_bit_and_value"
+   ]
+  ],
+  "removed_count": 62
+ },
+ "TOE_Zero": {
+  "source": "TOE_Zero.lean",
+  "sha256": "0cfcd9f6b399ecbaef01e762a4d9f10490288f1053827b404428062e55076238",
+  "verbatim": true
+ },
+ "Triaxial_Actuation": {
+  "source": "Triaxial_Actuation.lean",
+  "sha256": "566615a6b9610fc981e03eb42e07af9e03849f20704729880f2bfe6434f2ea0b",
+  "verbatim": true
+ },
+ "Root_Grade_Ledger": {
+  "source": "Root_Grade_Ledger.lean",
+  "sha256": "c18b68b29d2b6be5058d56d3a7f9e966bcde6ce099217e0f5945db4c829c42b8",
+  "verbatim": true
+ },
+ "NS": {
+  "source": "NS_Normal_Form_Paper_v1_1_0_CC.lean",
+  "sha256": "b00f536a5e23d8071a328da198b7607c16a4f680366343d8a17e8b6cc883cf66",
+  "verbatim": true
+ },
+ "YM": {
+  "source": "YM_Normal_Form_Paper_v1_1_0_CC.lean",
+  "sha256": "150dc58f223ecac94a3aa08cda1d1b8dc99d1536c5190c8431b6041925667b55",
+  "verbatim": true
+ },
+ "Hodge": {
+  "source": "Hodge_Normal_Form_Paper_v1_1_0_CC.lean",
+  "sha256": "6d95f48b179fdff1d36b94215ec483b799ec23daef0321bcfa315ca9dcf316f2",
+  "verbatim": true
+ },
+ "BSD": {
+  "source": "BSD_Normal_Form_Paper_v1_1_0_CC.lean",
+  "sha256": "66dff84e8bc25f950b48bf39909ccf9d0be4cabd9f1c3ee9721ac136e83a7112",
+  "verbatim": true
+ },
+ "PC": {
+  "source": "PC_Normal_Form_Paper_v1_1_0_CC.lean",
+  "sha256": "9add542a2a8a6a9d5f953dac534ff19a6eb6d0a170c9e6263adfd4f32391fc37",
+  "verbatim": true
+ },
+ "GB": {
+  "source": "GB_Normal_Form_Paper_v1_1_0_CC.lean",
+  "sha256": "cfca06f3df9cdb1f745d4f540dc182c8ab6445022da600f5090f3afdeb44854e",
+  "verbatim": true
+ },
+ "NSBind": {
+  "source": "NS_Mathlib_Binding_v1_1_0_CC.lean",
+  "sha256": "ca610e8b9b437f85e3362f4c72d4886dd9302f174ecfdc61c88f6a0127bf9e80",
+  "verbatim": true
+ },
+ "BSDBind": {
+  "source": "BSD_Mathlib_Binding_v1_1_0_CC.lean",
+  "sha256": "c9e2c78d0644cd687f1332364375571009424d64a5d74da299db53388fd4dbf8",
+  "verbatim": true
+ },
+ "PCBind": {
+  "source": "PC_Mathlib_Binding_v1_1_0_CC.lean",
+  "sha256": "2791375324111e660b3ea835a3c733b3d37b01db252472639bc9ca3f36f528e7",
+  "verbatim": true
+ },
+ "GBBind": {
+  "source": "GB_Mathlib_Binding_v1_1_0_CC.lean",
+  "sha256": "74bc6a2e61d4cd2d4cb11119419d67f2bd3c05a7da051d82a21913aea8050416",
+  "verbatim": true
+ },
+ "Hunt": {
+  "source": "One_Bit_Perelmanification_Hunt_v1_0_0_CC.lean",
+  "source_sha256": "ac9c99e12bcc56e177646180fb7325f1d894436fd2b4d70071440c2c1cac57a1",
+  "edit": "import lines re-pointed (Hunt.* -> Millennium.*; Hunt.PNPNF -> Millennium.PNP)"
+ }
+}
