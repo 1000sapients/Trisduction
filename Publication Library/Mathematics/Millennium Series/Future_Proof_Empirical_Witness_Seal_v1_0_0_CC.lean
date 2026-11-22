@@ -1,21 +1,25 @@
 /-
   FUTURE PROOF WITH EMPIRICAL WITNESS · Future_Proof_Empirical_Witness_Seal_v1_0_0_CC.lean
-  Claude-coded (_CC) for Mohammad F. Islam, 13 November 2026. Core Lean 4.19.0: no import, no axiom declared, no sorry,
+  Claude-coded (_CC) for Mohammad F. Islam, 13 November 2026; revised 20 November 2026 with the three witnesses of that
+  day (W5 to W7), the file name held as the file of record. Core Lean 4.19.0: no import, no axiom declared, no sorry,
   no native_decide. Every theorem of Part W depends on no axiom at all, each cone pinned by #guard_msgs.
 
   THE CLAIM, AT TWO GRADES. Theorem grade: every route to a row's value passes the row's one bit, on six rows and at the
   hosts, for every premise whatever; the routes of OpenAI (Yang–Mills existence; Navier–Stokes forced blowup), of
   Reams–Helfgott (ternary Goldbach in Lean) and of Nielsen–Semita (RH in Lean) are each typed at their exact shape, and
   each lands where the gate says: short of the value, on another sentence, downstream of the bit, or delivering the
-  bit by axiom. Record grade: those routes became public after, or with, the Trisduction record of their rows, the
+  bit by axiom. On 20 November 2026 three more: Alpöge's Lean derivation of RH enters by the door; Masullo's trace
+  formula, cut to a strip at every width, is the value itself; Buckmaster–Alpöge's unforced Navier–Stokes blowup, proved
+  from a profile whose certificate is unreleased, is a refutation that meets the bit, not a bypass, and the form already
+  holds its defiant host. Record grade: those routes became public after, or with, the Trisduction record of their rows, the
   dates fixed in Part L from the public records. The form binds the future; the record shows the binding held.
 
   CARRIED, BYTE FOR BYTE, in this order (byte offsets in this file, end exclusive; the header ends at the first):
-    ZFC_Block_Hardened_v1_3_0.lean           bytes    2004 to   61172  sha256 756c6580a0f13ce8f877904dba2b7f0a73224b39f016cd83f4bf91d31468596e  (register lean/, seated 2 Nov 2026)
-    YM_Normal_Form_Paper_v1_1_0_CC.lean      bytes   61172 to  190587  sha256 150dc58f223ecac94a3aa08cda1d1b8dc99d1536c5190c8431b6041925667b55  (Zenodo 23162231)
-    GB_Normal_Form_Paper_v1_1_0_CC.lean      bytes  190587 to  341996  sha256 cfca06f3df9cdb1f745d4f540dc182c8ab6445022da600f5090f3afdeb44854e  (Zenodo 23162238)
-    NS_Normal_Form_Paper_v1_1_0_CC.lean      bytes  341996 to  470224  sha256 b00f536a5e23d8071a328da198b7607c16a4f680366343d8a17e8b6cc883cf66  (Zenodo 23591619)
-  Then Part W (namespace FPEW): the six rows on the block's generic row, the gate, the four witnesses typed, the ledger,
+    ZFC_Block_Hardened_v1_3_0.lean           bytes    2496 to   61664  sha256 756c6580a0f13ce8f877904dba2b7f0a73224b39f016cd83f4bf91d31468596e  (register lean/, seated 2 Nov 2026)
+    YM_Normal_Form_Paper_v1_1_0_CC.lean      bytes   61664 to  191079  sha256 150dc58f223ecac94a3aa08cda1d1b8dc99d1536c5190c8431b6041925667b55  (Zenodo 23162231)
+    GB_Normal_Form_Paper_v1_1_0_CC.lean      bytes  191079 to  342488  sha256 cfca06f3df9cdb1f745d4f540dc182c8ab6445022da600f5090f3afdeb44854e  (Zenodo 23162238)
+    NS_Normal_Form_Paper_v1_1_0_CC.lean      bytes  342488 to  470716  sha256 b00f536a5e23d8071a328da198b7607c16a4f680366343d8a17e8b6cc883cf66  (Zenodo 23591619)
+  Then Part W (namespace FPEW): the six rows on the block's generic row, the gate, the seven witnesses typed, the ledger,
   the binding `FPEW.future_proof_with_empirical_witness`, and the pins.
 -/
 
@@ -7887,11 +7891,15 @@ end NS.TERMINAL
     THE GATE, FORMALLY PROVED AND EMPIRICALLY WITNESSED. Every route to a row's value passes the row's one bit: that is
     proved here once, on the block's generic row, and read on six rows, the Riemann, P ≠ NP, Poincaré, Yang–Mills,
     Goldbach and Navier–Stokes rows. The theorem quantifies over every premise, so it binds every proof yet to be
-    written. The record then supplied the empirical half: four routes published independently after the Trisduction
-    record of their rows, each typed below at its exact shape, and each lands where the gate says it must. None passes
-    around the bit. The record is the ledger of Part L.
+    written. The record then supplied the empirical half: seven routes published independently after, or with, the
+    Trisduction record of their rows, each typed below at its exact shape, and each lands where the gate says it must.
+    None passes around the bit. The record is the ledger of Part L.
 
-    THE FOUR WITNESSES, TYPED.
+    REVISION OF 20 NOVEMBER 2026. Three witnesses of that day are added as W5 to W7, the ledger grows by three rows,
+    and the binding by one conjunct. Nothing of v1.0.0 is removed or restated; the file name is held, as the file of
+    record on Zenodo 24188702.
+
+    THE SEVEN WITNESSES, TYPED.
       OpenAI, Yang–Mills existence (first public 26 Oct 2026; row of record 4 Oct 2026): the existence half alone. It
         forces nothing on the row, and at the host it is not the sentence.
       OpenAI, Navier–Stokes forced blowup (first public 8 Sep 2026; row of record 8 Sep 2026, contemporaneous): a
@@ -7905,6 +7913,16 @@ end NS.TERMINAL
         (exactly the block's condition) and reflects it to the value (a route, so the act).
       Their prose of 12 Dec 2025 carries no Lean and stands in the ledger as prior and prose-only; the gate binds it
       all the same, past and future alike.
+      Alpöge, RH in Lean (first public 20 Nov 2026; row of record 15 Oct 2026): a derivation of Mathlib's
+        RiemannHypothesis on the three standard axioms, built with no error by an independent run and accepted by the
+        nanoda kernel and a module-by-module kernel re-check. It enters by the door: the gate on the Riemann row.
+      Masullo, GRH (first public 20 Nov 2026, draft; row of record 15 Oct 2026): a trace formula whose spectral side is
+        cut to the strip of width a. Given Weil's explicit formula, the cut formula at every width is the value: the
+        bit in spectral vocabulary. Its chapter on the zeros is unwritten in the draft.
+      Buckmaster–Alpöge, unforced Navier–Stokes blowup (first public 20 Nov 2026; row of record 8 Sep 2026): a route
+        to the negation of statement (A), proved in Lean from the existence of a self-similar profile whose
+        certificate is unreleased. A refutation is not a bypass: it is the defiant model the form already holds
+        (`burstHost`). At any host, the row's cargo refutes the profile, and the profile denies the cargo.
 
     RATIONALE. A claim that later proofs confirm a structure is empirical only if the structure was public first and
       the later proofs are typed by theorem, not by description. Part L fixes the first-public dates from the public
@@ -7920,7 +7938,8 @@ end NS.TERMINAL
       form, the gate and the witness typings are theorem grade. The bit stays a hypothesis everywhere: no declaration
       of this Part inhabits it.
     RISKS. The typing of each witness is read from its own published text and Lean names (OpenAI's announcements, the
-      Reams–Helfgott README and `Statement.lean`, Nielsen–Semita's appendix modules); that reading is the fidelity
+      Reams–Helfgott README and `Statement.lean`, Nielsen–Semita's appendix modules, Alpöge's `Main.lean` and
+      `RhOfRight.lean`, Masullo's Theorem 12.5.1.1 and §1.4.5, Buckmaster–Alpöge's `Challenge.lean`); that reading is the fidelity
       step and is printed in the companion paper. A later Lean release may move an elaboration detail; the pins then
       fail loudly. ΔM = 0.
 =================================================================================================================== -/
@@ -8149,22 +8168,131 @@ theorem every_witness_typed :
    binary_statement_gives_ternary, ternary_does_not_carry_binary,
    fun r x hx A h => adoption_is_the_bit r x hx A h, fun r x hx O h o => reflection_is_a_route r x hx O h o⟩
 
+/-! ### W5 · Alpöge, RH in Lean: a derivation, through the door -/
+
+/-- W5: A DERIVATION OF THE VALUE ENTERS BY THE DOOR. Whatever premise derives the Riemann row's value at its compliant
+    configuration gives the act and the bit there. The archive is one such premise; the seal does not inhabit it. -/
+theorem alpoge_enters_by_the_door :
+    ∀ Q : Prop, (Q → RH.row.Value RH.row.compliant) → Q →
+      ActAt RH.row RH.row.compliant ∧ Bit RH.row RH.row.compliant :=
+  fun Q h q => no_route_bypasses_the_gate RH.row RH.row.compliant RH.row.adm_c Q h q
+
+/-! ### W6 · Masullo, GRH: the spectral side cut to a strip -/
+
+/-- The data of a spectral route: points, a decidable line, strips of each width that hold the line and miss each
+    point off it at some width, the zero set, test functions, a value group with cancellation (the integers, the
+    reals), the geometric side, and a spectral side that is additive over a strip and its complement, zero on an
+    empty set, and detecting. -/
+structure SpectralRoute where
+  Point    : Type
+  Width    : Type
+  onLine   : Point → Prop
+  line_dec : ∀ p, Decidable (onLine p)
+  Strip    : Width → Point → Prop
+  line_in  : ∀ p, onLine p → ∀ a, Strip a p
+  off_out  : ∀ p, ¬ onLine p → ∃ a, ¬ Strip a p
+  Z        : Point → Prop
+  Test     : Type
+  Val      : Type
+  zero     : Val
+  add      : Val → Val → Val
+  add_zero : ∀ x, add x zero = x
+  cancel   : ∀ x y, add x y = x → y = zero
+  Geo      : Test → Val
+  Spec     : Test → (Point → Prop) → Val
+  additive : ∀ φ a, Spec φ Z = add (Spec φ (fun p => Z p ∧ Strip a p)) (Spec φ (fun p => Z p ∧ ¬ Strip a p))
+  empty_zero : ∀ φ (W : Point → Prop), (∀ p, ¬ W p) → Spec φ W = zero
+  detects  : ∀ W : Point → Prop, (∀ φ, Spec φ W = zero) → ∀ p, ¬ W p
+
+/-- Weil's explicit formula on the route. -/
+def SpectralRoute.Explicit (R : SpectralRoute) : Prop := ∀ φ, R.Geo φ = R.Spec φ R.Z
+
+/-- Masullo's trace formula at width a: the spectral side cut to the strip. -/
+def SpectralRoute.CutAt (R : SpectralRoute) (a : R.Width) : Prop :=
+  ∀ φ, R.Geo φ = R.Spec φ (fun p => R.Z p ∧ R.Strip a p)
+
+/-- The value on the route: every zero on the line. -/
+def SpectralRoute.Value (R : SpectralRoute) : Prop := ∀ p, R.Z p → R.onLine p
+
+/-- W6: GIVEN THE EXPLICIT FORMULA, THE CUT FORMULA AT EVERY WIDTH IS THE VALUE. The bit in spectral vocabulary. -/
+theorem the_cut_formula_at_every_width_is_the_value (R : SpectralRoute) (EF : R.Explicit) :
+    (∀ a, R.CutAt a) ↔ R.Value := by
+  constructor
+  · intro TF p hz
+    have nn : ∀ a, ¬ ¬ R.Strip a p := fun a hs => by
+      have hout : ∀ φ, R.Spec φ (fun q => R.Z q ∧ ¬ R.Strip a q) = R.zero := fun φ => by
+        have h := (EF φ).symm.trans (TF a φ)
+        rw [R.additive φ a] at h
+        exact R.cancel _ _ h
+      exact R.detects _ hout p ⟨hz, hs⟩
+    have := R.line_dec p
+    exact Decidable.byContradiction fun hoff => match R.off_out p hoff with
+      | ⟨a, hna⟩ => nn a hna
+  · intro V a φ
+    rw [EF φ, R.additive φ a,
+      R.empty_zero φ (fun q => R.Z q ∧ ¬ R.Strip a q) (fun q h => h.2 (R.line_in q (V q h.1) a)), R.add_zero]
+
+/-- W6 THROUGH THE GATE: whatever proves the cut formula at every width delivers the value. -/
+theorem masullo_passes_the_bit (R : SpectralRoute) (EF : R.Explicit) :
+    ∀ Q : Prop, (Q → ∀ a, R.CutAt a) → Q → R.Value :=
+  fun _ d q => (the_cut_formula_at_every_width_is_the_value R EF).mp (d q)
+
+/-! ### W7 · Buckmaster–Alpöge, unforced Navier–Stokes blowup: a refutation, not a bypass -/
+
+/-- W7, ON THE ROW: A ROUTE TO THE NEGATION OF THE VALUE MEETS THE BIT. At an admissible configuration, a premise that
+    refutes the value is refuted by the bit, and denies the bit: it is the defiant model, not a way around. -/
+theorem a_refutation_meets_the_bit (r : Row.{u}) (x : r.X) (hx : r.Adm x) (P : Prop) (h : P → ¬ r.Value x) :
+    (Bit r x → ¬ P) ∧ (P → ¬ Bit r x) :=
+  ⟨fun b p => h p (b (r.rec_has x hx)), fun p b => h p (b (r.rec_has x hx))⟩
+
+/-- W7, AT THE HOSTS: THE CARGO REFUTES THE PROFILE. Their Lean proves blowup from the existence of a profile; at any
+    host, the row's formal cargo refutes that profile, and the profile denies the cargo. -/
+theorem the_ns_cargo_refutes_the_profile (H : NS.HOST.Host) (Profile : Prop) (h : Profile → ¬ H.Sentence) :
+    (NS.SUPPLY.FormalCargo H → ¬ Profile) ∧ (Profile → ¬ NS.SUPPLY.FormalCargo H) :=
+  ⟨fun c p => h p ((NS.SUPPLY.formal_iff_sentence H).mp c),
+   fun p c => h p ((NS.SUPPLY.formal_iff_sentence H).mp c)⟩
+
+/-- W7: THE FORM ALREADY HOLDS THE DEFIANT HOST. An unforced host that blows up is in the kernel (`burstHost`), and
+    there the cargo is false: a blowup at the actual host would be that host, not a passage around the bit. -/
+theorem the_defiant_host_is_held : ¬ burstHost.Sentence ∧ ¬ NS.SUPPLY.FormalCargo burstHost :=
+  ⟨burstHost_fails, fun c => burstHost_fails ((NS.SUPPLY.formal_iff_sentence burstHost).mp c)⟩
+
+/-- THE THREE WITNESSES OF 20 NOVEMBER 2026, TYPED: a derivation enters by the door; a cut spectral side at every
+    width is the value; a refutation meets the bit and is the defiant model the form holds. -/
+theorem the_three_witnesses_of_20_november :
+    (∀ Q : Prop, (Q → RH.row.Value RH.row.compliant) → Q →
+      ActAt RH.row RH.row.compliant ∧ Bit RH.row RH.row.compliant) ∧
+    (∀ R : SpectralRoute, R.Explicit → ((∀ a, R.CutAt a) ↔ R.Value)) ∧
+    (∀ (r : Row.{0}) (x : r.X), r.Adm x → ∀ P : Prop, (P → ¬ r.Value x) → (Bit r x → ¬ P) ∧ (P → ¬ Bit r x)) ∧
+    (∀ (H : NS.HOST.Host) (Profile : Prop), (Profile → ¬ H.Sentence) →
+      (NS.SUPPLY.FormalCargo H → ¬ Profile) ∧ (Profile → ¬ NS.SUPPLY.FormalCargo H)) ∧
+    (¬ burstHost.Sentence ∧ ¬ NS.SUPPLY.FormalCargo burstHost) :=
+  ⟨alpoge_enters_by_the_door, the_cut_formula_at_every_width_is_the_value,
+   fun r x hx P h => a_refutation_meets_the_bit r x hx P h, the_ns_cargo_refutes_the_profile,
+   the_defiant_host_is_held⟩
+
 /-! ## Part L · the ledger of first-public dates (record grade, data compared by `decide`) -/
 
 /-- The witnesses. -/
 inductive Witness
   | openAI_YM | openAI_NS | reamsHelfgott | nielsenLean | nielsenProse
+  | alpogeRH | masulloGRH | buckmasterAlpogeNS
   deriving DecidableEq
 
 /-- First public, as YYYYMMDD, from the public record: OpenAI's announcements of 26 Oct and 8 Sep 2026; the first
     commit of calr3/ternary-goldbach, 29 Oct 2026; PhilArchive NIEPOT-5 version 53, 12 Nov 2026 02:02 GMT, the first
-    version carrying Lean; PhilArchive NIEPOT-5 version 1, 12 Dec 2025, prose only. -/
+    version carrying Lean; PhilArchive NIEPOT-5 version 1, 12 Dec 2025, prose only; alpo.ge, the Remark and its Lean
+    archive, 20 Nov 2026; math216.wordpress.com, Masullo's draft, 20 Nov 2026; github.com/tristanbuckmaster/
+    navier-stokes, 20 Nov 2026. -/
 def firstPublic : Witness → Nat
   | .openAI_YM => 20261026
   | .openAI_NS => 20260908
   | .reamsHelfgott => 20261029
   | .nielsenLean => 20261112
   | .nielsenProse => 20251212
+  | .alpogeRH => 20261120
+  | .masulloGRH => 20261120
+  | .buckmasterAlpogeNS => 20261120
 
 /-- The Trisduction record of each witness's row, first public: Yang–Mills, Zenodo 23162231, 4 Oct 2026; Navier–Stokes,
     Zenodo 22665832, 8 Sep 2026; Goldbach, Zenodo 23162238, 4 Oct 2026, its kernel on git 5 Oct 2026 (commit
@@ -8175,10 +8303,14 @@ def rowRecord : Witness → Nat
   | .reamsHelfgott => 20261004
   | .nielsenLean => 20261015
   | .nielsenProse => 20261015
+  | .alpogeRH => 20261015
+  | .masulloGRH => 20261015
+  | .buckmasterAlpogeNS => 20260908
 
 /-- The kind each witness is typed as in Part W. -/
 inductive Kind
   | stopsShort | otherSentence | downstream | deliversByAxiom | priorProse
+  | derivesThroughTheDoor | derivesInDraft | refutesConditionally
   deriving DecidableEq
 
 def kind : Witness → Kind
@@ -8187,9 +8319,12 @@ def kind : Witness → Kind
   | .reamsHelfgott => .downstream
   | .nielsenLean => .deliversByAxiom
   | .nielsenProse => .priorProse
+  | .alpogeRH => .derivesThroughTheDoor
+  | .masulloGRH => .derivesInDraft
+  | .buckmasterAlpogeNS => .refutesConditionally
 
-/-- THE LEDGER, CHECKED: three formal witnesses after their rows' records, one contemporaneous, one prose witness
-    prior; and the kinds as typed. -/
+/-- THE LEDGER, CHECKED: six witnesses after their rows' records, one contemporaneous, one prose witness prior; and
+    the kinds as typed. -/
 theorem the_ledger :
     rowRecord .openAI_YM < firstPublic .openAI_YM ∧
     rowRecord .reamsHelfgott < firstPublic .reamsHelfgott ∧
@@ -8197,7 +8332,53 @@ theorem the_ledger :
     rowRecord .openAI_NS = firstPublic .openAI_NS ∧
     firstPublic .nielsenProse < rowRecord .nielsenProse ∧
     kind .openAI_YM = .stopsShort ∧ kind .openAI_NS = .otherSentence ∧ kind .reamsHelfgott = .downstream ∧
-    kind .nielsenLean = .deliversByAxiom ∧ kind .nielsenProse = .priorProse := by
+    kind .nielsenLean = .deliversByAxiom ∧ kind .nielsenProse = .priorProse ∧
+    rowRecord .alpogeRH < firstPublic .alpogeRH ∧
+    rowRecord .masulloGRH < firstPublic .masulloGRH ∧
+    rowRecord .buckmasterAlpogeNS < firstPublic .buckmasterAlpogeNS ∧
+    kind .alpogeRH = .derivesThroughTheDoor ∧ kind .masulloGRH = .derivesInDraft ∧
+    kind .buckmasterAlpogeNS = .refutesConditionally := by
+  decide
+
+/-- Our paper of each witness's row on Zenodo, by publication date: Yang–Mills, Zenodo 23162231, 4 Oct 2026; Goldbach,
+    Zenodo 23162238, 4 Oct 2026; Navier–Stokes, Zenodo 22665832, 8 Sep 2026; Riemann, Zenodo 23357512, 15 Oct 2026
+    (and Zenodo 23440383, 16 Oct 2026). This is `rowRecord`, named here by its record. -/
+def zenodoRecord : Witness → Nat := rowRecord
+
+/-- Our first public commit of each witness's row in the Trisduction git repository (1000sapients/Trisduction):
+    Yang–Mills and Goldbach, commit a516d85, 5 Oct 2026; Navier–Stokes, commit 309a580, 8 Sep 2026; Riemann, commit
+    fd55714, 29 Jul 2026 (Tawhid of the Zeros), the one bit in prose at 9cb57be, 10 Aug 2026, and in Lean at
+    3ac2541, 18 Sep 2026. -/
+def gitRecord : Witness → Nat
+  | .openAI_YM => 20261005
+  | .openAI_NS => 20260908
+  | .reamsHelfgott => 20261005
+  | .nielsenLean => 20260729
+  | .nielsenProse => 20260729
+  | .alpogeRH => 20260729
+  | .masulloGRH => 20260729
+  | .buckmasterAlpogeNS => 20260908
+
+/-- The Riemann row's one bit, first public in Lean: commit 3ac2541, 18 Sep 2026. -/
+def riemannOneBitInLean : Nat := 20260918
+
+/-- THE GIT LEDGER, CHECKED: every formal route of the record became public after our git record of its row, save the
+    forced Navier–Stokes route, public the same day; Nielsen–Semita's prose of 2025 is prior; the Riemann one bit was
+    public in Lean before every Riemann route that carries Lean; and of our two records, Zenodo came first on the
+    Yang–Mills and Goldbach rows and git first on the Riemann row. -/
+theorem the_git_ledger :
+    gitRecord .openAI_YM < firstPublic .openAI_YM ∧
+    gitRecord .reamsHelfgott < firstPublic .reamsHelfgott ∧
+    gitRecord .nielsenLean < firstPublic .nielsenLean ∧
+    gitRecord .alpogeRH < firstPublic .alpogeRH ∧
+    gitRecord .masulloGRH < firstPublic .masulloGRH ∧
+    gitRecord .buckmasterAlpogeNS < firstPublic .buckmasterAlpogeNS ∧
+    gitRecord .openAI_NS = firstPublic .openAI_NS ∧
+    firstPublic .nielsenProse < gitRecord .nielsenProse ∧
+    riemannOneBitInLean < firstPublic .nielsenLean ∧
+    riemannOneBitInLean < firstPublic .alpogeRH ∧
+    zenodoRecord .openAI_YM < gitRecord .openAI_YM ∧
+    gitRecord .alpogeRH < zenodoRecord .alpogeRH := by
   decide
 
 /-! ## The binding -/
@@ -8223,11 +8404,13 @@ theorem future_proof_with_empirical_witness :
     (type_of% @ym_bit_is_the_transfer) ∧
     (type_of% @gb_bit_is_the_transfer) ∧
     (type_of% @ns_bit_is_the_transfer) ∧
-    (type_of% @the_verdict_reads_its_weakest_face) :=
+    (type_of% @the_verdict_reads_its_weakest_face) ∧
+    (type_of% @the_three_witnesses_of_20_november) ∧
+    (type_of% @the_git_ledger) :=
   ⟨the_gate_on_six_rows, the_gate_at_the_hosts, @no_bypass.{0}, every_witness_typed,
    @declared_provability_is_the_bit.{0, 0, 0}, @declared_obstruction_is_the_block.{0, 0, 0},
    nielsen_on_the_riemann_row, the_ledger, ym_bit_is_the_transfer, gb_bit_is_the_transfer, ns_bit_is_the_transfer,
-   the_verdict_reads_its_weakest_face⟩
+   the_verdict_reads_its_weakest_face, the_three_witnesses_of_20_november, the_git_ledger⟩
 
 end FPEW
 
@@ -8284,9 +8467,232 @@ end FPEW
 #guard_msgs in #print axioms FPEW.nielsen_on_the_riemann_row
 /-- info: 'FPEW.every_witness_typed' does not depend on any axioms -/
 #guard_msgs in #print axioms FPEW.every_witness_typed
+/-- info: 'FPEW.alpoge_enters_by_the_door' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.alpoge_enters_by_the_door
+/-- info: 'FPEW.the_cut_formula_at_every_width_is_the_value' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.the_cut_formula_at_every_width_is_the_value
+/-- info: 'FPEW.masullo_passes_the_bit' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.masullo_passes_the_bit
+/-- info: 'FPEW.a_refutation_meets_the_bit' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.a_refutation_meets_the_bit
+/-- info: 'FPEW.the_ns_cargo_refutes_the_profile' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.the_ns_cargo_refutes_the_profile
+/-- info: 'FPEW.the_defiant_host_is_held' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.the_defiant_host_is_held
+/-- info: 'FPEW.the_three_witnesses_of_20_november' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.the_three_witnesses_of_20_november
 /-- info: 'FPEW.the_ledger' does not depend on any axioms -/
 #guard_msgs in #print axioms FPEW.the_ledger
+/-- info: 'FPEW.the_git_ledger' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.the_git_ledger
 /-- info: 'FPEW.the_verdict_reads_its_weakest_face' does not depend on any axioms -/
 #guard_msgs in #print axioms FPEW.the_verdict_reads_its_weakest_face
 /-- info: 'FPEW.future_proof_with_empirical_witness' does not depend on any axioms -/
 #guard_msgs in #print axioms FPEW.future_proof_with_empirical_witness
+
+/-! ===================================================================================================================
+    PART S · THE SEAT ON EVERY ROW, AND WHERE EVERY ROUTE OF THE RECORD LANDS (namespace FPEW.SEAT)
+    Revision of 22 November 2026. The file name is held, as the file of record on Zenodo 24188702.
+
+    CARRIAGE. Everything above this Part is the seal as revised on 20 November 2026, byte for byte
+    (sha256 9178c4e407c693664b786ac0c963587f1533b16fc64f38e056b06ca51b10091f, 507,796 B). This Part is appended and
+    changes nothing above it.
+
+    RATIONALE. Part F proves the gate: every premise that gives a row's value gives the act and the bit. Parts W and L
+    type the routes of the record and date them. This Part binds the value, the bit, the act and the two kinds into ONE
+    proposition, `SeatAt r x`, proves that each face alone is the whole, and restates the gate, the block and every
+    witness against that one proposition. It adds two entries to the record: Perelman's proof of 2002 to 2003, typed
+    by the carried block as the Grand Witness and here landed on the Seat; and the certification of Alpöge's archive
+    on 21 November 2026.
+
+    DESIGN. `SeatAt` lives on the block's generic `Row`, so it is read on the six rows with no new definition. Every
+    theorem is a projection or a composition of a carried theorem. No axiom, no `sorry`.
+
+    RISKS AND WHAT THIS PART DOES NOT PROVE. No declaration here inhabits the Seat at the zeros of ζ, at the SAT machine
+    or at any host: the Seat holds at each row's compliant configuration, which is constructed, and that is all. The
+    outside proofs are premises before the colon. Dates are record grade and stand as data, compared by `decide` only.
+    Perelman's proof precedes this record by twenty-three years; the ledger says so, and no priority is claimed.
+
+    NON-NEGOTIABLES. (1) The Seat keeps all five faces. (2) A foreign proof is always a term before the colon.
+    (3) Every cone is pinned; a drift fails the build.
+=================================================================================================================== -/
+namespace FPEW.SEAT
+universe u
+open ZFCBlockHardened FPEW
+
+/-! ## S.1 · One Seat, on the generic row -/
+
+/-- THE SEAT of a row at a configuration: five faces bound as one proposition. Face 1, the value; Face 2, the bit,
+    the transfer from the record; Face 3, the act; Face 4, the formal kind; Face 5, the physical kind. -/
+def SeatAt (r : Row.{u}) (x : r.X) : Prop :=
+  r.Value x ∧ Bit r x ∧ ActAt r x ∧ Formal r x ∧ Physical r x
+
+/-- ONE SEAT: at an admissible configuration the five faces together are the value. -/
+theorem one_seat (r : Row.{u}) (x : r.X) (hx : r.Adm x) : SeatAt r x ↔ r.Value x :=
+  ⟨fun s => s.1, fun v => ⟨v, fun _ => v, ⟨hx, fun _ => v⟩, fun _ => v, ⟨v⟩⟩⟩
+
+/-- EVERY FACE ALONE IS THE WHOLE SEAT: no face is weaker than the conjunction. -/
+theorem every_face_is_the_seat (r : Row.{u}) (x : r.X) (hx : r.Adm x) :
+    (Bit r x ↔ SeatAt r x) ∧ (ActAt r x ↔ SeatAt r x) ∧ (Formal r x ↔ SeatAt r x) ∧ (Physical r x ↔ SeatAt r x) :=
+  have o := one_seat r x hx
+  ⟨⟨fun b => o.mpr (b (r.rec_has x hx)), fun s => s.2.1⟩,
+   ⟨fun a => o.mpr (a.supply (r.rec_has x hx)), fun s => s.2.2.1⟩,
+   ⟨fun f => o.mpr (f (r.rec_has x hx)), fun s => s.2.2.2.1⟩,
+   ⟨fun p => o.mpr p.carries, fun s => s.2.2.2.2⟩⟩
+
+/-! ## S.2 · Every proof and every refutation subsumed -/
+
+/-- EVERY PROOF IS SUBSUMED: a proof of the value at an admissible configuration, past or future, by any method, is a
+    proof of the Seat on all five faces. The term before the colon is the whole of the foreign proof. -/
+theorem every_proof_is_subsumed (r : Row.{u}) (x : r.X) (hx : r.Adm x) (value : r.Value x) : SeatAt r x :=
+  (one_seat r x hx).mpr value
+
+/-- NO ROUTE ESCAPES THE SEAT: whatever premise gives the value gives the Seat, and if the Seat failed the premise
+    would fail with it. This is the gate of Part F, stated on one proposition. -/
+theorem no_route_escapes_the_seat (r : Row.{u}) (x : r.X) (hx : r.Adm x) (Q : Prop) (h : Q → r.Value x) :
+    (Q → SeatAt r x) ∧ (¬ SeatAt r x → ¬ Q) :=
+  ⟨fun q => (one_seat r x hx).mpr (h q), fun hn q => hn ((one_seat r x hx).mpr (h q))⟩
+
+/-- EVERY REFUTATION IS SUBSUMED: a premise that refutes the value refutes the Seat, the bit and the act. Either fate
+    of a row is decided at its Seat. -/
+theorem every_refutation_is_subsumed (r : Row.{u}) (x : r.X) (hx : r.Adm x) (P : Prop) (h : P → ¬ r.Value x) :
+    P → ¬ SeatAt r x ∧ ¬ Bit r x ∧ ¬ ActAt r x :=
+  fun p => ⟨fun s => h p s.1, fun b => h p (b (r.rec_has x hx)), fun a => h p (a.supply (r.rec_has x hx))⟩
+
+/-- THE FORM DOES NOT DECIDE THE SEAT: no premise that every configuration satisfies forces the value; no reading of
+    the record decides it; and the Seat holds at the compliant configuration and fails at its twin of one record. -/
+theorem the_form_does_not_decide_the_seat (r : Row.{u}) :
+    (∀ Q : r.X → Prop, (∀ x, Q x) → ¬ Forces r Q) ∧
+    (∀ D : r.X → Prop, ReadsRecord r D → ¬ ∀ x, r.Adm x → (D x ↔ r.Value x)) ∧
+    (SeatAt r r.compliant ∧ ¬ SeatAt r r.twin ∧ r.Same r.compliant r.twin) :=
+  ⟨exit_shared_closed r, record_decides_nothing r,
+   (one_seat r r.compliant r.adm_c).mpr r.value_c, fun s => r.value_t s.1, r.same_ct⟩
+
+/-! ## S.3 · The Seat on the six rows -/
+
+/-- THE GATE OF A ROW, ON THE SEAT: at every admissible configuration every premise that gives the value gives the
+    Seat. -/
+def SeatGate (r : Row.{u}) : Prop := ∀ x, r.Adm x → ∀ Q : Prop, (Q → r.Value x) → Q → SeatAt r x
+
+theorem the_seat_gate (r : Row.{u}) : SeatGate r := fun x hx Q h => (no_route_escapes_the_seat r x hx Q h).1
+
+/-- THE SEAT ON THE SIX ROWS: Riemann, P ≠ NP, Poincaré, Yang–Mills, Goldbach and Navier–Stokes. -/
+theorem the_seat_on_six_rows :
+    SeatGate RH.row ∧ SeatGate PNP.row ∧ SeatGate PC.row ∧ SeatGate ymB ∧ SeatGate gbB ∧ SeatGate nsB :=
+  ⟨the_seat_gate _, the_seat_gate _, the_seat_gate _, the_seat_gate _, the_seat_gate _, the_seat_gate _⟩
+
+/-! ## S.4 · Where the routes of the record land -/
+
+/-- ALPÖGE LANDS ON THE SEAT: whatever premise derives the Riemann row's value at its compliant configuration gives
+    the Seat there. The archive is one such premise; the seal does not inhabit it. -/
+theorem alpoge_lands_on_the_seat :
+    ∀ Q : Prop, (Q → RH.row.Value RH.row.compliant) → Q → SeatAt RH.row RH.row.compliant :=
+  the_seat_gate RH.row RH.row.compliant RH.row.adm_c
+
+/-- PERELMAN LANDS ON THE SEAT: on every flow, a witness in the shape the carried block types, a functional strictly
+    decreasing off the seat and invariant under the rescaling, gives the Seat of the Poincaré row at that flow. The
+    kernel constructs no such witness on the actual manifolds and checks no step of the proof of 2002 to 2003. -/
+theorem perelman_lands_on_the_seat : ∀ F : PC.Flow, Nonempty (PC.Witness F) → SeatAt PC.row F :=
+  fun F ⟨P⟩ => (one_seat PC.row F trivial).mpr (PC.witness_gives_the_act F P)
+
+/-- THE WITNESS IS STRICTLY INSIDE THE SEAT: the Seat holds on a flow that admits no witness. The proof of 2002 to
+    2003 is one way onto the Seat and not the Seat itself. -/
+theorem the_seat_without_the_witness : SeatAt PC.row PC.soliton ∧ ¬ Nonempty (PC.Witness PC.soliton) :=
+  ⟨(one_seat PC.row PC.soliton trivial).mpr PC.soliton_rests, PC.no_witness_on_the_soliton⟩
+
+/-- THE EXISTENCE HALF STOPS SHORT OF THE SEAT: on the Yang–Mills row a frame on which every theory exists and the
+    Seat fails. -/
+theorem existence_stops_short_of_the_seat : YMClose.ExistsAll ymB.twin ∧ ¬ SeatAt ymB ymB.twin :=
+  ⟨fun _ => ⟨0, rfl⟩, fun s => ymB.value_t s.1⟩
+
+/-- ADOPTION IS THE SEAT: a proposition adopted as equivalent to the value is equivalent to the Seat. A proof by
+    declared axiom delivers the Seat by that axiom and by nothing else. -/
+theorem adoption_is_the_seat (r : Row.{u}) (x : r.X) (hx : r.Adm x) (A : Prop) (h : A ↔ r.Value x) :
+    A ↔ SeatAt r x :=
+  h.trans (one_seat r x hx).symm
+
+/-- A CONDITIONAL REFUTATION LANDS ON THE DENIAL OF THE SEAT: at every host of the Navier–Stokes row, a profile from
+    which blowup follows refutes the formal cargo, and the cargo refutes the profile. The two cannot both stand. -/
+theorem the_profile_and_the_cargo_cannot_both_stand (H : NS.HOST.Host) (Profile : Prop) (h : Profile → ¬ H.Sentence) :
+    ¬ (Profile ∧ NS.SUPPLY.FormalCargo H) :=
+  fun ⟨p, c⟩ => h p ((NS.SUPPLY.formal_iff_sentence H).mp c)
+
+/-! ## S.5 · Two entries of the record (record grade, data compared by `decide`) -/
+
+/-- Perelman's first paper, arXiv math/0211159, first public 11 November 2002. -/
+def perelmanFirstPublic : Nat := 20021111
+
+/-- The Trisduction record of the Poincaré row, Zenodo 23162240, created 5 October 2026. -/
+def poincareRowRecord : Nat := 20261005
+
+/-- The joint statement of the Lean and Mathlib communities certifying Alpöge's archive, 21 November 2026. -/
+def alpogeCertified : Nat := 20261121
+
+/-- THE TWO ENTRIES, CHECKED: Perelman's proof is prior to this record, by twenty-three years, and no priority is
+    claimed over it; the certification of Alpöge's archive follows its release, and both follow the Riemann row's one
+    bit in Lean and its row of record. -/
+theorem the_two_entries :
+    perelmanFirstPublic < poincareRowRecord ∧
+    firstPublic .alpogeRH < alpogeCertified ∧
+    rowRecord .alpogeRH < firstPublic .alpogeRH ∧
+    riemannOneBitInLean < firstPublic .alpogeRH := by
+  decide
+
+/-! ## The binding of the Seat -/
+
+/-- THE SEAT BINDS THE RECORD. One Seat on every row, each face the whole; the gate, the block and both fates stated
+    on it; the Seat on the six rows; and each route of the record landed: a derivation and a witnessed flow on the
+    Seat, the existence half short of it, an adopted axiom equivalent to it, a conditional refutation on its denial.
+    No premise before the colon. -/
+theorem the_seat_binds_the_record :
+    (∀ (r : Row.{0}) (x : r.X), r.Adm x → (SeatAt r x ↔ r.Value x)) ∧
+    (∀ (r : Row.{0}) (x : r.X), r.Adm x → ∀ Q : Prop, (Q → r.Value x) → (Q → SeatAt r x) ∧ (¬ SeatAt r x → ¬ Q)) ∧
+    (∀ (r : Row.{0}) (x : r.X), r.Adm x → ∀ P : Prop, (P → ¬ r.Value x) → P → ¬ SeatAt r x ∧ ¬ Bit r x ∧ ¬ ActAt r x) ∧
+    (SeatGate RH.row ∧ SeatGate PNP.row ∧ SeatGate PC.row ∧ SeatGate ymB ∧ SeatGate gbB ∧ SeatGate nsB) ∧
+    (∀ Q : Prop, (Q → RH.row.Value RH.row.compliant) → Q → SeatAt RH.row RH.row.compliant) ∧
+    (∀ F : PC.Flow, Nonempty (PC.Witness F) → SeatAt PC.row F) ∧
+    (SeatAt PC.row PC.soliton ∧ ¬ Nonempty (PC.Witness PC.soliton)) ∧
+    (YMClose.ExistsAll ymB.twin ∧ ¬ SeatAt ymB ymB.twin) ∧
+    (∀ (H : NS.HOST.Host) (Profile : Prop), (Profile → ¬ H.Sentence) → ¬ (Profile ∧ NS.SUPPLY.FormalCargo H)) ∧
+    (perelmanFirstPublic < poincareRowRecord ∧ firstPublic .alpogeRH < alpogeCertified ∧
+      rowRecord .alpogeRH < firstPublic .alpogeRH ∧ riemannOneBitInLean < firstPublic .alpogeRH) :=
+  ⟨fun r x hx => one_seat r x hx, fun r x hx Q h => no_route_escapes_the_seat r x hx Q h,
+   fun r x hx P h => every_refutation_is_subsumed r x hx P h, the_seat_on_six_rows, alpoge_lands_on_the_seat,
+   perelman_lands_on_the_seat, the_seat_without_the_witness, existence_stops_short_of_the_seat,
+   the_profile_and_the_cargo_cannot_both_stand, the_two_entries⟩
+
+end FPEW.SEAT
+
+/-! ## cones of Part S, pinned -/
+/-- info: 'FPEW.SEAT.one_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.one_seat
+/-- info: 'FPEW.SEAT.every_face_is_the_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.every_face_is_the_seat
+/-- info: 'FPEW.SEAT.every_proof_is_subsumed' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.every_proof_is_subsumed
+/-- info: 'FPEW.SEAT.no_route_escapes_the_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.no_route_escapes_the_seat
+/-- info: 'FPEW.SEAT.every_refutation_is_subsumed' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.every_refutation_is_subsumed
+/-- info: 'FPEW.SEAT.the_form_does_not_decide_the_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.the_form_does_not_decide_the_seat
+/-- info: 'FPEW.SEAT.the_seat_gate' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.the_seat_gate
+/-- info: 'FPEW.SEAT.the_seat_on_six_rows' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.the_seat_on_six_rows
+/-- info: 'FPEW.SEAT.alpoge_lands_on_the_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.alpoge_lands_on_the_seat
+/-- info: 'FPEW.SEAT.perelman_lands_on_the_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.perelman_lands_on_the_seat
+/-- info: 'FPEW.SEAT.the_seat_without_the_witness' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.the_seat_without_the_witness
+/-- info: 'FPEW.SEAT.existence_stops_short_of_the_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.existence_stops_short_of_the_seat
+/-- info: 'FPEW.SEAT.adoption_is_the_seat' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.adoption_is_the_seat
+/-- info: 'FPEW.SEAT.the_profile_and_the_cargo_cannot_both_stand' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.the_profile_and_the_cargo_cannot_both_stand
+/-- info: 'FPEW.SEAT.the_two_entries' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.the_two_entries
+/-- info: 'FPEW.SEAT.the_seat_binds_the_record' does not depend on any axioms -/
+#guard_msgs in #print axioms FPEW.SEAT.the_seat_binds_the_record
