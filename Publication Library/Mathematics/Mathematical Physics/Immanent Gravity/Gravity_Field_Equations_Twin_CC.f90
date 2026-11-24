@@ -12,30 +12,37 @@ program gravity_twin
   real(dp), parameter :: GMsun = 1.32712440018e20_dp, GMearth = 3.986004418e14_dp
   real(dp), parameter :: arcsec = 180.0_dp*3600.0_dp/pi
   integer :: nfail, i, n, hits, bad
-  real(dp) :: defl, a, e, per, adv, pr, grav, vel, x, k, a1, a2
+  real(dp) :: defl, a, e, per, adv, pr, grav, vel, x, k, a1, a2, tt, ss
   integer :: ia, ib, d1
   nfail = 0
   write(*,'(a)') 'A · light at the limb of the Sun: the space part bends as much as the time part'
   defl = 4.0_dp*GMsun/(c*c*6.957e8_dp)*arcsec
   write(*,'(a,f8.4,a,f8.4)') '  full bending ', defl, ' arcsec; Newtonian half ', defl/2.0_dp
-  call check('deflection is 1.751 arcsec, twice the Newtonian value (Dyson, Eddington, Davidson 1920)', &
-             abs(defl - 1.751_dp) < 0.002_dp)
+  ! measured values, not the prediction: 1919 eclipse 1.98 +- 0.12 (Sobral), 1.61 +- 0.30 (Principe), probable errors;
+  ! radio interferometry gamma = 0.9998 +- 0.0004, so the angle is 0.9999 +- 0.0002 of the full value
+  call check('eclipse of 1919 (1.98 +- 0.12, 1.61 +- 0.30) and radio interferometry (0.9999 +- 0.0002 of full) hold it', &
+             abs(defl - 1.98_dp) < 2.0_dp*0.12_dp .and. abs(defl - 1.61_dp) < 2.0_dp*0.30_dp .and. &
+             abs(0.9999_dp*defl - defl) < 2.0_dp*0.0002_dp*defl)
   call check('space reads as time, gamma = 1: Cassini finds gamma - 1 = (2.1 +- 2.3)e-5 (Bertotti, Iess, Tortora 2003)', &
              abs(0.0_dp - 2.1e-5_dp) < 2.0_dp*2.3e-5_dp)
   write(*,'(a)') 'B · the perihelion of Mercury'
   a = 5.7909e10_dp; e = 0.20563_dp; per = 87.969_dp
   adv = 6.0_dp*pi*GMsun/(c*c*a*(1.0_dp - e*e))*arcsec*(36525.0_dp/per)
   write(*,'(a,f8.3,a)') '  advance ', adv, ' arcsec per century'
-  call check('advance is 42.98 arcsec per century (observed 42.98 +- 0.04)', abs(adv - 42.98_dp) < 0.04_dp)
+  call check('advance is 42.98 arcsec per century (observed 42.98 +- 0.04, Will 2014)', abs(adv - 42.98_dp) < 0.04_dp)
   write(*,'(a)') 'C · clocks: one shift moves every clock at a place together'
-  pr = 9.80665_dp*22.5_dp/(c*c)
-  write(*,'(a,es10.3)') '  tower of 22.5 m, fractional shift ', pr
-  call check('Pound and Rebka (1960): 2.46e-15 over 22.5 m', abs(pr - 2.46e-15_dp) < 0.02e-15_dp)
+  pr = 9.80665_dp*22.56_dp/(c*c)   ! the tower of Pound and Rebka: 74 feet, 22.56 m
+  write(*,'(a,es10.3)') '  tower of 22.56 m, fractional shift ', pr
+  call check('measured over computed: 1.05 +- 0.10 (Pound, Rebka 1960) and 0.9990 +- 0.0076 (Pound, Snider 1965)', &
+             abs(1.05_dp*pr - pr) < 2.0_dp*0.10_dp*pr .and. abs(0.9990_dp*pr - pr) < 2.0_dp*0.0076_dp*pr)
   grav = GMearth/(c*c)*(1.0_dp/6.371e6_dp - 1.0_dp/2.6560e7_dp)*86400.0_dp*1.0e6_dp
   vel  = GMearth/(2.0_dp*2.6560e7_dp*c*c)*86400.0_dp*1.0e6_dp
   write(*,'(a,f7.2,a,f6.2,a,f7.2)') '  navigation satellite, microseconds per day: height +', grav, ', speed -', vel, &
        ', net ', grav - vel
-  call check('satellite clocks run 38 microseconds per day fast, as the system corrects', abs(grav - vel - 38.5_dp) < 0.6_dp)
+  ! tolerance 0.15 microseconds: the nominal radii used above, 6371 km and 26560 km, are good to parts in a thousand,
+  ! and the two terms scale as their inverses (Ashby 2003 gives the built-in offset as 4.4647e-10)
+  call check('the offset built into the satellite clocks, 4.4647e-10, is 38.6 microseconds per day (Ashby 2003)', &
+             abs(grav - vel - 4.4647e-10_dp*86400.0e6_dp) < 0.15_dp)
   write(*,'(a)') 'D · what gravity reads: rho + 3p in four dimensions'
   call check('Planck budget: q0 = Omega_m/2 - Omega_Lambda = -0.527, the vacuum repels', &
              abs(0.5_dp*0.3153_dp - 0.6847_dp + 0.527_dp) < 0.001_dp)
@@ -80,6 +87,18 @@ program gravity_twin
      if (abs(a2 - a1) > 1.0e-12_dp*a1) bad = bad + 1
   end do
   call check('100000 rescalings over forty decades leave the bending unchanged: only the ratio is read', bad == 0)
+  write(*,'(a)') 'I · the exact solution outside a body: gamma = 1 and beta = 1'
+  ! time part ((1-x)/(1+x))**2 against 1 - 4x + 8x**2, space part (1+x)**4 against 1 + 4x, with x = GM/(2 c**2 r);
+  ! the remainders are of third and of second order, bounded here by 20 x**3 and 7 x**2
+  bad = 0
+  do i = 1, 1000
+     x = 1.0e-5_dp*real(i, dp)
+     tt = ((1.0_dp - x)/(1.0_dp + x))**2
+     ss = (1.0_dp + x)**4
+     if (abs(tt - (1.0_dp - 4.0_dp*x + 8.0_dp*x*x)) > 20.0_dp*x**3) bad = bad + 1
+     if (abs(ss - (1.0_dp + 4.0_dp*x)) > 7.0_dp*x*x) bad = bad + 1
+  end do
+  call check('a thousand radii: the time part is 1 - 2U + 2U**2 and the space part 1 + 2U, to the order stated', bad == 0)
   write(*,'(a,i2)') 'failures: ', nfail
 contains
   integer function pol(m)
