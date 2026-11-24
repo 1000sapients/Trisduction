@@ -33,11 +33,11 @@ disclosed in its statement, never hidden inside a definition.
 
 ## Authorship
 
-The framework, the arguments, and the proof designs are by Mohammad F.
-Islam, developed from first principles. AI systems were used as adversarial
-reviewers — free to argue against every claim and to stress-test it — and
-as scribes and compilers, entering and checking the formal text under his
-direction. The commit history and the dated deposits are the record of that
+The gate, the logic, and the arguments are by Mohammad F. Islam, designed
+from first principles. The AI systems were given full freedom to argue
+against him and to stress-test every claim; what survived, they then
+entered and compiled as scribes, following his hand-given logic at the
+keyboard. The commit history and the dated deposits are the record of that
 process.
 
 ## About the author
