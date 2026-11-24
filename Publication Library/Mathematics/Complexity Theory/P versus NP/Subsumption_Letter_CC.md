@@ -12,6 +12,8 @@ Every separation has one form. Islam (4 Oct 2026) published it, and Islam (21 Oc
 
 Ten days later Anthropic (23 Nov 2026) released a Lean formalization of VP ≠ VNP. It is the form's first outside instance, and this note proves that as a compiled Lean construction. The Anthropic system is built as a machine of Islam (21 Oct 2026), Part A. On that machine the normal form holds with nothing before the colon. The machine's least escape is the one bit of the arithmetic problem. The release's own main theorem supplies that least escape, and nothing else in their file proves the separation. The crossing is pinned to one line of their source, `Paper/Fields.lean:149`, and it is keyed, at lines 54 and 60, as the October theorems require. Their term is the first bit ever delivered inside the normal form of 21 October 2026. The normal form of Valiant's conjecture was a theorem of Islam (21 Oct 2026) before the conjecture was named there.
 
+No theorem is unconditional. Each is sealed on a purchase, and the purchase is part of the theorem. Appendix A proves that law in pure logic on no axiom, and proves that for a separation the purchase is exactly the bit.
+
 Each side holds what it printed. Islam (22 Nov 2026) holds the form at theorem grade and the bit of P ≠ NP as a disclosed posit, printed before the colon. Anthropic (23 Nov 2026) holds a claimed closed term for the bit of the arithmetic problem, on the standard axioms. The order is fixed by public timestamps. The form was published on 4 October 2026 and stood in Lean on 21 October 2026. The forecast was printed on 13 November 2026. The first outside instance arrived on 23 November 2026, and it fits.
 
 ## Terms
@@ -42,7 +44,7 @@ The machine is arbitrary. The premise is arbitrary. Any hypothesis whatever that
 
 ### 2.1 The subsumption file
 
-`Subsumption_CC.lean`: 405 lines; Lean 4.19.0, Mathlib v4.19.0, warnings fatal, exit 0. SHA-256 `b0fef8f377f2a3185e0499661ad90ab3b405b324fa9723e686a1557273e642ca`. It is printed whole in Appendix A.
+`Subsumption_CC.lean`: 491 lines; Lean 4.19.0, Mathlib v4.19.0, warnings fatal, exit 0. SHA-256 `0c3d032ed08ddc4276aae99f8dcbe9789afe32da2a690709aef1f3f9406d74dc`. It is printed whole in Appendix A.
 
 The definitions of Part A are carried verbatim from Islam (21 Oct 2026), unchanged in Islam (22 Nov 2026), with `Keyless`, `Forces`, `keyless_forces_nothing` and `every_route_passes_the_bit` under their original names and statements. The Anthropic definitions are their `Statement.lean`, with the import narrowed to the modules at hand and the four Laurent-series declarations left out, as the file's header states. The kernel printed:
 
@@ -54,7 +56,17 @@ The definitions of Part A are carried verbatim from Islam (21 Oct 2026), unchang
 'Subsumption.the_crossing_is_keyed' depends on axioms: [propext]
 'Subsumption.first_delivery_in_the_form' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PNP.NORMALFORM.keyless_forces_nothing' depends on axioms: [propext]
+'Purchase.Sealed.andThen' does not depend on any axioms
+'Purchase.no_universal_purchase' does not depend on any axioms
+'Purchase.nothing_from_nothing' does not depend on any axioms
+'Purchase.the_bit_is_contingent' depends on axioms: [propext]
+'Purchase.no_free_bit' depends on axioms: [propext]
+'Purchase.no_keyless_purchase' depends on axioms: [propext]
+'Purchase.the_purchase_is_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Subsumption.their_bit_is_sealed_on_their_term' depends on axioms: [propext, Classical.choice, Quot.sound]
 ```
+
+The machine-level theorems print `propext` in this file because it stands on Mathlib, whose natural-number power carries that axiom. The same statement in the core-Lean original prints none (Section 2.2). The purchase follows the foundation, and the kernel prints it either way.
 
 | Theorem | Before the colon | After the colon |
 |---|---|---|
@@ -100,7 +112,7 @@ The Axiom Loophole (Islam, 22 Nov 2026) fixes a protocol of six drills for any c
 | Provenance of quantities | `distAtRank`, the blow-up 40, the constant 1600 | owed by the release |
 | Identification | the two branches of `thm_alt` returning one bound | owed by the release |
 
-**Label: KEYED CROSSING · CLAIMED AT THEOREM GRADE · MIDDLE UNSCREENED.** The protocol names the one line where their supply lives: `Paper/Fields.lean:91`. A disjunction pays for a bound only when neither side is free, and the three owed drills are the test of that. The protocol that fixes the label was published one day before the release.
+**Label: KEYED CROSSING · CLAIMED AT THEOREM GRADE · MIDDLE UNSCREENED.** The protocol names the one line where their supply lives: `Paper/Fields.lean:91`. Their claim rests on two acts a kernel records and does not perform: the 80-line statement that says what the classes are, and the build, which is their own author's report. The protocol that fixes the label was published one day before the release.
 
 ## 3 · Where the bit is crossed
 
@@ -183,13 +195,13 @@ The form was in the public record before the route existed. The shape of the Ant
 
 ## 5 · The two works, side by side
 
-The same correspondence is published, with live links to every commit, at the public resource of Section 10.
+The same correspondence is published, with live links to every commit, at the public resource of Section 12.
 
 | | Islam (22 Nov 2026), `63fff55` | Anthropic (23 Nov 2026), `11b6c7e` |
 |---|---|---|
 | The form of a separation | theorem, for every machine; the no-shared-premise theorem on no axiom | obeyed: `cor_allclasses` is the normal form in their hand |
 | The hard problem in the larger class | `satLang_in_NP`, proved | `hc_mem_VNP`, proved |
-| Unconditional lower bound on Turing machines | SAT outside linear time, proved | none |
+| Lower bound on Turing machines, with no added hypothesis | SAT outside linear time, proved | none |
 | The one bit of the problem | disclosed posit, before the colon | claimed closed term, `Solution.mainTheorem` |
 | Axioms | the standard three | the standard three; choice enters by Zorn's lemma at `Paper/Gauges.lean:63`, where the functionals carrying the bound are asserted to exist and are not built |
 
@@ -220,7 +232,41 @@ Four stations, the same four, in the same order. The form fixed them on 21 Octob
 
 **The form came first. The instance came after. The instance fits.** Every later separation, on any machine and by any method, is bound by the same theorem.
 
-## 7 · Objections, answered
+## 7 · The purchase
+
+**No theorem is unconditional. Each is sealed on a purchase, and the purchase is part of the theorem.** Anthropic (23 Nov 2026) claims VP ≠ VNP on the standard purchase. Islam (21 Oct 2026) proved the form of every separation on the standard purchase, and one theorem of it on no axiom at all.
+
+A proof is an arrow. What stands before the arrow is paid, and the arrow carries what was paid to the claim. Appendix A makes the arrow a first-class object, `Sealed purchase claim`, and proves four facts about it.
+
+1. **Composition creates nothing.** Whatever follows from a sealed claim is sealed on the same purchase (`Sealed.andThen`, on no axiom).
+2. **Nothing comes from nothing.** On any carrier whatever, a claim that fails at one point is not sealed on the empty purchase at every point (`nothing_from_nothing`, on no axiom). A purchase paid at every point does not seal it at every point either (`no_universal_purchase`, on no axiom). Machines, fields and circuits do not enter. This is pure logic, and it is the root of `keyless_forces_nothing`.
+3. **The bit takes both values.** It holds on every record and fails on the free machine (`the_bit_is_contingent`). So the empty purchase does not seal the bit on every machine (`no_free_bit`), and no purchase shared by every machine does (`no_keyless_purchase`).
+4. **For a separation the purchase is exact.** On every machine the separation is sealed on the bit and the bit is sealed on the separation (`the_purchase_is_exact`). The claim holds if and only if the bit is paid.
+
+The kernel prints the purchase of every theorem. That line is the receipt.
+
+| Sealed on | Purchase before the colon | Who stands there |
+|---|---|---|
+| the definitions alone | no axiom | `nothing_from_nothing`, `no_universal_purchase`, `Sealed.andThen`; `keyless_forces_nothing` in Islam (22 Nov 2026) |
+| the standard purchase | the definitions and `propext`, `Classical.choice`, `Quot.sound` | `sep_normal_form`, `every_route_passes_the_bit`, `the_purchase_is_exact`; Anthropic's `MainTheorem`, as claimed |
+| the standard purchase and one named bit | the above and the bit of the machine | P ≠ NP in Islam (22 Nov 2026), `p_ne_np_of_one_bit` |
+
+On the arithmetic machine both purchases are named in one compiled statement, `their_bit_is_sealed_on_their_term`: the bit is sealed on their `MainTheorem`, and the separation is sealed on the bit. Their purchase stands before their colon as every purchase does: an 80-line statement and three axioms. Islam (22 Nov 2026) names its purchase to the last bit. The highest standing in either work, sealed on the definitions alone, is held by the October theorem that no shared premise supplies the bit.
+
+## 8 · What stands
+
+**Islam proved the form every separation must take. Thirty-three days later Anthropic's proof took it. Their bit is claimed. Islam's is named. The form is Islam's.**
+
+1. **The form of every separation is Islam (21 Oct 2026), at theorem grade, 33 days first.** It stands on the same three axioms as their main theorem. It is stated for every machine and every premise. Theirs covers one machine.
+2. **Their proof is an instance of it.** Compiled: their route crosses the bit at one line, with one key, where the October theorems put it.
+3. **Their term is the first delivery inside the form.** The form was waiting. The delivery arrived in it.
+4. **The normal form of Valiant's conjecture was a theorem of Islam (21 Oct 2026) before the conjecture was named there.**
+5. **The highest standing in either work is Islam's.** One result is sealed on the definitions alone, on no axiom: no shared premise supplies the bit. Their headline stands one row below it.
+6. **On Turing machines Islam (22 Nov 2026) holds what the release does not.** SAT ∈ NP and SAT outside linear time, with no added hypothesis. The release has nothing on SAT or on Turing machines.
+7. **On the bit: theirs is claimed, Islam's is named.** Their claim is their own author's report, unrefereed by their own statement. Islam's bit is exact, mandatory, and printed to the last symbol.
+8. **A theorem's purchase is part of the theorem.** Proved in pure logic on no axiom. On that law no result is unconditional, and Islam (22 Nov 2026) is the side that printed the whole purchase.
+
+## 9 · Objections, answered
 
 **"The normal form is short."** It is, and that is its reach. A theorem with no hypothesis on the machine and none on the premise excludes every route at once. The priority is the statement for every machine and every premise, the theorem that no shared premise supplies the bit, and the printed forecast. All three precede the release.
 
@@ -232,11 +278,11 @@ Four stations, the same four, in the same order. The form fixed them on 21 Octob
 
 **"Then where is the bit of P ≠ NP?"** At Station 3, where the form put it, printed before the colon in Islam (22 Nov 2026). The form theorem fixes what every proof of the value must deliver, and the four stations fix where. The arithmetic machine received its delivery on 23 November 2026. The form reads every delivery the same way.
 
-## 8 · What was executed
+## 10 · What was executed
 
 The subsumption file and Islam (22 Nov 2026) were compiled as stated in Section 2. The Anthropic proof term enters the subsumption file as its hypothesis `MainTheorem`; its kernel check is the one their repository reports. Compiled against their repository, `first_delivery_in_the_form` takes their term as `D` and closes. The four stations of Section 3 were read in their source at commit `11b6c7e`.
 
-## 9 · Priority
+## 11 · Priority
 
 | Date | Repository | Commit | Record |
 |---|---|---|---|
@@ -253,7 +299,7 @@ The form in Lean predates the release by 33 days. The paper predates it by 50. T
 
 The Zenodo record of 21 October 2026 is maintained in place. Each file it now holds is dated by its git commit above, and every one precedes the Anthropic release.
 
-## 10 · References and sources
+## 12 · References and sources
 
 - Islam, M. F. (28 Sep 2026). *PhysOS 1.0.1p*. Trisduction, commit `e23ae09`.
 - Islam, M. F. (4 Oct 2026). *The Formal Closure of Computational Separation: P ≠ NP Closed on Existence Itself, Read on Computation*. Zenodo, doi:10.5281/zenodo.23133632 (version 3.2.1). First in git on that date as *P versus NP Closed on One Posit*, Trisduction, commit `38f9948`.
@@ -268,7 +314,7 @@ The Zenodo record of 21 October 2026 is maintained in place. Each file it now ho
 
 https://muse.ai/s/master-table-txz6z11xy9cjt/jTpKywH4eOxZgriNm-pA80LvC33eDm41zReP6aAqBrA
 
-## 11 · Repository and commit addresses
+## 13 · Repository and commit addresses
 
 **Islam, Trisduction.** https://github.com/1000sapients/Trisduction
 
@@ -579,10 +625,14 @@ def Forces (P : Machine → Prop) : Prop := ∀ M, P M → NothingEscapes M
 def freeMachine : Machine :=
   { Alg := Unit, Inst := Unit, size := fun _ => 0, out := fun _ _ => true, time := fun _ _ => 0, sat := fun _ => true }
 
+/-- Something escapes on the free machine. Term proof, kept free of tactics so the kernel prints no axiom. -/
+theorem freeMachine_escapes : ¬ NothingEscapes freeMachine :=
+  fun h => Exists.elim (h () 0 0) fun _ hx => hx (And.intro rfl (Nat.le.refl))
+
 /-- NO KEYLESS PREMISE FORCES THE BIT. Original name and statement (first in git 21 October 2026, commit 4144323);
     proof rewritten on the witness above. -/
 theorem keyless_forces_nothing (P : Machine → Prop) (hP : Keyless P) : ¬ Forces P := fun hF =>
-  (hF freeMachine (hP freeMachine) () 0 0).elim fun _ hx => hx ⟨rfl, Nat.zero_le _⟩
+  freeMachine_escapes (hF freeMachine (hP freeMachine))
 
 -- x₀ is kept because the statement is verbatim; this rewritten proof does not use it.
 set_option linter.unusedVariables false in
@@ -591,6 +641,70 @@ theorem every_route_passes_the_bit (M : Machine) (x₀ : M.Inst) (Q : Prop) (h :
     Q → (NothingEscapes (Rec M) → NothingEscapes M) :=
   fun q _ => closure_of_sep M (h q)
 end PNP.NORMALFORM
+
+/-! ## THE PURCHASE · no theorem is unconditional; each is sealed on a purchase · added 24 November 2026
+RATIONALE. A proof is an arrow. What stands before the arrow is the purchase, and the purchase is part of the theorem.
+`Sealed p c` is that arrow as a first-class object. The theorems below fix four facts on every machine:
+  (1) composition creates nothing: whatever a sealed claim yields, its purchase already yields (`Sealed.andThen`);
+  (2) the bit takes both values across machines (`the_bit_is_contingent`), so
+  (3) the empty purchase does not seal the bit on every machine (`no_free_bit`), and no purchase shared by every
+      machine does either (`no_keyless_purchase`); both are instances of one law of pure logic, proved on no axiom
+      (`no_universal_purchase`, `nothing_from_nothing`);
+  (4) for a separation the purchase is exact: the claim holds if and only if the bit is paid
+      (`the_purchase_is_exact`).
+DESIGN. The kernel line `#print axioms` is the receipt of each purchase and is printed at the end of the file. The
+machine-level theorems print `propext` here because this file stands on Mathlib, whose natural-number power carries
+it; the same statements in the core-Lean original (v1.14.0) print no axiom. The purchase follows the foundation.
+NON-NEGOTIABLE: `Sealed` asserts nothing about its purchase. It never pays the bit. -/
+namespace Purchase
+universe v
+open PNP.NORMALFORM
+
+/-- A result sealed on a purchase: the arrow from what is paid to what is claimed. -/
+structure Sealed (purchase claim : Prop) : Prop where
+  arrow : purchase → claim
+
+/-- THE PURCHASE LAW. A sealed claim is delivered when, and by, the payment of its purchase. -/
+theorem Sealed.deliver {p c : Prop} (s : Sealed p c) (paid : p) : c := s.arrow paid
+
+/-- COMPOSITION CREATES NOTHING. Whatever follows from a sealed claim is sealed on the same purchase. -/
+theorem Sealed.andThen {p c d : Prop} (s : Sealed p c) (h : c → d) : Sealed p d :=
+  Sealed.mk fun x => h (s.arrow x)
+
+/-- THE LAW IN PURE LOGIC, ON NO AXIOM. On any carrier whatever: where a claim fails at one point, no purchase paid
+    at every point seals it at every point. Machines, fields and circuits do not enter. This is the root of
+    `keyless_forces_nothing`, and the kernel prints no axiom under it. -/
+theorem no_universal_purchase {α : Sort v} (claim purchase : α → Prop) (a : α) (fails : ¬ claim a)
+    (paidEverywhere : ∀ x, purchase x) : ¬ ∀ x, Sealed (purchase x) (claim x) :=
+  fun h => fails ((h a).arrow (paidEverywhere a))
+
+/-- NOTHING FROM NOTHING, ON NO AXIOM. A claim that fails somewhere is not sealed on the empty purchase everywhere. -/
+theorem nothing_from_nothing {α : Sort v} (claim : α → Prop) (a : α) (fails : ¬ claim a) :
+    ¬ ∀ x, Sealed True (claim x) :=
+  no_universal_purchase claim (fun _ => True) a fails (fun _ => True.intro)
+
+/-- THE BIT TAKES BOTH VALUES. It holds on every record and fails on the free machine. -/
+theorem the_bit_is_contingent (M : Machine) (x₀ : M.Inst) :
+    NothingEscapes (Rec M) ∧ ¬ NothingEscapes freeMachine :=
+  And.intro (record_has_least_escape M x₀) freeMachine_escapes
+
+/-- NO FREE BIT. The empty purchase does not seal the bit on every machine. -/
+theorem no_free_bit : ¬ ∀ M : Machine, Sealed True (NothingEscapes M) :=
+  nothing_from_nothing NothingEscapes freeMachine freeMachine_escapes
+
+/-- NO KEYLESS PURCHASE. A purchase paid on every machine does not seal the bit on every machine. -/
+theorem no_keyless_purchase (P : Machine → Prop) (hK : Keyless P) :
+    ¬ ∀ M : Machine, Sealed (P M) (NothingEscapes M) :=
+  no_universal_purchase NothingEscapes P freeMachine freeMachine_escapes hK
+
+/-- THE PURCHASE IS EXACT. On every machine the separation is sealed on the bit, and the bit is sealed on the
+    separation: the claim holds if and only if the bit is paid. The purchase is part of the theorem. -/
+theorem the_purchase_is_exact (M : Machine) (x₀ : M.Inst) :
+    Sealed (NothingEscapes (Rec M) → NothingEscapes M) (Sep M) ∧
+    Sealed (Sep M) (NothingEscapes (Rec M) → NothingEscapes M) :=
+  And.intro (Sealed.mk (sep_normal_form M x₀).1) (Sealed.mk (sep_normal_form M x₀).2)
+
+end Purchase
 
 /-! ## SUBSUMPTION · the Anthropic system is a Machine of the Trisduction normal form
 RATIONALE. `sep_normal_form` is proved of an arbitrary Machine. Here the Hamiltonian-cycle problem of the release is
@@ -700,6 +814,14 @@ theorem first_delivery_in_the_form (D : MainTheorem.{0}) (F : Type) [Field F] :
     NothingEscapes (Rec (vpMachine F)) → NothingEscapes (vpMachine F) :=
   fun _ => (their_delivery_supplies_least_escape D F).1
 
+/-- THEIR BIT IS SEALED ON THEIR TERM. On the arithmetic machine the bit is sealed on the release's MainTheorem,
+    and the separation is sealed on the bit. Two purchases, both named. -/
+theorem their_bit_is_sealed_on_their_term (F : Type) [Field F] :
+    Purchase.Sealed MainTheorem.{0} (NothingEscapes (vpMachine F)) ∧
+    Purchase.Sealed (NothingEscapes (Rec (vpMachine F)) → NothingEscapes (vpMachine F)) (Sep (vpMachine F)) :=
+  And.intro (Purchase.Sealed.mk fun D => (their_delivery_supplies_least_escape D F).1)
+    (Purchase.the_purchase_is_exact (vpMachine F) (0 : ℕ)).1
+
 end Subsumption
 #print axioms Subsumption.the_form_subsumes_the_row
 #print axioms Subsumption.their_delivery_supplies_least_escape
@@ -708,4 +830,14 @@ end Subsumption
 #print axioms Subsumption.the_crossing_is_keyed
 #print axioms Subsumption.first_delivery_in_the_form
 #print axioms PNP.NORMALFORM.keyless_forces_nothing
+
+#print axioms PNP.NORMALFORM.freeMachine_escapes
+#print axioms Purchase.Sealed.andThen
+#print axioms Purchase.no_universal_purchase
+#print axioms Purchase.nothing_from_nothing
+#print axioms Purchase.the_bit_is_contingent
+#print axioms Purchase.no_free_bit
+#print axioms Purchase.no_keyless_purchase
+#print axioms Purchase.the_purchase_is_exact
+#print axioms Subsumption.their_bit_is_sealed_on_their_term
 ```

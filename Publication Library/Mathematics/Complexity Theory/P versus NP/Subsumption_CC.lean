@@ -274,10 +274,14 @@ def Forces (P : Machine → Prop) : Prop := ∀ M, P M → NothingEscapes M
 def freeMachine : Machine :=
   { Alg := Unit, Inst := Unit, size := fun _ => 0, out := fun _ _ => true, time := fun _ _ => 0, sat := fun _ => true }
 
+/-- Something escapes on the free machine. Term proof, kept free of tactics so the kernel prints no axiom. -/
+theorem freeMachine_escapes : ¬ NothingEscapes freeMachine :=
+  fun h => Exists.elim (h () 0 0) fun _ hx => hx (And.intro rfl (Nat.le.refl))
+
 /-- NO KEYLESS PREMISE FORCES THE BIT. Original name and statement (first in git 21 October 2026, commit 4144323);
     proof rewritten on the witness above. -/
 theorem keyless_forces_nothing (P : Machine → Prop) (hP : Keyless P) : ¬ Forces P := fun hF =>
-  (hF freeMachine (hP freeMachine) () 0 0).elim fun _ hx => hx ⟨rfl, Nat.zero_le _⟩
+  freeMachine_escapes (hF freeMachine (hP freeMachine))
 
 -- x₀ is kept because the statement is verbatim; this rewritten proof does not use it.
 set_option linter.unusedVariables false in
@@ -286,6 +290,70 @@ theorem every_route_passes_the_bit (M : Machine) (x₀ : M.Inst) (Q : Prop) (h :
     Q → (NothingEscapes (Rec M) → NothingEscapes M) :=
   fun q _ => closure_of_sep M (h q)
 end PNP.NORMALFORM
+
+/-! ## THE PURCHASE · no theorem is unconditional; each is sealed on a purchase · added 24 November 2026
+RATIONALE. A proof is an arrow. What stands before the arrow is the purchase, and the purchase is part of the theorem.
+`Sealed p c` is that arrow as a first-class object. The theorems below fix four facts on every machine:
+  (1) composition creates nothing: whatever a sealed claim yields, its purchase already yields (`Sealed.andThen`);
+  (2) the bit takes both values across machines (`the_bit_is_contingent`), so
+  (3) the empty purchase does not seal the bit on every machine (`no_free_bit`), and no purchase shared by every
+      machine does either (`no_keyless_purchase`); both are instances of one law of pure logic, proved on no axiom
+      (`no_universal_purchase`, `nothing_from_nothing`);
+  (4) for a separation the purchase is exact: the claim holds if and only if the bit is paid
+      (`the_purchase_is_exact`).
+DESIGN. The kernel line `#print axioms` is the receipt of each purchase and is printed at the end of the file. The
+machine-level theorems print `propext` here because this file stands on Mathlib, whose natural-number power carries
+it; the same statements in the core-Lean original (v1.14.0) print no axiom. The purchase follows the foundation.
+NON-NEGOTIABLE: `Sealed` asserts nothing about its purchase. It never pays the bit. -/
+namespace Purchase
+universe v
+open PNP.NORMALFORM
+
+/-- A result sealed on a purchase: the arrow from what is paid to what is claimed. -/
+structure Sealed (purchase claim : Prop) : Prop where
+  arrow : purchase → claim
+
+/-- THE PURCHASE LAW. A sealed claim is delivered when, and by, the payment of its purchase. -/
+theorem Sealed.deliver {p c : Prop} (s : Sealed p c) (paid : p) : c := s.arrow paid
+
+/-- COMPOSITION CREATES NOTHING. Whatever follows from a sealed claim is sealed on the same purchase. -/
+theorem Sealed.andThen {p c d : Prop} (s : Sealed p c) (h : c → d) : Sealed p d :=
+  Sealed.mk fun x => h (s.arrow x)
+
+/-- THE LAW IN PURE LOGIC, ON NO AXIOM. On any carrier whatever: where a claim fails at one point, no purchase paid
+    at every point seals it at every point. Machines, fields and circuits do not enter. This is the root of
+    `keyless_forces_nothing`, and the kernel prints no axiom under it. -/
+theorem no_universal_purchase {α : Sort v} (claim purchase : α → Prop) (a : α) (fails : ¬ claim a)
+    (paidEverywhere : ∀ x, purchase x) : ¬ ∀ x, Sealed (purchase x) (claim x) :=
+  fun h => fails ((h a).arrow (paidEverywhere a))
+
+/-- NOTHING FROM NOTHING, ON NO AXIOM. A claim that fails somewhere is not sealed on the empty purchase everywhere. -/
+theorem nothing_from_nothing {α : Sort v} (claim : α → Prop) (a : α) (fails : ¬ claim a) :
+    ¬ ∀ x, Sealed True (claim x) :=
+  no_universal_purchase claim (fun _ => True) a fails (fun _ => True.intro)
+
+/-- THE BIT TAKES BOTH VALUES. It holds on every record and fails on the free machine. -/
+theorem the_bit_is_contingent (M : Machine) (x₀ : M.Inst) :
+    NothingEscapes (Rec M) ∧ ¬ NothingEscapes freeMachine :=
+  And.intro (record_has_least_escape M x₀) freeMachine_escapes
+
+/-- NO FREE BIT. The empty purchase does not seal the bit on every machine. -/
+theorem no_free_bit : ¬ ∀ M : Machine, Sealed True (NothingEscapes M) :=
+  nothing_from_nothing NothingEscapes freeMachine freeMachine_escapes
+
+/-- NO KEYLESS PURCHASE. A purchase paid on every machine does not seal the bit on every machine. -/
+theorem no_keyless_purchase (P : Machine → Prop) (hK : Keyless P) :
+    ¬ ∀ M : Machine, Sealed (P M) (NothingEscapes M) :=
+  no_universal_purchase NothingEscapes P freeMachine freeMachine_escapes hK
+
+/-- THE PURCHASE IS EXACT. On every machine the separation is sealed on the bit, and the bit is sealed on the
+    separation: the claim holds if and only if the bit is paid. The purchase is part of the theorem. -/
+theorem the_purchase_is_exact (M : Machine) (x₀ : M.Inst) :
+    Sealed (NothingEscapes (Rec M) → NothingEscapes M) (Sep M) ∧
+    Sealed (Sep M) (NothingEscapes (Rec M) → NothingEscapes M) :=
+  And.intro (Sealed.mk (sep_normal_form M x₀).1) (Sealed.mk (sep_normal_form M x₀).2)
+
+end Purchase
 
 /-! ## SUBSUMPTION · the Anthropic system is a Machine of the Trisduction normal form
 RATIONALE. `sep_normal_form` is proved of an arbitrary Machine. Here the Hamiltonian-cycle problem of the release is
@@ -395,6 +463,14 @@ theorem first_delivery_in_the_form (D : MainTheorem.{0}) (F : Type) [Field F] :
     NothingEscapes (Rec (vpMachine F)) → NothingEscapes (vpMachine F) :=
   fun _ => (their_delivery_supplies_least_escape D F).1
 
+/-- THEIR BIT IS SEALED ON THEIR TERM. On the arithmetic machine the bit is sealed on the release's MainTheorem,
+    and the separation is sealed on the bit. Two purchases, both named. -/
+theorem their_bit_is_sealed_on_their_term (F : Type) [Field F] :
+    Purchase.Sealed MainTheorem.{0} (NothingEscapes (vpMachine F)) ∧
+    Purchase.Sealed (NothingEscapes (Rec (vpMachine F)) → NothingEscapes (vpMachine F)) (Sep (vpMachine F)) :=
+  And.intro (Purchase.Sealed.mk fun D => (their_delivery_supplies_least_escape D F).1)
+    (Purchase.the_purchase_is_exact (vpMachine F) (0 : ℕ)).1
+
 end Subsumption
 #print axioms Subsumption.the_form_subsumes_the_row
 #print axioms Subsumption.their_delivery_supplies_least_escape
@@ -403,3 +479,13 @@ end Subsumption
 #print axioms Subsumption.the_crossing_is_keyed
 #print axioms Subsumption.first_delivery_in_the_form
 #print axioms PNP.NORMALFORM.keyless_forces_nothing
+
+#print axioms PNP.NORMALFORM.freeMachine_escapes
+#print axioms Purchase.Sealed.andThen
+#print axioms Purchase.no_universal_purchase
+#print axioms Purchase.nothing_from_nothing
+#print axioms Purchase.the_bit_is_contingent
+#print axioms Purchase.no_free_bit
+#print axioms Purchase.no_keyless_purchase
+#print axioms Purchase.the_purchase_is_exact
+#print axioms Subsumption.their_bit_is_sealed_on_their_term
