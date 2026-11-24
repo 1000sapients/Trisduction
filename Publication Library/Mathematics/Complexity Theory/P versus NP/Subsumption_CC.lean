@@ -84,9 +84,9 @@ def Separation : Prop := ∀ (F : Type u) [Field F], VP F ⊂ VNP F
 end Statement
 
 
-/-! ## CONVERSION · the one-bit architecture carried onto the VP / VNP row
+/-! ## CONVERSION · the one-bit architecture carried onto the VP / VNP problem
 RATIONALE. The definitions above are the release's own (Statement.lean), unedited apart from the narrowed import and
-the four omitted Laurent-series declarations. This part states the bit of the Hamiltonian-cycle and permanent rows in
+the four omitted Laurent-series declarations. This part states the bit of the Hamiltonian-cycle and permanent problems in
 those words, proves the reduction of the HC route to the bit exactly, and reads their MainTheorem through it.
 DESIGN. `TheBitHC F`: every polynomial bound n^a + a on the circuit size of hc is beaten at some m. `hc_route_iff_bit`:
 the HC family is outside VP iff the bit holds (the reverse spends only form facts: degree, variable count, monotonicity).
@@ -134,10 +134,10 @@ theorem bounds (n a : ℕ) :
     have h4 : n ^ a ≤ n ^ a * (n * n) := Nat.le_mul_of_pos_right _ (Nat.mul_pos hn hn)
     rw [e]; exact ⟨by omega, by omega, by omega⟩
 
-/-- THE BIT of the Hamiltonian-cycle row over F: every polynomial circuit bound is beaten somewhere. -/
+/-- THE BIT of the Hamiltonian-cycle problem over F: every polynomial circuit bound is beaten somewhere. -/
 def TheBitHC (F : Type u) [Field F] : Prop := ∀ a : ℕ, ∃ m : ℕ, ¬ Computes (hc F m) (m ^ a + a)
 
-/-- THE BIT of the permanent row over F. Stated for every field; it is delivered only where 2 ≠ 0. -/
+/-- THE BIT of the permanent problem over F. Stated for every field; it is delivered only where 2 ≠ 0. -/
 def TheBitPerm (F : Type u) [Field F] : Prop := ∀ a : ℕ, ∃ m : ℕ, ¬ Computes (perm F m) (m ^ a + a)
 
 /-- The Hamiltonian cycle polynomials as a family of the release's own type. -/
@@ -212,8 +212,8 @@ theorem beaten {P : ℕ → ℕ → Prop} (c : ℝ) (hc0 : 0 < c) (m₀ : ℕ)
     rw [← hcast]; exact lt_of_le_of_lt hlow hB
   exact absurd (by exact_mod_cast this) (not_lt.mpr hnat)
 
-/-- THEIR DELIVERY, READ THROUGH THE GATE: the release's MainTheorem constructs the bit of the Hamiltonian-cycle row
-    over every field, and the bit of the permanent row over every field in which 2 ≠ 0. -/
+/-- THEIR DELIVERY, READ THROUGH THE FORM: the release's MainTheorem constructs the bit of the Hamiltonian-cycle problem
+    over every field, and the bit of the permanent problem over every field in which 2 ≠ 0. -/
 theorem delivery_inhabits_the_bit (D : MainTheorem.{u}) :
     (∀ (F : Type u) [Field F], TheBitHC F) ∧ (∀ (F : Type u) [Field F], (2 : F) ≠ 0 → TheBitPerm F) := by
   obtain ⟨c, hc0, h⟩ := D
@@ -229,10 +229,10 @@ theorem delivery_inhabits_the_bit (D : MainTheorem.{u}) :
 
 end Conversion
 
-/-! ## PART A OF THE TRISDUCTION P ≠ NP MASTER, CARRIED
+/-! ## PART A OF ISLAM (21 OCT 2026), CARRIED
 The eight definitions below are verbatim from `PNP_Normal_Form_Paper_v1_14_0_CC.lean` (Part A, namespace
 PNP.NORMALFORM; first in git as PNP_Normal_Form_CC.lean, commit 4144323, 21 October 2026). The three theorems carry
-the master's names and statements; their proofs are rewritten here because the master is core Lean and this file
+the original names and statements; their proofs are rewritten here because the original is core Lean and this file
 is on Mathlib. NON-NEGOTIABLE: no definition is altered. -/
 namespace PNP.NORMALFORM
 structure Machine where
@@ -260,21 +260,42 @@ theorem closure_of_sep (M : Machine) (h : Sep M) : NothingEscapes M :=
   fun A c k => by
     by_contra hn
     exact h ⟨A, c, k, fun x => by by_contra hx; exact hn ⟨x, hx⟩⟩
-/-- THE NORMAL FORM, as in the master: the separation is exactly the transfer of least escape from the record. -/
+/-- THE NORMAL FORM, as in Islam (21 Oct 2026): the separation is exactly the transfer of least escape from the record. -/
 theorem sep_normal_form (M : Machine) (x₀ : M.Inst) :
     (NothingEscapes (Rec M) → NothingEscapes M) ↔ Sep M :=
   ⟨fun h => sep_of_closure M (h (record_has_least_escape M x₀)), fun hs _ => closure_of_sep M hs⟩
+/-- A premise is KEYLESS when it holds of every machine. A premise FORCES when it yields least escape wherever it
+    holds. Both definitions verbatim from Part A (v1.14.0, lines 188 to 190). -/
+def Keyless (P : Machine → Prop) : Prop := ∀ M, P M
+def Forces (P : Machine → Prop) : Prop := ∀ M, P M → NothingEscapes M
+
+/-- A machine on which something escapes: one algorithm, always right, in zero time. DESIGN: this is the witness
+    for `keyless_forces_nothing` below; the original proof uses the stage world of Part A, not carried here. -/
+def freeMachine : Machine :=
+  { Alg := Unit, Inst := Unit, size := fun _ => 0, out := fun _ _ => true, time := fun _ _ => 0, sat := fun _ => true }
+
+/-- NO KEYLESS PREMISE FORCES THE BIT. Original name and statement (first in git 21 October 2026, commit 4144323);
+    proof rewritten on the witness above. -/
+theorem keyless_forces_nothing (P : Machine → Prop) (hP : Keyless P) : ¬ Forces P := fun hF =>
+  (hF freeMachine (hP freeMachine) () 0 0).elim fun _ hx => hx ⟨rfl, Nat.zero_le _⟩
+
+-- x₀ is kept because the statement is verbatim; this rewritten proof does not use it.
+set_option linter.unusedVariables false in
+/-- EVERY ROUTE PASSES THE BIT. Original name and statement (21 October 2026, commit 4144323). -/
+theorem every_route_passes_the_bit (M : Machine) (x₀ : M.Inst) (Q : Prop) (h : Q → Sep M) :
+    Q → (NothingEscapes (Rec M) → NothingEscapes M) :=
+  fun q _ => closure_of_sep M (h q)
 end PNP.NORMALFORM
 
 /-! ## SUBSUMPTION · the Anthropic system is a Machine of the Trisduction normal form
-RATIONALE. `sep_normal_form` is proved of an arbitrary Machine. Here the Hamiltonian-cycle row of the release is
-built as one such Machine, its least escape is proved to be the bit of that row, and the release's MainTheorem is
+RATIONALE. `sep_normal_form` is proved of an arbitrary Machine. Here the Hamiltonian-cycle problem of the release is
+built as one such Machine, its least escape is proved to be the bit of that problem, and the release's MainTheorem is
 read as a supply of that least escape. What is subsumed is the FORM of the route. The term that supplies the bit is
 theirs and is a hypothesis here (`D : MainTheorem`); this file does not check it. -/
 namespace Subsumption
 open PNP.NORMALFORM Statement Conversion MvPolynomial
 
-/-- The Hamiltonian-cycle row as a Machine: an algorithm is a size budget per instance, an instance is m, the output
+/-- The Hamiltonian-cycle problem as a Machine: an algorithm is a size budget per instance, an instance is m, the output
     is whether a circuit of that size computes hc at m, and every instance is a yes-instance. -/
 noncomputable def vpMachine (F : Type) [Field F] : Machine :=
   { Alg := ℕ → ℕ, Inst := ℕ, size := id,
@@ -330,7 +351,7 @@ theorem least_escape_iff_bit (F : Type) [Field F] : NothingEscapes (vpMachine F)
     exact ⟨m, fun hC => hm (computes_mono hC (shape c k m))⟩
 
 /-- THE FORM SUBSUMES THE ROW, nothing before the colon: on the Anthropic machine the separation is exactly the
-    transfer of least escape from its record, and that least escape is the bit of the row. -/
+    transfer of least escape from its record, and that least escape is the bit of the problem. -/
 theorem the_form_subsumes_the_row (F : Type) [Field F] :
     ((NothingEscapes (Rec (vpMachine F)) → NothingEscapes (vpMachine F)) ↔ Sep (vpMachine F)) ∧
     (NothingEscapes (vpMachine F) ↔ TheBitHC F) ∧
@@ -345,7 +366,40 @@ theorem their_delivery_supplies_least_escape (D : MainTheorem.{0}) (F : Type) [F
   have n : NothingEscapes (vpMachine F) := (least_escape_iff_bit F).2 b
   ⟨n, sep_of_closure _ n, (hc_route_iff_bit F).2 b⟩
 
+/-! ### THE KEYED CROSSING, on the arithmetic machine
+WHERE THE BIT IS CROSSED IN THE RELEASE (anthropics/formal-math, vp-vnp, commit 11b6c7e), read from source:
+  crossed  Paper/Fields.lean:149      last line of cor_allclasses, the only door of Solution.separation
+  carried  Paper/Fields.lean:83-111   thm_allfields, by lem_transfer
+  made     Paper/Fields.lean:91       rcases thm_alt K, Flat K or Contracting K (Paper/Alternative.lean:921)
+  keyed    Paper/Fields.lean:54, 60   gridComplete_hc K (Paper/HcGrid.lean:64), turned in both branches
+The three theorems below are the October theorems read on that machine. NON-NEGOTIABLE: none of them asserts the bit.
+The bit enters only as their hypothesis D, in `first_delivery_in_the_form`. RISK: a reader may take that theorem as a
+proof of the lower bound; it is their term, read in this form. -/
+
+/-- ONE DOOR. Every route to the Hamiltonian-cycle family outside VP, from any premise Q whatever, delivers the bit
+    on the arithmetic machine. Nothing before the colon but the route itself. -/
+theorem every_route_to_their_separation_passes_the_bit (F : Type) [Field F] (Q : Prop)
+    (h : Q → hcFamily F ∉ VP F) : Q → (NothingEscapes (Rec (vpMachine F)) → NothingEscapes (vpMachine F)) :=
+  every_route_passes_the_bit (vpMachine F) (0 : ℕ) Q
+    (fun q => sep_of_closure _ ((least_escape_iff_bit F).2 ((hc_route_iff_bit F).1 (h q))))
+
+/-- ONE KEY. A premise that delivers the bit wherever it holds is not shared by every machine. Whatever supplies
+    least escape on the arithmetic machine is keyed to it. -/
+theorem the_crossing_is_keyed (P : Machine → Prop) (hF : Forces P) : ¬ Keyless P :=
+  fun hK => keyless_forces_nothing P hK hF
+
+/-- THE FIRST DELIVERY IN THE FORM. Given the release's MainTheorem, the one bit of the arithmetic machine, the
+    transfer of least escape from its record, holds. Compiled against their repository, D is their term and the
+    statement closes with nothing before the colon. -/
+theorem first_delivery_in_the_form (D : MainTheorem.{0}) (F : Type) [Field F] :
+    NothingEscapes (Rec (vpMachine F)) → NothingEscapes (vpMachine F) :=
+  fun _ => (their_delivery_supplies_least_escape D F).1
+
 end Subsumption
 #print axioms Subsumption.the_form_subsumes_the_row
 #print axioms Subsumption.their_delivery_supplies_least_escape
 #print axioms PNP.NORMALFORM.sep_normal_form
+#print axioms Subsumption.every_route_to_their_separation_passes_the_bit
+#print axioms Subsumption.the_crossing_is_keyed
+#print axioms Subsumption.first_delivery_in_the_form
+#print axioms PNP.NORMALFORM.keyless_forces_nothing

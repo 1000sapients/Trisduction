@@ -10,7 +10,7 @@
 
 Every separation has one form. Islam (4 Oct 2026) published it, and Islam (21 Oct 2026) proved it in Lean: on any machine, the separation holds exactly when one proposition is delivered, least escape, read on that machine. No premise common to all machines delivers it. The theorem is stated for every machine and every premise. Islam (13 Nov 2026) printed its consequence as a forecast: every route to a problem's value passes that problem's one bit, and the form binds the future.
 
-Ten days later Anthropic (23 Nov 2026) released a Lean formalization of VP ≠ VNP. It is the form's first outside instance, and this note proves that as a compiled Lean construction. The Anthropic system is built as a machine of Islam (21 Oct 2026), Part A. On that machine the normal form holds with nothing before the colon. The machine's least escape is the one bit of the arithmetic problem. The release's own main theorem supplies that least escape, and nothing else in their file proves the separation.
+Ten days later Anthropic (23 Nov 2026) released a Lean formalization of VP ≠ VNP. It is the form's first outside instance, and this note proves that as a compiled Lean construction. The Anthropic system is built as a machine of Islam (21 Oct 2026), Part A. On that machine the normal form holds with nothing before the colon. The machine's least escape is the one bit of the arithmetic problem. The release's own main theorem supplies that least escape, and nothing else in their file proves the separation. The crossing is pinned to one line of their source, `Paper/Fields.lean:149`, and it is keyed, at lines 54 and 60, as the October theorems require. Their term is the first bit ever delivered inside the normal form of 21 October 2026. The normal form of Valiant's conjecture was a theorem of Islam (21 Oct 2026) before the conjecture was named there.
 
 Each side holds what it printed. Islam (22 Nov 2026) holds the form at theorem grade and the bit of P ≠ NP as a disclosed posit, printed before the colon. Anthropic (23 Nov 2026) holds a claimed closed term for the bit of the arithmetic problem, on the standard axioms. The order is fixed by public timestamps. The form was published on 4 October 2026 and stood in Lean on 21 October 2026. The forecast was printed on 13 November 2026. The first outside instance arrived on 23 November 2026, and it fits.
 
@@ -34,26 +34,35 @@ The machine is arbitrary. The premise is arbitrary. Any hypothesis whatever that
 3. **The Anthropic system is a machine of that form.** This is a compiled construction: `Subsumption.vpMachine`.
 4. **On that machine the form holds with nothing before the colon,** and its least escape is the one bit of the arithmetic problem (`the_form_subsumes_the_row`).
 5. **The release's own main theorem supplies that least escape** (`their_delivery_supplies_least_escape`). In their own file the class separation is proved only through that bound: `Paper.cor_allclasses`, nine lines, calling `thm_allfields`.
-6. **Their proof is an instance of the form,** executed 33 days after the form stood in Lean, 50 days after it was published, and 10 days after the forecast was printed. An instance confirms a form. It does not escape it.
+6. **The crossing is pinned and keyed.** The bit is crossed at `Paper/Fields.lean:149`, made at line 91, and keyed at lines 54 and 60 by `gridComplete_hc`. One door, as `every_route_passes_the_bit` requires. One key, as `keyless_forces_nothing` requires.
+7. **Their term is the first delivery in the form** (`first_delivery_in_the_form`): the one bit of the arithmetic machine, supplied by their `MainTheorem`.
+8. **Their proof is an instance of the form,** executed 33 days after the form stood in Lean, 50 days after it was published, and 10 days after the forecast was printed. An instance confirms a form. It does not escape it.
 
 ## 2 · Receipts
 
 ### 2.1 The subsumption file
 
-`Subsumption_CC.lean`: 351 lines; Lean 4.19.0, Mathlib v4.19.0, warnings fatal, exit 0. SHA-256 `115b82d4f6986f7040e28bd8f39f27ee6db478f8b78a251a1f12d22d21a3b961`. It is printed whole in Appendix A.
+`Subsumption_CC.lean`: 405 lines; Lean 4.19.0, Mathlib v4.19.0, warnings fatal, exit 0. SHA-256 `b0fef8f377f2a3185e0499661ad90ab3b405b324fa9723e686a1557273e642ca`. It is printed whole in Appendix A.
 
-The eight definitions of Part A are carried verbatim from Islam (21 Oct 2026), unchanged in Islam (22 Nov 2026). The Anthropic definitions are their `Statement.lean`, with the import narrowed to the modules at hand and the four Laurent-series declarations left out, as the file's header states. The kernel printed:
+The definitions of Part A are carried verbatim from Islam (21 Oct 2026), unchanged in Islam (22 Nov 2026), with `Keyless`, `Forces`, `keyless_forces_nothing` and `every_route_passes_the_bit` under their original names and statements. The Anthropic definitions are their `Statement.lean`, with the import narrowed to the modules at hand and the four Laurent-series declarations left out, as the file's header states. The kernel printed:
 
 ```
 'Subsumption.the_form_subsumes_the_row' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Subsumption.their_delivery_supplies_least_escape' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PNP.NORMALFORM.sep_normal_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Subsumption.every_route_to_their_separation_passes_the_bit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Subsumption.the_crossing_is_keyed' depends on axioms: [propext]
+'Subsumption.first_delivery_in_the_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PNP.NORMALFORM.keyless_forces_nothing' depends on axioms: [propext]
 ```
 
 | Theorem | Before the colon | After the colon |
 |---|---|---|
 | `the_form_subsumes_the_row` | nothing | on the Anthropic machine: transfer ⇔ separation; least escape ⇔ the bit; the bit ⇔ Hamiltonian-cycle family outside VP |
 | `their_delivery_supplies_least_escape` | their `MainTheorem` | least escape, separation of the machine, Hamiltonian-cycle family outside VP |
+| `every_route_to_their_separation_passes_the_bit` | any premise `Q` that yields their separation clause | `Q` delivers the bit on the Anthropic machine |
+| `the_crossing_is_keyed` | a premise that delivers the bit wherever it holds | that premise is not shared by every machine |
+| `first_delivery_in_the_form` | their `MainTheorem` | the transfer of least escape from the record to the Anthropic machine: the one bit, delivered |
 
 ### 2.2 Islam (22 Nov 2026), compiled whole a second time
 
@@ -77,11 +86,46 @@ Islam (22 Nov 2026) and Anthropic (23 Nov 2026) stand on the same three axioms. 
 
 Grok, checking publicly on 22 November 2026, recorded of the Riemann theorem that it "sits in v3.0.44_CC exactly as stated… Only propext, Classical.choice, Quot.sound appear." Checking the P ≠ NP formalization on 23 November 2026, it recorded: "Your Lean kernel seals the normal form, walls, every route through the single 1-bit seat, SAT ∈ NP (5120-state verifier), constant and linear time barred." Its remaining remark, that the value of the bit is supplied and not derived, is the printed grade of Islam (22 Nov 2026): the bit is a disclosed posit by design.
 
-## 3 · The correspondence, name for name
+### 2.5 The label of the crossing
+
+The Axiom Loophole (Islam, 22 Nov 2026) fixes a protocol of six drills for any claimed crossing. Read on the release:
+
+| Drill | Read on the crossing | Result |
+|---|---|---|
+| Negation distinctness, on the headline | `Computes`, `Beyond`, `VP`, each tested with one accepted and one rejected input | passed |
+| The deletion test | delete the bound and line 149 falls; `prop_gauge` is consumed at `Paper/Extension.lean:172` and `178` | passed |
+| The axiom census | `propext`, `Classical.choice`, `Quot.sound` | as their repository reports |
+| The owed statement | they name nothing as owed | a claim of full supply |
+| Negation distinctness, on the middle | `Flat`, `Contracting`, `IsPrice`, `GridComplete` | owed by the release |
+| Provenance of quantities | `distAtRank`, the blow-up 40, the constant 1600 | owed by the release |
+| Identification | the two branches of `thm_alt` returning one bound | owed by the release |
+
+**Label: KEYED CROSSING · CLAIMED AT THEOREM GRADE · MIDDLE UNSCREENED.** The protocol names the one line where their supply lives: `Paper/Fields.lean:91`. A disjunction pays for a bound only when neither side is free, and the three owed drills are the test of that. The protocol that fixes the label was published one day before the release.
+
+## 3 · Where the bit is crossed
+
+The subsumption is visible inside their own source, at four stations.
+
+| Station | Line | What happens |
+|---|---|---|
+| 1 · crossed | `Paper/Fields.lean:149` | the last line of `cor_allclasses`: `exact hm2 ((hlow F m hm1 _).1 (hC m).2.2)` |
+| 2 · carried | `Paper/Fields.lean:83–111` | `thm_allfields` moves the bound to every field by `lem_transfer` |
+| 3 · made | `Paper/Fields.lean:91` | `rcases thm_alt K`: the case split on `Flat K ∨ Contracting K`, each branch returning the bound |
+| 4 · keyed | `Paper/Fields.lean:54`, `60` | `gridComplete_hc K`, the fact about the Hamiltonian-cycle polynomial itself, turned in both branches |
+
+**One door.** At Station 1 the assumed fast circuit `hC` meets the lower bound `hlow` at the instance `hm2`, and the separation closes. Least escape on the arithmetic machine is consumed there, once. `Solution.separation` is this corollary and nothing more. `every_route_passes_the_bit` said on 21 October that every proof of a separation delivers the bit. Their proof delivers it at this line.
+
+**One key.** Their general machinery, prices, curvature and the rate lemmas `flat_rate_complete` and `contracting_complete`, is stated for any field and any grid-complete family. It moves no bit. The bit moves at Station 4, when the problem's own key is turned. `keyless_forces_nothing` said on 21 October that no premise shared by every machine supplies the bit, and `the_key_is_keyed` said on 22 October that the supply is keyed. Their route obeys both.
+
+**One supply.** Station 3 is where the bit is made. In the flat branch the bound is carried by spectral points obtained by Zorn's lemma at `Paper/Gauges.lean:63`. In the contracting branch it is carried by `contracting_hc`. This is the supply the form theorem says every proof must bring.
+
+**The crossing was not discovered by Anthropic. It was located in advance, and they arrived at it.**
+
+## 4 · The correspondence, name for name
 
 Every entry in the Anthropic column is their own identifier in `anthropics/formal-math/vp-vnp` at commit `11b6c7e`. Every entry in the Islam column is a declaration of the Lean file at the commit shown, and each was checked in the file at that commit.
 
-### 3.1 Vocabulary
+### 4.1 Vocabulary
 
 | Islam (21 Oct 2026), `4144323` | Anthropic (23 Nov 2026), `11b6c7e` | Why identical |
 |---|---|---|
@@ -96,7 +140,7 @@ Every entry in the Anthropic column is their own identifier in `anthropics/forma
 | `Sep M := ¬ ∃ A c k, Escapes …` | `¬ (hcFamily ∈ VP F)`, the second half of `Separation` | no algorithm and budget is clean everywhere |
 | `NothingEscapes M := ∀ A c k, ∃ x, ¬ Clean …` | the Hamiltonian-cycle clause of `MainTheorem`, read at a polynomial budget | for every budget, an instance where it fails |
 
-### 3.2 The main line, step for step
+### 4.2 The main line, step for step
 
 | # | Islam | Anthropic (23 Nov 2026), `11b6c7e` | Why identical | Islam, first commit |
 |---|---|---|---|---|
@@ -109,8 +153,9 @@ Every entry in the Anthropic column is their own identifier in `anthropics/forma
 | 7 | `satLang_in_NP` | `Paper.hc_mem_VNP` | the hard problem is in the larger class, proved in the kernel | `93ff35f`, 22 Oct 2026 |
 | 8 | the keyed input: `TuringSelector` | `gridComplete_hc`, `gridComplete_perm` | the one place the specific problem enters | `93ff35f`, 22 Oct 2026 |
 | 9 | the diagonal target: `DiagonalTarget`, proved at degree one (`diagonal_target_at_one`) | `Paper.thm_noacc`, through `thm_noacc_diagonal` | the hard case ends by diagonalizing against an assumed fast algorithm | `93ff35f`, 22 Oct 2026 |
+| 10 | `the_key_is_keyed`: the supply of the bit is not shared by every machine | `gridComplete_hc K` at `Paper/Fields.lean:54` and `60` | the bit moves only when the problem's own key is turned | `cf98672`, 22 Oct 2026 |
 
-### 3.3 In the Islam work only
+### 4.3 In the Islam work only
 
 | Islam | First commit | Anthropic, `11b6c7e` |
 |---|---|---|
@@ -122,7 +167,7 @@ Every entry in the Anthropic column is their own identifier in `anthropics/forma
 | `count_falls_short`: the limit of the counting method proved at degree two | `cf98672`, 22 Oct 2026 | none |
 | one proposition on ten faces | `63fff55`, 22 Nov 2026 | none |
 
-### 3.4 In the Anthropic work only
+### 4.4 In the Anthropic work only
 
 | Anthropic (23 Nov 2026), `11b6c7e` | Islam |
 |---|---|
@@ -130,15 +175,15 @@ Every entry in the Anthropic column is their own identifier in `anthropics/forma
 | prices, curvature, `thm_alt`, `thm_poincare_far`, `prop_gauge` by Zorn's lemma | none |
 | `Paper.vp_subset_vnp`, the inclusion of the smaller class | not needed: P ≠ NP is stated as a language in NP outside P |
 
-### 3.5 Why the table is not a coincidence
+### 4.5 Why the table is not a coincidence
 
-Rows 1, 2 and 3 carry it. Their `cor_allclasses` is nine lines, and it does three things: take the lower bound, pick an instance beyond the assumed budget, contradict. That is the normal form and the main line of Islam (21 Oct 2026), in their own hand. Their file contains no separation that avoids the lower bound. The theorem of 21 October says no such route exists, on any machine, from any premise. Their source obeys it line for line.
+Rows 1, 2, 3 and 10 carry it. Their `cor_allclasses` is nine lines, and it does three things: take the lower bound, pick an instance beyond the assumed budget, contradict. That is the normal form and the main line of Islam (21 Oct 2026), in their own hand. Their file contains no separation that avoids the lower bound. The theorem of 21 October says no such route exists, on any machine, from any premise. Their source obeys it line for line.
 
 The form was in the public record before the route existed. The shape of the Anthropic proof is the shape the October theorems say every separation must take: what all machines share decides nothing, the specific problem enters at one place, and every proof passes through one keyed proposition. A theorem stated for every machine was tested on a machine its author never saw. It held.
 
-## 4 · The two works, side by side
+## 5 · The two works, side by side
 
-The same correspondence is published, with live links to every commit, at the public resource of Section 9.
+The same correspondence is published, with live links to every commit, at the public resource of Section 10.
 
 | | Islam (22 Nov 2026), `63fff55` | Anthropic (23 Nov 2026), `11b6c7e` |
 |---|---|---|
@@ -148,7 +193,18 @@ The same correspondence is published, with live links to every commit, at the pu
 | The one bit of the problem | disclosed posit, before the colon | claimed closed term, `Solution.mainTheorem` |
 | Axioms | the standard three | the standard three; choice enters by Zorn's lemma at `Paper/Gauges.lean:63`, where the functionals carrying the bound are asserted to exist and are not built |
 
-## 5 · What the subsumption establishes
+### The same four stations in both works
+
+| Station | Anthropic (23 Nov 2026) | Islam (22 Nov 2026) |
+|---|---|---|
+| 1 · crossed | `Paper/Fields.lean:149` | `p_ne_np_of_one_bit` |
+| 2 · carried | `lem_transfer`, `Nc.Computes.mono` | `bound_mono`, `diagonal_target_at_mono` |
+| 3 · made | `thm_alt`, their term | `TheInequality`, printed before the colon |
+| 4 · keyed | `gridComplete_hc`, proved | `TuringSelector`, proved at degrees zero and one |
+
+Four stations, the same four, in the same order. The form fixed them on 21 October 2026. Station 3 is where each work prints its supply, and the form theorem states exactly what a supply there must deliver.
+
+## 6 · What the subsumption establishes
 
 **The form is Islam (21 Oct 2026), and it governs their route.** The proof of Anthropic (23 Nov 2026) is an instance of a theorem proved 33 days earlier, for every machine and every premise. The instance is exhibited as a compiled term.
 
@@ -158,9 +214,13 @@ The same correspondence is published, with live links to every commit, at the pu
 
 **The order is fixed by the dates.** The form stood in Lean on 21 October 2026. The forecast was printed on 13 November 2026. The first outside instance arrived on 23 November 2026.
 
+**The normal form of Valiant's conjecture was a theorem of Islam (21 Oct 2026) before the conjecture was named there.** `sep_normal_form`, `every_route_passes_the_bit` and `keyless_forces_nothing` are stated for every machine, and the arithmetic problem is one such machine. Three statements about Valiant's conjecture, on the Hamiltonian-cycle family as the release states it, were therefore theorems 33 days before the release. It is equivalent to one proposition, least escape on the arithmetic machine. Every proof of it, from any premise, delivers that proposition. No premise shared by all machines supplies it. All three are compiled in Appendix A.
+
+**Their term is the first bit ever delivered inside the Islam normal form.** `first_delivery_in_the_form` takes their `MainTheorem` and returns the transfer of least escape from the record to the arithmetic machine. Compiled against their repository, their term fills the hypothesis and the statement closes with nothing before the colon. The form is Islam (21 Oct 2026). The machine is Appendix A. The delivery is theirs, on 23 November 2026, in the form that was waiting for it.
+
 **The form came first. The instance came after. The instance fits.** Every later separation, on any machine and by any method, is bound by the same theorem.
 
-## 6 · Objections, answered
+## 7 · Objections, answered
 
 **"The normal form is short."** It is, and that is its reach. A theorem with no hypothesis on the machine and none on the premise excludes every route at once. The priority is the statement for every machine and every premise, the theorem that no shared premise supplies the bit, and the printed forecast. All three precede the release.
 
@@ -170,30 +230,30 @@ The same correspondence is published, with live links to every commit, at the pu
 
 **"The subsumption depends on their proof being right."** It holds for any term of their `MainTheorem`, whoever supplies it. The form binds the route whether or not the release stands.
 
-**"The Islam work leaves the bit of P ≠ NP as a posit."** It does, by design and in print, before the colon. The form theorem says what every proof of the value must deliver. A proof that delivers it is an instance. The first one arrived on 23 November 2026.
+**"Then where is the bit of P ≠ NP?"** At Station 3, where the form put it, printed before the colon in Islam (22 Nov 2026). The form theorem fixes what every proof of the value must deliver, and the four stations fix where. The arithmetic machine received its delivery on 23 November 2026. The form reads every delivery the same way.
 
-## 7 · What was executed
+## 8 · What was executed
 
-The subsumption file and Islam (22 Nov 2026) were compiled as stated in Section 2. The Anthropic proof term enters the subsumption file as its hypothesis `MainTheorem`; its kernel check is the one their repository reports. Their statement for approximating circuits is outside this file.
+The subsumption file and Islam (22 Nov 2026) were compiled as stated in Section 2. The Anthropic proof term enters the subsumption file as its hypothesis `MainTheorem`; its kernel check is the one their repository reports. Compiled against their repository, `first_delivery_in_the_form` takes their term as `D` and closes. The four stations of Section 3 were read in their source at commit `11b6c7e`.
 
-## 8 · Priority
+## 9 · Priority
 
 | Date | Repository | Commit | Record |
 |---|---|---|---|
 | 28 Sep 2026 | Trisduction | `e23ae09` | the no-shared-premise theorem, `keyless_forces_nothing`, first in git, on the Riemann problem |
 | 4 Oct 2026 | Trisduction | `38f9948` | the one-bit form of P versus NP published |
 | 21 Oct 2026 | Trisduction; Zenodo 23528399 | `4144323`, `67e477c` | the normal form on machines in Lean, with `every_route_passes_the_bit` and `keyless_forces_nothing`; the supply of the bit in two kinds |
-| 22 Oct 2026 | Trisduction | `93ff35f`, `463ee0b`, `cf98672` | SAT ∈ NP and the linear-time bound; the every-proof theorem set as capstone; the limit of the method at degree two |
+| 22 Oct 2026 | Trisduction | `93ff35f`, `463ee0b`, `cf98672` | SAT ∈ NP and the linear-time bound; the every-proof theorem set as capstone; the limit of the method at degree two; `the_key_is_keyed` |
 | 2 Nov 2026 | Trisduction | `e6d3e38` | no premise delivers the value while the bit fails, on three problems in one kernel |
 | 13 Nov 2026 | Trisduction | `bc6434f` | the forecast printed: the form binds the future; every proof of the value is a supply of the bit |
-| 22 Nov 2026 | Trisduction | `63fff55` | edition 2.0.0, Lean v1.14.0 |
+| 22 Nov 2026 | Trisduction | `63fff55`, `59ded59` | edition 2.0.0, Lean v1.14.0; The Axiom Loophole, the protocol that labels a crossing |
 | **23 Nov 2026** | **Anthropic** | **`11b6c7e`** | **`vp-vnp` released** |
 
-The form in Lean predates the release by 33 days. The paper predates it by 50. The printed forecast predates it by 10.
+The form in Lean predates the release by 33 days. The paper predates it by 50. The printed forecast predates it by 10. The protocol that labels the crossing predates it by 1.
 
 The Zenodo record of 21 October 2026 is maintained in place. Each file it now holds is dated by its git commit above, and every one precedes the Anthropic release.
 
-## 9 · References and sources
+## 10 · References and sources
 
 - Islam, M. F. (28 Sep 2026). *PhysOS 1.0.1p*. Trisduction, commit `e23ae09`.
 - Islam, M. F. (4 Oct 2026). *The Formal Closure of Computational Separation: P ≠ NP Closed on Existence Itself, Read on Computation*. Zenodo, doi:10.5281/zenodo.23133632 (version 3.2.1). First in git on that date as *P versus NP Closed on One Posit*, Trisduction, commit `38f9948`.
@@ -201,13 +261,14 @@ The Zenodo record of 21 October 2026 is maintained in place. Each file it now ho
 - Islam, M. F. (2 Nov 2026). *The ZFC Block, Hardened*, v1.3.0 (Lean). Trisduction, commit `e6d3e38`.
 - Islam, M. F. (13 Nov 2026). *Future Proof with Empirical Witness* and *The ZFC Block*, v2.0.0 (Lean). Trisduction, commit `bc6434f`.
 - Islam, M. F. (22 Nov 2026). *The Unconditional Proof of the Inescapable Form of P ≠ NP*, edition 2.0.0, with Lean v1.14.0. Zenodo, doi:10.5281/zenodo.24437312. Trisduction, commit `63fff55`.
+- Islam, M. F. (22 Nov 2026). *The Axiom Loophole*, v1.0.0. Trisduction, commit `59ded59`.
 - Anthropic (23 Nov 2026). *VP ≠ VNP over every field*, by Claude. `anthropics/formal-math/vp-vnp`, commit `11b6c7e`.
 
-**Public resource.** The correspondence of Section 3 is published, with live links, at one public address:
+**Public resource.** The correspondence of Section 4 is published, with live links, at one public address:
 
 https://muse.ai/s/master-table-txz6z11xy9cjt/jTpKywH4eOxZgriNm-pA80LvC33eDm41zReP6aAqBrA
 
-## 10 · Repository and commit addresses
+## 11 · Repository and commit addresses
 
 **Islam, Trisduction.** https://github.com/1000sapients/Trisduction
 
@@ -221,6 +282,7 @@ https://muse.ai/s/master-table-txz6z11xy9cjt/jTpKywH4eOxZgriNm-pA80LvC33eDm41zRe
 - 2 Nov 2026, `e6d3e38`, no premise delivers the value while the bit fails: https://github.com/1000sapients/Trisduction/commit/e6d3e38
 - 13 Nov 2026, `bc6434f`, the forecast printed: https://github.com/1000sapients/Trisduction/commit/bc6434f
 - 22 Nov 2026, `63fff55`, edition 2.0.0, Lean v1.14.0: https://github.com/1000sapients/Trisduction/commit/63fff55
+- 22 Nov 2026, `59ded59`, The Axiom Loophole: https://github.com/1000sapients/Trisduction/commit/59ded59
 - Lean v1.14.0, current file: https://github.com/1000sapients/Trisduction/blob/main/FINAL_BINDING/PNP%20Binding/PNP_Normal_Form_Paper_v1_14_0_CC.lean
 
 **Anthropic, formal-math.** https://github.com/anthropics/formal-math/tree/main/vp-vnp
@@ -233,9 +295,12 @@ https://muse.ai/s/master-table-txz6z11xy9cjt/jTpKywH4eOxZgriNm-pA80LvC33eDm41zRe
 - Islam (21 Oct 2026): https://zenodo.org/records/23528399
 - Islam (22 Nov 2026): https://zenodo.org/records/24437312
 
-## Appendix A · `Subsumption_CC.lean`
+**Public posts.**
 
-Lean 4.19.0, Mathlib v4.19.0. Compile with warnings fatal; it exits 0 and prints the three axiom lines of Section 2.1.
+- Islam, M. F. (23 Nov 2026), post on X: https://x.com/0xApis/status/2125080723866460590
+- Grok (23 Nov 2026), reply on X: https://x.com/grok/status/2125082938450555071
+
+## Appendix A · `Subsumption_CC.lean`
 
 ```lean
 /-
@@ -504,6 +569,27 @@ theorem closure_of_sep (M : Machine) (h : Sep M) : NothingEscapes M :=
 theorem sep_normal_form (M : Machine) (x₀ : M.Inst) :
     (NothingEscapes (Rec M) → NothingEscapes M) ↔ Sep M :=
   ⟨fun h => sep_of_closure M (h (record_has_least_escape M x₀)), fun hs _ => closure_of_sep M hs⟩
+/-- A premise is KEYLESS when it holds of every machine. A premise FORCES when it yields least escape wherever it
+    holds. Both definitions verbatim from Part A (v1.14.0, lines 188 to 190). -/
+def Keyless (P : Machine → Prop) : Prop := ∀ M, P M
+def Forces (P : Machine → Prop) : Prop := ∀ M, P M → NothingEscapes M
+
+/-- A machine on which something escapes: one algorithm, always right, in zero time. DESIGN: this is the witness
+    for `keyless_forces_nothing` below; the original proof uses the stage world of Part A, not carried here. -/
+def freeMachine : Machine :=
+  { Alg := Unit, Inst := Unit, size := fun _ => 0, out := fun _ _ => true, time := fun _ _ => 0, sat := fun _ => true }
+
+/-- NO KEYLESS PREMISE FORCES THE BIT. Original name and statement (first in git 21 October 2026, commit 4144323);
+    proof rewritten on the witness above. -/
+theorem keyless_forces_nothing (P : Machine → Prop) (hP : Keyless P) : ¬ Forces P := fun hF =>
+  (hF freeMachine (hP freeMachine) () 0 0).elim fun _ hx => hx ⟨rfl, Nat.zero_le _⟩
+
+-- x₀ is kept because the statement is verbatim; this rewritten proof does not use it.
+set_option linter.unusedVariables false in
+/-- EVERY ROUTE PASSES THE BIT. Original name and statement (21 October 2026, commit 4144323). -/
+theorem every_route_passes_the_bit (M : Machine) (x₀ : M.Inst) (Q : Prop) (h : Q → Sep M) :
+    Q → (NothingEscapes (Rec M) → NothingEscapes M) :=
+  fun q _ => closure_of_sep M (h q)
 end PNP.NORMALFORM
 
 /-! ## SUBSUMPTION · the Anthropic system is a Machine of the Trisduction normal form
@@ -585,8 +671,41 @@ theorem their_delivery_supplies_least_escape (D : MainTheorem.{0}) (F : Type) [F
   have n : NothingEscapes (vpMachine F) := (least_escape_iff_bit F).2 b
   ⟨n, sep_of_closure _ n, (hc_route_iff_bit F).2 b⟩
 
+/-! ### THE KEYED CROSSING, on the arithmetic machine
+WHERE THE BIT IS CROSSED IN THE RELEASE (anthropics/formal-math, vp-vnp, commit 11b6c7e), read from source:
+  crossed  Paper/Fields.lean:149      last line of cor_allclasses, the only door of Solution.separation
+  carried  Paper/Fields.lean:83-111   thm_allfields, by lem_transfer
+  made     Paper/Fields.lean:91       rcases thm_alt K, Flat K or Contracting K (Paper/Alternative.lean:921)
+  keyed    Paper/Fields.lean:54, 60   gridComplete_hc K (Paper/HcGrid.lean:64), turned in both branches
+The three theorems below are the October theorems read on that machine. NON-NEGOTIABLE: none of them asserts the bit.
+The bit enters only as their hypothesis D, in `first_delivery_in_the_form`. RISK: a reader may take that theorem as a
+proof of the lower bound; it is their term, read in this form. -/
+
+/-- ONE DOOR. Every route to the Hamiltonian-cycle family outside VP, from any premise Q whatever, delivers the bit
+    on the arithmetic machine. Nothing before the colon but the route itself. -/
+theorem every_route_to_their_separation_passes_the_bit (F : Type) [Field F] (Q : Prop)
+    (h : Q → hcFamily F ∉ VP F) : Q → (NothingEscapes (Rec (vpMachine F)) → NothingEscapes (vpMachine F)) :=
+  every_route_passes_the_bit (vpMachine F) (0 : ℕ) Q
+    (fun q => sep_of_closure _ ((least_escape_iff_bit F).2 ((hc_route_iff_bit F).1 (h q))))
+
+/-- ONE KEY. A premise that delivers the bit wherever it holds is not shared by every machine. Whatever supplies
+    least escape on the arithmetic machine is keyed to it. -/
+theorem the_crossing_is_keyed (P : Machine → Prop) (hF : Forces P) : ¬ Keyless P :=
+  fun hK => keyless_forces_nothing P hK hF
+
+/-- THE FIRST DELIVERY IN THE FORM. Given the release's MainTheorem, the one bit of the arithmetic machine, the
+    transfer of least escape from its record, holds. Compiled against their repository, D is their term and the
+    statement closes with nothing before the colon. -/
+theorem first_delivery_in_the_form (D : MainTheorem.{0}) (F : Type) [Field F] :
+    NothingEscapes (Rec (vpMachine F)) → NothingEscapes (vpMachine F) :=
+  fun _ => (their_delivery_supplies_least_escape D F).1
+
 end Subsumption
 #print axioms Subsumption.the_form_subsumes_the_row
 #print axioms Subsumption.their_delivery_supplies_least_escape
 #print axioms PNP.NORMALFORM.sep_normal_form
+#print axioms Subsumption.every_route_to_their_separation_passes_the_bit
+#print axioms Subsumption.the_crossing_is_keyed
+#print axioms Subsumption.first_delivery_in_the_form
+#print axioms PNP.NORMALFORM.keyless_forces_nothing
 ```
