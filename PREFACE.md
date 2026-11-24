@@ -1,27 +1,36 @@
 # PREFACE
 
-*To the Trisduction Master Codex. The register itself is at [master/](master/); the resolve rule for finding the current version is in the [root README](README.md).*
+*Provenance for the Trisduction Master Codex, held at [master/](master/).*
 
-My father refused a proposition when I was four or five years old. I had told him I wanted to be educated and become rich so that I could help people. He said no. Become compassionate, merciful, patient, loving, intelligent, just, and honest. Even if you never arrive, that is the path. Do not pursue wealth in order to acquire virtue. Become the virtue directly. He was small in stature and his vision was as lofty as the heavens. Inna lillahi wa inna ilayhi raji'un.
+A note on sources. I have no online footprint before 2012. Everything
+before that line is testimony, offered uncorroborated, and nothing in this
+codex rests on it. Everything after it carries a public timestamp that
+anyone may check without asking me.
 
-My mother, who never went to school and holds no academic record of any kind, gave me the other rule. Think more than you read or listen. What you take from books or teachers is data. What you arrive at yourself is yours.
+The dated strata. In 1999, in Dhaka, the question first registered: whether
+the meaning of one life, in a world this complex, could be solvable at all.
+What registered was a read, not a formulation. In 2005, reading a chapter
+on the philosophy of scientific inference, I declined to accept probability
+as the floor; I had no apparatus to say why, and the refusal held. On
+20 April 2019 I posted the first written formulation, one screen, public
+and dated: three paths, each a statement of fact, each absolutely
+independent of the others, oriented at right angle, only three such
+ductions, and a parenthesis wondering whether perhaps only one common
+ground is possible. Then a year of silence. In 2026 the cascade assembled
+under adversarial stress from March, and the seals were reached in the
+months that followed.
 
-Neither had vocabulary for what they were handing me. This codex catalogs the first as the refusal of credence accumulation and the second as the floor that keeps a framework's own vocabulary from standing in for understanding. Nothing in what follows rests on either story. I open with them because they explain the shape of everything after, and because a reader who discounts them loses nothing.
+The name is assembled from ordinary parts on purpose. Tris, three.
+Duction, a way, a drawing toward — in the spirit of induction and
+deduction. A coined proper noun would claim an invention; this architecture
+claims a method, and its name-strip rule holds that new vocabulary is not
+new mass.
 
-I did not invent this. I have said so from the first day and have not varied it. The name says the same from the other side. Tris, three. Duction, a way, a drawing toward. Assembled from ordinary parts in the spirit of induction and deduction, on purpose. A coined proper noun would have been the tell, and the architecture's own name-strip gate holds that new vocabulary is not new mass. A name built from common parts fails that gate by design, which is the correct outcome when the thing named is not yours.
+This codex is written to be run and checked, by a reader or by a machine.
+My labor was formulation: the seed was mine, the arguing was the
+substrates', the acceptance criteria were mine, and what stands is what
+survived that process. What can be said without inflation is that the
+formulation reached its three seals. Everything else is checkable, and I
+would rather you check it than believe me.
 
-There is a line at 2012 and the reader should have it early. I have no online footprint before it. Everything from my birth in 1981 to the middle of 2012 is testimony, offered uncorroborated by design, and nothing downstream rests on it. Everything after carries a public timestamp that anyone may check without asking me.
-
-Four strata, each dated. In 1999, alone in a medical school room in Dhaka, I asked whether the meaning of one life in a world this complex could be solvable, given that Allah ﷻ does not burden a soul beyond its capacity. What registered was not a formulation. It was permission. In 2005, reading a chapter on the philosophy of scientific inference during my public health year, I declined to accept probability as the floor. I had no apparatus to say why, and I did not surrender the refusal. On 20 April 2019 I posted the first written formulation, one screen, public and dated: three paths, each a statement of fact, each absolutely independent of the others, oriented at right angle, only three such ductions, and a parenthesis wondering whether perhaps only one common ground is possible. Then a year of silence. In 2026 the seals arrived, the cascade assembled under adversarial stress from March, the topological seal reached from the Root Axiom directly in May, and the mathematical seal months later with the quaternionic layer.
-
-The gaps between those dates are part of the evidence. What sat in the room in 1999 was a read, and a read does not carry a proof. This architecture says so itself: a clean reading at the Ground without a supplied witness stays open, and a single innate read is premise-grade and can be wrong. The discipline is to build the ladder toward it rather than to trust it as delivered. That is what the years were.
-
-This codex is written for the AI substrate. That audience explains its shape. My labor was formulation, not authorship: a read is not portable, while a deletion test, a twelve-gate roster, and a closed-form determinant are. The corpus itself was generated by AI substrates under seeded guidance and I wrote none of its words. I state that forward rather than in a footnote, because it is the claim and not the wound. If the method is native, a capable substrate ought to reproduce it, and what follows is what that reproduction looked like as it happened. The seed was mine, the arguing was theirs, the acceptance criteria were mine, and the seals are what survived.
-
-What can be said without inflation is that the formulation reached its three seals. Everything else is checkable, and I would rather you check it than believe me.
-
-Mohammad
-
----
-
-The fuller account, for a reader who wants one: [Autobiography of the Architect of the Trisduction Method](https://tractatus-veritatis-trisductivus.blogspot.com/2026/05/autobiography-of-architect-of.html), May 2026. It is testimony rather than evidence and nothing in this codex rests on it.
+Mohammad F. Islam
