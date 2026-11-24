@@ -56,8 +56,6 @@ Provenance, in the author's own account: [PREFACE.md](PREFACE.md).
 |---|---|
 | Trisduction, the general development record | https://trisduction.blogspot.com |
 | Tractatus Veritatis Trisductivus, the master developmental record | https://tractatus-veritatis-trisductivus.blogspot.com |
-| Esoteric Trisduction, the esoteric-register development | https://esoterictrisduction.blogspot.com |
-| Study All Scriptures, the theological development record | https://studyallscriptures.blogspot.com |
 
 The personal blog, precursor essays from August 2012:
 https://this-is-what-you-ve-been-looking-for.blogspot.com
