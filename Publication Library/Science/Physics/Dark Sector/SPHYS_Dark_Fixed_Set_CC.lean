@@ -19,7 +19,7 @@ DESIGN. Parts, in order.
               `the_visible_record_does_not_decide`.
     Part VII  `a_self_paired_mass_iff`. The side of the line: `conj_is_the_fold`.
     Part VIII The census of renormalizable terms. `portals_are_derived`, `a_stable_singlet_keeps_one_door`.
-    Part IX   Acceleration. `the_vacuum_repels`, `the_floor`, `the_floor_is_exact`, `below_the_floor_is_a_ghost`,
+    Part IX   Acceleration, conditional and outside the premises. `the_vacuum_repels`, `the_floor`, `the_floor_is_exact`, `below_the_floor_is_a_ghost`,
               `the_floor_fails_at_negative_density`, `the_floor_is_additive`, `the_sign_is_read`.
     Part X    `Premises`; `dark_forced`; `darkPremises`; `the_posit_is_not_forced`.
 WHAT IS NOT PROVED HERE (read before citing).
@@ -28,7 +28,8 @@ WHAT IS NOT PROVED HERE (read before citing).
     (b) That the anomaly sums must vanish, and the weights in them. They are entered from field theory.
     (c) That the three tests of Part VIII are gauge invariance. They are necessary conditions; that they suffice
         for the terms of the census is classical and is entered.
-    (d) That dark energy is canonical fields that exchange nothing with matter. It is a field of `Premises`.
+    (d) That dark energy is canonical fields. It is not assumed. Part IX is conditional mathematics: what holds
+        of canonical fields at positive density, and what a value below the floor would mean.
     (e) Every magnitude. None is derived.
 RISK. The premises are over the real numbers. The census is finite and is decided by evaluation.
 NON-NEGOTIABLE. No axiom is declared, no sorry. No headline theorem closes over a structure that carries its
@@ -518,30 +519,23 @@ structure Premises where
   colourless : ∀ k, (member k).c = 0
   /-- the posit: no member carries a dark charge -/
   posit : ∀ k, (member k).d = 0
-  /-- dark energy is canonical fields with positive total density -/
-  N : ℕ
-  K : Fin N → ℝ
-  V : Fin N → ℝ
-  canonical : ∀ j, 0 ≤ K j
-  dense : 0 < ∑ j, (K j + V j)
 
 /-- On the premises: conjugation fixes every member; every odd reading of a member is zero; a member radiates
-through no charge; a self-paired mass is allowed; and the equation of state of dark energy is at least minus one. -/
+through no charge; and a self-paired mass is allowed. -/
 theorem dark_forced (P : Premises) :
     (∀ k, conj (P.member k) = P.member k) ∧
     (∀ k (f : State ℝ → ℝ), Odd' f → f (P.member k) = 0) ∧
     (∀ k, weight (P.member k) = 0) ∧
-    (∀ k, 2 * (P.member k).y = 0 ∧ 2 * (P.member k).d = 0) ∧
-    -1 ≤ (∑ j, (P.K j - P.V j)) / (∑ j, (P.K j + P.V j)) := by
+    (∀ k, 2 * (P.member k).y = 0 ∧ 2 * (P.member k).d = 0) := by
   have fx : ∀ k, conj (P.member k) = P.member k := fun k =>
     (fixed_iff_visible_and_dark _).mpr
       ⟨the_nulls_and_no_colour_fix_the_visible_half P.w (P.photon k) (P.zboson k) (P.colourless k), P.posit k⟩
   refine ⟨fx, fun k f hf => odd_readings_are_blind hf (fx k), fun k => (weight_zero_iff_fixed _).mpr (fx k),
-    fun k => ?_, the_floor_is_additive P.K P.V P.canonical P.dense⟩
+    fun k => ?_⟩
   obtain ⟨a, -, -, d⟩ := (fixed_iff _).mp (fx k)
   rw [a, d]; simp
 
-/-- The premises are met: one massive singlet, and one rolling field. -/
+/-- The premises are met: one massive singlet. -/
 noncomputable def darkPremises : Premises where
   w := 0.2312
   n := 1
@@ -550,11 +544,6 @@ noncomputable def darkPremises : Premises where
   zboson := fun _ => by simp [zed, charge]
   colourless := fun _ => rfl
   posit := fun _ => rfl
-  N := 1
-  K := fun _ => 1
-  V := fun _ => 2
-  canonical := fun _ => by norm_num
-  dense := by simp; norm_num
 
 /-- The posit is not forced: a state passes every measured field of the premises and carries a dark charge. -/
 theorem the_posit_is_not_forced (w : ℝ) :

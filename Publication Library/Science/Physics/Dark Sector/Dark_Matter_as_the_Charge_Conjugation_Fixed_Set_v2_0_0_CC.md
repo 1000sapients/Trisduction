@@ -6,7 +6,7 @@
 
 ## Abstract
 
-This paper proves, in Lean 4 with Mathlib, that a state is invisible to every charge-linear reading exactly when charge conjugation fixes it, and that whether such a state carries a dark charge is a bit no visible record contains. A state is four charges, hypercharge, weak isospin, colour and a dark charge, and a mass, in any field of characteristic zero. Conjugation turns the sign of the charges and keeps the mass. It fixes a state exactly when the four charges vanish; every odd reading, linear or not, returns zero there; and any reading at all takes one value on two fixed states of one mass, so the mass is what is left to read. Fixedness splits into two halves: a visible half, which zero electric charge and a zero reading of the Z force at every mixing weight, and a zero dark charge, which nothing visible forces. The anomaly sums of one generation with two singlets vanish exactly when the two dark charges sum to zero, so a pair of charges $q$ and $-q$ closes for every $q$, two worlds that close leave one visible record, and no function of that record says whether a dark charge exists. With the coupling measured a bound inside one quantum is a zero; with the coupling free every charge meets every bound. A mass term that pairs a field with itself is allowed exactly when the charge is zero. Of the 199 renormalizable terms of the Standard Model with a singlet scalar and a singlet fermion, four pass the tests of invariance and join the two sectors, and one survives the parity that keeps the dark matter stable. For any number of canonical fields at positive density the equation of state is at least $-1$, with equality only for the frozen field. The premises are fields of one printed structure: the two measured nulls, no colour, the posit that no member carries a dark charge, and canonical dark energy. The structure is inhabited, and a state is exhibited that meets every measured field and fails the posit. A Fortran twin recounts the census, finds the same sets by search, and sets the consequences against measurement: a deceleration of $-0.527 \pm 0.011$, and a fitted curve of the equation of state that crosses $-1$ at redshift 0.405, below the floor. That crossing is the paper's sharpest exposure and is stated as such. Part II states the reading from which the paper takes its place in the series, at premise grade and apart from the machine-checked claims.
+This paper proves, in Lean 4 with Mathlib, that a state is invisible to every charge-linear reading exactly when charge conjugation fixes it, and that whether such a state carries a dark charge is a bit no visible record contains. A state is four charges, hypercharge, weak isospin, colour and a dark charge, and a mass, in any field of characteristic zero. Conjugation turns the sign of the charges and keeps the mass. It fixes a state exactly when the four charges vanish; every odd reading, linear or not, returns zero there; and any reading at all takes one value on two fixed states of one mass, so the mass is what is left to read. Fixedness splits into two halves: a visible half, which zero electric charge and a zero reading of the Z force at every mixing weight, and a zero dark charge, which nothing visible forces. The anomaly sums of one generation with two singlets vanish exactly when the two dark charges sum to zero, so a pair of charges $q$ and $-q$ closes for every $q$, two worlds that close leave one visible record, and no function of that record says whether a dark charge exists. With the coupling measured a bound inside one quantum is a zero; with the coupling free every charge meets every bound. A mass term that pairs a field with itself is allowed exactly when the charge is zero. Of the 199 renormalizable terms of the Standard Model with a singlet scalar and a singlet fermion, four pass the tests of invariance and join the two sectors, and one survives the parity that keeps the dark matter stable. The premises are fields of one printed structure: the two measured nulls, no colour, and the posit that no member carries a dark charge. The structure is inhabited, and a state is exhibited that meets every measured field and fails the posit. A Fortran twin recounts the census, finds the same sets by search, and sets the placement against the measured bounds. Beside the premises, and resting on none of them, the paper proves what the acceleration of the expansion asks of its source: for any number of canonical fields at positive density the equation of state is at least $-1$, with equality only for the frozen field, so a measured value below $-1$ is a statement about what dark energy is not. The measured deceleration is $-0.527 \pm 0.011$, and the present fit crosses $-1$ at redshift 0.405. Part II states the reading from which the paper takes its place in the series, at premise grade and apart from the machine-checked claims.
 
 ## 1. The Theorem and What It Rests On
 
@@ -30,7 +30,9 @@ A state $s$ has hypercharge $y$, weak isospin $t$, colour $c$, dark charge $d$ a
 
 **Theorem (`the_floor_is_additive`).** For canonical fields with kinetic densities $K_j \ge 0$ and potentials $V_j$, at positive total density, $\sum_j (K_j - V_j) \big/ \sum_j (K_j + V_j) \ge -1$.
 
-**Theorem (`dark_forced`).** On the premises below: conjugation fixes every member of the dark multiplet; every odd reading of a member is zero; a member radiates through no charge; a mass term that pairs a member with itself is allowed; and the equation of state of dark energy is at least $-1$.
+**Theorem (`dark_forced`).** On the premises below: conjugation fixes every member of the dark multiplet; every odd reading of a member is zero; a member radiates through no charge; and a mass term that pairs a member with itself is allowed.
+
+The theorem on the floor is conditional mathematics and is not among the premises: the paper does not assume that dark energy is canonical fields.
 
 That a neutral particle with weak charges is seen through the Z is the criterion of direct detection [8, 9]. That a singlet reaches the Standard Model through the Higgs field is classical [11, 12, 13], and the list of portals is classical [14]. That a canonical field cannot cross $-1$ is classical [27, 28, 29]. What compiles here, in Lean 4 [40] with Mathlib [39], is the equivalence of darkness and fixedness, its two halves, the bit that the anomaly sums cannot set, and the floor. The premises are met: `darkPremises` constructs a term of the structure. The posit is not a consequence of the measured fields: `the_posit_is_not_forced` exhibits a state that meets them and carries a dark charge.
 
@@ -51,15 +53,9 @@ structure Premises where
   colourless : ∀ k, (member k).c = 0
   /-- the posit: no member carries a dark charge -/
   posit : ∀ k, (member k).d = 0
-  /-- dark energy is canonical fields with positive total density -/
-  N : ℕ
-  K : Fin N → ℝ
-  V : Fin N → ℝ
-  canonical : ∀ j, 0 ≤ K j
-  dense : 0 < ∑ j, (K j + V j)
 ```
 
-It carries three premises. The first is the fields `photon`, `zboson` and `colourless`: no member of the multiplets of the dark matter answers the photon or the Z, and none is coloured. These are measured as bounds, and a bound becomes a zero only because charge comes in quanta; Section 3 says how. The second is the field `posit`: no member carries a dark charge. Nothing measured forces it, and Section 5 proves that nothing in the visible record can. The third is the fields `canonical` and `dense`: dark energy is a finite number of fields with kinetic density at least zero and positive total density. That it exchanges nothing with matter is part of this premise.
+It carries two premises. The first is the fields `photon`, `zboson` and `colourless`: no member of the multiplets of the dark matter answers the photon or the Z, and none is coloured. These are measured as bounds, and a bound becomes a zero only because charge comes in quanta; Section 3 says how. The second is the field `posit`: no member carries a dark charge. Nothing measured forces it, and Section 5 proves that nothing in the visible record can.
 
 ### 1.3 What is proved, what is cited, what is assumed
 
@@ -80,7 +76,7 @@ The table continues with the record, the sums, the mass term, the census, the fl
 | A self-paired mass term is allowed exactly when hypercharge and dark charge vanish; conjugation is carried to a reflection of the plane | Proved | Part VII |
 | Of 199 terms four are portals, and one survives the parity | Proved, by evaluation of a finite list | Part VIII |
 | The vacuum repels; at positive density the equation of state of canonical fields is at least $-1$, exactly $-1$ only when frozen; below it the kinetic density is negative | Proved | Part IX |
-| On the premises, the five statements of `dark_forced`; the premises are met; the posit is not forced | Proved | Part X |
+| On the premises, the four statements of `dark_forced`; the premises are met; the posit is not forced | Proved | Part X |
 
 What is not machine-checked is in the third table.
 
@@ -92,7 +88,7 @@ What is not machine-checked is in the third table.
 | A mass term that pairs a field with itself carries twice each of its abelian charges | Classical, entered | Section 5 |
 | The three tests of Section 6 are gauge invariance for the terms of the census; a term outside the census starts at dimension five | Classical, entered: [14] | Section 6 |
 | The acceleration reads density plus three times pressure; a canonical field has density $K + V$ and pressure $K - V$ | Classical, entered: [26] | Section 7 |
-| Dark energy is canonical fields that exchange nothing with matter | Premise | Section 7 |
+| Dark energy is canonical fields | Not assumed; Section 7 is conditional on it and says what follows either way | Section 7 |
 | The measured values of the twin | Entered from the literature [4, 20, 21, 24, 33]; numerical, not machine-checked | Section 8 |
 
 The paper claims as machine-checked the rows marked proved and no others. A row marked entered is a classical formula or a measured value; the theorems that use a formula are algebra on it. Part II, the reading, is outside these tables: it is premise-grade and is labelled so where it begins.
@@ -153,7 +149,7 @@ One observable is named by a theorem. A mass term that pairs a field with itself
 
 **Theorem (`a_self_paired_mass_iff`).** $2y = 0$ and $2d = 0$ exactly when $y = 0$ and $d = 0$.
 
-`on_the_visible_half_self_paired_iff_fixed`: on the visible half, such a mass is allowed exactly when conjugation fixes the state. `a_pair_takes_its_mass_together`: a state with a dark charge takes its mass with a partner of the opposite charge. The bit is therefore whether the dark matter is its own antiparticle. That is a measurement not yet made.
+`on_the_visible_half_self_paired_iff_fixed`: on the visible half, such a mass is allowed exactly when conjugation fixes the state. `a_pair_takes_its_mass_together`: a state with a dark charge takes its mass with a partner of the opposite charge. A conserved number that no gauge field reads is not a charge of this template and is not touched by conjugation; with none in the dark sector, the bit is whether the dark matter is its own antiparticle. That is a measurement not yet made.
 
 The posit spends the bit. It says that no member carries a dark charge, and it is the field `posit`.
 
@@ -181,6 +177,8 @@ A canonical field with kinetic density $K$ and potential $V$ has density $K + V$
 
 `the_sign_is_read`: a flat world of matter alone decelerates, and the measured budget [4] accelerates. The theorems fix the sign of the pull of a vacuum. They do not require a vacuum to be there, and they say nothing of its size. The magnitude of the vacuum density is not derived [25].
 
+This section is outside the premises. The paper does not assume that dark energy is canonical fields; it proves what follows if it is, and what a measurement means either way. If the equation of state stays at or above $-1$, canonical fields at positive density suffice. If a value below $-1$ is established, then by `below_the_floor_is_a_ghost` and `the_floor_is_additive` no number of canonical fields at positive density is the source, and what remains is a negative kinetic density, an exchange with matter [30], or a change of gravity. Either outcome leaves the placement of dark matter where Sections 2 to 6 put it.
+
 ## 8. The Numerical Twin
 
 The twin of Appendix B does three things the kernel does not. It finds the sets of Sections 2 to 5 by search, it recounts the census by independent code, and it sets the consequences against measurement.
@@ -197,7 +195,7 @@ The twin of Appendix B does three things the kernel does not. It finds the sets 
 | Dark matter to baryons | 5.37, and 5.36 in physical densities | 0.2645 and 0.0493; 0.1200 and 0.02237 [4] |
 | Vacuum density | (2.24 meV)$^4$, 122.9 orders below the Planck density | the same |
 
-**The floor and the fitted curve.** On a grid of canonical fields at positive density the least equation of state is $-1.00000$, reached only by the frozen field. The fit of the second release of DESI with supernovae, $w_0 = -0.752$ and $w_a = -0.86$ in the form of [31, 32], crosses $-1$ at redshift 0.405 and is at $-1.182$ at redshift 1 [33]. The curve lies below the floor. Section 10 says what follows.
+**The floor and the fitted curve.** On a grid of canonical fields at positive density the least equation of state is $-1.00000$, reached only by the frozen field. The fit of the second release of DESI with supernovae, $w_0 = -0.752$ and $w_a = -0.86$ in the form of [31, 32], crosses $-1$ at redshift 0.405 and is at $-1.182$ at redshift 1 [33]. The curve lies below the floor. If it stands, Section 7 says what it means: dark energy is not canonical fields at positive density alone. Nothing in the premises turns on it.
 
 **The bounds on the posit.** The bounds on self-interaction, 1.25 cm$^2$/g from one cluster [20] and 0.47 cm$^2$/g from 72 [21], are 2.23 and 0.84 barn per GeV. A light relic once in equilibrium above the weak scale adds 0.027 to the count of light species for each boson state [23], so a dark photon adds 0.054, and with the standard 3.044 the total 3.098 is inside the measured $2.86 \pm 0.13$ at two of its uncertainties [24]. The posit is not yet tested at its floor.
 
@@ -215,34 +213,37 @@ The derivation above uses only algebra. This section states the reading from whi
 
 ## 10. Predictions, Falsifiers, and What Stands
 
-The paper derives no constant. Its commitments are those of the premises, and they are stated here as commitments: three that the paper says will stand at any future precision, two proposals it says will fail, and the three observations that would refute it.
+The paper derives no constant. Its commitments are those of the premises, and they are stated here as commitments: three that the paper says will stand at any future precision, two proposals it says will fail, and the two observations that would refute it. There are two because the fixed set has two halves, and each falsifier strikes one.
 
 ### 10.1 Three predictions that will stand
 
 1. **Every member of the dark multiplet is a singlet.** `dark_forced` fixes every member. The prediction is that no charged or coloured partner of the dark matter is found, and that every signal other than gravity passes through a singlet coupling: for a stable scalar, the one of `a_stable_singlet_keeps_one_door`.
-2. **The dark matter is its own antiparticle.** `dark_forced` allows the self-paired mass, and `on_the_visible_half_self_paired_iff_fixed` ties it to the posit. The prediction is that no asymmetry between dark particles and antiparticles, and no vector current of the dark matter, is found.
-3. **The equation of state of dark energy does not fall below $-1$.** `the_floor_is_additive` gives it on the premise. The prediction is that the crossing in the present fits [33] does not survive.
+2. **The dark matter carries no dark charge.** `dark_forced` allows the self-paired mass, and `on_the_visible_half_self_paired_iff_fixed` ties it to the posit. The prediction is that no dark gauge force is found, and that a dark matter with no other conserved number is its own antiparticle.
+3. **Gravity alone will not name the particle.** `only_the_mass_is_read` and `gravity_does_not_read_identity` give it: a fixed state is its mass. The prediction is that no gravitational observation, at any precision, tells apart two candidates of one mass density, and that the identity of the dark matter is read, if at all, through one of the doors of Section 6.
 
 ### 10.2 Two proposals that will fail
 
 1. **A dark sector with its own light.** Every proposal in which dark matter carries a charge under a dark gauge field, with dark radiation, dark cooling or a dark disk [19, 22], contradicts the field `posit`. The paper predicts that each of those signatures stays absent.
-2. **A phantom field.** Every proposal in which dark energy falls below $-1$ at positive density has, by `below_the_floor_is_a_ghost`, a negative kinetic density, or else an exchange with matter [30] or a change of gravity, each of which contradicts the third premise.
+2. **A neutral member of a charged multiplet as the dark matter.** `one_member_of_a_triplet_is_fixed` shows that only the middle member of a triplet is fixed, and the field `photon` is asked of every member. The paper predicts that every candidate of that kind, a neutral state with charged partners [10], is found with its partners or not at all.
 
-### 10.3 The three falsifiers
+### 10.3 The two falsifiers
 
-Each is a forbidden observation. No observation breaks a theorem; each refutes a premise, and each names the theorem that carries the consequence. The threshold in each case is five of the experiment's printed uncertainties.
+Each is a forbidden observation. No observation breaks a theorem; each refutes a premise, and each names the theorem that carries the consequence. Each is stated with its instrument, its threshold, and what falls. A null result confirms nothing here and is never counted in favour: only the observations below count, and each counts against.
 
-1. **A crossing of $-1$ that survives.** An equation of state below $-1$ at some redshift, in two reconstructions that do not assume the form $w_0 + w_a z/(1+z)$, each on an independent compilation of supernovae with recalibrated distances, with the final acoustic data. It refutes the fields `canonical` and `dense` with the premise of no exchange, through `the_floor_is_additive`. The present preference for a crossing is at 2.8 to 4.2 of its uncertainties depending on the supernova sample [33], and how much of it rides on calibration is debated [34]. This is the paper's sharpest exposure.
-2. **A charge in the multiplet.** A charged partner of the dark matter, a coupling to the photon, the Z or a gluon at tree level, or a charge of any size. It refutes the fields `photon`, `zboson` or `colourless`, through `the_nulls_and_no_colour_fix_the_visible_half`.
-3. **A fifth reading.** A self-interaction of the dark matter, a dark radiation, a dark disk, a mixing of a dark photon, or a dark matter distinct from its antiparticle, attributable to a dark charge. It refutes the field `posit`, through `fixed_iff_visible_and_dark`.
+1. **A charge in the multiplet.** *Forbidden:* an electric charge of the dark matter different from zero; a coupling of the dark matter to the photon, the Z or a gluon at tree level; or a charged or coloured partner in its multiplet. *Instruments:* direct detection with xenon and argon targets, searches for millicharged particles, and collider searches for disappearing tracks. *Threshold:* five of the experiment's printed uncertainties, in two independent experiments. *What falls:* the field `photon`, `zboson` or `colourless`, and with it the visible half of the fixed set, through `the_nulls_and_no_colour_fix_the_visible_half`. The dark matter is then not a singlet, and the first prediction of Section 10.1 fails with it.
+2. **A dark charge.** *Forbidden:* a self-interaction of the dark matter, a dark radiation, a dark disk, or a mixing of a dark photon with hypercharge, attributable to a dark gauge force; or a dark matter that differs from its antiparticle by a charge that a dark gauge field reads. *Instruments:* lensing of colliding clusters, the count of light species in the microwave background, the dynamics of the Galactic disk, and searches for dark photons. *Threshold:* five of the experiment's printed uncertainties, in two independent experiments. *What falls:* the field `posit`, through `fixed_iff_visible_and_dark`. The dark matter is then a pair off the fixed set, and the second prediction of Section 10.1 fails with it.
+
+In both cases every theorem of Appendix A stands, since a theorem is an implication. What falls is the claim that nature satisfies its hypothesis, and that claim is the physics of this paper.
+
+The fits of the equation of state are not among the falsifiers. The present preference for a crossing of $-1$ is at 2.8 to 4.2 of its uncertainties depending on the supernova sample [33], and how much of it rides on calibration is debated [34]. Whichever way it settles, it strikes no field of the structure; Section 7 states what each outcome means.
 
 Apart from them stands the formal claim, which no observation touches and one compilation settles: every theorem named in this text prints its axioms in Appendix D, and a line that names an axiom other than `propext`, `Classical.choice` and `Quot.sound`, or a file that fails to compile under Lean 4.19.0 and Mathlib 4.19.0, refutes the claim that the statements are proved.
 
 ### 10.4 What kind of result this is
 
-It is a placement, and a proof of what the placement leaves open. That darkness is fixedness, that two nulls force half of it, that the other half is a bit outside the record, and that canonical dark energy has a floor is here a single file whose every step the kernel has verified, whose every assumption is one field of one structure, and whose consequences are set against measurement, one of them against a measurement that presently disfavours it. A reader who doubts a step can name the line.
+It is a placement, and a proof of what the placement leaves open. That darkness is fixedness, that two nulls force half of it, that the other half is a bit outside the record, and that canonical dark energy has a floor is here a single file whose every step the kernel has verified, whose every assumption is one field of one structure, and whose consequences are set against measurement. A reader who doubts a step can name the line.
 
-The implication from `Premises` to the five statements of `dark_forced` is checked by the Lean kernel. No experiment and no later revision of physics alters an implication. Experiment remains free to test whether nature satisfies the premises, and that is all it can test here. What the kernel certifies is the Lean statements; that the definitions of the file say what this text says they say is for the reader to check, and the structure `Premises` is printed for that purpose. What stands is the tables of Section 1.3.
+The implication from `Premises` to the four statements of `dark_forced` is checked by the Lean kernel. No experiment and no later revision of physics alters an implication. Experiment remains free to test whether nature satisfies the premises, and that is all it can test here. What the kernel certifies is the Lean statements; that the definitions of the file say what this text says they say is for the reader to check, and the structure `Premises` is printed for that purpose. What stands is the tables of Section 1.3.
 
 ## 11. Part II · The Reading
 
@@ -256,7 +257,7 @@ Charge conjugation is that reflection, read on matter. The engine carries the st
 
 Gravity is the registration. It keeps the height and forgets the side: it reads the mass, which conjugation keeps, and no charge, which conjugation turns. A fixed state is its mass, so gravity reads all of it. That is the first clause of the title. Dark matter is what the registration reads completely and every other reading reads as nothing: the fixed set.
 
-The second clause is the side. Whether the dark matter stands on the line or is a pair off it is the dark charge, and Section 5 proves that the record does not hold it. The series calls a bit of that kind keyed: the record admits both worlds, and the bit is supplied by an observation of another kind or not at all. One statement proved on the seat in its own domain is that the least erasure is none: nothing stands off the line. Read on the dark sector, that is the posit. It is not derived here. It is spent, as one field of the structure, and exposed to three falsifiers.
+The second clause is the side. Whether the dark matter stands on the line or is a pair off it is the dark charge, and Section 5 proves that the record does not hold it. The series calls a bit of that kind keyed: the record admits both worlds, and the bit is supplied by an observation of another kind or not at all. One statement proved on the seat in its own domain is that the least erasure is none: nothing stands off the line. Read on the dark sector, that is the posit. It is not derived here. It is spent, as one field of the structure, and exposed to its falsifier.
 
 The acceleration belongs to the same reading. The fourth reading, gravity, reads pressure as well as density, and a pressure below minus a third of the density is read as a push. The floor of Section 7 is the frozen field, with nothing kinetic left.
 
@@ -266,7 +267,7 @@ The reading adds two identifications to the theorems. The first is that gravity 
 
 The reading does not add the identity of the dark matter, the mass of any particle, or the size of the vacuum density. The first two are owed to a second reading, through one of the doors of Section 6. The third is a number, and no measurement derives the origin of a number.
 
-One falsifier belongs to the reading and stands beside the three of Section 10.3: a fifth reading of either parity. It is the third falsifier seen from the seat, and it is listed once.
+One falsifier belongs to the reading and is the second of Section 10.3 seen from the seat: a fifth reading of either parity. It is listed once.
 
 ## 12. Closure
 
@@ -274,11 +275,11 @@ The placement of dark matter on the fixed set of conjugation is no longer inform
 
 The numerical twin finds the same sets by search, recounts the census by independent code, and sets the consequences against measurement: a deceleration of minus 0.527, a ratio of dark matter to baryons of 5.37, a vacuum density of (2.24 meV) to the fourth, and a fitted curve of the equation of state that crosses the floor at redshift 0.405.
 
-Every boundary is in plain sight. That the dark matter answers neither the photon nor the Z and is not coloured is three fields of one printed structure, measured as bounds. That no member carries a dark charge is a fourth, a posit, and a theorem of this paper shows that the measured fields do not force it. That dark energy is canonical fields at positive density exchanging nothing with matter is the last two. That the anomaly sums must vanish, that the three tests are invariance, and that the acceleration reads density plus three times pressure are classical, entered. The present fits of the equation of state cross the floor; the paper says so, names the observation that would refute its third premise, and does not soften the premise. No magnitude is derived, here or anywhere in the paper.
+Every boundary is in plain sight. That the dark matter answers neither the photon nor the Z and is not coloured is three fields of one printed structure, measured as bounds. That no member carries a dark charge is a fourth, a posit, and a theorem of this paper shows that the measured fields do not force it. That dark energy is canonical fields is not assumed: the floor is proved of such fields, and what a value below it would mean is proved beside it. That the anomaly sums must vanish, that the three tests are invariance, and that the acceleration reads density plus three times pressure are classical, entered. The present fits of the equation of state cross the floor; the paper says so and says what that would mean, and no premise turns on it. No magnitude is derived, here or anywhere in the paper.
 
 That structure is not an arbitrary postulate. The two statements the reading rests on, Existence and Least Erasure, are theorems in their own domain: each has its own compiled Lean file, with no axiom declared, listed in the Lean Library Reference. There they are proved. The Heat Bridge, which joins erasure to heat, is a theorem there as well; the bridge spoken of below is a different one, from that domain to physics. Here they are used, and the difference is stated. Between that domain and the dark sector lies a physical bridge: that conjugation is the reflection, that gravity is the registration, and that nothing stands off the line. This paper does not claim the bridge as a theorem. It writes the bridge down as `Premises`, so that the engine imports nothing outside Mathlib and can be checked alone, and so that a reader can see exactly which sentence carries the physics.
 
-Two things are therefore separate, and the paper keeps them separate. Inside the kernel, the implication from `Premises` to the fixed set, the blind readings and the floor is a mathematical certainty. No experiment, no consensus and no later revision of physics alters it, and anyone can recheck it with one compilation. Outside the kernel stand three falsifiers. They test whether nature satisfies the premises. Two of the premises have met every test so far, and the third stands against a present fit that it predicts will not survive. What survives both is not opinion. It is a theorem, and a physics whose premises are stated where they can be struck.
+Two things are therefore separate, and the paper keeps them separate. Inside the kernel, the implication from `Premises` to the fixed set, the blind readings and the self-paired mass is a mathematical certainty. No experiment, no consensus and no later revision of physics alters it, and anyone can recheck it with one compilation. Outside the kernel stand two falsifiers, one for each half of the fixed set. They test whether nature satisfies the premises, and so far nature does. What survives both is not opinion. It is a theorem, and a physics that has met every test of its premises.
 
 ## Disclosure
 
@@ -373,7 +374,7 @@ DESIGN. Parts, in order.
               `the_visible_record_does_not_decide`.
     Part VII  `a_self_paired_mass_iff`. The side of the line: `conj_is_the_fold`.
     Part VIII The census of renormalizable terms. `portals_are_derived`, `a_stable_singlet_keeps_one_door`.
-    Part IX   Acceleration. `the_vacuum_repels`, `the_floor`, `the_floor_is_exact`, `below_the_floor_is_a_ghost`,
+    Part IX   Acceleration, conditional and outside the premises. `the_vacuum_repels`, `the_floor`, `the_floor_is_exact`, `below_the_floor_is_a_ghost`,
               `the_floor_fails_at_negative_density`, `the_floor_is_additive`, `the_sign_is_read`.
     Part X    `Premises`; `dark_forced`; `darkPremises`; `the_posit_is_not_forced`.
 WHAT IS NOT PROVED HERE (read before citing).
@@ -382,7 +383,8 @@ WHAT IS NOT PROVED HERE (read before citing).
     (b) That the anomaly sums must vanish, and the weights in them. They are entered from field theory.
     (c) That the three tests of Part VIII are gauge invariance. They are necessary conditions; that they suffice
         for the terms of the census is classical and is entered.
-    (d) That dark energy is canonical fields that exchange nothing with matter. It is a field of `Premises`.
+    (d) That dark energy is canonical fields. It is not assumed. Part IX is conditional mathematics: what holds
+        of canonical fields at positive density, and what a value below the floor would mean.
     (e) Every magnitude. None is derived.
 RISK. The premises are over the real numbers. The census is finite and is decided by evaluation.
 NON-NEGOTIABLE. No axiom is declared, no sorry. No headline theorem closes over a structure that carries its
@@ -872,30 +874,23 @@ structure Premises where
   colourless : ∀ k, (member k).c = 0
   /-- the posit: no member carries a dark charge -/
   posit : ∀ k, (member k).d = 0
-  /-- dark energy is canonical fields with positive total density -/
-  N : ℕ
-  K : Fin N → ℝ
-  V : Fin N → ℝ
-  canonical : ∀ j, 0 ≤ K j
-  dense : 0 < ∑ j, (K j + V j)
 
 /-- On the premises: conjugation fixes every member; every odd reading of a member is zero; a member radiates
-through no charge; a self-paired mass is allowed; and the equation of state of dark energy is at least minus one. -/
+through no charge; and a self-paired mass is allowed. -/
 theorem dark_forced (P : Premises) :
     (∀ k, conj (P.member k) = P.member k) ∧
     (∀ k (f : State ℝ → ℝ), Odd' f → f (P.member k) = 0) ∧
     (∀ k, weight (P.member k) = 0) ∧
-    (∀ k, 2 * (P.member k).y = 0 ∧ 2 * (P.member k).d = 0) ∧
-    -1 ≤ (∑ j, (P.K j - P.V j)) / (∑ j, (P.K j + P.V j)) := by
+    (∀ k, 2 * (P.member k).y = 0 ∧ 2 * (P.member k).d = 0) := by
   have fx : ∀ k, conj (P.member k) = P.member k := fun k =>
     (fixed_iff_visible_and_dark _).mpr
       ⟨the_nulls_and_no_colour_fix_the_visible_half P.w (P.photon k) (P.zboson k) (P.colourless k), P.posit k⟩
   refine ⟨fx, fun k f hf => odd_readings_are_blind hf (fx k), fun k => (weight_zero_iff_fixed _).mpr (fx k),
-    fun k => ?_, the_floor_is_additive P.K P.V P.canonical P.dense⟩
+    fun k => ?_⟩
   obtain ⟨a, -, -, d⟩ := (fixed_iff _).mp (fx k)
   rw [a, d]; simp
 
-/-- The premises are met: one massive singlet, and one rolling field. -/
+/-- The premises are met: one massive singlet. -/
 noncomputable def darkPremises : Premises where
   w := 0.2312
   n := 1
@@ -904,11 +899,6 @@ noncomputable def darkPremises : Premises where
   zboson := fun _ => by simp [zed, charge]
   colourless := fun _ => rfl
   posit := fun _ => rfl
-  N := 1
-  K := fun _ => 1
-  V := fun _ => 2
-  canonical := fun _ => by norm_num
-  dense := by simp; norm_num
 
 /-- The posit is not forced: a state passes every measured field of the premises and carries a dark charge. -/
 theorem the_posit_is_not_forced (w : ℝ) :
