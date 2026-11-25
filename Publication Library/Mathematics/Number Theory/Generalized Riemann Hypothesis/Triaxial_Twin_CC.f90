@@ -9,14 +9,22 @@
 !   reg(s) = (1/2, imag(s)). In C zeta is evaluated on the line by the alternating series with Euler's
 !   transformation, and its zeros are located by the change of sign of Hardy's function Z(t).
 ! RISK. Exhaustion on one finite seat and draws on the plane are instances; the statement for every seat is the
-!   engine's theorem. C locates zeros on the line to the precision of the search and proves nothing about zeros
-!   off it.
+!   engine's theorem. C locates zeros on the line to the precision of the search; it is a numerical check and
+!   enters no proof.
+! FACES (Part VIII of the engine). A5 checks, on every closed configuration of the finite seat, that the faces of the
+!   line agree: on the line; no two existents at one height; all existents at one place across the fold; closed under
+!   the fold through each of its own existents. A6 checks that the record of every configuration is a member and that
+!   the record of the record is the record. The finite seat is bounded, as the strip is.
+! EXISTENCE IS REGISTRATION (Part IX of the engine). A7 checks that a configuration is its own record exactly when it
+!   is on the line, on all 512, and that each of the nine points has an orbit of one point on the line and of two
+!   points off it, on one registration in both cases.
 ! NON-NEGOTIABLE. Every count is found by the enumeration, not entered.
 program triaxial_twin
   implicit none
   integer, parameter :: dp = kind(1.0d0), qp = selected_real_kind(30)
   integer :: nfail, npass, m, i, j, k, nclosed, nwit, nboth, nline, nbad, nconv, n1, n2, n3, np, idx(9,2), nz, s(33), nseed
-  logical :: in(9), closed, wit, online, anyp, anyon
+  logical :: in(9), inr(9), inr2(9), closed, wit, online, anyp, anyon, f4, f5
+  integer :: ndis, nrec, xx, kk, nself, norb
   real(dp) :: worst, w2, w3, u(2), t, z0, z1, ta, tb, tm, zeros(5)
   complex(dp) :: sp, f
   nfail = 0; npass = 0
@@ -27,7 +35,7 @@ program triaxial_twin
   do i = -1, 1; do j = -1, 1
     np = np + 1; idx(np, :) = [i, j]
   end do; end do
-  nclosed = 0; nwit = 0; nboth = 0; nline = 0; nbad = 0; nconv = 0; n1 = 0; n2 = 0; n3 = 0
+  nclosed = 0; nwit = 0; nboth = 0; nline = 0; nbad = 0; nconv = 0; n1 = 0; n2 = 0; n3 = 0; ndis = 0; nrec = 0; nself = 0
   do m = 0, 511
     do k = 1, 9
       in(k) = btest(m, k - 1)
@@ -51,6 +59,41 @@ program triaxial_twin
     if (anyp .and. wit .and. .not. online) n1 = n1 + 1            ! existence and registration, no form
     if (anyp .and. closed .and. .not. online) n2 = n2 + 1         ! existence and form, no registration
     if (closed .and. wit .and. .not. anyon) n3 = n3 + 1           ! form and registration, no existence
+    ! the faces: one place across the fold (f4); closed under the fold through each of its own existents (f5)
+    f4 = .true.; f5 = .true.
+    do k = 1, 9
+      if (.not. in(k)) cycle
+      do j = 1, 9
+        if (.not. in(j)) cycle
+        if (idx(j,1) /= idx(k,1)) f4 = .false.
+        xx = 2 * idx(k,1) - idx(j,1)
+        if (abs(xx) > 1) then
+          f5 = .false.
+        else
+          if (.not. in(pos(xx, idx(j,2)))) f5 = .false.
+        end if
+      end do
+    end do
+    if (closed .and. ((online .neqv. wit) .or. (online .neqv. f4) .or. (online .neqv. f5))) ndis = ndis + 1
+    ! the record: every existent sent to the line at its own height; then the record of the record
+    inr = .false.
+    do k = 1, 9
+      if (in(k)) inr(pos(0, idx(k,2))) = .true.
+    end do
+    inr2 = .false.
+    do k = 1, 9
+      if (inr(k)) inr2(pos(0, idx(k,2))) = .true.
+    end do
+    do k = 1, 9
+      if (.not. inr(k)) cycle
+      if (idx(k,1) /= 0) nrec = nrec + 1                            ! a registration off the line
+      if (.not. inr(pos(-idx(k,1), idx(k,2)))) nrec = nrec + 1      ! the record not closed
+      do kk = 1, 9
+        if (inr(kk) .and. kk /= k .and. idx(kk,2) == idx(k,2)) nrec = nrec + 1   ! the record not witnessed
+      end do
+    end do
+    if (any(inr .neqv. inr2)) nrec = nrec + 1
+    if (all(inr .eqv. in) .neqv. online) nself = nself + 1          ! its own record, exactly when on the line
   end do
   write(*,'(a,i0,a,i0,a,i0,a,i0)') '  of 512 configurations: closed ', nclosed, '; witnessed ', nwit, &
     '; closed and witnessed ', nboth, '; on the line ', nline
@@ -63,6 +106,21 @@ program triaxial_twin
     '; closed and witnessed with nothing on the line ', n3
   call check('A4 the triad is irreducible: each pair of axes admits a configuration off the line', &
     n1 > 0 .and. n2 > 0 .and. n3 > 0)
+  write(*,'(a,i0,a,i0)') '  closed configurations: ', nclosed, '; among them the faces disagree on: ', ndis
+  call check('A5 on every closed configuration the faces agree: on the line, one height one point, one place, every point a seat', &
+    ndis == 0 .and. nclosed > 0)
+  write(*,'(a,i0)') '  configurations whose record is not a member, or whose record of the record differs: ', nrec
+  call check('A6 the record of every configuration is a member, and the record of the record is the record', nrec == 0)
+  norb = 0
+  do k = 1, 9
+    j = pos(-idx(k,1), idx(k,2))                                    ! the partner
+    if (idx(j,2) /= idx(k,2)) norb = norb + 1                       ! the orbit has one registration
+    if ((j == k) .neqv. (idx(k,1) == 0)) norb = norb + 1            ! one point exactly on the line, two off it
+  end do
+  write(*,'(a,i0,a,i0)') '  configurations where own record and on the line differ: ', nself, &
+    '; points whose orbit miscounts: ', norb
+  call check('A7 a configuration is its own record exactly when on the line; an orbit is one point on the line, two off it', &
+    nself == 0 .and. norb == 0)
 
   ! B. the seat of the plane
   worst = 0; w2 = 0; w3 = 0

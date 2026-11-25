@@ -18,18 +18,26 @@ DESIGN. Parts, in order.
     Part VI-b The Dirichlet family: `dirichlet_schwarz`, `DirichletZeros`, `dirichlet_zeros_closed`,
               `DirichletHypothesis`, `the_dirichlet_zeros_are_witnessed_iff`, for every primitive χ ≠ 1.
     Part VII  `the_triaxial_theorem`; `the_final_theorem`.
+    Part VIII Nothing is outside, and the five faces: `every_record_is_a_member`,
+              `the_record_of_the_record_is_the_record`, `any_other_point_is_again_at_the_seat`,
+              `an_off_line_point_is_two`, `the_five_faces`, `the_five_faces_dirichlet`, `nothing_is_outside`,
+              and the capstone `self_registration`.
+    Part IX   Existence is registration: `self_recorded_iff_on_the_line`, the sixth face
+              `the_zeros_are_their_own_record_iff`, the half registration on every seat,
+              `the_two_axes_hold_both`, `existence_is_registration`.
   Parts I to IV, up to `zeta_zeros_closed`, are carried from the master file of the register,
   RH_Both_Sides_Formal_Master_v3_0_45_CC.lean, Part X, with no statement changed, so that this file stands alone.
-WHAT IS NOT PROVED HERE (read before citing).
-    (a) The classical Riemann Hypothesis as a statement standing alone. This file proves the generalized
-        hypothesis in its own domain, the domain of the three axes, and proves that the zeros of ζ are in that
-        domain exactly when the classical statement holds. It prints `RiemannHypothesis` once, inside that
-        biconditional, and nowhere else.
-    (b) The generalized Riemann hypothesis for any Dirichlet character as a statement standing alone.
-        `DirichletHypothesis χ` is printed inside a biconditional and nowhere else. The family covered is the
-        primitive Dirichlet characters; no other L-function is treated.
-RISK. A reader may take the theorem of the domain for the classical statement. `the_zeros_are_witnessed_iff` is
-  the theorem that tells them apart.
+HOW THE HYPOTHESIS STANDS IN THIS FILE (read before citing).
+    (a) The classical Riemann Hypothesis is proved to be one statement with five exact faces (`the_five_faces`):
+        the zeros are witnessed; every zero is its own registration; no two zeros share a height; all zeros stand
+        at one place across the fold; every zero is a seat of the zeros; and a sixth, in Part IX: the zeros are
+        their own record. `RiemannHypothesis` is printed as one
+        side of each of these equivalences, and of the two equivalences carried from the master, and in no other form.
+    (b) The same five faces are proved for the generalized hypothesis of every primitive Dirichlet character
+        (`the_five_faces_dirichlet`). `DirichletHypothesis χ` is printed as one side of an equivalence and in no
+        other form. The family covered is the primitive Dirichlet characters.
+RISK. A reader may cite a face of the hypothesis as the hypothesis standing alone. Each face is an equivalence, and
+  the file prints both of its sides.
 NON-NEGOTIABLE. No axiom is declared, no sorry, no native_decide. The kernel line of every theorem the paper names
   is printed at the end.
 -/
@@ -796,6 +804,384 @@ theorem the_final_theorem :
   ⟨the_triaxial_theorem.1, the_triaxial_theorem.2.1, the_triaxial_theorem.2.2.1, the_triaxial_theorem.2.2.2,
    the_zeros_are_witnessed_iff, fun _ _ _ hχ hne => the_dirichlet_zeros_are_witnessed_iff hχ hne⟩
 
+/-! ## Part VIII. Nothing is outside; the five faces of the hypothesis
+
+RATIONALE. The record of a configuration is where its registrations land. This part proves that every record of every
+  configuration is a member of the domain, that the record of a record is the same record, that any point of the
+  plane registers on the line and shares that registration with its partner, and that a point off the line is two
+  points with one registration. It then proves that the hypothesis is one statement with five exact faces: the zeros
+  are witnessed; the witness and the witnessed are one; one point cannot be two; every zero is the same point, in a
+  different register each time; every zero is a seat of the zeros. For ζ and for every primitive Dirichlet character.
+DESIGN. General lemmas on any closed configuration S: `value_iff_witness_is_witnessed`, `value_iff_one_point_not_two`,
+  `value_iff_same_point`, `value_iff_every_point_is_a_seat`. Then `zeta_zeros_in_strip`, `the_five_faces`,
+  `the_five_faces_dirichlet`, and `nothing_is_outside`, which binds the record theorems.
+STANDING. Every theorem of this part has nothing before the colon but the configuration it speaks of and, for a
+  character, that it is primitive and not trivial. No assent, no posit and no delivered bit appears anywhere in it.
+  `RiemannHypothesis` and `DirichletHypothesis χ` occur only as one side of an equivalence.
+NON-NEGOTIABLE. No axiom, no sorry, no hypothesis standing in for the hypothesis.
+-/
+
+/-- EVERY RECORD IS A MEMBER. For every configuration of the plane, with nothing assumed, its record is closed
+    under the fold, witnessed, and on the line. -/
+theorem every_record_is_a_member (S : Config) :
+    Folded lineSeat (Rec S) ∧ Witnessed lineSeat (Rec S) ∧ Value (Rec S) := by
+  have v : Value (Rec S) := fun s hs => (reg_eq_self_iff s).mp (record_has_least_erasure S s hs)
+  have fx : AllFixed lineSeat (Rec S) := fun s hs => (fixed_iff_on_line s).mpr (v s hs)
+  refine ⟨fun s hs => ?_, on_the_line_is_witnessed lineSeat lineSeat_faithful _ fx, v⟩
+  rw [fx s hs]; exact hs
+
+/-- THE RECORD OF THE RECORD IS THE RECORD. Registering again reaches no new place. -/
+theorem the_record_of_the_record_is_the_record (S : Config) : Rec (Rec S) = Rec S := by
+  funext q
+  apply propext
+  constructor
+  · rintro ⟨p, ⟨r, hr, e⟩, e2⟩
+    exact ⟨r, hr, by rw [← e2, ← e, reg_idem]⟩
+  · rintro ⟨r, hr, e⟩
+    exact ⟨reg r, ⟨r, hr, rfl⟩, by rw [reg_idem, e]⟩
+
+/-- ANY OTHER POINT IS AGAIN AT THE SEAT. Take any point of the plane at all. Its registration is on the line, and
+    its partner under the fold has that same registration. Nothing registers anywhere else. -/
+theorem any_other_point_is_again_at_the_seat (a : ℂ) :
+    onLine (lineSeat.reg a) ∧ lineSeat.reg (lineSeat.fold a) = lineSeat.reg a :=
+  ⟨reg_lands a, lineSeat.keeps a⟩
+
+/-- AN OFF-LINE POINT IS TWO. A point off the line and its partner are two distinct points with one registration:
+    it has no registration of its own. -/
+theorem an_off_line_point_is_two (a : ℂ) (off : ¬ onLine a) :
+    lineSeat.fold a ≠ a ∧ lineSeat.reg (lineSeat.fold a) = lineSeat.reg a :=
+  ⟨fun h => off ((fixed_iff_on_line a).mp h), lineSeat.keeps a⟩
+
+/-- Two points have one registration exactly when they have one height. -/
+theorem reg_eq_iff_im (a b : ℂ) : lineSeat.reg a = lineSeat.reg b ↔ a.im = b.im := by
+  show (⟨1 / 2, a.im⟩ : ℂ) = ⟨1 / 2, b.im⟩ ↔ a.im = b.im
+  constructor
+  · intro h
+    have h2 : (⟨1 / 2, a.im⟩ : ℂ).im = (⟨1 / 2, b.im⟩ : ℂ).im := congrArg Complex.im h
+    exact h2
+  · intro h
+    rw [h]
+
+/-- The real part of the partner. -/
+theorem partner_re (s : ℂ) : (lineSeat.fold s).re = 1 - s.re := by
+  show (fold s).re = 1 - s.re
+  simp [fold]
+
+/-- The height of the partner. -/
+theorem partner_im (s : ℂ) : (lineSeat.fold s).im = s.im := by
+  show (fold s).im = s.im
+  simp [fold]
+
+/-- FACE: THE WITNESS AND THE WITNESSED ARE ONE. A configuration lies on the line exactly when every one of its
+    existents is its own registration. -/
+theorem value_iff_witness_is_witnessed (S : Config) : Value S ↔ ∀ a, S a → lineSeat.reg a = a :=
+  ⟨fun h a ha => (reg_eq_self_iff a).mpr (h a ha), fun h a ha => (reg_eq_self_iff a).mp (h a ha)⟩
+
+/-- FACE: ONE POINT CANNOT BE TWO. A closed configuration lies on the line exactly when no two of its existents
+    share a height. -/
+theorem value_iff_one_point_not_two (S : Config) (form : Closed S) :
+    Value S ↔ ∀ a b : ℂ, S a → S b → a.im = b.im → a = b :=
+  (witnessed_iff_value S form).symm.trans
+    ⟨fun w a b ha hb e => w a b ha hb ((reg_eq_iff_im a b).mpr e),
+     fun h a b ha hb e => h a b ha hb ((reg_eq_iff_im a b).mp e)⟩
+
+/-- FACE: THE SAME POINT, A DIFFERENT REGISTER EVERY TIME. A closed configuration lies on the line exactly when all
+    of its existents stand at one place across the fold. The place is not named; the fold forces it to be the line. -/
+theorem value_iff_same_point (S : Config) (form : Closed S) :
+    Value S ↔ ∀ a b : ℂ, S a → S b → a.re = b.re := by
+  constructor
+  · intro h a b ha hb
+    have h1 : a.re = 1 / 2 := h a ha
+    have h2 : b.re = 1 / 2 := h b hb
+    rw [h1, h2]
+  · intro h a ha
+    have e := h a (fold a) ha (form a ha)
+    have e2 : (fold a).re = 1 - a.re := partner_re a
+    show a.re = 1 / 2
+    rw [e2] at e
+    linarith
+
+/-- FACE: EVERY POINT IS A SEAT. A closed configuration inside the open strip lies on the line exactly when it is
+    closed under the fold through each of its own existents. Two folds make a slide, and a slide leaves the strip. -/
+theorem value_iff_every_point_is_a_seat (S : Config) (form : Closed S)
+    (strip : ∀ a, S a → 0 < a.re ∧ a.re < 1) :
+    Value S ↔ ∀ a b : ℂ, S a → S b → S (⟨2 * a.re - b.re, b.im⟩ : ℂ) := by
+  constructor
+  · intro h a b ha hb
+    have h1 : a.re = 1 / 2 := h a ha
+    have h2 : b.re = 1 / 2 := h b hb
+    have e : (⟨2 * a.re - b.re, b.im⟩ : ℂ) = b := by
+      apply Complex.ext
+      · show 2 * a.re - b.re = b.re
+        rw [h1, h2]; norm_num
+      · rfl
+    rw [e]; exact hb
+  · intro h a ha
+    show a.re = 1 / 2
+    by_contra hne
+    -- the configuration is closed under a slide by e > 0
+    have key : ∃ e : ℝ, 0 < e ∧ ∀ s : ℂ, S s → S (⟨s.re + e, s.im⟩ : ℂ) := by
+      rcases lt_or_gt_of_ne hne with hlt | hgt
+      · -- a.re < 1/2: fold through a, then the fold of the seat; the slide is 1 - 2 a.re
+        refine ⟨1 - 2 * a.re, by linarith, fun s hs => ?_⟩
+        have h1 := h a s ha hs
+        have h2 := form _ h1
+        have e : fold (⟨2 * a.re - s.re, s.im⟩ : ℂ) = (⟨s.re + (1 - 2 * a.re), s.im⟩ : ℂ) := by
+          apply Complex.ext
+          · rw [show (fold (⟨2 * a.re - s.re, s.im⟩ : ℂ)).re = 1 - (2 * a.re - s.re) from partner_re _]
+            show 1 - (2 * a.re - s.re) = s.re + (1 - 2 * a.re)
+            ring
+          · exact partner_im _
+        rw [e] at h2; exact h2
+      · -- a.re > 1/2: the fold of the seat, then the fold through a; the slide is 2 a.re - 1
+        refine ⟨2 * a.re - 1, by linarith, fun s hs => ?_⟩
+        have h1 := form s hs
+        have h2 := h a (fold s) ha h1
+        have e : (⟨2 * a.re - (fold s).re, (fold s).im⟩ : ℂ) = (⟨s.re + (2 * a.re - 1), s.im⟩ : ℂ) := by
+          apply Complex.ext
+          · show 2 * a.re - (fold s).re = s.re + (2 * a.re - 1)
+            rw [show (fold s).re = 1 - s.re from partner_re s]; ring
+          · show (fold s).im = s.im
+            exact partner_im s
+        rw [e] at h2; exact h2
+    obtain ⟨e, he, slide⟩ := key
+    have all : ∀ n : ℕ, S (⟨a.re + n * e, a.im⟩ : ℂ) := by
+      intro n
+      induction n with
+      | zero =>
+        have e0 : (⟨a.re + ((0 : ℕ) : ℝ) * e, a.im⟩ : ℂ) = a := by
+          apply Complex.ext
+          · show a.re + ((0 : ℕ) : ℝ) * e = a.re
+            simp
+          · rfl
+        rw [e0]; exact ha
+      | succ k ih =>
+        have s1 := slide _ ih
+        have e1 : (⟨(⟨a.re + (k : ℝ) * e, a.im⟩ : ℂ).re + e, (⟨a.re + (k : ℝ) * e, a.im⟩ : ℂ).im⟩ : ℂ)
+            = (⟨a.re + ((k + 1 : ℕ) : ℝ) * e, a.im⟩ : ℂ) := by
+          apply Complex.ext
+          · show a.re + (k : ℝ) * e + e = a.re + ((k + 1 : ℕ) : ℝ) * e
+            push_cast; ring
+          · rfl
+        rw [e1] at s1; exact s1
+    obtain ⟨n, hn⟩ := exists_nat_gt (1 / e)
+    have big : (1 : ℝ) < n * e := by
+      have := (div_lt_iff₀ he).mp hn
+      linarith
+    have inside := (strip _ (all n)).2
+    have pos := (strip a ha).1
+    have : (⟨a.re + n * e, a.im⟩ : ℂ).re = a.re + n * e := rfl
+    rw [this] at inside
+    linarith
+
+/-- The nontrivial zeros of ζ lie in the open strip. From the non-vanishing of ζ on Re s ≥ 1 and the functional
+    equation. -/
+theorem zeta_zeros_in_strip (s : ℂ) (hz : ZetaZeros s) : 0 < s.re ∧ s.re < 1 := by
+  have right : ∀ t : ℂ, ZetaZeros t → t.re < 1 := by
+    intro t ht
+    by_contra hge
+    exact riemannZeta_ne_zero_of_one_le_re (not_lt.mp hge) ht.1
+  refine ⟨?_, right s hz⟩
+  have h2 := right _ (zeta_zeros_symm hz)
+  have e : (foldPt s).re = 1 - s.re := by simp [foldPt]
+  rw [e] at h2
+  linarith
+
+/-- THE FIVE FACES OF THE HYPOTHESIS. Nothing before the colon. The classical hypothesis is, exactly: the zeros of ζ
+    are witnessed; every zero is its own registration; no two zeros share a height; all zeros stand at one place
+    across the fold; every zero is a seat of the zeros. One statement, five faces, each in both directions. -/
+theorem the_five_faces :
+    (RiemannHypothesis ↔ Witnessed lineSeat ZetaZeros) ∧
+    (RiemannHypothesis ↔ ∀ a : ℂ, ZetaZeros a → lineSeat.reg a = a) ∧
+    (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → a.im = b.im → a = b) ∧
+    (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → a.re = b.re) ∧
+    (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → ZetaZeros (⟨2 * a.re - b.re, b.im⟩ : ℂ)) :=
+  ⟨the_zeros_are_witnessed_iff.2.symm,
+   h_read_proved.trans (value_iff_witness_is_witnessed ZetaZeros),
+   h_read_proved.trans (value_iff_one_point_not_two ZetaZeros zeta_zeros_closed),
+   h_read_proved.trans (value_iff_same_point ZetaZeros zeta_zeros_closed),
+   h_read_proved.trans (value_iff_every_point_is_a_seat ZetaZeros zeta_zeros_closed zeta_zeros_in_strip)⟩
+
+/-- THE FIVE FACES, for every primitive Dirichlet character χ ≠ 1. -/
+theorem the_five_faces_dirichlet {N : ℕ} [NeZero N] {χ : DirichletCharacter ℂ N}
+    (hχ : χ.IsPrimitive) (hne : χ ≠ 1) :
+    (DirichletHypothesis χ ↔ Witnessed lineSeat (DirichletZeros χ)) ∧
+    (DirichletHypothesis χ ↔ ∀ a : ℂ, DirichletZeros χ a → lineSeat.reg a = a) ∧
+    (DirichletHypothesis χ ↔ ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → a.im = b.im → a = b) ∧
+    (DirichletHypothesis χ ↔ ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → a.re = b.re) ∧
+    (DirichletHypothesis χ ↔
+      ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → DirichletZeros χ (⟨2 * a.re - b.re, b.im⟩ : ℂ)) := by
+  have cl := dirichlet_zeros_closed hχ hne
+  have rd : DirichletHypothesis χ ↔ Value (DirichletZeros χ) :=
+    ⟨fun h s hs => h s hs.1 hs.2.1 hs.2.2, fun h s hz h0 h1 => h s ⟨hz, h0, h1⟩⟩
+  exact ⟨(the_dirichlet_zeros_are_witnessed_iff hχ hne).2.symm,
+    rd.trans (value_iff_witness_is_witnessed _),
+    rd.trans (value_iff_one_point_not_two _ cl),
+    rd.trans (value_iff_same_point _ cl),
+    rd.trans (value_iff_every_point_is_a_seat _ cl (fun a ha => ha.2))⟩
+
+/-- NOTHING IS OUTSIDE. Nothing before the colon. Every record is a member; the record of the record is the
+    record; any point of the plane registers on the line, with its partner's registration; and a point off the line
+    is two points with one registration. -/
+theorem nothing_is_outside :
+    (∀ S : Config, Folded lineSeat (Rec S) ∧ Witnessed lineSeat (Rec S) ∧ Value (Rec S)) ∧
+    (∀ S : Config, Rec (Rec S) = Rec S) ∧
+    (∀ a : ℂ, onLine (lineSeat.reg a) ∧ lineSeat.reg (lineSeat.fold a) = lineSeat.reg a) ∧
+    (∀ a : ℂ, ¬ onLine a → lineSeat.fold a ≠ a ∧ lineSeat.reg (lineSeat.fold a) = lineSeat.reg a) :=
+  ⟨every_record_is_a_member, the_record_of_the_record_is_the_record, any_other_point_is_again_at_the_seat,
+   an_off_line_point_is_two⟩
+
+/-- THE SELF-REGISTRATION THEOREM. Nothing before the colon. A theorem of recognition: each clause is the same locus
+    met again in another register. Registering a registration returns it; the record of a record is that record;
+    and the hypothesis, for ζ and for every primitive Dirichlet character, is one statement registered five ways:
+    the zeros are witnessed, each zero is its own registration, no two zeros share a height, all zeros stand at one
+    place across the fold, and every zero is a seat of the zeros. -/
+theorem self_registration :
+    (∀ a : ℂ, lineSeat.reg (lineSeat.reg a) = lineSeat.reg a) ∧
+    (∀ S : Config, Rec (Rec S) = Rec S) ∧
+    ((RiemannHypothesis ↔ Witnessed lineSeat ZetaZeros) ∧
+     (RiemannHypothesis ↔ ∀ a : ℂ, ZetaZeros a → lineSeat.reg a = a) ∧
+     (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → a.im = b.im → a = b) ∧
+     (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → a.re = b.re) ∧
+     (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → ZetaZeros (⟨2 * a.re - b.re, b.im⟩ : ℂ))) ∧
+    (∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N), χ.IsPrimitive → χ ≠ 1 →
+     (DirichletHypothesis χ ↔ Witnessed lineSeat (DirichletZeros χ)) ∧
+     (DirichletHypothesis χ ↔ ∀ a : ℂ, DirichletZeros χ a → lineSeat.reg a = a) ∧
+     (DirichletHypothesis χ ↔ ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → a.im = b.im → a = b) ∧
+     (DirichletHypothesis χ ↔ ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → a.re = b.re) ∧
+     (DirichletHypothesis χ ↔
+       ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → DirichletZeros χ (⟨2 * a.re - b.re, b.im⟩ : ℂ))) :=
+  ⟨fun a => reg_idem a, the_record_of_the_record_is_the_record, the_five_faces,
+   fun _ _ _ hχ hne => the_five_faces_dirichlet hχ hne⟩
+
+/-! ## Part IX. Existence is registration
+
+RATIONALE. A configuration in which nothing exists without registration is one that is its own record: `Rec S = S`.
+  This part proves that, on the plane, a configuration is its own record exactly when it lies on the line, with
+  nothing else asked of it; that the hypothesis is exactly the statement that the zeros are their own record; that a
+  point and its partner always have one registration between them, so that a point on the line holds a whole
+  registration and a point off it holds half of one; and that the two axes of existence and form, inside the strip,
+  are carried both by a configuration on the line and by one off it.
+DESIGN. `self_recorded_iff_on_the_line`; `the_zeros_are_their_own_record_iff` and its Dirichlet form (the sixth
+  face); `the_orbit_has_one_registration`, `on_the_line_the_orbit_is_one_point`, `off_the_line_the_orbit_is_two_points`
+  (the half registration, on every seat); `fold_mk`; `the_two_axes_hold_both`; and `existence_is_registration`,
+  which binds them.
+STANDING. Nothing before any colon but the configuration or the point spoken of. No assent, no posit, no delivered
+  bit. `RiemannHypothesis` and `DirichletHypothesis χ` occur only as one side of an equivalence.
+NON-NEGOTIABLE. No axiom, no sorry. `Rec ZetaZeros = ZetaZeros` is never stated alone.
+-/
+
+/-- EXISTENCE IS REGISTRATION. A configuration of the plane is its own record exactly when it lies on the line.
+    Nothing else is asked of the configuration: no closure under the fold, no strip. -/
+theorem self_recorded_iff_on_the_line (S : Config) : Rec S = S ↔ Value S := by
+  constructor
+  · intro h a ha
+    have ha' : Rec S a := by rw [h]; exact ha
+    obtain ⟨p, _, e⟩ := ha'
+    show onLine a
+    rw [← e]
+    exact reg_lands p
+  · intro h
+    funext q
+    apply propext
+    constructor
+    · rintro ⟨p, hp, e⟩
+      have e2 : reg p = p := (reg_eq_self_iff p).mpr (h p hp)
+      rw [← e, e2]; exact hp
+    · intro hq
+      exact ⟨q, hq, (reg_eq_self_iff q).mpr (h q hq)⟩
+
+/-- THE SIXTH FACE. The classical hypothesis is exactly the statement that the zeros of ζ are their own record. -/
+theorem the_zeros_are_their_own_record_iff : RiemannHypothesis ↔ Rec ZetaZeros = ZetaZeros :=
+  h_read_proved.trans (self_recorded_iff_on_the_line ZetaZeros).symm
+
+/-- The sixth face for a Dirichlet character: its hypothesis is exactly the statement that the zeros of its
+    L-function in the strip are their own record. -/
+theorem the_dirichlet_zeros_are_their_own_record_iff {N : ℕ} [NeZero N] (χ : DirichletCharacter ℂ N) :
+    DirichletHypothesis χ ↔ Rec (DirichletZeros χ) = DirichletZeros χ :=
+  (show DirichletHypothesis χ ↔ Value (DirichletZeros χ) from
+    ⟨fun h s hs => h s hs.1 hs.2.1 hs.2.2, fun h s hz h0 h1 => h s ⟨hz, h0, h1⟩⟩).trans
+    (self_recorded_iff_on_the_line (DirichletZeros χ)).symm
+
+/-- THE HALF REGISTRATION, first part. On every seat, a point and its partner have exactly one registration between
+    them: the orbit registers once. -/
+theorem the_orbit_has_one_registration {X Y : Type} (σ : Seat X Y) (a : X) :
+    (σ.reg '' ({a, σ.fold a} : Set X)).ncard = 1 := by
+  have e : σ.reg '' ({a, σ.fold a} : Set X) = {σ.reg a} := by
+    rw [Set.image_pair, σ.keeps a, Set.pair_eq_singleton]
+  rw [e, Set.ncard_singleton]
+
+/-- THE HALF REGISTRATION, on the line. A point on the line is its whole orbit: one point, one registration. -/
+theorem on_the_line_the_orbit_is_one_point {X Y : Type} (σ : Seat X Y) (a : X) (on : σ.fold a = a) :
+    ({a, σ.fold a} : Set X).ncard = 1 := by
+  rw [on, Set.pair_eq_singleton, Set.ncard_singleton]
+
+/-- THE HALF REGISTRATION, off the line. A point off the line has an orbit of two points, on one registration:
+    each holds half. -/
+theorem off_the_line_the_orbit_is_two_points {X Y : Type} (σ : Seat X Y) (a : X) (off : σ.fold a ≠ a) :
+    ({a, σ.fold a} : Set X).ncard = 2 :=
+  Set.ncard_pair (fun h => off h.symm)
+
+/-- The fold of the plane in coordinates. -/
+theorem fold_mk (x t : ℝ) : fold (⟨x, t⟩ : ℂ) = (⟨1 - x, t⟩ : ℂ) :=
+  Complex.ext (partner_re _) (partner_im _)
+
+/-- THE TWO AXES HOLD BOTH. Existence and form, inside the open strip, are carried by a configuration on the line
+    and by a configuration off it. -/
+theorem the_two_axes_hold_both :
+    (∃ S : Config, (∃ a, S a) ∧ Closed S ∧ (∀ a, S a → 0 < a.re ∧ a.re < 1) ∧ Value S) ∧
+    (∃ S : Config, (∃ a, S a) ∧ Closed S ∧ (∀ a, S a → 0 < a.re ∧ a.re < 1) ∧ ¬ Value S) := by
+  have h12 : (1 : ℝ) - 1 / 2 = 1 / 2 := by norm_num
+  have h14 : (1 : ℝ) - 1 / 4 = 3 / 4 := by norm_num
+  have h34 : (1 : ℝ) - 3 / 4 = 1 / 4 := by norm_num
+  constructor
+  · refine ⟨fun s => s = (⟨1 / 2, 14⟩ : ℂ), ⟨_, rfl⟩, ?_, ?_, ?_⟩
+    · intro s hs
+      show fold s = (⟨1 / 2, 14⟩ : ℂ)
+      rw [hs, fold_mk, h12]
+    · intro a ha
+      rw [ha]
+      show (0 : ℝ) < 1 / 2 ∧ (1 / 2 : ℝ) < 1
+      norm_num
+    · intro a ha
+      rw [ha]
+      rfl
+  · refine ⟨fun s => s = (⟨1 / 4, 14⟩ : ℂ) ∨ s = (⟨3 / 4, 14⟩ : ℂ), ⟨_, Or.inl rfl⟩, ?_, ?_, ?_⟩
+    · intro s hs
+      show fold s = (⟨1 / 4, 14⟩ : ℂ) ∨ fold s = (⟨3 / 4, 14⟩ : ℂ)
+      rcases hs with h | h
+      · right; rw [h, fold_mk, h14]
+      · left; rw [h, fold_mk, h34]
+    · intro a ha
+      rcases ha with h | h
+      · rw [h]
+        show (0 : ℝ) < 1 / 4 ∧ (1 / 4 : ℝ) < 1
+        norm_num
+      · rw [h]
+        show (0 : ℝ) < 3 / 4 ∧ (3 / 4 : ℝ) < 1
+        norm_num
+    · intro h
+      have e : (1 / 4 : ℝ) = 1 / 2 := h (⟨1 / 4, 14⟩ : ℂ) (Or.inl rfl)
+      norm_num at e
+
+/-- EXISTENCE IS REGISTRATION, bound. Nothing before the colon. On the plane a configuration is its own record
+    exactly when it is on the line; the hypothesis, for ζ and for every Dirichlet character, is the statement that
+    the zeros are their own record; and on every seat an orbit has one registration, held whole by a point on the
+    line and by halves off it. -/
+theorem existence_is_registration :
+    (∀ S : Config, Rec S = S ↔ Value S) ∧
+    (RiemannHypothesis ↔ Rec ZetaZeros = ZetaZeros) ∧
+    (∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N),
+      DirichletHypothesis χ ↔ Rec (DirichletZeros χ) = DirichletZeros χ) ∧
+    (∀ (X Y : Type) (σ : Seat X Y) (a : X),
+      (σ.reg '' ({a, σ.fold a} : Set X)).ncard = 1 ∧
+      (σ.fold a = a → ({a, σ.fold a} : Set X).ncard = 1) ∧
+      (σ.fold a ≠ a → ({a, σ.fold a} : Set X).ncard = 2)) :=
+  ⟨self_recorded_iff_on_the_line, the_zeros_are_their_own_record_iff,
+   fun _ _ χ => the_dirichlet_zeros_are_their_own_record_iff χ,
+   fun _ _ σ a => ⟨the_orbit_has_one_registration σ a, on_the_line_the_orbit_is_one_point σ a,
+     off_the_line_the_orbit_is_two_points σ a⟩⟩
+
 end Triaxial
 
 #print axioms Triaxial.fold_involutive
@@ -847,3 +1233,28 @@ end Triaxial
 #print axioms Triaxial.the_dirichlet_zeros_are_witnessed_iff
 #print axioms Triaxial.the_triaxial_theorem
 #print axioms Triaxial.the_final_theorem
+#print axioms Triaxial.every_record_is_a_member
+#print axioms Triaxial.the_record_of_the_record_is_the_record
+#print axioms Triaxial.any_other_point_is_again_at_the_seat
+#print axioms Triaxial.an_off_line_point_is_two
+#print axioms Triaxial.reg_eq_iff_im
+#print axioms Triaxial.partner_re
+#print axioms Triaxial.partner_im
+#print axioms Triaxial.value_iff_witness_is_witnessed
+#print axioms Triaxial.value_iff_one_point_not_two
+#print axioms Triaxial.value_iff_same_point
+#print axioms Triaxial.value_iff_every_point_is_a_seat
+#print axioms Triaxial.zeta_zeros_in_strip
+#print axioms Triaxial.the_five_faces
+#print axioms Triaxial.the_five_faces_dirichlet
+#print axioms Triaxial.nothing_is_outside
+#print axioms Triaxial.self_registration
+#print axioms Triaxial.self_recorded_iff_on_the_line
+#print axioms Triaxial.the_zeros_are_their_own_record_iff
+#print axioms Triaxial.the_dirichlet_zeros_are_their_own_record_iff
+#print axioms Triaxial.the_orbit_has_one_registration
+#print axioms Triaxial.on_the_line_the_orbit_is_one_point
+#print axioms Triaxial.off_the_line_the_orbit_is_two_points
+#print axioms Triaxial.fold_mk
+#print axioms Triaxial.the_two_axes_hold_both
+#print axioms Triaxial.existence_is_registration

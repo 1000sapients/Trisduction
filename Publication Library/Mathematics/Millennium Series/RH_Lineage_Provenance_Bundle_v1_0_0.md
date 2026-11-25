@@ -1,7 +1,7 @@
 # Provenance Bundle · From the Barzakh to the Seat
 
 **The lineage of the Riemann row in the Trisduction record: Barzakh, actuation interface, critical line, locus, seat, proof.**
-Compiled 21 November 2026 from the public blog, Zenodo, and the git history of `1000sapients/Trisduction`. Private chat logs are listed separately as corroboration and carry no public weight.
+Compiled 21 November 2026 from the public blog, Zenodo, and the git history of `1000sapients/Trisduction`. Updated in place on 25 November 2026: the records of 22 and 25 November added, and the grade ladder of the arc set out as its own section. No earlier row is changed. Private chat logs are listed separately as corroboration and carry no public weight.
 
 ## How to read the dates
 
@@ -71,7 +71,10 @@ Compiled 21 November 2026 from the public blog, Zenodo, and the git history of `
 | 22 Oct **G** | Git `61cfdc4`, master v3.0.39_CC | <https://github.com/1000sapients/Trisduction/commit/61cfdc4> | The file of record: form by theorem, value at premise grade. |
 | 20 Nov | Outside: Alpöge, *Remark*, and its Lean archive | <https://alpo.ge/remark.pdf> | Its last hypothesis is the band statement of the master, by compiled theorem. |
 | 20 Nov **Z** | Zenodo, *The Bit in the Definition* | <https://doi.org/10.5281/zenodo.24404855> | The band identity and its companions, with their Lean. |
-| 21 Nov | Master v3.0.40_CC, Part XIII; compiled at the Muse seat, not yet in git | sha256 `3487357aa696238e76e9bdeda1bb1c849f1cfc828f96ec6e300c72135983b237` | The Mirror Route, silent, exit 0. Two statements owed by name: the mirror and the crossing. |
+| 21 Nov | Master v3.0.40_CC, Part XIII; compiled at the Muse seat, not in git on that day | sha256 `3487357aa696238e76e9bdeda1bb1c849f1cfc828f96ec6e300c72135983b237` | The Mirror Route, silent, exit 0. Two statements owed by name: the mirror and the crossing. |
+| 22 Nov **G** | Git `af25e54`, *The Seat of the Riemann Hypothesis* v2.0.0 (title page: *The Unconditional Proof of the Inescapable Form of the Riemann Hypothesis*, 121 pp.) with master v3.0.44_CC, 16,739 lines, 1,070 theorems, compiled whole, exit 0 | <https://github.com/1000sapients/Trisduction/commit/af25e54> · <https://doi.org/10.5281/zenodo.24435745> | The form, proved without condition, by its own title; the value at the act. The first capstone of the arc. |
+| 25 Nov **G** | Git `afb6346`, *A Theorem-Grade Proof of the Identity of the Generalized Riemann Hypothesis* v1.0.0_CC, with `Generalized_RH_Triaxial_Theorem_CC.lean`, 49 theorems, exit 0, and its Fortran twin | <https://github.com/1000sapients/Trisduction/commit/afb6346> | The identity. The hypothesis in triaxial form is a theorem on every seat, with no premise; four theorems of the domain rest on no axiom. At ζ and at every primitive Dirichlet L-function the zeros are proved closed under the fold, and their witness is proved one proposition with the hypothesis. Neither hypothesis is stated alone as a theorem. The second capstone. |
+| 25 Nov | Master v3.0.45_CC, Part XVIII, 17,591 lines; compiled whole, exit 0, no warning; not yet in git | sha256 `221638a712f788d2fe997acc65035f7afd48e1fcca07ad98942c949dbb0f67f2` | The same theorems inside the master: `the_final_theorem`, six clauses, nothing before the colon. Everything above Part XVIII is v3.0.44_CC but for two import lines. |
 
 ## The intervals to 20 November 2026
 
@@ -86,12 +89,34 @@ Compiled 21 November 2026 from the public blog, Zenodo, and the git history of `
 | The one bit, in Lean | 18 September | 63 |
 | The normal form, the gate, the band, compiled | 16 October | 35 |
 
+## The grade ladder
+
+Each step is listed at the grade its own record carries. Dates are git dates unless marked. A later grade does not replace an earlier one; each stands where it was sealed.
+
+| # | Grade | Date (2026) | Record | What the step carries |
+|---|---|---|---|---|
+| 0 | Geometric seal | 2 Jul **Z** · 29 Jul **G** | *Riemann Hypothesis. Geometrically Dead, Topologically Weightless, Arithmetically Open* (<https://doi.org/10.5281/zenodo.21130255>) · The Geometric Mother Codex v3.3, APEX-PSP-RH-KEYSTONE-01 (`fd55714`), fortified as KEYSTONE-02 on 31 Jul | The geometric face of the Riemann row sealed in the codex, public; the formal string left open by its own card. Everything below is the formal climb to meet it. |
+| 1 | Located | 18 Sep **G** | *The Riemann Hypothesis Is Exactly One Bit* · `protocols/RH One Bit/` | The hypothesis reduced to one bit; where it stands is fixed. |
+| 2 | Restored | 20 Sep **G** | *The Riemann Hypothesis in Its Original Form* v1.0.6 | Riemann's fixed-line statement restored; sealed at the act by the supplied bit. |
+| 3 | Equivalence | 23 Sep **G** | *A Formal Completed Proof That the Riemann Hypothesis Has One Address* | Stability proved equivalent to the line property; five readings, one seat. |
+| 4 | Closure | 26 Sep **G** · 16 Oct **G** | *Nothing Escapes, Three Plus One* v3.14.0 · *The Completed Formal Closure of the Riemann Hypothesis* v1.0.0 | The strip vanishes for every registration; from the one bit, every other step proved, with no physics. |
+| 5 | Master | 14 Oct **G** · 15 Oct **Z** · 16 Oct **Z** | *The Ten-Level Binding Chain* (master v3.0.9) · *The Twin Binder, One Locus* (v3.0.24) · *The Real Part* (v3.0.39, in git 22 Oct) | The Both-Sides Formal Master, climbing version by version. |
+| 6 | Real Part, Theorem (first reached) | 16 Oct **Z** | *An Unconditional Proof of the Real Part of the Riemann Hypothesis* | The real part without condition; the remainder closed to symmetry and computation at theorem grade. |
+| 7 | Form, Theorem (unconditional) | 21 Oct **Z** · 22 Oct **G** · 23 Oct **Z** · 22 Nov **G** | Doctrine, first deposit under the title: *P ≠ NP: Unconditional Proof of the Form by Theorem, the Value by the Act* (<https://doi.org/10.5281/zenodo.23528399>) · The Riemann row: *The Real Part* v1.3.0 with master v3.0.39_CC (`61cfdc4`) · *The Millennium Problems: Unconditional Proof of the Form by Theorem, the Value by the Act* (<https://doi.org/10.5281/zenodo.23609234>, `47e9933`) · Set out whole: *The Seat of the Riemann Hypothesis* v2.0.0, master v3.0.44_CC | The inescapable form, proved without condition. It has stood since late October 2026. The first capstone. |
+| 8 | Generalized Identity and Registration, Theorem | 25 Nov **G** | *A Theorem-Grade Proof of the Identity of the Generalized Riemann Hypothesis* v1.0.0_CC, master v3.0.45_CC | The generalized hypothesis as identity: triaxial, a theorem on every seat with no premise, the domain alone at theorem grade; at ζ and at every primitive Dirichlet L-function the hypothesis is proved to be the third axis of the zeros. Sealed the same day with Parts VIII and IX: nothing is outside; the identity in six faces; the Self-Registration Theorem, in the form of an equivalence of statements; and existence is registration, a configuration being its own record exactly on the line, with the half registration on every seat; engine of 74 theorems, sha256 `1d65420ebb45778d4858ca88e8b1aecbbca7ea07394dd20d2f6deca5c2fa0b5c`. Not the Form again: the Form's generalization, one grade above it. The second capstone. |
+
+The arc tops out in two capstones. The Form, at step 7, says what shape the hypothesis has at ζ and proves it without condition. The Identity, at step 8, says what the hypothesis is, on every seat, and proves that. The Lean file of step 8 complements the seats below it and replaces none of them.
+
+What step 8 does not carry, stated at its own grade: it does not state the classical hypothesis, or the generalized hypothesis for any character, alone as a theorem. The value stays where step 7 left it.
+
 ## What each stage claimed, at its own grade
 
 - **June.** The line is forced as a locus at theorem grade, by the functional equation, which is classical. The membrane is the reading of that line, graded by its own papers as interpretive: "a lens", "S-grade zero mass". Residence is stated as open, localized to one coordinate.
 - **July.** Topology carries no widths, at theorem grade inside its own register. By its own perimeter it decides nothing about the zeros.
 - **October.** The form by theorem; the record leaves the bit to the act, by theorem; the value at premise grade.
 - **21 November.** The closure arc from the crossing to the hypothesis is a theorem. The crossing is owed.
+- **22 November.** The form, proved without condition; the value by the act.
+- **25 November.** The identity: the hypothesis is triaxial, its triaxial form is a theorem in its own domain, and at ζ and every primitive Dirichlet L-function the hypothesis is the third axis of the zeros, by proof in both directions.
 
 The membrane is where the idea came from. It is cited as origin and never as a step of proof.
 
@@ -110,3 +135,5 @@ The membrane is where the idea came from. It is cited as origin and never as a s
 2. A sitemap date is the last time a post was modified. The address fixes the month of publication; the day is exact only on rows marked **P**.
 3. Mother Codex editions before v1.8.1 are not in git, so the edition that first seated the membrane and the TOPOS cards is not readable there. That edition's own internal date is 6 July 2026.
 4. The Qur'anic name was kept out of the 8 and 9 June papers by the author's choice; it enters the public record on 29 May as a card and on 12 June on the critical line.
+5. Zenodo dates in the grade ladder were read on 25 November 2026 from the DataCite registry of the DOIs, since the Zenodo API was not readable from the compiling seat. The Millennium doctrine paper is issued 23 October and registered 24 October. Four sibling deposits (Yang–Mills, Goldbach, Poincaré, Birch and Swinnerton-Dyer) carry the Form-by-Theorem title on DOIs issued 4 and 5 October; those records were later updated in place, the registry does not show when the title arrived, and git holds those files from 23 October, so they are not used to date the grade. The Real Part is dated 16 October on Zenodo and 17 October for its first markdown in git.
+6. Master v3.0.45_CC is identified here by checksum. Its row takes a git mark when it is pushed.

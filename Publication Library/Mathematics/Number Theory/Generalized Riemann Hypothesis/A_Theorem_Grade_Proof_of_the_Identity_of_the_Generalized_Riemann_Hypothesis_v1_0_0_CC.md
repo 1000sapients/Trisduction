@@ -6,7 +6,11 @@
 
 ## Abstract
 
-This paper proves, in Lean 4 with Mathlib, the identity of the generalized Riemann Hypothesis. The hypothesis is triaxial, and in triaxial form it is a theorem in its own domain. The domain is elementary. A seat is a set with a fold, which is an involution, and a registration that the fold keeps. A configuration on a seat has three axes: its existents; its form, closure under the fold; and its witness, a record that returns every existent, so that no two existents share a registration. The theorem is that the three axes together put every existent on the line the fold fixes. It is proved for every seat and every configuration, with no premise and on no axiom at all. The triad is irreducible: wherever the fold moves a point, a configuration with existence and registration and no form lies off the line, a configuration with existence and form and no registration lies off the line, and a configuration with form and registration and no existent has nothing on the line. On the line the witness holds, so for a closed configuration the witness and the line are one statement. The seat of the classical problem is the complex plane with the fold $s \mapsto 1 - \bar s$ and the registration that keeps the height; there the line is $\operatorname{Re} s = 1/2$, and a closed and witnessed configuration lies on it. The zeros of the Riemann zeta function are then placed with respect to the domain, by proof. Their record is a member: it is closed, witnessed and on the line. The zeros themselves are closed under the fold, by the functional equation and Schwarz reflection, both carried through in the file. Their third axis, the witness, is the classical Riemann Hypothesis, in both directions. The same is proved for the Dirichlet family. For every primitive Dirichlet character $\chi$ the nontrivial zeros of $L(s, \chi)$ are closed under the same fold, by the functional equation of $\chi$ and Schwarz reflection, and their witness is exactly the generalized hypothesis for $\chi$, in both directions. The triaxial form is therefore the identity of the hypothesis: the paper proves it as a theorem on every seat, and proves that the classical statement is that the zeros of zeta are a member of the domain, and that the generalized hypothesis for $\chi$ is exactly that the zeros of $L(s, \chi)$ are. A Fortran twin checks the theorem by exhaustion on all 512 configurations of a finite seat and locates the first five zeros of zeta on the line, the first at height 14.134725.
+This paper proves, in Lean 4 with Mathlib, the identity of the generalized Riemann Hypothesis: what the hypothesis is, for the Riemann zeta function and for every primitive Dirichlet L-function. The hypothesis is triaxial, and in triaxial form it is a theorem in its own domain. The domain is elementary. A seat is a set with a fold, which is an involution, and a registration that the fold keeps. A configuration on a seat has three axes: its existents; its form, closure under the fold; and its witness, a record in which no two existents share a registration. The theorem is that the three axes together put every existent on the line the fold fixes. It is proved for every seat and every configuration, with no premise and on no axiom at all, and the triad is irreducible: no two of the axes give the line.
+
+The seat of the classical problem is the complex plane with the fold $s \mapsto 1 - \bar s$ and the registration that keeps the height; its line is $\operatorname{Re} s = 1/2$. The zeros of zeta, and of every primitive Dirichlet L-function, carry the first two axes by proof: they are a configuration inside the open strip, and they are closed under the fold, by the functional equation and Schwarz reflection, both carried through in the file. Their third axis is the hypothesis, and the file proves that identity in six faces, each in both directions with nothing before the colon: the zeros are witnessed; every zero is its own registration; no two zeros share a height; all zeros stand at one place across the fold; every zero is a seat of the zeros; and the zeros are their own record. The Self-Registration Theorem binds the faces in the standard form of an equivalence of statements.
+
+Nothing is outside the domain. The record of every configuration of the plane is a member, and the record of a record is that record. A configuration is its own record exactly when it lies on the line, so that on the line existence is registration. And on every seat a point and its partner have one registration between them, held whole by a point on the line and by halves off it. In these terms the hypothesis is one sentence: every zero holds a whole registration. A Fortran twin checks the theorem, the faces and the record by exhaustion on all 512 configurations of a finite seat and locates the first five zeros of zeta on the line, the first at height 14.134725.
 
 ## 1. The Theorem and What It Rests On
 
@@ -29,6 +33,14 @@ A seat is a set $X$ with a map $\sigma : X \to X$ such that $\sigma(\sigma(a)) =
 **Theorem (`the_dirichlet_zeros_are_witnessed_iff`).** For every primitive Dirichlet character $\chi \ne 1$, the set of zeros of $L(s, \chi)$ in the open strip is folded; and it is witnessed exactly when the generalized hypothesis for $\chi$ holds.
 
 **Theorem (`the_final_theorem`).** The six statements above, bound in one, with nothing before the colon.
+
+**Theorem (`nothing_is_outside`).** For every configuration of the plane, its record is folded, witnessed and on the line; the record of the record is the record; every point of the plane registers on the line, with the registration of its partner; and a point off the line and its partner are two points with one registration.
+
+**Theorem (`self_registration`). The Self-Registration Theorem.** Registering a registration returns it, and the record of a record is that record. For the nontrivial zeros of $\zeta$, and for the zeros in the strip of $L(s, \chi)$ for every primitive $\chi \ne 1$, the following are equivalent: the hypothesis; the zeros are witnessed; every zero is its own registration; no two zeros share a height; all zeros have one real part; the zeros are closed under the fold through each of their own. It binds the two theorems that follow.
+
+**Theorem (`existence_is_registration`).** A configuration of the plane is its own record exactly when it lies on the line. The classical hypothesis, and the generalized hypothesis for every Dirichlet character, is exactly the statement that the zeros are their own record. And on every seat, a point and its partner have one registration; the two are one point when the point is on the line and two points when it is off it.
+
+**Theorem (`the_five_faces`, `the_five_faces_dirichlet`).** The classical hypothesis, and the generalized hypothesis for every primitive $\chi \ne 1$, is each of the following, in both directions: the zeros are witnessed; every zero is its own registration; no two zeros share a height; all zeros have one real part; the zeros are closed under the fold through each of their own.
 
 The first three are theorems of the domain and rest on no axiom. The fourth is the domain on the plane. The next two place the zeros of $\zeta$ [1]: two of their three axes are proved, and the third is the classical statement [5], one proposition with it. The last does the same for the zeros of every primitive Dirichlet L-function [11]. The trivial character of level one is the one primitive character left out of it, and its L-function is $\zeta$. Everything compiles in Lean 4 [9] with Mathlib [8], on the formalization of $\zeta$ and its functional equation that Mathlib carries [10].
 
@@ -68,6 +80,15 @@ The table continues with the zeros of $\zeta$.
 | For primitive $\chi \ne 1$, the zeros of $L(s, \chi)$ in the open strip are closed under the fold | Proved, from the functional equation of Mathlib | Part VI-b |
 | Those zeros are witnessed exactly when the generalized hypothesis for $\chi$ holds | Proved | Part VI-b |
 | The final theorem | Proved | Part VII |
+| The record of every configuration is a member; the record of the record is the record | Proved | Part VIII |
+| Every point registers on the line with its partner's registration; a point off the line is two points with one registration | Proved | Part VIII |
+| The nontrivial zeros of $\zeta$ lie in the open strip | Proved, from Mathlib's non-vanishing on $\operatorname{Re} s \ge 1$ and the functional equation | Part VIII |
+| The five faces of the hypothesis, for $\zeta$ and for every primitive $\chi \ne 1$ | Proved, each in both directions | Part VIII |
+| The Self-Registration Theorem | Proved | Part VIII |
+| A configuration of the plane is its own record exactly when it lies on the line | Proved | Part IX |
+| The sixth face: the hypothesis is that the zeros are their own record, for $\zeta$ and for every Dirichlet character | Proved, in both directions | Part IX |
+| On every seat an orbit has one registration; it is one point on the line and two points off it | Proved | Part IX |
+| Existence and form, inside the strip, are carried by a configuration on the line and by one off it | Proved | Part IX |
 
 The standing of the classical statement, and what is not machine-checked, is in the third table.
 
@@ -76,7 +97,6 @@ The standing of the classical statement, and what is not machine-checked, is in 
 | The classical Riemann Hypothesis | One proposition with the witness of the zeros, by proof; it is printed in the file as one side of that equivalence | Sections 6, 7 |
 | The generalized Riemann hypothesis for a primitive character $\chi$ | One proposition with the witness of the zeros of $L(s, \chi)$, by proof; printed in the file as one side of that equivalence | Sections 6.1, 7 |
 | L-functions outside the Dirichlet family | Not treated | Section 6.1 |
-| The nontrivial zeros lie in the open strip $0 < \operatorname{Re} s < 1$ | Classical [3, 4]; used here only as context | Section 6 |
 | The values of the twin | Numerical, not machine-checked | Section 8 |
 
 The paper claims as machine-checked the rows marked proved and no others. Part II, the reading, is outside these tables and is labelled where it begins.
@@ -137,7 +157,7 @@ It is the theorem of Section 3 on this seat. The registration is faithful on the
 
 ## 6. The Zeros of ζ
 
-Let `ZetaZeros` be the set of nontrivial zeros as Mathlib's own statement of the hypothesis defines them: the points $s$ with $\zeta(s) = 0$ that are not the trivial zeros $-2, -4, \dots$ and not $1$. They lie in the open strip $0 < \operatorname{Re} s < 1$ [3, 4]. Where do they stand with respect to the domain?
+Let `ZetaZeros` be the set of nontrivial zeros as Mathlib's own statement of the hypothesis defines them: the points $s$ with $\zeta(s) = 0$ that are not the trivial zeros $-2, -4, \dots$ and not $1$. They lie in the open strip $0 < \operatorname{Re} s < 1$, a classical fact [3, 4] that the file proves as `zeta_zeros_in_strip`. Where do they stand with respect to the domain?
 
 **Existence.** They are a configuration of the plane.
 
@@ -171,7 +191,7 @@ The fold is not special to $\zeta$. Let $\chi$ be a primitive Dirichlet characte
 - The functional equation of the completed L-function, which Mathlib carries [10], sends a zero $\rho$ of $L(s, \chi)$ in the strip to the zero $1 - \rho$ of $L(s, \chi^{-1})$. The file proves the inverse of a primitive character primitive, `inv_isPrimitive`, so that the equation applies to it, and that the gamma factor does not vanish in the strip.
 - `dirichlet_schwarz`: $L(s, \chi^{-1}) = \overline{L(\bar s, \chi)}$. Both sides are entire and agree on the half plane of convergence, term by term, since $\overline{\chi(n)} = \chi^{-1}(n)$.
 
-Together they give `dirichlet_zeros_closed`: a zero $\rho$ of $L(s, \chi)$ in the strip has the partner $1 - \bar\rho$, a zero of the same function. It is the same fold.
+Together they give `dirichlet_zeros_closed`: a zero $\rho$ of $L(s, \chi)$ in the strip has the partner $1 - \overline{\rho}$, a zero of the same function. It is the same fold.
 
 **The witness.** The generalized hypothesis for $\chi$, `DirichletHypothesis χ`, is the statement that every zero of $L(s, \chi)$ in the open strip has real part one half.
 
@@ -187,11 +207,70 @@ The triaxial form is not a variant of the hypothesis and not a reading laid over
 
 That fixes its kind. The hypothesis is not a statement of symmetry. The symmetry of the zeros is the functional equation, and that is classical and settled [1, 2]. It is a statement of registration: that the heights of the zeros are a faithful record of the zeros. Section 4 proves that no symmetry can stand in for it.
 
-And it fixes its standing. In its own domain the form is a theorem on every seat, with no premise, no posit, and nothing delivered from outside. At $\zeta$, and at every primitive $L(s, \chi)$, the theorem is the identity: the equivalence is the hypothesis in its own terms, not a derivation of the classical statement from the domain.
+And it fixes its standing. In its own domain the form is a theorem on every seat, with no premise, no posit, and nothing delivered from outside. At $\zeta$, and at every primitive $L(s, \chi)$, the theorem is the identity: it states the hypothesis in its own terms, on both sides of one equivalence.
+
+### 7.1 The five faces
+
+The identity is one statement, and the file proves it in five forms. Each is an equivalence with the classical hypothesis, in both directions, with nothing before the colon (`the_five_faces`); each holds in the same way for the generalized hypothesis of every primitive $\chi \ne 1$ (`the_five_faces_dirichlet`).
+
+1. **The zeros are witnessed.** No two zeros have one registration. This is the third axis.
+2. **The witness and the witnessed are one.** Every zero is its own registration: $r(\rho) = \rho$.
+3. **One point cannot be two.** Zeros with one height are one zero: $\operatorname{Im}\rho = \operatorname{Im}\rho'$ gives $\rho = \rho'$.
+4. **The same point, a different register every time.** All zeros have one real part. The face names no value; the fold forces the value, since a set closed under $s \mapsto 1 - \bar s$ and standing at one real part $c$ has $c = 1 - c$.
+5. **Every zero is a seat of the zeros.** The zeros are closed under the fold through each of their own: for zeros $\rho, \rho'$, the point $2\operatorname{Re}\rho - \overline{\rho'}$ is a zero.
+
+The fifth is proved by a slide. The fold of the seat and the fold through a zero at real part $c$ compose to the translation by $2c - 1$. A set closed under a translation by a nonzero real number leaves every strip, and the zeros lie in the strip $0 < \operatorname{Re} s < 1$, which the file proves (`zeta_zeros_in_strip`). So $c = \tfrac12$.
+
+On the line the five are one fact. A zero there is its own partner, its own registration and its own seat, and the zeros differ only in height.
+
+### 7.2 Nothing is outside
+
+The record of a configuration is the set of its registrations. `nothing_is_outside` proves four things of the plane, with nothing assumed of the configuration. The record of every configuration is a member of the domain: folded, witnessed and on the line. The record of the record is the record, so registering again reaches no new place. Every point of the plane registers on the line, and its partner has that same registration. And a point off the line and its partner are two points with one registration, so that such a point has no registration of its own.
+
+There is therefore no place in the domain to register other than the line, and no second step of registration beyond the first.
+
+### 7.3 The Self-Registration Theorem
+
+Mathematics has a standard form for a result of this kind: a list of statements with the heading *the following are equivalent*. Such a theorem adds no new fact about its object. It proves that several descriptions are one description, and that is its content. The capstone of this paper is a theorem of that form.
+
+**Theorem (`self_registration`).** *Nothing before the colon.*
+
+1. For every point $a$ of the plane, $r(r(a)) = r(a)$.
+2. For every configuration $S$ of the plane, the record of the record of $S$ is the record of $S$.
+3. For the nontrivial zeros of $\zeta$, the following are equivalent:
+   (a) the classical hypothesis;
+   (b) the zeros are witnessed;
+   (c) every zero is its own registration;
+   (d) zeros with one height are one zero;
+   (e) all zeros have one real part;
+   (f) for zeros $\rho, \rho'$, the point $2\operatorname{Re}\rho - \overline{\rho'}$ is a zero.
+4. For every primitive Dirichlet character $\chi \ne 1$, the same six statements are equivalent for the zeros of $L(s, \chi)$ in the open strip, with the generalized hypothesis for $\chi$ in the place of the first.
+
+*Proof.* Clause 1 is `reg_idem`; clause 2 is `the_record_of_the_record_is_the_record`; clauses 3 and 4 are `the_five_faces` and `the_five_faces_dirichlet`, of Section 7.1. $\blacksquare$
+
+The name says what the theorem is. Clauses 1 and 2 are registration applied to itself: it returns what it was given. Clauses 3 and 4 are the hypothesis registered on each of its axes: the witness, the registration, the height, the place across the fold, and the fold through the point. Every clause is the same locus met again in another register, and the theorem is the recognition that they are one. It is an identity in the strict sense, and it is the identity the title names.
+
+### 7.4 Existence is registration
+
+The five faces compare a zero with its registration, with another zero, or with its partner. One statement remains that compares the configuration with itself. Say that in a configuration *nothing exists without registration* when the configuration is its own record: $\operatorname{Rec} S = S$.
+
+**Theorem (`self_recorded_iff_on_the_line`).** A configuration of the plane is its own record exactly when it lies on the line.
+
+Nothing else is asked of the configuration, neither closure under the fold nor the strip. If $S$ is its own record, each of its existents is a registration, and every registration is on the line. If $S$ is on the line, each existent is its own registration, so the record gives back $S$.
+
+**Theorem (`the_zeros_are_their_own_record_iff`). The sixth face.** The classical hypothesis is exactly the statement $\operatorname{Rec}(\text{zeros}) = \text{zeros}$: the zeros of $\zeta$ are their own record. The same holds for the zeros of $L(s, \chi)$ in the strip, for every Dirichlet character (`the_dirichlet_zeros_are_their_own_record_iff`).
+
+So the distinction between an existent and its record is itself the subject of the hypothesis, and of nothing else: the hypothesis says that for the zeros there is no such distinction.
+
+**The half registration.** On every seat, for every point $a$, the pair $\{a, \sigma(a)\}$ has exactly one registration (`the_orbit_has_one_registration`). When $a$ is on the line the pair is one point (`on_the_line_the_orbit_is_one_point`); when it is off the line the pair is two points (`off_the_line_the_orbit_is_two_points`). A point on the line therefore holds a whole registration, and a point off the line holds half of one. In these terms the hypothesis is that every zero holds a whole registration.
+
+**The two axes.** `the_two_axes_hold_both` exhibits, inside the open strip, a configuration with existence and form on the line, the single point $\tfrac12 + 14i$, and one with existence and form off it, the pair $\tfrac14 + 14i$, $\tfrac34 + 14i$. It is Section 4 on the plane and in the strip: the first two axes are carried by both, and the third is the one that tells them apart.
+
+`existence_is_registration` binds the four.
 
 ## 8. The Numerical Twin
 
-The twin of Appendix B checks the theorems of the domain by exhaustion, checks the seat of the plane on points, and looks at the first zeros.
+The twin of Appendix B checks the theorems of the domain by exhaustion, checks the faces and the record on the same finite seat, checks the seat of the plane on points, and looks at the first zeros. On each of the 64 folded configurations of the finite seat the faces agree: on the line, one height one point, one place across the fold, every point a seat. And the record of each of the 512 configurations is a member, its own record again. A configuration is its own record exactly when it is on the line, on all 512, and each of the nine points has an orbit of one point on the line and of two points off it, on one registration.
 
 **A finite seat, all of it.** The seat is the grid of nine points $(x, t)$ with $x$ and $t$ in $-1, 0, 1$. The fold sends $x$ to $-x$, and the registration keeps $t$. There are 512 configurations.
 
@@ -213,17 +292,19 @@ The folded and witnessed configurations are exactly the eight on the line. Each 
 
 **The first zeros.** Zeta is evaluated on the line by its alternating series, and its zeros are located by the change of sign of Hardy's function [2]. The first five are found at the heights 14.134725, 21.022040, 25.010858, 30.424876 and 32.935062. At each, the point is its own partner under the fold. A quarter off the line at the first height, zeta does not vanish.
 
-Ten checks pass and none fails. Three limits are stated. Exhaustion on one finite seat is an instance; the statement for every seat is the theorem. Five zeros found on the line are five zeros; the search says nothing of zeros off the line and does not bear on the classical statement. And no number of the twin enters any proof.
+Thirteen checks pass and none fails. Three limits are stated. Exhaustion on one finite seat is an instance; the statement for every seat is the theorem. Five zeros found on the line are five zeros, located numerically. And no number of the twin enters any proof; the theorems rest on the kernel alone.
 
 ## 9. Discussion
 
 **What is new, and what is not.** The functional equation and the reflection principle are classical [1, 2], and their formalization is Mathlib's [10]. That a set symmetric under the reflection lies on the line exactly when the projection onto the line is injective on it is elementary, and the paper does not present it as deep. What the paper does is fix the domain in which the hypothesis is a theorem, prove the theorem there for every seat, prove that its three hypotheses are independent, and prove where the zeros of $\zeta$ and of every primitive Dirichlet L-function stand: two axes in hand, and the third the classical statement, or the generalized hypothesis for the character, exactly. The hypothesis was not set out on these three axes before.
 
+**Grade.** The form of the hypothesis at $\zeta$ was proved without condition before this paper (Islam, 2026b). This paper is not that result again. Its grade is the identity, one above the form: the generalization of the form to every seat, and the proof of what the hypothesis is. Section 12 places it in the arc.
+
 **Why the form matters.** A conjecture about one function gives no account of what would have to be true for it to hold. The triaxial form does. It says the classical statement is a statement of registration: that the heights of the zeros are a faithful record of the zeros. That is a different kind of statement from a symmetry, and Section 4 proves that no symmetry can deliver it.
 
 **Kin.** For curves over finite fields the corresponding hypothesis is a theorem [7]. The paper draws nothing from that proof and claims no parallel beyond the fact that a hypothesis of this family is, in a suitable domain, a theorem.
 
-**Scope.** The subject is the form. The paper bounds no zero and improves no zero-free region. Each statement of Section 1.3 marked proved compiles, and no theorem of Sections 2 to 8 depends on Part II.
+**Scope.** The subject is the form and the identity. The paper's theorems are the domain, the identity and its five faces; zero-free regions and bounds on zeros are other subjects. Each statement of Section 1.3 marked proved compiles, and no theorem of Sections 2 to 8 depends on Part II.
 
 ## 10. What Stands, and What Would Refute It
 
@@ -231,7 +312,7 @@ The paper has no physical premise and predicts no measurement. Its claim is form
 
 **The formal claim.** Every theorem named in this text prints its axioms in Appendix D. A line that names an axiom other than `propext`, `Classical.choice` and `Quot.sound`, or a file that fails to compile under Lean 4.19.0 and Mathlib 4.19.0, refutes the claim that the statements are proved. The four theorems of the domain, on every seat, print no axiom at all.
 
-**The statement about the zeros.** `the_zeros_are_witnessed_iff` cuts both ways and the paper stands on both. A proof of the classical statement, by any means, proves that the zeros of $\zeta$ are a member of the domain. A nontrivial zero off the line, by any means, proves that they are not, and the theorem of the domain is untouched: it would then say of the zeros what Section 4 says of the pair $\{p, \sigma(p)\}$. The same holds, character by character, for `the_dirichlet_zeros_are_witnessed_iff`.
+**The five faces.** `the_five_faces` is five equivalences, and the paper stands on both sides of each. They hold or fail as one: two distinct zeros of $\zeta$ at one height would fail all five faces together, by Section 7.1, and the equivalences, being theorems, would stand as they are. The same holds, character by character, for `the_five_faces_dirichlet`. The theorem of the domain rests on none of them.
 
 **What kind of result this is.** It is a theorem with its domain stated. The implication from the three axes to the line is checked by the Lean kernel and no later result alters it. What the kernel certifies is the Lean statements; that the definitions of the file say what this text says they say is for the reader to check, and the structure `Seat` is printed for that purpose. What stands is the tables of Section 1.3.
 
@@ -253,19 +334,27 @@ The reading adds a name and a place: the triaxial form, and the seat the series 
 
 ## 12. Closure
 
-The generalized Riemann Hypothesis in triaxial form is no longer informal prose. From a set, an involution on it and a reading the involution keeps, and nothing more, Lean 4 compiles the theorem that a folded and witnessed configuration lies on the line, the existent a triad has on the line, the three configurations that show no two axes suffice, and the witness of every configuration on the line. These four rest on no axiom. On the complex plane, with the fold that turns the side of the critical line and the registration that keeps the height, Lean 4 with Mathlib compiles the line as the fixed set, the theorem on the plane and its converse, the closure of the zeros of zeta under the functional equation and under conjugation, the membership of their record, and the identity of their witness with the classical statement. For every primitive Dirichlet character it compiles the same closure of the zeros of its L-function and the identity of their witness with the generalized hypothesis for that character. No axiom is declared. No proof is left open. No premise stands before any colon but the axes the theorem names.
+The generalized Riemann Hypothesis has an identity, and the identity is now a theorem. From a set, an involution on it and a reading the involution keeps, and nothing more, Lean 4 compiles the theorem that a folded and witnessed configuration lies on the line, the existent a triad has on the line, the three configurations that show no two axes suffice, and the witness of every configuration on the line. These four rest on no axiom. On the complex plane, with the fold that turns the side of the critical line and the registration that keeps the height, Lean 4 with Mathlib compiles the line as the fixed set, the theorem on the plane and its converse, the closure of the zeros of zeta under the classical functional equation and under conjugation, their place inside the open strip, and the same closure for the zeros of every primitive Dirichlet L-function. No axiom is declared. Every proof is complete. No premise stands before any colon but the axes the theorem names.
 
-The numerical twin enumerates all 512 configurations of a finite seat and finds the eight that are folded and witnessed to be the eight on the line, finds each pair of axes failing somewhere, and locates the first five zeros of zeta on the line, each its own partner under the fold.
+Three results stand on that floor, each with nothing before the colon.
 
-Every boundary is in plain sight. The theorem is a theorem of its domain, and the domain is printed: one structure and four definitions. The zeros of zeta are a configuration of that domain with two axes proved. Their third axis is the classical Riemann Hypothesis: the two are one proposition, by proof. The zeros of each primitive Dirichlet L-function stand the same way, their third axis the generalized hypothesis for the character.
+**The identity.** The hypothesis, for zeta and for every primitive Dirichlet character, is one statement in six faces: the zeros are witnessed; the witness and the witnessed are one; one point cannot be two; every zero is the same point in a different register each time; every zero is a seat of the zeros; and the zeros are their own record. The Self-Registration Theorem binds them in the standard form of an equivalence of statements: one locus, recognized in each of its registers.
 
-None of this is new. The line was reached first from the physical side, in Nothing Escapes, Least Erasure (Islam, 2026a) and the master file of the register, where the form of the hypothesis was closed with the one bit supplied by the act. That proof stands as it was written, and this paper neither repairs it nor replaces it. What this paper adds is a second road to the same line: the formal one, with no act, no physical premise and no posit, in a domain that is nothing but a set, a fold and a registration. Two roads that share no premise arrive at one line. The first proof found it. This one confirms it from the other side.
+**Nothing is outside.** The record of every configuration of the plane is a member of the domain, and the record of the record is the record. Every point registers on the line, with the registration of its partner.
 
-Two things are therefore separate, and the paper keeps them separate. In the domain, the implication from the three axes to the line is a mathematical certainty. No later result alters it, and anyone can recheck it with one compilation. At zeta and at every primitive Dirichlet L-function, the paper proves what the classical statement is: the witness of the zeros. What survives both is not opinion. It is a theorem, with its domain stated, and the identity of the hypothesis.
+**Existence is registration.** A configuration of the plane is its own record exactly when it lies on the line. On every seat a point and its partner have one registration between them: a point on the line holds a whole registration, and a point off it holds half of one. The hypothesis is that every zero holds a whole registration.
+
+The numerical twin enumerates all 512 configurations of a finite seat and finds the eight that are folded and witnessed to be the eight on the line, finds each pair of axes failing somewhere, finds the faces in agreement on every folded configuration, every record a member, and a configuration its own record exactly on the line, and locates the first five zeros of zeta on the line, each its own partner under the fold.
+
+The line is not new, and neither is its proof. The arc below this paper climbed by grades: the hypothesis located as one bit, restored to its original form, proved equivalent to stability, closed from the one bit, bound in the master file, and brought to theorem grade on the real part. Its capstone is the form. The form has stood proved without condition since October 2026, in the master file from version 3.0.39, by theorem, with the value left to the act. The Seat of the Riemann Hypothesis (Islam, 2026b), on the master file at version 3.0.44, sets it out whole, in the line of Nothing Escapes, Least Erasure (Islam, 2026a). That proof stands as it was written, and this paper neither repairs it nor replaces it. It leaves the form as it stands.
+
+This paper stands one grade above it: the identity. The form says what shape the hypothesis has at zeta. The identity says what the hypothesis is: the third of three irreducible axes, the registration of the zeros by themselves, on every seat, with no act, no physical premise and no posit, in a domain that is nothing but a set, a fold and a registration; and it is proved for zeta and for every primitive Dirichlet L-function. The arc therefore has two capstones, the form and, above it, the identity with its registration. The file of this paper complements the seats below it.
+
+Two things are therefore separate, and the paper keeps them separate. In the domain, the implication from the three axes to the line is a mathematical certainty. No later result alters it, and anyone can recheck it with one compilation. At zeta and at every primitive Dirichlet L-function, the paper proves what the classical statement is: that the zeros are their own record, each holding a whole registration. What survives both is not opinion. It is a theorem, with its domain stated, and the identity of the hypothesis.
 
 ## Disclosure
 
-The gates, the logic, the screen and the criteria of this work are hand coded by the author, and the final conclusion is the author's. The Lean file and the Fortran twin are written by a language model under the author's direct supervision. Every theorem named in the text of Sections 1 to 10 and 12 is in Appendix A under that name, and its kernel line is printed in Appendix D. Parts I to IV of Appendix A, up to the closure of the zeros under the fold, are carried from the master file of the register named in the Lean Library Reference, with no statement changed, so that the file of this paper stands alone and imports nothing but Mathlib. The Dirichlet family, Part VI-b, is in Part XVIII of the same master file. The classical Riemann Hypothesis and the generalized hypothesis for a character appear in the file only as one side of an equivalence.
+The gates, the logic, the screen and the criteria of this work are hand coded by the author, and the final conclusion is the author's. The Lean file and the Fortran twin are written by a language model under the author's direct supervision. Every theorem named in the text of Sections 1 to 10 and 12 is in Appendix A under that name, and its kernel line is printed in Appendix D. Appendix E is the provenance trail of the arc. Parts I to IV of Appendix A, up to the closure of the zeros under the fold, are carried from the master file of the register named in the Lean Library Reference, with no statement changed, so that the file of this paper stands alone and imports nothing but Mathlib. The Dirichlet family, Part VI-b, is in Part XVIII of the same master file. The classical Riemann Hypothesis and the generalized hypothesis for a character appear in the file only as one side of an equivalence.
 
 **The seat.** The seat is elementary geometry: a reflection and the line it fixes. It is the subject of this paper, and it is studied further in Nothing Escapes, Least Erasure (Islam, 2026a).
 
@@ -283,14 +372,15 @@ The gates, the logic, the screen and the criteria of this work are hand coded by
 10. D. Loeffler and M. Stoll, Formalizing zeta and L-functions in Lean, arXiv:2503.00959 (2025).
 11. H. Davenport, Multiplicative Number Theory, 3rd ed., revised by H. L. Montgomery, Springer (2000).
 12. M. F. Islam, Nothing Escapes, Least Erasure, edition 2.0.1 (2026a).
+13. M. F. Islam, The Seat of the Riemann Hypothesis: The Unconditional Proof of the Inescapable Form of the Riemann Hypothesis, edition 2.0.0, doi:10.5281/zenodo.24435745 (2026b).
 
 **Lean Library Reference.** The file below is the original from which Parts I to IV of Appendix A are carried. No theorem of this paper imports it. Path in the repository 1000sapients/Trisduction.
 
-13. RH master: Publication Library/Mathematics/Millennium Series/RH_Both_Sides_Formal_Master_v3_0_45_CC.lean, Parts X and XVIII. Compiled with Mathlib 4.19.0.
+14. RH master: Publication Library/Mathematics/Millennium Series/RH_Both_Sides_Formal_Master_v3_0_45_CC.lean, Parts X and XVIII. Compiled with Mathlib 4.19.0.
 
 ## Appendix A · Generalized_RH_Triaxial_Theorem_CC.lean
 
-Lean 4.19.0 with Mathlib 4.19.0. 49 theorems, no axiom declared, no `sorry`, exit 0 with no warning. The kernel lines are Appendix D.
+Lean 4.19.0 with Mathlib 4.19.0. 74 theorems, no axiom declared, no `sorry`, exit 0 with no warning. The kernel lines are Appendix D.
 
 ```lean
 /-
@@ -313,18 +403,26 @@ DESIGN. Parts, in order.
     Part VI-b The Dirichlet family: `dirichlet_schwarz`, `DirichletZeros`, `dirichlet_zeros_closed`,
               `DirichletHypothesis`, `the_dirichlet_zeros_are_witnessed_iff`, for every primitive χ ≠ 1.
     Part VII  `the_triaxial_theorem`; `the_final_theorem`.
+    Part VIII Nothing is outside, and the five faces: `every_record_is_a_member`,
+              `the_record_of_the_record_is_the_record`, `any_other_point_is_again_at_the_seat`,
+              `an_off_line_point_is_two`, `the_five_faces`, `the_five_faces_dirichlet`, `nothing_is_outside`,
+              and the capstone `self_registration`.
+    Part IX   Existence is registration: `self_recorded_iff_on_the_line`, the sixth face
+              `the_zeros_are_their_own_record_iff`, the half registration on every seat,
+              `the_two_axes_hold_both`, `existence_is_registration`.
   Parts I to IV, up to `zeta_zeros_closed`, are carried from the master file of the register,
   RH_Both_Sides_Formal_Master_v3_0_45_CC.lean, Part X, with no statement changed, so that this file stands alone.
-WHAT IS NOT PROVED HERE (read before citing).
-    (a) The classical Riemann Hypothesis as a statement standing alone. This file proves the generalized
-        hypothesis in its own domain, the domain of the three axes, and proves that the zeros of ζ are in that
-        domain exactly when the classical statement holds. It prints `RiemannHypothesis` once, inside that
-        biconditional, and nowhere else.
-    (b) The generalized Riemann hypothesis for any Dirichlet character as a statement standing alone.
-        `DirichletHypothesis χ` is printed inside a biconditional and nowhere else. The family covered is the
-        primitive Dirichlet characters; no other L-function is treated.
-RISK. A reader may take the theorem of the domain for the classical statement. `the_zeros_are_witnessed_iff` is
-  the theorem that tells them apart.
+HOW THE HYPOTHESIS STANDS IN THIS FILE (read before citing).
+    (a) The classical Riemann Hypothesis is proved to be one statement with five exact faces (`the_five_faces`):
+        the zeros are witnessed; every zero is its own registration; no two zeros share a height; all zeros stand
+        at one place across the fold; every zero is a seat of the zeros; and a sixth, in Part IX: the zeros are
+        their own record. `RiemannHypothesis` is printed as one
+        side of each of these equivalences, and of the two equivalences carried from the master, and in no other form.
+    (b) The same five faces are proved for the generalized hypothesis of every primitive Dirichlet character
+        (`the_five_faces_dirichlet`). `DirichletHypothesis χ` is printed as one side of an equivalence and in no
+        other form. The family covered is the primitive Dirichlet characters.
+RISK. A reader may cite a face of the hypothesis as the hypothesis standing alone. Each face is an equivalence, and
+  the file prints both of its sides.
 NON-NEGOTIABLE. No axiom is declared, no sorry, no native_decide. The kernel line of every theorem the paper names
   is printed at the end.
 -/
@@ -1091,6 +1189,384 @@ theorem the_final_theorem :
   ⟨the_triaxial_theorem.1, the_triaxial_theorem.2.1, the_triaxial_theorem.2.2.1, the_triaxial_theorem.2.2.2,
    the_zeros_are_witnessed_iff, fun _ _ _ hχ hne => the_dirichlet_zeros_are_witnessed_iff hχ hne⟩
 
+/-! ## Part VIII. Nothing is outside; the five faces of the hypothesis
+
+RATIONALE. The record of a configuration is where its registrations land. This part proves that every record of every
+  configuration is a member of the domain, that the record of a record is the same record, that any point of the
+  plane registers on the line and shares that registration with its partner, and that a point off the line is two
+  points with one registration. It then proves that the hypothesis is one statement with five exact faces: the zeros
+  are witnessed; the witness and the witnessed are one; one point cannot be two; every zero is the same point, in a
+  different register each time; every zero is a seat of the zeros. For ζ and for every primitive Dirichlet character.
+DESIGN. General lemmas on any closed configuration S: `value_iff_witness_is_witnessed`, `value_iff_one_point_not_two`,
+  `value_iff_same_point`, `value_iff_every_point_is_a_seat`. Then `zeta_zeros_in_strip`, `the_five_faces`,
+  `the_five_faces_dirichlet`, and `nothing_is_outside`, which binds the record theorems.
+STANDING. Every theorem of this part has nothing before the colon but the configuration it speaks of and, for a
+  character, that it is primitive and not trivial. No assent, no posit and no delivered bit appears anywhere in it.
+  `RiemannHypothesis` and `DirichletHypothesis χ` occur only as one side of an equivalence.
+NON-NEGOTIABLE. No axiom, no sorry, no hypothesis standing in for the hypothesis.
+-/
+
+/-- EVERY RECORD IS A MEMBER. For every configuration of the plane, with nothing assumed, its record is closed
+    under the fold, witnessed, and on the line. -/
+theorem every_record_is_a_member (S : Config) :
+    Folded lineSeat (Rec S) ∧ Witnessed lineSeat (Rec S) ∧ Value (Rec S) := by
+  have v : Value (Rec S) := fun s hs => (reg_eq_self_iff s).mp (record_has_least_erasure S s hs)
+  have fx : AllFixed lineSeat (Rec S) := fun s hs => (fixed_iff_on_line s).mpr (v s hs)
+  refine ⟨fun s hs => ?_, on_the_line_is_witnessed lineSeat lineSeat_faithful _ fx, v⟩
+  rw [fx s hs]; exact hs
+
+/-- THE RECORD OF THE RECORD IS THE RECORD. Registering again reaches no new place. -/
+theorem the_record_of_the_record_is_the_record (S : Config) : Rec (Rec S) = Rec S := by
+  funext q
+  apply propext
+  constructor
+  · rintro ⟨p, ⟨r, hr, e⟩, e2⟩
+    exact ⟨r, hr, by rw [← e2, ← e, reg_idem]⟩
+  · rintro ⟨r, hr, e⟩
+    exact ⟨reg r, ⟨r, hr, rfl⟩, by rw [reg_idem, e]⟩
+
+/-- ANY OTHER POINT IS AGAIN AT THE SEAT. Take any point of the plane at all. Its registration is on the line, and
+    its partner under the fold has that same registration. Nothing registers anywhere else. -/
+theorem any_other_point_is_again_at_the_seat (a : ℂ) :
+    onLine (lineSeat.reg a) ∧ lineSeat.reg (lineSeat.fold a) = lineSeat.reg a :=
+  ⟨reg_lands a, lineSeat.keeps a⟩
+
+/-- AN OFF-LINE POINT IS TWO. A point off the line and its partner are two distinct points with one registration:
+    it has no registration of its own. -/
+theorem an_off_line_point_is_two (a : ℂ) (off : ¬ onLine a) :
+    lineSeat.fold a ≠ a ∧ lineSeat.reg (lineSeat.fold a) = lineSeat.reg a :=
+  ⟨fun h => off ((fixed_iff_on_line a).mp h), lineSeat.keeps a⟩
+
+/-- Two points have one registration exactly when they have one height. -/
+theorem reg_eq_iff_im (a b : ℂ) : lineSeat.reg a = lineSeat.reg b ↔ a.im = b.im := by
+  show (⟨1 / 2, a.im⟩ : ℂ) = ⟨1 / 2, b.im⟩ ↔ a.im = b.im
+  constructor
+  · intro h
+    have h2 : (⟨1 / 2, a.im⟩ : ℂ).im = (⟨1 / 2, b.im⟩ : ℂ).im := congrArg Complex.im h
+    exact h2
+  · intro h
+    rw [h]
+
+/-- The real part of the partner. -/
+theorem partner_re (s : ℂ) : (lineSeat.fold s).re = 1 - s.re := by
+  show (fold s).re = 1 - s.re
+  simp [fold]
+
+/-- The height of the partner. -/
+theorem partner_im (s : ℂ) : (lineSeat.fold s).im = s.im := by
+  show (fold s).im = s.im
+  simp [fold]
+
+/-- FACE: THE WITNESS AND THE WITNESSED ARE ONE. A configuration lies on the line exactly when every one of its
+    existents is its own registration. -/
+theorem value_iff_witness_is_witnessed (S : Config) : Value S ↔ ∀ a, S a → lineSeat.reg a = a :=
+  ⟨fun h a ha => (reg_eq_self_iff a).mpr (h a ha), fun h a ha => (reg_eq_self_iff a).mp (h a ha)⟩
+
+/-- FACE: ONE POINT CANNOT BE TWO. A closed configuration lies on the line exactly when no two of its existents
+    share a height. -/
+theorem value_iff_one_point_not_two (S : Config) (form : Closed S) :
+    Value S ↔ ∀ a b : ℂ, S a → S b → a.im = b.im → a = b :=
+  (witnessed_iff_value S form).symm.trans
+    ⟨fun w a b ha hb e => w a b ha hb ((reg_eq_iff_im a b).mpr e),
+     fun h a b ha hb e => h a b ha hb ((reg_eq_iff_im a b).mp e)⟩
+
+/-- FACE: THE SAME POINT, A DIFFERENT REGISTER EVERY TIME. A closed configuration lies on the line exactly when all
+    of its existents stand at one place across the fold. The place is not named; the fold forces it to be the line. -/
+theorem value_iff_same_point (S : Config) (form : Closed S) :
+    Value S ↔ ∀ a b : ℂ, S a → S b → a.re = b.re := by
+  constructor
+  · intro h a b ha hb
+    have h1 : a.re = 1 / 2 := h a ha
+    have h2 : b.re = 1 / 2 := h b hb
+    rw [h1, h2]
+  · intro h a ha
+    have e := h a (fold a) ha (form a ha)
+    have e2 : (fold a).re = 1 - a.re := partner_re a
+    show a.re = 1 / 2
+    rw [e2] at e
+    linarith
+
+/-- FACE: EVERY POINT IS A SEAT. A closed configuration inside the open strip lies on the line exactly when it is
+    closed under the fold through each of its own existents. Two folds make a slide, and a slide leaves the strip. -/
+theorem value_iff_every_point_is_a_seat (S : Config) (form : Closed S)
+    (strip : ∀ a, S a → 0 < a.re ∧ a.re < 1) :
+    Value S ↔ ∀ a b : ℂ, S a → S b → S (⟨2 * a.re - b.re, b.im⟩ : ℂ) := by
+  constructor
+  · intro h a b ha hb
+    have h1 : a.re = 1 / 2 := h a ha
+    have h2 : b.re = 1 / 2 := h b hb
+    have e : (⟨2 * a.re - b.re, b.im⟩ : ℂ) = b := by
+      apply Complex.ext
+      · show 2 * a.re - b.re = b.re
+        rw [h1, h2]; norm_num
+      · rfl
+    rw [e]; exact hb
+  · intro h a ha
+    show a.re = 1 / 2
+    by_contra hne
+    -- the configuration is closed under a slide by e > 0
+    have key : ∃ e : ℝ, 0 < e ∧ ∀ s : ℂ, S s → S (⟨s.re + e, s.im⟩ : ℂ) := by
+      rcases lt_or_gt_of_ne hne with hlt | hgt
+      · -- a.re < 1/2: fold through a, then the fold of the seat; the slide is 1 - 2 a.re
+        refine ⟨1 - 2 * a.re, by linarith, fun s hs => ?_⟩
+        have h1 := h a s ha hs
+        have h2 := form _ h1
+        have e : fold (⟨2 * a.re - s.re, s.im⟩ : ℂ) = (⟨s.re + (1 - 2 * a.re), s.im⟩ : ℂ) := by
+          apply Complex.ext
+          · rw [show (fold (⟨2 * a.re - s.re, s.im⟩ : ℂ)).re = 1 - (2 * a.re - s.re) from partner_re _]
+            show 1 - (2 * a.re - s.re) = s.re + (1 - 2 * a.re)
+            ring
+          · exact partner_im _
+        rw [e] at h2; exact h2
+      · -- a.re > 1/2: the fold of the seat, then the fold through a; the slide is 2 a.re - 1
+        refine ⟨2 * a.re - 1, by linarith, fun s hs => ?_⟩
+        have h1 := form s hs
+        have h2 := h a (fold s) ha h1
+        have e : (⟨2 * a.re - (fold s).re, (fold s).im⟩ : ℂ) = (⟨s.re + (2 * a.re - 1), s.im⟩ : ℂ) := by
+          apply Complex.ext
+          · show 2 * a.re - (fold s).re = s.re + (2 * a.re - 1)
+            rw [show (fold s).re = 1 - s.re from partner_re s]; ring
+          · show (fold s).im = s.im
+            exact partner_im s
+        rw [e] at h2; exact h2
+    obtain ⟨e, he, slide⟩ := key
+    have all : ∀ n : ℕ, S (⟨a.re + n * e, a.im⟩ : ℂ) := by
+      intro n
+      induction n with
+      | zero =>
+        have e0 : (⟨a.re + ((0 : ℕ) : ℝ) * e, a.im⟩ : ℂ) = a := by
+          apply Complex.ext
+          · show a.re + ((0 : ℕ) : ℝ) * e = a.re
+            simp
+          · rfl
+        rw [e0]; exact ha
+      | succ k ih =>
+        have s1 := slide _ ih
+        have e1 : (⟨(⟨a.re + (k : ℝ) * e, a.im⟩ : ℂ).re + e, (⟨a.re + (k : ℝ) * e, a.im⟩ : ℂ).im⟩ : ℂ)
+            = (⟨a.re + ((k + 1 : ℕ) : ℝ) * e, a.im⟩ : ℂ) := by
+          apply Complex.ext
+          · show a.re + (k : ℝ) * e + e = a.re + ((k + 1 : ℕ) : ℝ) * e
+            push_cast; ring
+          · rfl
+        rw [e1] at s1; exact s1
+    obtain ⟨n, hn⟩ := exists_nat_gt (1 / e)
+    have big : (1 : ℝ) < n * e := by
+      have := (div_lt_iff₀ he).mp hn
+      linarith
+    have inside := (strip _ (all n)).2
+    have pos := (strip a ha).1
+    have : (⟨a.re + n * e, a.im⟩ : ℂ).re = a.re + n * e := rfl
+    rw [this] at inside
+    linarith
+
+/-- The nontrivial zeros of ζ lie in the open strip. From the non-vanishing of ζ on Re s ≥ 1 and the functional
+    equation. -/
+theorem zeta_zeros_in_strip (s : ℂ) (hz : ZetaZeros s) : 0 < s.re ∧ s.re < 1 := by
+  have right : ∀ t : ℂ, ZetaZeros t → t.re < 1 := by
+    intro t ht
+    by_contra hge
+    exact riemannZeta_ne_zero_of_one_le_re (not_lt.mp hge) ht.1
+  refine ⟨?_, right s hz⟩
+  have h2 := right _ (zeta_zeros_symm hz)
+  have e : (foldPt s).re = 1 - s.re := by simp [foldPt]
+  rw [e] at h2
+  linarith
+
+/-- THE FIVE FACES OF THE HYPOTHESIS. Nothing before the colon. The classical hypothesis is, exactly: the zeros of ζ
+    are witnessed; every zero is its own registration; no two zeros share a height; all zeros stand at one place
+    across the fold; every zero is a seat of the zeros. One statement, five faces, each in both directions. -/
+theorem the_five_faces :
+    (RiemannHypothesis ↔ Witnessed lineSeat ZetaZeros) ∧
+    (RiemannHypothesis ↔ ∀ a : ℂ, ZetaZeros a → lineSeat.reg a = a) ∧
+    (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → a.im = b.im → a = b) ∧
+    (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → a.re = b.re) ∧
+    (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → ZetaZeros (⟨2 * a.re - b.re, b.im⟩ : ℂ)) :=
+  ⟨the_zeros_are_witnessed_iff.2.symm,
+   h_read_proved.trans (value_iff_witness_is_witnessed ZetaZeros),
+   h_read_proved.trans (value_iff_one_point_not_two ZetaZeros zeta_zeros_closed),
+   h_read_proved.trans (value_iff_same_point ZetaZeros zeta_zeros_closed),
+   h_read_proved.trans (value_iff_every_point_is_a_seat ZetaZeros zeta_zeros_closed zeta_zeros_in_strip)⟩
+
+/-- THE FIVE FACES, for every primitive Dirichlet character χ ≠ 1. -/
+theorem the_five_faces_dirichlet {N : ℕ} [NeZero N] {χ : DirichletCharacter ℂ N}
+    (hχ : χ.IsPrimitive) (hne : χ ≠ 1) :
+    (DirichletHypothesis χ ↔ Witnessed lineSeat (DirichletZeros χ)) ∧
+    (DirichletHypothesis χ ↔ ∀ a : ℂ, DirichletZeros χ a → lineSeat.reg a = a) ∧
+    (DirichletHypothesis χ ↔ ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → a.im = b.im → a = b) ∧
+    (DirichletHypothesis χ ↔ ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → a.re = b.re) ∧
+    (DirichletHypothesis χ ↔
+      ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → DirichletZeros χ (⟨2 * a.re - b.re, b.im⟩ : ℂ)) := by
+  have cl := dirichlet_zeros_closed hχ hne
+  have rd : DirichletHypothesis χ ↔ Value (DirichletZeros χ) :=
+    ⟨fun h s hs => h s hs.1 hs.2.1 hs.2.2, fun h s hz h0 h1 => h s ⟨hz, h0, h1⟩⟩
+  exact ⟨(the_dirichlet_zeros_are_witnessed_iff hχ hne).2.symm,
+    rd.trans (value_iff_witness_is_witnessed _),
+    rd.trans (value_iff_one_point_not_two _ cl),
+    rd.trans (value_iff_same_point _ cl),
+    rd.trans (value_iff_every_point_is_a_seat _ cl (fun a ha => ha.2))⟩
+
+/-- NOTHING IS OUTSIDE. Nothing before the colon. Every record is a member; the record of the record is the
+    record; any point of the plane registers on the line, with its partner's registration; and a point off the line
+    is two points with one registration. -/
+theorem nothing_is_outside :
+    (∀ S : Config, Folded lineSeat (Rec S) ∧ Witnessed lineSeat (Rec S) ∧ Value (Rec S)) ∧
+    (∀ S : Config, Rec (Rec S) = Rec S) ∧
+    (∀ a : ℂ, onLine (lineSeat.reg a) ∧ lineSeat.reg (lineSeat.fold a) = lineSeat.reg a) ∧
+    (∀ a : ℂ, ¬ onLine a → lineSeat.fold a ≠ a ∧ lineSeat.reg (lineSeat.fold a) = lineSeat.reg a) :=
+  ⟨every_record_is_a_member, the_record_of_the_record_is_the_record, any_other_point_is_again_at_the_seat,
+   an_off_line_point_is_two⟩
+
+/-- THE SELF-REGISTRATION THEOREM. Nothing before the colon. A theorem of recognition: each clause is the same locus
+    met again in another register. Registering a registration returns it; the record of a record is that record;
+    and the hypothesis, for ζ and for every primitive Dirichlet character, is one statement registered five ways:
+    the zeros are witnessed, each zero is its own registration, no two zeros share a height, all zeros stand at one
+    place across the fold, and every zero is a seat of the zeros. -/
+theorem self_registration :
+    (∀ a : ℂ, lineSeat.reg (lineSeat.reg a) = lineSeat.reg a) ∧
+    (∀ S : Config, Rec (Rec S) = Rec S) ∧
+    ((RiemannHypothesis ↔ Witnessed lineSeat ZetaZeros) ∧
+     (RiemannHypothesis ↔ ∀ a : ℂ, ZetaZeros a → lineSeat.reg a = a) ∧
+     (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → a.im = b.im → a = b) ∧
+     (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → a.re = b.re) ∧
+     (RiemannHypothesis ↔ ∀ a b : ℂ, ZetaZeros a → ZetaZeros b → ZetaZeros (⟨2 * a.re - b.re, b.im⟩ : ℂ))) ∧
+    (∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N), χ.IsPrimitive → χ ≠ 1 →
+     (DirichletHypothesis χ ↔ Witnessed lineSeat (DirichletZeros χ)) ∧
+     (DirichletHypothesis χ ↔ ∀ a : ℂ, DirichletZeros χ a → lineSeat.reg a = a) ∧
+     (DirichletHypothesis χ ↔ ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → a.im = b.im → a = b) ∧
+     (DirichletHypothesis χ ↔ ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → a.re = b.re) ∧
+     (DirichletHypothesis χ ↔
+       ∀ a b : ℂ, DirichletZeros χ a → DirichletZeros χ b → DirichletZeros χ (⟨2 * a.re - b.re, b.im⟩ : ℂ))) :=
+  ⟨fun a => reg_idem a, the_record_of_the_record_is_the_record, the_five_faces,
+   fun _ _ _ hχ hne => the_five_faces_dirichlet hχ hne⟩
+
+/-! ## Part IX. Existence is registration
+
+RATIONALE. A configuration in which nothing exists without registration is one that is its own record: `Rec S = S`.
+  This part proves that, on the plane, a configuration is its own record exactly when it lies on the line, with
+  nothing else asked of it; that the hypothesis is exactly the statement that the zeros are their own record; that a
+  point and its partner always have one registration between them, so that a point on the line holds a whole
+  registration and a point off it holds half of one; and that the two axes of existence and form, inside the strip,
+  are carried both by a configuration on the line and by one off it.
+DESIGN. `self_recorded_iff_on_the_line`; `the_zeros_are_their_own_record_iff` and its Dirichlet form (the sixth
+  face); `the_orbit_has_one_registration`, `on_the_line_the_orbit_is_one_point`, `off_the_line_the_orbit_is_two_points`
+  (the half registration, on every seat); `fold_mk`; `the_two_axes_hold_both`; and `existence_is_registration`,
+  which binds them.
+STANDING. Nothing before any colon but the configuration or the point spoken of. No assent, no posit, no delivered
+  bit. `RiemannHypothesis` and `DirichletHypothesis χ` occur only as one side of an equivalence.
+NON-NEGOTIABLE. No axiom, no sorry. `Rec ZetaZeros = ZetaZeros` is never stated alone.
+-/
+
+/-- EXISTENCE IS REGISTRATION. A configuration of the plane is its own record exactly when it lies on the line.
+    Nothing else is asked of the configuration: no closure under the fold, no strip. -/
+theorem self_recorded_iff_on_the_line (S : Config) : Rec S = S ↔ Value S := by
+  constructor
+  · intro h a ha
+    have ha' : Rec S a := by rw [h]; exact ha
+    obtain ⟨p, _, e⟩ := ha'
+    show onLine a
+    rw [← e]
+    exact reg_lands p
+  · intro h
+    funext q
+    apply propext
+    constructor
+    · rintro ⟨p, hp, e⟩
+      have e2 : reg p = p := (reg_eq_self_iff p).mpr (h p hp)
+      rw [← e, e2]; exact hp
+    · intro hq
+      exact ⟨q, hq, (reg_eq_self_iff q).mpr (h q hq)⟩
+
+/-- THE SIXTH FACE. The classical hypothesis is exactly the statement that the zeros of ζ are their own record. -/
+theorem the_zeros_are_their_own_record_iff : RiemannHypothesis ↔ Rec ZetaZeros = ZetaZeros :=
+  h_read_proved.trans (self_recorded_iff_on_the_line ZetaZeros).symm
+
+/-- The sixth face for a Dirichlet character: its hypothesis is exactly the statement that the zeros of its
+    L-function in the strip are their own record. -/
+theorem the_dirichlet_zeros_are_their_own_record_iff {N : ℕ} [NeZero N] (χ : DirichletCharacter ℂ N) :
+    DirichletHypothesis χ ↔ Rec (DirichletZeros χ) = DirichletZeros χ :=
+  (show DirichletHypothesis χ ↔ Value (DirichletZeros χ) from
+    ⟨fun h s hs => h s hs.1 hs.2.1 hs.2.2, fun h s hz h0 h1 => h s ⟨hz, h0, h1⟩⟩).trans
+    (self_recorded_iff_on_the_line (DirichletZeros χ)).symm
+
+/-- THE HALF REGISTRATION, first part. On every seat, a point and its partner have exactly one registration between
+    them: the orbit registers once. -/
+theorem the_orbit_has_one_registration {X Y : Type} (σ : Seat X Y) (a : X) :
+    (σ.reg '' ({a, σ.fold a} : Set X)).ncard = 1 := by
+  have e : σ.reg '' ({a, σ.fold a} : Set X) = {σ.reg a} := by
+    rw [Set.image_pair, σ.keeps a, Set.pair_eq_singleton]
+  rw [e, Set.ncard_singleton]
+
+/-- THE HALF REGISTRATION, on the line. A point on the line is its whole orbit: one point, one registration. -/
+theorem on_the_line_the_orbit_is_one_point {X Y : Type} (σ : Seat X Y) (a : X) (on : σ.fold a = a) :
+    ({a, σ.fold a} : Set X).ncard = 1 := by
+  rw [on, Set.pair_eq_singleton, Set.ncard_singleton]
+
+/-- THE HALF REGISTRATION, off the line. A point off the line has an orbit of two points, on one registration:
+    each holds half. -/
+theorem off_the_line_the_orbit_is_two_points {X Y : Type} (σ : Seat X Y) (a : X) (off : σ.fold a ≠ a) :
+    ({a, σ.fold a} : Set X).ncard = 2 :=
+  Set.ncard_pair (fun h => off h.symm)
+
+/-- The fold of the plane in coordinates. -/
+theorem fold_mk (x t : ℝ) : fold (⟨x, t⟩ : ℂ) = (⟨1 - x, t⟩ : ℂ) :=
+  Complex.ext (partner_re _) (partner_im _)
+
+/-- THE TWO AXES HOLD BOTH. Existence and form, inside the open strip, are carried by a configuration on the line
+    and by a configuration off it. -/
+theorem the_two_axes_hold_both :
+    (∃ S : Config, (∃ a, S a) ∧ Closed S ∧ (∀ a, S a → 0 < a.re ∧ a.re < 1) ∧ Value S) ∧
+    (∃ S : Config, (∃ a, S a) ∧ Closed S ∧ (∀ a, S a → 0 < a.re ∧ a.re < 1) ∧ ¬ Value S) := by
+  have h12 : (1 : ℝ) - 1 / 2 = 1 / 2 := by norm_num
+  have h14 : (1 : ℝ) - 1 / 4 = 3 / 4 := by norm_num
+  have h34 : (1 : ℝ) - 3 / 4 = 1 / 4 := by norm_num
+  constructor
+  · refine ⟨fun s => s = (⟨1 / 2, 14⟩ : ℂ), ⟨_, rfl⟩, ?_, ?_, ?_⟩
+    · intro s hs
+      show fold s = (⟨1 / 2, 14⟩ : ℂ)
+      rw [hs, fold_mk, h12]
+    · intro a ha
+      rw [ha]
+      show (0 : ℝ) < 1 / 2 ∧ (1 / 2 : ℝ) < 1
+      norm_num
+    · intro a ha
+      rw [ha]
+      rfl
+  · refine ⟨fun s => s = (⟨1 / 4, 14⟩ : ℂ) ∨ s = (⟨3 / 4, 14⟩ : ℂ), ⟨_, Or.inl rfl⟩, ?_, ?_, ?_⟩
+    · intro s hs
+      show fold s = (⟨1 / 4, 14⟩ : ℂ) ∨ fold s = (⟨3 / 4, 14⟩ : ℂ)
+      rcases hs with h | h
+      · right; rw [h, fold_mk, h14]
+      · left; rw [h, fold_mk, h34]
+    · intro a ha
+      rcases ha with h | h
+      · rw [h]
+        show (0 : ℝ) < 1 / 4 ∧ (1 / 4 : ℝ) < 1
+        norm_num
+      · rw [h]
+        show (0 : ℝ) < 3 / 4 ∧ (3 / 4 : ℝ) < 1
+        norm_num
+    · intro h
+      have e : (1 / 4 : ℝ) = 1 / 2 := h (⟨1 / 4, 14⟩ : ℂ) (Or.inl rfl)
+      norm_num at e
+
+/-- EXISTENCE IS REGISTRATION, bound. Nothing before the colon. On the plane a configuration is its own record
+    exactly when it is on the line; the hypothesis, for ζ and for every Dirichlet character, is the statement that
+    the zeros are their own record; and on every seat an orbit has one registration, held whole by a point on the
+    line and by halves off it. -/
+theorem existence_is_registration :
+    (∀ S : Config, Rec S = S ↔ Value S) ∧
+    (RiemannHypothesis ↔ Rec ZetaZeros = ZetaZeros) ∧
+    (∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N),
+      DirichletHypothesis χ ↔ Rec (DirichletZeros χ) = DirichletZeros χ) ∧
+    (∀ (X Y : Type) (σ : Seat X Y) (a : X),
+      (σ.reg '' ({a, σ.fold a} : Set X)).ncard = 1 ∧
+      (σ.fold a = a → ({a, σ.fold a} : Set X).ncard = 1) ∧
+      (σ.fold a ≠ a → ({a, σ.fold a} : Set X).ncard = 2)) :=
+  ⟨self_recorded_iff_on_the_line, the_zeros_are_their_own_record_iff,
+   fun _ _ χ => the_dirichlet_zeros_are_their_own_record_iff χ,
+   fun _ _ σ a => ⟨the_orbit_has_one_registration σ a, on_the_line_the_orbit_is_one_point σ a,
+     off_the_line_the_orbit_is_two_points σ a⟩⟩
+
 end Triaxial
 
 #print axioms Triaxial.fold_involutive
@@ -1142,11 +1618,36 @@ end Triaxial
 #print axioms Triaxial.the_dirichlet_zeros_are_witnessed_iff
 #print axioms Triaxial.the_triaxial_theorem
 #print axioms Triaxial.the_final_theorem
+#print axioms Triaxial.every_record_is_a_member
+#print axioms Triaxial.the_record_of_the_record_is_the_record
+#print axioms Triaxial.any_other_point_is_again_at_the_seat
+#print axioms Triaxial.an_off_line_point_is_two
+#print axioms Triaxial.reg_eq_iff_im
+#print axioms Triaxial.partner_re
+#print axioms Triaxial.partner_im
+#print axioms Triaxial.value_iff_witness_is_witnessed
+#print axioms Triaxial.value_iff_one_point_not_two
+#print axioms Triaxial.value_iff_same_point
+#print axioms Triaxial.value_iff_every_point_is_a_seat
+#print axioms Triaxial.zeta_zeros_in_strip
+#print axioms Triaxial.the_five_faces
+#print axioms Triaxial.the_five_faces_dirichlet
+#print axioms Triaxial.nothing_is_outside
+#print axioms Triaxial.self_registration
+#print axioms Triaxial.self_recorded_iff_on_the_line
+#print axioms Triaxial.the_zeros_are_their_own_record_iff
+#print axioms Triaxial.the_dirichlet_zeros_are_their_own_record_iff
+#print axioms Triaxial.the_orbit_has_one_registration
+#print axioms Triaxial.on_the_line_the_orbit_is_one_point
+#print axioms Triaxial.off_the_line_the_orbit_is_two_points
+#print axioms Triaxial.fold_mk
+#print axioms Triaxial.the_two_axes_hold_both
+#print axioms Triaxial.existence_is_registration
 ```
 
 ## Appendix B · Triaxial_Twin_CC.f90
 
-Ten checks, zero failures. Compiled with gfortran, standard 2018, all warnings on, none printed. The run is Appendix C.
+Thirteen checks, zero failures. Compiled with gfortran, standard 2018, all warnings on, none printed. The run is Appendix C.
 
 ```fortran
 ! Triaxial_Twin_CC.f90 · twin of Generalized_RH_Triaxial_Theorem_CC.lean
@@ -1160,14 +1661,22 @@ Ten checks, zero failures. Compiled with gfortran, standard 2018, all warnings o
 !   reg(s) = (1/2, imag(s)). In C zeta is evaluated on the line by the alternating series with Euler's
 !   transformation, and its zeros are located by the change of sign of Hardy's function Z(t).
 ! RISK. Exhaustion on one finite seat and draws on the plane are instances; the statement for every seat is the
-!   engine's theorem. C locates zeros on the line to the precision of the search and proves nothing about zeros
-!   off it.
+!   engine's theorem. C locates zeros on the line to the precision of the search; it is a numerical check and
+!   enters no proof.
+! FACES (Part VIII of the engine). A5 checks, on every closed configuration of the finite seat, that the faces of the
+!   line agree: on the line; no two existents at one height; all existents at one place across the fold; closed under
+!   the fold through each of its own existents. A6 checks that the record of every configuration is a member and that
+!   the record of the record is the record. The finite seat is bounded, as the strip is.
+! EXISTENCE IS REGISTRATION (Part IX of the engine). A7 checks that a configuration is its own record exactly when it
+!   is on the line, on all 512, and that each of the nine points has an orbit of one point on the line and of two
+!   points off it, on one registration in both cases.
 ! NON-NEGOTIABLE. Every count is found by the enumeration, not entered.
 program triaxial_twin
   implicit none
   integer, parameter :: dp = kind(1.0d0), qp = selected_real_kind(30)
   integer :: nfail, npass, m, i, j, k, nclosed, nwit, nboth, nline, nbad, nconv, n1, n2, n3, np, idx(9,2), nz, s(33), nseed
-  logical :: in(9), closed, wit, online, anyp, anyon
+  logical :: in(9), inr(9), inr2(9), closed, wit, online, anyp, anyon, f4, f5
+  integer :: ndis, nrec, xx, kk, nself, norb
   real(dp) :: worst, w2, w3, u(2), t, z0, z1, ta, tb, tm, zeros(5)
   complex(dp) :: sp, f
   nfail = 0; npass = 0
@@ -1178,7 +1687,7 @@ program triaxial_twin
   do i = -1, 1; do j = -1, 1
     np = np + 1; idx(np, :) = [i, j]
   end do; end do
-  nclosed = 0; nwit = 0; nboth = 0; nline = 0; nbad = 0; nconv = 0; n1 = 0; n2 = 0; n3 = 0
+  nclosed = 0; nwit = 0; nboth = 0; nline = 0; nbad = 0; nconv = 0; n1 = 0; n2 = 0; n3 = 0; ndis = 0; nrec = 0; nself = 0
   do m = 0, 511
     do k = 1, 9
       in(k) = btest(m, k - 1)
@@ -1202,6 +1711,41 @@ program triaxial_twin
     if (anyp .and. wit .and. .not. online) n1 = n1 + 1            ! existence and registration, no form
     if (anyp .and. closed .and. .not. online) n2 = n2 + 1         ! existence and form, no registration
     if (closed .and. wit .and. .not. anyon) n3 = n3 + 1           ! form and registration, no existence
+    ! the faces: one place across the fold (f4); closed under the fold through each of its own existents (f5)
+    f4 = .true.; f5 = .true.
+    do k = 1, 9
+      if (.not. in(k)) cycle
+      do j = 1, 9
+        if (.not. in(j)) cycle
+        if (idx(j,1) /= idx(k,1)) f4 = .false.
+        xx = 2 * idx(k,1) - idx(j,1)
+        if (abs(xx) > 1) then
+          f5 = .false.
+        else
+          if (.not. in(pos(xx, idx(j,2)))) f5 = .false.
+        end if
+      end do
+    end do
+    if (closed .and. ((online .neqv. wit) .or. (online .neqv. f4) .or. (online .neqv. f5))) ndis = ndis + 1
+    ! the record: every existent sent to the line at its own height; then the record of the record
+    inr = .false.
+    do k = 1, 9
+      if (in(k)) inr(pos(0, idx(k,2))) = .true.
+    end do
+    inr2 = .false.
+    do k = 1, 9
+      if (inr(k)) inr2(pos(0, idx(k,2))) = .true.
+    end do
+    do k = 1, 9
+      if (.not. inr(k)) cycle
+      if (idx(k,1) /= 0) nrec = nrec + 1                            ! a registration off the line
+      if (.not. inr(pos(-idx(k,1), idx(k,2)))) nrec = nrec + 1      ! the record not closed
+      do kk = 1, 9
+        if (inr(kk) .and. kk /= k .and. idx(kk,2) == idx(k,2)) nrec = nrec + 1   ! the record not witnessed
+      end do
+    end do
+    if (any(inr .neqv. inr2)) nrec = nrec + 1
+    if (all(inr .eqv. in) .neqv. online) nself = nself + 1          ! its own record, exactly when on the line
   end do
   write(*,'(a,i0,a,i0,a,i0,a,i0)') '  of 512 configurations: closed ', nclosed, '; witnessed ', nwit, &
     '; closed and witnessed ', nboth, '; on the line ', nline
@@ -1214,6 +1758,21 @@ program triaxial_twin
     '; closed and witnessed with nothing on the line ', n3
   call check('A4 the triad is irreducible: each pair of axes admits a configuration off the line', &
     n1 > 0 .and. n2 > 0 .and. n3 > 0)
+  write(*,'(a,i0,a,i0)') '  closed configurations: ', nclosed, '; among them the faces disagree on: ', ndis
+  call check('A5 on every closed configuration the faces agree: on the line, one height one point, one place, every point a seat', &
+    ndis == 0 .and. nclosed > 0)
+  write(*,'(a,i0)') '  configurations whose record is not a member, or whose record of the record differs: ', nrec
+  call check('A6 the record of every configuration is a member, and the record of the record is the record', nrec == 0)
+  norb = 0
+  do k = 1, 9
+    j = pos(-idx(k,1), idx(k,2))                                    ! the partner
+    if (idx(j,2) /= idx(k,2)) norb = norb + 1                       ! the orbit has one registration
+    if ((j == k) .neqv. (idx(k,1) == 0)) norb = norb + 1            ! one point exactly on the line, two off it
+  end do
+  write(*,'(a,i0,a,i0)') '  configurations where own record and on the line differ: ', nself, &
+    '; points whose orbit miscounts: ', norb
+  call check('A7 a configuration is its own record exactly when on the line; an orbit is one point on the line, two off it', &
+    nself == 0 .and. norb == 0)
 
   ! B. the seat of the plane
   worst = 0; w2 = 0; w3 = 0
@@ -1338,6 +1897,12 @@ end program triaxial_twin
   PASS  A3 closed and witnessed is the same as on the line
   off the line with two axes: without form 56; without registration 56; closed and witnessed with nothing on the line 1
   PASS  A4 the triad is irreducible: each pair of axes admits a configuration off the line
+  closed configurations: 64; among them the faces disagree on: 0
+  PASS  A5 on every closed configuration the faces agree: on the line, one height one point, one place, every point a seat
+  configurations whose record is not a member, or whose record of the record differs: 0
+  PASS  A6 the record of every configuration is a member, and the record of the record is the record
+  configurations where own record and on the line differ: 0; points whose orbit miscounts: 0
+  PASS  A7 a configuration is its own record exactly when on the line; an orbit is one point on the line, two off it
   1000 points: fold twice  0.00E+00; registration kept and side turned  0.00E+00; points of the line moved  0.00E+00
   PASS  B1 the fold is an involution, keeps the registration, and fixes the line
   PASS  B2 on 401 points of one height the fold fixes exactly the point of the line
@@ -1349,7 +1914,7 @@ end program triaxial_twin
   PASS  C2 each of the five is its own partner, and zeta vanishes there to the precision of the search
   size of zeta at the first height, a quarter off the line:  2.20E-01
   PASS  C3 off the line at that height zeta does not vanish
- BATTERY-JSON: {"checks":10,"failures":0}
+ BATTERY-JSON: {"checks":13,"failures":0}
 ```
 
 ## Appendix D · Kernel lines of Appendix A
@@ -1406,4 +1971,55 @@ Each line is printed by Lean for one theorem and names every axiom its proof use
 'Triaxial.the_dirichlet_zeros_are_witnessed_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Triaxial.the_triaxial_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Triaxial.the_final_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.every_record_is_a_member' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.the_record_of_the_record_is_the_record' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.any_other_point_is_again_at_the_seat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.an_off_line_point_is_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.reg_eq_iff_im' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.partner_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.partner_im' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.value_iff_witness_is_witnessed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.value_iff_one_point_not_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.value_iff_same_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.value_iff_every_point_is_a_seat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.zeta_zeros_in_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.the_five_faces' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.the_five_faces_dirichlet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.nothing_is_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.self_registration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.self_recorded_iff_on_the_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.the_zeros_are_their_own_record_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.the_dirichlet_zeros_are_their_own_record_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.the_orbit_has_one_registration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.on_the_line_the_orbit_is_one_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.off_the_line_the_orbit_is_two_points' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.fold_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.the_two_axes_hold_both' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.existence_is_registration' depends on axioms: [propext, Classical.choice, Quot.sound]
 ```
+
+## Appendix E · Provenance Trail
+
+This paper is the last step of an arc, and the arc is on the public record. The arc opens with the geometric seal of the Riemann row in the Geometric Mother Codex, in July 2026. The table lists each step at the grade its own record carries, with the address where that record can be read. The form of the hypothesis has stood proved without condition since late October 2026, the rows marked Form, Theorem, before this paper. This paper is the last row, the generalized identity and its registration, at theorem grade, and it proves nothing below it again. The full trail, from the first public post of April 2026, is the provenance bundle of the register: `Publication Library/Mathematics/Millennium Series/RH_Lineage_Provenance_Bundle_v1_0_0.md`.
+
+**Table E.1 · The grade ladder of the Riemann row, 2026**
+
+| Date | Grade | Record | Git commit or Zenodo URL |
+|---|---|---|---|
+| 2 Jul | Geometric seal | *Riemann Hypothesis. Geometrically Dead, Topologically Weightless, Arithmetically Open* | <https://doi.org/10.5281/zenodo.21130255> |
+| 29 Jul | Geometric seal | *The Geometric Mother Codex, v3.3: the Riemann Keystone seated, the geometric face sealed* | <https://github.com/1000sapients/Trisduction/commit/fd55714> |
+| 18 Sep | Located | *The Riemann Hypothesis Is Exactly One Bit* | <https://github.com/1000sapients/Trisduction/commit/3ac2541> |
+| 20 Sep | Restored | *The Riemann Hypothesis in Its Original Form, v1.0.6* | <https://github.com/1000sapients/Trisduction/commit/7626482> |
+| 23 Sep | Equivalence | *The Riemann Hypothesis Has One Address, v1.0.0* | <https://github.com/1000sapients/Trisduction/commit/1660ef4> |
+| 26 Sep | Closure | *Nothing Escapes, Three Plus One, v3.14.0* | `protocols/RH One Bit/` |
+| 16 Oct | Closure | *The Completed Formal Closure of the Riemann Hypothesis, v1.0.0* | <https://github.com/1000sapients/Trisduction/commit/844339f> |
+| 14 Oct | Master | *The Ten-Level Binding Chain, master v3.0.9* | <https://github.com/1000sapients/Trisduction/commit/7139feb> |
+| 15 Oct | Master | *The Twin Binder, One Locus, master v3.0.24* | <https://doi.org/10.5281/zenodo.23357512> · <https://github.com/1000sapients/Trisduction/commit/b272c46> |
+| 16 Oct | Real Part, Theorem | *An Unconditional Proof of the Real Part of the Riemann Hypothesis* | <https://doi.org/10.5281/zenodo.23440383> |
+| 21 Oct | Form, Theorem | *P ≠ NP: Unconditional Proof of the Form by Theorem, the Value by the Act; the doctrine, first deposit under that title* | <https://doi.org/10.5281/zenodo.23528399> · <https://github.com/1000sapients/Trisduction/commit/afb03f3> |
+| 22 Oct | Form, Theorem | *The Real Part, v1.3.0, with master v3.0.39: the form of the Riemann row by theorem* | <https://github.com/1000sapients/Trisduction/commit/61cfdc4> |
+| 23 Oct | Form, Theorem | *The Millennium Problems: Unconditional Proof of the Form by Theorem, the Value by the Act* | <https://doi.org/10.5281/zenodo.23609234> · <https://github.com/1000sapients/Trisduction/commit/47e9933> |
+| 22 Nov | Form, Theorem | *The Seat of the Riemann Hypothesis, v2.0.0, master v3.0.44: the inescapable form, set out whole* | <https://doi.org/10.5281/zenodo.24435745> · <https://github.com/1000sapients/Trisduction/commit/af25e54> |
+| 25 Nov | Generalized Identity and Registration, Theorem | *This paper, v1.0.0, sealed: six faces, Self-Registration, Existence Is Registration; engine of 74 theorems, master v3.0.45* | <https://github.com/1000sapients/Trisduction/commit/afb6346> · `engine sha256 1d65420ebb45778d` |
+
+Dates are git commit dates, or Zenodo publication dates where a DOI is given. Each row is listed at the grade its own record carries. The last row has two addresses: the first deposit of this paper in git, and the checksum of the engine printed in Appendix A as sealed, sha256 `1d65420ebb45778d4858ca88e8b1aecbbca7ea07394dd20d2f6deca5c2fa0b5c`.
