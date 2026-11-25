@@ -1,18 +1,21 @@
-! Coupling_Magnitude_Twin_CC.f90 · numerical twin of SPHYS_Coupling_Magnitude_CC.lean
-! RATIONALE. The engine proves that the flux law admits every source and that no scale-blind verdict fixes one.
-!   This twin computes the flux of a point source through spheres by quadrature (A to C) and sets three numbers
-!   against measurement (D, E).
+! Coupling_Magnitude_Twin_CC.f90 · twin of SPHYS_Coupling_Magnitude_CC.lean
+! RATIONALE. The engine proves that the forced law admits every source, carries no length, and has a member of its
+!   premises for every positive coupling. This twin computes the flux of a point source through spheres by
+!   quadrature (A to C), executes the scaling statements on waves (F), and sets three numbers against measurement
+!   (D, E).
 ! DESIGN. Double precision, no library. The source sits at distance a from the centre of a sphere of radius R, on
 !   its axis. With a strength falling as the power p of the distance, the flux through the sphere is
 !     (q/2) R**2 * integral over theta of (R - a cos theta) sin theta / (R**2 + a**2 - 2 a R cos theta)**((p+1)/2),
 !   computed by the midpoint rule on 200000 intervals. For p = 2 it is q when the source is inside and 0 when it
-!   is outside, whatever R and a; for any other p it depends on R. A fixed linear congruential generator.
+!   is outside, whatever R and a; for any other p it depends on R. A wave is a polarization on the profile
+!   exp(k.x), whose derivative along a direction multiplies by the component of k; a change of the unit of
+!   length multiplies k by one factor. A fixed linear congruential generator.
 !   Measured inputs: the inverse fine-structure constant 137.035999177(21), CODATA 2022 (Mohr et al. 2025); the
 !   bound on a deviation of the exponent of Coulomb's law from two, (2.7 +- 3.1)e-16 (Williams, Faller and Hill 1971).
-!   Formulas tested in D: Eddington's integer 137 (1929), and Wyler's expression (1969),
+!   Formulas tested in D: Eddington's integer 137, and Wyler's expression (1969),
 !   alpha = (9 / (8 pi**4)) (pi**5 / (2**4 5!))**(1/4).
-! RISK. D tests two formulas. It does not test every formula; that none can come from the form is the engine's
-!   theorem, on the bridge the paper prints. Quadrature tolerance is 1e-6 of the source.
+! RISK. D tests two formulas. It does not test every formula; that the premises fix no value is the engine's
+!   theorem. Quadrature tolerance is 1e-6 of the source.
 ! NON-NEGOTIABLE. A formula is called excluded only when it stands more than five printed uncertainties away.
 program coupling_twin
   implicit none
@@ -65,6 +68,7 @@ program coupling_twin
 
   ! D. two formulas for the number, against the measurement
   ainv = 137.035999177_dp; sig = 0.000000021_dp
+  write(*,'(a,f14.9,a,f11.9)') '  measured: 1/alpha = ', ainv, ' +- ', sig
   dev = (137.0_dp - ainv)/sig
   write(*,'(a,es10.3,a)') '  Eddington, 137 exactly: ', abs(dev), ' uncertainties from the measured value'
   call check('D1 the integer 137 stands more than five uncertainties from the measured value', abs(dev) > 5.0_dp)
@@ -79,7 +83,8 @@ program coupling_twin
   call check('E  the forced exponent, two, lies within two uncertainties of the measured (2.7 +- 3.1)e-16 from two', &
              abs(real(d - 1 - 2, dp) - 2.7e-16_dp) < 2.0_dp*3.1e-16_dp)
 
-  write(*,'(a,i0,a,i0)') 'checks passed: ', npass, '   failures: ', nfail
+  call waves()
+  write(*,'(A,I0,A,I0,A)') ' BATTERY-JSON: {"checks":', npass + nfail, ',"failures":', nfail, '}'
 contains
   real(dp) function flux(qq, rr, aa, p)
     real(dp), intent(in) :: qq, rr, aa, p
@@ -94,6 +99,34 @@ contains
     end do
     flux = 0.5_dp*qq*rr*rr*acc*pi/real(n, dp)
   end function
+  subroutine waves()
+    ! F. on waves: the law with constants (a, -a, 0), its multiples, and a change of the unit of length
+    integer :: t, nu
+    real(dp) :: kv(4), e(4), et(4), kk, ke, j1(4), j2(4), jl(4), aa, cc, ll, mm, w1, w2, w3
+    et = [1.0_dp, -1.0_dp, -1.0_dp, -1.0_dp]; w1 = 0.0_dp; w2 = 0.0_dp; w3 = 0.0_dp
+    do t = 1, 20000
+      do nu = 1, 4
+        kv(nu) = 2.0_dp*urand() - 1.0_dp; e(nu) = 2.0_dp*urand() - 1.0_dp
+      end do
+      aa = 0.2_dp + urand(); cc = 0.1_dp + 5.0_dp*urand(); ll = 0.2_dp + 3.0_dp*urand(); mm = 0.5_dp + urand()
+      kk = sum(et*kv*kv); ke = sum(et*kv*e)
+      j1 = aa*(kk*e - kv*ke)                              ! the forced law on the wave
+      j2 = (cc*aa)*(kk*e - kv*ke)                         ! the same law with its weight multiplied by c
+      w1 = max(w1, maxval(abs(j2 - cc*j1)))
+      jl = aa*((ll*ll*kk)*e - (ll*kv)*(ll*ke))            ! after the change of the unit of length
+      w2 = max(w2, maxval(abs(jl - ll*ll*j1)))
+      ! with a constant m on the potential the same change leaves m (1 - l l) times the potential
+      w3 = max(w3, maxval(abs((jl + mm*e) - ll*ll*(j1 + mm*e) - mm*(1.0_dp - ll*ll)*e)))
+    end do
+    write(*,'(a,es9.2,a,es9.2)') '  20000 random waves: largest residual, weight ', w1, ', length ', w2
+    call check('F1 multiplying the weight by c multiplies the law by c: the solutions without sources are the same', &
+               w1 < 1.0e-9_dp)
+    call check('F2 the forced law after a change of the unit of length is the square of the factor times the law', &
+               w2 < 1.0e-9_dp)
+    write(*,'(a,es9.2)') '  rival, a law with a mass term m: largest residual of its change against m (1 - l l) A, ', w3
+    call check('F3 with a mass term the law is not kept: it changes by m (1 - l l) times the potential', &
+               w3 < 1.0e-9_dp)
+  end subroutine
   real(dp) function urand()          ! uniform on [0, 1)
     seed = mod(seed*6364136223846793005_8 + 1442695040888963407_8, 9223372036854775807_8)
     if (seed < 0) seed = -seed
