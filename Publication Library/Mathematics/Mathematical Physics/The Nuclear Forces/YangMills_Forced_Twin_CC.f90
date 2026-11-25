@@ -1,13 +1,18 @@
 ! YangMills_Forced_Twin_CC.f90 · twin of SPHYS_YangMills_Forced_CC.lean
-! RATIONALE. The engine proves the forcing over all integers. This twin does two other things: it scans the same
-!   identities on random integer data, as an independent execution, and it sets the counts of the engine against
-!   published measurements.
+! RATIONALE. The engine proves the forcing on every setting. This twin does two other things. It scans the identity
+!   `variation_of_strength` on random integer data, with the rotation algebra as the charge, as an independent
+!   execution. And it sets the counts of the engine against published measurements, with rival counts beside them.
 ! DESIGN. Integer arithmetic (64 bit) for the algebra; double precision for the measured cells. One linear
-!   congruential generator, fixed seed, so every run prints the same lines.
-! NON-NEGOTIABLE. A measured cell compares a count of the engine with a published value and its uncertainty. No
-!   coupling is computed from first principles: every coupling used here is a measured input and is named as one.
-! RISK. The leading formulas for the ratio R and the running coupling carry higher-order corrections of a few
-!   percent. The tolerances below are the published uncertainties, and the rival counts are excluded by many of them.
+!   congruential generator, fixed seed, so every run prints the same lines. At a point the values of the potential,
+!   of the turn and of their derivatives are independent integers, as they are in the engine.
+! CONVENTION. A count agrees within two printed uncertainties; a rival is excluded beyond five.
+! NON-NEGOTIABLE. A measured cell compares a count with a published value and its uncertainty. No coupling is
+!   computed from first principles: every coupling used here is a measured input and is named as one.
+! RISK. The formulas of section C are classical and entered, not derived: the leading running of the coupling, the
+!   ratio R with its first correction, the width of the neutral pion from the anomaly, the weight 3 of the
+!   self-coupling for three colours. They carry higher-order
+!   corrections of a few percent. The tolerances are the published uncertainties, and the rival counts are excluded
+!   by many of them.
 program yangmills_twin
   implicit none
   integer, parameter :: i8 = selected_int_kind(18), dp = kind(1.0d0)
@@ -46,9 +51,10 @@ contains
   end function
   function residue(s, t, Am, An, dA, ep, dem, den) result(r)   ! dF - s[F, eps], every term kept
     integer(i8), intent(in) :: s, t, Am(3), An(3), dA(3), ep(3), dem(3), den(3)
-    integer(i8) :: r(3), var(3), F(3)
-    var = s*turn(dA, ep) + s*turn(An, dem) - s*turn(Am, den) + t*turn(dem, An) + t*turn(Am, den) &
-        + t*s*(turn(turn(Am, ep), An) + turn(Am, turn(An, ep)))
+    integer(i8) :: r(3), var(3), F(3), p(3), q(3)
+    p = turn(Am, ep); q = turn(An, ep)                        ! named, so that no temporary is nested
+    var = s*turn(dA, ep) + s*turn(An, dem) - s*turn(Am, den) + t*turn(dem, An) + t*turn(Am, den)
+    var = var + t*s*(turn(p, An) + turn(Am, q))
     F = dA + t*turn(Am, An)
     r = var - s*turn(F, ep)
   end function
@@ -60,23 +66,21 @@ contains
       a = rv(); b = rv(); c = rv(); d = rv(); e = rv(); f = rv(); s = rnd(); t = rnd()
       if (any(turn(a, turn(b, c)) + turn(b, turn(c, a)) + turn(c, turn(a, b)) /= 0)) bad_j = bad_j + 1
       r = residue(s, t, a, b, c, d, e, f)
-      x = turn(b, e) - turn(a, f)
-      if (any(r /= (s - t)*x)) bad_r = bad_r + 1
+      x = turn(e, b) + turn(a, f)                       ! the stray term of the engine: [d eps, A] + [A, d eps]
+      if (any(r /= (t - s)*x)) bad_r = bad_r + 1
       if (any(residue(s, s, a, b, c, d, e, f) /= 0)) bad_c = bad_c + 1
       if (s /= t .and. any(x /= 0) .and. all(r == 0)) bad_f = bad_f + 1
     end do
     write(*,'(A)') ' A. The algebra, on 200000 random integer points'
     call check('Jacobi''s identity holds at every point', bad_j == 0)
-    call check('the residue is (s - t) times the stray term at every point', bad_r == 0)
+    call check('the residue is (t - s) times the stray term at every point', bad_r == 0)
     call check('with t = s the strength turns as a charge at every point', bad_c == 0)
     call check('with t /= s it fails wherever the stray term is not zero', bad_f == 0)
   end subroutine
   subroutine counts()
     integer :: n, f, bad
     write(*,'(A)') ' B. The counts'
-    call check('carriers: 3 for two colours, 8 for three, 12 with the commuting one', &
-               2*2-1 == 3 .and. 3*3-1 == 8 .and. 8+3+1 == 12)
-    call check('states: 12*2 + 4 = (8*2 + 2 + 3*3) + 1, one scalar remains', 12*2+4 == 8*2+2+3*3+1)
+    call check('carriers: 3 for two kinds of charge, 8 for three', 2*2-1 == 3 .and. 3*3-1 == 8)
     bad = 0
     do n = 1, 40
       if ((((n-1)*(n-2))/2 >= 1) .neqv. (n >= 3)) bad = bad + 1
@@ -133,6 +137,12 @@ contains
     g3 = alpha**2*mpi**3/(64*pi**3*fpi**2)*1.0d6
     call check('pion width: three colours within 2 uncertainties of 7.802 +- 0.117 eV; two and four excluded by 5', &
                abs(g3 - gm)/gs < 2.0d0 .and. abs(g3*4/9 - gm)/gs > 5.0d0 .and. abs(g3*16/9 - gm)/gs > 5.0d0)
+    ! the weight of the field's coupling to itself, from four-jet events and event shapes at LEP (Kluth, 2006):
+    ! 2.89 +- 0.21. With t = s and three colours the weight is 3; a field that does not couple to itself has 0.
+    write(*,'(A,F5.2,A,F5.1,A)') '   self-coupling weight: forced law with three colours, 3, at ', abs(3.0d0 - 2.89d0)/0.21d0, &
+         ' uncertainties; no self-coupling, 0, at ', 2.89d0/0.21d0, ''
+    call check('the field couples to itself: weight 3 within 2 uncertainties of 2.89 +- 0.21; zero excluded by 5', &
+               abs(3.0d0 - 2.89d0)/0.21d0 < 2.0d0 .and. 2.89d0/0.21d0 > 5.0d0)
     ! the number of light neutrino kinds at the Z (Janot and Jadach, 2020): 2.9963 +- 0.0074
     nn = 2.9963d0; ns = 0.0074d0
     write(*,'(A,F5.2,A,F6.1,A,F6.1,A)') '   generations: 3 at ', abs(3 - nn)/ns, ' uncertainties; 2 at ', &
