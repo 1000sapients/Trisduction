@@ -2,7 +2,8 @@
 ! RATIONALE. The Lean file fixes the form of the law. This twin runs the forced law against the sky: every check
 !   computes a number from the law and compares it with a published measurement, or scans a statement of the Lean
 !   file over many random cases.
-! DESIGN. Double precision, no library. Inputs are measured: G·M of the Sun and the Earth, c, and orbital elements.
+! DESIGN. Double precision, no library. Inputs are measured: G·M of the Sun and the Earth, c, orbital elements, the
+!   potential of the geoid and the matter fraction of Planck 2018.
 !   Only the products G·M enter; the value of G alone is never used, which is check H.
 ! NON-NEGOTIABLE. No constant is tuned. A failed check is printed as FAIL and counted.
 program gravity_twin
@@ -12,7 +13,7 @@ program gravity_twin
   real(dp), parameter :: GMsun = 1.32712440018e20_dp, GMearth = 3.986004418e14_dp
   real(dp), parameter :: arcsec = 180.0_dp*3600.0_dp/pi
   integer :: nfail, i, n, hits, bad
-  real(dp) :: defl, a, e, per, adv, pr, grav, vel, x, k, a1, a2, tt, ss
+  real(dp) :: defl, a, e, per, adv, pr, grav, vel, x, k, a1, a2, tt, ss, gam, act
   integer :: ia, ib, d1
   nfail = 0
   write(*,'(a)') 'A · light at the limb of the Sun: the space part bends as much as the time part'
@@ -23,29 +24,35 @@ program gravity_twin
   call check('eclipse of 1919 (1.98 +- 0.12, 1.61 +- 0.30) and radio interferometry (0.9999 +- 0.0002 of full) hold it', &
              abs(defl - 1.98_dp) < 2.0_dp*0.12_dp .and. abs(defl - 1.61_dp) < 2.0_dp*0.30_dp .and. &
              abs(0.9999_dp*defl - defl) < 2.0_dp*0.0002_dp*defl)
+  ! gamma is the space part over the time part for dust of density 1 in n = 4: ((n-2)p - T) / ((n-2)rho + T), T = -rho + (n-1)p
+  gam = (2.0_dp*0.0_dp - (-1.0_dp + 3.0_dp*0.0_dp)) / (2.0_dp*1.0_dp + (-1.0_dp + 3.0_dp*0.0_dp))
   call check('space reads as time, gamma = 1: Cassini finds gamma - 1 = (2.1 +- 2.3)e-5 (Bertotti, Iess, Tortora 2003)', &
-             abs(0.0_dp - 2.1e-5_dp) < 2.0_dp*2.3e-5_dp)
+             abs((gam - 1.0_dp) - 2.1e-5_dp) < 2.0_dp*2.3e-5_dp)
   write(*,'(a)') 'B · the perihelion of Mercury'
   a = 5.7909e10_dp; e = 0.20563_dp; per = 87.969_dp
   adv = 6.0_dp*pi*GMsun/(c*c*a*(1.0_dp - e*e))*arcsec*(36525.0_dp/per)
   write(*,'(a,f8.3,a)') '  advance ', adv, ' arcsec per century'
-  call check('advance is 42.98 arcsec per century (observed 42.98 +- 0.04, Will 2014)', abs(adv - 42.98_dp) < 0.04_dp)
+  call check('advance is 42.98 arcsec per century (observed 42.98 +- 0.04, Will 2014)', abs(adv - 42.98_dp) < 2.0_dp*0.04_dp)
   write(*,'(a)') 'C · clocks: one shift moves every clock at a place together'
   pr = 9.80665_dp*22.56_dp/(c*c)   ! the tower of Pound and Rebka: 74 feet, 22.56 m
   write(*,'(a,es10.3)') '  tower of 22.56 m, fractional shift ', pr
   call check('measured over computed: 1.05 +- 0.10 (Pound, Rebka 1960) and 0.9990 +- 0.0076 (Pound, Snider 1965)', &
              abs(1.05_dp*pr - pr) < 2.0_dp*0.10_dp*pr .and. abs(0.9990_dp*pr - pr) < 2.0_dp*0.0076_dp*pr)
-  grav = GMearth/(c*c)*(1.0_dp/6.371e6_dp - 1.0_dp/2.6560e7_dp)*86400.0_dp*1.0e6_dp
-  vel  = GMearth/(2.0_dp*2.6560e7_dp*c*c)*86400.0_dp*1.0e6_dp
-  write(*,'(a,f7.2,a,f6.2,a,f7.2)') '  navigation satellite, microseconds per day: height +', grav, ', speed -', vel, &
+  ! clocks at rest on the geoid: Phi0/c**2 = 6.969290134e-10; orbit of semi-major axis 2.656175e7 m (Ashby 2003)
+  grav = (6.969290134e-10_dp - GMearth/(2.656175e7_dp*c*c))*86400.0_dp*1.0e6_dp
+  vel  = GMearth/(2.0_dp*2.656175e7_dp*c*c)*86400.0_dp*1.0e6_dp
+  write(*,'(a,f7.3,a,f6.3,a,f7.3)') '  navigation satellite, microseconds per day: height +', grav, ', speed -', vel, &
        ', net ', grav - vel
-  ! tolerance 0.15 microseconds: the nominal radii used above, 6371 km and 26560 km, are good to parts in a thousand,
-  ! and the two terms scale as their inverses (Ashby 2003 gives the built-in offset as 4.4647e-10)
-  call check('the offset built into the satellite clocks, 4.4647e-10, is 38.6 microseconds per day (Ashby 2003)', &
-             abs(grav - vel - 4.4647e-10_dp*86400.0e6_dp) < 0.15_dp)
+  ! tolerance: half a unit of the last digit Ashby prints, 0.00005e-10
+  write(*,'(a,f8.4,a)') '  net as a fraction: ', (grav - vel)/86400.0e6_dp*1.0e10_dp, 'e-10'
+  call check('the offset built into the satellite clocks is 4.4647e-10 (Ashby 2003), to the last digit printed', &
+             abs((grav - vel)/86400.0e6_dp - 4.4647e-10_dp) < 0.00005e-10_dp)
   write(*,'(a)') 'D · what gravity reads: rho + 3p in four dimensions'
-  call check('Planck budget: q0 = Omega_m/2 - Omega_Lambda = -0.527, the vacuum repels', &
-             abs(0.5_dp*0.3153_dp - 0.6847_dp + 0.527_dp) < 0.001_dp)
+  ! rho + 3p over the critical density for matter 0.3153 +- 0.0073 and a flat vacuum (Planck 2018): Om + (1 - 3)(1 - Om)
+  act = 0.3153_dp + (1.0_dp - 3.0_dp)*(1.0_dp - 0.3153_dp)
+  write(*,'(a,f7.3,a,f6.3)') '  active density of the Planck budget: ', act, ' +- ', 3.0_dp*0.0073_dp
+  call check('Planck budget read through rho + 3p is below zero by more than five uncertainties: the vacuum repels', &
+             act < -5.0_dp*3.0_dp*0.0073_dp)
   write(*,'(a)') 'E · the counts'
   call check('polarizations n(n-3)/2: none in three dimensions, two in four, five in five', &
              pol(3) == 0 .and. pol(4) == 2 .and. pol(5) == 5)

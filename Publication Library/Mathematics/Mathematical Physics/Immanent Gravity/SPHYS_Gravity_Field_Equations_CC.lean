@@ -24,7 +24,13 @@
         its two metric functions are the inputs of `exact_solution_gives_gamma_and_beta`, which checks their
         expansion and not that they solve the law;
     (5) in two dimensions the Ricci tensor is half the scalar curvature times the metric, a fact of geometry and
-        the definition of `twoDim`.
+        the definition of `twoDim`;
+    (6) the counts of Part III: n(n + 1)/2 components of a symmetric law, n²(n² - 1)/12 of the curvature, and the
+        polarizations of a wave by removing n identities and n coordinates. They are classical counts, entered as
+        definitions; the theorems of Part III evaluate them at the dimensions named;
+    (7) the area of a sphere in three dimensions of space, as the square of its radius (`area`);
+    (8) two formulas of the post-Newtonian expansion (Will, 2014): light bends as 1 + gamma (`bending`) and a
+        perihelion advances as 2 + 2·gamma - beta (`perihelion`).
   DOMAIN. The dimension theorems are stated for every integer n because the algebra holds for every n. Their
   meaning as geometry begins at n = 3, where a trace reversal exists; n = 2 is treated on its own by `two_is_empty`.
   RISK. A reader may take `conservation_forces_the_law` as a proof of Lovelock's theorem. It is the forcing inside
