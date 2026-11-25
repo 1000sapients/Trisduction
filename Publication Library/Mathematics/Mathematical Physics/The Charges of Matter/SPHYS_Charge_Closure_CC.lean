@@ -1,294 +1,339 @@
 /-
-  SPHYS_Charge_Closure_CC.lean · The charges of matter, forced by closure · core Lean 4, no library.
-
-  THE THEOREMS.
-    (1) One generation. The four closure conditions of a generation of quarks and leptons, taken with no charge
-        given, leave exactly three cases: the two doublets and the right-handed electron carry no hypercharge; or the
-        table is the observed
-        one up to one scale; or it is the observed one with the two right-handed quarks renamed.
-        (`closure_forces_the_whole_table`, `the_observed_table_is_forced`)
-    (2) Every generation. A total can close while each generation fails (`a_total_can_hide_a_failure`). If the
-        record closes at every threshold, with one, two and three generations in the reading, each generation
-        closes alone (`closure_at_every_threshold_forces_each`), and each then falls under the three cases of (1)
-        (`each_generation_is_forced`); one whose quark doublet carries hypercharge carries the table at its own
-        scale (`a_charged_generation_carries_the_table`).
-    (3) No unread charge. A label that the registration conserves is a function of the record, and a label the
-        record does not carry is not conserved (`conserved_iff_read`, `no_conserved_label_is_unread`).
-
-  RATIONALE. The first cancellation of the sums on the observed table is Bouchiat, Iliopoulos and Meyer's (1972).
-  That the conditions determine the charges is known since 1989 (Geng and Marshak; Babu and Mohapatra; Minahan,
-  Ramond and Warner). Part II puts that classification in the kernel. Parts III and IV are this file's own: the
-  threshold form of closure in every generation, and a statement on global charges whose premise is not its
-  conclusion. An earlier draft of the last took as hypothesis that every charge is carried by a field, which is
-  the conclusion in other words, and stated it on a family of integer fields that Part V of the companion file
-  SPHYS_Coupling_Magnitude_CC.lean proves holds only zero. It is rebuilt here on the registration.
-
-  DESIGN. Integers only. Hypercharges are carried times 6, so the observed table is yQ = 1, yU = 4, yD = -2,
-  yL = -3, yE = -6. Multiplicities are those of the Standard Model: the quark doublet counts 3 colours times 2,
-  the lepton doublet 2, each right-handed quark 3, the right-handed electron 1. The sums are left minus right.
-  The cubic identity is proved by expansion to monomials. No axiom is declared.
-
-  WHAT ENTERS AS DATA, NOT AS A THEOREM. The multiplets and their multiplicities; that the four sums are the
-  closure conditions (Adler 1969; Bell and Jackiw 1969; Alvarez-Gaumé and Witten 1984); and, to leave the first
-  case of (1), one bit read from measurement: the quark doublet carries hypercharge. The table has no right-handed
-  neutrino; one that carried hypercharge would add a free parameter and the classification would not hold.
-
-  WHAT THIS FILE DOES NOT PROVE. It does not prove that the record must close in each generation taken alone; that
-  is a bridge of the paper, and it is not a statement about scales of mass, since the measured masses interleave
-  the generations. It does not prove that a label read by the record is carried by a gauge field; that identification
-  is a bridge too. It fixes no scale of charge: every multiple of the table closes (`every_scale_closes`).
-
-  NON-NEGOTIABLE. No theorem here fixes the unit of charge, a mass, or the number of generations.
+SPHYS_Charge_Closure_CC.lean · the charges of one generation of matter forced by four sums, on real algebra
+RATIONALE. The engine of edition 1.0.0 proved its statements over the integers. This file replaces it. A table of
+  five hypercharges is a point of a field of characteristic zero; the four sums are polynomials in it; the solutions
+  are found, all of them, with the converse proved; a registration is a map with a fold, as in the companion file
+  on the record.
+DESIGN. Parts, in order.
+    Part I    The table and the four sums. `Closes`.
+    Part II   `closure_forces_the_table`: the three cases. `the_observed_table_closes`,
+              `the_renamed_table_closes`, `the_idle_table_closes`. `closes_iff`.
+    Part III  `every_multiple_closes`; `the_unit_from_one_charge`.
+    Part IV   Electric charge. `the_atom_is_neutral`, `the_observed_charges`.
+    Part V    Generations. `partial_sums_zero`, `a_total_can_hide_a_failure`.
+    Part VI   Labels. `conserved_iff_read`, `no_conserved_label_is_unread`, `the_side_is_unread`.
+    Part VII  `Premises`; `charges_forced`; `chargePremises`.
+WHAT IS NOT PROVED HERE (read before citing).
+    (a) That the four sums must vanish. In field theory they are the conditions for the readings of the weak field,
+        the strong field, gravity and the hypercharge field to be consistent; the sums and their weights are
+        classical and are entered. That they vanish in each generation at every threshold is a field of `Premises`.
+    (b) That a label the record carries is a charge that a field reads. It is the reading of the paper.
+    (c) The unit of charge, and the number of generations. They are measured.
+RISK. The premises are over the rational numbers. No magnitude is derived.
+NON-NEGOTIABLE. No axiom is declared, no sorry. No headline theorem closes over a structure that carries its
+  conclusion. The kernel line of every theorem the paper names is printed at the end.
 -/
+import Mathlib.Algebra.Field.Basic
+import Mathlib.Algebra.CharZero.Defs
+import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+import Mathlib.Algebra.BigOperators.Fin
+import Mathlib.Data.Rat.Defs
+import Mathlib.Algebra.Order.Field.Rat
+import Mathlib.Logic.Function.Basic
+import Mathlib.Tactic.Ring
+import Mathlib.Tactic.FieldSimp
+import Mathlib.Tactic.LinearCombination
+import Mathlib.Tactic.NormNum
+import Mathlib.Tactic.Linarith
+
 namespace SPHYS.Charges
+open Finset
 
-/-! ## Part I. The four sums and the observed table (carried from the file of the first draft, unchanged) -/
+/-! ## Part I. The table and the four sums -/
 
-/-- The [SU(2)]²U(1) anomaly sum of one generation: the left doublets, quark (3 colors) and lepton. -/
-def A2 (yQ yL : Int) : Int := 3 * yQ + yL
+/-- A table of the hypercharges of one generation: the quark doublet q, the right-handed up and down quarks u and
+d, the lepton doublet l, and the right-handed electron e. -/
+@[ext] structure Table (K : Type*) where
+  q : K
+  u : K
+  d : K
+  l : K
+  e : K
 
-/-- The [SU(3)]²U(1) anomaly sum: left quarks (3 colors × doublet 2) minus right quarks (3 each). -/
-def A3 (yQ yU yD : Int) : Int := 6 * yQ - (3 * yU + 3 * yD)
+section Sums
+variable {K : Type*} [Field K]
 
-/-- The gravitational U(1) anomaly sum: all left charges minus all right charges, with multiplicities. -/
-def Ag (yQ yU yD yL yE : Int) : Int := (6 * yQ + 2 * yL) - (3 * yU + 3 * yD + yE)
+/-- The weak field twice, the hypercharge once. -/
+def s1 (T : Table K) : K := 3 * T.q + T.l
+/-- The strong field twice, the hypercharge once. -/
+def s2 (T : Table K) : K := 6 * T.q - 3 * T.u - 3 * T.d
+/-- Gravity twice, the hypercharge once. -/
+def s3 (T : Table K) : K := 6 * T.q + 2 * T.l - 3 * T.u - 3 * T.d - T.e
+/-- The hypercharge three times. -/
+def s4 (T : Table K) : K := 6 * T.q ^ 3 + 2 * T.l ^ 3 - 3 * T.u ^ 3 - 3 * T.d ^ 3 - T.e ^ 3
 
-/-- The [U(1)]³ anomaly sum, charges cubed (carried times 216): left minus right, with multiplicities. -/
-def A1 (yQ yU yD yL yE : Int) : Int :=
-  (6 * yQ ^ 3 + 2 * yL ^ 3) - (3 * yU ^ 3 + 3 * yD ^ 3 + yE ^ 3)
+/-- A table closes when the four sums vanish. -/
+def Closes (T : Table K) : Prop := s1 T = 0 ∧ s2 T = 0 ∧ s3 T = 0 ∧ s4 T = 0
 
-/-- THE OBSERVED GENERATION CLOSES. At the observed hypercharges (times 6), all four anomaly sums of one
-    generation are zero. Decided in the kernel, sum by sum — the 1972 arithmetic, at theorem grade. -/
-theorem the_observed_generation_closes :
-    A2 1 (-3) = 0 ∧ A3 1 4 (-2) = 0 ∧ Ag 1 4 (-2) (-3) (-6) = 0 ∧ A1 1 4 (-2) (-3) (-6) = 0 := by
-  decide
+/-- The observed table at the scale q. -/
+def observed (q : K) : Table K := ⟨q, 4 * q, -2 * q, -3 * q, -6 * q⟩
+/-- The observed table with the two right-handed quarks renamed. -/
+def renamed (q : K) : Table K := ⟨q, -2 * q, 4 * q, -3 * q, -6 * q⟩
+/-- A table in which only the right-handed quarks carry hypercharge, with opposite values. -/
+def idle (u : K) : Table K := ⟨0, u, -u, 0, 0⟩
 
-/-- THE LEPTON CHARGES ARE FORCED. Given the quark hypercharges, the [SU(2)]²U(1) closure fixes the
-    lepton doublet's charge (yL = -3·yQ with yQ = 1), and the gravitational closure then fixes the
-    right-handed electron's charge (yE = -6). The lepton half of the table is not fitted: two closure
-    conditions determine it from the quark half. -/
-theorem lepton_charges_are_forced (yL yE : Int)
-    (h2 : A2 1 yL = 0) (hg : Ag 1 4 (-2) yL yE = 0) : yL = -3 ∧ yE = -6 := by
-  unfold A2 at h2
-  unfold Ag at hg
-  refine ⟨?_, ?_⟩ <;> omega
+/-! ## Part II. Closure forces the table -/
 
-/-- AND THE FORCED TABLE CLOSES WHOLLY. The remaining two conditions, [SU(3)]²U(1) and [U(1)]³, hold at
-    the forced charges identically: the closure is over-determined and consistent, which is the content
-    of the cancellation — four conditions, and the table forced by two of them satisfies all four. -/
-theorem forced_charges_close_wholly :
-    A3 1 4 (-2) = 0 ∧ A1 1 4 (-2) (-3) (-6) = 0 := by
-  decide
+theorem the_observed_table_closes (q : K) : Closes (observed q) := by
+  unfold Closes s1 s2 s3 s4 observed; refine ⟨?_, ?_, ?_, ?_⟩ <;> ring
+theorem the_renamed_table_closes (q : K) : Closes (renamed q) := by
+  unfold Closes s1 s2 s3 s4 renamed; refine ⟨?_, ?_, ?_, ?_⟩ <;> ring
+theorem the_idle_table_closes (u : K) : Closes (idle u) := by
+  unfold Closes s1 s2 s3 s4 idle; refine ⟨?_, ?_, ?_, ?_⟩ <;> ring
 
-/-- THE LINEAR CLOSURES ADD OVER GENERATIONS. For the three linear anomaly sums, the sum over two
-    generations (charges added) is the sum of the sums: closure of the whole from closure of the parts,
-    and — the sharp direction — a failure in one generation is visible in the total unless another
-    generation cancels it, which the per-generation reading forbids. -/
-theorem linear_closures_add (aQ aU aD aL aE bQ bU bD bL bE : Int) :
-    A2 (aQ + bQ) (aL + bL) = A2 aQ aL + A2 bQ bL ∧
-    A3 (aQ + bQ) (aU + bU) (aD + bD) = A3 aQ aU aD + A3 bQ bU bD ∧
-    Ag (aQ + bQ) (aU + bU) (aD + bD) (aL + bL) (aE + bE) =
-      Ag aQ aU aD aL aE + Ag bQ bU bD bL bE := by
-  unfold A2 A3 Ag
-  refine ⟨?_, ?_, ?_⟩ <;> omega
+variable [CharZero K]
 
-/-- THREE IDENTICAL GENERATIONS CLOSE. The whole table, three copies of the observed generation, has all
-    four anomaly sums zero — decided in the kernel with every multiplicity written out. -/
-theorem three_generations_close :
-    3 * A2 1 (-3) = 0 ∧ 3 * A3 1 4 (-2) = 0 ∧ 3 * Ag 1 4 (-2) (-3) (-6) = 0 ∧
-    3 * A1 1 4 (-2) (-3) (-6) = 0 := by
-  decide
+/-- CLOSURE FORCES THE TABLE. If the four sums vanish, the lepton doublet is minus three times the quark doublet,
+the right-handed electron minus six times, the two right-handed quarks sum to twice, and one of three cases
+holds: the quark doublet carries no hypercharge; or the right-handed quarks carry four times and minus twice; or
+minus twice and four times. -/
+theorem closure_forces_the_table (T : Table K) (h : Closes T) :
+    T.l = -3 * T.q ∧ T.e = -6 * T.q ∧ T.u + T.d = 2 * T.q
+      ∧ (T.q = 0 ∨ (T.u = 4 * T.q ∧ T.d = -2 * T.q) ∨ (T.u = -2 * T.q ∧ T.d = 4 * T.q)) := by
+  obtain ⟨q, u, d, l, e⟩ := T
+  obtain ⟨h1, h2, h3, h4⟩ := h
+  simp only [s1, s2, s3, s4] at h1 h2 h3 h4
+  have hl : l = -3 * q := by linear_combination h1
+  have hd : d = 2 * q - u := by linear_combination (-1 / 3 : K) * h2
+  have he : e = -6 * q := by linear_combination (-1 : K) * h3 + 2 * h1 + h2
+  refine ⟨hl, he, by rw [hd]; ring, ?_⟩
+  subst hl hd he
+  have key : (18 : K) * (q * ((u - 4 * q) * (u + 2 * q))) = 0 := by linear_combination (-1 : K) * h4
+  have h18 : (18 : K) ≠ 0 := by norm_num
+  rcases mul_eq_zero.mp ((mul_eq_zero.mp key).resolve_left h18) with hq | hu
+  · exact Or.inl hq
+  · rcases mul_eq_zero.mp hu with hu | hu
+    · right; left
+      have : u = 4 * q := by linear_combination hu
+      exact ⟨this, by rw [this]; ring⟩
+    · right; right
+      have : u = -2 * q := by linear_combination hu
+      exact ⟨this, by rw [this]; ring⟩
 
-/-! ## Part II. One generation: closure forces the whole table -/
-
-/-- THE CUBIC SUM FACTORS. With the three linear conditions solved, the cubic sum is a product of three factors. -/
-theorem the_cubic_closure_factors (q u : Int) :
-    A1 q u (2 * q - u) (-3 * q) (-6 * q) = -18 * q * ((u - 4 * q) * (u + 2 * q)) := by
-  unfold A1
-  simp only [Int.pow_succ, Int.pow_zero, Int.one_mul]
-  simp only [Int.mul_add, Int.add_mul, Int.mul_sub, Int.sub_mul, Int.mul_neg, Int.neg_mul,
-    Int.mul_assoc, Int.mul_comm, Int.mul_left_comm]
-  simp only [← Int.mul_assoc]
-  omega
-
-/-- CLOSURE FORCES THE WHOLE TABLE. The four conditions, with no charge given, fix the lepton doublet, the
-    right-handed electron and the sum of the right-handed quarks in terms of the quark doublet, and leave three
-    cases for the rest. -/
-theorem closure_forces_the_whole_table (q u d l e : Int)
-    (h2 : A2 q l = 0) (h3 : A3 q u d = 0) (hg : Ag q u d l e = 0) (h1 : A1 q u d l e = 0) :
-    l = -3 * q ∧ e = -6 * q ∧ d = 2 * q - u ∧ (q = 0 ∨ u = 4 * q ∨ u = -2 * q) := by
-  unfold A2 at h2
-  unfold A3 at h3
-  unfold Ag at hg
-  have hl : l = -3 * q := by omega
-  have hd : d = 2 * q - u := by omega
-  have he : e = -6 * q := by omega
-  refine ⟨hl, he, hd, ?_⟩
-  rw [hl, he, hd, the_cubic_closure_factors] at h1
-  rcases Int.mul_eq_zero.mp h1 with hq | hf
-  · left; omega
-  · rcases Int.mul_eq_zero.mp hf with ha | hb
-    · right; left; omega
-    · right; right; omega
-
-/-- THE OBSERVED TABLE IS FORCED. With the quark doublet as the unit, closure leaves the observed table and
-    the same table with the two right-handed quarks renamed. -/
-theorem the_observed_table_is_forced (u d l e : Int)
-    (h2 : A2 1 l = 0) (h3 : A3 1 u d = 0) (hg : Ag 1 u d l e = 0) (h1 : A1 1 u d l e = 0) :
-    (u = 4 ∧ d = -2 ∧ l = -3 ∧ e = -6) ∨ (u = -2 ∧ d = 4 ∧ l = -3 ∧ e = -6) := by
-  obtain ⟨hl, he, hd, hc⟩ := closure_forces_the_whole_table 1 u d l e h2 h3 hg h1
-  rcases hc with h | h | h
-  · exact absurd h (by decide)
-  · exact Or.inl ⟨by omega, by omega, by omega, by omega⟩
-  · exact Or.inr ⟨by omega, by omega, by omega, by omega⟩
-
-/-- EVERY SCALE CLOSES. Every multiple of the observed table satisfies the four conditions: the unit of charge
-    is not fixed by closure. -/
-theorem every_scale_closes (k : Int) :
-    A2 k (-3 * k) = 0 ∧ A3 k (4 * k) (-2 * k) = 0 ∧ Ag k (4 * k) (-2 * k) (-3 * k) (-6 * k) = 0 ∧
-    A1 k (4 * k) (-2 * k) (-3 * k) (-6 * k) = 0 := by
-  refine ⟨by unfold A2; omega, by unfold A3; omega, by unfold Ag; omega, ?_⟩
-  have h : (-2 * k : Int) = 2 * k - 4 * k := by omega
-  rw [h, the_cubic_closure_factors]
-  have z : (4 * k - 4 * k : Int) = 0 := by omega
-  rw [z, Int.zero_mul, Int.mul_zero]
-
-/-- THE CHARGE OF THE ATOM. On the forced table the electric charges, times 6, of the proton's quarks and of
-    the electron sum to zero, and the neutron's quarks sum to zero. Charge is hypercharge plus the weak part:
-    for the right-handed fields it is the hypercharge itself. -/
-theorem the_atom_is_neutral : (2 * 4 + (-2) + (-6) : Int) = 0 ∧ (4 + 2 * (-2) : Int) = 0 := by decide
-
-/-! ## Part III. Every generation: a total can hide a failure, a threshold cannot -/
-
-/-- A TOTAL CAN HIDE A FAILURE. Two generations, each failing the first condition, whose total satisfies it. -/
-theorem a_total_can_hide_a_failure :
-    ∃ aL bL : Int, A2 1 aL ≠ 0 ∧ A2 1 bL ≠ 0 ∧ A2 1 aL + A2 1 bL = 0 :=
-  ⟨-2, -4, by decide, by decide, by decide⟩
-
-/-- CLOSURE AT EVERY THRESHOLD FORCES EACH. If a sum closes with the first generation alone in the reading, with
-    the first two, and with all three, it closes in each generation. -/
-theorem closure_at_every_threshold_forces_each (a b c : Int)
-    (h1 : a = 0) (h2 : a + b = 0) (h3 : a + b + c = 0) : a = 0 ∧ b = 0 ∧ c = 0 :=
-  ⟨h1, by omega, by omega⟩
-
-/-- A generation: the five charges of its multiplets. -/
-structure Gen where
-  q : Int
-  u : Int
-  d : Int
-  l : Int
-  e : Int
-
-def s2 (g : Gen) : Int := A2 g.q g.l
-def s3 (g : Gen) : Int := A3 g.q g.u g.d
-def sg (g : Gen) : Int := Ag g.q g.u g.d g.l g.e
-def s1 (g : Gen) : Int := A1 g.q g.u g.d g.l g.e
-
-/-- The table is forced in a generation: the three cases of `closure_forces_the_whole_table`. -/
-def Forced (g : Gen) : Prop :=
-  g.l = -3 * g.q ∧ g.e = -6 * g.q ∧ g.d = 2 * g.q - g.u ∧ (g.q = 0 ∨ g.u = 4 * g.q ∨ g.u = -2 * g.q)
-
-/-- All four sums close at each of the three thresholds. -/
-def ClosesAtEveryThreshold (a b c : Gen) : Prop :=
-  (s2 a = 0 ∧ s2 a + s2 b = 0 ∧ s2 a + s2 b + s2 c = 0) ∧
-  (s3 a = 0 ∧ s3 a + s3 b = 0 ∧ s3 a + s3 b + s3 c = 0) ∧
-  (sg a = 0 ∧ sg a + sg b = 0 ∧ sg a + sg b + sg c = 0) ∧
-  (s1 a = 0 ∧ s1 a + s1 b = 0 ∧ s1 a + s1 b + s1 c = 0)
-
-/-- EACH GENERATION IS FORCED. Three generations whose record closes at every threshold each carry the forced
-    table. No generation borrows from another. -/
-theorem each_generation_is_forced (a b c : Gen) (h : ClosesAtEveryThreshold a b c) :
-    Forced a ∧ Forced b ∧ Forced c := by
-  obtain ⟨⟨a2, ab2, abc2⟩, ⟨a3, ab3, abc3⟩, ⟨ag, abg, abcg⟩, ⟨a1, ab1, abc1⟩⟩ := h
-  have b2 : s2 b = 0 := by omega
-  have c2 : s2 c = 0 := by omega
-  have b3 : s3 b = 0 := by omega
-  have c3 : s3 c = 0 := by omega
-  have bg : sg b = 0 := by omega
-  have cg : sg c = 0 := by omega
-  have b1 : s1 b = 0 := by omega
-  have c1 : s1 c = 0 := by omega
-  exact ⟨closure_forces_the_whole_table _ _ _ _ _ a2 a3 ag a1,
-         closure_forces_the_whole_table _ _ _ _ _ b2 b3 bg b1,
-         closure_forces_the_whole_table _ _ _ _ _ c2 c3 cg c1⟩
-
-/-- A CHARGED GENERATION CARRIES THE TABLE. A generation under the three cases whose quark doublet carries
-    hypercharge has the observed table at its own scale, or the same with the two right-handed quarks renamed.
-    The scale is the generation's own: nothing here makes the scales of two generations equal. -/
-theorem a_charged_generation_carries_the_table (g : Gen) (h : Forced g) (hq : g.q ≠ 0) :
-    (g.u = 4 * g.q ∧ g.d = -2 * g.q ∧ g.l = -3 * g.q ∧ g.e = -6 * g.q) ∨
-    (g.u = -2 * g.q ∧ g.d = 4 * g.q ∧ g.l = -3 * g.q ∧ g.e = -6 * g.q) := by
-  obtain ⟨hl, he, hd, hc⟩ := h
-  rcases hc with h0 | h4 | h2
-  · exact absurd h0 hq
-  · exact Or.inl ⟨h4, by omega, hl, he⟩
-  · exact Or.inr ⟨h2, by omega, hl, he⟩
-
-/-! ## Part IV. No conserved label is unread -/
-
-abbrev Pt := Int × Int
-/-- The reflection of the seat, and the registration, which keeps the height and forgets the side. -/
-def fold (p : Pt) : Pt := (2 - p.1, p.2)
-def reg (p : Pt) : Pt := (1, p.2)
-
-/-- The record carries the label c: the label is a function of the registration. -/
-def Read (c : Pt → Int) : Prop := ∃ f : Pt → Int, ∀ p, c p = f (reg p)
-/-- The registration conserves the label c. -/
-def ConservedByRegistration (c : Pt → Int) : Prop := ∀ p, c (reg p) = c p
-
-/-- CONSERVED IS READ, AND READ IS CONSERVED. -/
-theorem conserved_iff_read (c : Pt → Int) : ConservedByRegistration c ↔ Read c := by
+/-- THE TABLES THAT CLOSE, ALL OF THEM. A table closes exactly when it is an idle table, or the observed table at
+some scale, or the renamed one. -/
+theorem closes_iff (T : Table K) :
+    Closes T ↔ (∃ u, T = idle u) ∨ (∃ q, T = observed q) ∨ (∃ q, T = renamed q) := by
   constructor
-  · intro h; exact ⟨c, fun p => (h p).symm⟩
-  · intro ⟨f, hf⟩ p
-    rw [hf (reg p), hf p]; rfl
+  · intro h
+    obtain ⟨hl, he, hud, hc⟩ := closure_forces_the_table T h
+    rcases hc with hq | ⟨hu, hd⟩ | ⟨hu, hd⟩
+    · left
+      refine ⟨T.u, ?_⟩
+      ext <;> simp only [idle]
+      · exact hq
+      · linear_combination hud + 2 * hq
+      · rw [hl, hq]; ring
+      · rw [he, hq]; ring
+    · right; left
+      exact ⟨T.q, by ext <;> simp only [observed] <;> assumption⟩
+    · right; right
+      exact ⟨T.q, by ext <;> simp only [renamed] <;> assumption⟩
+  · rintro (⟨u, rfl⟩ | ⟨q, rfl⟩ | ⟨q, rfl⟩)
+    · exact the_idle_table_closes u
+    · exact the_observed_table_closes q
+    · exact the_renamed_table_closes q
 
-/-- NO CONSERVED LABEL IS UNREAD. There is no label that every registration conserves and the record does
-    not carry. -/
-theorem no_conserved_label_is_unread : ¬ ∃ c : Pt → Int, ConservedByRegistration c ∧ ¬ Read c :=
-  fun ⟨c, hc, hn⟩ => hn ((conserved_iff_read c).mp hc)
+/-- A CHARGED GENERATION CARRIES THE TABLE. If the four sums vanish and the quark doublet carries hypercharge, the
+table is the observed one at the scale of the quark doublet, or its renaming. -/
+theorem a_charged_generation_carries_the_table (T : Table K) (h : Closes T) (hq : T.q ≠ 0) :
+    T = observed T.q ∨ T = renamed T.q := by
+  obtain ⟨hl, he, _, hc⟩ := closure_forces_the_table T h
+  rcases hc with h0 | ⟨hu, hd⟩ | ⟨hu, hd⟩
+  · exact absurd h0 hq
+  · left; ext <;> simp only [observed] <;> assumption
+  · right; ext <;> simp only [renamed] <;> assumption
 
-/-- A label the record carries cannot tell a state from its fold partner. -/
-theorem a_read_label_is_blind_to_the_side (c : Pt → Int) (h : Read c) (p : Pt) : c (fold p) = c p := by
-  obtain ⟨f, hf⟩ := h
-  rw [hf (fold p), hf p]; rfl
+/-! ## Part III. The unit -/
 
-/-- THE SIDE IS THE EXAMPLE. The side of a state is a label the record does not carry, and the registration
-    does not conserve it. -/
-theorem the_side_is_unread_and_not_conserved :
-    ¬ Read (fun p : Pt => p.1) ∧ ¬ ConservedByRegistration (fun p : Pt => p.1) := by
-  have hn : ¬ ConservedByRegistration (fun p : Pt => p.1) := fun h => by
-    have := h (0, 0)
-    exact absurd this (by decide)
-  exact ⟨fun hr => hn ((conserved_iff_read _).mpr hr), hn⟩
+omit [CharZero K] in
+/-- EVERY MULTIPLE CLOSES. If a table closes, so does every multiple of it. The four sums fix no unit. -/
+theorem every_multiple_closes (T : Table K) (c : K) (h : Closes T) :
+    Closes ⟨c * T.q, c * T.u, c * T.d, c * T.l, c * T.e⟩ := by
+  obtain ⟨h1, h2, h3, h4⟩ := h
+  simp only [s1, s2, s3, s4] at h1 h2 h3 h4
+  simp only [Closes, s1, s2, s3, s4]
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · linear_combination c * h1
+  · linear_combination c * h2
+  · linear_combination c * h3
+  · linear_combination c ^ 3 * h4
 
-/-- A FINITE RECORD CANNOT HOLD AN UNBOUNDED CHARGE (carried). -/
-theorem a_finite_record_cannot_hold_it (q C : Int) (hq : C < q) : ¬ (q ≤ C ∧ -C ≤ q) := by
-  omega
+/-! ## Part IV. Electric charge -/
 
-/-- EVAPORATION DOES NOT RETURN IT (carried). What a record of capacity C gives back is at most C. -/
-theorem evaporation_does_not_return_the_charge (q C r : Int) (hr : r ≤ C) (hq : C < q) : r ≠ q := by
-  omega
+/-- The electric charge of a member of a doublet is its place in the doublet, plus or minus one half, plus its
+hypercharge; of a right-handed field, its hypercharge. -/
+def upCharge (T : Table K) : K := 1 / 2 + T.q
+def downCharge (T : Table K) : K := -1 / 2 + T.q
+def neutrinoCharge (T : Table K) : K := 1 / 2 + T.l
+def electronCharge (T : Table K) : K := -1 / 2 + T.l
+def protonCharge (T : Table K) : K := 2 * upCharge T + downCharge T
+def neutronCharge (T : Table K) : K := upCharge T + 2 * downCharge T
+
+omit [CharZero K] in
+/-- THE ATOM IS NEUTRAL. If the first sum vanishes, the charges of the proton and the electron cancel, and so do
+those of the neutron and the neutrino, whatever the scale. -/
+theorem the_atom_is_neutral (T : Table K) (h : s1 T = 0) :
+    protonCharge T + electronCharge T = 0 ∧ neutronCharge T + neutrinoCharge T = 0 := by
+  unfold s1 at h
+  unfold protonCharge neutronCharge upCharge downCharge electronCharge neutrinoCharge
+  constructor <;> linear_combination h
+
+/-- THE UNIT FROM ONE CHARGE. On the observed table, if the right-handed up quark carries the electric charge of
+the up quark of the doublet, the scale is one sixth. -/
+theorem the_unit_from_one_charge (q : K) (h : (observed q).u = upCharge (observed q)) : q = 1 / 6 := by
+  simp only [observed, upCharge] at h
+  linear_combination (1 / 3 : K) * h
+
+/-- THE OBSERVED CHARGES. At the scale one sixth the charges of the up quark, the down quark, the neutrino, the
+electron, the proton and the neutron are 2/3, -1/3, 0, -1, 1 and 0, and each right-handed field carries the
+charge of its partner in a doublet. -/
+theorem the_observed_charges :
+    upCharge (observed (1 / 6 : K)) = 2 / 3 ∧ downCharge (observed (1 / 6 : K)) = -1 / 3
+      ∧ neutrinoCharge (observed (1 / 6 : K)) = 0 ∧ electronCharge (observed (1 / 6 : K)) = -1
+      ∧ protonCharge (observed (1 / 6 : K)) = 1 ∧ neutronCharge (observed (1 / 6 : K)) = 0
+      ∧ (observed (1 / 6 : K)).u = upCharge (observed (1 / 6 : K))
+      ∧ (observed (1 / 6 : K)).d = downCharge (observed (1 / 6 : K))
+      ∧ (observed (1 / 6 : K)).e = electronCharge (observed (1 / 6 : K)) := by
+  simp only [observed, upCharge, downCharge, neutrinoCharge, electronCharge, protonCharge, neutronCharge]
+  refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩ <;> norm_num
+
+end Sums
+
+/-! ## Part V. Generations -/
+
+/-- If every sum of the first k terms of a sequence vanishes, for k up to n, each of the first n terms vanishes. -/
+theorem partial_sums_zero {K : Type*} [AddCommGroup K] (f : ℕ → K) (n : ℕ)
+    (h : ∀ k, k ≤ n → ∑ i ∈ Finset.range k, f i = 0) (i : ℕ) (hi : i < n) : f i = 0 := by
+  have a := h (i + 1) hi
+  rw [Finset.sum_range_succ, h i hi.le, zero_add] at a
+  exact a
+
+/-- A TOTAL CAN HIDE A FAILURE. Two generations can each fail the first sum while their total satisfies it. -/
+theorem a_total_can_hide_a_failure :
+    ∃ T1 T2 : Table ℚ, s1 T1 ≠ 0 ∧ s1 T2 ≠ 0 ∧ s1 T1 + s1 T2 = 0 :=
+  ⟨⟨1, 4, -2, -2, -6⟩, ⟨1, 4, -2, -4, -6⟩, by norm_num [s1], by norm_num [s1], by norm_num [s1]⟩
+
+/-! ## Part VI. Labels -/
+
+/-- A registration: a fold of the states that is its own inverse, and a map that gives two states one value
+exactly when they are the same state or partners under the fold. -/
+structure Registration (X Y : Type*) where
+  fold : X → X
+  involutive : Function.Involutive fold
+  reg : X → Y
+  spec : ∀ x y, reg x = reg y ↔ y = x ∨ y = fold x
+
+section Labels
+variable {X Y Z : Type*} (r : Registration X Y)
+
+/-- A LABEL IS CONSERVED EXACTLY WHEN THE RECORD CARRIES IT. A label has the same value on every state and its
+partner exactly when it has the same value on every two states with one registration. -/
+theorem conserved_iff_read (L : X → Z) : (∀ x, L (r.fold x) = L x) ↔ Function.FactorsThrough L r.reg := by
+  constructor
+  · intro h a b hab
+    rcases (r.spec a b).mp hab with rfl | rfl
+    · rfl
+    · exact (h a).symm
+  · intro h x
+    exact h ((r.spec x (r.fold x)).mpr (Or.inr rfl)).symm
+
+/-- NO CONSERVED LABEL IS UNREAD. A conserved label is a function of the registration. -/
+theorem no_conserved_label_is_unread [Nonempty Z] (L : X → Z) (h : ∀ x, L (r.fold x) = L x) :
+    ∃ g : Y → Z, L = g ∘ r.reg :=
+  (Function.factorsThrough_iff L).mp ((conserved_iff_read r L).mp h)
+
+/-- THE SIDE IS UNREAD. A label that tells some state from its partner is not a function of the registration. -/
+theorem the_side_is_unread (L : X → Z) (x : X) (h : L (r.fold x) ≠ L x) : ¬ ∃ g : Y → Z, L = g ∘ r.reg := by
+  rintro ⟨g, rfl⟩
+  apply h
+  show g (r.reg (r.fold x)) = g (r.reg x)
+  rw [((r.spec x (r.fold x)).mpr (Or.inr rfl))]
+
+end Labels
+
+/-! ## Part VII. The theorem -/
+
+/-- The premises. There are n generations, each with a table of hypercharges. Each of the four sums, taken over
+the first k generations, vanishes for every k up to n. The quark doublet of every generation carries hypercharge.
+There is a registration, and the charge of a state is a label that the registration conserves. Nothing else is
+assumed, and no charge is given. -/
+structure Premises where
+  n : ℕ
+  T : ℕ → Table ℚ
+  weak : ∀ k, k ≤ n → ∑ i ∈ Finset.range k, s1 (T i) = 0
+  strong : ∀ k, k ≤ n → ∑ i ∈ Finset.range k, s2 (T i) = 0
+  gravity : ∀ k, k ≤ n → ∑ i ∈ Finset.range k, s3 (T i) = 0
+  hyper : ∀ k, k ≤ n → ∑ i ∈ Finset.range k, s4 (T i) = 0
+  charged : ∀ i, i < n → (T i).q ≠ 0
+  State : Type
+  Value : Type
+  reg : Registration State Value
+  charge : State → ℚ
+  conserved : ∀ x, charge (reg.fold x) = charge x
+
+/-- EACH GENERATION CLOSES. -/
+theorem each_generation_closes (P : Premises) (i : ℕ) (hi : i < P.n) : Closes (P.T i) :=
+  ⟨partial_sums_zero _ P.n P.weak i hi, partial_sums_zero _ P.n P.strong i hi,
+    partial_sums_zero _ P.n P.gravity i hi, partial_sums_zero _ P.n P.hyper i hi⟩
+
+/-- THE CHARGES, FORCED. On the premises every generation carries the observed table at the scale of its own
+quark doublet, or its renaming; its lepton doublet is minus three times its quark doublet and its right-handed
+electron minus six times; and its atom is neutral. -/
+theorem charges_forced (P : Premises) (i : ℕ) (hi : i < P.n) :
+    (P.T i = observed (P.T i).q ∨ P.T i = renamed (P.T i).q)
+      ∧ (P.T i).l = -3 * (P.T i).q ∧ (P.T i).e = -6 * (P.T i).q
+      ∧ protonCharge (P.T i) + electronCharge (P.T i) = 0 := by
+  have hc := each_generation_closes P i hi
+  obtain ⟨hl, he, _, _⟩ := closure_forces_the_table (P.T i) hc
+  exact ⟨a_charged_generation_carries_the_table (P.T i) hc (P.charged i hi), hl, he, (the_atom_is_neutral (P.T i) hc.1).1⟩
+
+/-- NO CHARGE IS UNREAD. On the premises the charge is a function of the registration. -/
+theorem no_charge_is_unread (P : Premises) : ∃ g : P.Value → ℚ, P.charge = g ∘ P.reg.reg :=
+  no_conserved_label_is_unread P.reg P.charge P.conserved
+
+/-- THE PREMISES ARE INHABITED. Three generations, each the observed table at the scale one sixth; two states that
+the registration writes as one, with one charge. -/
+def chargePremises : Premises where
+  n := 3
+  T := fun _ => observed (1 / 6)
+  weak := fun k _ => by
+    show ∑ _i ∈ Finset.range k, s1 (observed (1 / 6 : ℚ)) = 0
+    rw [Finset.sum_const, (the_observed_table_closes (1 / 6 : ℚ)).1, smul_zero]
+  strong := fun k _ => by
+    show ∑ _i ∈ Finset.range k, s2 (observed (1 / 6 : ℚ)) = 0
+    rw [Finset.sum_const, (the_observed_table_closes (1 / 6 : ℚ)).2.1, smul_zero]
+  gravity := fun k _ => by
+    show ∑ _i ∈ Finset.range k, s3 (observed (1 / 6 : ℚ)) = 0
+    rw [Finset.sum_const, (the_observed_table_closes (1 / 6 : ℚ)).2.2.1, smul_zero]
+  hyper := fun k _ => by
+    show ∑ _i ∈ Finset.range k, s4 (observed (1 / 6 : ℚ)) = 0
+    rw [Finset.sum_const, (the_observed_table_closes (1 / 6 : ℚ)).2.2.2, smul_zero]
+  charged := fun _ _ => by simp [observed]
+  State := Bool
+  Value := Unit
+  reg := { fold := not, involutive := Bool.not_not, reg := fun _ => (), spec := by decide }
+  charge := fun _ => 1
+  conserved := fun _ => rfl
 
 end SPHYS.Charges
 
-#print axioms SPHYS.Charges.the_observed_generation_closes
-#print axioms SPHYS.Charges.lepton_charges_are_forced
-#print axioms SPHYS.Charges.forced_charges_close_wholly
-#print axioms SPHYS.Charges.linear_closures_add
-#print axioms SPHYS.Charges.three_generations_close
-#print axioms SPHYS.Charges.the_cubic_closure_factors
-#print axioms SPHYS.Charges.closure_forces_the_whole_table
-#print axioms SPHYS.Charges.the_observed_table_is_forced
-#print axioms SPHYS.Charges.every_scale_closes
-#print axioms SPHYS.Charges.the_atom_is_neutral
-#print axioms SPHYS.Charges.a_total_can_hide_a_failure
-#print axioms SPHYS.Charges.closure_at_every_threshold_forces_each
-#print axioms SPHYS.Charges.each_generation_is_forced
+#print axioms SPHYS.Charges.the_observed_table_closes
+#print axioms SPHYS.Charges.the_renamed_table_closes
+#print axioms SPHYS.Charges.the_idle_table_closes
+#print axioms SPHYS.Charges.closure_forces_the_table
+#print axioms SPHYS.Charges.closes_iff
 #print axioms SPHYS.Charges.a_charged_generation_carries_the_table
+#print axioms SPHYS.Charges.every_multiple_closes
+#print axioms SPHYS.Charges.the_atom_is_neutral
+#print axioms SPHYS.Charges.the_unit_from_one_charge
+#print axioms SPHYS.Charges.the_observed_charges
+#print axioms SPHYS.Charges.partial_sums_zero
+#print axioms SPHYS.Charges.a_total_can_hide_a_failure
 #print axioms SPHYS.Charges.conserved_iff_read
 #print axioms SPHYS.Charges.no_conserved_label_is_unread
-#print axioms SPHYS.Charges.a_read_label_is_blind_to_the_side
-#print axioms SPHYS.Charges.the_side_is_unread_and_not_conserved
-#print axioms SPHYS.Charges.a_finite_record_cannot_hold_it
-#print axioms SPHYS.Charges.evaporation_does_not_return_the_charge
+#print axioms SPHYS.Charges.the_side_is_unread
+#print axioms SPHYS.Charges.each_generation_closes
+#print axioms SPHYS.Charges.charges_forced
+#print axioms SPHYS.Charges.no_charge_is_unread
+#print axioms SPHYS.Charges.chargePremises

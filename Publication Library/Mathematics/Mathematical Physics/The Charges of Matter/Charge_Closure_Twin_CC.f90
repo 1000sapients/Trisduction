@@ -1,9 +1,9 @@
-! Charge_Closure_Twin_CC.f90 · numerical twin of SPHYS_Charge_Closure_CC.lean
+! Charge_Closure_Twin_CC.f90 · twin of SPHYS_Charge_Closure_CC.lean
 ! RATIONALE. The engine proves that the four closure conditions of a generation leave three cases, that a total can
-!   hide a failure while a threshold cannot, and that a label the registration conserves is read. This twin finds
+!   hide a failure while a threshold cannot, and that a label the fold keeps is a function of the registration. This twin finds
 !   every solution in a box by search (A, B), scans the threshold statements (C), scans labels (D) and sets two
 !   consequences against measurement (E).
-! DESIGN. Integers, no library. Hypercharges are carried times 6, as in the engine: the observed table is
+! DESIGN. Integers, no library. Hypercharges are carried times 6, as whole numbers: the observed table is
 !   (q, u, d, l, e) = (1, 4, -2, -3, -6). The sums are those of the engine, left minus right, with the multiplicities
 !   3 colours times 2 for the quark doublet, 2 for the lepton doublet, 3 for each right-handed quark, 1 for the
 !   right-handed electron. The search of A runs over all 25**5 tables with charges from -12 to 12.
@@ -11,7 +11,8 @@
 !   Measured inputs of E: the charge of the neutron, (-0.2 +- 0.8)e-21 of the electron's (the average of Navas et al. 2024);
 !   the sum of the charges of the proton and the electron, below 1e-21 of the electron's (Bressi et al. 2011);
 !   A reading, not a check: the number of light neutrinos, 2.9963 +- 0.0074 (Janot and Jadach 2020).
-! RISK. A search of a box is not a proof outside the box; the classification for all integers is the engine's theorem.
+! RISK. A search of a box is not a proof outside the box; the classification over every field of characteristic
+!   zero is the engine's theorem.
 ! NON-NEGOTIABLE. The counts printed by A and B are found by the search, not entered.
 program charge_twin
   implicit none
@@ -77,16 +78,18 @@ program charge_twin
   write(*,'(a,i0,a,i0)') '  triples tried: ', 13**3, '; triples that close at every threshold: ', cnt
   call check('C  a sum that closes with one, with two and with three generations closes in each', ok .and. cnt == 1)
 
-  ! D. labels on states (x, y), x and y from -4 to 6: conserved by the registration exactly when blind to x
+  ! D. labels on states (x, y), x and y from -4 to 6. The fold sends x to 2 - x; the registration keeps the size of
+  !    x - 1 and keeps y. A label is conserved when the fold keeps it, and read when it takes one value on every
+  !    two states with one registration.
   ok = .true.; ok2 = .true.
   do a = 1, 5
-    if (conserved(a) .neqv. (a == 1 .or. a == 4)) ok = .false.      ! labels 1 and 4 do not read x
-    if (conserved(a) .and. .not. foldblind(a)) ok2 = .false.
+    if (foldblind(a) .neqv. (a == 1 .or. a == 4 .or. a == 5)) ok = .false.   ! labels 2 and 3 read the side
+    if (foldblind(a) .neqv. isread(a)) ok2 = .false.
   end do
-  call check('D1 of five labels, the registration conserves exactly the two that do not read the side', ok)
-  call check('D2 every conserved label gives a state and its fold partner one value', ok2)
-  call check('D3 the label (x - 1)**2 gives fold partners one value and is still not conserved', &
-             foldblind(5) .and. .not. conserved(5))
+  call check('D1 of five labels, the fold keeps exactly the three that do not read the side', ok)
+  call check('D2 a label is kept by the fold exactly when it takes one value on states with one registration', ok2)
+  call check('D3 the label x tells a state from its partner and is not a function of the registration', &
+             .not. foldblind(2) .and. .not. isread(2))
 
   ! E. measured
   u = 4; d = -2; e = -6
@@ -97,7 +100,7 @@ program charge_twin
              abs(real(2*u + d + e, dp)/6.0_dp) < 1.0e-21_dp)
   write(*,'(a)') '  reading: the number of light neutrinos is 2.9963 +- 0.0074 (Janot and Jadach 2020); the count three is an input'
 
-  write(*,'(a,i0,a,i0)') 'checks passed: ', npass, '   failures: ', nfail
+  write(*,'(A,I0,A,I0,A)') ' BATTERY-JSON: {"checks":', npass + nfail, ',"failures":', nfail, '}'
 contains
   integer function a2(qq, ll)
     integer, intent(in) :: qq, ll
@@ -125,13 +128,15 @@ contains
     case default; label = (x - 1)**2
     end select
   end function
-  logical function conserved(n)      ! label(reg p) = label(p) at every state of the grid; reg sets x to 1
+  logical function isread(n)         ! one value on every two states of the grid with one registration
     integer, intent(in) :: n
-    integer :: x, y
-    conserved = .true.
+    integer :: x, y, x2
+    isread = .true.
     do x = -4, 6
       do y = -4, 6
-        if (label(n, 1, y) /= label(n, x, y)) conserved = .false.
+        do x2 = -4, 6
+          if (abs(x2 - 1) == abs(x - 1) .and. label(n, x2, y) /= label(n, x, y)) isread = .false.
+        end do
       end do
     end do
   end function
