@@ -2,9 +2,7 @@
 
 ## The Yang-Mills Equations Forced by a Charge That Does Not Commute, Maxwell's Equations as Their Commuting Half, and Three Generations as the Least with One Phase
 
-**Mohammad F. Islam** · 25 November 2026
-
-*On edition 2.0.0. Part I, Sections 1 to 10, is new: the forcing is rebuilt on a Lie algebra of charges, a module of matter and commuting derivations, and is proved in Lean 4 with Mathlib. Part II, Section 11, is the reading of the weak and the strong force from Nothing Escapes, Least Erasure (Islam, 2026a), carried as text at premise grade. Section 12 closes the paper. The engine of edition 1.0.0 is withdrawn: its forcing was proved over a structure of integers that carried the pieces of the strength as fields, and it is replaced by the theorems of Appendix A.*
+**Mohammad F. Islam PhD** · 25 November 2026
 
 ## Abstract
 
