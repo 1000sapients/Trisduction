@@ -2,11 +2,9 @@
 
 ## Exclusion Forced by the Full Turn, the Dirac Equation as the Least Law of a Half-Spin, and Two Statistics with No Third in Three Dimensions
 
-**Mohammad F. Islam** · 25 November 2026
+**Mohammad F. Islam PhD** · 25 November 2026
 
 *Blog edition of the master, edition 2.0.0 of 25 November 2026. It renders the whole text. The printed files of the appendices stand in the master and in the Journal edition, and are listed at the end.*
-
-*On edition 2.0.0. Part I, Sections 1 to 10, is new: the forcing is rebuilt on a ring of coefficients, matrices over a field and the group of permutations, and is proved in Lean 4 with Mathlib. Part II, Section 11, is the reading of spin and statistics from Nothing Escapes, Least Erasure (Islam, 2026a), carried as text at premise grade. Section 12 closes the paper. The engine of edition 1.0.0 is withdrawn: its statements were proved over small structures of integers that carried the pieces of the law as fields, and they are replaced by the theorems of Appendix A.*
 
 ## Abstract
 
