@@ -1,10 +1,16 @@
 ! Dirac_Forced_Twin_CC.f90 · twin of SPHYS_Dirac_Forced_CC.lean
-! RATIONALE. The engine proves its identities over all integers. This twin executes the same identities on random
-!   integer data, as an independent run, and sets three readings of the engine against published measurements.
-! DESIGN. 64-bit integers for the algebra; double precision for the measured cells; one generator, fixed seed.
+! RATIONALE. The engine proves its identities in every ring. This twin executes them on random integer data, as an
+!   independent run; searches small matrices and small groups exhaustively for what the engine proves cannot exist;
+!   and sets three readings of the law against published measurements, with a rival beside the first.
+! DESIGN. 64-bit integers for the algebra; complex integers for the search; double precision for the measured cells;
+!   one generator, fixed seed. The turns of section A are the quaternions, which are the products of pairs of the
+!   three generators of Part V of the engine.
+! CONVENTION. A reading agrees within the stated scale; a rival is excluded when it lies further than that scale.
 ! NON-NEGOTIABLE. No mass and no coupling is computed. The fine-structure constant is a measured input.
 ! RISK. The least law gives the moment of the electron as two. The first correction, alpha over two pi, belongs to
-!   the field's own quantum and is printed as such, not as a result of the least law.
+!   the field's own quantum; it is a classical formula, entered, and is printed as such, not as a result of the law.
+!   The search of section A covers matrices of size two with entries 0, 1, -1, i, -i only; the engine's theorem
+!   covers every field.
 program dirac_twin
   implicit none
   integer, parameter :: i8 = selected_int_kind(18), dp = kind(1.0d0)
@@ -88,13 +94,75 @@ contains
       end do
     end do
     call check('no pair of numbers takes the square root, a and b in -6..6', bad5 == 0)
-    bad5 = 0
-    do na = 2, 12                                    ! the count 2**(n/2), whole part: 4 at n = 4 and 5 only, 2 at n = 2 and 3
-      if ((2**(na/2) == 4) .neqv. (na == 4 .or. na == 5)) bad5 = bad5 + 1
-      if ((2**(na/2) == 2) .neqv. (na == 2 .or. na == 3)) bad5 = bad5 + 1
-    end do
-    call check('components of the least law, n = 2..12: two in three dimensions of spacetime, four in four', bad5 == 0)
+    call search2(na, nb)
+    write(*,'(A,I0,A,I0)') '   size two, entries 0, 1, -1, i, -i: matrices whose square is a scalar, not zero: ', na, &
+         '; largest set that anticommutes in pairs: ', nb
+    call check('in size two three coefficients anticommute and four never do', nb == 3)
   end subroutine
+  subroutine search2(nsq, best)                      ! exhaustive search in size two
+    integer, intent(out) :: nsq, best
+    complex(dp), parameter :: v(5) = [(0d0,0d0), (1d0,0d0), (-1d0,0d0), (0d0,1d0), (0d0,-1d0)]
+    complex(dp), allocatable :: m(:,:,:)
+    complex(dp) :: a(2,2), z(2,2)
+    integer :: i1, i2, i3, i4, p, q, r, t
+    logical, allocatable :: ac(:,:)
+    allocate(ac(625,625), m(2,2,625))
+    nsq = 0
+    do i1 = 1, 5; do i2 = 1, 5; do i3 = 1, 5; do i4 = 1, 5
+      a = reshape([v(i1), v(i2), v(i3), v(i4)], [2,2]); z = matmul(a, a)
+      if (isz(z(1,2)) .and. isz(z(2,1)) .and. isz(z(1,1) - z(2,2)) .and. .not. isz(z(1,1))) then
+        nsq = nsq + 1; m(:,:,nsq) = a
+      end if
+    end do; end do; end do; end do
+    do p = 1, nsq
+      do q = 1, nsq
+        ac(p,q) = all(isz(matmul(m(:,:,p), m(:,:,q)) + matmul(m(:,:,q), m(:,:,p))))
+      end do
+    end do
+    best = 1
+    do p = 1, nsq
+      do q = p + 1, nsq
+        if (.not. ac(p,q)) cycle
+        best = max(best, 2)
+        do r = q + 1, nsq
+          if (.not. (ac(p,r) .and. ac(q,r))) cycle
+          best = max(best, 3)
+          do t = r + 1, nsq
+            if (ac(p,t) .and. ac(q,t) .and. ac(r,t)) best = max(best, 4)
+          end do
+        end do
+      end do
+    end do
+  end subroutine
+  elemental logical function isz(c)                  ! entries are whole numbers, so the test is exact
+    complex(dp), intent(in) :: c
+    isz = nint(real(c)) == 0 .and. nint(aimag(c)) == 0
+  end function
+  integer function count_sign_maps()                 ! homomorphisms from the permutations of three things to +-1
+    integer :: perm(3,6), f(6), mask, a, b, c, k, comp(3)
+    logical :: ok
+    perm = reshape([1,2,3, 1,3,2, 2,1,3, 2,3,1, 3,1,2, 3,2,1], [3,6])
+    count_sign_maps = 0
+    do mask = 0, 63
+      do a = 1, 6
+        f(a) = merge(-1, 1, btest(mask, a - 1))
+      end do
+      ok = .true.
+      do a = 1, 6
+        do b = 1, 6
+          do k = 1, 3
+            comp(k) = perm(perm(k, b), a)
+          end do
+          do c = 1, 6
+            if (all(perm(:, c) == comp)) then
+              if (f(c) /= f(a)*f(b)) ok = .false.
+            end if
+          end do
+        end do
+      end do
+      if (ok) count_sign_maps = count_sign_maps + 1
+    end do
+  end function
   subroutine exclusion()
     integer :: i, j, bad1, bad2, bad3, sg
     integer(i8) :: f(12), g(12), psi(12,12)
@@ -116,13 +184,12 @@ contains
     do sg = -50, 50
       if ((sg*sg == 1) .neqv. (sg == 1 .or. sg == -1)) bad2 = bad2 + 1
     end do
-    do i = 1, 40
-      if ((i - 1 >= 2) .neqv. (i >= 3)) bad3 = bad3 + 1
-    end do
+    bad3 = count_sign_maps()                         ! maps from the six permutations of three things to +-1
     write(*,'(A)') ' B. Exclusion and the two statistics'
     call check('an amplitude with the minus sign vanishes wherever two share a state', bad1 == 0)
     call check('a sign whose square is one is plus one or minus one, -50..50', bad2 == 0)
-    call check('the double exchange unwinds exactly from three dimensions of space, d = 1..40', bad3 == 0)
+    write(*,'(A,I0)') '   maps from the permutations of three things to signs that respect products: ', bad3
+    call check('the permutations of three things carry two statistics and no third', bad3 == 2)
   end subroutine
   subroutine measured()
     real(dp) :: alpha, ghalf, sch, qm_ratio, qm_sig
@@ -134,6 +201,9 @@ contains
          ', first correction alpha/2pi = ', sch
     ! thresholds are the scales of the expansion, not fitted numbers: alpha for the least law, (alpha/pi)^2 for the rest
     call check('the least law holds within alpha: measured 1.00115965218059(13)', abs(ghalf - 1.0d0) < alpha)
+    ! rival: a law with no spin term gives half the moment as one half
+    write(*,'(A,F8.5,A)') '   rival, no spin term: half the moment 0.5, away from the measured value by ', abs(ghalf - 0.5d0), ''
+    call check('a law with no spin term is excluded: it misses by more than alpha', abs(ghalf - 0.5d0) > alpha)
     call check('the first correction closes the rest within (alpha/pi)^2', abs(ghalf - 1.0d0 - sch) < (alpha/pi)**2)
     qm_ratio = -1.000000000003d0; qm_sig = 16.0d-12  ! Borchert et al., 2022
     write(*,'(A,F6.2,A)') '   antiproton to proton charge over mass: -1 at ', abs(qm_ratio + 1.0d0)/qm_sig, &
