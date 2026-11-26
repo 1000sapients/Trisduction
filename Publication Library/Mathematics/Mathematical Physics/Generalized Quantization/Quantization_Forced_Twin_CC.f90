@@ -1,9 +1,14 @@
-! Quantization_Forced_Twin_CC.f90 · numerical twin of SPHYS_Quantization_Forced_CC.lean, edition 1.0.0
+! Quantization_Forced_Twin_CC.f90 · numerical twin of the three kernels of edition 2.0.0
+!   (SPHYS_Quantization_Forced_CC.lean, SPHYS_Quantization_II_CC.lean, SPHYS_Quantization_Star_CC.lean)
 ! RATIONALE. The Lean file proves its statements for every seat. This program checks them by exhaustion on small
 !   seats and on a bounded range of the particle model, so that a reader can see each statement hold case by case.
 ! DESIGN. Part A: every seat on 4 points (10 involutions) with every registration into 3 values that the fold
 !   keeps, and all 16 configurations. Part B: the particle map on charges in {-1,0,1} and frequency in {0,1}.
 !   Part C: the time mirror on rates in {-1,0,1}. Part D: recording on the seat of 6 points, all 64 configurations.
+!   Edition 2.0.0 adds: Part E any two maps of 3 points (no structure asked of them) with every reading they keep.
+!   Part F total charge of every configuration closed under the particle map. Part G the labels of a symmetry of
+!   period n in arithmetic modulo a prime. Part H the wave, parity and the energy. Part I identical quanta and the
+!   occupation numbers. Part J the commutator of 2 by 2 integer matrices, with the transpose as the adjoint.
 ! RISK. A check that passes here proves nothing beyond the cases enumerated. No number printed by this program
 !   enters any proof.
 ! NON-NEGOTIABLE. Integer arithmetic only. Every check prints its count of cases and its count of failures.
@@ -12,6 +17,7 @@ program quantization_twin
   integer :: nfail_total, nchk
   nfail_total = 0; nchk = 0
   call part_a(); call part_b(); call part_c(); call part_d()
+  call part_e(); call part_f(); call part_g(); call part_h(); call part_i(); call part_j()
   write(*,'(A,I0,A,I0,A)') 'BATTERY {"checks":', nchk, ',"failures":', nfail_total, '}'
 contains
 
@@ -162,6 +168,144 @@ contains
     write(*,'(A,I0,A)') 'Part D: ', n, ' configurations of 6 points'
     call report(' D1 recording is one step                             ', n, f1)
     call report(' D2 the prior is the posterior exactly on the line    ', n, f2)
+  end subroutine
+
+  ! ---- Part E: any family of maps. Two arbitrary maps f, g of 3 points; every reading into 2 values they keep --
+  subroutine part_e()
+    integer :: f(3), g(3), r(3), cl(3), i, j, a, b, s, it, nfam, c1, f1, c2, f2
+    logical :: kept, closed, cnt, allfix, ins(3)
+    nfam=0; c1=0; f1=0; c2=0; f2=0
+    do i=0,26; do j=0,26
+      f = (/ mod(i,3)+1, mod(i/3,3)+1, i/9+1 /); g = (/ mod(j,3)+1, mod(j/3,3)+1, j/9+1 /)
+      nfam = nfam + 1
+      cl = (/1,2,3/)                                            ! orbit classes: identify a with f(a) and with g(a)
+      do it=1,6; do a=1,3
+        b = min(cl(a), cl(f(a)), cl(g(a))); cl(a) = b; cl(f(a)) = b; cl(g(a)) = b
+      end do; end do
+      do s=0,7
+        r = (/ ibits(s,0,1), ibits(s,1,1), ibits(s,2,1) /)
+        kept = .true.
+        do a=1,3; if (r(f(a)) /= r(a) .or. r(g(a)) /= r(a)) kept = .false.; end do
+        if (.not. kept) cycle
+        ! E1 a kept reading is constant on each orbit class: it factors through the orbit map
+        do a=1,3; do b=1,3
+          if (cl(a) == cl(b)) then; c1 = c1 + 1; if (r(a) /= r(b)) f1 = f1 + 1; end if
+        end do; end do
+        do it=0,7                                               ! configurations
+          do a=1,3; ins(a) = btest(it, a-1); end do
+          closed = .true.; cnt = .true.; allfix = .true.
+          do a=1,3
+            if (ins(a) .and. .not. (ins(f(a)) .and. ins(g(a)))) closed = .false.
+            if (ins(a) .and. (f(a) /= a .or. g(a) /= a)) allfix = .false.
+            do b=1,3; if (ins(a) .and. ins(b) .and. a /= b .and. r(a) == r(b)) cnt = .false.; end do
+          end do
+          ! E2 closed and counted puts every member on the fixed set of both maps
+          if (closed .and. cnt) then; c2 = c2 + 1; if (.not. allfix) f2 = f2 + 1; end if
+        end do
+      end do
+    end do; end do
+    write(*,'(A,I0,A)') 'Part E: ', nfam, ' pairs of maps of 3 points, every reading into 2 values they keep'
+    call report(' E1 every kept reading factors through the orbit map  ', c1, f1)
+    call report(' E2 closed and counted: every member on the fixed set ', c2, f2)
+  end subroutine
+
+  ! ---- Part F: total charge. 10 particles (charge -2..2, frequency 0..1); all subsets closed under the map ----
+  subroutine part_f()
+    integer :: s, a, q, tot, n, f1
+    logical :: closed
+    n=0; f1=0
+    do s=0,1023
+      closed = .true.; tot = 0
+      do a=0,9                                                  ! particle a: charge q = a/2 - 2, frequency mod(a,2)
+        q = a/2 - 2
+        if (btest(s,a)) then
+          tot = tot + q
+          if (.not. btest(s, 2*(2-q) + mod(a,2))) closed = .false.   ! its antiparticle: charge -q, same frequency
+        end if
+      end do
+      if (closed) then; n = n + 1; if (tot /= 0) f1 = f1 + 1; end if
+    end do
+    write(*,'(A,I0,A)') 'Part F: ', n, ' configurations of 10 particles closed under the particle map'
+    call report(' F1 matter with its antimatter is neutral as a whole  ', n, f1)
+  end subroutine
+
+  ! ---- Part G: the labels of a symmetry of period n, in arithmetic modulo a prime -----------------------------
+  subroutine part_g()
+    integer, parameter :: pr(5) = (/5, 7, 11, 13, 17/)
+    integer :: ip, p, n, x, k, pw, nlab, c1, f1
+    c1=0; f1=0
+    do ip=1,5
+      p = pr(ip)
+      do n=1,p-1
+        nlab = 0
+        do x=1,p-1
+          pw = 1
+          do k=1,n; pw = mod(pw*x, p); end do
+          if (pw == 1) nlab = nlab + 1                          ! x is a label: x**n = 1
+        end do
+        c1 = c1 + 1; if (nlab > n) f1 = f1 + 1                  ! G1 at most n labels
+      end do
+    end do
+    write(*,'(A)') 'Part G: periods 1 to p-1 for the primes 5, 7, 11, 13, 17'
+    call report(' G1 a symmetry of period n has at most n labels       ', c1, f1)
+  end subroutine
+
+  ! ---- Part H: the wave. Polarisations in -3..3; parity reverses the cross part; the energy is the registration
+  subroutine part_h()
+    integer :: p, c, n, f1, c2, f2
+    n=0; f1=0; c2=0; f2=0
+    do p=-3,3; do c=-3,3
+      n = n + 1
+      if (-(-c) /= c) f1 = f1 + 1                                ! involution
+      if ((-c == c) .neqv. (c == 0)) f1 = f1 + 1                 ! fixed exactly with no cross part
+      if (p*p + (-c)*(-c) /= p*p + c*c) f1 = f1 + 1              ! the energy is kept
+      if (c /= 0) then; c2 = c2 + 1; if (-c == c) f2 = f2 + 1; end if   ! two waves, one energy
+    end do; end do
+    write(*,'(A,I0,A)') 'Part H: ', n, ' waves'
+    call report(' H1 parity: an involution, fixes no-cross, keeps energy', n, f1)
+    call report(' H2 the two helicities are two on one energy          ', c2, f2)
+  end subroutine
+
+  ! ---- Part I: identical quanta. 3 quanta in 2 modes, the 6 relabellings, the occupation numbers --------------
+  subroutine part_i()
+    integer, parameter :: pm(3,6) = reshape((/1,2,3, 1,3,2, 2,1,3, 2,3,1, 3,1,2, 3,2,1/), (/3,6/))
+    integer :: s, k, a, x(3), y(3), c1, f1, c2, f2
+    logical :: allfix, onemode
+    c1=0; f1=0; c2=0; f2=0
+    do s=0,7
+      x = (/ ibits(s,0,1), ibits(s,1,1), ibits(s,2,1) /)
+      allfix = .true.
+      do k=1,6
+        do a=1,3; y(a) = x(pm(a,k)); end do
+        c1 = c1 + 1; if (sum(y) /= sum(x)) f1 = f1 + 1          ! I1 relabelling keeps the occupation numbers
+        if (any(y /= x)) allfix = .false.
+      end do
+      onemode = (x(1) == x(2) .and. x(2) == x(3))
+      c2 = c2 + 1; if (allfix .neqv. onemode) f2 = f2 + 1       ! I2 fixed by all exactly when in one mode
+    end do
+    write(*,'(A)') 'Part I: 8 assignments of 3 quanta to 2 modes, 6 relabellings'
+    call report(' I1 relabelling keeps the occupation numbers          ', c1, f1)
+    call report(' I2 fixed by every relabelling exactly in one mode    ', c2, f2)
+  end subroutine
+
+  ! ---- Part J: the commutator. 2 by 2 integer matrices with entries in -1..1; the adjoint is the transpose ----
+  subroutine part_j()
+    integer :: i, j, a(2,2), b(2,2), c(2,2), c1, f1, c2, f2
+    c1=0; f1=0; c2=0; f2=0
+    do i=0,80; do j=0,80
+      a = reshape((/ mod(i,3)-1, mod(i/3,3)-1, mod(i/9,3)-1, i/27-1 /), (/2,2/))
+      b = reshape((/ mod(j,3)-1, mod(j/3,3)-1, mod(j/9,3)-1, j/27-1 /), (/2,2/))
+      c = matmul(a,b) - matmul(b,a)
+      c1 = c1 + 1                                               ! J1 no commutator is a nonzero multiple of the identity
+      if (c(1,2) == 0 .and. c(2,1) == 0 .and. c(1,1) == c(2,2) .and. c(1,1) /= 0) f1 = f1 + 1
+      if (all(a == transpose(a)) .and. all(b == transpose(b))) then
+        c2 = c2 + 1                                             ! J2 of two observables: reversed by the adjoint, real part zero
+        if (any(transpose(c) /= -c) .or. any(c + transpose(c) /= 0)) f2 = f2 + 1
+      end if
+    end do; end do
+    write(*,'(A)') 'Part J: 6561 pairs of 2 by 2 integer matrices'
+    call report(' J1 no commutator is a nonzero multiple of identity   ', c1, f1)
+    call report(' J2 observables: the adjoint reverses the commutator  ', c2, f2)
   end subroutine
 
   integer function record(s)
