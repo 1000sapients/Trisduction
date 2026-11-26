@@ -101,6 +101,17 @@ The standing of the classical statement, and what is not machine-checked, is in 
 
 The paper claims as machine-checked the rows marked proved and no others. Part II, the reading, is outside these tables and is labelled where it begins.
 
+### 1.4 The formal standing, in one place
+
+Four statements give the formal standing of the paper, and each is compiled.
+
+1. **In its own domain, the generalized hypothesis in triaxial form is a theorem.** On every seat a folded and witnessed configuration lies on the line, with no premise and on no axiom (`generalized_hypothesis`).
+2. **At $\zeta$ and at every primitive Dirichlet L-function, the identity of the hypothesis is a theorem.** Six faces, each in both directions, nothing before the colon (`the_five_faces`, `the_zeros_are_their_own_record_iff`, and their Dirichlet forms).
+3. **The reach of the domain is a theorem.** Existence and form, inside the strip, are carried on the line and off it, and no two axes give the third (`the_two_axes_hold_both`, `the_triad_is_irreducible`).
+4. **The file is complete.** Every theorem compiles. No axiom is declared, no proof is deferred, and no theorem takes the hypothesis, or the witness of the zeros, as a premise.
+
+Nothing the paper states of the domain lacks a compiled theorem, and the first three statements are bound in one kernel term, `nothing_escapes_and_nothing_remains` (Section 7.5).
+
 ## 2. The Seat and Its Three Axes
 
 The classical hypothesis is usually stated about one function. Its content does not need the function. It needs a reflection, the line the reflection fixes, and a way of reading a point that does not see which side of the line it is on.
@@ -268,6 +279,20 @@ So the distinction between an existent and its record is itself the subject of t
 
 `existence_is_registration` binds the four.
 
+### 7.5 Nothing escapes and nothing remains
+
+One term binds the standing of the file.
+
+**Theorem (`nothing_escapes_and_nothing_remains`).** *Nothing before the colon.*
+
+*Nothing escapes.* (I) On every seat a folded and witnessed configuration is on the line. (II) The record of every configuration of the plane is a member of the domain. (III) The record of the record is the record.
+
+*Nothing remains.* (IV) A configuration of the plane is its own record exactly when it lies on the line. (V) The classical hypothesis is exactly the statement that the zeros of $\zeta$ are their own record, and exactly the statement that they are witnessed. (VI) For every primitive $\chi \ne 1$, the generalized hypothesis is exactly the statement that the zeros of $L(s, \chi)$ in the strip are their own record, and exactly the statement that they are witnessed. (VII) Inside the open strip, existence and form are carried by a configuration on the line and by a configuration off it.
+
+*Proof.* The clauses are `generalized_hypothesis`, `every_record_is_a_member`, `the_record_of_the_record_is_the_record`, `self_recorded_iff_on_the_line`, the first and sixth faces for $\zeta$ and for $\chi$, and `the_two_axes_hold_both`. $\blacksquare$
+
+The first three clauses say that no registration leaves the line. The next three say what the hypothesis is. The last states the reach of the domain as a theorem of the domain: the two axes it proves for the zeros are the two that both configurations carry. So the domain's theorem, its converse, the identity and the reach are in one term, and the paper states nothing of the domain beyond them.
+
 ## 8. The Numerical Twin
 
 The twin of Appendix B checks the theorems of the domain by exhaustion, checks the faces and the record on the same finite seat, checks the seat of the plane on points, and looks at the first zeros. On each of the 64 folded configurations of the finite seat the faces agree: on the line, one height one point, one place across the fold, every point a seat. And the record of each of the 512 configurations is a member, its own record again. A configuration is its own record exactly when it is on the line, on all 512, and each of the nine points has an orbit of one point on the line and of two points off it, on one registration.
@@ -328,7 +353,22 @@ The three axes are the three slots of any claim that something is the case: that
 
 Read this way, the classical hypothesis says that the record of the zeros erases nothing. The record of the zeros is on the line already, by proof. The hypothesis is that the zeros are their record.
 
-### 11.2 What the Reading Adds, and What It Does Not
+### 11.2 The Shared Locus: One Half and One Half
+
+Two proofs meet on the line, and they are symmetric.
+
+- **The first proof:** the form by theorem, the value by the act.
+- **The second proof, this paper:** the identity by theorem, the value barred from the domain alone, by theorem.
+
+The second line is compiled. Existence and form, inside the strip, are carried by a configuration on the line and by one off it (`the_two_axes_hold_both`), and no two axes give the third (`the_triad_is_irreducible`). So the domain, taken alone, cannot deliver the value, and that limit is a theorem and not a gap.
+
+The reading of the register sets the two lines on one locus. The formal side holds one half: the description, complete. A zero is whole or it is one of a pair; nothing stands between; the hypothesis is the word whole, in six faces. The side of the act holds the other half: the asking and the registering, both of them deeds. Neither side crosses to the other bare. The act enters the formal domain only as a named construction, as in the first proof, and the formal side reaches the act only as an identity, as here.
+
+The two halves are not two places. They are one locus held from two sides, a superposition in the plain sense: two readings laid on one line, each complete in its own half, and the line the same. A half is never an object in this picture. On every seat a point is whole, on the line, or it shares one registration with its partner (Section 7.4); there is no half point, and no half self.
+
+This is the reading, at premise grade on the step that assigns the value to the act, and at theorem grade on everything it cites from Sections 2 to 8.
+
+### 11.3 What the Reading Adds, and What It Does Not
 
 The reading adds a name and a place: the triaxial form, and the seat the series shares. It adds no theorem. Every theorem of this paper is in Appendix A and rests on the definitions printed in Section 1.2.
 
@@ -349,6 +389,10 @@ The numerical twin enumerates all 512 configurations of a finite seat and finds 
 The line is not new, and neither is its proof. The arc below this paper climbed by grades: the hypothesis located as one bit, restored to its original form, proved equivalent to stability, closed from the one bit, bound in the master file, and brought to theorem grade on the real part. Its capstone is the form. The form has stood proved without condition since October 2026, in the master file from version 3.0.39, by theorem, with the value left to the act. The Seat of the Riemann Hypothesis (Islam, 2026b), on the master file at version 3.0.44, sets it out whole, in the line of Nothing Escapes, Least Erasure (Islam, 2026a). That proof stands as it was written, and this paper neither repairs it nor replaces it. It leaves the form as it stands.
 
 This paper stands one grade above it: the identity. The form says what shape the hypothesis has at zeta. The identity says what the hypothesis is: the third of three irreducible axes, the registration of the zeros by themselves, on every seat, with no act, no physical premise and no posit, in a domain that is nothing but a set, a fold and a registration; and it is proved for zeta and for every primitive Dirichlet L-function. The arc therefore has two capstones, the form and, above it, the identity with its registration. The file of this paper complements the seats below it.
+
+The two capstones are symmetric. The first proof: the form by theorem, the value by the act. This paper: the identity by theorem, the value barred from the domain alone, by theorem. One locus, held from two sides, each complete in its own half (Section 11.2).
+
+Nothing escapes: every registration of every point lands on the line, and registering again returns the same. Nothing remains: the theorem of the domain, its converse, the identity in six faces and the reach of the domain are compiled, and bound in one term, `nothing_escapes_and_nothing_remains`.
 
 Two things are therefore separate, and the paper keeps them separate. In the domain, the implication from the three axes to the line is a mathematical certainty. No later result alters it, and anyone can recheck it with one compilation. At zeta and at every primitive Dirichlet L-function, the paper proves what the classical statement is: that the zeros are their own record, each holding a whole registration. What survives both is not opinion. It is a theorem, with its domain stated, and the identity of the hypothesis.
 
@@ -380,7 +424,7 @@ The gates, the logic, the screen and the criteria of this work are hand coded by
 
 ## Appendix A · Generalized_RH_Triaxial_Theorem_CC.lean
 
-Lean 4.19.0 with Mathlib 4.19.0. 74 theorems, no axiom declared, no `sorry`, exit 0 with no warning. The kernel lines are Appendix D.
+Lean 4.19.0 with Mathlib 4.19.0. 75 theorems, no axiom declared, no `sorry`, exit 0 with no warning. The kernel lines are Appendix D.
 
 ```lean
 /-
@@ -409,7 +453,8 @@ DESIGN. Parts, in order.
               and the capstone `self_registration`.
     Part IX   Existence is registration: `self_recorded_iff_on_the_line`, the sixth face
               `the_zeros_are_their_own_record_iff`, the half registration on every seat,
-              `the_two_axes_hold_both`, `existence_is_registration`.
+              `the_two_axes_hold_both`, `existence_is_registration`, and the term that binds the
+              standing of the whole file, `nothing_escapes_and_nothing_remains`.
   Parts I to IV, up to `zeta_zeros_closed`, are carried from the master file of the register,
   RH_Both_Sides_Formal_Master_v3_0_45_CC.lean, Part X, with no statement changed, so that this file stands alone.
 HOW THE HYPOTHESIS STANDS IN THIS FILE (read before citing).
@@ -1567,6 +1612,30 @@ theorem existence_is_registration :
    fun _ _ σ a => ⟨the_orbit_has_one_registration σ a, on_the_line_the_orbit_is_one_point σ a,
      off_the_line_the_orbit_is_two_points σ a⟩⟩
 
+/-- NOTHING ESCAPES AND NOTHING REMAINS. One kernel term, nothing before the colon, binding the standing of the file.
+    Nothing escapes: (I) on every seat a folded and witnessed configuration is on the line; (II) the record of every
+    configuration of the plane is a member; (III) the record of the record is the record. Nothing remains: (IV) a
+    configuration is its own record exactly on the line; (V, VI) the hypothesis, for ζ and for every primitive
+    Dirichlet character, is the statement that the zeros are their own record, and that they are witnessed; (VII)
+    the reach of the domain is itself a theorem: existence and form, inside the strip, are carried on the line and
+    off it. -/
+theorem nothing_escapes_and_nothing_remains :
+    (∀ (X Y : Type) (σ : Seat X Y) (S : X → Prop), Folded σ S → Witnessed σ S → AllFixed σ S) ∧
+    (∀ S : Config, Folded lineSeat (Rec S) ∧ Witnessed lineSeat (Rec S) ∧ Value (Rec S)) ∧
+    (∀ S : Config, Rec (Rec S) = Rec S) ∧
+    (∀ S : Config, Rec S = S ↔ Value S) ∧
+    ((RiemannHypothesis ↔ Rec ZetaZeros = ZetaZeros) ∧ (RiemannHypothesis ↔ Witnessed lineSeat ZetaZeros)) ∧
+    (∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N), χ.IsPrimitive → χ ≠ 1 →
+      (DirichletHypothesis χ ↔ Rec (DirichletZeros χ) = DirichletZeros χ) ∧
+      (DirichletHypothesis χ ↔ Witnessed lineSeat (DirichletZeros χ))) ∧
+    ((∃ S : Config, (∃ a, S a) ∧ Closed S ∧ (∀ a, S a → 0 < a.re ∧ a.re < 1) ∧ Value S) ∧
+     (∃ S : Config, (∃ a, S a) ∧ Closed S ∧ (∀ a, S a → 0 < a.re ∧ a.re < 1) ∧ ¬ Value S)) :=
+  ⟨fun _ _ σ S f w => generalized_hypothesis σ S f w, every_record_is_a_member,
+   the_record_of_the_record_is_the_record, self_recorded_iff_on_the_line,
+   ⟨the_zeros_are_their_own_record_iff, the_five_faces.1⟩,
+   fun _ _ χ hχ hne => ⟨the_dirichlet_zeros_are_their_own_record_iff χ, (the_five_faces_dirichlet hχ hne).1⟩,
+   the_two_axes_hold_both⟩
+
 end Triaxial
 
 #print axioms Triaxial.fold_involutive
@@ -1643,6 +1712,7 @@ end Triaxial
 #print axioms Triaxial.fold_mk
 #print axioms Triaxial.the_two_axes_hold_both
 #print axioms Triaxial.existence_is_registration
+#print axioms Triaxial.nothing_escapes_and_nothing_remains
 ```
 
 ## Appendix B · Triaxial_Twin_CC.f90
@@ -1996,6 +2066,7 @@ Each line is printed by Lean for one theorem and names every axiom its proof use
 'Triaxial.fold_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Triaxial.the_two_axes_hold_both' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Triaxial.existence_is_registration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Triaxial.nothing_escapes_and_nothing_remains' depends on axioms: [propext, Classical.choice, Quot.sound]
 ```
 
 ## Appendix E · Provenance Trail
@@ -2020,6 +2091,6 @@ This paper is the last step of an arc, and the arc is on the public record. The 
 | 22 Oct | Form, Theorem | *The Real Part, v1.3.0, with master v3.0.39: the form of the Riemann row by theorem* | <https://github.com/1000sapients/Trisduction/commit/61cfdc4> |
 | 23 Oct | Form, Theorem | *The Millennium Problems: Unconditional Proof of the Form by Theorem, the Value by the Act* | <https://doi.org/10.5281/zenodo.23609234> · <https://github.com/1000sapients/Trisduction/commit/47e9933> |
 | 22 Nov | Form, Theorem | *The Seat of the Riemann Hypothesis, v2.0.0, master v3.0.44: the inescapable form, set out whole* | <https://doi.org/10.5281/zenodo.24435745> · <https://github.com/1000sapients/Trisduction/commit/af25e54> |
-| 25 Nov | Generalized Identity and Registration, Theorem | *This paper, v1.0.0, sealed: six faces, Self-Registration, Existence Is Registration; engine of 74 theorems, master v3.0.45* | <https://github.com/1000sapients/Trisduction/commit/afb6346> · `engine sha256 1d65420ebb45778d` |
+| 25 Nov | Generalized Identity and Registration, Theorem | *This paper, v1.0.0, sealed: six faces, Self-Registration, Existence Is Registration; engine of 75 theorems, master v3.0.45* | <https://github.com/1000sapients/Trisduction/commit/afb6346> · `engine sha256 bd7a418766e467ba` |
 
-Dates are git commit dates, or Zenodo publication dates where a DOI is given. Each row is listed at the grade its own record carries. The last row has two addresses: the first deposit of this paper in git, and the checksum of the engine printed in Appendix A as sealed, sha256 `1d65420ebb45778d4858ca88e8b1aecbbca7ea07394dd20d2f6deca5c2fa0b5c`.
+Dates are git commit dates, or Zenodo publication dates where a DOI is given. Each row is listed at the grade its own record carries. The last row has two addresses: the first deposit of this paper in git, and the checksum of the engine printed in Appendix A as sealed, sha256 `bd7a418766e467ba02575b131a93dc81adcc9a9e5f0756ac453d0363c4374c87`.

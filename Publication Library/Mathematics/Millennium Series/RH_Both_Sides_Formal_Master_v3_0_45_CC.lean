@@ -17440,6 +17440,30 @@ theorem existence_is_registration :
    fun _ _ σ a => ⟨the_orbit_has_one_registration σ a, on_the_line_the_orbit_is_one_point σ a,
      off_the_line_the_orbit_is_two_points σ a⟩⟩
 
+/-- NOTHING ESCAPES AND NOTHING REMAINS. One kernel term, nothing before the colon, binding the standing of the file.
+    Nothing escapes: (I) on every seat a folded and witnessed configuration is on the line; (II) the record of every
+    configuration of the plane is a member; (III) the record of the record is the record. Nothing remains: (IV) a
+    configuration is its own record exactly on the line; (V, VI) the hypothesis, for ζ and for every primitive
+    Dirichlet character, is the statement that the zeros are their own record, and that they are witnessed; (VII)
+    the reach of the domain is itself a theorem: existence and form, inside the strip, are carried on the line and
+    off it. -/
+theorem nothing_escapes_and_nothing_remains :
+    (∀ (X Y : Type) (σ : Seat X Y) (S : X → Prop), Folded σ S → Witnessed σ S → AllFixed σ S) ∧
+    (∀ S : Config, Folded lineSeat (Rec S) ∧ Witnessed lineSeat (Rec S) ∧ Value (Rec S)) ∧
+    (∀ S : Config, Rec (Rec S) = Rec S) ∧
+    (∀ S : Config, Rec S = S ↔ Value S) ∧
+    ((RiemannHypothesis ↔ Rec ZetaZeros = ZetaZeros) ∧ (RiemannHypothesis ↔ Witnessed lineSeat ZetaZeros)) ∧
+    (∀ (N : ℕ) [NeZero N] (χ : DirichletCharacter ℂ N), χ.IsPrimitive → χ ≠ 1 →
+      (DirichletHypothesis χ ↔ Rec (DirichletZeros χ) = DirichletZeros χ) ∧
+      (DirichletHypothesis χ ↔ Witnessed lineSeat (DirichletZeros χ))) ∧
+    ((∃ S : Config, (∃ a, S a) ∧ Closed S ∧ (∀ a, S a → 0 < a.re ∧ a.re < 1) ∧ Value S) ∧
+     (∃ S : Config, (∃ a, S a) ∧ Closed S ∧ (∀ a, S a → 0 < a.re ∧ a.re < 1) ∧ ¬ Value S)) :=
+  ⟨fun _ _ σ S f w => generalized_hypothesis σ S f w, every_record_is_a_member,
+   the_record_of_the_record_is_the_record, self_recorded_iff_on_the_line,
+   ⟨the_zeros_are_their_own_record_iff, the_five_faces.1⟩,
+   fun _ _ χ hχ hne => ⟨the_dirichlet_zeros_are_their_own_record_iff χ, (the_five_faces_dirichlet hχ hne).1⟩,
+   the_two_axes_hold_both⟩
+
 end Triaxial
 end BoundChainMathlib
 
@@ -17589,3 +17613,8 @@ end BoundChainMathlib
 
 /-- info: 'BoundChainMathlib.Triaxial.existence_is_registration' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in #print axioms BoundChainMathlib.Triaxial.existence_is_registration
+
+/-- info: 'BoundChainMathlib.Triaxial.nothing_escapes_and_nothing_remains' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound] -/
+#guard_msgs in #print axioms BoundChainMathlib.Triaxial.nothing_escapes_and_nothing_remains
