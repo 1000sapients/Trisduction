@@ -144,10 +144,45 @@
 'SPHYS.FieldQuantization.the_occupation_numbers_are_the_finest_registration' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-'SPHYS.FieldQuantization.the_labels_of_a_full_turn_are_the_whole_numbers' depends on axioms: [propext,
+'SPHYS.FieldQuantization.the_labels_of_a_full_turn_are_the_integers' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-'SPHYS.FieldQuantization.a_symmetry_with_a_full_turn_gives_its_states_whole_numbers' depends on axioms: [propext,
+'SPHYS.FieldQuantization.a_symmetry_with_a_full_turn_gives_its_states_integers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_count_of_a_mode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.each_mode_is_a_canonical_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.lowering_one_mode_commutes_with_raising_another' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.raising_two_modes_commutes' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.lowering_two_modes_commutes' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.the_energy_is_the_sum_of_the_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.the_energy_moves_by_the_frequency' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.the_law_of_motion_of_raising' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.the_law_of_motion_of_lowering' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.the_energy_of_a_mode_is_the_count_and_a_half' depends on axioms: [propext]
+'SPHYS.FieldQuantization.the_mirror_of_the_quanta_is_its_own_inverse' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.the_mirror_exchanges_the_two_polarisations' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.the_energy_is_kept_by_the_mirror' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.a_seat_is_infinite_iff_a_reading_takes_every_whole_number' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.on_a_finite_seat_every_reading_takes_finitely_many_values' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.no_proof_decides_the_seat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.no_value_of_the_constant_is_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.the_count_has_no_canonical_partner' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.a_reading_kept_by_the_joint_step_is_its_own_history' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.every_history_is_a_reading_kept_by_the_joint_step' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.a_law_kept_by_every_map_prefers_no_slicing' does not depend on any axioms
+'SPHYS.FieldQuantization.a_record_may_carry_its_own_slicing' does not depend on any axioms
+'SPHYS.FieldQuantization.no_proof_decides_whether_a_field_holds_a_commutator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_rate_of_the_outside_clock_along_a_ray' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_outside_clock_never_registers_the_crossing' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 'SPHYS.FieldQuantization.the_hilbert_space_is_subsumed' depends on axioms: [propext, Classical.choice, Quot.sound]

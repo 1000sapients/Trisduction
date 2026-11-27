@@ -1,0 +1,24 @@
+'SPHYS.Horizon.the_square_of_the_rate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_falling_chart_is_the_same_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_falling_chart_is_regular_at_every_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_static_chart_fails_at_the_horizon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_falling_body_moves_at_unit_rate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_rate_of_the_fall_obeys_the_radial_equation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.Horizon.the_clock_of_the_fall_against_the_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_clock_and_the_fall_agree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_falling_body_registers_a_finite_time' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_slope_of_the_function' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_surface_gravity_of_the_horizon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_area_of_the_horizon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_first_law_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_cap_on_what_a_merger_radiates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_cap_is_under_three_tenths' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_rate_of_the_outside_clock_along_a_ray' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Horizon.the_outside_clock_never_registers_the_crossing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.Horizon.the_rate_of_the_outside_clock_is_one_over_the_function' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -27,7 +27,19 @@ DESIGN. Part III is stated on any ring `R` with a ring map `σ` that is its own 
   Part XV: two statements the earlier Quantization kernels left. The occupation numbers are the finest registration
   of the relabellings: the same occupation numbers exactly when one assignment is a relabelling of the other. And a
   symmetry with no finite period: where a full turn is the identity and the label of a state turns differentiably,
-  the label is a whole number of turns. The binding theorem of the Hilbert space closes the file.
+  the label is an integer number of turns, of either sign.
+  Part XVI: the free field of quanta. The seat is the assignments of a whole number to every mode. Each mode is a
+  canonical pair, different modes do not disturb each other, the energy is the sum of the counts each times its
+  frequency, and its commutator with the raising and the lowering of a mode is the law of motion. In any ring the
+  energy of a mode is the count and a half. With two polarisations to a mode, the mirror exchanges them and keeps
+  the energy. Part XVII: what no proof decides. A seat with a canonical pair and a seat without one both exist, so
+  the choice is not a theorem; a seat is infinite exactly when a reading takes every whole number; and on an
+  infinite seat every value of the constant is the commutator of some pair. Part XIX: time and the geometry as a reading.
+  The count has no canonical partner, so time is not a quantity of the ring; a reading kept by the joint step of a
+  system and its count is its own history; a law kept by every map prefers no slicing while a record may carry
+  one; and whether a field holds a commutator is decided by no proof. Part XX: what an outside clock registers at a
+  horizon: the time for a ray grows past every bound as the horizon is approached. Part XXI: the binding theorem of
+  the Hilbert space.
 BOUNDARY. Each theorem's kernel line, pinned at the foot of the file, is the authority. Read by Part:
   (1) Parts I to X, 46 theorems. 38 print no axiom of choice: 7 of them print no axiom at all, and 31 print only
   propositional extensionality or the soundness of quotients. 8 print the axiom of choice: the two theorems of Part IV
@@ -42,11 +54,21 @@ BOUNDARY. Each theorem's kernel line, pinned at the foot of the file, is the aut
   (4) Part XIV, 8 theorems. 4 print the axiom: the Hilbert home, with the numbers; the two theorems on the
   registrations of the count, with excluded middle; and `the_rungs_are_independent`, with the library's eigenspaces.
   The 4 theorems on the ground state and its rungs that come before it do not.
-  (5) Part XV, 5 theorems, the binding theorem counted with them. All 5 print the axiom: the two on the occupation
-  numbers with the library's finite sets, the two on the full turn and the binding theorem with the numbers.
+  (5) Part XV, 4 theorems. All 4 print the axiom: the two on the occupation numbers with the library's finite sets,
+  the two on the full turn with the numbers.
+  (6) Part XVI, 13 theorems. 7 print the axiom, with excluded middle on whether a count is zero and with the library's
+  finite sums; 6 do not. No step of Part XVI uses the matching of Part XI: the seat is given with its counts.
+  (7) Part XVII, 4 theorems. All 4 print the axiom: three speak of every infinite seat and rest on Part XI, and the
+  one on a finite seat has it with the library's finite sets.
+  (8) Part XIX, 6 theorems. 5 print no axiom of choice, 2 of them no axiom at all: the theorems on time, on the
+  history and on the law and the record. The one on the commutator prints it, with the rational numbers and matrices
+  of the library.
+  (9) Part XX, 2 theorems, and Part XXI, the binding theorem. All 3 print the axiom, with the numbers.
 RISK. A reader may take the file to say that the field of gravity is quantized. It says neither that nor the contrary. It
   proves what follows on a finite seat and what follows on a seat with a shift, and leaves to measurement which seat
-  the states of the field form. No constant of action is derived: the commutator is one, and its size in any unit is
+  the states of the field form. Part XVI takes as its seat the assignments of a count to every mode: that the states of
+  a given field are such assignments is the premise of that Part, and by Part XVII no proof decides it. Part XX
+  speaks of the outside clock alone; what the one who falls registers is no statement of this file. No constant of action is derived: the commutator is one, and its size in any unit is
   measured. No law of motion is given. The adjoint of the ring of values is still given; on values that commute it
   may be the identity.
 OUTSIDE THE FILE, AND WHY NO THEOREM HERE NEEDS IT. Two classical theorems are formalised neither here nor in the
@@ -77,6 +99,11 @@ import Mathlib.Analysis.SpecialFunctions.Complex.Log
 import Mathlib.Analysis.SpecialFunctions.ExpDeriv
 import Mathlib.Analysis.Calculus.MeanValue
 import Mathlib.Logic.Equiv.Fintype
+import Mathlib.Algebra.BigOperators.Ring.Finset
+import Mathlib.Data.Fintype.Basic
+import Mathlib.Analysis.SpecialFunctions.Log.Deriv
+import Mathlib.Data.Matrix.Notation
+import Mathlib.Tactic.FieldSimp
 import Mathlib.Tactic.NoncommRing
 import Mathlib.Tactic.Linarith
 import Mathlib.Algebra.CharZero.Defs
@@ -996,10 +1023,10 @@ end Finest
 section FullTurn
 open Complex Real
 
-/-- THE LABELS OF A FULL TURN ARE THE WHOLE NUMBERS. Let `χ` give a complex label to every real part of a turn, with
-`χ (s + t) = χ s * χ t`, with the whole turn labelled one, and differentiable. Then there is a whole number `n` with
+/-- THE LABELS OF A FULL TURN ARE THE INTEGERS. Let `χ` give a complex label to every real part of a turn, with
+`χ (s + t) = χ s * χ t`, with the whole turn labelled one, and differentiable. Then there is an integer `n` with
 `χ t = exp (n · 2πi · t)` for every `t`. No period is supposed finite; the labels are isolated all the same. -/
-theorem the_labels_of_a_full_turn_are_the_whole_numbers (χ : ℝ → ℂ) (hd : Differentiable ℝ χ)
+theorem the_labels_of_a_full_turn_are_the_integers (χ : ℝ → ℂ) (hd : Differentiable ℝ χ)
     (hm : ∀ s t, χ (s + t) = χ s * χ t) (h1 : χ 1 = 1) :
     ∃ n : ℤ, ∀ t : ℝ, χ t = Complex.exp (n * (2 * π * I) * t) := by
   have h0 : χ 0 = 1 := by have e := hm 0 1; rw [zero_add, h1, mul_one] at e; exact e.symm
@@ -1036,14 +1063,14 @@ theorem the_labels_of_a_full_turn_are_the_whole_numbers (χ : ℝ → ℂ) (hd :
   obtain ⟨n, hn⟩ := Complex.exp_eq_one_iff.mp hc1
   exact ⟨n, fun t => by rw [hexp t, hn]⟩
 
-/-- A SYMMETRY WITH A FULL TURN GIVES ITS STATES WHOLE NUMBERS. Let linear maps `T t` of a complex space compose as
+/-- A SYMMETRY WITH A FULL TURN GIVES ITS STATES INTEGERS. Let linear maps `T t` of a complex space compose as
 `T (s + t) = T s * T t` with the whole turn the identity, and let a state that is not zero be labelled `χ t` by each,
-differentiably. Then the label is `exp (n · 2πi · t)` for one whole number `n`. -/
-theorem a_symmetry_with_a_full_turn_gives_its_states_whole_numbers {V : Type*} [AddCommGroup V] [Module ℂ V]
+differentiably. Then the label is `exp (n · 2πi · t)` for one integer `n`. -/
+theorem a_symmetry_with_a_full_turn_gives_its_states_integers {V : Type*} [AddCommGroup V] [Module ℂ V]
     (T : ℝ → Module.End ℂ V) (hT : ∀ s t, T (s + t) = T s * T t) (h1 : T 1 = 1) (v : V) (hv : v ≠ 0) (χ : ℝ → ℂ)
     (hχ : ∀ t, T t v = χ t • v) (hd : Differentiable ℝ χ) :
     ∃ n : ℤ, ∀ t : ℝ, χ t = Complex.exp (n * (2 * π * I) * t) := by
-  refine the_labels_of_a_full_turn_are_the_whole_numbers χ hd (fun s t => ?_) ?_
+  refine the_labels_of_a_full_turn_are_the_integers χ hd (fun s t => ?_) ?_
   · have e : χ (s + t) • v = (χ s * χ t) • v := by
       rw [← hχ, hT, Module.End.mul_apply, hχ t, map_smul, hχ s, smul_smul, mul_comm]
     exact smul_left_injective ℂ hv e
@@ -1051,6 +1078,332 @@ theorem a_symmetry_with_a_full_turn_gives_its_states_whole_numbers {V : Type*} [
     exact smul_left_injective ℂ hv e
 
 end FullTurn
+
+/-! ## Part XVI. The free field of quanta. Many modes, each with its count: the seat is the assignments of a whole
+number to every mode. The premise is the seat itself: that the states of the field are such assignments. -/
+
+section FreeField
+variable {M K : Type*} [DecidableEq M] [CommRing K]
+
+/-- One quantum more in the mode `m`. -/
+def raise (m : M) (f : (M → ℕ) → K) : (M → ℕ) → K :=
+  fun o => if o m = 0 then 0 else f (Function.update o m (o m - 1))
+
+/-- One quantum fewer in the mode `m`, weighted by the count it leaves. -/
+def lower (m : M) (f : (M → ℕ) → K) : (M → ℕ) → K :=
+  fun o => ((o m : K) + 1) * f (Function.update o m (o m + 1))
+
+/-- THE COUNT OF A MODE. Raising after lowering multiplies a reading by the number of quanta in the mode. -/
+theorem the_count_of_a_mode (m : M) (f : (M → ℕ) → K) (o : M → ℕ) : raise m (lower m f) o = (o m : K) * f o := by
+  unfold raise lower
+  by_cases h : o m = 0
+  · simp [h]
+  · obtain ⟨k, hk⟩ := Nat.exists_eq_succ_of_ne_zero h
+    have e : Function.update o m (k + 1) = o := by
+      have t := Function.update_eq_self m o
+      rw [hk] at t; exact t
+    simp [hk, e]
+
+/-- EACH MODE IS A CANONICAL PAIR. Lowering after raising, less raising after lowering, is the reading itself. -/
+theorem each_mode_is_a_canonical_pair (m : M) (f : (M → ℕ) → K) (o : M → ℕ) :
+    lower m (raise m f) o - raise m (lower m f) o = f o := by
+  rw [the_count_of_a_mode]
+  unfold raise lower
+  have e : Function.update o m (o m) = o := Function.update_eq_self m o
+  simp [e]; ring
+
+/-- DIFFERENT MODES DO NOT DISTURB EACH OTHER: lowering one and raising another may be done in either order. -/
+theorem lowering_one_mode_commutes_with_raising_another (m k : M) (h : m ≠ k) (f : (M → ℕ) → K) :
+    lower m (raise k f) = raise k (lower m f) := by
+  funext o
+  unfold raise lower
+  have hk : k ≠ m := fun e => h e.symm
+  by_cases z : o k = 0
+  · simp [z, Function.update_of_ne hk]
+  · simp [z, Function.update_of_ne hk, Function.update_of_ne h, Function.update_comm h]
+
+/-- RAISING TWO MODES may be done in either order. -/
+theorem raising_two_modes_commutes (m k : M) (h : m ≠ k) (f : (M → ℕ) → K) :
+    raise m (raise k f) = raise k (raise m f) := by
+  funext o
+  unfold raise
+  have hk : k ≠ m := fun e => h e.symm
+  by_cases z : o k = 0 <;> by_cases w : o m = 0 <;>
+    simp [z, w, Function.update_of_ne hk, Function.update_of_ne h, Function.update_comm h]
+
+/-- LOWERING TWO MODES may be done in either order. -/
+theorem lowering_two_modes_commutes (m k : M) (h : m ≠ k) (f : (M → ℕ) → K) :
+    lower m (lower k f) = lower k (lower m f) := by
+  funext o
+  unfold lower
+  have hk : k ≠ m := fun e => h e.symm
+  simp [Function.update_of_ne hk, Function.update_of_ne h, Function.update_comm h]; ring
+
+/-- The energy of an assignment: over a finite set of modes, the frequency of each times its count. -/
+def energy (S : Finset M) (w : M → K) (o : M → ℕ) : K := ∑ m ∈ S, w m * (o m : K)
+
+/-- THE ENERGY IS THE SUM OF THE COUNTS, EACH TIMES ITS FREQUENCY. The quantity that raises after lowering in every mode,
+each weighted by its frequency, multiplies a reading by the energy of the assignment. -/
+theorem the_energy_is_the_sum_of_the_counts (S : Finset M) (w : M → K) (f : (M → ℕ) → K) (o : M → ℕ) :
+    ∑ m ∈ S, w m * raise m (lower m f) o = energy S w o * f o := by
+  unfold energy
+  rw [Finset.sum_mul]
+  exact Finset.sum_congr rfl fun m _ => by rw [the_count_of_a_mode]; ring
+
+/-- THE ENERGY MOVES BY ONE FREQUENCY FOR ONE QUANTUM. Changing the count of one mode of the set changes the energy by
+the frequency of that mode times the change. -/
+theorem the_energy_moves_by_the_frequency (S : Finset M) (w : M → K) (o : M → ℕ) (m : M) (hm : m ∈ S) (a : ℕ) :
+    energy S w (Function.update o m a) = energy S w o + w m * ((a : K) - (o m : K)) := by
+  unfold energy
+  have e1 : ∀ p : M → ℕ, ∑ x ∈ S, w x * (p x : K) = w m * (p m : K) + ∑ x ∈ S.erase m, w x * (p x : K) :=
+    fun p => (Finset.add_sum_erase S (fun x => w x * (p x : K)) hm).symm
+  have e2 : ∑ x ∈ S.erase m, w x * ((Function.update o m a x : ℕ) : K) = ∑ x ∈ S.erase m, w x * (o x : K) :=
+    Finset.sum_congr rfl fun x hx => by rw [Function.update_of_ne (Finset.ne_of_mem_erase hx)]
+  rw [e1 (Function.update o m a), e1 o, e2, Function.update_self]; ring
+
+/-- THE LAW OF MOTION OF THE STEP UP. The energy, taken as a quantity, against the raising of a mode of the set: their
+commutator is the frequency of the mode times the raising. -/
+theorem the_law_of_motion_of_raising (S : Finset M) (w : M → K) (m : M) (hm : m ∈ S) (f : (M → ℕ) → K)
+    (o : M → ℕ) : energy S w o * raise m f o - raise m (fun p => energy S w p * f p) o = w m * raise m f o := by
+  unfold raise
+  by_cases h : o m = 0
+  · simp [h]
+  · obtain ⟨k, hk⟩ := Nat.exists_eq_succ_of_ne_zero h
+    simp only [h, if_false]
+    rw [the_energy_moves_by_the_frequency S w o m hm, hk]; push_cast; simp; ring
+
+/-- THE LAW OF MOTION OF THE STEP DOWN. Against the lowering of a mode, the commutator of the energy is the frequency
+of the mode times the lowering, reversed. -/
+theorem the_law_of_motion_of_lowering (S : Finset M) (w : M → K) (m : M) (hm : m ∈ S) (f : (M → ℕ) → K)
+    (o : M → ℕ) : energy S w o * lower m f o - lower m (fun p => energy S w p * f p) o = -(w m * lower m f o) := by
+  unfold lower
+  beta_reduce
+  rw [the_energy_moves_by_the_frequency S w o m hm]; push_cast; ring
+
+end FreeField
+
+/-- THE ENERGY OF A MODE IS THE COUNT AND A HALF. In any ring, for a canonical pair `a`, `b`: the square of their sum
+less the square of their difference is four times `b a` and two. With `b a` the count, the quantity that stands for
+the energy of an oscillator is the count and one half: the half is there when the count is zero. -/
+theorem the_energy_of_a_mode_is_the_count_and_a_half {A : Type*} [Ring A] (a b : A) (h : a * b - b * a = 1) :
+    (a + b) ^ 2 - (a - b) ^ 2 = 4 * (b * a) + 2 := by
+  have e : a * b = b * a + 1 := by rw [← h]; noncomm_ring
+  calc (a + b) ^ 2 - (a - b) ^ 2 = 2 * (a * b) + 2 * (b * a) := by noncomm_ring
+    _ = 4 * (b * a) + 2 := by rw [e]; noncomm_ring; simp
+
+section Helicity
+variable {Y K : Type*} [DecidableEq Y] [CommRing K]
+
+/-- The mirror on the quanta of a wave with two polarisations: the counts of the two are exchanged, mode by mode. -/
+def mirrorQuanta (o : Y × Bool → ℕ) : Y × Bool → ℕ := fun p => o (p.1, !p.2)
+
+omit [DecidableEq Y] in
+/-- THE MIRROR OF THE QUANTA IS ITS OWN INVERSE. -/
+theorem the_mirror_of_the_quanta_is_its_own_inverse (o : Y × Bool → ℕ) : mirrorQuanta (mirrorQuanta o) = o := by
+  funext p; simp [mirrorQuanta]
+
+/-- THE MIRROR EXCHANGES THE TWO POLARISATIONS OF THE QUANTA. Raising a quantum of one polarisation, read through the
+mirror, is raising a quantum of the other. -/
+theorem the_mirror_exchanges_the_two_polarisations (y : Y) (b : Bool) (f : (Y × Bool → ℕ) → K)
+    (o : Y × Bool → ℕ) :
+    raise (y, b) (fun p => f (mirrorQuanta p)) o = raise (y, !b) f (mirrorQuanta o) := by
+  have e : ∀ a : ℕ, mirrorQuanta (Function.update o (y, b) a) = Function.update (mirrorQuanta o) (y, !b) a := by
+    intro a; funext p
+    obtain ⟨u, c⟩ := p
+    by_cases h : u = y ∧ c = !b
+    · obtain ⟨rfl, rfl⟩ := h
+      show Function.update o (u, b) a (u, !(!b)) = Function.update (mirrorQuanta o) (u, !b) a (u, !b)
+      rw [Function.update_self]
+      cases b <;> exact Function.update_self _ _ _
+    · have h1 : (u, !c) ≠ (y, b) := by
+        intro q; apply h; cases Prod.mk.inj q with | intro q1 q2 => exact ⟨q1, by rw [← q2]; simp⟩
+      have h2 : (u, c) ≠ (y, !b) := fun q => h (Prod.mk.inj q)
+      simp [mirrorQuanta, Function.update_of_ne h1, Function.update_of_ne h2]
+  unfold raise
+  simp [mirrorQuanta, e]
+
+omit [DecidableEq Y] in
+/-- THE ENERGY IS KEPT BY THE MIRROR where the two polarisations of each mode have one frequency: the energy of an
+assignment and of its mirror are the same, over a set of modes that holds both polarisations of each. -/
+theorem the_energy_is_kept_by_the_mirror (T : Finset Y) (w : Y → K) (o : Y × Bool → ℕ) :
+    energy (T ×ˢ (Finset.univ : Finset Bool)) (fun p => w p.1) (mirrorQuanta o)
+      = energy (T ×ˢ (Finset.univ : Finset Bool)) (fun p => w p.1) o := by
+  unfold energy
+  rw [Finset.sum_product, Finset.sum_product]
+  refine Finset.sum_congr rfl fun y _ => ?_
+  simp [mirrorQuanta, add_comm]
+
+end Helicity
+
+/-! ## Part XVII. What no proof decides: which seat, and what size of constant. Each statement is a theorem. -/
+
+section Undecided
+
+/-- A SEAT IS INFINITE EXACTLY WHEN SOME READING OF IT TAKES EVERY WHOLE NUMBER. This is what a measurement must find to
+place a field on the infinite branch: a quantity whose registrations do not end. -/
+theorem a_seat_is_infinite_iff_a_reading_takes_every_whole_number (X : Type*) :
+    Infinite X ↔ ∃ f : X → ℕ, Function.Surjective f := by
+  constructor
+  · intro _
+    obtain ⟨e⟩ := every_infinite_seat_is_a_seat_with_a_count X
+    exact ⟨fun x => (e.symm x).2, fun n => by
+      obtain ⟨x⟩ := (inferInstance : Nonempty X)
+      exact ⟨e (x, n), by simp⟩⟩
+  · rintro ⟨f, hf⟩; exact Infinite.of_surjective f hf
+
+/-- ON A FINITE SEAT EVERY READING TAKES FINITELY MANY VALUES. -/
+theorem on_a_finite_seat_every_reading_takes_finitely_many_values {X K : Type*} [Finite X] (f : X → K) :
+    (Set.range f).Finite := Set.finite_range f
+
+/-- NO PROOF DECIDES THE SEAT. There is a seat that carries a canonical pair and a seat that carries none. Both are
+seats in the sense of this file, and every theorem of it holds of both; so no theorem that follows from being a seat
+says which of the two a given field is. -/
+theorem no_proof_decides_the_seat :
+    (∃ X : Type, Nonempty X ∧ ∃ P Q : Module.End ℚ (X → ℚ), P * Q - Q * P = 1)
+    ∧ (∃ X : Type, Nonempty X ∧ ∀ P Q : Module.End ℚ (X → ℚ), P * Q - Q * P ≠ 1) :=
+  ⟨⟨ℕ, inferInstance, every_infinite_seat_carries_a_canonical_pair ℕ ℚ⟩,
+   ⟨Unit, inferInstance, no_canonical_pair_among_the_quantities_of_a_finite_seat Unit ℚ⟩⟩
+
+/-- NO VALUE OF THE CONSTANT IS FORCED. On every infinite seat, and for every value `c` in the ring of values, there is
+a pair of quantities whose commutator is `c`. The algebra holds all values at once; which one a field has is not a
+consequence of the algebra. -/
+theorem no_value_of_the_constant_is_forced (X : Type*) [Infinite X] (K : Type*) [CommRing K] (c : K) :
+    ∃ P Q : Module.End K (X → K), P * Q - Q * P = c • (1 : Module.End K (X → K)) := by
+  obtain ⟨P, Q, h⟩ := every_infinite_seat_carries_a_canonical_pair X K
+  have e := congrArg (fun T : Module.End K (X → K) => c • T) h
+  exact ⟨c • P, Q, by simpa [smul_sub, smul_mul_assoc, mul_smul_comm] using e⟩
+
+end Undecided
+
+/-! ## Part XIX. Time, and the geometry as a reading. Time is no quantity of the ring; a reading kept by the joint step
+is its own history; a law kept by every map prefers no slicing while a record may carry one; and whether a field
+holds a commutator is decided by no proof. -/
+
+section TimeIsNoQuantity
+variable {Y K : Type*} [CommRing K]
+
+/-- The count, as a quantity: it multiplies a reading by the count of the state. -/
+def countLin : Module.End K (Y × ℕ → K) where
+  toFun f := fun p => (p.2 : K) * f p
+  map_add' f g := by funext p; simp only [Pi.add_apply]; ring
+  map_smul' c f := by funext p; simp only [Pi.smul_apply, RingHom.id_apply, smul_eq_mul]; ring
+
+/-- THE COUNT HAS NO CANONICAL PARTNER. No linear map of the readings has commutator one with the count, on a seat with
+a count that is not empty, where one is not zero. The count is the energy of a mode in its own unit; so no quantity
+of the ring stands to the energy as the step up stands to the step down. Time is not among the quantities. -/
+theorem the_count_has_no_canonical_partner [Nontrivial K] [Nonempty Y] (T : Module.End K (Y × ℕ → K)) :
+    T * countLin - countLin * T ≠ 1 := by
+  intro h
+  obtain ⟨y⟩ := ‹Nonempty Y›
+  let f : Y × ℕ → K := fun p => if p.2 = 0 then 1 else 0
+  have z : (countLin : Module.End K (Y × ℕ → K)) f = 0 := by
+    funext p
+    show (p.2 : K) * (if p.2 = 0 then 1 else 0) = 0
+    by_cases hp : p.2 = 0
+    · simp [hp]
+    · simp [hp]
+  have e := congrFun (congrArg (fun S : Module.End K (Y × ℕ → K) => S f) h) (y, 0)
+  simp only [LinearMap.sub_apply, Module.End.mul_apply, z, map_zero, Pi.sub_apply, Pi.zero_apply,
+    Module.End.one_apply] at e
+  have e2 : (countLin : Module.End K (Y × ℕ → K)) (T f) (y, 0) = 0 := by
+    show (((0 : ℕ) : K)) * T f (y, 0) = 0; simp
+  rw [e2, sub_zero] at e
+  exact zero_ne_one e
+
+end TimeIsNoQuantity
+
+section History
+variable {Y K : Type*}
+
+/-- A READING KEPT BY THE JOINT STEP IS ITS OWN HISTORY. Let `U` be any step of the readings of the system. A reading of
+the system together with a count is kept by the joint step when its slice at each next count is the step of its
+slice before. Such a reading is fixed as a whole, and its slice at count `n` is the `n`-th step of its slice at
+count zero. -/
+theorem a_reading_kept_by_the_joint_step_is_its_own_history (U : (Y → K) → (Y → K)) (F : Y × ℕ → K)
+    (kept : ∀ n, (fun y => F (y, n + 1)) = U (fun y => F (y, n))) (n : ℕ) :
+    (fun y => F (y, n)) = U^[n] (fun y => F (y, 0)) := by
+  induction n with
+  | zero => rfl
+  | succ k ih => rw [kept k, ih, Function.iterate_succ_apply']
+
+/-- EVERY HISTORY IS A READING KEPT BY THE JOINT STEP. From any reading of the system at count zero there is a reading of
+the system with the count that the joint step keeps and whose slice at zero is the one given. -/
+theorem every_history_is_a_reading_kept_by_the_joint_step (U : (Y → K) → (Y → K)) (g : Y → K) :
+    ∃ F : Y × ℕ → K, (fun y => F (y, 0)) = g ∧ ∀ n, (fun y => F (y, n + 1)) = U (fun y => F (y, n)) :=
+  ⟨fun p => U^[p.2] g p.1, rfl, fun n => by
+    show (fun y => U^[n + 1] g y) = U (fun y => U^[n] g y)
+    rw [Function.iterate_succ_apply']⟩
+
+end History
+
+section LawAndRecord
+variable {G X S : Type*}
+
+/-- A LAW KEPT BY EVERY MAP PREFERS NO SLICING. Let a family of maps act on the records and on the slicings, and let no
+slicing be fixed by every map. Then no choice of slicing that is the same for every record is carried by the maps:
+a slicing chosen by the law alone, and not by the record, does not exist. -/
+theorem a_law_kept_by_every_map_prefers_no_slicing [Nonempty X] (onRecords : G → X → X) (onSlicings : G → S → S)
+    (none_fixed : ∀ σ : S, ∃ g : G, onSlicings g σ ≠ σ) (s : X → S)
+    (carried : ∀ g x, s (onRecords g x) = onSlicings g (s x)) (by_the_law_alone : ∀ x y, s x = s y) : False := by
+  obtain ⟨x⟩ := ‹Nonempty X›
+  obtain ⟨g, hg⟩ := none_fixed (s x)
+  exact hg ((carried g x).symm.trans (by_the_law_alone _ _))
+
+/-- A RECORD MAY CARRY ITS OWN SLICING. For any family of maps acting on the slicings there is a choice of slicing, one
+for each record, that every map carries from a record to its image. The second statement does not contradict the
+first: the slicing belongs to the record and not to the law. -/
+theorem a_record_may_carry_its_own_slicing (onSlicings : G → S → S) :
+    ∃ s : S → S, ∀ g σ, s (onSlicings g σ) = onSlicings g (s σ) := ⟨id, fun _ _ => rfl⟩
+
+end LawAndRecord
+
+/-- NO PROOF DECIDES WHETHER A FIELD HOLDS A COMMUTATOR. There is a ring with an adjoint in which every two quantities
+commute, and a ring with an adjoint in which two do not. Every theorem of this file about rings with an adjoint holds
+of both. Whether the quantities of a given field, the geometry among them, commute is therefore no theorem. Where
+they are readings with values that commute, they commute, by Part II. -/
+theorem no_proof_decides_whether_a_field_holds_a_commutator :
+    (∀ a b : ℚ, a * b = b * a)
+    ∧ (∃ a b : Matrix (Fin 2) (Fin 2) ℚ, a * b ≠ b * a) := by
+  refine ⟨mul_comm, !![0, 1; 0, 0], !![0, 0; 1, 0], fun h => ?_⟩
+  have e := congrFun (congrFun h 0) 0
+  simp [Matrix.mul_apply, Fin.sum_univ_two] at e
+
+/-! ## Part XX. What an outside clock registers at a horizon. The values are the real numbers. -/
+
+section Horizon
+open Real
+
+/-- THE RATE OF THE OUTSIDE CLOCK ALONG A RAY. For a mass `m` and a radius `r` outside `2m`, the function
+`r + 2m log (r − 2m)` has derivative `r / (r − 2m)`, which is one over `1 − 2m/r`: the time an outside clock
+registers for light to cover a step of radius. -/
+theorem the_rate_of_the_outside_clock_along_a_ray (m r : ℝ) (h : 2 * m < r) :
+    HasDerivAt (fun x : ℝ => x + 2 * m * Real.log (x - 2 * m)) (r / (r - 2 * m)) r := by
+  have hne : r - 2 * m ≠ 0 := by linarith
+  have a := (hasDerivAt_id r).add ((((hasDerivAt_id r).sub_const (2 * m)).log hne).const_mul (2 * m))
+  have e : (1 : ℝ) + 2 * m * (1 / (id r - 2 * m)) = r / (r - 2 * m) := by
+    simp only [id]; field_simp
+  rw [e] at a; exact a
+
+/-- THE OUTSIDE CLOCK NEVER REGISTERS THE CROSSING. For a positive mass, the time registered outside for a ray between a
+radius `r` and a fixed radius grows past every bound as `r` approaches `2m` from outside: below any number `−B`
+the function `r + 2m log (r − 2m)` falls, for all `r` near enough. No signal from the horizon, or from within it,
+is registered outside at any finite time. -/
+theorem the_outside_clock_never_registers_the_crossing (m : ℝ) (hm : 0 < m) (B : ℝ) :
+    ∃ δ > 0, ∀ r, 2 * m < r → r < 2 * m + δ → r + 2 * m * Real.log (r - 2 * m) < -B := by
+  refine ⟨min 1 (Real.exp ((-B - 2 * m - 1) / (2 * m))), lt_min one_pos (Real.exp_pos _), fun r h1 h2 => ?_⟩
+  have hx : 0 < r - 2 * m := by linarith
+  have k1 := min_le_left 1 (Real.exp ((-B - 2 * m - 1) / (2 * m)))
+  have k2 := min_le_right 1 (Real.exp ((-B - 2 * m - 1) / (2 * m)))
+  have hx2 : r - 2 * m < Real.exp ((-B - 2 * m - 1) / (2 * m)) := by linarith
+  have hl : Real.log (r - 2 * m) < (-B - 2 * m - 1) / (2 * m) := (Real.log_lt_iff_lt_exp hx).mpr hx2
+  have h2m : 0 < 2 * m := by linarith
+  have t : 2 * m * Real.log (r - 2 * m) < 2 * m * ((-B - 2 * m - 1) / (2 * m)) := mul_lt_mul_of_pos_left hl h2m
+  have e : 2 * m * ((-B - 2 * m - 1) / (2 * m)) = -B - 2 * m - 1 := by field_simp
+  linarith
+
+end Horizon
+
+/-! ## Part XXI. The binding theorem of the Hilbert space. -/
 
 /-- THE HILBERT SPACE IS SUBSUMED. For every Hilbert space, real or complex, of any dimension, that is not the zero
 space: its inner product is a form of the spectral seat; its bounded quantities are a ring with an adjoint, and that
@@ -1392,17 +1745,113 @@ info: 'SPHYS.FieldQuantization.the_occupation_numbers_are_the_finest_registratio
 -/
 #guard_msgs in #print axioms SPHYS.FieldQuantization.the_occupation_numbers_are_the_finest_registration
 /--
-info: 'SPHYS.FieldQuantization.the_labels_of_a_full_turn_are_the_whole_numbers' depends on axioms: [propext,
+info: 'SPHYS.FieldQuantization.the_labels_of_a_full_turn_are_the_integers' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 -/
-#guard_msgs in #print axioms SPHYS.FieldQuantization.the_labels_of_a_full_turn_are_the_whole_numbers
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_labels_of_a_full_turn_are_the_integers
 /--
-info: 'SPHYS.FieldQuantization.a_symmetry_with_a_full_turn_gives_its_states_whole_numbers' depends on axioms: [propext,
+info: 'SPHYS.FieldQuantization.a_symmetry_with_a_full_turn_gives_its_states_integers' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 -/
-#guard_msgs in #print axioms SPHYS.FieldQuantization.a_symmetry_with_a_full_turn_gives_its_states_whole_numbers
+#guard_msgs in #print axioms SPHYS.FieldQuantization.a_symmetry_with_a_full_turn_gives_its_states_integers
+/-- info: 'SPHYS.FieldQuantization.the_count_of_a_mode' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_count_of_a_mode
+/--
+info: 'SPHYS.FieldQuantization.each_mode_is_a_canonical_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.each_mode_is_a_canonical_pair
+/--
+info: 'SPHYS.FieldQuantization.lowering_one_mode_commutes_with_raising_another' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.lowering_one_mode_commutes_with_raising_another
+/-- info: 'SPHYS.FieldQuantization.raising_two_modes_commutes' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.raising_two_modes_commutes
+/-- info: 'SPHYS.FieldQuantization.lowering_two_modes_commutes' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.lowering_two_modes_commutes
+/--
+info: 'SPHYS.FieldQuantization.the_energy_is_the_sum_of_the_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_energy_is_the_sum_of_the_counts
+/--
+info: 'SPHYS.FieldQuantization.the_energy_moves_by_the_frequency' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_energy_moves_by_the_frequency
+/--
+info: 'SPHYS.FieldQuantization.the_law_of_motion_of_raising' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_law_of_motion_of_raising
+/--
+info: 'SPHYS.FieldQuantization.the_law_of_motion_of_lowering' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_law_of_motion_of_lowering
+/-- info: 'SPHYS.FieldQuantization.the_energy_of_a_mode_is_the_count_and_a_half' depends on axioms: [propext] -/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_energy_of_a_mode_is_the_count_and_a_half
+/--
+info: 'SPHYS.FieldQuantization.the_mirror_of_the_quanta_is_its_own_inverse' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_mirror_of_the_quanta_is_its_own_inverse
+/--
+info: 'SPHYS.FieldQuantization.the_mirror_exchanges_the_two_polarisations' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_mirror_exchanges_the_two_polarisations
+/--
+info: 'SPHYS.FieldQuantization.the_energy_is_kept_by_the_mirror' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_energy_is_kept_by_the_mirror
+/--
+info: 'SPHYS.FieldQuantization.a_seat_is_infinite_iff_a_reading_takes_every_whole_number' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.a_seat_is_infinite_iff_a_reading_takes_every_whole_number
+/--
+info: 'SPHYS.FieldQuantization.on_a_finite_seat_every_reading_takes_finitely_many_values' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.on_a_finite_seat_every_reading_takes_finitely_many_values
+/--
+info: 'SPHYS.FieldQuantization.no_proof_decides_the_seat' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.no_proof_decides_the_seat
+/--
+info: 'SPHYS.FieldQuantization.no_value_of_the_constant_is_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.no_value_of_the_constant_is_forced
+/-- info: 'SPHYS.FieldQuantization.the_count_has_no_canonical_partner' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_count_has_no_canonical_partner
+/--
+info: 'SPHYS.FieldQuantization.a_reading_kept_by_the_joint_step_is_its_own_history' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.a_reading_kept_by_the_joint_step_is_its_own_history
+/--
+info: 'SPHYS.FieldQuantization.every_history_is_a_reading_kept_by_the_joint_step' depends on axioms: [propext, Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.every_history_is_a_reading_kept_by_the_joint_step
+/-- info: 'SPHYS.FieldQuantization.a_law_kept_by_every_map_prefers_no_slicing' does not depend on any axioms -/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.a_law_kept_by_every_map_prefers_no_slicing
+/-- info: 'SPHYS.FieldQuantization.a_record_may_carry_its_own_slicing' does not depend on any axioms -/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.a_record_may_carry_its_own_slicing
+/--
+info: 'SPHYS.FieldQuantization.no_proof_decides_whether_a_field_holds_a_commutator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.no_proof_decides_whether_a_field_holds_a_commutator
+/--
+info: 'SPHYS.FieldQuantization.the_rate_of_the_outside_clock_along_a_ray' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_rate_of_the_outside_clock_along_a_ray
+/--
+info: 'SPHYS.FieldQuantization.the_outside_clock_never_registers_the_crossing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+-/
+#guard_msgs in #print axioms SPHYS.FieldQuantization.the_outside_clock_never_registers_the_crossing
 /--
 info: 'SPHYS.FieldQuantization.the_hilbert_space_is_subsumed' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
