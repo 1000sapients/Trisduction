@@ -1,0 +1,37 @@
+'SPHYS.QuantizationII.the_orbit_map_is_a_registration' depends on axioms: [Quot.sound]
+'SPHYS.QuantizationII.every_registration_factors_through_the_orbit_map' does not depend on any axioms
+'SPHYS.QuantizationII.a_registration_counts_only_if_the_orbit_map_counts' does not depend on any axioms
+'SPHYS.QuantizationII.form_and_witness_put_every_existent_on_the_fixed_set' does not depend on any axioms
+'SPHYS.QuantizationII.one_moved_existent_ends_every_count' does not depend on any axioms
+'SPHYS.QuantizationII.relabelling_keeps_the_occupation_numbers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.QuantizationII.fixed_by_every_relabelling_iff_one_mode' depends on axioms: [propext, Quot.sound]
+'SPHYS.QuantizationII.the_occupation_numbers_count_only_one_mode' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.QuantizationII.quanta_in_two_modes_are_many_on_one_occupation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.QuantizationII.an_odd_reading_sums_to_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.QuantizationII.bar_involutive' depends on axioms: [propext]
+'SPHYS.QuantizationII.matter_with_its_antimatter_is_neutral_as_a_whole' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.QuantizationII.a_label_of_a_periodic_symmetry_is_a_root_of_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.QuantizationII.a_symmetry_of_period_n_has_at_most_n_labels' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.QuantizationII.the_registrations_of_an_observable_are_on_the_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.QuantizationII.states_with_different_registrations_are_orthogonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.QuantizationII.parity_involutive' depends on axioms: [propext]
+'SPHYS.QuantizationII.parity_fixed_iff_no_cross' depends on axioms: [propext, Quot.sound]
+'SPHYS.QuantizationII.parity_keeps_the_energy' depends on axioms: [propext]
+'SPHYS.QuantizationII.every_parity_kept_reading_counts_only_the_plus_waves' depends on axioms: [propext, Quot.sound]
+'SPHYS.QuantizationII.the_two_helicities_are_two_on_one_energy' depends on axioms: [propext, Quot.sound]

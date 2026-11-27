@@ -1,0 +1,18 @@
+'SPHYS.GravityCount.a_kept_reading_counts_only_the_line' does not depend on any axioms
+'SPHYS.GravityCount.no_kept_reading_tells_a_pair_apart' does not depend on any axioms
+'SPHYS.GravityCount.nothing_computed_from_a_reading_counts_more' does not depend on any axioms
+'SPHYS.GravityCount.what_is_computed_from_a_kept_reading_is_kept' does not depend on any axioms
+'SPHYS.GravityCount.a_reading_that_counts_a_pair_is_not_kept' does not depend on any axioms
+'SPHYS.GravityCount.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.GravityCount.the_weight_is_kept' does not depend on any axioms
+'SPHYS.GravityCount.every_kept_reading_counts_only_the_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.GravityCount.gravity_counts_only_the_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.GravityCount.nothing_computed_from_the_weight_counts_a_charged_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.GravityCount.to_count_a_charged_pair_a_reading_must_see_the_particle_map' depends on axioms: [propext,
+ Quot.sound]
+'SPHYS.GravityCount.a_reading_of_the_energy_alone_is_kept' does not depend on any axioms
+'SPHYS.GravityCount.a_reading_that_tells_the_pair_apart_reads_a_charge' does not depend on any axioms
+'SPHYS.GravityCount.the_weight_does_not_tell_all_the_neutral_apart' does not depend on any axioms
+'SPHYS.GravityCount.the_charges_tell_a_charged_pair_apart' depends on axioms: [propext, Quot.sound]
+'SPHYS.GravityCount.a_charged_pair_is_two_on_one_weight' does not depend on any axioms
+'SPHYS.GravityCount.what_gravity_counts' depends on axioms: [propext, Quot.sound]

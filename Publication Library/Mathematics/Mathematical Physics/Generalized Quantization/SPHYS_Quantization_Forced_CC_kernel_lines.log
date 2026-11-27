@@ -1,0 +1,31 @@
+'SPHYS.Quantization.quantized_iff_witnessed' does not depend on any axioms
+'SPHYS.Quantization.the_triaxial_theorem' does not depend on any axioms
+'SPHYS.Quantization.the_existents_are_atoms' does not depend on any axioms
+'SPHYS.Quantization.the_count_is_the_count_of_registrations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Quantization.finitely_many_existents_have_that_many_registrations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.Quantization.off_the_line_an_existent_is_two' does not depend on any axioms
+'SPHYS.Quantization.the_orbit_has_one_registration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Quantization.on_the_line_the_orbit_is_one_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Quantization.off_the_line_the_orbit_is_two_points' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Quantization.whole_or_by_halves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.Quantization.quantized_iff_on_the_line' does not depend on any axioms
+'SPHYS.Quantization.one_existent_off_the_line_ends_the_count' does not depend on any axioms
+'SPHYS.Quantization.on_a_vacant_seat_a_witnessed_existent_stands_alone' does not depend on any axioms
+'SPHYS.Quantization.on_a_vacant_seat_form_and_count_exclude' does not depend on any axioms
+'SPHYS.Quantization.recording_is_one_step' depends on axioms: [propext, Quot.sound]
+'SPHYS.Quantization.self_recorded_iff_on_the_line' depends on axioms: [propext, Quot.sound]
+'SPHYS.Quantization.bar_involutive' depends on axioms: [propext]
+'SPHYS.Quantization.bar_fixed_iff_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Quantization.gravity_counts_the_neutral' depends on axioms: [propext, Quot.sound]
+'SPHYS.Quantization.a_charged_particle_is_two_on_one_reading' depends on axioms: [propext, Quot.sound]
+'SPHYS.Quantization.matter_with_antimatter_is_not_counted_by_gravity' depends on axioms: [propext, Quot.sound]
+'SPHYS.Quantization.gravity_does_not_tell_all_the_neutral_apart' does not depend on any axioms
+'SPHYS.Quantization.the_charges_are_not_a_registration' does not depend on any axioms
+'SPHYS.Quantization.tmirror_involutive' depends on axioms: [propext]
+'SPHYS.Quantization.tmirror_fixed_iff_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Quantization.the_level_tells_the_stationary_apart' depends on axioms: [propext, Quot.sound]
+'SPHYS.Quantization.the_levels_are_the_stationary' depends on axioms: [propext, Quot.sound]
+'SPHYS.Quantization.a_decaying_mode_is_two_on_one_level' depends on axioms: [propext, Quot.sound]
+'SPHYS.Quantization.generalized_quantization' depends on axioms: [propext, Classical.choice, Quot.sound]

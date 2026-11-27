@@ -1,0 +1,153 @@
+'SPHYS.FieldQuantization.the_fold_is_a_map_of_rings' does not depend on any axioms
+'SPHYS.FieldQuantization.the_fold_on_readings_is_its_own_inverse' depends on axioms: [Quot.sound]
+'SPHYS.FieldQuantization.the_constructed_adjoint_is_an_involution' depends on axioms: [Quot.sound]
+'SPHYS.FieldQuantization.the_constructed_adjoint_is_additive' depends on axioms: [Quot.sound]
+'SPHYS.FieldQuantization.the_constructed_adjoint_reverses_products' depends on axioms: [Quot.sound]
+'SPHYS.FieldQuantization.the_fold_and_the_adjoint_of_the_values_commute' does not depend on any axioms
+'SPHYS.FieldQuantization.a_kept_reading_is_an_observable' depends on axioms: [Quot.sound]
+'SPHYS.FieldQuantization.a_reversed_reading_is_reversed_by_the_adjoint' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.the_observables_are_the_kept_readings' depends on axioms: [Quot.sound]
+'SPHYS.FieldQuantization.two_reversals_keep' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.a_reversal_and_a_keeping_reverse' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.a_reading_with_its_adjoint_is_an_observable' depends on axioms: [Quot.sound]
+'SPHYS.FieldQuantization.where_the_values_commute_the_readings_commute' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.on_commuting_values_the_identity_is_an_adjoint' does not depend on any axioms
+'SPHYS.FieldQuantization.the_product_is_associative' depends on axioms: [propext]
+'SPHYS.FieldQuantization.the_adjoint_reverses_products' depends on axioms: [propext]
+'SPHYS.FieldQuantization.the_adjoint_is_an_involution' depends on axioms: [propext]
+'SPHYS.FieldQuantization.the_fold_is_its_own_inverse_and_its_own_adjoint' depends on axioms: [propext]
+'SPHYS.FieldQuantization.the_fold_moves_a_reading_across' depends on axioms: [propext]
+'SPHYS.FieldQuantization.a_reading_commutes_with_the_fold_iff_kept' depends on axioms: [propext]
+'SPHYS.FieldQuantization.the_observables_with_the_fold' does not depend on any axioms
+'SPHYS.FieldQuantization.commutative_iff_the_fold_keeps_every_reading' depends on axioms: [propext]
+'SPHYS.FieldQuantization.the_fold_keeps_every_reading_iff_the_seat_is_all_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_readings_with_the_fold_are_a_ring_with_an_adjoint' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.the_field_commutes_iff_the_seat_is_all_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_constructed_adjoint_is_natural' depends on axioms: [Quot.sound]
+'SPHYS.FieldQuantization.the_field_itself' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.a_canonical_pair_against_a_power' depends on axioms: [propext]
+'SPHYS.FieldQuantization.a_canonical_pair_is_never_nilpotent' depends on axioms: [propext]
+'SPHYS.FieldQuantization.no_canonical_pair_under_a_trace' depends on axioms: [propext]
+'SPHYS.FieldQuantization.the_constant_is_a_choice_of_unit' depends on axioms: [propext]
+'SPHYS.FieldQuantization.the_commutator_of_two_observables_is_reversed' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.two_observables_never_have_commutator_one' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.the_weyl_form' does not depend on any axioms
+'SPHYS.FieldQuantization.the_difference_against_the_coordinate' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.a_seat_with_a_coordinate_along_its_shift_is_infinite' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.a_finite_seat_has_no_coordinate_along_a_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_ladder_is_a_canonical_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.the_count_is_the_product_of_the_ladder' depends on axioms: [propext]
+'SPHYS.FieldQuantization.down_after_up_is_the_count_and_one' does not depend on any axioms
+'SPHYS.FieldQuantization.the_step_up_raises_the_count' does not depend on any axioms
+'SPHYS.FieldQuantization.the_canonical_form_on_the_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.the_fold_of_the_line_reverses_the_derivative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.every_map_moves_a_reading_across' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.no_canonical_pair_on_a_finite_seat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.the_canonical_question_is_decided_by_the_seat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.every_infinite_seat_holds_the_whole_numbers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.every_infinite_seat_is_a_seat_with_a_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.a_seat_carries_a_count_iff_it_is_infinite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_ladder_carries_across_a_matching' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.a_seat_matched_with_a_count_carries_a_canonical_pair' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.every_infinite_seat_carries_a_canonical_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.no_canonical_pair_among_the_quantities_of_a_finite_seat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.a_seat_carries_a_canonical_pair_iff_it_is_infinite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_ladder_is_adjoint_under_the_weighted_pairing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_registrations_of_an_observable_are_on_the_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.states_with_different_registrations_are_orthogonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_form_of_the_seat_is_the_inner_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.a_state_that_is_not_zero_has_a_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.the_adjoint_of_the_ring_is_the_adjoint_of_the_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.an_observable_of_a_hilbert_space_is_symmetric_under_its_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_registrations_of_an_observable_of_a_hilbert_space_are_on_the_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.states_of_a_hilbert_space_with_different_registrations_are_orthogonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_value_of_an_observable_in_any_state_is_on_the_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.two_observables_of_a_hilbert_space_never_have_commutator_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.no_canonical_pair_in_a_ring_with_a_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.no_canonical_pair_among_the_bounded_quantities_of_a_hilbert_space' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_ring_acts_with_its_adjoint_the_adjoint_of_the_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.an_observable_of_the_ring_is_symmetric_under_the_form' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_form_of_a_reading_is_conjugate_symmetric' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_overlap_is_bounded_by_the_norms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.the_states_of_norm_zero_are_carried_into_themselves' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.a_ring_with_a_positive_reading_has_a_hilbert_home' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.every_registration_of_the_count_is_a_whole_number' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.every_whole_number_is_a_registration_of_the_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_ladder_has_a_ground_state' depends on axioms: [Quot.sound]
+'SPHYS.FieldQuantization.a_ground_state_carries_the_ladder' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.the_count_registers_each_rung' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.no_rung_is_empty' depends on axioms: [propext, Quot.sound]
+'SPHYS.FieldQuantization.the_rungs_are_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.FieldQuantization.assignments_with_the_same_occupation_numbers_are_relabellings' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_occupation_numbers_are_the_finest_registration' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_labels_of_a_full_turn_are_the_whole_numbers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.a_symmetry_with_a_full_turn_gives_its_states_whole_numbers' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SPHYS.FieldQuantization.the_hilbert_space_is_subsumed' depends on axioms: [propext, Classical.choice, Quot.sound]

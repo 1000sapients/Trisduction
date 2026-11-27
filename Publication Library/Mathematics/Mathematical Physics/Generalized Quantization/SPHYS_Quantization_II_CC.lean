@@ -27,8 +27,9 @@ STANDING. Parts I to V are proved for every set, family, ring, field, module and
   III (particles) and VI are proved in printed models.
 WHAT IS NOT CLAIMED. No constant is derived. Part IV derives that the labels of a linear symmetry of finite period
   are isolated and at most n; it does not derive which symmetry nature has. Part V does not construct any operator.
-RISK. Part II proves that the occupation numbers are kept and where relabelling fixes a configuration; it does not
-  prove that the occupation numbers are the finest registration of the relabellings.
+RISK. Part II proves that the occupation numbers are kept and where relabelling fixes a configuration. That they
+  are the finest registration of the relabellings is proved in SPHYS_Field_Quantization_CC.lean, Part XV, and the
+  symmetry with no finite period, which Part IV leaves, is proved there too.
 NON-NEGOTIABLE. No axiom declared, no `sorry`, every cone pinned at the end of the file. -/
 
 set_option autoImplicit false

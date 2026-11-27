@@ -1,0 +1,12 @@
+'SPHYS.QuantizationStar.the_adjoint_keeps_the_real_part' does not depend on any axioms
+'SPHYS.QuantizationStar.the_observables_are_the_atoms' does not depend on any axioms
+'SPHYS.QuantizationStar.the_real_part_tells_the_observables_apart' depends on axioms: [propext]
+'SPHYS.QuantizationStar.quantized_by_the_real_part_iff_observables' depends on axioms: [propext]
+'SPHYS.QuantizationStar.the_adjoint_reverses_the_commutator' depends on axioms: [propext, Quot.sound]
+'SPHYS.QuantizationStar.the_real_part_reads_no_commutator' depends on axioms: [propext, Quot.sound]
+'SPHYS.QuantizationStar.observables_with_an_observable_commutator_commute' depends on axioms: [propext, Quot.sound]
+'SPHYS.QuantizationStar.a_commutator_and_its_adjoint_are_two_on_one_registration' depends on axioms: [propext,
+ Quot.sound]
+'SPHYS.QuantizationStar.no_kept_reading_counts_the_commutator_with_its_adjoint' depends on axioms: [propext, Quot.sound]
+'SPHYS.QuantizationStar.no_canonical_pair_in_finite_matrices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SPHYS.QuantizationStar.every_algebraic_quantization_is_a_seat' depends on axioms: [propext, Quot.sound]
